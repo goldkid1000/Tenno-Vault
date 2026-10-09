@@ -210,10 +210,14 @@
   }
 
   /* ---------- data helpers ---------- */
-  function getJSON(path) {
+  function getJSON(path, _retried) {
     return fetch(path).then(function (r) {
       if (!r.ok) throw new Error('load failed: ' + path);
       return r.json();
+    }).catch(function (err) {
+      if (_retried) throw err; /* retried once already — give up */
+      return new Promise(function (res) { setTimeout(res, 700); })
+        .then(function () { return getJSON(path, true); });
     });
   }
 
@@ -221,6 +225,15 @@
     var ps = [];
     for (var i = 0; i < count; i++) ps.push(getJSON(base + '-' + i + '.json'));
     return Promise.all(ps).then(function (parts) { return [].concat.apply([], parts); });
+  }
+
+  /* Hard reload that bypasses the HTTP cache (for the stale-cache retry button). */
+  function hardReload() {
+    try { location.reload(true); } catch (e) { /* fall through to fallback */ }
+    setTimeout(function () {
+      var base = location.href.split('?')[0].split('#')[0];
+      location.href = base + '?cb=' + Date.now() + location.hash;
+    }, 600);
   }
 
   function badge(tags) {
@@ -255,11 +268,12 @@
     buildCrumbs();
     buildFooter();
     buildSearchOverlay();
+    if (window.TVAI && window.TVAI.init) window.TVAI.init();
   });
 
   window.TV = {
     NAV: NAV, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
-    infiniteScroll: infiniteScroll, badge: badge,
+    infiniteScroll: infiniteScroll, badge: badge, hardReload: hardReload,
     liveNote: liveNote, relatedLinks: relatedLinks,
     openSearch: openSearch
   };

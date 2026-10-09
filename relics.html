@@ -31,7 +31,8 @@
 </div>
 <nav id="tabbar"></nav>
 <footer id="site-footer"></footer>
-<script src="js/app.js"></script>
+<script src="js/app.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
 <script>
 (function () {
   var esc = window.TV.esc, all = [], tier = 'all', ctl = null;
@@ -91,7 +92,7 @@
       showDetail(decodeURIComponent(location.hash.slice(1)));
     });
   }).catch(function () {
-    document.getElementById('r-list').innerHTML = '<div class="notice">Could not load relic data.</div>';
+    document.getElementById('r-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
   });
 })();
 </script>
