@@ -68,31 +68,82 @@
 
 <h2 id="feedback">🐛 Found a bug? Got an idea?</h2>
 <div class="detail-box">
-  <p class="muted">Tell me what's broken or what you'd love to see — it opens a GitHub issue so I can track it.</p>
-  <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;max-width:640px">
-    <select id="fb-type" aria-label="Type">
-      <option value="Bug report">Bug report</option>
-      <option value="Suggestion">Suggestion</option>
-    </select>
-    <input id="fb-page" placeholder="Which page? (e.g. Warframes)" style="flex:1;min-width:160px" aria-label="Which page">
+  <p class="muted">Tell me what's broken or what you'd love to see — no account needed, it goes straight to me.</p>
+  <div id="fb-form">
+    <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;max-width:640px">
+      <select id="fb-type" aria-label="Type">
+        <option value="bug">Bug report</option>
+        <option value="idea">Suggestion</option>
+      </select>
+      <input id="fb-page" placeholder="Which page? (e.g. Warframes)" style="flex:1;min-width:160px" aria-label="Which page">
+    </div>
+    <div class="field" style="max-width:640px;margin-top:8px">
+      <textarea id="fb-text" rows="3" placeholder="What's wrong, or what should I add?" style="width:100%" aria-label="Details"></textarea>
+    </div>
+    <button class="btn primary" id="fb-send" style="margin-top:8px">Send report</button>
+    <p class="muted small" style="margin-top:8px">Prefer GitHub? <a href="https://github.com/goldkid1000/Tenno-Vault/issues" target="_blank" rel="noopener">Open an issue there instead ↗</a></p>
   </div>
-  <div class="field" style="max-width:640px;margin-top:8px">
-    <textarea id="fb-text" rows="3" placeholder="What's wrong, or what should I add?" style="width:100%" aria-label="Details"></textarea>
-  </div>
-  <button class="btn primary" id="fb-send" style="margin-top:8px">Open GitHub issue ↗</button>
+  <div id="fb-done" style="display:none"><p><b>Thanks, Tenno! 🙏</b> Your report's been logged — I\'ll take a look.</p></div>
+  <div id="fb-offline" style="display:none"><p class="muted">Feedback backend isn\'t connected yet — check back soon!</p></div>
 </div>
+
+<h2>🔥 Most visited right now</h2>
+<div class="item-list" id="tv-most-visited"><p class="muted">Loading…</p></div>
 
 <script>
 (function () {
   var btn = document.getElementById('fb-send');
   if (!btn) return;
+  function ready() {
+    return !!(window.TV_FIREBASE_READY && window.TV_FIREBASE_CONFIG &&
+      window.TV_FIREBASE_CONFIG.apiKey &&
+      window.TV_FIREBASE_CONFIG.apiKey.indexOf('PASTE_') !== 0);
+  }
+  if (!ready()) {
+    document.getElementById('fb-form').style.display = 'none';
+    document.getElementById('fb-offline').style.display = '';
+    return;
+  }
   btn.addEventListener('click', function () {
     var type = document.getElementById('fb-type').value;
-    var page = document.getElementById('fb-page').value.trim();
-    var text = document.getElementById('fb-text').value.trim() || '(no details given)';
-    var title = encodeURIComponent(type + (page ? ': ' + page : ''));
-    var body = encodeURIComponent('**Page:** ' + (page || 'not specified') + '\n\n**Details:**\n' + text + '\n\n---\nReported from tenno-vault site');
-    window.open('https://github.com/goldkid1000/Tenno-Vault/issues/new?title=' + title + '&body=' + body, '_blank', 'noopener');
+    var page = document.getElementById('fb-page').value.trim().slice(0, 80);
+    var text = document.getElementById('fb-text').value.trim().slice(0, 2000);
+    if (!text) { document.getElementById('fb-text').focus(); return; }
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    function send(db) {
+      db.collection('feedback').add({
+        type: type,
+        page: page || 'not specified',
+        details: text,
+        ts: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(function () {
+        document.getElementById('fb-form').style.display = 'none';
+        document.getElementById('fb-done').style.display = '';
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send report';
+        alert('Could not send — check your connection and try again.');
+      });
+    }
+    function boot() {
+      try {
+        if (!firebase.apps.length) firebase.initializeApp(window.TV_FIREBASE_CONFIG);
+        send(firebase.firestore());
+      } catch (e) { btn.disabled = false; btn.textContent = 'Send report'; }
+    }
+    if (window.firebase && firebase.apps.length) { send(firebase.firestore()); return; }
+    var s1 = document.createElement('script');
+    s1.src = 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js';
+    s1.onload = function () {
+      var s2 = document.createElement('script');
+      s2.src = 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js';
+      s2.onload = boot;
+      s2.onerror = function () { btn.disabled = false; btn.textContent = 'Send report'; };
+      document.head.appendChild(s2);
+    };
+    s1.onerror = function () { btn.disabled = false; btn.textContent = 'Send report'; };
+    document.head.appendChild(s1);
   });
 })();
 </script>
@@ -108,6 +159,7 @@
 <nav id="tabbar"></nav>
 <footer id="site-footer"></footer>
 <script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
 <script src="js/ai.js?v=20261009"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {

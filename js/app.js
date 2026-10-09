@@ -35,6 +35,7 @@
     host.innerHTML =
       '<div class="header-inner">' +
       '<a class="logo" href="index.html"><span class="lotus">◈</span> Tenno Vault</a>' +
+      '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
       '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate</a>' +
@@ -100,7 +101,7 @@
       '<div class="frow">' +
       '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate to Tenno Vault</a>' +
-      '<a class="btn small" href="https://github.com/goldkid1000/Tenno-Vault/issues/new" target="_blank" rel="noopener">🐛 Report a bug / suggest something</a>' +
+      '<a class="btn small" href="index.html#feedback">🐛 Report a bug / suggest something</a>' +
       '<span>Unofficial fan site. Not affiliated with Digital Extremes.</span>' +
       '<span>Game data: warframe-items (WFCD) · Prices: warframe.market · Live: warframestat.us</span>' +
       '</div>';
