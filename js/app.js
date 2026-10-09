@@ -17,6 +17,7 @@
     { id: 'marketplace', label: 'Market Board', sub: 'Player listings', icon: '🏪', file: 'marketplace.html' },
     { id: 'live', label: 'Live', sub: 'Right-now game info', icon: '📡', file: 'live.html' },
     { id: 'videos', label: 'Videos', sub: 'Watch & learn', icon: '🎬', file: 'videos.html' },
+    { id: 'guides', label: 'Guides', sub: 'Bosses, Liches, Rivens & more', icon: '📖', file: 'guides.html' },
   ];
 
   var page = document.body.getAttribute('data-page') || 'home';
