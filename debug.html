@@ -3,30 +3,56 @@
 <body>
 <h1>Fetch Debug</h1>
 <div id="out"><p>Running tests…</p></div>
+<script src="js/app.js?v=20261009b"></script>
 <script>
 (function () {
   var out = document.getElementById('out');
   function log(msg) { out.innerHTML += '<p>' + msg + '</p>'; }
-  log('User agent: ' + navigator.userAgent);
-  log('URL: ' + location.href);
-  log('typeof fetch: ' + typeof fetch);
-  log('typeof Promise: ' + typeof Promise);
-  // Test 1: basic fetch of chunk 0
-  fetch('data/site/warframes-0.json', { cache: 'no-store' }).then(function (r) {
-    log('Test 1 fetch: ok=' + r.ok + ' status=' + r.status + ' type=' + r.type);
-    return r.text();
-  }).then(function (t) {
-    log('Test 1 text length: ' + t.length);
-    var d = JSON.parse(t);
-    log('Test 1 parsed: ' + d.length + ' items, first=' + d[0].name);
+  function step(name, fn) {
+    try {
+      var r = fn();
+      if (r && r.then) {
+        return r.then(function (v) { log(name + ': OK'); return v; },
+                      function (e) { log(name + ': REJECTED: ' + (e && e.message || e)); throw e; });
+      }
+      log(name + ': OK');
+      return r;
+    } catch (e) {
+      log(name + ': THREW: ' + e.message + ' | stack: ' + (e.stack || '').split('\n').slice(0,3).join(' / '));
+      throw e;
+    }
+  }
+  log('typeof window.TV.getJSONParts: ' + typeof window.TV.getJSONParts);
+  var all = [];
+  step('getJSONParts warframes', function () {
+    return window.TV.getJSONParts('data/site/warframes', 2);
+  }).then(function (d) {
+    all = d;
+    log('items loaded: ' + d.length);
+    step('getElementById wf-list', function () {
+      var el = document.createElement('div'); el.id = 'wf-list-test';
+      document.body.appendChild(el); return el;
+    });
+    return null;
+  }).then(function () {
+    var list = document.createElement('div');
+    var esc = window.TV.esc;
+    function card(w) {
+      var a = document.createElement('a');
+      a.href = '#' + encodeURIComponent(w.name);
+      a.innerHTML = '<h3>' + esc(w.name) + '</h3>';
+      return a;
+    }
+    step('infiniteScroll init', function () {
+      return window.TV.infiniteScroll(list, all, card, 30);
+    });
+    step('rendered children', function () {
+      log('list children: ' + list.children.length);
+      return true;
+    });
   }).catch(function (e) {
-    log('Test 1 FAILED: ' + e.name + ': ' + e.message);
+    log('CHAIN FAILED: ' + (e && e.message || e));
   });
-  // Test 2: check window.TV
-  setTimeout(function () {
-    log('typeof window.TV: ' + typeof window.TV);
-  }, 500);
 })();
 </script>
-<script src="js/app.js?v=20261009b"></script>
 </body></html>
