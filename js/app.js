@@ -103,8 +103,16 @@
       '<a class="btn donate-btn" href="donate.html">♥ Donate to Tenno Vault</a>' +
       '<a class="btn small" href="index.html#feedback">🐛 Report a bug / suggest something</a>' +
       '<span>Unofficial fan site. Not affiliated with Digital Extremes.</span>' +
-      '<span>Game data: warframe-items (WFCD) · Prices: warframe.market · Live: warframestat.us</span>' +
+      '<span>Game data: warframe-items (WFCD) · Price guide: community averages · Live: warframestat.us</span>' +
+      '<span class="muted small" id="tv-version"></span>' +
       '</div>';
+    /* version stamp — loaded async so footer renders instantly */
+    try {
+      window.TV.getJSON('data/site/version.json').then(function (v) {
+        var el = document.getElementById('tv-version');
+        if (el && v && v.version) el.textContent = 'Tenno Vault v' + v.version;
+      }).catch(function () {});
+    } catch (e) {}
   }
 
   /* ---------- search ---------- */

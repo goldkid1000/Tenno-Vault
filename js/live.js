@@ -166,50 +166,71 @@
     return 'Common items like this usually go for <b>2–10p</b>.';
   }
 
+  /* ---------------- platinum prices ----------------
+     warframe.market blocks all automated API access (403), so live lookup
+     is impossible. Instead we use a curated price database (market averages)
+     with buy AND sell prices. */
+  var priceDB = null;
+  function loadPriceDB() {
+    if (priceDB) return Promise.resolve(priceDB);
+    return window.TV.getJSON('data/site/prices.json').then(function (d) {
+      priceDB = d || {}; return priceDB;
+    }).catch(function () { priceDB = {}; return {}; });
+  }
+  /* fuzzy match: exact, then starts-with, then contains */
+  function findPrice(db, q) {
+    q = q.toLowerCase().trim();
+    if (db[q]) return { name: q, p: db[q] };
+    var keys = Object.keys(db), i, k;
+    for (i = 0; i < keys.length; i++) {
+      k = keys[i];
+      if (k.indexOf(q) === 0 && q.length >= 4) return { name: k, p: db[k] };
+    }
+    for (i = 0; i < keys.length; i++) {
+      k = keys[i];
+      if (k.indexOf(q) !== -1) return { name: k, p: db[k] };
+    }
+    return null;
+  }
+
   function lookupPrice() {
     var q = document.getElementById('plat-input').value.trim();
     var out = document.getElementById('plat-result');
     if (!q) return;
-    out.innerHTML = '<div class="loading">Checking live prices…</div>';
-    loadMarketIndex().then(function (idx) {
+    out.innerHTML = '<div class="loading">Looking up prices…</div>';
+    Promise.all([loadPriceDB(), loadMarketIndex()]).then(function (r) {
+      var db = r[0], idx = r[1];
       var urlName = idx[q] || Object.keys(idx).find(function (k) {
         return k.toLowerCase() === q.toLowerCase();
       });
       urlName = urlName ? idx[urlName] || urlName : slugify(q);
       var marketLink = 'https://warframe.market/items/' + encodeURIComponent(urlName);
-      var fallback = '<p class="small"><a href="' + marketLink + '" target="_blank" rel="noopener">Open on warframe.market ↗</a></p>';
-      var blockedHTML = function () {
-        out.innerHTML = '<div class="notice"><b>Automatic price check blocked.</b> ' +
-          'warframe.market sometimes blocks automated lookups (bot protection). Check it directly — it takes 5 seconds:</div>' + fallback;
-      };
-      /* 10s timeout — never leave the spinner hanging */
-      var timeout = new Promise(function (_, reject) {
-        setTimeout(function () { reject(new Error('timeout')); }, 10000);
-      });
-      var req = fetch('https://api.warframe.market/v1/items/' + encodeURIComponent(urlName) + '/orders')
-        .then(function (r) { if (!r.ok) throw new Error('not found'); return r.json(); });
-      return Promise.race([req, timeout])
-        .then(function (d) {
-          var sells = (d.payload.orders || [])
-            .filter(function (o) { return o.order_type === 'sell' && o.user && o.user.status === 'ingame'; })
-            .sort(function (a, b) { return a.platinum - b.platinum; })
-            .slice(0, 5);
-          if (!sells.length) {
-            out.innerHTML = '<div class="notice"><b>No in-game sellers right now</b> for <b>' + esc(q) + '</b>.<br>' +
-              'Rough estimate: ' + estimatePrice(q) + '<br>' +
-              '<span class="muted small">This is an estimate — check live prices before you trade.</span></div>' + fallback;
-            return;
-          }
-          var mid = sells[Math.floor(sells.length / 2)].platinum;
-          out.innerHTML = '<div class="detail-box"><h3>' + esc(q) + ' — about <b>' + mid + ' platinum</b></h3>' +
-            '<p class="muted small">Cheapest in-game sell orders right now:</p>' +
-            sells.map(function (o) {
-              return '<div class="mod-row"><div><b>' + o.platinum + 'p</b> × ' + o.quantity + '</div>' +
-                '<div class="muted">' + esc(o.user.ingame_name) + '</div></div>';
-            }).join('') +
-            '<p class="muted small">Live from warframe.market. Prices move — re-check before you trade.</p>' + fallback + '</div>';
-        })
-        .catch(blockedHTML);
+      var fallback = '<p class="small"><a href="' + marketLink + '" target="_blank" rel="noopener">Check live on warframe.market ↗</a></p>';
+      var hit = findPrice(db, q);
+      if (hit) {
+        var displayName = hit.name.replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+        out.innerHTML = '<div class="detail-box"><h3>' + esc(displayName) + '</h3>' +
+          '<div class="price-row" style="display:flex;gap:24px;margin:12px 0">' +
+          '<div><div class="muted small">SELL FOR</div><div style="font-size:1.6rem;font-weight:800;color:#7fd67f">~' + hit.p.sell + 'p</div></div>' +
+          '<div><div class="muted small">BUY FOR</div><div style="font-size:1.6rem;font-weight:800;color:#7fb8d6">~' + hit.p.buy + 'p</div></div>' +
+          '</div>' +
+          '<p class="muted small">Market averages — actual trades vary. Always check warframe.market before you trade.</p>' + fallback + '</div>';
+        return;
+      }
+      /* riven guidance */
+      if (/riven/i.test(q)) {
+        out.innerHTML = '<div class="detail-box"><h3>Riven Mods</h3>' +
+          '<p>Rivens are priced per-roll, not per mod — a god-roll can go for <b>500p+</b>, ' +
+          'while a bad roll might fetch <b>10–30p</b> (basically the veiled price).</p>' +
+          '<p class="muted small">What matters: the weapon (meta = more), the stats (crit chance/damage, multishot), ' +
+          'and the negative (harmless ones like -zoom are best). Check the <a href="guides.html">Riven guide</a>.</p>' +
+          '<p class="muted small">Market averages — check warframe.market before you trade.</p></div>' + fallback;
+        return;
+      }
+      /* not in database — rough estimate */
+      out.innerHTML = '<div class="notice"><b>' + esc(q) + '</b> isn\'t in our price database yet.<br>' +
+        'Rough estimate: ' + estimatePrice(q) + '<br>' +
+        '<span class="muted small">This is an estimate — check live prices before you trade.</span></div>' + fallback;
     }).catch(function () {
       out.innerHTML = '<div class="notice"><b>Price check unavailable.</b> Try again in a moment.</div>';
     });
