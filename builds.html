@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Builds</h1>
+<p class="muted small" id="b-count"></p>
 <p class="muted">Copy these setups to dominate. <b>One-shot</b> = kills Steel Path enemies in one hit. Every mod shows where to farm it.</p>
 <div class="chip-row" id="b-filters">
   <button class="chip active" data-f="all">All</button>
@@ -101,9 +102,10 @@
   }
   Promise.all([
     window.TV.getJSON('data/site/builds.json'),
-    window.TV.getJSONParts('data/site/mods', 8)
+    window.TV.getJSONParts('data/site/mods', 7)
   ]).then(function (res) {
     builds = res[0];
+    document.getElementById('b-count').textContent = builds.length + ' Builds';
     res[1].forEach(function (m) { modDrops[m.name] = m.drops; });
     document.getElementById('b-filters').addEventListener('click', function (e) {
       var c = e.target.closest ? e.target.closest('.chip') : null;

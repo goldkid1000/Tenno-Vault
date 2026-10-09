@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Amps</h1>
+<p class="muted small" id="amp-count"></p>
 <p class="muted">Your Operator's weapon. <b>Prism</b> = main shot, <b>Scaffold</b> = alt-fire, <b>Brace</b> = stat boost. Players name combos by tier numbers — <b>177</b> means tier-1 prism, tier-7 scaffold, tier-7 brace.</p>
 
 <h2>⭐ Recommended combos</h2>
@@ -43,6 +44,7 @@
       '<p>' + esc(p.effect) + '</p><p class="small muted">📍 ' + esc(p.source) + '</p></div>';
   }
   window.TV.getJSON('data/site/amps.json').then(function (d) {
+    document.getElementById('amp-count').textContent = (d.combos.length + d.prisms.length + d.scaffolds.length + d.braces.length) + ' Amp parts & combos';
     document.getElementById('amp-combos').innerHTML = d.combos.map(function (c) {
       return '<div class="card">' +
         (c.recommended ? '<span class="badge recommended">Recommended</span>' : '') +
