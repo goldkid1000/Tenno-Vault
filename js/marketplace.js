@@ -97,12 +97,13 @@
     var nb = document.getElementById('mp-new');
     if (nb) nb.addEventListener('click', renderPostForm);
 
-    db.collection('listings').where('status', '==', 'active')
+    db.collection('listings')
       .orderBy('createdAt', 'desc').limit(100).get()
       .then(function (snap) {
         allListings = [];
         snap.forEach(function (doc) {
-          var d = doc.data(); d.id = doc.id; allListings.push(d);
+          var d = doc.data(); d.id = doc.id;
+          if (d.status === 'active') allListings.push(d);
         });
         drawList();
       })
