@@ -18,11 +18,15 @@
 <p class="muted">Copy these setups to dominate. <b>One-shot</b> = kills Steel Path enemies in one hit. Every mod shows where to farm it.</p>
 <div class="chip-row" id="b-filters">
   <button class="chip active" data-f="all">All</button>
+  <button class="chip" data-f="beginner">🌱 Beginner</button>
   <button class="chip" data-f="one-shot">💥 One-shot Steel Path</button>
   <button class="chip" data-f="steel-path">Steel Path</button>
+  <button class="chip" data-f="boss">🎯 Boss Hunting</button>
+  <button class="chip" data-f="farm">📦 Farming</button>
+  <button class="chip" data-f="leveling">📈 Leveling</button>
   <button class="chip" data-f="strong">Strong</button>
-  <button class="chip" data-f="beginner">Beginner-friendly</button>
 </div>
+<div class="field"><input id="b-q" type="search" placeholder="Search builds by frame or weapon name…"></div>
 <div id="b-detail"></div>
 <div id="b-list" class="card-grid"></div>
 <div id="related"></div>
@@ -34,12 +38,18 @@
 <script src="js/ai.js?v=20261009"></script>
 <script>
 (function () {
-  var esc = window.TV.esc, builds = [], modDrops = {}, filter = 'all';
+  var esc = window.TV.esc, builds = [], modDrops = {}, filter = 'all', query = '';
   function filtered() {
     return builds.filter(function (b) {
-      if (filter === 'all') return true;
-      if (filter === 'one-shot') return b.tags.indexOf('one-shot') !== -1 || b.recommendedOneShot;
-      return b.tags.indexOf(filter) !== -1;
+      var okFilter = true;
+      if (filter === 'one-shot') okFilter = b.tags.indexOf('one-shot') !== -1 || b.recommendedOneShot;
+      else if (filter !== 'all') okFilter = b.tags.indexOf(filter) !== -1;
+      if (!okFilter) return false;
+      if (query) {
+        var q = query.toLowerCase();
+        return (b.name + ' ' + b.item + ' ' + (b.category || '')).toLowerCase().indexOf(q) !== -1;
+      }
+      return true;
     });
   }
   function card(b) {
@@ -89,6 +99,7 @@
     var items = filtered();
     items.forEach(function (b) { list.appendChild(card(b)); });
     if (!items.length) list.innerHTML = '<div class="notice">No builds in this category yet.</div>';
+    document.getElementById('b-count').textContent = items.length + ' of ' + builds.length + ' Builds';
   }
   function setFilter(f) {
     filter = f;
@@ -111,6 +122,12 @@
       var c = e.target.closest ? e.target.closest('.chip') : null;
       if (!c) return;
       setFilter(c.getAttribute('data-f'));
+    });
+    document.getElementById('b-q').addEventListener('input', function (e) {
+      query = e.target.value.trim();
+      document.getElementById('b-detail').innerHTML = '';
+      history.replaceState(null, '', ' ');
+      drawList();
     });
     var h = location.hash;
     if (h.indexOf('#build-') === 0) showDetail(h.slice(7));
