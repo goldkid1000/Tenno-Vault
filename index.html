@@ -19,9 +19,9 @@
 
 <h2>🚀 Start here</h2>
 <div class="card-grid">
-  <a class="card path-card" href="builds.html#rhino-starter">
+  <a class="card path-card" href="#beginner-guide">
     <div class="icon">🌱</div><h3>New Player Path</h3>
-    <p>Just started? Grab Rhino, learn the basics, and follow the beginner-friendly builds.</p>
+    <p>Just started? Your first warframe, first quests, how mods work, and beginner builds.</p>
   </a>
   <a class="card path-card" href="builds.html#one-shot">
     <div class="icon">💥</div><h3>Steel Path Path</h3>
@@ -33,6 +33,29 @@
   </a>
 </div>
 
+<h2 id="beginner-guide">🌱 New Player Guide</h2>
+<div class="detail-box">
+  <h3>Your first Warframe</h3>
+  <p>You'll pick one of three starters: <b>Excalibur</b> (balanced sword fighter — best all-rounder), <b>Mag</b> (shield control, great vs Corpus), or <b>Volt</b> (speed + electric damage). Honestly? <b>Excalibur</b> is the safest pick — simple, strong, and his Exalted Blade carries you far.</p>
+
+  <h3>What to do first</h3>
+  <p>1. <b>Clear the star chart planet by planet.</b> Each blue node you finish unlocks the next. Don't rush — you'll naturally collect resources and mods.<br>
+  2. <b>Do the junctions.</b> The requirements (like "kill 50 enemies with...") teach you mechanics and unlock new planets.<br>
+  3. <b>Finish the main quests in order:</b> Vor's Prize → Once Awake → The Archwing → Stolen Dreams → The New Strange → Natah → The Second Dream → The War Within. The story gets <i>really</i> good — don't skip cutscenes.</p>
+
+  <h3>How mods work (the 30-second version)</h3>
+  <p>Mods are cards you slot into your gear. Each has a <b>drain cost</b> (top-right number) and your gear has limited <b>capacity</b>. <b>Level up your mods</b> at the mod station with Endo — a rank 5 Vitality beats five unranked mods. <b>Polarity slots</b> (the little symbols) halve the cost of matching mods. Priority: <b>base damage → multishot → crit/status → elements</b> for weapons; <b>health → armor → ability stats</b> for warframes.</p>
+
+  <h3>When to start trading</h3>
+  <p>Once you can crack Void Relics (around Mars/Phobos), start saving <b>prime parts</b>. Check prices on <a href="live.html#prices">the price checker</a>, list on warframe.market, and trade in-game at Maroo's Bazaar or your clan dojo. Even 10-20 platinum buys you weapon/warframe slots — the most important purchase in the game.</p>
+
+  <h3>Beginner builds to try</h3>
+  <p><b>Rhino (tank):</b> Vitality + Steel Fiber + Intensify — press 2 (Iron Skin) and you're nearly unkillable.<br>
+  <b>Hek (shotgun):</b> Point Blank + Hell's Chamber + two elemental 60/60s — deletes everything through Saturn.<br>
+  <b>Excalibur:</b> Vitality + Intensify + Continuity — Exalted Blade (press 4) with a melee build.<br>
+  <a href="builds.html">See all beginner builds &rarr;</a></p>
+</div>
+
 <h2 id="sections">📚 Everything in the Vault</h2>
 <div class="card-grid" id="section-grid"></div>
 
@@ -42,6 +65,37 @@
   <a class="card" href="live.html#prices"><div class="icon">💎</div><h3>Platinum prices</h3><p>Look up what any prime part sells for right now.</p></a>
   <a class="card" href="marketplace.html"><div class="icon">🏪</div><h3>Player market board</h3><p>Browse listings from other Tenno.</p></a>
 </div>
+
+<h2 id="feedback">🐛 Found a bug? Got an idea?</h2>
+<div class="detail-box">
+  <p class="muted">Tell me what's broken or what you'd love to see — it opens a GitHub issue so I can track it.</p>
+  <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;max-width:640px">
+    <select id="fb-type" aria-label="Type">
+      <option value="Bug report">Bug report</option>
+      <option value="Suggestion">Suggestion</option>
+    </select>
+    <input id="fb-page" placeholder="Which page? (e.g. Warframes)" style="flex:1;min-width:160px" aria-label="Which page">
+  </div>
+  <div class="field" style="max-width:640px;margin-top:8px">
+    <textarea id="fb-text" rows="3" placeholder="What's wrong, or what should I add?" style="width:100%" aria-label="Details"></textarea>
+  </div>
+  <button class="btn primary" id="fb-send" style="margin-top:8px">Open GitHub issue ↗</button>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('fb-send');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var type = document.getElementById('fb-type').value;
+    var page = document.getElementById('fb-page').value.trim();
+    var text = document.getElementById('fb-text').value.trim() || '(no details given)';
+    var title = encodeURIComponent(type + (page ? ': ' + page : ''));
+    var body = encodeURIComponent('**Page:** ' + (page || 'not specified') + '\n\n**Details:**\n' + text + '\n\n---\nReported from tenno-vault site');
+    window.open('https://github.com/goldkid1000/Tenno-Vault/issues/new?title=' + title + '&body=' + body, '_blank', 'noopener');
+  });
+})();
+</script>
 
 <div class="notice">
   <b>New to Warframe?</b> A Warframe is your character, mods are how you make them strong,
