@@ -51,6 +51,9 @@
   /* ---------- matching helpers ---------- */
   function norm(s) { return String(s || '').toLowerCase().trim(); }
 
+  /* drop leading "the/a/an" so "is the kuva bramma good" still matches */
+  function stripArticles(s) { return norm(s).replace(/^(the|a|an)\s+/, ''); }
+
   /* escape + turn literal \n sequences in data into line breaks */
   function fmtText(s) {
     return esc(s).replace(/\\n/g, '<br>');
@@ -146,37 +149,49 @@
   /* ---------- answer builders (HTML) ---------- */
   function buildAnswer(b) {
     var mods = (b.mods || []).map(function (m) { return esc(m.name); }).join(', ');
-    return '<b>' + esc(b.name || b.item) + '</b> — ' + esc(b.item) +
+    return 'Good pick — here\'s the <b>' + esc(b.name || b.item) + '</b> setup:' +
       (window.TV.badge ? ' ' + window.TV.badge(b.tags || []) : '') +
       '<p>' + fmtText(b.description || '') + '</p>' +
       (mods ? '<p><b>Mods:</b> ' + mods + '</p>' : '') +
       (b.arcane ? '<p><b>Arcane:</b> ' + esc(b.arcane) + '</p>' : '') +
+      '<p class="muted small">Want to know where to farm any of these mods? Just ask.</p>' +
       '<p><a href="builds.html#build-' + encodeURIComponent(b.id) + '">Open the full build &rarr;</a></p>';
   }
 
   function farmAnswer(f) {
     var e = f.e;
+    var itemLabel = e.name || e.what || 'it';
+    /* build offer only makes sense for gear, not raw resources */
+    var buildOffer = (f.kind === 'spot')
+      ? ''
+      : '<p class="muted small">Want a build for it once you have it? Just ask <i>"make me a ' +
+        esc(itemLabel) + ' build"</i>.</p>';
     if (f.kind === 'warframe') {
-      return '<b>' + esc(e.name) + '</b><p><b>Farm:</b> ' + esc(e.farm) + '</p>' +
+      return 'Good pick — here\'s where to get <b>' + esc(e.name) + '</b>:<p><b>📍 Farm:</b> ' + esc(e.farm) + '</p>' +
+        buildOffer +
         '<p><a href="' + link('warframes.html', e.name) + '">Warframe page &rarr;</a></p>';
     }
     if (f.kind === 'mod') {
-      return '<b>' + esc(e.name) + '</b><p><b>Farm:</b> ' + esc(fmtDrops(e.drops)) + '</p>' +
+      return 'Here\'s where <b>' + esc(e.name) + '</b> drops:<p><b>📍 Farm:</b> ' + esc(fmtDrops(e.drops)) + '</p>' +
+        buildOffer +
         '<p><a href="' + link('mods.html', e.name) + '">Mod page &rarr;</a></p>';
     }
     if (f.kind === 'arcane') {
       var aloc = fmtDrops(e.drops);
       return '<b>' + esc(e.name) + '</b>' +
-        (aloc ? '<p><b>Farm:</b> ' + esc(aloc) + '</p>' : '') +
+        (aloc ? '<p><b>📍 Farm:</b> ' + esc(aloc) + '</p>' : '<p>Farm info coming — check the arcane page for now.</p>') +
+        buildOffer +
         '<p><a href="' + link('arcanes.html', e.name) + '">Arcane page &rarr;</a></p>';
     }
     if (f.kind === 'relic') {
-      return '<b>' + esc(e.name) + '</b> (' + esc(e.tier) + ' relic)<p>Crack it in <b>Void Fissure</b> missions — ' +
+      return '<b>' + esc(e.name) + '</b> (' + esc(e.tier) + ' relic)<p>📍 Crack it in <b>Void Fissure</b> missions — ' +
         'relics drop from endless missions (survival/defense), bounties, and Void captures.</p>' +
+        buildOffer +
         '<p><a href="' + link('relics.html', e.name) + '">Relic page &rarr;</a></p>';
     }
     if (f.kind === 'spot') {
-      return '<b>' + esc(e.what) + '</b><p><b>Farm:</b> ' + esc(e.source) + '</p>' +
+      return 'You\'ll find <b>' + esc(e.what) + '</b> here:<p><b>📍 Farm:</b> ' + esc(e.source) + '</p>' +
+        buildOffer +
         '<p><a href="farming.html">Farming Hub &rarr;</a></p>';
     }
     if (f.kind === 'weapon-relic') {
@@ -184,10 +199,13 @@
         return '<li><a href="' + link('relics.html', h.relic.name) + '">' + esc(h.relic.name) +
           '</a> <span class="muted small">' + esc(h.relic.tier) + ' · ' + esc(h.reward.rarity) + '</span></li>';
       }).join('');
-      return '<b>' + esc(e.name) + '</b><p>Prime parts drop from these relics (crack in Void Fissures):</p><ul>' +
-        rows + '</ul><p><a href="' + link('weapons.html', e.name) + '">Weapon page &rarr;</a></p>';
+      return 'To get <b>' + esc(e.name) + '</b>, crack these relics in Void Fissures:<ul>' +
+        rows + '</ul>' + buildOffer +
+        '<p><a href="' + link('weapons.html', e.name) + '">Weapon page &rarr;</a></p>';
     }
-    return '<b>' + esc(e.name) + '</b><p>The Vault doesn\'t list a farm spot for this one yet.</p>' +
+    return '<b>' + esc(e.name) + '</b><p>The Vault doesn\'t list a farm spot for this one yet — ' +
+      'the in-game Codex will have the latest source.</p>' +
+      buildOffer +
       '<p><a href="' + link('weapons.html', e.name) + '">Weapon page &rarr;</a></p>';
   }
 
@@ -206,31 +224,46 @@
     var picks = D.builds.filter(function (b) {
       return (b.tags || []).indexOf('steel-path') !== -1 || (b.tags || []).indexOf('one-shot') !== -1;
     }).slice(0, 8);
-    if (!picks.length) return 'No Steel Path builds found in the Vault.';
+    if (!picks.length) return 'Hmm, no Steel Path builds in the Vault yet — but ask me <i>"make me a [frame/weapon] Steel Path build"</i> and I\'ll generate one for you on the spot.';
     var rows = picks.map(function (b) {
       return '<li><a href="builds.html#build-' + encodeURIComponent(b.id) + '"><b>' + esc(b.name || b.item) +
         '</b></a> <span class="muted small">' + esc(b.item) + '</span> ' +
         (window.TV.badge ? window.TV.badge(b.tags || []) : '') + '</li>';
     }).join('');
-    return '<b>Steel Path / one-shot builds</b><ul>' + rows + '</ul>' +
+    return 'Here are the Vault\'s <b>Steel Path / one-shot builds</b> — these delete high-level enemies:<ul>' + rows + '</ul>' +
+      '<p class="muted small">Don\'t see your favorite? Ask <i>"make me a [frame] Steel Path build"</i> and I\'ll whip one up.</p>' +
       '<p><a href="builds.html">All builds &rarr;</a></p>';
   }
 
   function sellAnswer() {
-    return '<b>Selling for platinum</b><p>1) Farm prime parts from Void Relics (crack them in fissures). ' +
-      '2) List them on <b>warframe.market</b>. 3) Meet the buyer in-game — trade at a relay or clan dojo. ' +
-      'Vaulted relics and rare mods fetch the most.</p>' +
+    return 'Selling for platinum is easier than it looks. Here\'s the loop:' +
+      '<p><b>1.</b> Farm <b>prime parts</b> from Void Relics (crack them in fissure missions).<br>' +
+      '<b>2.</b> List them on <b>warframe.market</b> — check the Live tab\'s price checker first so you don\'t undersell.<br>' +
+      '<b>3.</b> Meet the buyer in-game and trade at a relay or your clan dojo.</p>' +
+      '<p class="muted small">Pro tip: vaulted relics and rare mods fetch the most. Good luck out there, Tenno. 💰</p>' +
       '<p><a href="trading.html">Full trading guide &rarr;</a></p>';
   }
 
+  function beginnerAnswer() {
+    return 'Welcome to Warframe, Tenno! 🎉 Here\'s the short version of what to do first:' +
+      '<p><b>1.</b> Pick <b>Excalibur</b> as your starter frame — simple, strong, forgiving.<br>' +
+      '<b>2.</b> Clear the <b>star chart</b> planet by planet and open <b>junctions</b> — that\'s your main progression.<br>' +
+      '<b>3.</b> Do the early <b>quests</b> (Vor\'s Prize → Once Awake → The Archwing) — they unlock core systems.<br>' +
+      '<b>4.</b> Level <b>mods</b>, not just gear — a ranked-up Serration matters more than a new rifle.<br>' +
+      '<b>5.</b> Don\'t stress about builds yet — just ask me <i>"make me an Excalibur build"</i> when you\'re ready.</p>' +
+      '<p><a href="index.html#beginner-guide">Full New Player Guide &rarr;</a></p>';
+  }
+
   function helpAnswer() {
-    return '<b>What I can answer</b> (from the Vault\'s data):' +
-      '<ul><li>Best build for a weapon or frame — <i>"best build for Kuva Zarr"</i></li>' +
-      '<li>Where to farm anything — <i>"where do I farm Argon Crystals"</i></li>' +
-      '<li>What a mod or arcane does — <i>"what does Hunter Munitions do"</i></li>' +
-      '<li>Steel Path / one-shot picks — <i>"best Steel Path builds"</i></li>' +
-      '<li>How to sell for platinum — <i>"how do I sell for platinum"</i></li></ul>' +
-      'I\'m the Vault\'s built-in guide, not a live AI — I only know what\'s in the Vault.';
+    return 'Here\'s what I can do for you, Tenno:' +
+      '<ul><li>🛠 <b>Build anything</b> — <i>"make me a Nova Prime Steel Path build"</i></li>' +
+      '<li>📍 <b>Find anything</b> — <i>"where do I farm Argon Crystals"</i></li>' +
+      '<li>❓ <b>Explain mods & arcanes</b> — <i>"what does Hunter Munitions do"</i></li>' +
+      '<li>💥 <b>Steel Path picks</b> — <i>"best Steel Path builds"</i></li>' +
+      '<li>💰 <b>Platinum trading</b> — <i>"how do I sell for platinum"</i></li>' +
+      '<li>🌱 <b>New player help</b> — <i>"I\'m new, what should I do first"</i></li></ul>' +
+      '<p class="muted small">I\'m the Vault\'s built-in guide — I answer from the Vault\'s own data, not a live AI. ' +
+      'But I\'ll always try to get you something useful.</p>';
   }
 
   function fallbackAnswer(q) {
@@ -238,14 +271,16 @@
       return e.n && norm(e.n).indexOf(norm(q)) !== -1;
     }).slice(0, 5);
     if (!hits.length) {
-      return 'I couldn\'t find that in the Vault. Try a warframe, weapon, mod, arcane, or relic name — ' +
-        'or ask "help" to see what I can answer.';
+      return 'Hmm, I don\'t have anything called "' + esc(q) + '" in the Vault. 🤔 ' +
+        'Double-check the spelling — or try asking about a warframe, weapon, mod, arcane, or relic. ' +
+        'You can also ask <i>"help"</i> to see everything I can do.';
     }
     var rows = hits.map(function (h) {
       return '<li><a href="' + esc(h.u) + '"><b>' + esc(h.n) + '</b></a> ' +
         '<span class="muted small">' + esc(h.t) + '</span></li>';
     }).join('');
-    return 'I didn\'t quite get that — did you mean:<ul>' + rows + '</ul>';
+    return 'I didn\'t quite catch that — did you mean one of these?<ul>' + rows + '</ul>' +
+      '<p class="muted small">Or rephrase — I\'m best with things like <i>"make me a Rhino build"</i> or <i>"where do I farm Orokin Cells"</i>.</p>';
   }
 
 /* ---------- GENERATIVE BUILD ENGINE ----------
@@ -272,16 +307,22 @@ function modFarmLine(m) {
   return d ? '<span class="muted small">Farm: ' + esc(d) + '</span>' : '';
 }
 
-function renderLoadout(title, itemName, picks, notes, page) {
+function renderLoadout(title, itemName, picks, notes, page, purpose) {
   var rows = picks.map(function (p, i) {
     return '<div class="mod-row"><div><b>' + (i + 1) + '. ' + esc(p.mod.name) + '</b>' +
       '<div class="muted small">' + esc(p.reason) + '</div>' + modFarmLine(p.mod) + '</div></div>';
   }).join('');
+  var cheer = purpose && purpose.steelPath
+    ? 'This\'ll shred Steel Path. 💪'
+    : purpose && purpose.oneShot
+    ? 'This thing\'s going to delete enemies. Enjoy. 💥'
+    : 'Solid setup — you\'ll feel the difference right away. 👍';
   return '<b>' + esc(title) + '</b> <span class="muted small">generated for ' + esc(itemName) + '</span>' +
+    '<p>' + cheer + '</p>' +
     rows +
     (notes ? '<p class="muted small">' + notes + '</p>' : '') +
-    '<p>Want more? Ask <i>"where do I farm ' + esc(itemName) + '"</i> or <i>"what does ' +
-    esc(picks[0] ? picks[0].mod.name : 'this mod') + ' do"</i>.</p>' +
+    '<p class="muted small">Want to know where to farm any of these mods? Just ask <i>"where do I farm ' +
+    esc(picks[0] ? picks[0].mod.name : 'this mod') + '"</i>.</p>' +
     '<p><a href="' + link(page, itemName) + '">Full ' + esc(itemName) + ' page &rarr;</a> · ' +
     '<a href="builds.html">Curated builds &rarr;</a></p>';
 }
@@ -328,7 +369,7 @@ function genWarframeBuild(frame, purpose) {
     ? 'Steel Path tip: shield-gating (brief shield regen = invulnerability) matters more than raw health at high levels. Rolling Guard + Adaptation is the standard survival package.'
     : 'Level the mods as you get Endo — even rank 6-8 mods carry you through the star chart.';
   return renderLoadout(frame.name + ' build', frame.name, picks,
-    notes + ' Shard/arcane picks depend on your focus school — check the full page.', 'warframes.html');
+    notes + ' Shard/arcane picks depend on your focus school — check the full page.', 'warframes.html', purpose);
 }
 
 /* ===== WEAPON BUILD GENERATOR ===== */
@@ -406,7 +447,7 @@ function genWeaponBuild(weapon, purpose) {
   var notes = purpose.steelPath
     ? 'Steel Path notes: Viral + Hunter Munitions slash procs bypass armor — that\'s the one-shot formula. Swap the faction Bane mod per mission.'
     : 'Level these gradually — a half-ranked core build beats a wishlist of unranked mods.';
-  return renderLoadout(weapon.name + ' build', weapon.name, picks, notes, 'weapons.html');
+  return renderLoadout(weapon.name + ' build', weapon.name, picks, notes, 'weapons.html', purpose);
 }
 
 /* extract item name + purpose from a build question */
@@ -463,7 +504,22 @@ function generateBuild(t) {
       return 'Hey, Tenno. ' + helpAnswer();
     }
     if (t.indexOf('help') !== -1 || t.indexOf('what can you') !== -1) return helpAnswer();
+    if (/\bi'?m new\b/.test(t) || /\bnew player\b/.test(t) || /\bjust started\b/.test(t) ||
+        /\bwhat should i do first\b/.test(t) || /\bwhere do i start\b/.test(t) ||
+        /\bbeginner (guide|tips|help)\b/.test(t)) {
+      return beginnerAnswer();
+    }
     if (t.indexOf('steel path') !== -1 || t.indexOf('one-shot') !== -1 || t.indexOf('oneshot') !== -1) {
+      /* "make me a Wisp Prime steel path build" → generate for THAT item, not the generic list */
+      var spParsed = parseBuildQ(t);
+      if (spParsed.name.length >= 4) {
+        var spFound = findItemForBuild(spParsed.name);
+        if (spFound) {
+          return spFound.kind === 'warframe'
+            ? genWarframeBuild(spFound.e, spParsed.purpose)
+            : genWeaponBuild(spFound.e, spParsed.purpose);
+        }
+      }
       return steelPathAnswer();
     }
     if (t.indexOf('sell') !== -1 || t.indexOf('platinum') !== -1 || t.indexOf('trade') !== -1) {
@@ -478,32 +534,34 @@ function generateBuild(t) {
       if (mod) return describeAnswer(mod, 'mods.html');
       var arc = findByName(D.arcanes, thing);
       if (arc) return describeAnswer(arc, 'arcanes.html');
-      return 'I don\'t know a mod or arcane called "' + esc(thing) + '".';
+      return 'Hmm, I don\'t know a mod or arcane called "' + esc(thing) + '". 🤔 ' +
+        'Check the spelling — or browse the <a href="mods.html">mods list</a> to find it.';
     }
 
-    m = t.match(/^(?:where (?:do|can) i (?:farm|get)|where to (?:farm|get)|how do i (?:get|farm|obtain|find)|how to (?:get|farm|obtain|find)|farm|get) (.+)$/);
+    m = t.match(/^(?:where (?:do|can) i (?:farm|get|find)|where to (?:farm|get|find)|how do i (?:get|farm|obtain|find)|how to (?:get|farm|obtain|find)|farm|get|find) (.+)$/);
     if (m) {
       var f = findFarm(m[1]);
       if (f) return farmAnswer(f);
-      return 'I couldn\'t find a farm spot for "' + esc(m[1]) + '" in the Vault.';
+      return 'Hmm, I couldn\'t find a farm spot for "' + esc(m[1]) + '" in the Vault. ' +
+        'Try the full item name — or check the <a href="farming.html">Farming Hub</a> for resource spots.';
     }
 
     m = t.match(/^is (.+?) good(?: for (.+?))?$/) || t.match(/^how (?:is|good is) (.+?)(?: for (.+?))?$/);
     if (m) {
-      var itemQ = m[1], ctx = m[2] || '';
+      var itemQ = stripArticles(m[1]), ctx = m[2] || '';
       var fw = findByName(D.warframes, itemQ);
       var fp = findByName(D.weapons, itemQ);
       var it = fw || fp;
       if (it) {
         var isSP = /steel/.test(ctx) || /steel/.test(t);
         var verdict = isSP
-          ? '<b>' + esc(it.name) + '</b> can absolutely work in Steel Path with the right build. '
-          : '<b>' + esc(it.name) + '</b> is a solid pick. ';
+          ? 'Oh yeah — <b>' + esc(it.name) + '</b> can absolutely hang in Steel Path with the right build. 💪 '
+          : '<b>' + esc(it.name) + '</b>? Solid pick, Tenno. ';
         var genQ = it.name + ' build' + (isSP ? ' steel path' : '');
         var gb = generateBuild(genQ);
         return verdict + 'Here\'s a build to make it shine:' +
-          (gb ? gb.replace(/^<b>[^<]+<\/b> <span[^>]+>[^<]+<\/span>/, '') : '') +
-          '<p>Want the farm location too? Just ask "where do I get ' + esc(it.name) + '".</p>';
+          (gb ? gb.replace(/^<b>[^<]+<\/b> <span[^>]+>[^<]+<\/span>(<p>[^<]*<\/p>)?/, '') : '') +
+          '<p class="muted small">Want the farm location too? Just ask <i>"where do I get ' + esc(it.name) + '"</i>.</p>';
       }
     }
 
@@ -518,7 +576,8 @@ function generateBuild(t) {
       /* last resort: suggest closest */
       var sug = findItemForBuild(m[1]) || findItemForBuild(t);
       if (sug) return generateBuild(sug.e.name + ' build');
-      return 'Hmm, I couldn\'t pin down which item you mean. Try the full name — like "Nova Prime build" or "Kuva Zarr build".';
+      return 'Hmm, I couldn\'t pin down which item you mean. 🤔 Try the full name — like <i>"Nova Prime build"</i> or <i>"Kuva Zarr build"</i>. ' +
+        'Or ask <i>"help"</i> to see what I can do.';
     }
 
     m = t.match(/^what is (?:a |an |the )?(.+)$/);
@@ -568,9 +627,10 @@ function generateBuild(t) {
     els.btn.classList.toggle('open', show);
     if (show && !opened) {
       opened = true;
-      addMsg('Hey, Tenno — I\'m the Vault\'s <b>built-in guide</b>. I answer from Tenno Vault\'s own data ' +
-        '(not a live AI): builds, farm spots, what mods/arcanes do, and how to sell for platinum. ' +
-        'Try a question below or tap a chip.', 'bot');
+      addMsg('Hey Tenno! ◈ Welcome to the Vault — I\'m your built-in guide. ' +
+        'Ask me to <b>build</b> something ("make me a Nova Prime Steel Path build"), ' +
+        'tell you <b>where to farm</b> anything ("where do I find Argon Crystals"), ' +
+        'or explain <b>mods, arcanes, and platinum trading</b>. What are you working on?', 'bot');
       loadData().catch(function () {
         addMsg('Heads up: the Vault data didn\'t load — answers may be limited until you reload.', 'bot');
       });

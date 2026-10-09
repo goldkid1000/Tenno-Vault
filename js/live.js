@@ -3,21 +3,42 @@
   'use strict';
   var esc = function (s) { return window.TV.esc(s); };
 
-  function countdown(iso) {
-    try {
-      var ms = new Date(iso).getTime() - Date.now();
-      if (ms < 0) return 'expired';
-      var s = Math.floor(ms / 1000);
-      var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60);
-      return (h ? h + 'h ' : '') + m + 'm left';
-    } catch (e) { return ''; }
+  /* HH:MM:SS formatter for live ticking countdowns */
+  function fmtHMS(ms) {
+    if (!(ms > 0)) return '00:00:00';
+    var s = Math.floor(ms / 1000);
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    function p(n) { return (n < 10 ? '0' : '') + n; }
+    return p(h) + ':' + p(m) + ':' + p(sec);
+  }
+
+  function fmtCountdown(iso) {
+    try { return fmtHMS(new Date(iso).getTime() - Date.now()); }
+    catch (e) { return '--:--:--'; }
+  }
+
+  /* one shared 1s ticker: recomputes every [data-countdown] from Date.now(),
+     so timers stay accurate even after the tab was backgrounded */
+  function tickCountdowns() {
+    var els = document.querySelectorAll('[data-countdown]');
+    var now = Date.now();
+    for (var i = 0; i < els.length; i++) {
+      var iso = els[i].getAttribute('data-countdown');
+      var ms = new Date(iso).getTime() - now;
+      els[i].textContent = fmtHMS(ms);
+    }
+  }
+
+  /* span that the 1s ticker keeps live */
+  function liveCd(iso) {
+    return '<span data-countdown="' + esc(iso || '') + '">' + fmtCountdown(iso) + '</span>';
   }
 
   /* ---------------- worldstate ---------------- */
-  function cycleCard(title, state, timeLeft, icon) {
+  function cycleCard(title, state, expiryIso, icon) {
     return '<div class="card"><div class="icon">' + icon + '</div><h3>' + esc(title) + '</h3>' +
       '<p style="font-size:1.15rem;font-weight:700">' + esc(state) + '</p>' +
-      '<p class="muted small">' + esc(timeLeft || '') + '</p></div>';
+      '<p class="muted small">⏱ ' + liveCd(expiryIso) + ' left</p></div>';
   }
 
   var lastUpdate = 0;
@@ -48,7 +69,7 @@
     items.slice(0, 10).forEach(function (it) {
       html += '<div class="list-item incoming-pulse"><h3>' + esc(it.title) + '</h3>' +
         '<p class="muted small">' + esc(it.sub) + (it.sub ? ' · ' : '') +
-        'ends in <b>' + esc(countdown(it.expiry)) + '</b></p></div>';
+        'ends in ⏱ <b>' + liveCd(it.expiry) + '</b></p></div>';
     });
     return html + '</div>';
   }
@@ -57,11 +78,11 @@
     lastUpdate = Date.now();
     var html = '<p class="muted small" id="live-updated">Updated ' + timeAgo() + ' · auto-refreshes every minute</p>';
     html += '<h2>Right now in the Origin System</h2><div class="card-grid">';
-    if (d.earthCycle) html += cycleCard('Earth', d.earthCycle.isDay ? '☀️ Day' : '🌙 Night', d.earthCycle.timeLeft, '🌍');
-    if (d.cetusCycle) html += cycleCard('Cetus / Plains', d.cetusCycle.isDay ? '☀️ Day' : '🌙 Night', d.cetusCycle.timeLeft, '🌅');
-    if (d.vallisCycle) html += cycleCard('Orb Vallis', d.vallisCycle.isWarm ? '🔥 Warm' : '❄️ Cold', d.vallisCycle.timeLeft, '🏔');
+    if (d.earthCycle) html += cycleCard('Earth', d.earthCycle.isDay ? '☀️ Day' : '🌙 Night', d.earthCycle.expiry, '🌍');
+    if (d.cetusCycle) html += cycleCard('Cetus / Plains', d.cetusCycle.isDay ? '☀️ Day' : '🌙 Night', d.cetusCycle.expiry, '🌅');
+    if (d.vallisCycle) html += cycleCard('Orb Vallis', d.vallisCycle.isWarm ? '🔥 Warm' : '❄️ Cold', d.vallisCycle.expiry, '🏔');
     if (d.cambionCycle) html += cycleCard('Deimos / Cambion Drift',
-      d.cambionCycle.active === 'fass' ? '🟠 Fass' : '🔵 Vome', d.cambionCycle.timeLeft, '🦠');
+      d.cambionCycle.active === 'fass' ? '🟠 Fass' : '🔵 Vome', d.cambionCycle.expiry, '🦠');
     html += '</div>';
 
     // fissures
@@ -69,7 +90,7 @@
       html += '<h2>Active Void Fissures</h2><div class="item-list">';
       d.fissures.slice(0, 24).forEach(function (f) {
         html += '<div class="list-item"><h3>' + esc(f.tier + ' — ' + f.missionType + ' <span class="muted">(' + f.node + ')</span>') + '</h3>' +
-          '<p class="muted small">vs ' + esc(f.enemy) + ' · ' + esc(countdown(f.expiry)) +
+          '<p class="muted small">vs ' + esc(f.enemy) + ' · ⏱ ' + liveCd(f.expiry) +
           (f.isStorm ? ' · <b>Railjack</b>' : '') + (f.isHard ? ' · <b>Steel Path</b>' : '') + '</p></div>';
       });
       html += '</div>';
@@ -82,7 +103,7 @@
         html += '<div class="mod-row"><div><b>' + esc(m.missionType) + '</b> <span class="muted">(' + esc(m.node) + ')</span></div>' +
           '<div class="muted">' + esc(m.modifier) + '</div></div>';
       });
-      html += '<p class="muted small">Resets in ' + esc(countdown(d.sortie.expiry)) + '</p></div>';
+      html += '<p class="muted small">Resets in ⏱ ' + liveCd(d.sortie.expiry) + '</p></div>';
     }
     if (d.archonHunt && d.archonHunt.boss) {
       html += '<h2>Archon Hunt — ' + esc(d.archonHunt.boss) + '</h2><div class="detail-box">';
@@ -198,6 +219,8 @@
     if (document.getElementById('live-world')) {
       loadWorld();
       setInterval(loadWorld, 60000);
+      /* live 1s countdown ticker — one shared interval for all [data-countdown] */
+      setInterval(tickCountdowns, 1000);
       /* refresh the "updated Xs ago" label every 10s */
       setInterval(function () {
         var el = document.getElementById('live-updated');
