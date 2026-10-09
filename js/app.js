@@ -191,19 +191,19 @@
         if (window._io) window._io.disconnect();
       }
     }
-    container.appendChild(sentin);
+    container.appendChild(sentinel);
     var io = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) more();
     }, { rootMargin: '600px' });
     window._io = io;
-    io.observe(sentin);
+    io.observe(sentinel);
     more();
     return {
       reset: function (newItems) {
         items = newItems; shown = 0;
         container.innerHTML = '';
-        container.appendChild(sentin);
-        io.observe(sentin);
+        container.appendChild(sentinel);
+        io.observe(sentinel);
         more();
       }
     };
