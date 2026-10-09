@@ -101,7 +101,7 @@
       });
       urlName = urlName ? idx[urlName] || urlName : slugify(q);
       var marketLink = 'https://warframe.market/items/' + encodeURIComponent(urlName);
-      var fallback = '<p class=\"small\"><a href=\"' + marketLink + '\" target=\"_blank\" rel=\"noopener\">Open on warframe.market ↗</a></p>';
+      var fallback = '<p class="small"><a href="' + marketLink + '" target="_blank" rel="noopener">Open on warframe.market ↗</a></p>';
       return fetch('https://api.warframe.market/v1/items/' + encodeURIComponent(urlName) + '/orders')
         .then(function (r) { if (!r.ok) throw new Error('not found'); return r.json(); })
         .then(function (d) {
