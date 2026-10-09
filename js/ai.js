@@ -472,6 +472,40 @@ function parseBuildQ(t) {
   return { name: q, purpose: purpose };
 }
 
+/* no specific item named — recommend something useful instead of dead-ending.
+   "what's a good beginner warframe build" -> Rhino starter build + curated list. */
+function genericBuildAnswer(t, purpose) {
+  var isBeginner = purpose.beginner || /\b(beginner|starter|new player|just started)\b/.test(t);
+  if (/steel/.test(t)) return steelPathAnswer();
+  if (isBeginner) {
+    var rhino = findByName(D.warframes, 'rhino');
+    var gb = rhino ? genWarframeBuild(rhino, { beginner: true }) : null;
+    var curated = D.builds.filter(function (b) { return (b.tags || []).indexOf('beginner') !== -1; }).slice(0, 5);
+    var rows = curated.map(function (b) {
+      return '<li><a href="builds.html#build-' + encodeURIComponent(b.id) + '"><b>' +
+        esc(b.name || b.item) + '</b></a> <span class="muted small">' + esc(b.item || '') + '</span></li>';
+    }).join('');
+    return 'Great question — for a beginner you can\'t go wrong with <b>Rhino</b>. ' +
+      'Iron Skin makes you nearly unkillable while you\'re learning the game. Here\'s a starter build for him:' +
+      (gb ? gb.replace(/^<b>[^<]+<\/b> <span[^>]+>[^<]+<\/span>/, '') : '') +
+      (rows ? '<p>More starter builds in the Vault:</p><ul>' + rows + '</ul>' : '') +
+      '<p class="muted small">Want one for a specific frame? Just ask <i>"make me an Excalibur build"</i>.</p>' +
+      '<p><a href="builds.html">All builds &rarr;</a></p>';
+  }
+  /* generic "give me a warframe/weapon build" — show strong curated picks */
+  var picks = D.builds.filter(function (b) { return (b.tags || []).indexOf('strong') !== -1; }).slice(0, 6);
+  if (!picks.length) picks = D.builds.slice(0, 6);
+  var rows2 = picks.map(function (b) {
+    return '<li><a href="builds.html#build-' + encodeURIComponent(b.id) + '"><b>' +
+      esc(b.name || b.item) + '</b></a> <span class="muted small">' + esc(b.item || '') + '</span> ' +
+      (window.TV.badge ? window.TV.badge(b.tags || []) : '') + '</li>';
+  }).join('');
+  return 'Here are some of the Vault\'s most popular builds to get you started:<ul>' + rows2 + '</ul>' +
+    '<p class="muted small">Or name a frame/weapon and I\'ll generate a build on the spot — ' +
+    'try <i>"make me a Saryn build"</i>.</p>' +
+    '<p><a href="builds.html">All builds &rarr;</a></p>';
+}
+
 function findItemForBuild(q) {
   var w = findByName(D.warframes, q);
   if (w) return { kind: 'warframe', e: w };
@@ -537,8 +571,8 @@ function generateBuild(t) {
       if (fw2) return genWarframeBuild(fw2, { steelPath: /steel/.test(t), oneShot: /one/.test(t) });
       var wp2 = findItemInText(D.weapons, t);
       if (wp2) return genWeaponBuild(wp2, { steelPath: /steel/.test(t), oneShot: /one/.test(t) });
-      /* generic steel path question with no item → curated list */
-      if (/steel/.test(t)) return steelPathAnswer();
+      /* no specific item found — recommend instead of dead-ending */
+      return genericBuildAnswer(t, bp.purpose);
     }
     if (/\bi'?m new\b/.test(t) || /\bnew player\b/.test(t) || /\bjust started\b/.test(t) ||
         /\bwhat should i do first\b/.test(t) || /\bwhere do i start\b/.test(t) ||
