@@ -1,17 +1,24 @@
 rules_version = '2';
-// Tenno Vault marketplace — Firestore security rules (free tier).
+// Tenno Vault — Firestore security rules (free tier).
 // Deploy: Firebase console → Firestore Database → Rules → paste → Publish.
 // Or: firebase deploy --only firestore:rules
 //
-// What these rules do:
-// - Anyone can READ listings (it's a public classifieds board).
-// - Only signed-in users can CREATE listings.
-// - Only the seller can EDIT or DELETE their own listing.
-// - Messages on a listing can be read only by the seller or the message sender.
-// - Only signed-in users can send messages.
+// Collections:
+// - listings / listings/{id}/messages : marketplace (auth required, as before)
+// - presence  : live visitor headcount — anyone can write/delete their own
+//               ephemeral doc, anyone can read the collection for the count.
+//               Docs are keyed by random session ID, auto-expire client-side.
+// - pageViews : per-page visit counters — anyone can read; anyone can
+//               increment via merge (only the `count` field may change).
+// - feedback  : bug reports / suggestions — anyone can CREATE, nobody can
+//               read or modify via the client (owner reads in Firebase console).
+// - chat      : community chat — anyone can read + create, no login.
+//               No updates/deletes from clients.
+
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    /* ---------- marketplace (unchanged) ---------- */
     match /listings/{listingId} {
       allow read: if true;
       allow create: if request.auth != null
@@ -33,6 +40,45 @@ service cloud.firestore {
           && request.resource.data.senderUid == request.auth.uid;
         allow update, delete: if false;
       }
+    }
+
+    /* ---------- live presence (no login) ---------- */
+    match /presence/{visitorId} {
+      allow read: if true;
+      allow create, delete: if true;
+      allow update: if true;
+    }
+
+    /* ---------- page view counters (no login) ---------- */
+    match /pageViews/{page} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false;
+    }
+
+    /* ---------- feedback: bug reports + ideas (no login) ---------- */
+    match /feedback/{reportId} {
+      allow read: if false;   // owner reads in Firebase console
+      allow create: if true
+        && request.resource.data.keys().hasOnly(['type', 'page', 'details', 'ts'])
+        && request.resource.data.type in ['bug', 'idea']
+        && request.resource.data.details is string
+        && request.resource.data.details.size() <= 2000;
+      allow update, delete: if false;
+    }
+
+    /* ---------- community chat (no login) ---------- */
+    match /chat/{messageId} {
+      allow read: if true;
+      allow create: if true
+        && request.resource.data.keys().hasOnly(['name', 'text', 'ts'])
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 300
+        && request.resource.data.name is string
+        && request.resource.data.name.size() <= 24;
+      allow update, delete: if false;
     }
   }
 }
