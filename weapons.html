@@ -70,7 +70,7 @@
       { label: 'Platinum price', sub: 'If it has prime parts', url: 'live.html#prices' }
     ]);
   }
-  window.TV.getJSON('data/site/weapons.json').then(function (d) {
+  window.TV.getJSONParts('data/site/weapons', 3).then(function (d) {
     all = d;
     var list = document.getElementById('w-list');
     ctl = window.TV.infiniteScroll(list, filtered(), card, 30);

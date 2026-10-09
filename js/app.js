@@ -35,7 +35,7 @@
       '<div class="header-inner">' +
       '<a class="logo" href="index.html"><span class="lotus">◈</span> Tenno Vault</a>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
-      '<!-- DONATE: buttons link to donate.html; swap the QR at images/donate-qr.jpg and the PayPal.me href inside donate.html as needed -->' +
+      '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate</a>' +
       '</div>';
     var input = document.getElementById('global-search');
@@ -97,7 +97,7 @@
     if (!host) return;
     host.innerHTML =
       '<div class="frow">' +
-      '<!-- DONATE: buttons link to donate.html; swap the QR at images/donate-qr.jpg and the PayPal.me href inside donate.html as needed -->' +
+      '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate to Tenno Vault</a>' +
       '<span>Unofficial fan site. Not affiliated with Digital Extremes.</span>' +
       '<span>Game data: warframe-items (WFCD) · Prices: warframe.market · Live: warframestat.us</span>' +
@@ -109,8 +109,7 @@
   function loadIndex() {
     if (searchIndex) return Promise.resolve(searchIndex);
     if (searchLoading) return searchLoading;
-    searchLoading = fetch('data/site/search-index.json')
-      .then(function (r) { return r.json(); })
+    searchLoading = getJSONParts('data/site/search-index', 7)
       .then(function (d) { searchIndex = d; return d; })
       .catch(function () { searchIndex = []; return []; });
     return searchLoading;
@@ -218,6 +217,12 @@
     });
   }
 
+  function getJSONParts(base, count) {
+    var ps = [];
+    for (var i = 0; i < count; i++) ps.push(getJSON(base + '-' + i + '.json'));
+    return Promise.all(ps).then(function (parts) { return [].concat.apply([], parts); });
+  }
+
   function badge(tags) {
     var out = '';
     if (tags.indexOf('one-shot') !== -1) out += '<span class="badge oneshot">One-shot</span>';
@@ -253,7 +258,7 @@
   });
 
   window.TV = {
-    NAV: NAV, page: page, esc: esc, getJSON: getJSON,
+    NAV: NAV, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
     infiniteScroll: infiniteScroll, badge: badge,
     liveNote: liveNote, relatedLinks: relatedLinks,
     openSearch: openSearch

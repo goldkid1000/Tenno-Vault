@@ -58,7 +58,7 @@
       { label: 'Arcanes', sub: 'Extra powers for frames', url: 'arcanes.html' }
     ]);
   }
-  window.TV.getJSON('data/site/warframes.json').then(function (d) {
+  window.TV.getJSONParts('data/site/warframes', 2).then(function (d) {
     all = d;
     var list = document.getElementById('wf-list');
     ctl = window.TV.infiniteScroll(list, all, card, 30);
