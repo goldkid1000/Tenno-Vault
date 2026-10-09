@@ -164,3 +164,40 @@ code{background:var(--bg2);padding:2px 6px;border-radius:4px;font-size:.88em}
   .donate-btn{margin-left:auto}
   h1{font-size:1.55rem}
 }
+
+/* ---------- Vault Guide chat ---------- */
+#vault-ai-btn{position:fixed;right:18px;bottom:18px;z-index:60;
+  background:linear-gradient(135deg,#0090b8,#00d2ff);border:none;color:#04121a;
+  font-weight:800;font-size:.95rem;padding:13px 20px;border-radius:999px;cursor:pointer;
+  box-shadow:0 4px 18px rgba(0,210,255,.35)}
+#vault-ai-btn:hover{filter:brightness(1.1)}
+#vault-ai-panel{position:fixed;right:18px;bottom:78px;z-index:90;
+  width:min(390px,calc(100vw - 24px));height:min(540px,72vh);
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  flex-direction:column;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+.vai-head{display:flex;justify-content:space-between;align-items:center;
+  padding:12px 14px;border-bottom:1px solid var(--border);font-weight:800}
+.vai-head .lotus,.vai-head span:first-child{color:var(--accent)}
+#vai-close{background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:4px 8px}
+#vai-close:hover{color:var(--text)}
+#vai-msgs{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.vai-msg{max-width:88%;padding:9px 13px;border-radius:12px;font-size:.9rem;line-height:1.5}
+.vai-msg.bot{background:var(--bg2);border:1px solid var(--border);align-self:flex-start}
+.vai-msg.bot ul{margin:.4em 0;padding-left:1.2em}
+.vai-msg.bot p{margin:.4em 0}
+.vai-msg.user{background:linear-gradient(135deg,#0090b8,#00d2ff);color:#04121a;
+  font-weight:600;align-self:flex-end}
+.vai-chips{display:flex;gap:6px;padding:8px 12px;overflow-x:auto;border-top:1px solid var(--border)}
+.vai-chip{flex-shrink:0;background:var(--card2);border:1px solid var(--border);color:var(--text);
+  border-radius:999px;padding:6px 12px;font-size:.78rem;cursor:pointer;white-space:nowrap}
+.vai-chip:hover{border-color:var(--accent)}
+#vai-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--border)}
+#vai-input{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:999px;
+  padding:10px 14px;color:var(--text);font-size:.9rem}
+#vai-input:focus{outline:none;border-color:var(--accent)}
+#vai-form button[type=submit]{background:linear-gradient(135deg,#0090b8,#00d2ff);border:none;
+  color:#04121a;font-weight:800;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:1rem}
+@media (max-width:900px){
+  #vault-ai-btn{right:12px;bottom:86px;padding:11px 16px}
+  #vault-ai-panel{right:12px;left:12px;width:auto;bottom:152px;height:min(520px,64vh)}
+}

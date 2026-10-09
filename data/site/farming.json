@@ -1,1 +1,100 @@
-{"arcaneFarms":[{"source":"Eidolon hunts — Plains of Eidolon, night (Cetus)","what":"Eidolon arcanes (Energize, Grace, Guardian, etc.)"},{"source":"The Holdfasts — Chrysalith, Zariman","what":"Zariman arcanes (Molt Augmented, Molt Efficiency, etc.)"},{"source":"The Quills (Cetus) / Vox Solaris (Fortuna) standing","what":"Operator Magus/Virtuos arcanes"},{"source":"Duviri — Steel Path Undercroft portals","what":"Duviri weapon arcanes"}],"modFarms":[{"source":"Arbitration Honors vendor — Vitus Essence","what":"All Galvanized mods"},{"source":"Baro Ki'Teer — Ducats + Credits, relays every 2 weeks","what":"All Primed mods"},{"source":"Nightmare missions (mission modifier)","what":"Nightmare dual-stat mods (Lethal Torrent, etc.)"},{"source":"Orokin Vaults — Dragon Keys, Orokin Derelict","what":"Corrupted mods (Blind Rage, Overextended, etc.)"},{"source":"Spy missions (all tiers)","what":"60/60 dual-stat elemental mods"},{"source":"Plains of Eidolon — Ghoul bounties","what":"Hunter set mods (Hunter Munitions)"}],"primePartFarms":[{"source":"Crack them in Void Fissure missions — bring 10 reactant to open","what":"Void Relics → Prime parts (relics drop from endless missions, bounties, defense/survival)"}],"relicFarms":[{"source":"Hepit or Teshub — Void (fast Capture/Exterminate)","what":"Lith relics"},{"source":"Ukko or Oxomoco — Void (fast Capture)","what":"Meso relics"},{"source":"Apollo — Lua (Disruption, defend 1 conduit per round)","what":"Neo relics"},{"source":"Xini — Eris (Interception) or Apollo — Lua (longer runs)","what":"Axi relics"},{"source":"Kuva Siphons and Kuva Floods — Kuva Fortress","what":"Requiem relics"}],"resourceFarms":[{"source":"Gabii — Ceres (survival, dark sector)","what":"Orokin Cells"},{"source":"Piscinas — Saturn (survival)","what":"Plastids / Polymer"},{"source":"Ophelia — Uranus (survival)","what":"Plastids, Polymer Bundle, Condition Overload farm"},{"source":"Helene — Saturn (defense, dark sector)","what":"Affinity + Orokin Cells"},{"source":"Hydron — Sedna (defense)","what":"Affinity leveling"}]}
+{
+ "arcaneFarms": [
+  {
+   "source": "Eidolon hunts \u2014 Plains of Eidolon, night (Cetus)",
+   "what": "Eidolon arcanes (Energize, Grace, Guardian, etc.)"
+  },
+  {
+   "source": "The Holdfasts \u2014 Chrysalith, Zariman",
+   "what": "Zariman arcanes (Molt Augmented, Molt Efficiency, etc.)"
+  },
+  {
+   "source": "The Quills (Cetus) / Vox Solaris (Fortuna) standing",
+   "what": "Operator Magus/Virtuos arcanes"
+  },
+  {
+   "source": "Duviri \u2014 Steel Path Undercroft portals",
+   "what": "Duviri weapon arcanes"
+  }
+ ],
+ "modFarms": [
+  {
+   "source": "Arbitration Honors vendor \u2014 Vitus Essence",
+   "what": "All Galvanized mods"
+  },
+  {
+   "source": "Baro Ki'Teer \u2014 Ducats + Credits, relays every 2 weeks",
+   "what": "All Primed mods"
+  },
+  {
+   "source": "Nightmare missions (mission modifier)",
+   "what": "Nightmare dual-stat mods (Lethal Torrent, etc.)"
+  },
+  {
+   "source": "Orokin Vaults \u2014 Dragon Keys, Orokin Derelict",
+   "what": "Corrupted mods (Blind Rage, Overextended, etc.)"
+  },
+  {
+   "source": "Spy missions (all tiers)",
+   "what": "60/60 dual-stat elemental mods"
+  },
+  {
+   "source": "Plains of Eidolon \u2014 Ghoul bounties",
+   "what": "Hunter set mods (Hunter Munitions)"
+  }
+ ],
+ "primePartFarms": [
+  {
+   "source": "Crack them in Void Fissure missions \u2014 bring 10 reactant to open",
+   "what": "Void Relics \u2192 Prime parts (relics drop from endless missions, bounties, defense/survival)"
+  }
+ ],
+ "relicFarms": [
+  {
+   "source": "Hepit or Teshub \u2014 Void (fast Capture/Exterminate)",
+   "what": "Lith relics"
+  },
+  {
+   "source": "Ukko or Oxomoco \u2014 Void (fast Capture)",
+   "what": "Meso relics"
+  },
+  {
+   "source": "Apollo \u2014 Lua (Disruption, defend 1 conduit per round)",
+   "what": "Neo relics"
+  },
+  {
+   "source": "Xini \u2014 Eris (Interception) or Apollo \u2014 Lua (longer runs)",
+   "what": "Axi relics"
+  },
+  {
+   "source": "Kuva Siphons and Kuva Floods \u2014 Kuva Fortress",
+   "what": "Requiem relics"
+  }
+ ],
+ "resourceFarms": [
+  {
+   "source": "Gabii \u2014 Ceres (survival, dark sector)",
+   "what": "Orokin Cells"
+  },
+  {
+   "source": "Piscinas \u2014 Saturn (survival)",
+   "what": "Plastids / Polymer"
+  },
+  {
+   "source": "Ophelia \u2014 Uranus (survival)",
+   "what": "Plastids, Polymer Bundle, Condition Overload farm"
+  },
+  {
+   "source": "Helene \u2014 Saturn (defense, dark sector)",
+   "what": "Affinity + Orokin Cells"
+  },
+  {
+   "source": "Hydron \u2014 Sedna (defense)",
+   "what": "Affinity leveling"
+  },
+  {
+   "what": "Argon Crystals",
+   "source": "Void missions \u2014 Taranis (defense) or Mot (survival); drops from Corrupted enemies. Note: they decay 24h after pickup, so farm fresh"
+  }
+ ]
+}
