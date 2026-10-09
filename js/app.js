@@ -211,7 +211,7 @@
 
   /* ---------- data helpers ---------- */
   function getJSON(path, _retried) {
-    return fetch(path).then(function (r) {
+    return fetch(path, { cache: 'no-store' }).then(function (r) {
       if (!r.ok) throw new Error('load failed: ' + path);
       return r.json();
     }).catch(function (err) {
