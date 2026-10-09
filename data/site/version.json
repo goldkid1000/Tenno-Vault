@@ -1,1 +1,5 @@
-{"notes":"Price database + version display + most-visited counts","updated":"2026-10-09","version":"2.2.0"}
+{
+    "version": "2.3.0",
+    "updated": "2026-10-09",
+    "notes": "AI build fixes, login-free marketplace, price database"
+}
