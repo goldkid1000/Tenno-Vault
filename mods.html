@@ -70,7 +70,7 @@
       { label: 'Farming hub', sub: 'Best farms for mods', url: 'farming.html' }
     ]);
   }
-  window.TV.getJSON('data/site/mods.json').then(function (d) {
+  window.TV.getJSONParts('data/site/mods', 8).then(function (d) {
     all = d;
     var byName = {};
     all.forEach(function (m) { byName[m.name] = m; });

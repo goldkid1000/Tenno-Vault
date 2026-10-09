@@ -100,7 +100,7 @@
   }
   Promise.all([
     window.TV.getJSON('data/site/builds.json'),
-    window.TV.getJSON('data/site/mods.json')
+    window.TV.getJSONParts('data/site/mods', 8)
   ]).then(function (res) {
     builds = res[0];
     res[1].forEach(function (m) { modDrops[m.name] = m.drops; });

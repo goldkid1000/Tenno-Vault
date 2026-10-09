@@ -72,7 +72,7 @@
       { label: 'Live fissures', sub: 'Crack them right now', url: 'live.html' }
     ]);
   }
-  window.TV.getJSON('data/site/relics.json').then(function (d) {
+  window.TV.getJSONParts('data/site/relics', 6).then(function (d) {
     all = d;
     var list = document.getElementById('r-list');
     ctl = window.TV.infiniteScroll(list, filtered(), card, 40);
