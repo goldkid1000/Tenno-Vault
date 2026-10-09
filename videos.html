@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>🎬 Videos</h1>
+<p class="muted small" id="v-count"></p>
 <p class="muted">Stuck? Watch a guide right here — no need to leave the Vault.</p>
 <div class="chip-row" id="v-filters">
   <button class="chip active" data-f="all">All</button>
@@ -46,6 +47,7 @@
     }).join('');
   }
   window.TV.getJSON('data/site/videos.json').then(function (d) {
+    document.getElementById('v-count').textContent = d.length + ' Videos';
     all = d; draw();
     document.getElementById('v-filters').addEventListener('click', function (e) {
       var b = e.target.closest('.chip'); if (!b) return;

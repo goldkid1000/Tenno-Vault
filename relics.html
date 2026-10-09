@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Relics</h1>
+<p class="muted small" id="r-count"></p>
 <p class="muted">Crack relics in Void Fissure missions to get prime parts. <b>Lith</b> = easiest, <b>Axi</b> = hardest. Vault status rotates — check your in-game relic console for what's currently available.</p>
 <div class="chip-row" id="r-tabs">
   <button class="chip active" data-t="all">All</button>
@@ -75,6 +76,7 @@
   }
   window.TV.getJSONParts('data/site/relics', 6).then(function (d) {
     all = d;
+    document.getElementById('r-count').textContent = d.length + ' Relics';
     var list = document.getElementById('r-list');
     ctl = window.TV.infiniteScroll(list, filtered(), card, 40);
     function refresh() { ctl.reset(filtered()); }

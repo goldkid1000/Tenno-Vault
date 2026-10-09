@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Operators</h1>
+<p class="muted small" id="op-count"></p>
 <p class="muted">Your Tenno kid with void powers. <b>Focus schools</b> are skill trees — pick one to specialize, then unlock the rest over time. Way-bounds are shared passives that work on every school once maxed.</p>
 
 <h2>Focus schools</h2>
@@ -34,6 +35,7 @@
 (function () {
   var esc = window.TV.esc;
   window.TV.getJSON('data/site/operators.json').then(function (d) {
+    document.getElementById('op-count').textContent = (d.schools.length + d.arcanes.length) + ' Schools & arcanes';
     document.getElementById('op-schools').innerHTML = d.schools.map(function (s) {
       return '<div class="card">' +
         (s.recommended ? '<span class="badge recommended">Great first pick</span>' : '') +

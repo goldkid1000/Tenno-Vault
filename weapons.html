@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Weapons</h1>
+<p class="muted small" id="w-count"></p>
 <p class="muted">Guns and blades. <b>Primary</b> = main gun, <b>Secondary</b> = sidearm, <b>Melee</b> = close-range. Higher crit + status = stronger with the right mods.</p>
 <div class="chip-row" id="w-tabs">
   <button class="chip active" data-t="Primary">Primary</button>
@@ -73,6 +74,7 @@
   }
   window.TV.getJSONParts('data/site/weapons', 3).then(function (d) {
     all = d;
+    document.getElementById('w-count').textContent = d.length + ' Weapons';
     var list = document.getElementById('w-list');
     ctl = window.TV.infiniteScroll(list, filtered(), card, 30);
     function refresh() { ctl.reset(filtered()); }

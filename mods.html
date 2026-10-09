@@ -14,6 +14,7 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Mods</h1>
+<p class="muted small" id="m-count"></p>
 <p class="muted">Mods are how you make everything strong. Level them with Endo. Below: the must-have mods first, then every mod in the game with its farm.</p>
 
 <h2>⭐ Best Mods — get these first</h2>
@@ -71,8 +72,9 @@
       { label: 'Farming hub', sub: 'Best farms for mods', url: 'farming.html' }
     ]);
   }
-  window.TV.getJSONParts('data/site/mods', 8).then(function (d) {
+  window.TV.getJSONParts('data/site/mods', 7).then(function (d) {
     all = d;
+    document.getElementById('m-count').textContent = d.length + ' Mods';
     var byName = {};
     all.forEach(function (m) { byName[m.name] = m; });
     document.getElementById('best-mods').innerHTML = BEST.map(function (n) {
