@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Board — Tenno Vault</title>
+<meta name="description" content="Player-run classifieds: browse and post Warframe trade listings.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="marketplace" data-crumb="Home,Market Board">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>🏪 Market Board</h1>
+<p class="muted">Tenno-to-Tenno classifieds. Post what you're selling, message sellers, then trade in-game.</p>
+<div id="mp-app"><div class="loading">Loading trading board…</div></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/marketplace.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+    { label: 'Platinum price checker', sub: 'Know your prices first', url: 'live.html#prices' },
+    { label: 'Trading guide', sub: 'Chat templates & scam tips', url: 'trading.html' }
+  ]);
+});
+</script>
+</body>
+</html>

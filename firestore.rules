@@ -1,0 +1,38 @@
+rules_version = '2';
+// Tenno Vault marketplace — Firestore security rules (free tier).
+// Deploy: Firebase console → Firestore Database → Rules → paste → Publish.
+// Or: firebase deploy --only firestore:rules
+//
+// What these rules do:
+// - Anyone can READ listings (it's a public classifieds board).
+// - Only signed-in users can CREATE listings.
+// - Only the seller can EDIT or DELETE their own listing.
+// - Messages on a listing can be read only by the seller or the message sender.
+// - Only signed-in users can send messages.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /listings/{listingId} {
+      allow read: if true;
+      allow create: if request.auth != null
+        && request.resource.data.sellerUid == request.auth.uid
+        && request.resource.data.status == 'active';
+      allow update: if request.auth != null
+        && request.auth.uid == resource.data.sellerUid;
+      allow delete: if request.auth != null
+        && request.auth.uid == resource.data.sellerUid;
+
+      match /messages/{messageId} {
+        function isSeller() {
+          return request.auth != null
+            && request.auth.uid == get(/databases/$(database)/documents/listings/$(listingId)).data.sellerUid;
+        }
+        allow read: if request.auth != null
+          && (request.auth.uid == resource.data.senderUid || isSeller());
+        allow create: if request.auth != null
+          && request.resource.data.senderUid == request.auth.uid;
+        allow update, delete: if false;
+      }
+    }
+  }
+}

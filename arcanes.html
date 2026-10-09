@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcanes — Tenno Vault</title>
+<meta name="description" content="Every arcane: what it does, max rank effect, and where to farm it.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="arcanes" data-crumb="Home,Arcanes">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Arcanes</h1>
+<p class="muted">Bonus powers you slot onto Warframes, weapons and Operators. Max them to rank 5 by combining duplicates.</p>
+<div class="field"><input id="a-q" type="search" placeholder="Filter arcanes…"></div>
+<div id="a-detail"></div>
+<div id="a-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  function card(a) {
+    var d = document.createElement('a');
+    d.className = 'list-item'; d.href = '#' + encodeURIComponent(a.name);
+    d.innerHTML = '<h3>' + esc(a.name) +
+      (a.type ? ' <span class="badge type">' + esc(a.type) + '</span>' : '') + '</h3>' +
+      '<p class="muted small">' + esc((a.effect || '').slice(0, 130)) + '</p>';
+    return d;
+  }
+  function showDetail(name) {
+    var box = document.getElementById('a-detail');
+    var a = all.find(function (x) { return x.name === name; });
+    if (!a) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(a.name) + '</h2>' +
+      (a.type ? '<span class="badge type">' + esc(a.type) + '</span> ' : '') +
+      (a.rarity ? '<span class="badge type">' + esc(a.rarity) + '</span>' : '') +
+      '<p><b>Max rank effect:</b><br>' + esc(a.effect || 'No description available.') + '</p>' +
+      '<h3>Where to get it</h3><p>' + ((a.drops && a.drops.length)
+        ? a.drops.map(function (d) { return esc(d.location) + (d.chance ? ' <span class="muted">(' + d.chance + '%)</span>' : ''); }).join('<br>')
+        : 'Source unknown — check the in-game Codex.') + '</p></div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Builds using arcanes', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
+      { label: 'Farming hub', sub: 'Arcane farms', url: 'farming.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/arcanes.json').then(function (d) {
+    all = d;
+    var list = document.getElementById('a-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    document.getElementById('a-q').addEventListener('input', function (e) {
+      var q = e.target.value.toLowerCase();
+      ctl.reset(all.filter(function (a) { return a.name.toLowerCase().indexOf(q) !== -1; }));
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('a-list').innerHTML = '<div class="notice">Could not load arcane data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

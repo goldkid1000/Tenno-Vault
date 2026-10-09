@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weapons — Tenno Vault</title>
+<meta name="description" content="Every primary, secondary and melee weapon: stats compared, best builds linked.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="weapons" data-crumb="Home,Weapons">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Weapons</h1>
+<p class="muted">Guns and blades. <b>Primary</b> = main gun, <b>Secondary</b> = sidearm, <b>Melee</b> = close-range. Higher crit + status = stronger with the right mods.</p>
+<div class="chip-row" id="w-tabs">
+  <button class="chip active" data-t="Primary">Primary</button>
+  <button class="chip" data-t="Secondary">Secondary</button>
+  <button class="chip" data-t="Melee">Melee</button>
+</div>
+<div class="field"><input id="w-q" type="search" placeholder="Filter weapons…"></div>
+<div id="w-detail"></div>
+<div id="w-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], type = 'Primary', ctl = null;
+  function card(w) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(w.name);
+    a.innerHTML = '<h3>' + esc(w.name) + ' <span class="badge type">MR' + w.masteryReq + '</span></h3>' +
+      '<div class="stat-row"><span class="stat">Dmg <b>' + w.totalDamage + '</b></span>' +
+      '<span class="stat">Crit <b>' + w.criticalChance + '%</b></span>' +
+      '<span class="stat">Status <b>' + w.statusChance + '%</b></span>' +
+      (w.fireRate ? '<span class="stat">Rate <b>' + w.fireRate + '</b></span>' : '') + '</div>';
+    return a;
+  }
+  function filtered() {
+    var q = document.getElementById('w-q').value.toLowerCase();
+    return all.filter(function (w) {
+      return w.type === type && w.name.toLowerCase().indexOf(q) !== -1;
+    });
+  }
+  function showDetail(name) {
+    var box = document.getElementById('w-detail');
+    var w = all.find(function (x) { return x.name === name; });
+    if (!w) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(w.name) + ' <span class="badge type">' + esc(w.type) + '</span></h2>' +
+      '<p>' + esc(w.description || 'No description available.') + '</p>' +
+      '<div class="stat-row">' +
+      '<span class="stat">Total damage <b>' + w.totalDamage + '</b></span>' +
+      '<span class="stat">Crit chance <b>' + w.criticalChance + '%</b></span>' +
+      '<span class="stat">Crit damage <b>' + w.criticalMultiplier + 'x</b></span>' +
+      '<span class="stat">Status <b>' + w.statusChance + '%</b></span>' +
+      (w.fireRate ? '<span class="stat">Fire rate <b>' + w.fireRate + '</b></span>' : '') +
+      (w.magazine ? '<span class="stat">Mag <b>' + w.magazine + '</b></span>' : '') +
+      '<span class="stat">Mastery <b>' + w.masteryReq + '</b></span>' +
+      (w.trigger ? '<span class="stat">Trigger <b>' + esc(w.trigger) + '</b></span>' : '') + '</div></div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Builds for ' + w.type + ' weapons', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
+      { label: 'Best mods', sub: 'What to put on it', url: 'mods.html' },
+      { label: 'Platinum price', sub: 'If it has prime parts', url: 'live.html#prices' }
+    ]);
+  }
+  window.TV.getJSON('data/site/weapons.json').then(function (d) {
+    all = d;
+    var list = document.getElementById('w-list');
+    ctl = window.TV.infiniteScroll(list, filtered(), card, 30);
+    function refresh() { ctl.reset(filtered()); }
+    document.getElementById('w-q').addEventListener('input', refresh);
+    document.getElementById('w-tabs').addEventListener('click', function (e) {
+      var b = e.target.closest('.chip'); if (!b) return;
+      document.querySelectorAll('#w-tabs .chip').forEach(function (c) { c.classList.remove('active'); });
+      b.classList.add('active'); type = b.getAttribute('data-t');
+      document.getElementById('w-detail').innerHTML = '';
+      history.replaceState(null, '', ' ');
+      refresh();
+    });
+    if (location.hash.length > 1) {
+      var w = all.find(function (x) { return x.name === decodeURIComponent(location.hash.slice(1)); });
+      if (w) {
+        type = w.type;
+        document.querySelectorAll('#w-tabs .chip').forEach(function (c) {
+          c.classList.toggle('active', c.getAttribute('data-t') === type);
+        });
+        ctl.reset(filtered());
+        showDetail(w.name);
+      }
+    }
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('w-list').innerHTML = '<div class="notice">Could not load weapon data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

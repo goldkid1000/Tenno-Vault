@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warframes — Tenno Vault</title>
+<meta name="description" content="Every Warframe: stats, abilities, and where to farm each one.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="warframes" data-crumb="Home,Warframes">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Warframes</h1>
+<p class="muted">Your character. Each Warframe has different abilities — pick one that fits how you like to play, then farm its parts.</p>
+<div class="field"><input id="wf-q" type="search" placeholder="Filter warframes…"></div>
+<div id="wf-detail"></div>
+<div id="wf-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  function card(w) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(w.name);
+    a.innerHTML = '<h3>' + esc(w.name) + '</h3><p class="muted small">' +
+      esc((w.description || '').slice(0, 120)) + '…</p>';
+    return a;
+  }
+  function showDetail(name) {
+    var box = document.getElementById('wf-detail');
+    var w = all.find(function (x) { return x.name === name; });
+    if (!w) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(w.name) + '</h2>' +
+      '<p>' + esc(w.description) + '</p>' +
+      '<div class="stat-row">' +
+      '<span class="stat">❤️ Health <b>' + w.health + '</b></span>' +
+      '<span class="stat">🛡 Shield <b>' + w.shield + '</b></span>' +
+      '<span class="stat">🔩 Armor <b>' + w.armor + '</b></span>' +
+      '<span class="stat">⚡ Energy <b>' + w.energy + '</b></span>' +
+      '<span class="stat">🏃 Sprint <b>' + w.sprint + '</b></span></div>' +
+      (w.passive ? '<p><b>Passive:</b> ' + esc(w.passive) + '</p>' : '') +
+      '<h3>Abilities</h3>' + w.abilities.map(function (a) {
+        return '<div class="mod-row"><div><b>' + esc(a.name) + '</b><div class="muted small">' + esc(a.description) + '</div></div></div>';
+      }).join('') +
+      '<h3>Where to get ' + esc(w.name) + '</h3><p>' + esc(w.farm) + '</p></div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Best builds for ' + w.name, sub: 'Steel Path & one-shot setups', url: 'builds.html' },
+      { label: 'Mods to power it up', sub: 'Every mod and where it drops', url: 'mods.html' },
+      { label: 'Arcanes', sub: 'Extra powers for frames', url: 'arcanes.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/warframes.json').then(function (d) {
+    all = d;
+    var list = document.getElementById('wf-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 30);
+    document.getElementById('wf-q').addEventListener('input', function (e) {
+      var q = e.target.value.toLowerCase();
+      ctl.reset(all.filter(function (w) { return w.name.toLowerCase().indexOf(q) !== -1; }));
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('wf-list').innerHTML = '<div class="notice">Could not load Warframe data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

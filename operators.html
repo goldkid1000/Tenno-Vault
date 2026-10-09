@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operators — Tenno Vault</title>
+<meta name="description" content="The five focus schools, their abilities and passives, plus operator arcanes.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="operators" data-crumb="Home,Operators">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Operators</h1>
+<p class="muted">Your Tenno kid with void powers. <b>Focus schools</b> are skill trees — pick one to specialize, then unlock the rest over time. Way-bounds are shared passives that work on every school once maxed.</p>
+
+<h2>Focus schools</h2>
+<div id="op-schools" class="card-grid"></div>
+
+<h2>Operator arcanes (Magus)</h2>
+<div id="op-arcanes" class="item-list"></div>
+
+<div class="notice" id="op-note"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc;
+  window.TV.getJSON('data/site/operators.json').then(function (d) {
+    document.getElementById('op-schools').innerHTML = d.schools.map(function (s) {
+      return '<div class="card">' +
+        (s.recommended ? '<span class="badge recommended">Great first pick</span>' : '') +
+        '<h3>' + esc(s.name) + '</h3><p>' + esc(s.description) + '</p>' +
+        '<p class="small"><b>Abilities:</b> ' + esc(s.abilities.join(' · ')) + '</p>' +
+        '<p class="small"><b>Passives:</b> ' + esc(s.passives.join(' · ')) + '</p>' +
+        '<p class="small"><b>Way-bounds:</b> ' + esc(s.waybounds.join(' · ')) + '</p>' +
+        '<p class="small muted">Best for: ' + esc(s.bestFor) + '</p></div>';
+    }).join('');
+    document.getElementById('op-arcanes').innerHTML = d.arcanes.map(function (a) {
+      return '<div class="list-item"><h3>' + esc(a.name) + '</h3>' +
+        '<p class="muted small">' + esc(a.effect) + '</p>' +
+        '<p class="small">📍 ' + esc(a.source) + ' · <span class="muted">' + esc(a.use) + '</span></p></div>';
+    }).join('');
+    document.getElementById('op-note').innerHTML = esc(d.note);
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Amps', sub: 'Your Operator\'s weapon + recommended combos', url: 'amps.html' },
+      { label: 'All arcanes', sub: 'Every arcane and where to farm it', url: 'arcanes.html' }
+    ]);
+  }).catch(function () {
+    document.getElementById('op-schools').innerHTML = '<div class="notice">Could not load operator data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

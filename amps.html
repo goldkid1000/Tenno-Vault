@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amps — Tenno Vault</title>
+<meta name="description" content="Every amp prism, scaffold and brace, plus the recommended combos for Eidolons and Steel Path.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="amps" data-crumb="Home,Amps">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Amps</h1>
+<p class="muted">Your Operator's weapon. <b>Prism</b> = main shot, <b>Scaffold</b> = alt-fire, <b>Brace</b> = stat boost. Players name combos by tier numbers — <b>177</b> means tier-1 prism, tier-7 scaffold, tier-7 brace.</p>
+
+<h2>⭐ Recommended combos</h2>
+<div id="amp-combos" class="card-grid"></div>
+
+<h2>Prisms <span class="muted small">(main shot)</span></h2>
+<div id="amp-prisms" class="card-grid"></div>
+<h2>Scaffolds <span class="muted small">(alt-fire)</span></h2>
+<div id="amp-scaffolds" class="card-grid"></div>
+<h2>Braces <span class="muted small">(stat boost)</span></h2>
+<div id="amp-braces" class="card-grid"></div>
+
+<div class="notice" id="amp-note"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc;
+  function partCard(p) {
+    return '<div class="card"><h3>' + esc(p.name) + ' <span class="badge type">T' + p.tier + '</span>' +
+      (p.recommended ? ' <span class="badge recommended">Recommended</span>' : '') + '</h3>' +
+      '<p>' + esc(p.effect) + '</p><p class="small muted">📍 ' + esc(p.source) + '</p></div>';
+  }
+  window.TV.getJSON('data/site/amps.json').then(function (d) {
+    document.getElementById('amp-combos').innerHTML = d.combos.map(function (c) {
+      return '<div class="card">' +
+        (c.recommended ? '<span class="badge recommended">Recommended</span>' : '') +
+        '<span class="badge steelpath">' + esc(c.combo) + '</span>' +
+        '<h3>' + esc(c.name) + '</h3><p>' + esc(c.why) + '</p>' +
+        '<p class="small muted">Best for: ' + esc(c.for) + '</p></div>';
+    }).join('');
+    document.getElementById('amp-prisms').innerHTML = d.prisms.map(partCard).join('');
+    document.getElementById('amp-scaffolds').innerHTML = d.scaffolds.map(partCard).join('');
+    document.getElementById('amp-braces').innerHTML = d.braces.map(partCard).join('');
+    document.getElementById('amp-note').innerHTML = '<b>How to build one:</b> ' + esc(d.howToBuild) +
+      '<br><br><b>Steel Path:</b> ' + esc(d.steelPathNote);
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Operators & focus schools', sub: 'Power up your Operator', url: 'operators.html' },
+      { label: 'Operator arcanes', sub: 'Magus arcanes and where to get them', url: 'operators.html' }
+    ]);
+  }).catch(function () {
+    document.getElementById('amp-combos').innerHTML = '<div class="notice">Could not load amp data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

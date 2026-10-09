@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relics — Tenno Vault</title>
+<meta name="description" content="Every void relic: what's inside, and the best missions to farm each tier.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="relics" data-crumb="Home,Relics">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Relics</h1>
+<p class="muted">Crack relics in Void Fissure missions to get prime parts. <b>Lith</b> = easiest, <b>Axi</b> = hardest. Vault status rotates — check your in-game relic console for what's currently available.</p>
+<div class="chip-row" id="r-tabs">
+  <button class="chip active" data-t="all">All</button>
+  <button class="chip" data-t="Lith">Lith</button>
+  <button class="chip" data-t="Meso">Meso</button>
+  <button class="chip" data-t="Neo">Neo</button>
+  <button class="chip" data-t="Axi">Axi</button>
+  <button class="chip" data-t="Requiem">Requiem</button>
+</div>
+<div class="field"><input id="r-q" type="search" placeholder="Search relics or the part inside…"></div>
+<div id="r-detail"></div>
+<div id="r-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], tier = 'all', ctl = null;
+  function card(r) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(r.name);
+    var rare = r.rewards.filter(function (x) { return x.rarity === 'Rare'; })[0];
+    a.innerHTML = '<h3>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + '</span></h3>' +
+      '<p class="muted small">⭐ Rare: ' + esc(rare ? rare.name : '—') + '</p>';
+    return a;
+  }
+  function filtered() {
+    var q = document.getElementById('r-q').value.toLowerCase();
+    return all.filter(function (r) {
+      var okT = tier === 'all' || r.tier === tier;
+      var okQ = !q || r.name.toLowerCase().indexOf(q) !== -1 ||
+        r.rewards.some(function (x) { return (x.name || '').toLowerCase().indexOf(q) !== -1; });
+      return okT && okQ;
+    });
+  }
+  function showDetail(name) {
+    var box = document.getElementById('r-detail');
+    var r = all.find(function (x) { return x.name === name; });
+    if (!r) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + ' relic</span></h2>' +
+      '<p class="muted small">Refine at a fissure for better rare odds (25 → 50 → 75 → 100 void traces).</p>' +
+      '<h3>Possible rewards</h3>' +
+      r.rewards.map(function (x) {
+        var priceLink = x.urlName
+          ? ' <a class="small" href="live.html#prices" data-part="' + esc(x.name) + '">check price 💎</a>' : '';
+        return '<div class="mod-row"><div><b>' + esc(x.name || '?') + '</b></div>' +
+          '<div><span class="badge ' + (x.rarity === 'Rare' ? 'oneshot' : 'type') + '">' + esc(x.rarity || '') + '</span>' + priceLink + '</div></div>';
+      }).join('') + '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Where to farm ' + r.tier + ' relics', sub: 'Best missions per tier', url: 'farming.html' },
+      { label: 'How to sell prime parts', sub: 'Turn relics into platinum', url: 'trading.html' },
+      { label: 'Live fissures', sub: 'Crack them right now', url: 'live.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/relics.json').then(function (d) {
+    all = d;
+    var list = document.getElementById('r-list');
+    ctl = window.TV.infiniteScroll(list, filtered(), card, 40);
+    function refresh() { ctl.reset(filtered()); }
+    document.getElementById('r-q').addEventListener('input', refresh);
+    document.getElementById('r-tabs').addEventListener('click', function (e) {
+      var b = e.target.closest('.chip'); if (!b) return;
+      document.querySelectorAll('#r-tabs .chip').forEach(function (c) { c.classList.remove('active'); });
+      b.classList.add('active'); tier = b.getAttribute('data-t');
+      document.getElementById('r-detail').innerHTML = '';
+      history.replaceState(null, '', ' ');
+      refresh();
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('r-list').innerHTML = '<div class="notice">Could not load relic data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading — Tenno Vault</title>
+<meta name="description" content="How to sell prime parts for platinum: chat templates, price checks, and scam protection.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="trading" data-crumb="Home,Trading">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>💰 Trading</h1>
+<p class="muted">Turn your relics and mods into platinum. You need Mastery Rank 2+ and 2FA enabled to trade.</p>
+
+<h2>📋 Copy-paste chat templates</h2>
+<p class="muted small">Click copy, paste into trade chat in-game. Square brackets make clickable item links.</p>
+<div id="templates"></div>
+
+<h2>💎 How to price-check</h2>
+<div class="detail-box">
+  <div class="mod-row"><div><b>1.</b> Use the <a href="live.html#prices">live price checker</a> on this site, or open warframe.market</div></div>
+  <div class="mod-row"><div><b>2.</b> Look at the <b>cheapest in-game sellers</b> — that's the real market price</div></div>
+  <div class="mod-row"><div><b>3.</b> Vaulted (unavailable) items cost more — check if the relic is vaulted</div></div>
+  <div class="mod-row"><div><b>4.</b> Full prime <b>sets</b> sell for more than individual parts</div></div>
+  <div class="mod-row"><div><b>5.</b> Never trust trade-chat prices alone — always cross-check</div></div>
+</div>
+
+<h2>🤝 How to sell, step by step</h2>
+<div class="detail-box">
+  <div class="mod-row"><div><b>1.</b> Farm relics (<a href="farming.html">best relic farms</a>) and crack them in fissures</div></div>
+  <div class="mod-row"><div><b>2.</b> Price-check each rare part with the <a href="live.html#prices">price checker</a></div></div>
+  <div class="mod-row"><div><b>3.</b> Post <b>WTS</b> in trade chat, or list on warframe.market for buyers to find you</div></div>
+  <div class="mod-row"><div><b>4.</b> When someone whispers, invite them to your dojo</div></div>
+  <div class="mod-row"><div><b>5.</b> Meet at the <b>trading post</b>, double-check the items in the window, confirm</div></div>
+  <div class="mod-row"><div><b>6.</b> Daily trade limit = your Mastery Rank (MR10 = 10 trades/day)</div></div>
+</div>
+
+<div class="notice danger">
+  <h3>⚠️ Don't get scammed</h3>
+  <p class="small">
+  • The trade window shows exactly what you're giving and getting — <b>read it before confirming</b>.<br>
+  • Nobody from "DE support" will ever ask for your password — that's always a scam.<br>
+  • If someone swaps items at the last second, the window highlights the change — cancel.<br>
+  • Riven prices are subjective — check multiple listings before buying.<br>
+  • Never trade outside the game's trade window (no "send plat first" deals).</p>
+</div>
+
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc;
+  var T = [
+    { label: 'Sell a prime part', text: 'WTS [Ash Prime Systems] 30p' },
+    { label: 'Sell a full prime set', text: 'WTS [Ash Prime Set] 120p' },
+    { label: 'Buy a prime part', text: 'WTB [Ash Prime Systems] 25p' },
+    { label: 'Sell a mod', text: 'WTS [Hunter Munitions] max rank 20p' },
+    { label: 'Sell corrupted mods', text: 'WTS [Blind Rage] [Overextended] [Fleeting Expertise] 15p each' },
+    { label: 'Buy platinum-efficient slots', text: 'WTB [Orokin Reactor] 20p' },
+    { label: 'Sell an arcane', text: 'WTS [Arcane Energize] r5 1000p' },
+    { label: 'Quick bulk sale', text: 'WTS prime junk 6/6 12p (filling fast)' }
+  ];
+  document.getElementById('templates').innerHTML = T.map(function (t, i) {
+    return '<div><p class="small muted">' + esc(t.label) + '</p>' +
+      '<div class="copy-box"><span>' + esc(t.text) + '</span>' +
+      '<button class="btn small" data-i="' + i + '">Copy</button></div></div>';
+  }).join('');
+  document.getElementById('templates').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var text = T[+b.getAttribute('data-i')].text;
+    if (navigator.clipboard) navigator.clipboard.writeText(text);
+    b.textContent = 'Copied!';
+    setTimeout(function () { b.textContent = 'Copy'; }, 1200);
+  });
+  document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+    { label: 'Live platinum prices', sub: 'Check any prime part right now', url: 'live.html#prices' },
+    { label: 'Player market board', sub: 'Browse listings from other Tenno', url: 'marketplace.html' },
+    { label: 'Relic farms', sub: 'Stock up on prime parts', url: 'farming.html' }
+  ]);
+})();
+</script>
+</body>
+</html>

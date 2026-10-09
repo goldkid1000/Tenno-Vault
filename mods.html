@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mods — Tenno Vault</title>
+<meta name="description" content="Every mod, what it does, and where to farm it. Plus the best-mods shortlist.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="mods" data-crumb="Home,Mods">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Mods</h1>
+<p class="muted">Mods are how you make everything strong. Level them with Endo. Below: the must-have mods first, then every mod in the game with its farm.</p>
+
+<h2>⭐ Best Mods — get these first</h2>
+<div id="best-mods" class="card-grid"></div>
+
+<h2>All mods</h2>
+<div class="field"><input id="m-q" type="search" placeholder="Filter 1,800+ mods…"></div>
+<div id="m-detail"></div>
+<div id="m-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  var BEST = ['Serration', 'Hornet Strike', 'Point Blank', 'Pressure Point', 'Split Chamber',
+    'Barrel Diffusion', 'Lethal Torrent', 'Vital Sense', 'Point Strike', 'Hunter Munitions',
+    'Galvanized Chamber', 'Galvanized Shot', 'Galvanized Aptitude', 'Blood Rush',
+    'Condition Overload', 'Weeping Wounds', 'Primed Continuity', 'Primed Flow',
+    'Streamline', 'Blind Rage', 'Overextended', 'Adaptation', 'Rolling Guard',
+    'Primed Firestorm', 'Vigilante Supplies', 'Bladed Rounds', 'Critical Delay',
+    'Semi-Shotgun Cannonade', 'Primary Merciless', 'Secondary Merciless', 'Melee Crescendo'];
+  function farmHTML(m) {
+    if (!m.drops || !m.drops.length) return '<span class="muted">Source unknown — check the in-game Codex.</span>';
+    return m.drops.map(function (d) {
+      return esc(d.location) + (d.chance ? ' <span class="muted">(' + d.chance + '%)</span>' : '');
+    }).join('<br>');
+  }
+  function card(m) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(m.name);
+    a.innerHTML = '<h3>' + esc(m.name) +
+      (m.rarity ? ' <span class="badge type">' + esc(m.rarity) + '</span>' : '') +
+      (m.compat ? ' <span class="badge type">' + esc(m.compat) + '</span>' : '') + '</h3>' +
+      '<p class="muted small">' + esc((m.effect || '').slice(0, 130)) + '</p>';
+    return a;
+  }
+  function showDetail(name) {
+    var box = document.getElementById('m-detail');
+    var m = all.find(function (x) { return x.name === name; });
+    if (!m) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(m.name) + '</h2>' +
+      (m.rarity ? '<span class="badge type">' + esc(m.rarity) + '</span> ' : '') +
+      (m.polarity ? '<span class="badge type">' + esc(m.polarity) + ' polarity</span> ' : '') +
+      (m.compat ? '<span class="badge type">for ' + esc(m.compat) + '</span>' : '') +
+      '<p><b>What it does (max rank):</b><br>' + esc(m.effect || 'No description available.') + '</p>' +
+      '<h3>Where to find it</h3><p>' + farmHTML(m) + '</p></div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Builds using this mod', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
+      { label: 'Farming hub', sub: 'Best farms for mods', url: 'farming.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/mods.json').then(function (d) {
+    all = d;
+    var byName = {};
+    all.forEach(function (m) { byName[m.name] = m; });
+    document.getElementById('best-mods').innerHTML = BEST.map(function (n) {
+      var m = byName[n];
+      if (!m) return '';
+      return '<a class="card" href="#' + encodeURIComponent(m.name) + '"><h3>' + esc(m.name) + '</h3>' +
+        '<p>' + esc((m.effect || '').slice(0, 110)) + '</p>' +
+        '<p class="small muted">📍 ' + esc(m.drops && m.drops[0] ? m.drops[0].location : 'See details') + '</p></a>';
+    }).join('');
+    var list = document.getElementById('m-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    document.getElementById('m-q').addEventListener('input', function (e) {
+      var q = e.target.value.toLowerCase();
+      ctl.reset(all.filter(function (m) {
+        return m.name.toLowerCase().indexOf(q) !== -1 || (m.effect || '').toLowerCase().indexOf(q) !== -1;
+      }));
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('m-list').innerHTML = '<div class="notice">Could not load mod data.</div>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Builds — Tenno Vault</title>
+<meta name="description" content="Steel Path builds, one-shot builds and strong general builds with full mod loadouts and farm locations.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="builds" data-crumb="Home,Builds">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Builds</h1>
+<p class="muted">Copy these setups to dominate. <b>One-shot</b> = kills Steel Path enemies in one hit. Every mod shows where to farm it.</p>
+<div class="chip-row" id="b-filters">
+  <button class="chip active" data-f="all">All</button>
+  <button class="chip" data-f="one-shot">💥 One-shot Steel Path</button>
+  <button class="chip" data-f="steel-path">Steel Path</button>
+  <button class="chip" data-f="strong">Strong</button>
+  <button class="chip" data-f="beginner">Beginner-friendly</button>
+</div>
+<div id="b-detail"></div>
+<div id="b-list" class="card-grid"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, builds = [], modDrops = {}, filter = 'all';
+  function filtered() {
+    return builds.filter(function (b) {
+      if (filter === 'all') return true;
+      if (filter === 'one-shot') return b.tags.indexOf('one-shot') !== -1 || b.recommendedOneShot;
+      return b.tags.indexOf(filter) !== -1;
+    });
+  }
+  function card(b) {
+    var a = document.createElement('a');
+    a.className = 'card'; a.href = '#build-' + b.id;
+    a.innerHTML = (b.recommendedOneShot ? '<span class="badge recommended">Recommended one-shot</span>' : '') +
+      window.TV.badge(b.tags) +
+      '<h3>' + esc(b.name) + '</h3><p>' + esc(b.description.slice(0, 120)) + '…</p>';
+    return a;
+  }
+  function farmFor(modName) {
+    var d = modDrops[modName];
+    if (d && d.length) return esc(d[0].location) + (d[0].chance ? ' (' + d[0].chance + '%)' : '');
+    return 'See mod page';
+  }
+  function showDetail(id) {
+    var box = document.getElementById('b-detail');
+    var b = null;
+    for (var i = 0; i < builds.length; i++) if (builds[i].id === id) b = builds[i];
+    if (!b) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box">' +
+      (b.recommendedOneShot ? '<span class="badge recommended">⭐ Recommended one-shot</span>' : '') +
+      window.TV.badge(b.tags) +
+      '<h2>' + esc(b.name) + '</h2><p>' + esc(b.description) + '</p>' +
+      (b.progenitor ? '<p><b>Progenitor:</b> ' + esc(b.progenitor) + '</p>' : '') +
+      (b.weaponNote ? '<p class="muted">' + esc(b.weaponNote) + '</p>' : '') +
+      '<h3>Mods</h3>' + b.mods.map(function (m) {
+        return '<div class="mod-row"><div><b><a href="mods.html#' + encodeURIComponent(m.name) + '">' + esc(m.name) + '</a></b>' +
+          (m.note ? ' <span class="muted small">— ' + esc(m.note) + '</span>' : '') +
+          '<div class="farm">📍 ' + farmFor(m.name) + '</div></div></div>';
+      }).join('') +
+      (b.arcane ? '<h3>Arcane</h3><p><a href="arcanes.html#' + encodeURIComponent(b.arcane) + '">' + esc(b.arcane) + '</a></p>' : '') +
+      '<h3>How to play it</h3><p>' + esc(b.playstyle) + '</p></div>';
+    box.scrollIntoView();
+    var rel = [];
+    (b.related || []).forEach(function (rid) {
+      for (var j = 0; j < builds.length; j++) {
+        if (builds[j].id === rid) rel.push({ label: builds[j].name, sub: builds[j].description.slice(0, 80) + '…', url: '#build-' + builds[j].id });
+      }
+    });
+    rel.push({ label: 'All builds', sub: 'Back to the list', url: 'builds.html' });
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('If you liked this build…', rel);
+  }
+  function drawList() {
+    var list = document.getElementById('b-list');
+    list.innerHTML = '';
+    var items = filtered();
+    items.forEach(function (b) { list.appendChild(card(b)); });
+    if (!items.length) list.innerHTML = '<div class="notice">No builds in this category yet.</div>';
+  }
+  function setFilter(f) {
+    filter = f;
+    var chips = document.querySelectorAll('#b-filters .chip');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].classList.toggle('active', chips[i].getAttribute('data-f') === f);
+    }
+    document.getElementById('b-detail').innerHTML = '';
+    history.replaceState(null, '', ' ');
+    drawList();
+  }
+  Promise.all([
+    window.TV.getJSON('data/site/builds.json'),
+    window.TV.getJSON('data/site/mods.json')
+  ]).then(function (res) {
+    builds = res[0];
+    res[1].forEach(function (m) { modDrops[m.name] = m.drops; });
+    document.getElementById('b-filters').addEventListener('click', function (e) {
+      var c = e.target.closest ? e.target.closest('.chip') : null;
+      if (!c) return;
+      setFilter(c.getAttribute('data-f'));
+    });
+    var h = location.hash;
+    if (h.indexOf('#build-') === 0) showDetail(h.slice(7));
+    else if (h === '#one-shot') setFilter('one-shot');
+    drawList();
+    window.addEventListener('hashchange', function () {
+      var hh = location.hash;
+      if (hh.indexOf('#build-') === 0) showDetail(hh.slice(7));
+      else if (hh === '#one-shot') setFilter('one-shot');
+      else document.getElementById('b-detail').innerHTML = '';
+    });
+  }).catch(function () {
+    document.getElementById('b-list').innerHTML = '<div class="notice">Could not load builds.</div>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farming Hub — Tenno Vault</title>
+<meta name="description" content="Where to farm everything: relics, mods, arcanes, resources and prime parts.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="farming" data-crumb="Home,Farming Hub">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>🌾 Farming Hub</h1>
+<p class="muted">Everything worth farming and the best place to get it. Pick what you need:</p>
+<div id="farm-sections"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js"></script>
+<script>
+(function () {
+  var esc = window.TV.esc;
+  var SECTIONS = [
+    { key: 'relicFarms', title: '📦 Relic farms', sub: 'Stock up, then crack in fissures' },
+    { key: 'modFarms', title: '🧩 Mod farms', sub: 'The important ones' },
+    { key: 'arcaneFarms', title: '✨ Arcane farms', sub: 'Max-rank power' },
+    { key: 'resourceFarms', title: '⛏️ Resource farms', sub: 'Crafting materials' },
+    { key: 'primePartFarms', title: '💎 Prime part farms', sub: 'Turn into platinum' }
+  ];
+  window.TV.getJSON('data/site/farming.json').then(function (d) {
+    document.getElementById('farm-sections').innerHTML = SECTIONS.map(function (s) {
+      var items = d[s.key] || [];
+      return '<h2>' + s.title + '</h2><p class="muted small">' + s.sub + '</p><div class="item-list">' +
+        items.map(function (f) {
+          return '<div class="list-item"><h3>' + esc(f.what) + '</h3>' +
+            '<p class="muted">📍 ' + esc(f.source) + '</p></div>';
+        }).join('') + '</div>';
+    }).join('');
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Relics database', sub: 'What\'s inside every relic', url: 'relics.html' },
+      { label: 'Live fissures', sub: 'Crack relics right now', url: 'live.html' },
+      { label: 'How to sell prime parts', sub: 'Turn farms into platinum', url: 'trading.html' }
+    ]);
+  }).catch(function () {
+    document.getElementById('farm-sections').innerHTML = '<div class="notice">Could not load farming data.</div>';
+  });
+})();
+</script>
+</body>
+</html>
