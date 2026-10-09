@@ -480,6 +480,19 @@ function findItemForBuild(q) {
   return null;
 }
 
+/* find any known item name appearing anywhere inside a longer question.
+   Longest names first so "Nova Prime" beats "Nova". */
+function findItemInText(list, t) {
+  var best = null, bestLen = 0;
+  for (var i = 0; i < list.length; i++) {
+    var n = norm(list[i].name);
+    if (n.length >= 4 && n.length > bestLen && t.indexOf(n) !== -1) {
+      best = list[i]; bestLen = n.length;
+    }
+  }
+  return best;
+}
+
 /* main entry: generate a build for any item */
 function generateBuild(t) {
   var parsed = parseBuildQ(t);
@@ -504,23 +517,33 @@ function generateBuild(t) {
       return 'Hey, Tenno. ' + helpAnswer();
     }
     if (t.indexOf('help') !== -1 || t.indexOf('what can you') !== -1) return helpAnswer();
+    /* BUILD INTENT — catch this FIRST, before anything else. If the player wants
+       a build for a specific item, generate it. Handles: "make me a nova prime
+       steelpath build", "wisp prime one shot", "rhino build", etc. */
+    var buildIntent = /\b(build|make|setup|loadout|steel\s?path|one[\s-]?shot)\b/.test(t);
+    if (buildIntent) {
+      var bp = parseBuildQ(t);
+      if (bp.name.length >= 3) {
+        var bf = findItemForBuild(bp.name);
+        if (bf) {
+          return bf.kind === 'warframe'
+            ? genWarframeBuild(bf.e, bp.purpose)
+            : genWeaponBuild(bf.e, bp.purpose);
+        }
+      }
+      /* item name might be embedded without clear build words stripped right —
+         try matching any known warframe/weapon name appearing in the question */
+      var fw2 = findItemInText(D.warframes, t);
+      if (fw2) return genWarframeBuild(fw2, { steelPath: /steel/.test(t), oneShot: /one/.test(t) });
+      var wp2 = findItemInText(D.weapons, t);
+      if (wp2) return genWeaponBuild(wp2, { steelPath: /steel/.test(t), oneShot: /one/.test(t) });
+      /* generic steel path question with no item → curated list */
+      if (/steel/.test(t)) return steelPathAnswer();
+    }
     if (/\bi'?m new\b/.test(t) || /\bnew player\b/.test(t) || /\bjust started\b/.test(t) ||
         /\bwhat should i do first\b/.test(t) || /\bwhere do i start\b/.test(t) ||
         /\bbeginner (guide|tips|help)\b/.test(t)) {
       return beginnerAnswer();
-    }
-    if (t.indexOf('steel path') !== -1 || t.indexOf('one-shot') !== -1 || t.indexOf('oneshot') !== -1) {
-      /* "make me a Wisp Prime steel path build" → generate for THAT item, not the generic list */
-      var spParsed = parseBuildQ(t);
-      if (spParsed.name.length >= 4) {
-        var spFound = findItemForBuild(spParsed.name);
-        if (spFound) {
-          return spFound.kind === 'warframe'
-            ? genWarframeBuild(spFound.e, spParsed.purpose)
-            : genWeaponBuild(spFound.e, spParsed.purpose);
-        }
-      }
-      return steelPathAnswer();
     }
     if (t.indexOf('sell') !== -1 || t.indexOf('platinum') !== -1 || t.indexOf('trade') !== -1) {
       return sellAnswer();
