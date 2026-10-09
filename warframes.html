@@ -29,19 +29,28 @@
 <script>
 (function () {
   var esc = window.TV.esc, all = [], ctl = null;
+  function thumb(item, size) {
+    if (!item.img) return '';
+    return '<img src="' + item.img + '" alt="" loading="lazy" width="' + size + '" height="' + size + '"' +
+      ' style="width:' + size + 'px;height:' + size + 'px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.04);"' +
+      ' onerror="this.style.display=\'none\'">';
+  }
   function card(w) {
     var a = document.createElement('a');
     a.className = 'list-item'; a.href = '#' + encodeURIComponent(w.name);
-    a.innerHTML = '<h3>' + esc(w.name) + '</h3><p class="muted small">' +
-      esc((w.description || '').slice(0, 120)) + '…</p>';
+    a.innerHTML = '<div style="display:flex;gap:12px;align-items:center;">' + thumb(w, 64) +
+      '<div><h3>' + esc(w.name) + '</h3><p class="muted small">' +
+      esc((w.description || '').slice(0, 120)) + '…</p></div></div>';
     return a;
   }
   function showDetail(name) {
     var box = document.getElementById('wf-detail');
     var w = all.find(function (x) { return x.name === name; });
     if (!w) { box.innerHTML = ''; return; }
-    box.innerHTML = '<div class="detail-box"><h2>' + esc(w.name) + '</h2>' +
-      '<p>' + esc(w.description) + '</p>' +
+    box.innerHTML = '<div class="detail-box"><div class="detail-head">' +
+      (w.img ? '<img src="' + w.img + '" alt="' + esc(w.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
+      '<div><h2>' + esc(w.name) + '</h2>' +
+      '<p>' + esc(w.description) + '</p></div></div>' +
       '<div class="stat-row">' +
       '<span class="stat">❤️ Health <b>' + w.health + '</b></span>' +
       '<span class="stat">🛡 Shield <b>' + w.shield + '</b></span>' +
@@ -52,7 +61,8 @@
       '<h3>Abilities</h3>' + w.abilities.map(function (a) {
         return '<div class="mod-row"><div><b>' + esc(a.name) + '</b><div class="muted small">' + esc(a.description) + '</div></div></div>';
       }).join('') +
-      '<h3>Where to get ' + esc(w.name) + '</h3><p>' + esc(w.farm) + '</p></div>';
+      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' +
+      esc(w.farm || 'Check the in-game Codex for the latest source.') + '</p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Best builds for ' + w.name, sub: 'Steel Path & one-shot setups', url: 'builds.html' },

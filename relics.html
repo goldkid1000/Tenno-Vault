@@ -37,12 +37,19 @@
 <script>
 (function () {
   var esc = window.TV.esc, all = [], tier = 'all', ctl = null;
+  function thumb(item, size) {
+    if (!item.img) return '';
+    return '<img src="' + item.img + '" alt="" loading="lazy" width="' + size + '" height="' + size + '"' +
+      ' style="width:' + size + 'px;height:' + size + 'px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.04);"' +
+      ' onerror="this.style.display=\'none\'">';
+  }
   function card(r) {
     var a = document.createElement('a');
     a.className = 'list-item'; a.href = '#' + encodeURIComponent(r.name);
     var rare = r.rewards.filter(function (x) { return x.rarity === 'Rare'; })[0];
-    a.innerHTML = '<h3>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + '</span></h3>' +
-      '<p class="muted small">⭐ Rare: ' + esc(rare ? rare.name : '—') + '</p>';
+    a.innerHTML = '<div style="display:flex;gap:12px;align-items:center;">' + thumb(r, 64) +
+      '<div><h3>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + '</span></h3>' +
+      '<p class="muted small">⭐ Rare: ' + esc(rare ? rare.name : '—') + '</p></div></div>';
     return a;
   }
   function filtered() {
@@ -58,8 +65,12 @@
     var box = document.getElementById('r-detail');
     var r = all.find(function (x) { return x.name === name; });
     if (!r) { box.innerHTML = ''; return; }
-    box.innerHTML = '<div class="detail-box"><h2>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + ' relic</span></h2>' +
-      '<p class="muted small">Refine at a fissure for better rare odds (25 → 50 → 75 → 100 void traces).</p>' +
+    box.innerHTML = '<div class="detail-box"><div class="detail-head">' +
+      (r.img ? '<img src="' + r.img + '" alt="' + esc(r.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
+      '<div><h2>' + esc(r.name) + ' <span class="badge type">' + esc(r.tier) + ' relic</span></h2>' +
+      '<p class="muted small">Refine at a fissure for better rare odds (25 → 50 → 75 → 100 void traces).</p></div></div>' +
+      '<div class="farm-box"><h4>📍 Where to farm</h4><p>Crack in <b>Void Fissure</b> missions. ' +
+      'Relics drop from endless missions (Survival/Defense/Excavation), Void captures, and open-world bounties.</p></div>' +
       '<h3>Possible rewards</h3>' +
       r.rewards.map(function (x) {
         var priceLink = x.urlName
