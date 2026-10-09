@@ -173,8 +173,11 @@
   var priceDB = null;
   function loadPriceDB() {
     if (priceDB) return Promise.resolve(priceDB);
-    return window.TV.getJSON('data/site/prices.json').then(function (d) {
-      priceDB = d || {}; return priceDB;
+    var ps = [window.TV.getJSON('data/site/prices-0.json'), window.TV.getJSON('data/site/prices-1.json')];
+    return Promise.all(ps).then(function (parts) {
+      priceDB = {};
+      parts.forEach(function (p) { for (var k in p) { if (Object.prototype.hasOwnProperty.call(p, k)) priceDB[k] = p[k]; } });
+      return priceDB;
     }).catch(function () { priceDB = {}; return {}; });
   }
   /* fuzzy match: exact, then starts-with, then contains */
