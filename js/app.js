@@ -187,7 +187,7 @@
       container.insertBefore(frag, sentinel);
       shown = next;
       if (shown >= items.length && sentinel.parentNode) {
-        sentinel.parentNode.removeChild(sentin);
+        sentinel.parentNode.removeChild(sentinel);
         if (window._io) window._io.disconnect();
       }
     }
