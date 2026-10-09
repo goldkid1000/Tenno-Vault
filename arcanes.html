@@ -29,25 +29,34 @@
 <script>
 (function () {
   var esc = window.TV.esc, all = [], ctl = null;
+  function thumb(item, size) {
+    if (!item.img) return '';
+    return '<img src="' + item.img + '" alt="" loading="lazy" width="' + size + '" height="' + size + '"' +
+      ' style="width:' + size + 'px;height:' + size + 'px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.04);"' +
+      ' onerror="this.style.display=\'none\'">';
+  }
   function card(a) {
     var d = document.createElement('a');
     d.className = 'list-item'; d.href = '#' + encodeURIComponent(a.name);
-    d.innerHTML = '<h3>' + esc(a.name) +
+    d.innerHTML = '<div style="display:flex;gap:12px;align-items:center;">' + thumb(a, 64) +
+      '<div><h3>' + esc(a.name) +
       (a.type ? ' <span class="badge type">' + esc(a.type) + '</span>' : '') + '</h3>' +
-      '<p class="muted small">' + esc((a.effect || '').slice(0, 130)) + '</p>';
+      '<p class="muted small">' + esc((a.effect || '').slice(0, 130)) + '</p></div></div>';
     return d;
   }
   function showDetail(name) {
     var box = document.getElementById('a-detail');
     var a = all.find(function (x) { return x.name === name; });
     if (!a) { box.innerHTML = ''; return; }
-    box.innerHTML = '<div class="detail-box"><h2>' + esc(a.name) + '</h2>' +
+    box.innerHTML = '<div class="detail-box"><div class="detail-head">' +
+      (a.img ? '<img src="' + a.img + '" alt="' + esc(a.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
+      '<div><h2>' + esc(a.name) + '</h2>' +
       (a.type ? '<span class="badge type">' + esc(a.type) + '</span> ' : '') +
-      (a.rarity ? '<span class="badge type">' + esc(a.rarity) + '</span>' : '') +
+      (a.rarity ? '<span class="badge type">' + esc(a.rarity) + '</span>' : '') + '</div></div>' +
       '<p><b>Max rank effect:</b><br>' + esc(a.effect || 'No description available.') + '</p>' +
-      '<h3>Where to get it</h3><p>' + ((a.drops && a.drops.length)
+      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + ((a.drops && a.drops.length)
         ? a.drops.map(function (d) { return esc(d.location) + (d.chance ? ' <span class="muted">(' + d.chance + '%)</span>' : ''); }).join('<br>')
-        : 'Source unknown — check the in-game Codex.') + '</p></div>';
+        : 'Check the in-game Codex for the latest source.') + '</p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Builds using arcanes', sub: 'Steel Path & one-shot setups', url: 'builds.html' },

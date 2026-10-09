@@ -91,6 +91,14 @@ a.card:hover{border-color:var(--accent);text-decoration:none;transform:translate
 .list-item h3{margin:0 0 4px;font-size:1.05rem}
 .detail-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
   padding:22px;margin:16px 0}
+.farm-box{background:linear-gradient(135deg,rgba(76,175,80,0.12),rgba(76,175,80,0.04));
+  border:1px solid rgba(76,175,80,0.35);border-radius:var(--radius);padding:14px 16px;margin:14px 0}
+.farm-box h4{margin:0 0 6px;color:#8fce93;font-size:0.95em;letter-spacing:0.4px}
+.farm-box p{margin:0}
+.detail-head{display:flex;gap:16px;align-items:center;margin-bottom:8px}
+.detail-head img{width:120px;height:120px;object-fit:contain;border-radius:12px;background:rgba(255,255,255,0.05);flex-shrink:0}
+@keyframes incomingPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,193,7,0.35)}50%{box-shadow:0 0 0 6px rgba(255,193,7,0)}}
+.incoming-pulse{animation:incomingPulse 2.2s ease-in-out infinite;border-left:3px solid #ffc107}
 .mod-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;
   border-bottom:1px solid var(--border);flex-wrap:wrap}
 .mod-row:last-child{border-bottom:none}

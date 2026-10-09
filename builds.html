@@ -102,7 +102,7 @@
   }
   Promise.all([
     window.TV.getJSON('data/site/builds.json'),
-    window.TV.getJSONParts('data/site/mods', 7)
+    window.TV.getJSONParts('data/site/mods', 9)
   ]).then(function (res) {
     builds = res[0];
     document.getElementById('b-count').textContent = builds.length + ' Builds';
