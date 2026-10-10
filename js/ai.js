@@ -113,7 +113,7 @@
   function loadEngine() {
     if (engine || engineLoading || engineFailed) return;
     engineLoading = true;
-    setStatus('Loading AI…', 'loading');
+    setStatus('Loading AI… (one-time download)', 'loading');
     showProgress(0, 'Starting AI download…');
 
     import(WEBLLM_CDN).then(function (m) {
@@ -126,13 +126,13 @@
       engine = eng;
       engineLoading = false;
       hideProgress();
-      setStatus('AI ready ◈', 'ready');
+      setStatus('◈ AI ready — ask me anything', 'ready');
       addMsg('AI engine loaded — ask me anything about builds, mods, farms, or Steel Path. I answer from real Warframe knowledge now, not just keyword matching.', 'bot');
     }).catch(function () {
       engineLoading = false;
       engineFailed = true;
       hideProgress();
-      setStatus('Classic mode', 'fallback');
+      setStatus('Classic mode — quick answers', 'fallback');
       addMsg('Couldn\'t start the AI engine on this device (needs WebGPU) — using the classic Vault Guide instead. Everything still works.', 'bot');
     });
   }
@@ -241,11 +241,11 @@
     els.btn.classList.toggle('open', show);
     if (show && !opened) {
       opened = true;
-      addMsg('Hey Tenno! ◈ I\'m the Vault Guide — now with a real AI brain running right in your browser. ' +
-        'Ask me for <b>builds</b> ("one-shot Steflos build"), <b>farming spots</b>, <b>mod advice</b>, anything Warframe.', 'bot');
+      addMsg("Hey Tenno! ◈ I can help with builds, farming, mods — anything Warframe. " +
+        "Try a suggestion below or just ask.", 'bot');
       if (!hasWebGPU()) {
         engineFailed = true;
-        setStatus('Classic mode', 'fallback');
+        setStatus('Classic mode — quick answers', 'fallback');
         addMsg('This device doesn\'t support WebGPU, so I\'m running the classic keyword guide. Everything still works — just less chatty.', 'bot');
       } else {
         loadEngine();
@@ -255,11 +255,18 @@
   }
 
   var CHIPS = [
-    'One-shot Steflos build',
-    'Best aura for Steel Path?',
-    'How do I one-shot with my amp?',
-    'Kuva Zarr build'
+    '💥 One-shot build for Kuva Zarr',
+    '✨ Best aura mods?',
+    "🌱 I'm new, where do I start?",
+    '🔫 How do I farm Sevagoth?',
+    '🛡 Best Steel Path warframe?',
+    '💰 How do I make platinum?'
   ];
+
+  /* strip emoji prefixes so the question the AI sees stays clean text */
+  function cleanChipText(s) {
+    return String(s).replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/gu, '').trim();
+  }
 
   function init() {
     if (document.getElementById('vault-ai-btn') || !window.TV) return;
@@ -307,7 +314,7 @@
       ask(els.input.value.trim());
     });
     panel.querySelectorAll('.vai-chip').forEach(function (chip) {
-      chip.addEventListener('click', function () { ask(chip.textContent); });
+      chip.addEventListener('click', function () { ask(cleanChipText(chip.textContent)); });
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && panel.style.display === 'flex') toggle(false);
