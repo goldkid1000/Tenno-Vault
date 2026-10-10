@@ -241,6 +241,7 @@
     var shown = 0;
     var sentinel = document.createElement('div');
     sentinel.className = 'sentinel';
+    container.innerHTML = ''; /* clear loader/skeletons before rendering */
     function more() {
       var frag = document.createDocumentFragment();
       var next = Math.min(shown + pageSize, items.length);
@@ -276,6 +277,18 @@
   }
 
   /* ---------- skeleton loading placeholders ---------- */
+  function walkerLoader(text) {
+    return '<div class="tv-loader" role="status" aria-label="Loading">' +
+      '<div class="tv-walker" aria-hidden="true">' +
+      '<div class="crest"></div><div class="head"></div>' +
+      '<div class="arm-l"></div><div class="torso"></div><div class="arm-r"></div>' +
+      '<div class="leg-l"></div><div class="leg-r"></div><div class="ground"></div>' +
+      '</div><p>' + esc(text || 'Loading…') + '</p></div>';
+  }
+  function showLoader(container, text) {
+    if (typeof container === 'string') container = document.getElementById(container);
+    if (container) container.innerHTML = walkerLoader(text);
+  }
   function skeletonCards(container, n) {
     n = n || 6;
     var html = '';
@@ -286,11 +299,18 @@
     }
     container.innerHTML = html;
   }
+  function fetchWithTimeout(path, ms) {
+    return new Promise(function (resolve, reject) {
+      var timer = setTimeout(function () { reject(new Error('timeout: ' + path)); }, ms || 12000);
+      fetch(path, { cache: 'no-store' }).then(function (r) {
+        clearTimeout(timer);
+        if (!r.ok) reject(new Error('load failed: ' + path));
+        else resolve(r.json());
+      }, function (err) { clearTimeout(timer); reject(err); });
+    });
+  }
   function getJSON(path, _retried) {
-    return fetch(path, { cache: 'no-store' }).then(function (r) {
-      if (!r.ok) throw new Error('load failed: ' + path);
-      return r.json();
-    }).catch(function (err) {
+    return fetchWithTimeout(path, 12000).catch(function (err) {
       if (_retried) throw err; /* retried once already — give up */
       return new Promise(function (res) { setTimeout(res, 700); })
         .then(function () { return getJSON(path, true); });
@@ -357,7 +377,7 @@
 
   window.TV = {
     NAV: NAV, NAV_GROUPS: NAV_GROUPS, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
-    infiniteScroll: infiniteScroll, skeletonCards: skeletonCards, badge: badge, hardReload: hardReload,
+    infiniteScroll: infiniteScroll, skeletonCards: skeletonCards, showLoader: showLoader, walkerLoader: walkerLoader, badge: badge, hardReload: hardReload,
     liveNote: liveNote, relatedLinks: relatedLinks,
     openSearch: openSearch
   };
