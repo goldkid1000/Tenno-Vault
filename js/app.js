@@ -59,6 +59,7 @@
     if (!host) return;
     host.innerHTML =
       '<div class="header-inner">' +
+      (page !== 'home' ? '<button class="back-btn" id="tv-back" aria-label="Go back">←</button>' : '') +
       '<a class="logo" href="index.html"><span class="logo-mark">◈</span><span class="logo-text">TENNO<em>VAULT</em></span></a>' +
       '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
@@ -328,6 +329,14 @@
     buildCrumbs();
     buildFooter();
     buildSearchOverlay();
+    /* back button: history.back() with homepage fallback */
+    var backBtn = document.getElementById('tv-back');
+    if (backBtn) {
+      backBtn.addEventListener('click', function () {
+        if (window.history.length > 1) { window.history.back(); }
+        else { window.location.href = 'index.html'; }
+      });
+    }
     if (window.TVAI && window.TVAI.init) window.TVAI.init();
   });
 
