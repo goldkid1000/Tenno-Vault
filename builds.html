@@ -135,14 +135,29 @@
     rel.push({ label: '⛏️ Resource Finder', sub: 'Where to farm crafting materials', url: 'resources.html' });
     document.getElementById('related').innerHTML = window.TV.relatedLinks('If you liked this build…', rel);
   }
+  var PAGE_SIZE = 48;
+  var shown = PAGE_SIZE;
   function drawList() {
     var list = document.getElementById('b-list');
     list.innerHTML = '';
     var items = filtered();
-    items.forEach(function (b) { list.appendChild(card(b)); });
+    var visible = items.slice(0, shown);
+    visible.forEach(function (b) { list.appendChild(card(b)); });
+    /* load more button */
+    var more = document.getElementById('b-more');
+    if (more) more.remove();
+    if (items.length > shown) {
+      var btn = document.createElement('button');
+      btn.id = 'b-more'; btn.className = 'btn primary';
+      btn.style.cssText = 'display:block;margin:18px auto;';
+      btn.textContent = 'Show more (' + (items.length - shown) + ' remaining)';
+      btn.addEventListener('click', function () { shown += PAGE_SIZE; drawList(); });
+      list.parentNode.appendChild(btn);
+    }
     if (!items.length) list.innerHTML = '<div class="notice">No builds in this category yet.</div>';
     document.getElementById('b-count').textContent = items.length + ' of ' + builds.length + ' Builds';
   }
+  function resetShown() { shown = PAGE_SIZE; }
   function setFilter(f) {
     filter = f;
     var chips = document.querySelectorAll('#b-filters .chip');
@@ -169,6 +184,7 @@
       query = e.target.value.trim();
       document.getElementById('b-detail').innerHTML = '';
       history.replaceState(null, '', ' ');
+      resetShown();
       drawList();
     });
     var h = location.hash;
