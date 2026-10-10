@@ -1,0 +1,2333 @@
+[
+ {
+  "name": "Orokin Cell",
+  "type": "Planet Drop",
+  "planet": "Ceres",
+  "mission": "Survival (Dark Sector)",
+  "node": "Gabii",
+  "bestFarm": "Gabii \u2014 Ceres (Survival, Dark Sector)",
+  "notes": "Also drops on Deimos and Saturn. Bring a Nekros or Khora for extra drops."
+ },
+ {
+  "name": "Argon Crystal",
+  "type": "Planet Drop",
+  "planet": "Void",
+  "mission": "Defense / Survival",
+  "node": "Taranis / Mot",
+  "bestFarm": "Taranis (Defense) or Mot (Survival) \u2014 Void",
+  "notes": "Decays 24 hours after pickup \u2014 only farm what you need right now."
+ },
+ {
+  "name": "Neural Sensors",
+  "type": "Planet Drop",
+  "planet": "Jupiter",
+  "mission": "Survival / Assassination",
+  "node": "Cameria / Themisto (Alad V)",
+  "bestFarm": "Cameria (Survival) or kill Alad V on Themisto",
+  "notes": "Drops from Jupiter enemies and Alad V."
+ },
+ {
+  "name": "Neurodes",
+  "type": "Planet Drop",
+  "planet": "Earth",
+  "mission": "Excavation",
+  "node": "Everest",
+  "bestFarm": "Everest \u2014 Earth (Excavation)",
+  "notes": "Also drops from Sentients on Lua."
+ },
+ {
+  "name": "Control Module",
+  "type": "Planet Drop",
+  "planet": "Phobos",
+  "mission": "Survival",
+  "node": "\u2014",
+  "bestFarm": "Survival missions on Phobos or the Void",
+  "notes": "Also drops from the Hyena Pack on Neptune."
+ },
+ {
+  "name": "Gallium",
+  "type": "Planet Drop",
+  "planet": "Mars",
+  "mission": "Survival / Defense",
+  "node": "\u2014",
+  "bestFarm": "Survival or Defense on Mars and Uranus",
+  "notes": ""
+ },
+ {
+  "name": "Morphics",
+  "type": "Planet Drop",
+  "planet": "Mercury",
+  "mission": "Survival",
+  "node": "\u2014",
+  "bestFarm": "Survival on Mercury, Mars, or Europa",
+  "notes": "Captain Vor on Mercury also drops Morphics."
+ },
+ {
+  "name": "Plastids",
+  "type": "Planet Drop",
+  "planet": "Saturn",
+  "mission": "Survival",
+  "node": "Piscinas",
+  "bestFarm": "Piscinas \u2014 Saturn (Survival)",
+  "notes": "Also drops on Uranus, Pluto, and Eris."
+ },
+ {
+  "name": "Polymer Bundle",
+  "type": "Planet Drop",
+  "planet": "Mercury",
+  "mission": "Survival / Defense",
+  "node": "\u2014",
+  "bestFarm": "Survival or Defense on Mercury, Venus, or Uranus",
+  "notes": "Very common \u2014 you'll drown in these eventually."
+ },
+ {
+  "name": "Cryotic",
+  "type": "Planet Drop",
+  "planet": "Pluto",
+  "mission": "Excavation",
+  "node": "Hieracon",
+  "bestFarm": "Hieracon \u2014 Pluto (Excavation)",
+  "notes": "The classic Cryotic farm. Bring a Frost or Limbo to protect extractors."
+ },
+ {
+  "name": "Oxium",
+  "type": "Planet Drop",
+  "planet": "Jupiter",
+  "mission": "Defense",
+  "node": "Io",
+  "bestFarm": "Io \u2014 Jupiter (Defense), kill Oxium Ospreys",
+  "notes": "Only drops from Oxium Ospreys \u2014 prioritize killing them. Also on Neptune."
+ },
+ {
+  "name": "Tellurium",
+  "type": "Planet Drop",
+  "planet": "Uranus",
+  "mission": "Survival (Submersible)",
+  "node": "Ophelia",
+  "bestFarm": "Ophelia \u2014 Uranus (Submersible Survival)",
+  "notes": "Also drops in Kuva Fortress missions and from Archwing enemies."
+ },
+ {
+  "name": "Rubedo",
+  "type": "Planet Drop",
+  "planet": "Earth",
+  "mission": "Excavation / Survival",
+  "node": "\u2014",
+  "bestFarm": "Excavation and Survival on Earth and Lua",
+  "notes": "Also found in Void containers."
+ },
+ {
+  "name": "Ferrite",
+  "type": "Planet Drop",
+  "planet": "Mercury",
+  "mission": "Survival / Defense",
+  "node": "\u2014",
+  "bestFarm": "Survival and Defense on Mercury and Earth",
+  "notes": ""
+ },
+ {
+  "name": "Nano Spores",
+  "type": "Planet Drop",
+  "planet": "Deimos",
+  "mission": "Survival / Defense",
+  "node": "\u2014",
+  "bestFarm": "Survival and Defense on Deimos and Saturn",
+  "notes": "Orokin Derelict vault runs drop these too."
+ },
+ {
+  "name": "Salvage",
+  "type": "Planet Drop",
+  "planet": "Mars",
+  "mission": "Survival (Dark Sector)",
+  "node": "\u2014",
+  "bestFarm": "Dark Sector Survival on Mars and Jupiter",
+  "notes": ""
+ },
+ {
+  "name": "Alloy Plate",
+  "type": "Planet Drop",
+  "planet": "Venus",
+  "mission": "Survival / Excavation (Dark Sector)",
+  "node": "\u2014",
+  "bestFarm": "Dark Sector Survival or Excavation on Venus",
+  "notes": ""
+ },
+ {
+  "name": "Circuits",
+  "type": "Planet Drop",
+  "planet": "Venus",
+  "mission": "Defense / Survival",
+  "node": "\u2014",
+  "bestFarm": "Defense and Survival on Venus",
+  "notes": "Also drops on Ceres."
+ },
+ {
+  "name": "Nitain Extract",
+  "type": "Syndicate",
+  "planet": "\u2014",
+  "mission": "Nightwave",
+  "node": "Nora's Shop",
+  "bestFarm": "Buy from Nora's Nightwave shop with creds",
+  "notes": "No longer drops from alerts \u2014 Nightwave is the only source."
+ },
+ {
+  "name": "Mutagen Sample",
+  "type": "Planet Drop",
+  "planet": "Eris",
+  "mission": "Survival / Defense",
+  "node": "\u2014",
+  "bestFarm": "Survival and Defense on Eris and Deimos",
+  "notes": ""
+ },
+ {
+  "name": "Fieldron Sample",
+  "type": "Planet Drop",
+  "planet": "Venus",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Drops from Corpus enemies on Venus and Jupiter",
+  "notes": "Refine into Fieldron via Clan Research."
+ },
+ {
+  "name": "Detonite Ampule",
+  "type": "Planet Drop",
+  "planet": "Venus",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Drops from Grineer enemies on Venus, Earth, and Mercury",
+  "notes": "Refine into Detonite Injector via Clan Research."
+ },
+ {
+  "name": "Mutagen Mass",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "Clan Research",
+  "node": "Bio Lab",
+  "bestFarm": "Craft in Clan Dojo Bio Lab (or buy blueprint)",
+  "notes": "Also drops from Orokin Derelict vaults."
+ },
+ {
+  "name": "Fieldron",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "Clan Research",
+  "node": "Energy Lab",
+  "bestFarm": "Craft in Clan Dojo Energy Lab",
+  "notes": "Invasion rewards also give Fieldron."
+ },
+ {
+  "name": "Detonite Injector",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "Clan Research",
+  "node": "Chemical Lab",
+  "bestFarm": "Craft in Clan Dojo Chemical Lab",
+  "notes": "Invasion rewards also give Detonite Injectors."
+ },
+ {
+  "name": "Auron",
+  "type": "Mining",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Red Veins",
+  "bestFarm": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Cut Auron crafts into Auron-based alloys at the Foundry."
+ },
+ {
+  "name": "Coprun",
+  "type": "Mining",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Red Veins",
+  "bestFarm": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Ferros",
+  "type": "Mining",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Red Veins",
+  "bestFarm": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Pyrol",
+  "type": "Mining",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Red Veins",
+  "bestFarm": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Also drops from Thumpers."
+ },
+ {
+  "name": "Azurite",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Crimzian",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Also drops from Thumpers."
+ },
+ {
+  "name": "Devar",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Also drops from Thumpers."
+ },
+ {
+  "name": "Veridos",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Also drops from Thumpers."
+ },
+ {
+  "name": "Nyth",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Rare \u2014 Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Rare gem. Eidolon Hydrolyst also drops Nyth."
+ },
+ {
+  "name": "Sentirum",
+  "type": "Gem",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Rare \u2014 Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "notes": "Rare Eidolon gem from blue veins."
+ },
+ {
+  "name": "Iradite",
+  "type": "Mining",
+  "planet": "Plains of Eidolon",
+  "mission": "Mining / Bounties",
+  "node": "\u2014",
+  "bestFarm": "Mining on the Plains or Cetus bounties (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Cetus Wisp",
+  "type": "Open World",
+  "planet": "Plains of Eidolon",
+  "mission": "Wisp hunting",
+  "node": "Lakeshores at night",
+  "bestFarm": "Shorelines at night on the Plains of Eidolon (Earth)",
+  "notes": "Most common at night near water. Needed for amps and Quills standing."
+ },
+ {
+  "name": "Maprico",
+  "type": "Plant",
+  "planet": "Plains of Eidolon",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather from bushes on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Nistlepod",
+  "type": "Plant",
+  "planet": "Plains of Eidolon",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather Nistlebrush plants on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Condroc Wing",
+  "type": "Open World",
+  "planet": "Plains of Eidolon",
+  "mission": "Hunting",
+  "node": "\u2014",
+  "bestFarm": "Kill Condrocs (birds) on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Axidite",
+  "type": "Mining",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Orb Vallis (Venus)",
+  "notes": "Refine into Axidrol Alloy (blueprint from Smokefinger in Fortuna)."
+ },
+ {
+  "name": "Goblite",
+  "type": "Gem",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Hesperon",
+  "type": "Mining",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Orb Vallis (Venus)",
+  "notes": "Refine into Hespazym Alloy (blueprint from Smokefinger in Fortuna)."
+ },
+ {
+  "name": "Noctrul",
+  "type": "Gem",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Phasmin",
+  "type": "Gem",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Thyst",
+  "type": "Gem",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Venerol",
+  "type": "Mining",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Red Veins",
+  "bestFarm": "Red Mining Veins on Orb Vallis (Venus)",
+  "notes": "Refine into Venerdo Alloy (blueprint from Smokefinger in Fortuna)."
+ },
+ {
+  "name": "Travoride",
+  "type": "Mining",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Orb Vallis (Venus)",
+  "notes": "Refine into Travocyte Alloy (blueprint from Smokefinger in Fortuna)."
+ },
+ {
+  "name": "Zodian",
+  "type": "Gem",
+  "planet": "Orb Vallis",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Thermal Sludge",
+  "type": "Open World",
+  "planet": "Orb Vallis",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Found near Weeping Towers on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Mytocardia Spore",
+  "type": "Plant",
+  "planet": "Orb Vallis",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Tepa Nodule",
+  "type": "Plant",
+  "planet": "Orb Vallis",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in cold areas on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Gorgaricus Spore",
+  "type": "Plant",
+  "planet": "Orb Vallis",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather from giant fungi on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Vega Toroid",
+  "type": "Syndicate",
+  "planet": "Orb Vallis",
+  "mission": "Bounties / Enemies",
+  "node": "\u2014",
+  "bestFarm": "Bounties or killing enemies in the Spaceport area \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Vox Solaris for standing. Also needed for crafting."
+ },
+ {
+  "name": "Calda Toroid",
+  "type": "Syndicate",
+  "planet": "Orb Vallis",
+  "mission": "Bounties / Enemies",
+  "node": "\u2014",
+  "bestFarm": "Bounties or killing enemies at the Enrichment Labs \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Vox Solaris for standing."
+ },
+ {
+  "name": "Sola Toroid",
+  "type": "Syndicate",
+  "planet": "Orb Vallis",
+  "mission": "Bounties / Enemies",
+  "node": "\u2014",
+  "bestFarm": "Bounties or killing enemies at the Temple of Profit \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Vox Solaris for standing."
+ },
+ {
+  "name": "Crisma Toroid",
+  "type": "Syndicate",
+  "planet": "Orb Vallis",
+  "mission": "Profit Taker",
+  "node": "\u2014",
+  "bestFarm": "Profit Taker Heist (Fortuna) \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Vox Solaris for standing."
+ },
+ {
+  "name": "Lazulite Toroid",
+  "type": "Syndicate",
+  "planet": "Orb Vallis",
+  "mission": "Exploiter Orb",
+  "node": "\u2014",
+  "bestFarm": "Exploiter Orb fight \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Vox Solaris for standing."
+ },
+ {
+  "name": "Advances Debt-Bond",
+  "type": "Token",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Ticker in Fortuna for standing."
+ },
+ {
+  "name": "Familial Debt-Bond",
+  "type": "Token",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Higher-tier Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Ticker in Fortuna for standing."
+ },
+ {
+  "name": "Medical Debt-Bond",
+  "type": "Token",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Ticker in Fortuna for standing."
+ },
+ {
+  "name": "Shelter Debt-Bond",
+  "type": "Token",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Ticker in Fortuna for standing."
+ },
+ {
+  "name": "Training Debt-Bond",
+  "type": "Token",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Trade to Ticker in Fortuna for standing."
+ },
+ {
+  "name": "Gyromag Systems",
+  "type": "Component",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Atmo Systems",
+  "type": "Component",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Repeller Systems",
+  "type": "Component",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Adramalium",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Yellow Veins",
+  "bestFarm": "Yellow Mining Veins on Cambion Drift (Deimos)",
+  "notes": "Refine into Adramal Alloy (blueprint from Otak in the Necralisk)."
+ },
+ {
+  "name": "Bapholite",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Yellow Veins",
+  "bestFarm": "Yellow Mining Veins on Cambion Drift (Deimos)",
+  "notes": "Refine into Tempered Bapholite (blueprint from Otak in the Necralisk)."
+ },
+ {
+  "name": "Dagonic",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Embolos",
+  "type": "Gem",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Ganglion",
+  "type": "Open World",
+  "planet": "Cambion Drift",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Heciphron",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Namalon",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Cambion Drift (Deimos)",
+  "notes": "Refine into Devolved Namalon (blueprint from Otak in the Necralisk)."
+ },
+ {
+  "name": "Necrathene",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Thaumica",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Cambion Drift (Deimos)",
+  "notes": "Refine into Thaumic Distillate (blueprint from Otak in the Necralisk)."
+ },
+ {
+  "name": "Tiametrite",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "Blue Veins",
+  "bestFarm": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Xenorhast",
+  "type": "Mining",
+  "planet": "Cambion Drift",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Mining on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Pustulite",
+  "type": "Open World",
+  "planet": "Cambion Drift",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather on Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Pustrels",
+  "type": "Open World",
+  "planet": "Cambion Drift",
+  "mission": "Enemies",
+  "node": "\u2014",
+  "bestFarm": "Drops from Infested on Eris and Cambion Drift (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Daughter Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Trade",
+  "node": "Necralisk",
+  "bestFarm": "Trade with Daughter in the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Father Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Trade",
+  "node": "Necralisk",
+  "bestFarm": "Trade with Father in the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Son Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Trade",
+  "node": "Necralisk",
+  "bestFarm": "Trade with Son in the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Otak Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Trade",
+  "node": "Necralisk",
+  "bestFarm": "Trade with Otak in the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Grandmother Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Trade",
+  "node": "Necralisk",
+  "bestFarm": "Trade with Grandmother in the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Mother Token",
+  "type": "Token",
+  "planet": "Cambion Drift",
+  "mission": "Bounties",
+  "node": "Cambion Drift",
+  "bestFarm": "Cambion Drift bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Scintillant",
+  "type": "Open World",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault bounties on Cambion Drift (Deimos)",
+  "notes": "Hovering Orokin relics in the vaults \u2014 shoot them down."
+ },
+ {
+  "name": "Damaged Necramech Casing",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Engine",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Pod",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Weapon Barrel",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault and Arcana Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Weapon Pod",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Weapon Receiver",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Damaged Necramech Weapon Stock",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault and Arcana Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Orokin Animus Matrix",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Orokin Ballistics Matrix",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Orokin Orientation Matrix",
+  "type": "Component",
+  "planet": "Cambion Drift",
+  "mission": "Isolation Vaults",
+  "node": "\u2014",
+  "bestFarm": "Isolation Vault bounties (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Entrati Lanthorn",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "Albrecht's Laboratories",
+  "bestFarm": "Zariman missions, especially Albrecht's Laboratories (Deimos)",
+  "notes": "Key crafting material for Incarnon adapters and Zariman gear."
+ },
+ {
+  "name": "Thrax Plasm",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Kill Thrax enemies in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidplume Crest",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Void Angels",
+  "node": "\u2014",
+  "bestFarm": "Kill Void Angels in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidplume Down",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Void Angels",
+  "node": "\u2014",
+  "bestFarm": "Kill Void Angels in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidplume Pinion",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Void Angels",
+  "node": "\u2014",
+  "bestFarm": "Kill Void Angels in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidplume Quill",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Void Angels",
+  "node": "\u2014",
+  "bestFarm": "Kill Void Angels in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidplume Vane",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Void Angels",
+  "node": "\u2014",
+  "bestFarm": "Kill Void Angels in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Voidgel Orb",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Entropic Kuva",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Kill Entropic Eximus in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Lua Thrax Plasm",
+  "type": "Zariman",
+  "planet": "Lua",
+  "mission": "Conjunction Survival",
+  "node": "Yuvarium / Circulus",
+  "bestFarm": "Yuvarium or Circulus \u2014 Lua (Conjunction Survival)",
+  "notes": "Only during Void Conjunctions on Lua."
+ },
+ {
+  "name": "Stela",
+  "type": "Zariman",
+  "planet": "Deimos",
+  "mission": "Missions",
+  "node": "Albrecht's Laboratories",
+  "bestFarm": "Albrecht's Laboratories (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Necracoil",
+  "type": "Zariman",
+  "planet": "Deimos",
+  "mission": "Missions",
+  "node": "Albrecht's Laboratories",
+  "bestFarm": "Albrecht's Laboratories (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Vessel Capillaries",
+  "type": "Zariman",
+  "planet": "Deimos",
+  "mission": "Disruption",
+  "node": "Albrecht's Laboratories",
+  "bestFarm": "Disruption missions in Albrecht's Laboratories (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Connla Sprout",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Dracroot",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Eevani",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Kovnik",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Lamentus",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Found in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Rune Marrow",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "The Undercroft",
+  "node": "\u2014",
+  "bestFarm": "The Undercroft in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Saggen Pearl",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather near Saggen Wells in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Silphsela",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Floating plants in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Tertium",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Found in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Ueymag",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "Hunting",
+  "node": "\u2014",
+  "bestFarm": "Hunt Ueymag creatures in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Yao Shrub",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Tasoma Extract",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather Tasoma plants in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Tasoma Spore",
+  "type": "Plant",
+  "planet": "Duviri",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Tasoma spores in Duviri \u2014 grow in the Dormizone garden",
+  "notes": ""
+ },
+ {
+  "name": "Enigma Gyrum",
+  "type": "Token",
+  "planet": "Duviri",
+  "mission": "Enigmas",
+  "node": "\u2014",
+  "bestFarm": "Complete Enigmas (puzzles) in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Pathos Clamp",
+  "type": "Boss Drop",
+  "planet": "Duviri",
+  "mission": "Orowyrm",
+  "node": "\u2014",
+  "bestFarm": "Reward from the Orowyrm boss fight in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Aggristone",
+  "type": "Open World",
+  "planet": "Duviri",
+  "mission": "Orowyrm",
+  "node": "\u2014",
+  "bestFarm": "Drops from Orowyrm formations in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "35mm Film",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Missions in 1999 (H\u00f6llvania)",
+  "notes": "Check the in-game Codex for specific drop locations."
+ },
+ {
+  "name": "Argon Burger Meal",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Big Bytes Pizza",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Hex Treasures",
+  "node": "\u2014",
+  "bestFarm": "Trade Hex Treasures with Lettie \u2014 1999 (H\u00f6llvania)",
+  "notes": ""
+ },
+ {
+  "name": "Cheddar Crowns Cereal",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Chuggin' Along Sixpack",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Efervon Sample",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions \u2014 from Scaldra enemies",
+  "notes": ""
+ },
+ {
+  "name": "H\u00f6llvanian Pitchweave Fragment",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Experimental Arc-Relay",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "On-Lyne Cd",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "The Countessa Comic",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Mood Crystal",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) missions",
+  "notes": ""
+ },
+ {
+  "name": "Beating Heartstrings",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) \u2014 Techrot growths",
+  "notes": ""
+ },
+ {
+  "name": "Techrot Chitin",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) \u2014 Techrot enemies",
+  "notes": ""
+ },
+ {
+  "name": "Techrot Motherboard",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "1999 (H\u00f6llvania) \u2014 Techrot enemies",
+  "notes": ""
+ },
+ {
+  "name": "Atramentum",
+  "type": "1999",
+  "planet": "H\u00f6llvania",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Atramentum Balloons in 1999 (H\u00f6llvania)",
+  "notes": ""
+ },
+ {
+  "name": "Carbides",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "Earth / Saturn Proxima",
+  "bestFarm": "Railjack missions in Earth and Saturn Proxima",
+  "notes": ""
+ },
+ {
+  "name": "Cubic Diodes",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Drops from Eximus units in Corpus Railjack missions",
+  "notes": ""
+ },
+ {
+  "name": "Gallos Rods",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "Earth / Saturn Proxima",
+  "bestFarm": "Railjack missions in Earth and Saturn Proxima",
+  "notes": ""
+ },
+ {
+  "name": "Isos",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Railjack missions",
+  "notes": ""
+ },
+ {
+  "name": "Komms",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "Earth / Saturn Proxima",
+  "bestFarm": "Railjack missions in Earth and Saturn Proxima",
+  "notes": ""
+ },
+ {
+  "name": "Nullstones",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Railjack missions \u2014 check the in-game Codex for specifics",
+  "notes": ""
+ },
+ {
+  "name": "Ticor Plate",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Railjack missions",
+  "notes": ""
+ },
+ {
+  "name": "Titanium",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Railjack missions \u2014 from destroyed ships and asteroids",
+  "notes": ""
+ },
+ {
+  "name": "Trachons",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Drops in Infested Railjack missions",
+  "notes": ""
+ },
+ {
+  "name": "Asterite",
+  "type": "Railjack",
+  "planet": "\u2014",
+  "mission": "Railjack Missions",
+  "node": "\u2014",
+  "bestFarm": "Mining space rock in Railjack missions",
+  "notes": ""
+ },
+ {
+  "name": "Animo Nav Beacon",
+  "type": "Boss Drop",
+  "planet": "\u2014",
+  "mission": "Assassination",
+  "node": "Ambulas (Pluto)",
+  "bestFarm": "Kill Ambulas units \u2014 needed to fight Ambulas on Pluto",
+  "notes": ""
+ },
+ {
+  "name": "Javlok Capacitor",
+  "type": "Boss Drop",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Used to craft Javloks \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Cryptographic Alu",
+  "type": "Boss Drop",
+  "planet": "\u2014",
+  "mission": "Razorback Armada",
+  "node": "\u2014",
+  "bestFarm": "Drops during the Razorback Armada event",
+  "notes": ""
+ },
+ {
+  "name": "Intact Sentient Core",
+  "type": "Boss Drop",
+  "planet": "Lua",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Kill Sentients on Lua",
+  "notes": "Also drops from Eidolons on the Plains of Eidolon."
+ },
+ {
+  "name": "Exceptional Sentient Core",
+  "type": "Boss Drop",
+  "planet": "Lua",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Kill Sentients on Lua \u2014 rarer drop",
+  "notes": ""
+ },
+ {
+  "name": "Flawless Sentient Core",
+  "type": "Boss Drop",
+  "planet": "Lua",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Rare drop from Sentients on Lua",
+  "notes": ""
+ },
+ {
+  "name": "Steel Essence",
+  "type": "Steel Path",
+  "planet": "\u2014",
+  "mission": "Steel Path",
+  "node": "Incursions / Acolytes",
+  "bestFarm": "Steel Path Incursion alerts or killing Acolytes",
+  "notes": "Trade to Teshin for Steel Path rewards."
+ },
+ {
+  "name": "Vestigial Motes",
+  "type": "Event",
+  "planet": "Uranus",
+  "mission": "Ascension",
+  "node": "Brutus",
+  "bestFarm": "Ascension missions on Brutus \u2014 Uranus",
+  "notes": "Remnants of Jade's light."
+ },
+ {
+  "name": "Volatile Motes",
+  "type": "Event",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Highly charged particles \u2014 check the in-game Codex for current sources",
+  "notes": ""
+ },
+ {
+  "name": "Riven Transmuter",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "Sorties / Arbitrations",
+  "node": "\u2014",
+  "bestFarm": "Sortie and Arbitration rewards \u2014 combines 4 Rivens into 1 new Riven",
+  "notes": ""
+ },
+ {
+  "name": "Cephalite Resonance",
+  "type": "Quest",
+  "planet": "\u2014",
+  "mission": "Glassmaker",
+  "node": "\u2014",
+  "bestFarm": "Used to enter the Glassmaker's Weave (Nightwave)",
+  "notes": ""
+ },
+ {
+  "name": "Ascaris Prime",
+  "type": "Quest",
+  "planet": "\u2014",
+  "mission": "Quest Reward",
+  "node": "\u2014",
+  "bestFarm": "Quest-related item \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Hunhow's Trinket",
+  "type": "Quest",
+  "planet": "\u2014",
+  "mission": "Quest Reward",
+  "node": "\u2014",
+  "bestFarm": "Quest-related decoration blueprint",
+  "notes": ""
+ },
+ {
+  "name": "Kullervo's Bane",
+  "type": "Syndicate",
+  "planet": "\u2014",
+  "mission": "Acrithis",
+  "node": "\u2014",
+  "bestFarm": "Trade with Acrithis in the Sanctum Anatomica (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Bonewidow Capsule",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Bonewidow Casing",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Bonewidow Engine",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Bonewidow Weapon Pod",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Voidrig Capsule",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Voidrig Casing",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Voidrig Engine",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Voidrig Weapon Pod",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "notes": ""
+ },
+ {
+  "name": "Cortege Barrel",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Cortege Receiver",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Cortege Stock",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Morgha Barrel",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Morgha Receiver",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Morgha Stock",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Necralisk",
+  "node": "\u2014",
+  "bestFarm": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Adramal Alloy",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Foundry",
+  "node": "Otak (Necralisk)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos)",
+  "notes": "Made from Adramalium."
+ },
+ {
+  "name": "Axidrol Alloy",
+  "type": "Component",
+  "planet": "Venus",
+  "mission": "Foundry",
+  "node": "Smokefinger (Fortuna)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus)",
+  "notes": "Made from Axidite."
+ },
+ {
+  "name": "Devolved Namalon",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Foundry",
+  "node": "Otak (Necralisk)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos)",
+  "notes": "Made from Namalon."
+ },
+ {
+  "name": "Hespazym Alloy",
+  "type": "Component",
+  "planet": "Venus",
+  "mission": "Foundry",
+  "node": "Smokefinger (Fortuna)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus)",
+  "notes": "Made from Hesperon."
+ },
+ {
+  "name": "Tempered Bapholite",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Foundry",
+  "node": "Otak (Necralisk)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos)",
+  "notes": "Made from Bapholite."
+ },
+ {
+  "name": "Thaumic Distillate",
+  "type": "Component",
+  "planet": "Deimos",
+  "mission": "Foundry",
+  "node": "Otak (Necralisk)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos)",
+  "notes": "Made from Thaumica."
+ },
+ {
+  "name": "Travocyte Alloy",
+  "type": "Component",
+  "planet": "Venus",
+  "mission": "Foundry",
+  "node": "Smokefinger (Fortuna)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus)",
+  "notes": "Made from Travoride."
+ },
+ {
+  "name": "Venerdo Alloy",
+  "type": "Component",
+  "planet": "Venus",
+  "mission": "Foundry",
+  "node": "Smokefinger (Fortuna)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus)",
+  "notes": "Made from Venerol."
+ },
+ {
+  "name": "Esher Devar",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Devar."
+ },
+ {
+  "name": "Marquise Veridos",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Veridos."
+ },
+ {
+  "name": "Radian Sentirum",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Sentirum."
+ },
+ {
+  "name": "Star Crimzian",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Crimzian."
+ },
+ {
+  "name": "Tear Azurite",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Azurite."
+ },
+ {
+  "name": "Heart Nyth",
+  "type": "Gem",
+  "planet": "Earth",
+  "mission": "Foundry",
+  "node": "Old Man Suumbaat (Cetus)",
+  "bestFarm": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth)",
+  "notes": "Cut from Nyth."
+ },
+ {
+  "name": "Dusklight Sarracenia",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Frostleaf",
+  "type": "Plant",
+  "planet": "Venus",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in frigid areas \u2014 Venus missions",
+  "notes": ""
+ },
+ {
+  "name": "Frostcap",
+  "type": "Plant",
+  "planet": "Venus",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather on Venus missions",
+  "notes": ""
+ },
+ {
+  "name": "Lunar Pitcher",
+  "type": "Plant",
+  "planet": "Lua",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in the wilderness on Lua",
+  "notes": ""
+ },
+ {
+  "name": "Moonlight Dragonlily",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Night)",
+  "node": "\u2014",
+  "bestFarm": "Gather at night on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Moonlight Jadeleaf",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Night)",
+  "node": "\u2014",
+  "bestFarm": "Rare \u2014 gather at night on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Moonlight Threshcone",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Night)",
+  "node": "\u2014",
+  "bestFarm": "Gather at night on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Sunlight Dragonlily",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Day)",
+  "node": "\u2014",
+  "bestFarm": "Gather during the day on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Sunlight Jadeleaf",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Day)",
+  "node": "\u2014",
+  "bestFarm": "Rare \u2014 gather during the day on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Sunlight Threshcone",
+  "type": "Plant",
+  "planet": "Earth",
+  "mission": "Gathering (Day)",
+  "node": "\u2014",
+  "bestFarm": "Gather during the day on Earth missions",
+  "notes": ""
+ },
+ {
+  "name": "Ruk's Claw",
+  "type": "Plant",
+  "planet": "Mars",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Gather in arid regions \u2014 Mars missions",
+  "notes": ""
+ },
+ {
+  "name": "Vestan Moss",
+  "type": "Plant",
+  "planet": "\u2014",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Grows on asteroids \u2014 check the in-game Codex for specific missions",
+  "notes": ""
+ },
+ {
+  "name": "Ghost Brush Extract",
+  "type": "Plant",
+  "planet": "Deimos",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Extracted from Ghost Brush on Deimos",
+  "notes": ""
+ },
+ {
+  "name": "Skateweed Extract",
+  "type": "Plant",
+  "planet": "Deimos",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Extracted from Skateweed on Deimos",
+  "notes": ""
+ },
+ {
+  "name": "Cerulean Fungus Extract",
+  "type": "Plant",
+  "planet": "Deimos",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Extracted from Cerulean Fungus colonies on Deimos",
+  "notes": ""
+ },
+ {
+  "name": "Bracoid",
+  "type": "Plant",
+  "planet": "\u2014",
+  "mission": "Enemies",
+  "node": "Infested Ships",
+  "bestFarm": "Drops on Infested ships",
+  "notes": ""
+ },
+ {
+  "name": "Kuaka Spinal Claw",
+  "type": "Open World",
+  "planet": "Earth",
+  "mission": "Hunting",
+  "node": "\u2014",
+  "bestFarm": "Hunt Kuakas on the Plains of Eidolon (Earth)",
+  "notes": ""
+ },
+ {
+  "name": "Amarast",
+  "type": "Gem",
+  "planet": "Venus",
+  "mission": "Mining",
+  "node": "\u2014",
+  "bestFarm": "Violet gem \u2014 Orb Vallis (Venus). Check the in-game Codex for vein type.",
+  "notes": ""
+ },
+ {
+  "name": "Granum Crown",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Granum Void",
+  "node": "\u2014",
+  "bestFarm": "Granum Void (Corpus Ship missions via Granum Terminals)",
+  "notes": ""
+ },
+ {
+  "name": "Exemplar Granum Crown",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Granum Void",
+  "node": "\u2014",
+  "bestFarm": "Higher-tier Granum Void runs",
+  "notes": ""
+ },
+ {
+  "name": "Zenith Granum Crown",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Granum Void",
+  "node": "\u2014",
+  "bestFarm": "The rarest Granum Crown \u2014 high-tier Granum Void",
+  "notes": ""
+ },
+ {
+  "name": "Lich Token",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Kuva Lich",
+  "node": "\u2014",
+  "bestFarm": "Convert a Kuva Lich \u2014 trade the token to other players",
+  "notes": ""
+ },
+ {
+  "name": "Sister Of Parvos Token",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Sister of Parvos",
+  "node": "\u2014",
+  "bestFarm": "Convert a Sister of Parvos \u2014 trade the token to other players",
+  "notes": ""
+ },
+ {
+  "name": "Technocyte Coda Token",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Technocyte Coda",
+  "node": "\u2014",
+  "bestFarm": "Convert a Technocyte Coda \u2014 trade the token to other players",
+  "notes": ""
+ },
+ {
+  "name": "Crimson Talent",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "1999",
+  "node": "\u2014",
+  "bestFarm": "Support Vena against Ryoku (Scoria's Angel) \u2014 1999",
+  "notes": ""
+ },
+ {
+  "name": "Emerald Talent",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "1999",
+  "node": "\u2014",
+  "bestFarm": "Support Ryoku against Vena (The Kuva Wytch) \u2014 1999",
+  "notes": ""
+ },
+ {
+  "name": "Dominus Aureus",
+  "type": "Token",
+  "planet": "Duviri",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Return stolen seals in Duviri",
+  "notes": ""
+ },
+ {
+  "name": "Marks Of Valiance",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Duviri",
+  "node": "\u2014",
+  "bestFarm": "Awarded by Grand Carnus Roathe \u2014 Duviri Steel Path circuit rewards",
+  "notes": ""
+ },
+ {
+  "name": "Laudavi",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Awarded for Old War distinction \u2014 from crates in 1999 missions",
+  "notes": ""
+ },
+ {
+  "name": "Servoris",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Orokin service medals \u2014 from 1999 missions",
+  "notes": ""
+ },
+ {
+  "name": "Curse Of Hearing",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Sanctum Anatomica",
+  "node": "\u2014",
+  "bestFarm": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Curse Of Knowing",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Sanctum Anatomica",
+  "node": "\u2014",
+  "bestFarm": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Curse Of Seeing",
+  "type": "Token",
+  "planet": "\u2014",
+  "mission": "Sanctum Anatomica",
+  "node": "\u2014",
+  "bestFarm": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Cortichrome",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Entratifragmentbase",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Entratilabdogtag",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Genericdojocolorpigment",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Hexsyndicatedogtag",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Plantitem",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Zarimandogtag",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Bioplasma",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Corpus Cipher",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Legacy crafting component \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Corpus Datamass",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Legacy crafting component \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Relay Strut Component",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Tenno relay construction \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Orokin Monitor",
+  "type": "Open World",
+  "planet": "Venus",
+  "mission": "Gathering",
+  "node": "\u2014",
+  "bestFarm": "Found where glaciers impact on Orb Vallis (Venus)",
+  "notes": ""
+ },
+ {
+  "name": "Agnovidisc",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Old War identification marks \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Aucrux Capacitors",
+  "type": "Component",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Corpus Obelisk components \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Bellow Voca",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Voidtongue inscriptions in Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Echo Voca",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "The quietest Voidtongue \u2014 Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Shrill Voca",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Voidtongue cries in Zariman missions \u2014 key to the Murmur",
+  "notes": ""
+ },
+ {
+  "name": "Copernics",
+  "type": "Mining",
+  "planet": "Lua",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Lua missions",
+  "notes": ""
+ },
+ {
+  "name": "Fresnels",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Orokin Void-travel material \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Grotesque Splinter",
+  "type": "Event",
+  "planet": "Deimos",
+  "mission": "Operation",
+  "node": "Effervo",
+  "bestFarm": "Effervo (Deimos) during Operation Gargoyle's Cry",
+  "notes": ""
+ },
+ {
+  "name": "Ignia",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Check the in-game Codex for drop locations",
+  "notes": ""
+ },
+ {
+  "name": "Kesslers",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Orokin solar-wind devices \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Lucent Teroglobe",
+  "type": "Other",
+  "planet": "Lua",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Lua missions",
+  "notes": ""
+ },
+ {
+  "name": "Lyroic Bridge",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Sentient pilot interface \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Maphica",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "From crates and bosses \u2014 check the in-game Codex for specifics",
+  "notes": ""
+ },
+ {
+  "name": "Nightmare Tatters",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Recreated with patience \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Pyrus Essence",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Ship and station compound \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Ren Hypercore",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Dactolyst core \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Scuttler Husk",
+  "type": "Boss Drop",
+  "planet": "\u2014",
+  "mission": "Oraxia",
+  "node": "\u2014",
+  "bestFarm": "Remnant from the Oraxia boss fight",
+  "notes": ""
+ },
+ {
+  "name": "Seriglass Shard",
+  "type": "Zariman",
+  "planet": "Zariman",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Shattered Entrati apparatus \u2014 Zariman missions",
+  "notes": ""
+ },
+ {
+  "name": "Temporal Dust",
+  "type": "Zariman",
+  "planet": "Deimos",
+  "mission": "Missions",
+  "node": "Sanctum Anatomica",
+  "bestFarm": "Entrati research material \u2014 Sanctum Anatomica (Deimos)",
+  "notes": ""
+ },
+ {
+  "name": "Trembera Essence",
+  "type": "Other",
+  "planet": "\u2014",
+  "mission": "\u2014",
+  "node": "\u2014",
+  "bestFarm": "Purified mineral compound \u2014 check the in-game Codex",
+  "notes": ""
+ },
+ {
+  "name": "Entrati Obols",
+  "type": "Zariman",
+  "planet": "Deimos",
+  "mission": "Missions",
+  "node": "\u2014",
+  "bestFarm": "Entrati family marks \u2014 Deimos missions",
+  "notes": ""
+ },
+ {
+  "name": "Grokdrul",
+  "type": "Open World",
+  "planet": "Orb Vallis",
+  "mission": "Bounties",
+  "node": "Fortuna",
+  "bestFarm": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "notes": "Standard chemical used in Grineer manufacturing. Bounty reward."
+ }
+]
