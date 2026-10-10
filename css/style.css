@@ -502,3 +502,32 @@ table.data tbody tr:hover{background:rgba(0,210,255,.05)}
   .logo{animation:none}
   #vault-ai-btn{animation:none}
 }
+
+/* ---------- Update notification banner ---------- */
+#tv-update-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  transform: translateY(110%); transition: transform .3s ease;
+  padding: 0 12px 12px; pointer-events: none;
+}
+#tv-update-banner.show { transform: translateY(0); }
+.tv-update-inner {
+  pointer-events: auto; max-width: 560px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 100%);
+  border: 1px solid rgba(0, 229, 255, .4); border-radius: 12px;
+  padding: 12px 14px; box-shadow: 0 4px 24px rgba(0, 229, 255, .25);
+}
+.tv-update-icon { font-size: 24px; }
+.tv-update-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.tv-update-text b { color: #00e5ff; font-size: 14px; }
+.tv-update-text span { color: #b0c4de; font-size: 12px; }
+.tv-update-btn {
+  background: linear-gradient(135deg, #00b8d4, #00e5ff); color: #04121f;
+  border: none; border-radius: 8px; padding: 8px 16px;
+  font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap;
+}
+.tv-update-btn:active { transform: scale(.96); }
+.tv-update-dismiss {
+  background: none; border: none; color: #789; font-size: 16px;
+  cursor: pointer; padding: 4px;
+}
