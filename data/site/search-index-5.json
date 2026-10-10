@@ -1,1 +1,3566 @@
-[{"t":"Relic","n":"Meso C1","d":"Meso relic \u2014 Carrier Prime Cerebrum, Nova Prime Neuroptics Blueprint, Forma Blueprint","u":"relics.html#Meso C1"},{"t":"Relic","n":"Meso C10","d":"Meso relic \u2014 Corinth Prime Barrel, Gara Prime Neuroptics Blueprint, Fang Prime Blueprint","u":"relics.html#Meso C10"},{"t":"Relic","n":"Meso C11","d":"Meso relic \u2014 Citrine Prime Blueprint, Daikyu Prime Upper Limb, 2X Forma Blueprint","u":"relics.html#Meso C11"},{"t":"Relic","n":"Meso C2","d":"Meso relic \u2014 Carrier Prime Cerebrum, Valkyr Prime Neuroptics Blueprint, Odonata Prime Blueprint","u":"relics.html#Meso C2"},{"t":"Relic","n":"Meso C3","d":"Meso relic \u2014 Cernos Prime Lower Limb, Saryn Prime Blueprint, Helios Prime Blueprint","u":"relics.html#Meso C3"},{"t":"Relic","n":"Meso C4","d":"Meso relic \u2014 Chroma Prime Systems Blueprint, 2X Forma Blueprint, Atlas Prime Systems Blueprint","u":"relics.html#Meso C4"},{"t":"Relic","n":"Meso C5","d":"Meso relic \u2014 Corinth Prime Barrel, Chroma Prime Chassis Blueprint, 2X Forma Blueprint","u":"relics.html#Meso C5"},{"t":"Relic","n":"Meso C6","d":"Meso relic \u2014 Corinth Prime Stock, 2X Forma Blueprint, Nezha Prime Blueprint","u":"relics.html#Meso C6"},{"t":"Relic","n":"Meso C7","d":"Meso relic \u2014 Carrier Prime Cerebrum, Karyst Prime Handle, Vectis Prime Blueprint","u":"relics.html#Meso C7"},{"t":"Relic","n":"Meso C8","d":"Meso relic \u2014 Cobra & Crane Prime Guard, Harrow Prime Neuroptics Blueprint, Scourge Prime Handle","u":"relics.html#Meso C8"},{"t":"Relic","n":"Meso C9","d":"Meso relic \u2014 Corvas Prime Barrel, Braton Prime Stock, Revenant Prime Systems Blueprint","u":"relics.html#Meso C9"},{"t":"Relic","n":"Meso D1","d":"Meso relic \u2014 Orthos Prime Handle, 2X Forma Blueprint, Orthos Prime Blade","u":"relics.html#Meso D1"},{"t":"Relic","n":"Meso D2","d":"Meso relic \u2014 Destreza Prime Blade, Valkyr Prime Neuroptics Blueprint, Helios Prime Systems","u":"relics.html#Meso D2"},{"t":"Relic","n":"Meso D3","d":"Meso relic \u2014 Destreza Prime Blade, Nami Skyla Prime Handle, Kronen Prime Handle","u":"relics.html#Meso D3"},{"t":"Relic","n":"Meso D4","d":"Meso relic \u2014 Dethcube Prime Cerebrum, Lex Prime Blueprint, Chroma Prime Chassis Blueprint","u":"relics.html#Meso D4"},{"t":"Relic","n":"Meso D5","d":"Meso relic \u2014 Dual Kamas Prime Blade, Nova Prime Blueprint, Vasto Prime Blueprint","u":"relics.html#Meso D5"},{"t":"Relic","n":"Meso D6","d":"Meso relic \u2014 Dethcube Prime Cerebrum, Aksomati Prime Barrel, Nezha Prime Blueprint","u":"relics.html#Meso D6"},{"t":"Relic","n":"Meso D7","d":"Meso relic \u2014 Dual Keres Prime Blueprint, Strun Prime Stock, Nagantaka Prime Receiver","u":"relics.html#Meso D7"},{"t":"Relic","n":"Meso D8","d":"Meso relic \u2014 Daikyu Prime Grip, Voruna Prime Neuroptics Blueprint, Yareli Prime Blueprint","u":"relics.html#Meso D8"},{"t":"Relic","n":"Meso D9","d":"Meso relic \u2014 Dual Zoren Prime Blade, Steflos Prime Stock, Cedo Prime Receiver","u":"relics.html#Meso D9"},{"t":"Relic","n":"Meso E1","d":"Meso relic \u2014 Ember Prime Blueprint, Wyrm Prime Systems, 2X Forma Blueprint","u":"relics.html#Meso E1"},{"t":"Relic","n":"Meso E2","d":"Meso relic \u2014 Equinox Prime Systems Blueprint, Rubico Prime Stock, Akbolto Prime Link","u":"relics.html#Meso E2"},{"t":"Relic","n":"Meso E3","d":"Meso relic \u2014 Equinox Prime Systems Blueprint, Atlas Prime Chassis Blueprint, Stradavar Prime Barrel","u":"relics.html#Meso E3"},{"t":"Relic","n":"Meso E4","d":"Meso relic \u2014 Equinox Prime Systems Blueprint, Titania Prime Neuroptics Blueprint, Tekko Prime Blueprint","u":"relics.html#Meso E4"},{"t":"Relic","n":"Meso E5","d":"Meso relic \u2014 Euphona Prime Receiver, Banshee Prime Blueprint, Helios Prime Blueprint","u":"relics.html#Meso E5"},{"t":"Relic","n":"Meso E6","d":"Meso relic \u2014 Epitaph Prime Receiver, Akbronco Prime Link, Masseter Prime Blueprint","u":"relics.html#Meso E6"},{"t":"Relic","n":"Meso E7","d":"Meso relic \u2014 Epitaph Prime Receiver, Sarofang Prime Blueprint, Daikyu Prime Upper Limb","u":"relics.html#Meso E7"},{"t":"Relic","n":"Meso E8","d":"Meso relic \u2014 Epitaph Prime Receiver, Nautilus Prime Systems, Hydroid Prime Blueprint","u":"relics.html#Meso E8"},{"t":"Relic","n":"Meso F1","d":"Meso relic \u2014 Fragor Prime Blueprint, Nekros Prime Neuroptics Blueprint, Dual Kamas Prime Handle","u":"relics.html#Meso F1"},{"t":"Relic","n":"Meso F2","d":"Meso relic \u2014 Frost Prime Blueprint, Reaper Prime Blade, 2X Forma Blueprint","u":"relics.html#Meso F2"},{"t":"Relic","n":"Meso F3","d":"Meso relic \u2014 Frost Prime Blueprint, 2X Forma Blueprint, Glaive Prime Disc","u":"relics.html#Meso F3"},{"t":"Relic","n":"Meso F4","d":"Meso relic \u2014 Frost Prime Blueprint, Mag Prime Chassis Blueprint, Boar Prime Blueprint","u":"relics.html#Meso F4"},{"t":"Relic","n":"Meso F5","d":"Meso relic \u2014 Fulmin Prime Receiver, Paris Prime Grip, Shade Prime Systems","u":"relics.html#Meso F5"},{"t":"Relic","n":"Meso G1","d":"Meso relic \u2014 Galatine Prime Blueprint, Silva & Aegis Prime Blade, Ballistica Prime String","u":"relics.html#Meso G1"},{"t":"Relic","n":"Meso G10","d":"Meso relic \u2014 Gunsen Prime Blade, Larkspur Prime Receiver, Hildryn Prime Chassis Blueprint","u":"relics.html#Meso G10"},{"t":"Relic","n":"Meso G2","d":"Meso relic \u2014 Guandao Prime Handle, Burston Prime Barrel, Atlas Prime Systems Blueprint","u":"relics.html#Meso G2"},{"t":"Relic","n":"Meso G3","d":"Meso relic \u2014 Gara Prime Blueprint, Karyst Prime Handle, Panthera Prime Stock","u":"relics.html#Meso G3"},{"t":"Relic","n":"Meso G4","d":"Meso relic \u2014 Guandao Prime Handle, Scourge Prime Handle, 2X Forma Blueprint","u":"relics.html#Meso G4"},{"t":"Relic","n":"Meso G5","d":"Meso relic \u2014 Gunsen Prime Blade, Nagantaka Prime Stock, Phantasma Prime Blueprint","u":"relics.html#Meso G5"},{"t":"Relic","n":"Meso G6","d":"Meso relic \u2014 Grendel Prime Blueprint, Zylok Prime Receiver, Paris Prime Grip","u":"relics.html#Meso G6"},{"t":"Relic","n":"Meso G7","d":"Meso relic \u2014 Gauss Prime Systems Blueprint, Okina Prime Handle, Tatsu Prime Blade","u":"relics.html#Meso G7"},{"t":"Relic","n":"Meso G8","d":"Meso relic \u2014 Grendel Prime Blueprint, Quassus Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Meso G8"},{"t":"Relic","n":"Meso G9","d":"Meso relic \u2014 Gauss Prime Systems Blueprint, Trumna Prime Stock, 2X Forma Blueprint","u":"relics.html#Meso G9"},{"t":"Relic","n":"Meso H1","d":"Meso relic \u2014 Helios Prime Cerebrum, Oberon Prime Blueprint, Fragor Prime Blueprint","u":"relics.html#Meso H1"},{"t":"Relic","n":"Meso H2","d":"Meso relic \u2014 Harrow Prime Systems Blueprint, Nezha Prime Blueprint, Paris Prime Upper Limb","u":"relics.html#Meso H2"},{"t":"Relic","n":"Meso H3","d":"Meso relic \u2014 Hystrix Prime Receiver, 2X Forma Blueprint, Astilla Prime Blueprint","u":"relics.html#Meso H3"},{"t":"Relic","n":"Meso H4","d":"Meso relic \u2014 Harrow Prime Systems Blueprint, Strun Prime Barrel, Knell Prime Receiver","u":"relics.html#Meso H4"},{"t":"Relic","n":"Meso H5","d":"Meso relic \u2014 Hildryn Prime Blueprint, Gauss Prime Neuroptics Blueprint, Revenant Prime Systems Blueprint","u":"relics.html#Meso H5"},{"t":"Relic","n":"Meso H6","d":"Meso relic \u2014 Hystrix Prime Receiver, 2X Forma Blueprint, Cobra & Crane Prime Blade","u":"relics.html#Meso H6"},{"t":"Relic","n":"Meso H7","d":"Meso relic \u2014 Hildryn Prime Blueprint, 2X Forma Blueprint, Fulmin Prime Blueprint","u":"relics.html#Meso H7"},{"t":"Relic","n":"Meso H8","d":"Meso relic \u2014 Hystrix Prime Receiver, Corvas Prime Blueprint, Dual Keres Prime Handle","u":"relics.html#Meso H8"},{"t":"Relic","n":"Meso I1","d":"Meso relic \u2014 Inaros Prime Neuroptics Blueprint, Orthos Prime Blade, Atlas Prime Systems Blueprint","u":"relics.html#Meso I1"},{"t":"Relic","n":"Meso I2","d":"Meso relic \u2014 Inaros Prime Neuroptics Blueprint, Guandao Prime Blueprint, Astilla Prime Blueprint","u":"relics.html#Meso I2"},{"t":"Relic","n":"Meso I3","d":"Meso relic \u2014 Ivara Prime Chassis Blueprint, Baza Prime Blueprint, Protea Prime Systems Blueprint","u":"relics.html#Meso I3"},{"t":"Relic","n":"Meso K1","d":"Meso relic \u2014 Kogake Prime Gauntlet, Akstiletto Prime Barrel, Tigris Prime Receiver","u":"relics.html#Meso K1"},{"t":"Relic","n":"Meso K2","d":"Meso relic \u2014 Kronen Prime Blade, Wukong Prime Systems Blueprint, Chroma Prime Chassis Blueprint","u":"relics.html#Meso K2"},{"t":"Relic","n":"Meso K3","d":"Meso relic \u2014 Karyst Prime Blade, 2X Forma Blueprint, Wukong Prime Chassis Blueprint","u":"relics.html#Meso K3"},{"t":"Relic","n":"Meso K4","d":"Meso relic \u2014 Khora Prime Blueprint, 2X Forma Blueprint, Knell Prime Receiver","u":"relics.html#Meso K4"},{"t":"Relic","n":"Meso K5","d":"Meso relic \u2014 Knell Prime Barrel, Revenant Prime Systems Blueprint, Cobra & Crane Prime Blueprint","u":"relics.html#Meso K5"},{"t":"Relic","n":"Meso K6","d":"Meso relic \u2014 Knell Prime Receiver, Wisp Prime Neuroptics Blueprint, Orthos Prime Blade","u":"relics.html#Meso K6"},{"t":"Relic","n":"Meso K7","d":"Meso relic \u2014 Kompressa Prime Barrel, 2X Forma Blueprint, Acceltra Prime Receiver","u":"relics.html#Meso K7"},{"t":"Relic","n":"Meso K8","d":"Meso relic \u2014 Kestrel Prime Grip, Alternox Prime Barrel, 2X Forma Blueprint","u":"relics.html#Meso K8"},{"t":"Relic","n":"Meso K9","d":"Meso relic \u2014 Kestrel Prime Grip, Caliban Prime Blueprint, Perigale Prime Receiver","u":"relics.html#Meso K9"},{"t":"Relic","n":"Meso L1","d":"Meso relic \u2014 Limbo Prime Chassis Blueprint, Chroma Prime Chassis Blueprint, Dethcube Prime Carapace","u":"relics.html#Meso L1"},{"t":"Relic","n":"Meso L2","d":"Meso relic \u2014 Limbo Prime Chassis Blueprint, Akjagara Prime Receiver, Vasto Prime Blueprint","u":"relics.html#Meso L2"},{"t":"Relic","n":"Meso L3","d":"Meso relic \u2014 Lavos Prime Systems Blueprint, Okina Prime Handle, Acceltra Prime Receiver","u":"relics.html#Meso L3"},{"t":"Relic","n":"Meso L4","d":"Meso relic \u2014 Lavos Prime Systems Blueprint, Bronco Prime Barrel, Quassus Prime Blueprint","u":"relics.html#Meso L4"},{"t":"Relic","n":"Meso L5","d":"Meso relic \u2014 Lavos Prime Systems Blueprint, Trumna Prime Stock, Vadarya Prime Receiver","u":"relics.html#Meso L5"},{"t":"Relic","n":"Meso M1","d":"Meso relic \u2014 Mag Prime Blueprint, Boar Prime Barrel, Rhino Prime Chassis Blueprint","u":"relics.html#Meso M1"},{"t":"Relic","n":"Meso M2","d":"Meso relic \u2014 Mirage Prime Blueprint, Akjagara Prime Link, Silva & Aegis Prime Blade","u":"relics.html#Meso M2"},{"t":"Relic","n":"Meso M3","d":"Meso relic \u2014 Mirage Prime Blueprint, Equinox Prime Neuroptics Blueprint, Kogake Prime Blueprint","u":"relics.html#Meso M3"},{"t":"Relic","n":"Meso M4","d":"Meso relic \u2014 Masseter Prime Blade, Fang Prime Handle, 2X Forma Blueprint","u":"relics.html#Meso M4"},{"t":"Relic","n":"Meso M5","d":"Meso relic \u2014 Magnus Prime Barrel, Spira Prime Blade, Strun Prime Stock","u":"relics.html#Meso M5"},{"t":"Relic","n":"Meso N1","d":"Meso relic \u2014 Fang Prime Handle, Braton Prime Stock, Fang Prime Blueprint","u":"relics.html#Meso N1"},{"t":"Relic","n":"Meso N10","d":"Meso relic \u2014 Ninkondi Prime Handle, Bronco Prime Barrel, Panthera Prime Stock","u":"relics.html#Meso N10"},{"t":"Relic","n":"Meso N11","d":"Meso relic \u2014 Nyx Prime Neuroptics Blueprint, Valkyr Prime Neuroptics Blueprint, 2X Forma Blueprint","u":"relics.html#Meso N11"},{"t":"Relic","n":"Meso N12","d":"Meso relic \u2014 Nagantaka Prime Blueprint, Inaros Prime Blueprint, Nidus Prime Blueprint","u":"relics.html#Meso N12"},{"t":"Relic","n":"Meso N13","d":"Meso relic \u2014 Nidus Prime Chassis Blueprint, Astilla Prime Stock, Garuda Prime Chassis Blueprint","u":"relics.html#Meso N13"},{"t":"Relic","n":"Meso N14","d":"Meso relic \u2014 Nidus Prime Chassis Blueprint, Shade Prime Blueprint, Cobra & Crane Prime Blade","u":"relics.html#Meso N14"},{"t":"Relic","n":"Meso N15","d":"Meso relic \u2014 Nezha Prime Chassis Blueprint, Octavia Prime Chassis Blueprint, Lex Prime Blueprint","u":"relics.html#Meso N15"},{"t":"Relic","n":"Meso N16","d":"Meso relic \u2014 Nekros Prime Systems Blueprint, Tigris Prime Barrel, Fang Prime Handle","u":"relics.html#Meso N16"},{"t":"Relic","n":"Meso N17","d":"Meso relic \u2014 Nautilus Prime Blueprint, Akarius Prime Link, Velox Prime Blueprint","u":"relics.html#Meso N17"},{"t":"Relic","n":"Meso N2","d":"Meso relic \u2014 Ash Prime Neuroptics Blueprint, Vauban Prime Neuroptics Blueprint, Hikou Prime Blueprint","u":"relics.html#Meso N2"},{"t":"Relic","n":"Meso N3","d":"Meso relic \u2014 Nekros Prime Blueprint, Euphona Prime Barrel, Carrier Prime Cerebrum","u":"relics.html#Meso N3"},{"t":"Relic","n":"Meso N4","d":"Meso relic \u2014 Nikana Prime Blade, 2X Forma Blueprint, Oberon Prime Blueprint","u":"relics.html#Meso N4"},{"t":"Relic","n":"Meso N5","d":"Meso relic \u2014 Nekros Prime Systems Blueprint, Hydroid Prime Blueprint, Tigris Prime Receiver","u":"relics.html#Meso N5"},{"t":"Relic","n":"Meso N6","d":"Meso relic \u2014 Nyx Prime Neuroptics Blueprint, Scindo Prime Handle, Rhino Prime Chassis Blueprint","u":"relics.html#Meso N6"},{"t":"Relic","n":"Meso N7","d":"Meso relic \u2014 Ninkondi Prime Handle, Gram Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Meso N7"},{"t":"Relic","n":"Meso N8","d":"Meso relic \u2014 Nikana Prime Hilt, Valkyr Prime Neuroptics Blueprint, Cernos Prime String","u":"relics.html#Meso N8"},{"t":"Relic","n":"Meso N9","d":"Meso relic \u2014 Ninkondi Prime Handle, Ivara Prime Blueprint, Akjagara Prime Link","u":"relics.html#Meso N9"},{"t":"Relic","n":"Meso O1","d":"Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Akstiletto Prime Link, Cernos Prime String","u":"relics.html#Meso O1"},{"t":"Relic","n":"Meso O2","d":"Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Akbronco Prime Link, Mirage Prime Systems Blueprint","u":"relics.html#Meso O2"},{"t":"Relic","n":"Meso O3","d":"Meso relic \u2014 Odonata Prime Wings Blueprint, Volt Prime Chassis Blueprint, Wyrm Prime Systems","u":"relics.html#Meso O3"},{"t":"Relic","n":"Meso O4","d":"Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Nekros Prime Neuroptics Blueprint, Galatine Prime Handle","u":"relics.html#Meso O4"},{"t":"Relic","n":"Meso O5","d":"Meso relic \u2014 Octavia Prime Blueprint, Gara Prime Neuroptics Blueprint, Nagantaka Prime Receiver","u":"relics.html#Meso O5"},{"t":"Relic","n":"Meso O6","d":"Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Silva & Aegis Prime Blade, Lex Prime Blueprint","u":"relics.html#Meso O6"},{"t":"Relic","n":"Meso P1","d":"Meso relic \u2014 Pyrana Prime Blueprint, Silva & Aegis Prime Blueprint, Ballistica Prime Receiver","u":"relics.html#Meso P1"},{"t":"Relic","n":"Meso P10","d":"Meso relic \u2014 Phantasma Prime Barrel, Paris Prime Upper Limb, Harrow Prime Neuroptics Blueprint","u":"relics.html#Meso P10"},{"t":"Relic","n":"Meso P11","d":"Meso relic \u2014 Phantasma Prime Stock, Hildryn Prime Chassis Blueprint, Dual Keres Prime Handle","u":"relics.html#Meso P11"},{"t":"Relic","n":"Meso P12","d":"Meso relic \u2014 Panthera Prime Barrel, Ash Prime Neuroptics Blueprint, Burston Prime Barrel","u":"relics.html#Meso P12"},{"t":"Relic","n":"Meso P13","d":"Meso relic \u2014 Phantasma Prime Barrel, Akbronco Prime Link, Garuda Prime Chassis Blueprint","u":"relics.html#Meso P13"},{"t":"Relic","n":"Meso P14","d":"Meso relic \u2014 Phantasma Prime Stock, Hildryn Prime Neuroptics Blueprint, Shade Prime Systems","u":"relics.html#Meso P14"},{"t":"Relic","n":"Meso P15","d":"Meso relic \u2014 Protea Prime Systems Blueprint, 2X Forma Blueprint, Gunsen Prime Handle","u":"relics.html#Meso P15"},{"t":"Relic","n":"Meso P16","d":"Meso relic \u2014 Protea Prime Systems Blueprint, Daikyu Prime Upper Limb, Akarius Prime Link","u":"relics.html#Meso P16"},{"t":"Relic","n":"Meso P17","d":"Meso relic \u2014 Protea Prime Chassis Blueprint, Kestrel Prime Blueprint, Yareli Prime Blueprint","u":"relics.html#Meso P17"},{"t":"Relic","n":"Meso P2","d":"Meso relic \u2014 Panthera Prime Receiver, Zhuge Prime Blueprint, Ivara Prime Systems Blueprint","u":"relics.html#Meso P2"},{"t":"Relic","n":"Meso P3","d":"Meso relic \u2014 Pangolin Prime Blueprint, Mesa Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Meso P3"},{"t":"Relic","n":"Meso P4","d":"Meso relic \u2014 Panthera Prime Barrel, Corinth Prime Receiver, Titania Prime Neuroptics Blueprint","u":"relics.html#Meso P4"},{"t":"Relic","n":"Meso P5","d":"Meso relic \u2014 Panthera Prime Receiver, Gara Prime Neuroptics Blueprint, 2X Forma Blueprint","u":"relics.html#Meso P5"},{"t":"Relic","n":"Meso P6","d":"Meso relic \u2014 Pyrana Prime Blueprint, Kavasa Prime Kubrow Collar Blueprint, Trinity Prime Blueprint","u":"relics.html#Meso P6"},{"t":"Relic","n":"Meso P7","d":"Meso relic \u2014 Panthera Prime Barrel, Garuda Prime Chassis Blueprint, Guandao Prime Blueprint","u":"relics.html#Meso P7"},{"t":"Relic","n":"Meso P8","d":"Meso relic \u2014 Pandero Prime Receiver, Nidus Prime Blueprint, Zakti Prime Barrel","u":"relics.html#Meso P8"},{"t":"Relic","n":"Meso P9","d":"Meso relic \u2014 Pandero Prime Receiver, Revenant Prime Systems Blueprint, Nagantaka Prime Receiver","u":"relics.html#Meso P9"},{"t":"Relic","n":"Meso R1","d":"Meso relic \u2014 Rubico Prime Blueprint, Akbronco Prime Link, Ballistica Prime String","u":"relics.html#Meso R1"},{"t":"Relic","n":"Meso R2","d":"Meso relic \u2014 Rubico Prime Blueprint, Mesa Prime Blueprint, Destreza Prime Blueprint","u":"relics.html#Meso R2"},{"t":"Relic","n":"Meso R3","d":"Meso relic \u2014 Rubico Prime Blueprint, Dethcube Prime Carapace, Bronco Prime Barrel","u":"relics.html#Meso R3"},{"t":"Relic","n":"Meso R4","d":"Meso relic \u2014 Rubico Prime Blueprint, Chroma Prime Systems Blueprint, 2X Forma Blueprint","u":"relics.html#Meso R4"},{"t":"Relic","n":"Meso R5","d":"Meso relic \u2014 Revenant Prime Blueprint, Nidus Prime Blueprint, Astilla Prime Blueprint","u":"relics.html#Meso R5"},{"t":"Relic","n":"Meso R6","d":"Meso relic \u2014 Revenant Prime Blueprint, Cobra & Crane Prime Blade, Orthos Prime Blueprint","u":"relics.html#Meso R6"},{"t":"Relic","n":"Meso S1","d":"Meso relic \u2014 Soma Prime Stock, Paris Prime Upper Limb, Odonata Prime Blueprint","u":"relics.html#Meso S1"},{"t":"Relic","n":"Meso S10","d":"Meso relic \u2014 Strun Prime Blueprint, Aksomati Prime Barrel, Titania Prime Blueprint","u":"relics.html#Meso S10"},{"t":"Relic","n":"Meso S11","d":"Meso relic \u2014 Scourge Prime Barrel, Octavia Prime Chassis Blueprint, Strun Prime Stock","u":"relics.html#Meso S11"},{"t":"Relic","n":"Meso S12","d":"Meso relic \u2014 Scourge Prime Barrel, 2X Forma Blueprint, Braton Prime Stock","u":"relics.html#Meso S12"},{"t":"Relic","n":"Meso S13","d":"Meso relic \u2014 Scourge Prime Barrel, Tigris Prime Receiver, Burston Prime Barrel","u":"relics.html#Meso S13"},{"t":"Relic","n":"Meso S14","d":"Meso relic \u2014 Sicarus Prime Receiver, Rhino Prime Neuroptics Blueprint, Ember Prime Neuroptics Blueprint","u":"relics.html#Meso S14"},{"t":"Relic","n":"Meso S15","d":"Meso relic \u2014 Spira Prime Pouch, Nikana Prime Blade, Paris Prime Grip","u":"relics.html#Meso S15"},{"t":"Relic","n":"Meso S2","d":"Meso relic \u2014 Saryn Prime Chassis Blueprint, Paris Prime Grip, 2X Forma Blueprint","u":"relics.html#Meso S2"},{"t":"Relic","n":"Meso S3","d":"Meso relic \u2014 Spira Prime Pouch, Ash Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Meso S3"},{"t":"Relic","n":"Meso S4","d":"Meso relic \u2014 Saryn Prime Blueprint, Fang Prime Handle, Trinity Prime Blueprint","u":"relics.html#Meso S4"},{"t":"Relic","n":"Meso S5","d":"Meso relic \u2014 Sybaris Prime Barrel, 2X Forma Blueprint, Saryn Prime Neuroptics Blueprint","u":"relics.html#Meso S5"},{"t":"Relic","n":"Meso S6","d":"Meso relic \u2014 Spira Prime Blade, Cernos Prime String, Tigris Prime Receiver","u":"relics.html#Meso S6"},{"t":"Relic","n":"Meso S7","d":"Meso relic \u2014 Sybaris Prime Barrel, Paris Prime Grip, Nami Skyla Prime Handle","u":"relics.html#Meso S7"},{"t":"Relic","n":"Meso S8","d":"Meso relic \u2014 Sybaris Prime Barrel, Ballistica Prime Upper Limb, Burston Prime Barrel","u":"relics.html#Meso S8"},{"t":"Relic","n":"Meso S9","d":"Meso relic \u2014 Spira Prime Pouch, Saryn Prime Neuroptics Blueprint, 2X Forma Blueprint","u":"relics.html#Meso S9"},{"t":"Relic","n":"Meso T1","d":"Meso relic \u2014 Tiberon Prime Barrel, Paris Prime Upper Limb, 2X Forma Blueprint","u":"relics.html#Meso T1"},{"t":"Relic","n":"Meso T2","d":"Meso relic \u2014 Tiberon Prime Stock, Tigris Prime Receiver, Banshee Prime Blueprint","u":"relics.html#Meso T2"},{"t":"Relic","n":"Meso T3","d":"Meso relic \u2014 Tiberon Prime Stock, Chroma Prime Chassis Blueprint, Limbo Prime Blueprint","u":"relics.html#Meso T3"},{"t":"Relic","n":"Meso T4","d":"Meso relic \u2014 Tenora Prime Receiver, Wukong Prime Systems Blueprint, Paris Prime Grip","u":"relics.html#Meso T4"},{"t":"Relic","n":"Meso T5","d":"Meso relic \u2014 Tenora Prime Barrel, Panthera Prime Stock, Astilla Prime Stock","u":"relics.html#Meso T5"},{"t":"Relic","n":"Meso T6","d":"Meso relic \u2014 Tekko Prime Blade, Akstiletto Prime Receiver, Vauban Prime Chassis Blueprint","u":"relics.html#Meso T6"},{"t":"Relic","n":"Meso T7","d":"Meso relic \u2014 Trumna Prime Barrel, Gauss Prime Neuroptics Blueprint, Akarius Prime Link","u":"relics.html#Meso T7"},{"t":"Relic","n":"Meso T8","d":"Meso relic \u2014 Trumna Prime Barrel, Protea Prime Neuroptics Blueprint, Akarius Prime Link","u":"relics.html#Meso T8"},{"t":"Relic","n":"Meso V1","d":"Meso relic \u2014 Burston Prime Blueprint, Braton Prime Blueprint, Spira Prime Blueprint","u":"relics.html#Meso V1"},{"t":"Relic","n":"Meso V10","d":"Meso relic \u2014 Velox Prime Barrel, Paris Prime Upper Limb, Fulmin Prime Stock","u":"relics.html#Meso V10"},{"t":"Relic","n":"Meso V11","d":"Meso relic \u2014 Velox Prime Barrel, Caliban Prime Blueprint, Nautilus Prime Systems","u":"relics.html#Meso V11"},{"t":"Relic","n":"Meso V12","d":"Meso relic \u2014 Vadarya Prime Blueprint, Bronco Prime Barrel, Sevagoth Prime Blueprint","u":"relics.html#Meso V12"},{"t":"Relic","n":"Meso V13","d":"Meso relic \u2014 Venato Prime Blade, Burston Prime Barrel, Caliban Prime Blueprint","u":"relics.html#Meso V13"},{"t":"Relic","n":"Meso V14","d":"Meso relic \u2014 Velox Prime Barrel, Trumna Prime Stock, 2X Forma Blueprint","u":"relics.html#Meso V14"},{"t":"Relic","n":"Meso V15","d":"Meso relic \u2014 Vadarya Prime Blueprint, 2X Forma Blueprint, Caliban Prime Blueprint","u":"relics.html#Meso V15"},{"t":"Relic","n":"Meso V16","d":"Meso relic \u2014 Velox Prime Barrel, Ivara Prime Systems Blueprint, Okina Prime Handle","u":"relics.html#Meso V16"},{"t":"Relic","n":"Meso V17","d":"Meso relic \u2014 Voruna Prime Systems Blueprint, Paris Prime Grip, Lavos Prime Blueprint","u":"relics.html#Meso V17"},{"t":"Relic","n":"Meso V2","d":"Meso relic \u2014 Vasto Prime Receiver, Paris Prime Blueprint, Ash Prime Chassis Blueprint","u":"relics.html#Meso V2"},{"t":"Relic","n":"Meso V3","d":"Meso relic \u2014 Valkyr Prime Systems Blueprint, Kavasa Prime Band, Volt Prime Chassis Blueprint","u":"relics.html#Meso V3"},{"t":"Relic","n":"Meso V4","d":"Meso relic \u2014 Vauban Prime Chassis Blueprint, Valkyr Prime Neuroptics Blueprint, Ash Prime Neuroptics Blueprint","u":"relics.html#Meso V4"},{"t":"Relic","n":"Meso V5","d":"Meso relic \u2014 Venka Prime Gauntlet, Euphona Prime Barrel, Silva & Aegis Prime Blueprint","u":"relics.html#Meso V5"},{"t":"Relic","n":"Meso V6","d":"Meso relic \u2014 Vectis Prime Receiver, Vauban Prime Blueprint, Carrier Prime Cerebrum","u":"relics.html#Meso V6"},{"t":"Relic","n":"Meso V7","d":"Meso relic \u2014 Volnus Prime Handle, Dual Keres Prime Handle, Fang Prime Handle","u":"relics.html#Meso V7"},{"t":"Relic","n":"Meso V8","d":"Meso relic \u2014 Vauban Prime Neuroptics Blueprint, Tekko Prime Blueprint, Vasto Prime Blueprint","u":"relics.html#Meso V8"},{"t":"Relic","n":"Meso V9","d":"Meso relic \u2014 Velox Prime Barrel, Afuris Prime Link, Baruuk Prime Chassis Blueprint","u":"relics.html#Meso V9"},{"t":"Relic","n":"Meso W1","d":"Meso relic \u2014 Wukong Prime Blueprint, Fang Prime Handle, Zephyr Prime Chassis Blueprint","u":"relics.html#Meso W1"},{"t":"Relic","n":"Meso W2","d":"Meso relic \u2014 Wukong Prime Blueprint, Zhuge Prime Receiver, Fang Prime Handle","u":"relics.html#Meso W2"},{"t":"Relic","n":"Meso W3","d":"Meso relic \u2014 Wisp Prime Blueprint, Orthos Prime Blade, Larkspur Prime Stock","u":"relics.html#Meso W3"},{"t":"Relic","n":"Meso W4","d":"Meso relic \u2014 Wisp Prime Blueprint, 2X Forma Blueprint, Gunsen Prime Handle","u":"relics.html#Meso W4"},{"t":"Relic","n":"Meso W5","d":"Meso relic \u2014 Wisp Prime Chassis Blueprint, Cobra & Crane Prime Blade, Phantasma Prime Blueprint","u":"relics.html#Meso W5"},{"t":"Relic","n":"Meso X1","d":"Meso relic \u2014 Xaku Prime Blueprint, Dual Zoren Prime Blueprint, Paris Prime Grip","u":"relics.html#Meso X1"},{"t":"Relic","n":"Meso Y1","d":"Meso relic \u2014 Yareli Prime Neuroptics Blueprint, Okina Prime Handle, Cedo Prime Barrel","u":"relics.html#Meso Y1"},{"t":"Relic","n":"Meso Y2","d":"Meso relic \u2014 Yareli Prime Neuroptics Blueprint, Styanax Prime Chassis Blueprint, Daikyu Prime Upper Limb","u":"relics.html#Meso Y2"},{"t":"Relic","n":"Meso Z1","d":"Meso relic \u2014 Zephyr Prime Blueprint, Helios Prime Blueprint, Limbo Prime Blueprint","u":"relics.html#Meso Z1"},{"t":"Relic","n":"Meso Z2","d":"Meso relic \u2014 Zephyr Prime Systems Blueprint, Hydroid Prime Blueprint, Rubico Prime Barrel","u":"relics.html#Meso Z2"},{"t":"Relic","n":"Meso Z3","d":"Meso relic \u2014 Zephyr Prime Systems Blueprint, Akjagara Prime Link, Rubico Prime Barrel","u":"relics.html#Meso Z3"},{"t":"Relic","n":"Meso Z4","d":"Meso relic \u2014 Zakti Prime Blueprint, Tenora Prime Stock, Bronco Prime Barrel","u":"relics.html#Meso Z4"},{"t":"Relic","n":"Meso Z5","d":"Meso relic \u2014 Zakti Prime Blueprint, Guandao Prime Blueprint, Tenora Prime Barrel","u":"relics.html#Meso Z5"},{"t":"Relic","n":"Meso Z6","d":"Meso relic \u2014 Zylok Prime Blueprint, Gauss Prime Neuroptics Blueprint, Bronco Prime Barrel","u":"relics.html#Meso Z6"},{"t":"Relic","n":"Neo A1","d":"Neo relic \u2014 Akstiletto Prime Blueprint, Cernos Prime String, Vectis Prime Blueprint","u":"relics.html#Neo A1"},{"t":"Relic","n":"Neo A10","d":"Neo relic \u2014 Ash Prime Systems Blueprint, Inaros Prime Chassis Blueprint, Panthera Prime Receiver","u":"relics.html#Neo A10"},{"t":"Relic","n":"Neo A11","d":"Neo relic \u2014 Akarius Prime Blueprint, Burston Prime Barrel, Braton Prime Receiver","u":"relics.html#Neo A11"},{"t":"Relic","n":"Neo A12","d":"Neo relic \u2014 Acceltra Prime Barrel, Larkspur Prime Stock, Revenant Prime Neuroptics Blueprint","u":"relics.html#Neo A12"},{"t":"Relic","n":"Neo A13","d":"Neo relic \u2014 Acceltra Prime Barrel, Sevagoth Prime Blueprint, Wisp Prime Neuroptics Blueprint","u":"relics.html#Neo A13"},{"t":"Relic","n":"Neo A14","d":"Neo relic \u2014 Acceltra Prime Barrel, Yareli Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo A14"},{"t":"Relic","n":"Neo A15","d":"Neo relic \u2014 Acceltra Prime Barrel, Vadarya Prime Barrel, Quassus Prime Blueprint","u":"relics.html#Neo A15"},{"t":"Relic","n":"Neo A16","d":"Neo relic \u2014 Athodai Prime Barrel, Sarofang Prime Blueprint, Lavos Prime Blueprint","u":"relics.html#Neo A16"},{"t":"Relic","n":"Neo A2","d":"Neo relic \u2014 Akbolto Prime Receiver, Zephyr Prime Chassis Blueprint, 2X Forma Blueprint","u":"relics.html#Neo A2"},{"t":"Relic","n":"Neo A3","d":"Neo relic \u2014 Akjagara Prime Barrel, Atlas Prime Systems Blueprint, Equinox Prime Neuroptics Blueprint","u":"relics.html#Neo A3"},{"t":"Relic","n":"Neo A4","d":"Neo relic \u2014 Akstiletto Prime Blueprint, Ash Prime Neuroptics Blueprint, Vectis Prime Blueprint","u":"relics.html#Neo A4"},{"t":"Relic","n":"Neo A5","d":"Neo relic \u2014 Atlas Prime Neuroptics Blueprint, Octavia Prime Chassis Blueprint, Karyst Prime Handle","u":"relics.html#Neo A5"},{"t":"Relic","n":"Neo A6","d":"Neo relic \u2014 Akjagara Prime Barrel, Hydroid Prime Blueprint, Ballistica Prime String","u":"relics.html#Neo A6"},{"t":"Relic","n":"Neo A7","d":"Neo relic \u2014 Akstiletto Prime Blueprint, Atlas Prime Chassis Blueprint, Dethcube Prime Cerebrum","u":"relics.html#Neo A7"},{"t":"Relic","n":"Neo A8","d":"Neo relic \u2014 Astilla Prime Barrel, Strun Prime Stock, Baruuk Prime Chassis Blueprint","u":"relics.html#Neo A8"},{"t":"Relic","n":"Neo A9","d":"Neo relic \u2014 Akjagara Prime Barrel, Limbo Prime Blueprint, Lex Prime Blueprint","u":"relics.html#Neo A9"},{"t":"Relic","n":"Neo B1","d":"Neo relic \u2014 Banshee Prime Chassis Blueprint, Vectis Prime Stock, Burston Prime Barrel","u":"relics.html#Neo B1"},{"t":"Relic","n":"Neo B2","d":"Neo relic \u2014 Banshee Prime Chassis Blueprint, Venka Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo B2"},{"t":"Relic","n":"Neo B3","d":"Neo relic \u2014 Boltor Prime Blueprint, Mag Prime Chassis Blueprint, Dakra Prime Blade","u":"relics.html#Neo B3"},{"t":"Relic","n":"Neo B4","d":"Neo relic \u2014 Banshee Prime Systems Blueprint, Kronen Prime Handle, Tigris Prime Barrel","u":"relics.html#Neo B4"},{"t":"Relic","n":"Neo B5","d":"Neo relic \u2014 Banshee Prime Systems Blueprint, Destreza Prime Blueprint, Oberon Prime Blueprint","u":"relics.html#Neo B5"},{"t":"Relic","n":"Neo B6","d":"Neo relic \u2014 Banshee Prime Chassis Blueprint, Kogake Prime Blueprint, Akbolto Prime Link","u":"relics.html#Neo B6"},{"t":"Relic","n":"Neo B7","d":"Neo relic \u2014 Baza Prime Stock, Tekko Prime Blueprint, Dethcube Prime Carapace","u":"relics.html#Neo B7"},{"t":"Relic","n":"Neo B8","d":"Neo relic \u2014 Boar Prime Stock, Dakra Prime Blueprint, Latron Prime Receiver","u":"relics.html#Neo B8"},{"t":"Relic","n":"Neo B9","d":"Neo relic \u2014 Baruuk Prime Neuroptics Blueprint, Burston Prime Barrel, Gunsen Prime Handle","u":"relics.html#Neo B9"},{"t":"Relic","n":"Neo C1","d":"Neo relic \u2014 Chroma Prime Systems Blueprint, Redeemer Prime Blueprint, Pyrana Prime Receiver","u":"relics.html#Neo C1"},{"t":"Relic","n":"Neo C10","d":"Neo relic \u2014 Corufell Prime Receiver, Styanax Prime Systems Blueprint, Afentis Prime Barrel","u":"relics.html#Neo C10"},{"t":"Relic","n":"Neo C11","d":"Neo relic \u2014 Caliban Prime Systems Blueprint, Cedo Prime Barrel, Vadarya Prime Receiver","u":"relics.html#Neo C11"},{"t":"Relic","n":"Neo C2","d":"Neo relic \u2014 Corvas Prime Barrel, Orthos Prime Blueprint, Magnus Prime Receiver","u":"relics.html#Neo C2"},{"t":"Relic","n":"Neo C3","d":"Neo relic \u2014 Cobra & Crane Prime Guard, Paris Prime Grip, Magnus Prime Receiver","u":"relics.html#Neo C3"},{"t":"Relic","n":"Neo C4","d":"Neo relic \u2014 Corvas Prime Barrel, Paris Prime Upper Limb, Hildryn Prime Neuroptics Blueprint","u":"relics.html#Neo C4"},{"t":"Relic","n":"Neo C5","d":"Neo relic \u2014 Corvas Prime Barrel, Hystrix Prime Blueprint, Khora Prime Blueprint","u":"relics.html#Neo C5"},{"t":"Relic","n":"Neo C6","d":"Neo relic \u2014 Cedo Prime Blueprint, Velox Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo C6"},{"t":"Relic","n":"Neo C7","d":"Neo relic \u2014 Caliban Prime Neuroptics Blueprint, Daikyu Prime Upper Limb, Vadarya Prime Receiver","u":"relics.html#Neo C7"},{"t":"Relic","n":"Neo C8","d":"Neo relic \u2014 Caliban Prime Systems Blueprint, Afentis Prime Barrel, Venato Prime Blueprint","u":"relics.html#Neo C8"},{"t":"Relic","n":"Neo C9","d":"Neo relic \u2014 Cedo Prime Blueprint, Xaku Prime Chassis Blueprint, Akbronco Prime Link","u":"relics.html#Neo C9"},{"t":"Relic","n":"Neo D1","d":"Neo relic \u2014 Dakra Prime Blade, Mag Prime Systems Blueprint, Trinity Prime Neuroptics Blueprint","u":"relics.html#Neo D1"},{"t":"Relic","n":"Neo D10","d":"Neo relic \u2014 Daikyu Prime Grip, Velox Prime Blueprint, Gauss Prime Blueprint","u":"relics.html#Neo D10"},{"t":"Relic","n":"Neo D2","d":"Neo relic \u2014 Dethcube Prime Cerebrum, Titania Prime Blueprint, Equinox Prime Neuroptics Blueprint","u":"relics.html#Neo D2"},{"t":"Relic","n":"Neo D3","d":"Neo relic \u2014 Dethcube Prime Blueprint, 2X Forma Blueprint, Zakti Prime Barrel","u":"relics.html#Neo D3"},{"t":"Relic","n":"Neo D4","d":"Neo relic \u2014 Destreza Prime Blade, Dual Kamas Prime Handle, Limbo Prime Blueprint","u":"relics.html#Neo D4"},{"t":"Relic","n":"Neo D5","d":"Neo relic \u2014 Dual Keres Prime Blueprint, Braton Prime Stock, Corvas Prime Blueprint","u":"relics.html#Neo D5"},{"t":"Relic","n":"Neo D6","d":"Neo relic \u2014 Dethcube Prime Blueprint, Akstiletto Prime Link, Fragor Prime Handle","u":"relics.html#Neo D6"},{"t":"Relic","n":"Neo D7","d":"Neo relic \u2014 Dual Keres Prime Blueprint, Knell Prime Receiver, Khora Prime Chassis Blueprint","u":"relics.html#Neo D7"},{"t":"Relic","n":"Neo D8","d":"Neo relic \u2014 Dual Keres Prime Blueprint, 2X Forma Blueprint, Larkspur Prime Receiver","u":"relics.html#Neo D8"},{"t":"Relic","n":"Neo D9","d":"Neo relic \u2014 Dual Zoren Prime Blade, Orthos Prime Blueprint, Protea Prime Neuroptics Blueprint","u":"relics.html#Neo D9"},{"t":"Relic","n":"Neo E1","d":"Neo relic \u2014 Ember Prime Blueprint, Reaper Prime Blade, 2X Forma Blueprint","u":"relics.html#Neo E1"},{"t":"Relic","n":"Neo E2","d":"Neo relic \u2014 Equinox Prime Systems Blueprint, Zakti Prime Barrel, Atlas Prime Chassis Blueprint","u":"relics.html#Neo E2"},{"t":"Relic","n":"Neo E3","d":"Neo relic \u2014 Equinox Prime Systems Blueprint, Stradavar Prime Barrel, Lex Prime Blueprint","u":"relics.html#Neo E3"},{"t":"Relic","n":"Neo E4","d":"Neo relic \u2014 Epitaph Prime Receiver, Gauss Prime Neuroptics Blueprint, Fang Prime Handle","u":"relics.html#Neo E4"},{"t":"Relic","n":"Neo F1","d":"Neo relic \u2014 Frost Prime Blueprint, Bo Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo F1"},{"t":"Relic","n":"Neo F2","d":"Neo relic \u2014 Fulmin Prime Receiver, Cobra & Crane Prime Blade, Nagantaka Prime Receiver","u":"relics.html#Neo F2"},{"t":"Relic","n":"Neo F3","d":"Neo relic \u2014 Fulmin Prime Receiver, Acceltra Prime Receiver, Larkspur Prime Receiver","u":"relics.html#Neo F3"},{"t":"Relic","n":"Neo G1","d":"Neo relic \u2014 Gram Prime Handle, Paris Prime Grip, Hydroid Prime Neuroptics Blueprint","u":"relics.html#Neo G1"},{"t":"Relic","n":"Neo G10","d":"Neo relic \u2014 Grendel Prime Blueprint, Gauss Prime Blueprint, Akarius Prime Receiver","u":"relics.html#Neo G10"},{"t":"Relic","n":"Neo G2","d":"Neo relic \u2014 Gram Prime Handle, Pyrana Prime Receiver, Zhuge Prime Blueprint","u":"relics.html#Neo G2"},{"t":"Relic","n":"Neo G3","d":"Neo relic \u2014 Galatine Prime Blueprint, Sybaris Prime Receiver, Silva & Aegis Prime Blueprint","u":"relics.html#Neo G3"},{"t":"Relic","n":"Neo G4","d":"Neo relic \u2014 Gara Prime Blueprint, Paris Prime Grip, Magnus Prime Receiver","u":"relics.html#Neo G4"},{"t":"Relic","n":"Neo G5","d":"Neo relic \u2014 Galatine Prime Blueprint, Harrow Prime Blueprint, Fang Prime Blueprint","u":"relics.html#Neo G5"},{"t":"Relic","n":"Neo G6","d":"Neo relic \u2014 Glaive Prime Blueprint, Boltor Prime Receiver, Ankyros Prime Blade","u":"relics.html#Neo G6"},{"t":"Relic","n":"Neo G7","d":"Neo relic \u2014 Grendel Prime Blueprint, Cobra & Crane Prime Blade, Hildryn Prime Chassis Blueprint","u":"relics.html#Neo G7"},{"t":"Relic","n":"Neo G8","d":"Neo relic \u2014 Gauss Prime Systems Blueprint, Xaku Prime Chassis Blueprint, Okina Prime Handle","u":"relics.html#Neo G8"},{"t":"Relic","n":"Neo G9","d":"Neo relic \u2014 Gauss Prime Systems Blueprint, Bronco Prime Barrel, Masseter Prime Blueprint","u":"relics.html#Neo G9"},{"t":"Relic","n":"Neo H1","d":"Neo relic \u2014 Hydroid Prime Systems Blueprint, Banshee Prime Blueprint, Tigris Prime Barrel","u":"relics.html#Neo H1"},{"t":"Relic","n":"Neo H2","d":"Neo relic \u2014 Hydroid Prime Systems Blueprint, Rubico Prime Barrel, Ballistica Prime Receiver","u":"relics.html#Neo H2"},{"t":"Relic","n":"Neo H3","d":"Neo relic \u2014 Hydroid Prime Systems Blueprint, Mesa Prime Systems Blueprint, Nami Skyla Prime Handle","u":"relics.html#Neo H3"},{"t":"Relic","n":"Neo H4","d":"Neo relic \u2014 Hildryn Prime Blueprint, Fulmin Prime Blueprint, Wisp Prime Chassis Blueprint","u":"relics.html#Neo H4"},{"t":"Relic","n":"Neo H5","d":"Neo relic \u2014 Hydroid Prime Systems Blueprint, Ballistica Prime String, Ballistica Prime Upper Limb","u":"relics.html#Neo H5"},{"t":"Relic","n":"Neo I1","d":"Neo relic \u2014 Ivara Prime Chassis Blueprint, Akjagara Prime Receiver, Limbo Prime Blueprint","u":"relics.html#Neo I1"},{"t":"Relic","n":"Neo I2","d":"Neo relic \u2014 Ivara Prime Chassis Blueprint, Stradavar Prime Barrel, Wukong Prime Systems Blueprint","u":"relics.html#Neo I2"},{"t":"Relic","n":"Neo I3","d":"Neo relic \u2014 Ivara Prime Chassis Blueprint, Sybaris Prime Receiver, Baza Prime Barrel","u":"relics.html#Neo I3"},{"t":"Relic","n":"Neo K1","d":"Neo relic \u2014 Kogake Prime Gauntlet, Zephyr Prime Chassis Blueprint, Helios Prime Blueprint","u":"relics.html#Neo K1"},{"t":"Relic","n":"Neo K10","d":"Neo relic \u2014 Kompressa Prime Barrel, Venato Prime Blueprint, Daikyu Prime Lower Limb","u":"relics.html#Neo K10"},{"t":"Relic","n":"Neo K2","d":"Neo relic \u2014 Kogake Prime Gauntlet, Mirage Prime Systems Blueprint, Akbolto Prime Link","u":"relics.html#Neo K2"},{"t":"Relic","n":"Neo K3","d":"Neo relic \u2014 Kronen Prime Blade, Tiberon Prime Barrel, Braton Prime Receiver","u":"relics.html#Neo K3"},{"t":"Relic","n":"Neo K4","d":"Neo relic \u2014 Knell Prime Barrel, Paris Prime Grip, Braton Prime Stock","u":"relics.html#Neo K4"},{"t":"Relic","n":"Neo K5","d":"Neo relic \u2014 Khora Prime Neuroptics Blueprint, Scourge Prime Handle, Afuris Prime Link","u":"relics.html#Neo K5"},{"t":"Relic","n":"Neo K6","d":"Neo relic \u2014 Khora Prime Blueprint, Wisp Prime Neuroptics Blueprint, Hystrix Prime Blueprint","u":"relics.html#Neo K6"},{"t":"Relic","n":"Neo K7","d":"Neo relic \u2014 Khora Prime Neuroptics Blueprint, Gunsen Prime Handle, Baruuk Prime Chassis Blueprint","u":"relics.html#Neo K7"},{"t":"Relic","n":"Neo K8","d":"Neo relic \u2014 Khora Prime Neuroptics Blueprint, Garuda Prime Systems Blueprint, Burston Prime Barrel","u":"relics.html#Neo K8"},{"t":"Relic","n":"Neo K9","d":"Neo relic \u2014 Kestrel Prime Grip, Xaku Prime Chassis Blueprint, 2X Forma Blueprint","u":"relics.html#Neo K9"},{"t":"Relic","n":"Neo L1","d":"Neo relic \u2014 Limbo Prime Chassis Blueprint, Silva & Aegis Prime Blade, Ballistica Prime Receiver","u":"relics.html#Neo L1"},{"t":"Relic","n":"Neo L2","d":"Neo relic \u2014 Larkspur Prime Barrel, Akbronco Prime Link, Corvas Prime Blueprint","u":"relics.html#Neo L2"},{"t":"Relic","n":"Neo L3","d":"Neo relic \u2014 Larkspur Prime Barrel, Orthos Prime Blueprint, Harrow Prime Blueprint","u":"relics.html#Neo L3"},{"t":"Relic","n":"Neo L4","d":"Neo relic \u2014 Larkspur Prime Barrel, Fang Prime Handle, Acceltra Prime Receiver","u":"relics.html#Neo L4"},{"t":"Relic","n":"Neo M1","d":"Neo relic \u2014 Mirage Prime Blueprint, Helios Prime Blueprint, Euphona Prime Barrel","u":"relics.html#Neo M1"},{"t":"Relic","n":"Neo M2","d":"Neo relic \u2014 Mesa Prime Systems Blueprint, Limbo Prime Blueprint, Bronco Prime Barrel","u":"relics.html#Neo M2"},{"t":"Relic","n":"Neo M3","d":"Neo relic \u2014 Mesa Prime Systems Blueprint, Atlas Prime Chassis Blueprint, 2X Forma Blueprint","u":"relics.html#Neo M3"},{"t":"Relic","n":"Neo M4","d":"Neo relic \u2014 Magnus Prime Barrel, Nagantaka Prime Receiver, 2X Forma Blueprint","u":"relics.html#Neo M4"},{"t":"Relic","n":"Neo M5","d":"Neo relic \u2014 Masseter Prime Blade, 2X Forma Blueprint, Gauss Prime Blueprint","u":"relics.html#Neo M5"},{"t":"Relic","n":"Neo M6","d":"Neo relic \u2014 Masseter Prime Blade, Acceltra Prime Receiver, Grendel Prime Systems Blueprint","u":"relics.html#Neo M6"},{"t":"Relic","n":"Neo N1","d":"Neo relic \u2014 Nyx Prime Chassis Blueprint, Soma Prime Receiver, Kavasa Prime Kubrow Collar Blueprint","u":"relics.html#Neo N1"},{"t":"Relic","n":"Neo N10","d":"Neo relic \u2014 Nami Skyla Prime Blade, Ballistica Prime Upper Limb, Tipedo Prime Ornament","u":"relics.html#Neo N10"},{"t":"Relic","n":"Neo N11","d":"Neo relic \u2014 Nekros Prime Systems Blueprint, Oberon Prime Systems Blueprint, 2X Forma Blueprint","u":"relics.html#Neo N11"},{"t":"Relic","n":"Neo N12","d":"Neo relic \u2014 Nova Prime Chassis Blueprint, Dual Kamas Prime Handle, Kavasa Prime Band","u":"relics.html#Neo N12"},{"t":"Relic","n":"Neo N13","d":"Neo relic \u2014 Nezha Prime Chassis Blueprint, 2X Forma Blueprint, Wukong Prime Chassis Blueprint","u":"relics.html#Neo N13"},{"t":"Relic","n":"Neo N14","d":"Neo relic \u2014 Ninkondi Prime Handle, Braton Prime Receiver, Zhuge Prime Receiver","u":"relics.html#Neo N14"},{"t":"Relic","n":"Neo N15","d":"Neo relic \u2014 Nezha Prime Neuroptics Blueprint, Atlas Prime Systems Blueprint, Baza Prime Barrel","u":"relics.html#Neo N15"},{"t":"Relic","n":"Neo N16","d":"Neo relic \u2014 Nidus Prime Neuroptics Blueprint, Orthos Prime Blade, Pandero Prime Barrel","u":"relics.html#Neo N16"},{"t":"Relic","n":"Neo N17","d":"Neo relic \u2014 Nezha Prime Chassis Blueprint, Strun Prime Stock, 2X Forma Blueprint","u":"relics.html#Neo N17"},{"t":"Relic","n":"Neo N18","d":"Neo relic \u2014 Nidus Prime Chassis Blueprint, 2X Forma Blueprint, Gara Prime Neuroptics Blueprint","u":"relics.html#Neo N18"},{"t":"Relic","n":"Neo N19","d":"Neo relic \u2014 Nikana Prime Hilt, Magnus Prime Receiver, Paris Prime Upper Limb","u":"relics.html#Neo N19"},{"t":"Relic","n":"Neo N2","d":"Neo relic \u2014 Lex Prime Blueprint, Vauban Prime Systems Blueprint, Fang Prime Blueprint","u":"relics.html#Neo N2"},{"t":"Relic","n":"Neo N20","d":"Neo relic \u2014 Nezha Prime Neuroptics Blueprint, Pandero Prime Barrel, Karyst Prime Handle","u":"relics.html#Neo N20"},{"t":"Relic","n":"Neo N21","d":"Neo relic \u2014 Nagantaka Prime Blueprint, Khora Prime Chassis Blueprint, Harrow Prime Blueprint","u":"relics.html#Neo N21"},{"t":"Relic","n":"Neo N22","d":"Neo relic \u2014 Nagantaka Prime Blueprint, Garuda Prime Chassis Blueprint, Magnus Prime Receiver","u":"relics.html#Neo N22"},{"t":"Relic","n":"Neo N23","d":"Neo relic \u2014 Nagantaka Prime Blueprint, Paris Prime Grip, Baruuk Prime Chassis Blueprint","u":"relics.html#Neo N23"},{"t":"Relic","n":"Neo N24","d":"Neo relic \u2014 Nautilus Prime Blueprint, Kestrel Prime Blueprint, Lavos Prime Neuroptics Blueprint","u":"relics.html#Neo N24"},{"t":"Relic","n":"Neo N25","d":"Neo relic \u2014 Nautilus Prime Blueprint, Hydroid Prime Neuroptics Blueprint, Ballistica Prime Receiver","u":"relics.html#Neo N25"},{"t":"Relic","n":"Neo N3","d":"Neo relic \u2014 Nekros Prime Systems Blueprint, Fang Prime Handle, Ash Prime Neuroptics Blueprint","u":"relics.html#Neo N3"},{"t":"Relic","n":"Neo N4","d":"Neo relic \u2014 Nikana Prime Blade, 2X Forma Blueprint, Venka Prime Blueprint","u":"relics.html#Neo N4"},{"t":"Relic","n":"Neo N5","d":"Neo relic \u2014 Nikana Prime Blueprint, Ash Prime Systems Blueprint, Akstiletto Prime Link","u":"relics.html#Neo N5"},{"t":"Relic","n":"Neo N6","d":"Neo relic \u2014 Nikana Prime Hilt, Sybaris Prime Receiver, Trinity Prime Blueprint","u":"relics.html#Neo N6"},{"t":"Relic","n":"Neo N7","d":"Neo relic \u2014 Nekros Prime Systems Blueprint, Banshee Prime Blueprint, Valkyr Prime Neuroptics Blueprint","u":"relics.html#Neo N7"},{"t":"Relic","n":"Neo N8","d":"Neo relic \u2014 Nami Skyla Prime Blade, Akbolto Prime Link, 2X Forma Blueprint","u":"relics.html#Neo N8"},{"t":"Relic","n":"Neo N9","d":"Neo relic \u2014 Nova Prime Chassis Blueprint, Soma Prime Receiver, 2X Forma Blueprint","u":"relics.html#Neo N9"},{"t":"Relic","n":"Neo O1","d":"Neo relic \u2014 Odonata Prime Wings Blueprint, Aklex Prime Blueprint, Volt Prime Systems Blueprint","u":"relics.html#Neo O1"},{"t":"Relic","n":"Neo O2","d":"Neo relic \u2014 Okina Prime Blueprint, Fulmin Prime Blueprint, Acceltra Prime Receiver","u":"relics.html#Neo O2"},{"t":"Relic","n":"Neo O3","d":"Neo relic \u2014 Okina Prime Blueprint, Akbronco Prime Link, Xaku Prime Systems Blueprint","u":"relics.html#Neo O3"},{"t":"Relic","n":"Neo O4","d":"Neo relic \u2014 Okina Prime Blueprint, Baza Prime Barrel, Braton Prime Blueprint","u":"relics.html#Neo O4"},{"t":"Relic","n":"Neo P1","d":"Neo relic \u2014 Pangolin Prime Blueprint, Akjagara Prime Receiver, Rubico Prime Stock","u":"relics.html#Neo P1"},{"t":"Relic","n":"Neo P10","d":"Neo relic \u2014 Perigale Prime Barrel, Trumna Prime Stock, Cedo Prime Receiver","u":"relics.html#Neo P10"},{"t":"Relic","n":"Neo P11","d":"Neo relic \u2014 Protea Prime Chassis Blueprint, Aksomati Prime Barrel, Braton Prime Receiver","u":"relics.html#Neo P11"},{"t":"Relic","n":"Neo P2","d":"Neo relic \u2014 Pandero Prime Receiver, 2X Forma Blueprint, Titania Prime Blueprint","u":"relics.html#Neo P2"},{"t":"Relic","n":"Neo P3","d":"Neo relic \u2014 Pangolin Prime Blueprint, Astilla Prime Stock, Inaros Prime Chassis Blueprint","u":"relics.html#Neo P3"},{"t":"Relic","n":"Neo P4","d":"Neo relic \u2014 Pandero Prime Receiver, 2X Forma Blueprint, Braton Prime Receiver","u":"relics.html#Neo P4"},{"t":"Relic","n":"Neo P5","d":"Neo relic \u2014 Pangolin Prime Blueprint, Gara Prime Chassis Blueprint, Burston Prime Barrel","u":"relics.html#Neo P5"},{"t":"Relic","n":"Neo P6","d":"Neo relic \u2014 Phantasma Prime Stock, Protea Prime Neuroptics Blueprint, Masseter Prime Blueprint","u":"relics.html#Neo P6"},{"t":"Relic","n":"Neo P7","d":"Neo relic \u2014 Protea Prime Chassis Blueprint, Larkspur Prime Stock, Hildryn Prime Neuroptics Blueprint","u":"relics.html#Neo P7"},{"t":"Relic","n":"Neo P8","d":"Neo relic \u2014 Phantasma Prime Barrel, Revenant Prime Systems Blueprint, Afuris Prime Link","u":"relics.html#Neo P8"},{"t":"Relic","n":"Neo P9","d":"Neo relic \u2014 Protea Prime Systems Blueprint, Orthos Prime Blade, Epitaph Prime Barrel","u":"relics.html#Neo P9"},{"t":"Relic","n":"Neo Q1","d":"Neo relic \u2014 Quassus Prime Blade, Hildryn Prime Chassis Blueprint, Orthos Prime Blueprint","u":"relics.html#Neo Q1"},{"t":"Relic","n":"Neo R1","d":"Neo relic \u2014 Rhino Prime Blueprint, Boltor Prime Receiver, Nyx Prime Chassis Blueprint","u":"relics.html#Neo R1"},{"t":"Relic","n":"Neo R2","d":"Neo relic \u2014 Rubico Prime Blueprint, Paris Prime Grip, Tiberon Prime Blueprint","u":"relics.html#Neo R2"},{"t":"Relic","n":"Neo R3","d":"Neo relic \u2014 Redeemer Prime Handle, Paris Prime Grip, Ninkondi Prime Chain","u":"relics.html#Neo R3"},{"t":"Relic","n":"Neo R4","d":"Neo relic \u2014 Redeemer Prime Handle, Corinth Prime Receiver, Ninkondi Prime Chain","u":"relics.html#Neo R4"},{"t":"Relic","n":"Neo R5","d":"Neo relic \u2014 Redeemer Prime Handle, Akjagara Prime Link, Fang Prime Handle","u":"relics.html#Neo R5"},{"t":"Relic","n":"Neo S1","d":"Neo relic \u2014 Saryn Prime Blueprint, Trinity Prime Chassis Blueprint, 2X Forma Blueprint","u":"relics.html#Neo S1"},{"t":"Relic","n":"Neo S10","d":"Neo relic \u2014 Saryn Prime Chassis Blueprint, Nikana Prime Blade, Spira Prime Blade","u":"relics.html#Neo S10"},{"t":"Relic","n":"Neo S11","d":"Neo relic \u2014 Stradavar Prime Blueprint, Kronen Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo S11"},{"t":"Relic","n":"Neo S12","d":"Neo relic \u2014 Stradavar Prime Blueprint, Wukong Prime Chassis Blueprint, Mirage Prime Systems Blueprint","u":"relics.html#Neo S12"},{"t":"Relic","n":"Neo S13","d":"Neo relic \u2014 Saryn Prime Chassis Blueprint, Cernos Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo S13"},{"t":"Relic","n":"Neo S14","d":"Neo relic \u2014 Stradavar Prime Blueprint, Fang Prime Handle, Pangolin Prime Blade","u":"relics.html#Neo S14"},{"t":"Relic","n":"Neo S15","d":"Neo relic \u2014 Scourge Prime Barrel, Garuda Prime Chassis Blueprint, Bronco Prime Barrel","u":"relics.html#Neo S15"},{"t":"Relic","n":"Neo S16","d":"Neo relic \u2014 Silva & Aegis Prime Guard, Oberon Prime Blueprint, Aksomati Prime Barrel","u":"relics.html#Neo S16"},{"t":"Relic","n":"Neo S17","d":"Neo relic \u2014 Strun Prime Blueprint, Hildryn Prime Neuroptics Blueprint, Baruuk Prime Chassis Blueprint","u":"relics.html#Neo S17"},{"t":"Relic","n":"Neo S18","d":"Neo relic \u2014 Shade Prime Carapace, Grendel Prime Chassis Blueprint, Cobra & Crane Prime Blueprint","u":"relics.html#Neo S18"},{"t":"Relic","n":"Neo S19","d":"Neo relic \u2014 Strun Prime Blueprint, Saryn Prime Neuroptics Blueprint, Nidus Prime Neuroptics Blueprint","u":"relics.html#Neo S19"},{"t":"Relic","n":"Neo S2","d":"Neo relic \u2014 Nyx Prime Systems Blueprint, Saryn Prime Chassis Blueprint, Burston Prime Stock","u":"relics.html#Neo S2"},{"t":"Relic","n":"Neo S20","d":"Neo relic \u2014 Sevagoth Prime Chassis Blueprint, 2X Forma Blueprint, Vadarya Prime Receiver","u":"relics.html#Neo S20"},{"t":"Relic","n":"Neo S3","d":"Neo relic \u2014 Soma Prime Barrel, 2X Forma Blueprint, Vasto Prime Blueprint","u":"relics.html#Neo S3"},{"t":"Relic","n":"Neo S5","d":"Neo relic \u2014 Sicarus Prime Receiver, Glaive Prime Disc, Frost Prime Systems Blueprint","u":"relics.html#Neo S5"},{"t":"Relic","n":"Neo S6","d":"Neo relic \u2014 Silva & Aegis Prime Guard, Tigris Prime Receiver, Kavasa Prime Buckle","u":"relics.html#Neo S6"},{"t":"Relic","n":"Neo S7","d":"Neo relic \u2014 Silva & Aegis Prime Guard, Sybaris Prime Receiver, Ballistica Prime Receiver","u":"relics.html#Neo S7"},{"t":"Relic","n":"Neo S8","d":"Neo relic \u2014 Spira Prime Pouch, Nikana Prime Blueprint, Fragor Prime Blueprint","u":"relics.html#Neo S8"},{"t":"Relic","n":"Neo S9","d":"Neo relic \u2014 Silva & Aegis Prime Guard, Destreza Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo S9"},{"t":"Relic","n":"Neo T1","d":"Neo relic \u2014 Tigris Prime Blueprint, Banshee Prime Blueprint, Fragor Prime Handle","u":"relics.html#Neo T1"},{"t":"Relic","n":"Neo T10","d":"Neo relic \u2014 Trumna Prime Receiver, Gyre Prime Blueprint, Nautilus Prime Systems","u":"relics.html#Neo T10"},{"t":"Relic","n":"Neo T11","d":"Neo relic \u2014 Trumna Prime Receiver, Kestrel Prime Blueprint, Yareli Prime Blueprint","u":"relics.html#Neo T11"},{"t":"Relic","n":"Neo T2","d":"Neo relic \u2014 Tekko Prime Blade, Dethcube Prime Carapace, 2X Forma Blueprint","u":"relics.html#Neo T2"},{"t":"Relic","n":"Neo T3","d":"Neo relic \u2014 Titania Prime Systems Blueprint, Inaros Prime Chassis Blueprint, Atlas Prime Chassis Blueprint","u":"relics.html#Neo T3"},{"t":"Relic","n":"Neo T4","d":"Neo relic \u2014 Tenora Prime Receiver, Astilla Prime Blueprint, Guandao Prime Blueprint","u":"relics.html#Neo T4"},{"t":"Relic","n":"Neo T5","d":"Neo relic \u2014 Tenora Prime Barrel, Magnus Prime Receiver, Corinth Prime Receiver","u":"relics.html#Neo T5"},{"t":"Relic","n":"Neo T6","d":"Neo relic \u2014 Tenora Prime Barrel, Scourge Prime Handle, Tatsu Prime Blade","u":"relics.html#Neo T6"},{"t":"Relic","n":"Neo T7","d":"Neo relic \u2014 Tatsu Prime Handle, Gunsen Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo T7"},{"t":"Relic","n":"Neo T8","d":"Neo relic \u2014 Tenora Prime Receiver, Pandero Prime Barrel, Nezha Prime Neuroptics Blueprint","u":"relics.html#Neo T8"},{"t":"Relic","n":"Neo T9","d":"Neo relic \u2014 Trumna Prime Receiver, Gauss Prime Blueprint, Cedo Prime Barrel","u":"relics.html#Neo T9"},{"t":"Relic","n":"Neo V1","d":"Neo relic \u2014 Nyx Prime Blueprint, Forma Blueprint, Bronco Prime Barrel","u":"relics.html#Neo V1"},{"t":"Relic","n":"Neo V10","d":"Neo relic \u2014 Volnus Prime Handle, Akbronco Prime Link, Inaros Prime Chassis Blueprint","u":"relics.html#Neo V10"},{"t":"Relic","n":"Neo V11","d":"Neo relic \u2014 Voruna Prime Systems Blueprint, Epitaph Prime Barrel, Xaku Prime Chassis Blueprint","u":"relics.html#Neo V11"},{"t":"Relic","n":"Neo V12","d":"Neo relic \u2014 Voruna Prime Systems Blueprint, Xaku Prime Chassis Blueprint, Quassus Prime Blueprint","u":"relics.html#Neo V12"},{"t":"Relic","n":"Neo V13","d":"Neo relic \u2014 Vadarya Prime Blueprint, Lavos Prime Neuroptics Blueprint, 2X Forma Blueprint","u":"relics.html#Neo V13"},{"t":"Relic","n":"Neo V2","d":"Neo relic \u2014 Vauban Prime Blueprint, Galatine Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo V2"},{"t":"Relic","n":"Neo V3","d":"Neo relic \u2014 Vauban Prime Neuroptics Blueprint, Tigris Prime Receiver, 2X Forma Blueprint","u":"relics.html#Neo V3"},{"t":"Relic","n":"Neo V4","d":"Neo relic \u2014 Venka Prime Gauntlet, Saryn Prime Neuroptics Blueprint, Ash Prime Neuroptics Blueprint","u":"relics.html#Neo V4"},{"t":"Relic","n":"Neo V5","d":"Neo relic \u2014 Vauban Prime Neuroptics Blueprint, 2X Forma Blueprint, Burston Prime Barrel","u":"relics.html#Neo V5"},{"t":"Relic","n":"Neo V6","d":"Neo relic \u2014 Vauban Prime Chassis Blueprint, Mirage Prime Systems Blueprint, Fragor Prime Handle","u":"relics.html#Neo V6"},{"t":"Relic","n":"Neo V7","d":"Neo relic \u2014 Valkyr Prime Chassis Blueprint, Banshee Prime Blueprint, Cernos Prime Blueprint","u":"relics.html#Neo V7"},{"t":"Relic","n":"Neo V8","d":"Neo relic \u2014 Volt Prime Neuroptics Blueprint, Bo Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo V8"},{"t":"Relic","n":"Neo V9","d":"Neo relic \u2014 Valkyr Prime Chassis Blueprint, Cernos Prime Blueprint, Lex Prime Blueprint","u":"relics.html#Neo V9"},{"t":"Relic","n":"Neo W1","d":"Neo relic \u2014 Wisp Prime Chassis Blueprint, 2X Forma Blueprint, Dual Keres Prime Handle","u":"relics.html#Neo W1"},{"t":"Relic","n":"Neo W2","d":"Neo relic \u2014 Wisp Prime Blueprint, Burston Prime Barrel, 2X Forma Blueprint","u":"relics.html#Neo W2"},{"t":"Relic","n":"Neo X1","d":"Neo relic \u2014 Xaku Prime Blueprint, Braton Prime Receiver, Quassus Prime Blueprint","u":"relics.html#Neo X1"},{"t":"Relic","n":"Neo Y1","d":"Neo relic \u2014 Yareli Prime Systems Blueprint, Styanax Prime Systems Blueprint, 2X Forma Blueprint","u":"relics.html#Neo Y1"},{"t":"Relic","n":"Neo Y2","d":"Neo relic \u2014 Yareli Prime Systems Blueprint, Steflos Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo Y2"},{"t":"Relic","n":"Neo Z1","d":"Neo relic \u2014 Zephyr Prime Blueprint, Galatine Prime Handle, 2X Forma Blueprint","u":"relics.html#Neo Z1"},{"t":"Relic","n":"Neo Z10","d":"Neo relic \u2014 Zylok Prime Blueprint, Revenant Prime Neuroptics Blueprint, Phantasma Prime Blueprint","u":"relics.html#Neo Z10"},{"t":"Relic","n":"Neo Z11","d":"Neo relic \u2014 Zylok Prime Blueprint, Okina Prime Handle, Shade Prime Blueprint","u":"relics.html#Neo Z11"},{"t":"Relic","n":"Neo Z2","d":"Neo relic \u2014 Zephyr Prime Blueprint, Mesa Prime Blueprint, Pyrana Prime Receiver","u":"relics.html#Neo Z2"},{"t":"Relic","n":"Neo Z3","d":"Neo relic \u2014 Zhuge Prime Barrel, Mesa Prime Blueprint, Akjagara Prime Receiver","u":"relics.html#Neo Z3"},{"t":"Relic","n":"Neo Z4","d":"Neo relic \u2014 Zephyr Prime Blueprint, 2X Forma Blueprint, Redeemer Prime Blueprint","u":"relics.html#Neo Z4"},{"t":"Relic","n":"Neo Z5","d":"Neo relic \u2014 Zhuge Prime Barrel, Aksomati Prime Barrel, 2X Forma Blueprint","u":"relics.html#Neo Z5"},{"t":"Relic","n":"Neo Z6","d":"Neo relic \u2014 Zhuge Prime Barrel, Tipedo Prime Ornament, Titania Prime Neuroptics Blueprint","u":"relics.html#Neo Z6"},{"t":"Relic","n":"Neo Z7","d":"Neo relic \u2014 Zhuge Prime Barrel, Octavia Prime Chassis Blueprint, Akbronco Prime Link","u":"relics.html#Neo Z7"},{"t":"Relic","n":"Neo Z8","d":"Neo relic \u2014 Zephyr Prime Systems Blueprint, Gram Prime Blueprint, 2X Forma Blueprint","u":"relics.html#Neo Z8"},{"t":"Relic","n":"Neo Z9","d":"Neo relic \u2014 Zhuge Prime Barrel, Wukong Prime Systems Blueprint, Ninkondi Prime Chain","u":"relics.html#Neo Z9"},{"t":"Relic","n":"Requiem Eterna Relic","d":"Requiem relic \u2014 Lohk, Xata, Jahu","u":"relics.html#Requiem Eterna Relic"},{"t":"Relic","n":"Requiem I","d":"Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Lohk, Xata","u":"relics.html#Requiem I"},{"t":"Relic","n":"Requiem II","d":"Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Jahu, Vome","u":"relics.html#Requiem II"},{"t":"Relic","n":"Requiem III","d":"Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Ris, Fass","u":"relics.html#Requiem III"},{"t":"Relic","n":"Requiem IV","d":"Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Netra, Khra","u":"relics.html#Requiem IV"},{"t":"Relic","n":"Vanguard C1","d":"Unknown relic \u2014 Caliban Prime Systems Blueprint, Mesa Prime Systems Blueprint, Ash Prime Systems Blueprint","u":"relics.html#Vanguard C1"},{"t":"Relic","n":"Vanguard E1","d":"Unknown relic \u2014 Ember Prime Blueprint, Caliban Prime Neuroptics Blueprint, Ash Prime Blueprint","u":"relics.html#Vanguard E1"},{"t":"Relic","n":"Vanguard M1","d":"Unknown relic \u2014 Mesa Prime Neuroptics Blueprint, Volt Prime Systems Blueprint, Protea Prime Chassis Blueprint","u":"relics.html#Vanguard M1"},{"t":"Relic","n":"Vanguard P1","d":"Unknown relic \u2014 Protea Prime Systems Blueprint, Volt Prime Neuroptics Blueprint, Ember Prime Systems Blueprint","u":"relics.html#Vanguard P1"},{"t":"Relic","n":"Axi Relic","d":"Axi relic \u2014 ","u":"relics.html#Axi Relic"},{"t":"Relic","n":"Lith Relic","d":"Lith relic \u2014 ","u":"relics.html#Lith Relic"},{"t":"Relic","n":"Meso Relic","d":"Meso relic \u2014 ","u":"relics.html#Meso Relic"},{"t":"Relic","n":"Neo Relic","d":"Neo relic \u2014 ","u":"relics.html#Neo Relic"},{"t":"Relic","n":"Requiem Relic","d":"Requiem relic \u2014 ","u":"relics.html#Requiem Relic"},{"t":"Relic","n":"Void Relic","d":" relic \u2014 ","u":"relics.html#Void Relic"},{"t":"Build","n":"Kuva Zarr \u2014 One-Shot Steel Path","d":"The classic room-deleter. Cannon mode wipes packs, alt-fire Barrage melts single targets. Hunter Munitions slash procs on crits ignore armor","u":"builds.html#kuva-zarr-oneshot"},{"t":"Build","n":"Kuva Bramma \u2014 One-Shot Steel Path","d":"Cluster bombs that carpet an area. Still one of the most reliable Steel Path clearers \u2014 shoot above a pack and let the bomblets finish the j","u":"builds.html#kuva-bramma-oneshot"},{"t":"Build","n":"Phenmor \u2014 One-Shot Steel Path (Incarnon)","d":"Charge the Incarnon form and it becomes a hitscan delete beam. One of the hardest-hitting primaries in the game once transformed.","u":"builds.html#phenmor-oneshot"},{"t":"Build","n":"Tenet Arca Plasmor \u2014 Strong All-Rounder","d":"A wall of plasma per shot. Huge damage per trigger pull with innate punch-through \u2014 point it at a hallway and everything dies.","u":"builds.html#tenet-arca-plasmor"},{"t":"Build","n":"Laetum \u2014 One-Shot Steel Path (Incarnon Pistol)","d":"Builds charges on kill, then the Incarnon form fires devastating void beams. Arguably the best secondary in the game for Steel Path.","u":"builds.html#laetum-oneshot"},{"t":"Build","n":"Kuva Nukor \u2014 Status Primer / Strong Secondary","d":"Chains microwave beams across enemies stacking tons of statuses. The best primer in the game \u2014 paint a pack with statuses, then one-tap them","u":"builds.html#kuva-nukor-primer"},{"t":"Build","n":"Glaive Prime \u2014 One-Shot Heavy Attack","d":"Throw it, detonate mid-air, watch the map explode. Heavy-attack thrown detonations scale insanely and one-shot Steel Path packs.","u":"builds.html#glaive-prime-oneshot"},{"t":"Build","n":"Revenant \u2014 Unkillable Steel Path Frame","d":"Mesmer Skin makes you literally unkillable while charges last. The easiest frame to take into hard Steel Path content \u2014 press 2 and walk for","u":"builds.html#revenant-tank"},{"t":"Build","n":"Saryn \u2014 Room Nuke (Steel Path Farm Queen)","d":"Spores + Toxic Lash spread viral/toxin across the whole map. The fastest Steel Path clearer for exterminate and survival farms.","u":"builds.html#saryn-nuke"},{"t":"Build","n":"Wukong \u2014 Lazy Immortal (Strong General)","d":"Defy gives you 3 free deaths per cast and your Celestial Twin doubles your damage. The comfiest frame for almost any content.","u":"builds.html#wukong-tank"},{"t":"Build","n":"Rhino \u2014 Best Starter Tank (Strong General)","d":"Iron Skin makes you immune to damage and knockdown. The classic recommendation for new players pushing through the star chart into Steel Pat","u":"builds.html#rhino-starter"},{"t":"Build","n":"Nautilus Prime \u2014 Best Sentinel for AoE Builds","d":"Cordon yanks every enemy within 30m into one tight ball every 15s \u2014 shoot the ball once with your Zarr/Bramma and the whole pack dies.","u":"builds.html#nautilus-prime-setup"},{"t":"Amp part","n":"Raplak","d":"Semi-auto, long-range, accurate hitscan \u2014 best single-target prism","u":"amps.html"},{"t":"Amp part","n":"Shwaak","d":"Semi-auto, medium-range shots with punch-through","u":"amps.html"},{"t":"Amp part","n":"Granmu","d":"Burst-fire prism","u":"amps.html"},{"t":"Amp part","n":"Rahn","d":"Full-auto, long-range shots","u":"amps.html"},{"t":"Amp part","n":"Cantic","d":"Fast, economical fire \u2014 easy on the energy bar","u":"amps.html"},{"t":"Amp part","n":"Lega","d":"Releases an attack that damages over time","u":"amps.html"},{"t":"Amp part","n":"Klamora","d":"Short-range, wide-angle energy release \u2014 great for crowds","u":"amps.html"},{"t":"Amp part","n":"Propa","d":"Throws a large proximity mine \u2014 huge burst damage, the meta scaffold","u":"amps.html"},{"t":"Amp part","n":"Phahd","d":"Powerful bouncing projectiles that clear rooms","u":"amps.html"},{"t":"Amp part","n":"Pencha","d":"Charged beam, hits like a truck","u":"amps.html"},{"t":"Amp part","n":"Dissic","d":"Lobs a powerful explosive charge","u":"amps.html"},{"t":"Amp part","n":"Exard","d":"Explosive grenade launcher alt-fire","u":"amps.html"},{"t":"Amp part","n":"Shraksun","d":"Small area burst","u":"amps.html"},{"t":"Amp part","n":"Klebrik","d":"Fragmenting burst scaffold","u":"amps.html"},{"t":"Amp part","n":"Certus","d":"+20% critical chance \u2014 the go-to brace for damage builds","u":"amps.html"},{"t":"Amp part","n":"Lohrin","d":"+12% critical and status chance","u":"amps.html"},{"t":"Amp part","n":"Juttni","d":"-1s amp recharge delay","u":"amps.html"},{"t":"Amp part","n":"Anspatha","d":"+20 energy pool, +15/s energy recharge","u":"amps.html"},{"t":"Amp part","n":"Suo","d":"+100 energy pool, -2s recharge delay","u":"amps.html"},{"t":"Amp part","n":"Plaga","d":"-20 energy pool, -1.5s recharge delay","u":"amps.html"},{"t":"Amp part","n":"Clapkra","d":"Balanced starter brace","u":"amps.html"},{"t":"Amp combo","n":"177 Raplak / Propa / Certus","d":"The classic Eidolon DPS amp. Accurate Raplak primary for limbs, Propa mines for burst, Certus crit \u2014 still the community standard for hunts.","u":"amps.html"},{"t":"Amp combo","n":"777 Klamora / Propa / Certus","d":"Wide-angle Klamora clears groups, Propa handles burst. A strong all-rounder that works everywhere including Steel Path content.","u":"amps.html"},{"t":"Amp combo","n":"577 Cantic / Propa / Certus","d":"Fast, ammo-efficient Cantic primary with the Propa/Certus punch. Great if you hate managing the amp energy bar.","u":"amps.html"},{"t":"Amp combo","n":"747 Klamora / Phahd / Certus","d":"Bouncing Phahd projectiles clear rooms of weaker enemies. Fun and effective for open-world bounties.","u":"amps.html"},{"t":"Focus school","n":"Madurai","d":"The damage school. For Tenno who solve problems with overwhelming force.","u":"operators.html"},{"t":"Focus school","n":"Vazarin","d":"The support school. Shields, healing, and keeping your squad standing.","u":"operators.html"},{"t":"Focus school","n":"Naramon","d":"The melee/mobility school. Speed and combo for aggressive Tenno.","u":"operators.html"},{"t":"Focus school","n":"Unairu","d":"The tank school. Strip armor and shrug off damage.","u":"operators.html"},{"t":"Focus school","n":"Zenurik","d":"The energy school. The most popular first school for a reason.","u":"operators.html"},{"t":"Operator arcane","n":"Magus Lockdown","d":"Tether mines that lock enemies in place \u2014 the best crowd-control arcane in the game","u":"operators.html"},{"t":"Operator arcane","n":"Magus Elevate","d":"Heal your Warframe when transferring to Operator","u":"operators.html"},{"t":"Operator arcane","n":"Magus Repair","d":"Regenerate health over time","u":"operators.html"},{"t":"Operator arcane","n":"Magus Husk","d":"Bonus health for your Operator","u":"operators.html"},{"t":"Operator arcane","n":"Magus Vigor","d":"Bonus shields for your Operator","u":"operators.html"},{"t":"Operator arcane","n":"Magus Melt","d":"Chance for your amp shots to explode","u":"operators.html"},{"t":"Resource","n":"Orokin Cells","d":"Gabii \u2014 Ceres (survival, dark sector)","u":"farming.html"},{"t":"Resource","n":"Plastids / Polymer","d":"Piscinas \u2014 Saturn (survival)","u":"farming.html"},{"t":"Resource","n":"Affinity + Orokin Cells","d":"Helene \u2014 Saturn (defense, dark sector)","u":"farming.html"},{"t":"Resource","n":"Affinity leveling","d":"Hydron \u2014 Sedna (defense)","u":"farming.html"},{"t":"Resource","n":"Argon Crystals","d":"Void missions \u2014 Taranis (defense) or Mot (survival); drops from Corrupted enemies. Note: they decay 24h after pickup, so farm fresh","u":"farming.html"},{"t":"Resource","n":"Neural Sensors","d":"Jupiter missions \u2014 Cameria (survival) or Alad V, Themisto (assassination)","u":"farming.html"},{"t":"Resource","n":"Rubedo","d":"Earth and Lua missions \u2014 excavation and survival; also from Void containers","u":"farming.html"},{"t":"Resource","n":"Ferrite","d":"Mercury and Earth missions \u2014 early-planet survival and defense","u":"farming.html"},{"t":"Resource","n":"Nano Spores","d":"Deimos and Saturn missions \u2014 survival and defense; Orokin Derelict vaults","u":"farming.html"},{"t":"Resource","n":"Salvage","d":"Mars and Jupiter missions \u2014 dark sector survival","u":"farming.html"},{"t":"Resource","n":"Alloy Plate","d":"Venus missions \u2014 dark sector survival and excavation","u":"farming.html"},{"t":"Resource","n":"Circuits","d":"Venus missions \u2014 defense and survival","u":"farming.html"},{"t":"Resource","n":"Control Modules","d":"Phobos and Void missions \u2014 survival; also from Hyena Pack, Neptune","u":"farming.html"},{"t":"Resource","n":"Gallium","d":"Mars and Uranus missions \u2014 survival and defense","u":"farming.html"},{"t":"Resource","n":"Morphics","d":"Mercury, Mars, and Europa missions \u2014 survival; also from Vor, Mercury","u":"farming.html"},{"t":"Resource","n":"Neurodes","d":"Earth and Lua missions \u2014 Everest, Earth (excavation); also Sentients on Lua","u":"farming.html"},{"t":"Resource","n":"Nitain Extract","d":"Nightwave \u2014 buy from Nora's shop with Nora's Mix creds","u":"farming.html"},{"t":"Resource","n":"Cryotic","d":"Excavation missions anywhere \u2014 Hieracon, Pluto is the classic farm","u":"farming.html"},{"t":"Resource","n":"Oxium","d":"Corpus missions \u2014 farm Oxium Ospreys on Jupiter and Neptune","u":"farming.html"},{"t":"Resource","n":"Tellurium","d":"Uranus submersible missions \u2014 Ophelia (survival); also Kuva Fortress","u":"farming.html"},{"t":"Resource","n":"35mm Film","d":"For the documentarian who sees the world through a unique lens, extra film is always a win. Trade this Hex Treasure with","u":"farming.html"},{"t":"Resource","n":"Adramal Alloy","d":"Purged of spores and contaminants, this alloy is highly versatile. Blueprint sold by Otak in the Necralisk on Deimos.","u":"farming.html"},{"t":"Resource","n":"Adramalium","d":"Sinewy and metallic, possessed of great elastic strength. Location: Cambion Drift (Deimos) from Yellow Mining Lesions, ","u":"farming.html"},{"t":"Resource","n":"Advances Debt-Bond","d":"Sometimes a rig jockey needs a helping hand, so they get an advance on the next pay. Massive interest rates almost guara","u":"farming.html"},{"t":"Resource","n":"Aggristone","d":"It is said that Aggri Formations are hardened saliva from mighty Orowyrms. Duviri citizens believe Aggristones are power","u":"farming.html"},{"t":"Resource","n":"Agnovidisc","d":"A mark of identification carried by soldiers during The Old War so that their names might be remembered if they never re","u":"farming.html"},{"t":"Resource","n":"Amarast","d":"A violet gem that forms from the crystallization of byproducts expelled from the Weeping Towers. Location: Orb Vallis (","u":"farming.html"},{"t":"Resource","n":"Animo Nav Beacon","d":"Used to locate the Ambulas production facility. This resource is dropped from Ambulas Units.","u":"farming.html"},{"t":"Resource","n":"Argon Burger Meal","d":"Burgers so tasty they always disappear! Location: 1999 (H\u00f6llvania)","u":"farming.html"},{"t":"Resource","n":"Ascaris Prime","d":"Technology developed by Executor Ballas to allow remote piloting of a hijacked Warframe for short periods, forcing them ","u":"farming.html"},{"t":"Resource","n":"Asterite","d":"Formed over billions of years, these crystals are most often found embedded in space rock. Location: Railjack Missions","u":"farming.html"},{"t":"Resource","n":"Atmo Systems","d":"A modular component that compensates for the multitude of atmospheric conditions encountered in the Origin System. Loc","u":"farming.html"},{"t":"Resource","n":"Atramentum","d":"This deep black ink has the power to reveal hidden truth. Obtained from Atramentum Balloons and completing Follie's Hun","u":"farming.html"},{"t":"Resource","n":"Aucrux Capacitors","d":"Once installed, these delicate power systems fuse with a Corpus Obelisk's engines. Unused capacitors are therefore, high","u":"farming.html"},{"t":"Resource","n":"Auron","d":"A brilliant, dense and conductive metal. Location: Plains of Eidolon (Earth) from Red Mining Veins and Thumpers","u":"farming.html"},{"t":"Resource","n":"Axidite","d":"A sediment that formed from sulfuric rain that became trapped under the ice. Location: Orb Vallis (Venus) from Red Mini","u":"farming.html"},{"t":"Resource","n":"Axidrol Alloy","d":"A compound formed from Axidite. Blueprint sold by Smokefinger in Fortuna on Venus.","u":"farming.html"},{"t":"Resource","n":"Azurite","d":"A blue gem layered with impurities. Location: Plains of Eidolon (Earth) from Blue Mining Veins and Thumpers","u":"farming.html"},{"t":"Resource","n":"Bapholite","d":"Malleable, owing to ingrown veins of Infestation protein. Location: Cambion Drift (Deimos) from Yellow Mining Lesions, ","u":"farming.html"},{"t":"Resource","n":"Beating Heartstrings","d":"These curious Techrot growths still quivered in sympathy with Temple\u2019s music long after the gig was over. Location: Sta","u":"farming.html"},{"t":"Resource","n":"Bellow Voca","d":"The deepest of Voidtongue moans, etched into stone. An unlikely asset in the construction of Albrecht's vessels. Locati","u":"farming.html"},{"t":"Resource","n":"Big Bytes Pizza","d":"Who doesn't like pizza? Trade this Hex Treasure with Lettie to earn standing with The Hex. Location: 1999 (H\u00f6llvania)","u":"farming.html"},{"t":"Resource","n":"Bioplasma","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"Bonewidow Capsule","d":"Capsule component for the Bonewidow Necramech.","u":"farming.html"},{"t":"Resource","n":"Bonewidow Casing","d":"Casing component for the Bonewidow Necramech.","u":"farming.html"},{"t":"Resource","n":"Bonewidow Engine","d":"Engine component for the Bonewidow Necramech.","u":"farming.html"},{"t":"Resource","n":"Bonewidow Weapon Pod","d":"Weapon Pod component for the Bonewidow Necramech.","u":"farming.html"},{"t":"Resource","n":"Bracoid","d":"A rare bacterial entity that increases the spread of Infestation found on Infested Ships.","u":"farming.html"},{"t":"Resource","n":"Calda Toroid","d":"A device of undetermined function and origin. Prized by Vox Solaris and the Quills. Earn Calda Toroids from enemies loc","u":"farming.html"},{"t":"Resource","n":"Carbides","d":"Resilient components used to reinforce the plated sheets of metal strapped to Grineer Ships. Location: Eximus units in ","u":"farming.html"},{"t":"Resource","n":"Cephalite Resonance","d":"Cephalite Resonance used to enter the Glassmaker's Weave","u":"farming.html"},{"t":"Resource","n":"Cerulean Fungus Extract","d":"Extracted from a Cerulean Fungus colony.","u":"farming.html"},{"t":"Resource","n":"Cetus Wisp","d":"Most common at night, these stone lifeforms are drawn to shorelines touched by the Eidolon. They linger around lakes on ","u":"farming.html"},{"t":"Resource","n":"Cheddar Crowns Cereal","d":"A nostalgic treat for the ultimate \u201890s kid! Remember those commercials with the cheerful mouse quartet? Trade this Hex ","u":"farming.html"},{"t":"Resource","n":"Chuggin' Along Sixpack","d":"A set of liquid comfort perfect for anyone who deserves a moment to unwind. Ideal for someone carrying the weight of the","u":"farming.html"},{"t":"Resource","n":"Condroc Wing","d":"The talon on a condroc's wing is sharp enough to tear through bone. Location: Plains of Eidolon on Earth","u":"farming.html"},{"t":"Resource","n":"Connla Sprout","d":"The water that courses through Connla Sprouts tastes sweet and refreshing. Location: Duviri","u":"farming.html"},{"t":"Resource","n":"Copernics","d":"A cell of encapsulated Void energy. Location: Lua","u":"farming.html"},{"t":"Resource","n":"Coprun","d":"A soft, malleable metal. Location: Plains of Eidolon (Earth) from Red Mining Veins","u":"farming.html"},{"t":"Resource","n":"Corpus Cipher","d":"A cipher used to decode Corpus intel. Crafting component required to create a CORPUS VOID KEY","u":"farming.html"},{"t":"Resource","n":"Corpus Datamass","d":"A Corpus datamass containing encrypted intel. Crafting component required to create a CORPUS VOID KEY","u":"farming.html"},{"t":"Resource","n":"Cortege Barrel","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Cortege Receiver","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Cortege Stock","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Cortichrome","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"Crimson Talent","d":"A weighty token from Orion's broken future. Source: Support Vena against Ryoku (Scoria's Angel, Uranus Proxima)","u":"farming.html"},{"t":"Resource","n":"Crimzian","d":"A blood-red gem. Location: Plains of Eidolon (Earth) from Blue Mining Veins and Thumpers","u":"farming.html"},{"t":"Resource","n":"Crisma Toroid","d":"A device of undetermined function and origin. Prized by Vox Solaris and the Quills. Earn Crisma Toroids by defeating th","u":"farming.html"},{"t":"Resource","n":"Cryptographic Alu","d":"Excess circuitry disposed of during the Razorback manufacturing process, these components only appear in the vicinity of","u":"farming.html"},{"t":"Resource","n":"Cubic Diodes","d":"Vital components used in the creation of Corpus photon-networks. Location: Eximus units in the Corpus Ice Planet Tilese","u":"farming.html"},{"t":"Resource","n":"Curse Of Hearing","d":"This curse contains knowledge that will help Fibonacci prevent enemies from breaking free of The Sanctum. Feed curses to","u":"farming.html"},{"t":"Resource","n":"Curse Of Knowing","d":"This curse contains knowledge that will help Fibonacci prevent enemies from breaking free of The Sanctum. Feed curses to","u":"farming.html"},{"t":"Resource","n":"Curse Of Seeing","d":"This curse contains knowledge that will help Fibonacci prevent enemies from breaking free of The Sanctum. Feed curses to","u":"farming.html"},{"t":"Resource","n":"Dagonic","d":"Rivulets of Exocrine fluid, hardened over passing centuries. Location: Cambion Drift (Deimos) from Blue Mining Lesions,","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Casing","d":"The damaged remains of a Necramech supporting frame. Location: Enemy Necramechs found in Isolation Vault Bounties on th","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Engine","d":"An engine designed for use in a Necramech. Unfortunately, it's damaged. Location: Enemy Necramechs found in Isolation V","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Pod","d":"A modular component for a Necramech. It's damaged and in need of repair. Location: Enemy Necramechs found in Isolation ","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Weapon Barrel","d":"The damaged barrel of a heavy-duty Necramech weapon. Location: Isolation Vault and Arcana Isolation Vault Bounties on t","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Weapon Pod","d":"A broken weapon system intended for a Necramech. Location: Enemy Necramechs found in Isolation Vault Bounties on the Ca","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Weapon Receiver","d":"A broken frame that can be used in the construction of a Necramech weapon. Location: Isolation Vault and Arcana Isolati","u":"farming.html"},{"t":"Resource","n":"Damaged Necramech Weapon Stock","d":"The fractured back portion of a large Necramech weapon. Location: Isolation Vault and Arcana Isolation Vault Bounties o","u":"farming.html"},{"t":"Resource","n":"Daughter Token","d":"A token of Daughter's gratitude. Obtained from Daughter in the Necralisk on Deimos.","u":"farming.html"},{"t":"Resource","n":"Detonite Ampule","d":"Researching the Detonite traces within could advance our weapon technology. Location: Venus, Earth, Lua, Ceres, Saturn,","u":"farming.html"},{"t":"Resource","n":"Detonite Injector","d":"Detonite injectors are the basis for explosive and incendiary weapons. Location: Clan Research (Chem Lab in the Dojo) a","u":"farming.html"},{"t":"Resource","n":"Devar","d":"A cloudy crystal. Location: Plains of Eidolon (Earth) from Blue Mining Veins and Thumpers","u":"farming.html"},{"t":"Resource","n":"Devolved Namalon","d":"Retrieved from its Infested state, restored to worth and utility. Blueprint sold by Otak in the Necralisk on Deimos.","u":"farming.html"},{"t":"Resource","n":"Dominus Aureus","d":"Stolen golden seals emblematic of royal authority in Duviri. Return them to restore Dominus Thrax to the throne. Obtain","u":"farming.html"},{"t":"Resource","n":"Dracroot","d":"Dracroot is a staple of the Wyrmling\u2019s diet. Location: Duviri","u":"farming.html"},{"t":"Resource","n":"Dusklight Sarracenia","d":"This robust, carnivorous plant has adapted to conditions in polluted waters. Location: Obtained by gathering Dusklight","u":"farming.html"},{"t":"Resource","n":"Echo Voca","d":"The quietest and most elusive of Voidtongue utterances. Sought after but never found by Albrecht. Location: Albrecht's ","u":"farming.html"},{"t":"Resource","n":"Eevani","d":"Duviri citizens have been known to mash Eevani leaves into a paste that alleviates the discomfort caused by fresh wounds","u":"farming.html"},{"t":"Resource","n":"Efervon Sample","d":"A sample of the corrosive substance that Scaldra use to purge Techrot. Handle with care. Location: 1999 (H\u00f6llvania)","u":"farming.html"},{"t":"Resource","n":"Embolos","d":"This rare gem forms in a clotted mass within the Infestation. Location: Cambion Drift (Deimos) from Blue Mining Lesions","u":"farming.html"},{"t":"Resource","n":"Emerald Talent","d":"A heavy token from Sirius' tortured future. Source: Support Ryoku against Vena (The Kuva Wytch, Uranus Proxima)","u":"farming.html"},{"t":"Resource","n":"Enigma Gyrum","d":"A token celebrating the successful solution of a Duviri Enigma. Location: Earned by completing Enigmas in The Duviri Ex","u":"farming.html"},{"t":"Resource","n":"Entrati Lanthorn","d":"A ceremonial beacon used to map Void locations on to real space. Location: Albrecht's Laboratories (Deimos) and Zariman","u":"farming.html"},{"t":"Resource","n":"Entrati Obols","d":"During the Orokin era, these obols were a commonly recognized mark of the Entrati family. Some Archimedeans even used th","u":"farming.html"},{"t":"Resource","n":"Entratifragmentbase","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"Entratilabdogtag","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"Entropic Kuva","d":"A dangerous and erratic type of Kuva. Obtained from Entropic Eximus in Zariman missions.","u":"farming.html"},{"t":"Resource","n":"Esher Devar","d":"Polished and cut to perfection. Blueprint sold by Old Man Suumbaat in Cetus on Earth.","u":"farming.html"},{"t":"Resource","n":"Exceptional Sentient Core","d":"A coveted sample of Sentient internal anatomy. Specimens of this age and quality are both rare and valuable. Location:","u":"farming.html"},{"t":"Resource","n":"Exemplar Granum Crown","d":"An ancient token of high esteem from the Corpus Founder himself.","u":"farming.html"},{"t":"Resource","n":"Experimental Arc-Relay","d":"H\u00f6llvanian ingenuity knows no bounds, and this unregulated marvel is proof! A cutting-edge device brimming with untamed ","u":"farming.html"},{"t":"Resource","n":"Familial Debt-Bond","d":"Debts unpaid by one generation are passed to the next. Working to pay them off is seen as something to be proud of. What","u":"farming.html"},{"t":"Resource","n":"Father Token","d":"A symbol of Father's trust and confidence. Obtained from Father in the Necralisk on Deimos.","u":"farming.html"},{"t":"Resource","n":"Ferros","d":"A resilient metal that is hardened by impurities within. Location: Plains of Eidolon (Earth) from Red Mining Veins and ","u":"farming.html"},{"t":"Resource","n":"Fieldron","d":"ClanTech weaponized containment field to contain superheated substances. Location: Clan Research (Energy Lab in the Doj","u":"farming.html"},{"t":"Resource","n":"Fieldron Sample","d":"This destroyed Fieldron could further research into super-heated containment fields. Location: Venus, Mars, Jupiter, Eu","u":"farming.html"},{"t":"Resource","n":"Flawless Sentient Core","d":"A Sentient Core of this quality and condition has rarely been found. Truly a special specimen. Location: Earned by capt","u":"farming.html"},{"t":"Resource","n":"Fresnels","d":"A rare Orokin material used to create a tear in space and allow safe passage through the Void.","u":"farming.html"},{"t":"Resource","n":"Frostcap","d":"Engineered by the Orokin to convert airborne chemicals into breathable air.","u":"farming.html"},{"t":"Resource","n":"Frostleaf","d":"This resilient plant provides a natural food source in frigid areas of the Origin system. Location: Obtained by gather","u":"farming.html"},{"t":"Resource","n":"Gallos Rods","d":"Antimatter fuel cell that powers the Grineer Ships. Location: Railjack missions in Earth, Saturn, and Veil Proximas","u":"farming.html"},{"t":"Resource","n":"Ganglion","d":"A fallen clump of entangled nerve fibers, redundant organs, and thin sensory membranes. Location: Cambion Drift on Deim","u":"farming.html"},{"t":"Resource","n":"Genericdojocolorpigment","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"Ghost Brush Extract","d":"Extracted from a Ghost Brush.","u":"farming.html"},{"t":"Resource","n":"Goblite","d":"A strange crystal that grows inside the veins of extracted ore. Location: Orb Vallis (Venus) from Blue Mining Veins","u":"farming.html"},{"t":"Resource","n":"Gorgaricus Spore","d":"The reproductive spore of the giant Vallis fungi is highly coveted for the complex chemical compounds it contains. Loca","u":"farming.html"},{"t":"Resource","n":"Grandmother Token","d":"A rare sign of Grandmother's favor. Obtained from Grandmother in the Necralisk on Deimos.","u":"farming.html"},{"t":"Resource","n":"Granum Crown","d":"An ancient token of esteem from the Corpus Founder himself.","u":"farming.html"},{"t":"Resource","n":"Grokdrul","d":"A noxious mix of polysaccharides and long-chain polymers, Grokdrul is a standard chemical used in Grineer manufacturing.","u":"farming.html"},{"t":"Resource","n":"Grotesque Splinter","d":"A foreboding fragment of the vast Indifference. Location: Effervo (Deimos) during Operation Gargoyle's Cry","u":"farming.html"},{"t":"Resource","n":"Gyromag Systems","d":"A modular component that regulates latitude and altitude in various Corpus systems. Location: Obtained by completing H","u":"farming.html"},{"t":"Resource","n":"Heart Nyth","d":"Polished and cut to perfection. Blueprint sold by Old Man Suumbaat in Cetus on Earth.","u":"farming.html"},{"t":"Resource","n":"Heciphron","d":"Aggregates in the neo-lymph systems of Infested masses. Location: Cambion Drift (Deimos) from Blue Mining Lesions.","u":"farming.html"},{"t":"Resource","n":"Hespazym Alloy","d":"A compound formed from Hesperon. Blueprint sold by Smokefinger in Fortuna on Venus.","u":"farming.html"},{"t":"Resource","n":"Hesperon","d":"Clay that strengthens into extremely durable stone when brought to temperatures below zero. Location: Orb Vallis (Venus","u":"farming.html"},{"t":"Resource","n":"Hexsyndicatedogtag","d":"Check the in-game Codex for drop locations","u":"farming.html"},{"t":"Resource","n":"H\u00f6llvanian Pitchweave Fragment","d":"An Efervon-resistant material used to craft Scaldra uniforms. Location: 1999 (H\u00f6llvania)","u":"farming.html"},{"t":"Resource","n":"Hunhow's Trinket","d":"The Blueprint for an unidentified item. Perhaps some ancient piece of Old War decor.","u":"farming.html"},{"t":"Resource","n":"Ignia","d":"The passionate heat of flames fuels the path to redemption. Location: Obtained from crates and bosses in the Descendia ","u":"farming.html"},{"t":"Resource","n":"Intact Sentient Core","d":"An integral component of Sentient anatomy. Rarely found undamaged, the specimen may prove useful. Location: Drops from","u":"farming.html"},{"t":"Resource","n":"Iradite","d":"A mineral valuable to the Ostrons. Location: Plains of Eidolon on Earth","u":"farming.html"},{"t":"Resource","n":"Isos","d":"A self-replicating fluid comprised of nanoproxies capable of independently repairing worn and damaged systems. Location","u":"farming.html"},{"t":"Resource","n":"Javlok Capacitor","d":"Used in the construction of Javloks","u":"farming.html"},{"t":"Resource","n":"Kesslers","d":"Orokin devices used for navigating the solar winds.","u":"farming.html"},{"t":"Resource","n":"Komms","d":"A component used in secure Grineer communication networks. Location: Railjack missions in Earth, Saturn, and Veil Proxi","u":"farming.html"},{"t":"Resource","n":"Kovnik","d":"Duviri citizens harvest Kovnik leaves to blend invigorating teas. Location: Duviri","u":"farming.html"},{"t":"Resource","n":"Kuaka Spinal Claw","d":"The sinew from the Kuaka's spinal claws can be tanned to make resilient and flexible leather. Location: Plains of Eidol","u":"farming.html"},{"t":"Resource","n":"Kullervo's Bane","d":"Kullervo's fury incarnate. Acrithis will trade this prized artifact for certain items from her collection. Location: Ea","u":"farming.html"},{"t":"Resource","n":"Lamentus","d":"A whisper of the fallen. Location: Duviri","u":"farming.html"},{"t":"Resource","n":"Laudavi","d":"Awarded to soldiers during the The Old War for distinction in battle. Location: Obtained from crates and enemies in Per","u":"farming.html"},{"t":"Resource","n":"Lazulite Toroid","d":"A device of undetermined function and origin. Prized by Vox Solaris and the Quills. Earn Lazulite Toroids by defeating ","u":"farming.html"},{"t":"Resource","n":"Lich Token","d":"A token symbolizing a converted Kuva Lich. Can be traded to other players for control of said Lich.","u":"farming.html"},{"t":"Resource","n":"Lua Thrax Plasm","d":"A unique variant of Thrax Plasm harvested during Void Conjunctions on Lua. Location: Yuvarium and Circulus on Lua","u":"farming.html"},{"t":"Resource","n":"Lucent Teroglobe","d":"These orbs have long since fulfilled their original function, but still, thrum with faint power. Location: Cambion Drif","u":"farming.html"},{"t":"Resource","n":"Lunar Pitcher","d":"This carnivorous plant can be found growing in the wilderness on Lua. Location: Obtained by gathering Lunar Pitcher pl","u":"farming.html"},{"t":"Resource","n":"Lyroic Bridge","d":"A delicate paraneural interface allowing a duly evolved Sentient pilot to command the colossal Hunhullus as if it were a","u":"farming.html"},{"t":"Resource","n":"Maphica","d":"A core of rage, jealously guarded in a burnished shell. Location: Obtained from crates and bosses in the Descendia (Dar","u":"farming.html"},{"t":"Resource","n":"Maprico","d":"This hardy fruit is thick-skinned to withstand harsh conditions, concealing a mouthful of sweet pulp within. Location: ","u":"farming.html"},{"t":"Resource","n":"Marks Of Valiance","d":"Awarded by Grand Carnus Roathe in recognition of valorous deeds past and present. Obtained from Perita Rebellion (Dark ","u":"farming.html"},{"t":"Resource","n":"Marquise Veridos","d":"Polished and cut to perfection. Blueprint sold by Old Man Suumbaat in Cetus on Earth.","u":"farming.html"},{"t":"Resource","n":"Medical Debt-Bond","d":"To get work you need mods. Then you need more work to pay for the mods, so you get more mods. And here we are. Obtained","u":"farming.html"},{"t":"Resource","n":"Mood Crystal","d":"Sleek, stylish, and soothing, mood crystals are the perfect gift for anyone in need of a little calm. Trade this Hex Tre","u":"farming.html"},{"t":"Resource","n":"Moonlight Dragonlily","d":"This uncommon plant can only be found at night. Location: Obtained by gathering Moonlight Dragonlily plants that grow ","u":"farming.html"},{"t":"Resource","n":"Moonlight Jadeleaf","d":"This rare plant can only be found at night. Location: Obtained by gathering Moonlight Jadeleaf plants that grow on Ear","u":"farming.html"},{"t":"Resource","n":"Moonlight Threshcone","d":"This common plant can only be found at night. Location: Obtained by gathering Moonlight Threshcone plants that grow on","u":"farming.html"},{"t":"Resource","n":"Morgha Barrel","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Morgha Receiver","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Morgha Stock","d":"A Necramech weapon-crafting component.","u":"farming.html"},{"t":"Resource","n":"Mother Token","d":"A mark of Mother's esteem. Obtained by completing Bounties in the Cambion Drift on Deimos. ","u":"farming.html"}]
+[
+ {
+  "t": "Relic",
+  "n": "Meso C1",
+  "d": "Meso relic \u2014 Carrier Prime Cerebrum, Nova Prime Neuroptics Blueprint, Forma Blueprint",
+  "u": "relics.html#Meso C1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C10",
+  "d": "Meso relic \u2014 Corinth Prime Barrel, Gara Prime Neuroptics Blueprint, Fang Prime Blueprint",
+  "u": "relics.html#Meso C10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C11",
+  "d": "Meso relic \u2014 Citrine Prime Blueprint, Daikyu Prime Upper Limb, 2X Forma Blueprint",
+  "u": "relics.html#Meso C11"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C2",
+  "d": "Meso relic \u2014 Carrier Prime Cerebrum, Valkyr Prime Neuroptics Blueprint, Odonata Prime Blueprint",
+  "u": "relics.html#Meso C2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C3",
+  "d": "Meso relic \u2014 Cernos Prime Lower Limb, Saryn Prime Blueprint, Helios Prime Blueprint",
+  "u": "relics.html#Meso C3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C4",
+  "d": "Meso relic \u2014 Chroma Prime Systems Blueprint, 2X Forma Blueprint, Atlas Prime Systems Blueprint",
+  "u": "relics.html#Meso C4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C5",
+  "d": "Meso relic \u2014 Corinth Prime Barrel, Chroma Prime Chassis Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso C5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C6",
+  "d": "Meso relic \u2014 Corinth Prime Stock, 2X Forma Blueprint, Nezha Prime Blueprint",
+  "u": "relics.html#Meso C6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C7",
+  "d": "Meso relic \u2014 Carrier Prime Cerebrum, Karyst Prime Handle, Vectis Prime Blueprint",
+  "u": "relics.html#Meso C7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C8",
+  "d": "Meso relic \u2014 Cobra & Crane Prime Guard, Harrow Prime Neuroptics Blueprint, Scourge Prime Handle",
+  "u": "relics.html#Meso C8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso C9",
+  "d": "Meso relic \u2014 Corvas Prime Barrel, Braton Prime Stock, Revenant Prime Systems Blueprint",
+  "u": "relics.html#Meso C9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D1",
+  "d": "Meso relic \u2014 Orthos Prime Handle, 2X Forma Blueprint, Orthos Prime Blade",
+  "u": "relics.html#Meso D1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D2",
+  "d": "Meso relic \u2014 Destreza Prime Blade, Valkyr Prime Neuroptics Blueprint, Helios Prime Systems",
+  "u": "relics.html#Meso D2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D3",
+  "d": "Meso relic \u2014 Destreza Prime Blade, Nami Skyla Prime Handle, Kronen Prime Handle",
+  "u": "relics.html#Meso D3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D4",
+  "d": "Meso relic \u2014 Dethcube Prime Cerebrum, Lex Prime Blueprint, Chroma Prime Chassis Blueprint",
+  "u": "relics.html#Meso D4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D5",
+  "d": "Meso relic \u2014 Dual Kamas Prime Blade, Nova Prime Blueprint, Vasto Prime Blueprint",
+  "u": "relics.html#Meso D5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D6",
+  "d": "Meso relic \u2014 Dethcube Prime Cerebrum, Aksomati Prime Barrel, Nezha Prime Blueprint",
+  "u": "relics.html#Meso D6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D7",
+  "d": "Meso relic \u2014 Dual Keres Prime Blueprint, Strun Prime Stock, Nagantaka Prime Receiver",
+  "u": "relics.html#Meso D7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D8",
+  "d": "Meso relic \u2014 Daikyu Prime Grip, Voruna Prime Neuroptics Blueprint, Yareli Prime Blueprint",
+  "u": "relics.html#Meso D8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso D9",
+  "d": "Meso relic \u2014 Dual Zoren Prime Blade, Steflos Prime Stock, Cedo Prime Receiver",
+  "u": "relics.html#Meso D9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E1",
+  "d": "Meso relic \u2014 Ember Prime Blueprint, Wyrm Prime Systems, 2X Forma Blueprint",
+  "u": "relics.html#Meso E1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E2",
+  "d": "Meso relic \u2014 Equinox Prime Systems Blueprint, Rubico Prime Stock, Akbolto Prime Link",
+  "u": "relics.html#Meso E2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E3",
+  "d": "Meso relic \u2014 Equinox Prime Systems Blueprint, Atlas Prime Chassis Blueprint, Stradavar Prime Barrel",
+  "u": "relics.html#Meso E3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E4",
+  "d": "Meso relic \u2014 Equinox Prime Systems Blueprint, Titania Prime Neuroptics Blueprint, Tekko Prime Blueprint",
+  "u": "relics.html#Meso E4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E5",
+  "d": "Meso relic \u2014 Euphona Prime Receiver, Banshee Prime Blueprint, Helios Prime Blueprint",
+  "u": "relics.html#Meso E5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E6",
+  "d": "Meso relic \u2014 Epitaph Prime Receiver, Akbronco Prime Link, Masseter Prime Blueprint",
+  "u": "relics.html#Meso E6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E7",
+  "d": "Meso relic \u2014 Epitaph Prime Receiver, Sarofang Prime Blueprint, Daikyu Prime Upper Limb",
+  "u": "relics.html#Meso E7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso E8",
+  "d": "Meso relic \u2014 Epitaph Prime Receiver, Nautilus Prime Systems, Hydroid Prime Blueprint",
+  "u": "relics.html#Meso E8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso F1",
+  "d": "Meso relic \u2014 Fragor Prime Blueprint, Nekros Prime Neuroptics Blueprint, Dual Kamas Prime Handle",
+  "u": "relics.html#Meso F1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso F2",
+  "d": "Meso relic \u2014 Frost Prime Blueprint, Reaper Prime Blade, 2X Forma Blueprint",
+  "u": "relics.html#Meso F2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso F3",
+  "d": "Meso relic \u2014 Frost Prime Blueprint, 2X Forma Blueprint, Glaive Prime Disc",
+  "u": "relics.html#Meso F3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso F4",
+  "d": "Meso relic \u2014 Frost Prime Blueprint, Mag Prime Chassis Blueprint, Boar Prime Blueprint",
+  "u": "relics.html#Meso F4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso F5",
+  "d": "Meso relic \u2014 Fulmin Prime Receiver, Paris Prime Grip, Shade Prime Systems",
+  "u": "relics.html#Meso F5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G1",
+  "d": "Meso relic \u2014 Galatine Prime Blueprint, Silva & Aegis Prime Blade, Ballistica Prime String",
+  "u": "relics.html#Meso G1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G10",
+  "d": "Meso relic \u2014 Gunsen Prime Blade, Larkspur Prime Receiver, Hildryn Prime Chassis Blueprint",
+  "u": "relics.html#Meso G10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G2",
+  "d": "Meso relic \u2014 Guandao Prime Handle, Burston Prime Barrel, Atlas Prime Systems Blueprint",
+  "u": "relics.html#Meso G2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G3",
+  "d": "Meso relic \u2014 Gara Prime Blueprint, Karyst Prime Handle, Panthera Prime Stock",
+  "u": "relics.html#Meso G3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G4",
+  "d": "Meso relic \u2014 Guandao Prime Handle, Scourge Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Meso G4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G5",
+  "d": "Meso relic \u2014 Gunsen Prime Blade, Nagantaka Prime Stock, Phantasma Prime Blueprint",
+  "u": "relics.html#Meso G5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G6",
+  "d": "Meso relic \u2014 Grendel Prime Blueprint, Zylok Prime Receiver, Paris Prime Grip",
+  "u": "relics.html#Meso G6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G7",
+  "d": "Meso relic \u2014 Gauss Prime Systems Blueprint, Okina Prime Handle, Tatsu Prime Blade",
+  "u": "relics.html#Meso G7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G8",
+  "d": "Meso relic \u2014 Grendel Prime Blueprint, Quassus Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso G8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso G9",
+  "d": "Meso relic \u2014 Gauss Prime Systems Blueprint, Trumna Prime Stock, 2X Forma Blueprint",
+  "u": "relics.html#Meso G9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H1",
+  "d": "Meso relic \u2014 Helios Prime Cerebrum, Oberon Prime Blueprint, Fragor Prime Blueprint",
+  "u": "relics.html#Meso H1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H2",
+  "d": "Meso relic \u2014 Harrow Prime Systems Blueprint, Nezha Prime Blueprint, Paris Prime Upper Limb",
+  "u": "relics.html#Meso H2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H3",
+  "d": "Meso relic \u2014 Hystrix Prime Receiver, 2X Forma Blueprint, Astilla Prime Blueprint",
+  "u": "relics.html#Meso H3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H4",
+  "d": "Meso relic \u2014 Harrow Prime Systems Blueprint, Strun Prime Barrel, Knell Prime Receiver",
+  "u": "relics.html#Meso H4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H5",
+  "d": "Meso relic \u2014 Hildryn Prime Blueprint, Gauss Prime Neuroptics Blueprint, Revenant Prime Systems Blueprint",
+  "u": "relics.html#Meso H5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H6",
+  "d": "Meso relic \u2014 Hystrix Prime Receiver, 2X Forma Blueprint, Cobra & Crane Prime Blade",
+  "u": "relics.html#Meso H6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H7",
+  "d": "Meso relic \u2014 Hildryn Prime Blueprint, 2X Forma Blueprint, Fulmin Prime Blueprint",
+  "u": "relics.html#Meso H7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso H8",
+  "d": "Meso relic \u2014 Hystrix Prime Receiver, Corvas Prime Blueprint, Dual Keres Prime Handle",
+  "u": "relics.html#Meso H8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso I1",
+  "d": "Meso relic \u2014 Inaros Prime Neuroptics Blueprint, Orthos Prime Blade, Atlas Prime Systems Blueprint",
+  "u": "relics.html#Meso I1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso I2",
+  "d": "Meso relic \u2014 Inaros Prime Neuroptics Blueprint, Guandao Prime Blueprint, Astilla Prime Blueprint",
+  "u": "relics.html#Meso I2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso I3",
+  "d": "Meso relic \u2014 Ivara Prime Chassis Blueprint, Baza Prime Blueprint, Protea Prime Systems Blueprint",
+  "u": "relics.html#Meso I3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K1",
+  "d": "Meso relic \u2014 Kogake Prime Gauntlet, Akstiletto Prime Barrel, Tigris Prime Receiver",
+  "u": "relics.html#Meso K1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K2",
+  "d": "Meso relic \u2014 Kronen Prime Blade, Wukong Prime Systems Blueprint, Chroma Prime Chassis Blueprint",
+  "u": "relics.html#Meso K2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K3",
+  "d": "Meso relic \u2014 Karyst Prime Blade, 2X Forma Blueprint, Wukong Prime Chassis Blueprint",
+  "u": "relics.html#Meso K3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K4",
+  "d": "Meso relic \u2014 Khora Prime Blueprint, 2X Forma Blueprint, Knell Prime Receiver",
+  "u": "relics.html#Meso K4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K5",
+  "d": "Meso relic \u2014 Knell Prime Barrel, Revenant Prime Systems Blueprint, Cobra & Crane Prime Blueprint",
+  "u": "relics.html#Meso K5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K6",
+  "d": "Meso relic \u2014 Knell Prime Receiver, Wisp Prime Neuroptics Blueprint, Orthos Prime Blade",
+  "u": "relics.html#Meso K6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K7",
+  "d": "Meso relic \u2014 Kompressa Prime Barrel, 2X Forma Blueprint, Acceltra Prime Receiver",
+  "u": "relics.html#Meso K7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K8",
+  "d": "Meso relic \u2014 Kestrel Prime Grip, Alternox Prime Barrel, 2X Forma Blueprint",
+  "u": "relics.html#Meso K8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso K9",
+  "d": "Meso relic \u2014 Kestrel Prime Grip, Caliban Prime Blueprint, Perigale Prime Receiver",
+  "u": "relics.html#Meso K9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso L1",
+  "d": "Meso relic \u2014 Limbo Prime Chassis Blueprint, Chroma Prime Chassis Blueprint, Dethcube Prime Carapace",
+  "u": "relics.html#Meso L1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso L2",
+  "d": "Meso relic \u2014 Limbo Prime Chassis Blueprint, Akjagara Prime Receiver, Vasto Prime Blueprint",
+  "u": "relics.html#Meso L2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso L3",
+  "d": "Meso relic \u2014 Lavos Prime Systems Blueprint, Okina Prime Handle, Acceltra Prime Receiver",
+  "u": "relics.html#Meso L3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso L4",
+  "d": "Meso relic \u2014 Lavos Prime Systems Blueprint, Bronco Prime Barrel, Quassus Prime Blueprint",
+  "u": "relics.html#Meso L4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso L5",
+  "d": "Meso relic \u2014 Lavos Prime Systems Blueprint, Trumna Prime Stock, Vadarya Prime Receiver",
+  "u": "relics.html#Meso L5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso M1",
+  "d": "Meso relic \u2014 Mag Prime Blueprint, Boar Prime Barrel, Rhino Prime Chassis Blueprint",
+  "u": "relics.html#Meso M1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso M2",
+  "d": "Meso relic \u2014 Mirage Prime Blueprint, Akjagara Prime Link, Silva & Aegis Prime Blade",
+  "u": "relics.html#Meso M2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso M3",
+  "d": "Meso relic \u2014 Mirage Prime Blueprint, Equinox Prime Neuroptics Blueprint, Kogake Prime Blueprint",
+  "u": "relics.html#Meso M3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso M4",
+  "d": "Meso relic \u2014 Masseter Prime Blade, Fang Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Meso M4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso M5",
+  "d": "Meso relic \u2014 Magnus Prime Barrel, Spira Prime Blade, Strun Prime Stock",
+  "u": "relics.html#Meso M5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N1",
+  "d": "Meso relic \u2014 Fang Prime Handle, Braton Prime Stock, Fang Prime Blueprint",
+  "u": "relics.html#Meso N1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N10",
+  "d": "Meso relic \u2014 Ninkondi Prime Handle, Bronco Prime Barrel, Panthera Prime Stock",
+  "u": "relics.html#Meso N10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N11",
+  "d": "Meso relic \u2014 Nyx Prime Neuroptics Blueprint, Valkyr Prime Neuroptics Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso N11"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N12",
+  "d": "Meso relic \u2014 Nagantaka Prime Blueprint, Inaros Prime Blueprint, Nidus Prime Blueprint",
+  "u": "relics.html#Meso N12"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N13",
+  "d": "Meso relic \u2014 Nidus Prime Chassis Blueprint, Astilla Prime Stock, Garuda Prime Chassis Blueprint",
+  "u": "relics.html#Meso N13"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N14",
+  "d": "Meso relic \u2014 Nidus Prime Chassis Blueprint, Shade Prime Blueprint, Cobra & Crane Prime Blade",
+  "u": "relics.html#Meso N14"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N15",
+  "d": "Meso relic \u2014 Nezha Prime Chassis Blueprint, Octavia Prime Chassis Blueprint, Lex Prime Blueprint",
+  "u": "relics.html#Meso N15"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N16",
+  "d": "Meso relic \u2014 Nekros Prime Systems Blueprint, Tigris Prime Barrel, Fang Prime Handle",
+  "u": "relics.html#Meso N16"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N17",
+  "d": "Meso relic \u2014 Nautilus Prime Blueprint, Akarius Prime Link, Velox Prime Blueprint",
+  "u": "relics.html#Meso N17"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N2",
+  "d": "Meso relic \u2014 Ash Prime Neuroptics Blueprint, Vauban Prime Neuroptics Blueprint, Hikou Prime Blueprint",
+  "u": "relics.html#Meso N2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N3",
+  "d": "Meso relic \u2014 Nekros Prime Blueprint, Euphona Prime Barrel, Carrier Prime Cerebrum",
+  "u": "relics.html#Meso N3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N4",
+  "d": "Meso relic \u2014 Nikana Prime Blade, 2X Forma Blueprint, Oberon Prime Blueprint",
+  "u": "relics.html#Meso N4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N5",
+  "d": "Meso relic \u2014 Nekros Prime Systems Blueprint, Hydroid Prime Blueprint, Tigris Prime Receiver",
+  "u": "relics.html#Meso N5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N6",
+  "d": "Meso relic \u2014 Nyx Prime Neuroptics Blueprint, Scindo Prime Handle, Rhino Prime Chassis Blueprint",
+  "u": "relics.html#Meso N6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N7",
+  "d": "Meso relic \u2014 Ninkondi Prime Handle, Gram Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso N7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N8",
+  "d": "Meso relic \u2014 Nikana Prime Hilt, Valkyr Prime Neuroptics Blueprint, Cernos Prime String",
+  "u": "relics.html#Meso N8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso N9",
+  "d": "Meso relic \u2014 Ninkondi Prime Handle, Ivara Prime Blueprint, Akjagara Prime Link",
+  "u": "relics.html#Meso N9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O1",
+  "d": "Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Akstiletto Prime Link, Cernos Prime String",
+  "u": "relics.html#Meso O1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O2",
+  "d": "Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Akbronco Prime Link, Mirage Prime Systems Blueprint",
+  "u": "relics.html#Meso O2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O3",
+  "d": "Meso relic \u2014 Odonata Prime Wings Blueprint, Volt Prime Chassis Blueprint, Wyrm Prime Systems",
+  "u": "relics.html#Meso O3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O4",
+  "d": "Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Nekros Prime Neuroptics Blueprint, Galatine Prime Handle",
+  "u": "relics.html#Meso O4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O5",
+  "d": "Meso relic \u2014 Octavia Prime Blueprint, Gara Prime Neuroptics Blueprint, Nagantaka Prime Receiver",
+  "u": "relics.html#Meso O5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso O6",
+  "d": "Meso relic \u2014 Oberon Prime Neuroptics Blueprint, Silva & Aegis Prime Blade, Lex Prime Blueprint",
+  "u": "relics.html#Meso O6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P1",
+  "d": "Meso relic \u2014 Pyrana Prime Blueprint, Silva & Aegis Prime Blueprint, Ballistica Prime Receiver",
+  "u": "relics.html#Meso P1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P10",
+  "d": "Meso relic \u2014 Phantasma Prime Barrel, Paris Prime Upper Limb, Harrow Prime Neuroptics Blueprint",
+  "u": "relics.html#Meso P10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P11",
+  "d": "Meso relic \u2014 Phantasma Prime Stock, Hildryn Prime Chassis Blueprint, Dual Keres Prime Handle",
+  "u": "relics.html#Meso P11"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P12",
+  "d": "Meso relic \u2014 Panthera Prime Barrel, Ash Prime Neuroptics Blueprint, Burston Prime Barrel",
+  "u": "relics.html#Meso P12"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P13",
+  "d": "Meso relic \u2014 Phantasma Prime Barrel, Akbronco Prime Link, Garuda Prime Chassis Blueprint",
+  "u": "relics.html#Meso P13"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P14",
+  "d": "Meso relic \u2014 Phantasma Prime Stock, Hildryn Prime Neuroptics Blueprint, Shade Prime Systems",
+  "u": "relics.html#Meso P14"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P15",
+  "d": "Meso relic \u2014 Protea Prime Systems Blueprint, 2X Forma Blueprint, Gunsen Prime Handle",
+  "u": "relics.html#Meso P15"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P16",
+  "d": "Meso relic \u2014 Protea Prime Systems Blueprint, Daikyu Prime Upper Limb, Akarius Prime Link",
+  "u": "relics.html#Meso P16"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P17",
+  "d": "Meso relic \u2014 Protea Prime Chassis Blueprint, Kestrel Prime Blueprint, Yareli Prime Blueprint",
+  "u": "relics.html#Meso P17"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P2",
+  "d": "Meso relic \u2014 Panthera Prime Receiver, Zhuge Prime Blueprint, Ivara Prime Systems Blueprint",
+  "u": "relics.html#Meso P2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P3",
+  "d": "Meso relic \u2014 Pangolin Prime Blueprint, Mesa Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso P3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P4",
+  "d": "Meso relic \u2014 Panthera Prime Barrel, Corinth Prime Receiver, Titania Prime Neuroptics Blueprint",
+  "u": "relics.html#Meso P4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P5",
+  "d": "Meso relic \u2014 Panthera Prime Receiver, Gara Prime Neuroptics Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso P5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P6",
+  "d": "Meso relic \u2014 Pyrana Prime Blueprint, Kavasa Prime Kubrow Collar Blueprint, Trinity Prime Blueprint",
+  "u": "relics.html#Meso P6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P7",
+  "d": "Meso relic \u2014 Panthera Prime Barrel, Garuda Prime Chassis Blueprint, Guandao Prime Blueprint",
+  "u": "relics.html#Meso P7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P8",
+  "d": "Meso relic \u2014 Pandero Prime Receiver, Nidus Prime Blueprint, Zakti Prime Barrel",
+  "u": "relics.html#Meso P8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso P9",
+  "d": "Meso relic \u2014 Pandero Prime Receiver, Revenant Prime Systems Blueprint, Nagantaka Prime Receiver",
+  "u": "relics.html#Meso P9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R1",
+  "d": "Meso relic \u2014 Rubico Prime Blueprint, Akbronco Prime Link, Ballistica Prime String",
+  "u": "relics.html#Meso R1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R2",
+  "d": "Meso relic \u2014 Rubico Prime Blueprint, Mesa Prime Blueprint, Destreza Prime Blueprint",
+  "u": "relics.html#Meso R2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R3",
+  "d": "Meso relic \u2014 Rubico Prime Blueprint, Dethcube Prime Carapace, Bronco Prime Barrel",
+  "u": "relics.html#Meso R3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R4",
+  "d": "Meso relic \u2014 Rubico Prime Blueprint, Chroma Prime Systems Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso R4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R5",
+  "d": "Meso relic \u2014 Revenant Prime Blueprint, Nidus Prime Blueprint, Astilla Prime Blueprint",
+  "u": "relics.html#Meso R5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso R6",
+  "d": "Meso relic \u2014 Revenant Prime Blueprint, Cobra & Crane Prime Blade, Orthos Prime Blueprint",
+  "u": "relics.html#Meso R6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S1",
+  "d": "Meso relic \u2014 Soma Prime Stock, Paris Prime Upper Limb, Odonata Prime Blueprint",
+  "u": "relics.html#Meso S1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S10",
+  "d": "Meso relic \u2014 Strun Prime Blueprint, Aksomati Prime Barrel, Titania Prime Blueprint",
+  "u": "relics.html#Meso S10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S11",
+  "d": "Meso relic \u2014 Scourge Prime Barrel, Octavia Prime Chassis Blueprint, Strun Prime Stock",
+  "u": "relics.html#Meso S11"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S12",
+  "d": "Meso relic \u2014 Scourge Prime Barrel, 2X Forma Blueprint, Braton Prime Stock",
+  "u": "relics.html#Meso S12"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S13",
+  "d": "Meso relic \u2014 Scourge Prime Barrel, Tigris Prime Receiver, Burston Prime Barrel",
+  "u": "relics.html#Meso S13"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S14",
+  "d": "Meso relic \u2014 Sicarus Prime Receiver, Rhino Prime Neuroptics Blueprint, Ember Prime Neuroptics Blueprint",
+  "u": "relics.html#Meso S14"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S15",
+  "d": "Meso relic \u2014 Spira Prime Pouch, Nikana Prime Blade, Paris Prime Grip",
+  "u": "relics.html#Meso S15"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S2",
+  "d": "Meso relic \u2014 Saryn Prime Chassis Blueprint, Paris Prime Grip, 2X Forma Blueprint",
+  "u": "relics.html#Meso S2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S3",
+  "d": "Meso relic \u2014 Spira Prime Pouch, Ash Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso S3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S4",
+  "d": "Meso relic \u2014 Saryn Prime Blueprint, Fang Prime Handle, Trinity Prime Blueprint",
+  "u": "relics.html#Meso S4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S5",
+  "d": "Meso relic \u2014 Sybaris Prime Barrel, 2X Forma Blueprint, Saryn Prime Neuroptics Blueprint",
+  "u": "relics.html#Meso S5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S6",
+  "d": "Meso relic \u2014 Spira Prime Blade, Cernos Prime String, Tigris Prime Receiver",
+  "u": "relics.html#Meso S6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S7",
+  "d": "Meso relic \u2014 Sybaris Prime Barrel, Paris Prime Grip, Nami Skyla Prime Handle",
+  "u": "relics.html#Meso S7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S8",
+  "d": "Meso relic \u2014 Sybaris Prime Barrel, Ballistica Prime Upper Limb, Burston Prime Barrel",
+  "u": "relics.html#Meso S8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso S9",
+  "d": "Meso relic \u2014 Spira Prime Pouch, Saryn Prime Neuroptics Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Meso S9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T1",
+  "d": "Meso relic \u2014 Tiberon Prime Barrel, Paris Prime Upper Limb, 2X Forma Blueprint",
+  "u": "relics.html#Meso T1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T2",
+  "d": "Meso relic \u2014 Tiberon Prime Stock, Tigris Prime Receiver, Banshee Prime Blueprint",
+  "u": "relics.html#Meso T2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T3",
+  "d": "Meso relic \u2014 Tiberon Prime Stock, Chroma Prime Chassis Blueprint, Limbo Prime Blueprint",
+  "u": "relics.html#Meso T3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T4",
+  "d": "Meso relic \u2014 Tenora Prime Receiver, Wukong Prime Systems Blueprint, Paris Prime Grip",
+  "u": "relics.html#Meso T4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T5",
+  "d": "Meso relic \u2014 Tenora Prime Barrel, Panthera Prime Stock, Astilla Prime Stock",
+  "u": "relics.html#Meso T5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T6",
+  "d": "Meso relic \u2014 Tekko Prime Blade, Akstiletto Prime Receiver, Vauban Prime Chassis Blueprint",
+  "u": "relics.html#Meso T6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T7",
+  "d": "Meso relic \u2014 Trumna Prime Barrel, Gauss Prime Neuroptics Blueprint, Akarius Prime Link",
+  "u": "relics.html#Meso T7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso T8",
+  "d": "Meso relic \u2014 Trumna Prime Barrel, Protea Prime Neuroptics Blueprint, Akarius Prime Link",
+  "u": "relics.html#Meso T8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V1",
+  "d": "Meso relic \u2014 Burston Prime Blueprint, Braton Prime Blueprint, Spira Prime Blueprint",
+  "u": "relics.html#Meso V1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V10",
+  "d": "Meso relic \u2014 Velox Prime Barrel, Paris Prime Upper Limb, Fulmin Prime Stock",
+  "u": "relics.html#Meso V10"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V11",
+  "d": "Meso relic \u2014 Velox Prime Barrel, Caliban Prime Blueprint, Nautilus Prime Systems",
+  "u": "relics.html#Meso V11"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V12",
+  "d": "Meso relic \u2014 Vadarya Prime Blueprint, Bronco Prime Barrel, Sevagoth Prime Blueprint",
+  "u": "relics.html#Meso V12"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V13",
+  "d": "Meso relic \u2014 Venato Prime Blade, Burston Prime Barrel, Caliban Prime Blueprint",
+  "u": "relics.html#Meso V13"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V14",
+  "d": "Meso relic \u2014 Velox Prime Barrel, Trumna Prime Stock, 2X Forma Blueprint",
+  "u": "relics.html#Meso V14"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V15",
+  "d": "Meso relic \u2014 Vadarya Prime Blueprint, 2X Forma Blueprint, Caliban Prime Blueprint",
+  "u": "relics.html#Meso V15"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V16",
+  "d": "Meso relic \u2014 Velox Prime Barrel, Ivara Prime Systems Blueprint, Okina Prime Handle",
+  "u": "relics.html#Meso V16"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V17",
+  "d": "Meso relic \u2014 Voruna Prime Systems Blueprint, Paris Prime Grip, Lavos Prime Blueprint",
+  "u": "relics.html#Meso V17"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V2",
+  "d": "Meso relic \u2014 Vasto Prime Receiver, Paris Prime Blueprint, Ash Prime Chassis Blueprint",
+  "u": "relics.html#Meso V2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V3",
+  "d": "Meso relic \u2014 Valkyr Prime Systems Blueprint, Kavasa Prime Band, Volt Prime Chassis Blueprint",
+  "u": "relics.html#Meso V3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V4",
+  "d": "Meso relic \u2014 Vauban Prime Chassis Blueprint, Valkyr Prime Neuroptics Blueprint, Ash Prime Neuroptics Blueprint",
+  "u": "relics.html#Meso V4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V5",
+  "d": "Meso relic \u2014 Venka Prime Gauntlet, Euphona Prime Barrel, Silva & Aegis Prime Blueprint",
+  "u": "relics.html#Meso V5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V6",
+  "d": "Meso relic \u2014 Vectis Prime Receiver, Vauban Prime Blueprint, Carrier Prime Cerebrum",
+  "u": "relics.html#Meso V6"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V7",
+  "d": "Meso relic \u2014 Volnus Prime Handle, Dual Keres Prime Handle, Fang Prime Handle",
+  "u": "relics.html#Meso V7"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V8",
+  "d": "Meso relic \u2014 Vauban Prime Neuroptics Blueprint, Tekko Prime Blueprint, Vasto Prime Blueprint",
+  "u": "relics.html#Meso V8"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso V9",
+  "d": "Meso relic \u2014 Velox Prime Barrel, Afuris Prime Link, Baruuk Prime Chassis Blueprint",
+  "u": "relics.html#Meso V9"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso W1",
+  "d": "Meso relic \u2014 Wukong Prime Blueprint, Fang Prime Handle, Zephyr Prime Chassis Blueprint",
+  "u": "relics.html#Meso W1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso W2",
+  "d": "Meso relic \u2014 Wukong Prime Blueprint, Zhuge Prime Receiver, Fang Prime Handle",
+  "u": "relics.html#Meso W2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso W3",
+  "d": "Meso relic \u2014 Wisp Prime Blueprint, Orthos Prime Blade, Larkspur Prime Stock",
+  "u": "relics.html#Meso W3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso W4",
+  "d": "Meso relic \u2014 Wisp Prime Blueprint, 2X Forma Blueprint, Gunsen Prime Handle",
+  "u": "relics.html#Meso W4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso W5",
+  "d": "Meso relic \u2014 Wisp Prime Chassis Blueprint, Cobra & Crane Prime Blade, Phantasma Prime Blueprint",
+  "u": "relics.html#Meso W5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso X1",
+  "d": "Meso relic \u2014 Xaku Prime Blueprint, Dual Zoren Prime Blueprint, Paris Prime Grip",
+  "u": "relics.html#Meso X1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Y1",
+  "d": "Meso relic \u2014 Yareli Prime Neuroptics Blueprint, Okina Prime Handle, Cedo Prime Barrel",
+  "u": "relics.html#Meso Y1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Y2",
+  "d": "Meso relic \u2014 Yareli Prime Neuroptics Blueprint, Styanax Prime Chassis Blueprint, Daikyu Prime Upper Limb",
+  "u": "relics.html#Meso Y2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z1",
+  "d": "Meso relic \u2014 Zephyr Prime Blueprint, Helios Prime Blueprint, Limbo Prime Blueprint",
+  "u": "relics.html#Meso Z1"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z2",
+  "d": "Meso relic \u2014 Zephyr Prime Systems Blueprint, Hydroid Prime Blueprint, Rubico Prime Barrel",
+  "u": "relics.html#Meso Z2"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z3",
+  "d": "Meso relic \u2014 Zephyr Prime Systems Blueprint, Akjagara Prime Link, Rubico Prime Barrel",
+  "u": "relics.html#Meso Z3"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z4",
+  "d": "Meso relic \u2014 Zakti Prime Blueprint, Tenora Prime Stock, Bronco Prime Barrel",
+  "u": "relics.html#Meso Z4"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z5",
+  "d": "Meso relic \u2014 Zakti Prime Blueprint, Guandao Prime Blueprint, Tenora Prime Barrel",
+  "u": "relics.html#Meso Z5"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Z6",
+  "d": "Meso relic \u2014 Zylok Prime Blueprint, Gauss Prime Neuroptics Blueprint, Bronco Prime Barrel",
+  "u": "relics.html#Meso Z6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A1",
+  "d": "Neo relic \u2014 Akstiletto Prime Blueprint, Cernos Prime String, Vectis Prime Blueprint",
+  "u": "relics.html#Neo A1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A10",
+  "d": "Neo relic \u2014 Ash Prime Systems Blueprint, Inaros Prime Chassis Blueprint, Panthera Prime Receiver",
+  "u": "relics.html#Neo A10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A11",
+  "d": "Neo relic \u2014 Akarius Prime Blueprint, Burston Prime Barrel, Braton Prime Receiver",
+  "u": "relics.html#Neo A11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A12",
+  "d": "Neo relic \u2014 Acceltra Prime Barrel, Larkspur Prime Stock, Revenant Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo A12"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A13",
+  "d": "Neo relic \u2014 Acceltra Prime Barrel, Sevagoth Prime Blueprint, Wisp Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo A13"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A14",
+  "d": "Neo relic \u2014 Acceltra Prime Barrel, Yareli Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo A14"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A15",
+  "d": "Neo relic \u2014 Acceltra Prime Barrel, Vadarya Prime Barrel, Quassus Prime Blueprint",
+  "u": "relics.html#Neo A15"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A16",
+  "d": "Neo relic \u2014 Athodai Prime Barrel, Sarofang Prime Blueprint, Lavos Prime Blueprint",
+  "u": "relics.html#Neo A16"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A2",
+  "d": "Neo relic \u2014 Akbolto Prime Receiver, Zephyr Prime Chassis Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo A2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A3",
+  "d": "Neo relic \u2014 Akjagara Prime Barrel, Atlas Prime Systems Blueprint, Equinox Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo A3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A4",
+  "d": "Neo relic \u2014 Akstiletto Prime Blueprint, Ash Prime Neuroptics Blueprint, Vectis Prime Blueprint",
+  "u": "relics.html#Neo A4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A5",
+  "d": "Neo relic \u2014 Atlas Prime Neuroptics Blueprint, Octavia Prime Chassis Blueprint, Karyst Prime Handle",
+  "u": "relics.html#Neo A5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A6",
+  "d": "Neo relic \u2014 Akjagara Prime Barrel, Hydroid Prime Blueprint, Ballistica Prime String",
+  "u": "relics.html#Neo A6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A7",
+  "d": "Neo relic \u2014 Akstiletto Prime Blueprint, Atlas Prime Chassis Blueprint, Dethcube Prime Cerebrum",
+  "u": "relics.html#Neo A7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A8",
+  "d": "Neo relic \u2014 Astilla Prime Barrel, Strun Prime Stock, Baruuk Prime Chassis Blueprint",
+  "u": "relics.html#Neo A8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo A9",
+  "d": "Neo relic \u2014 Akjagara Prime Barrel, Limbo Prime Blueprint, Lex Prime Blueprint",
+  "u": "relics.html#Neo A9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B1",
+  "d": "Neo relic \u2014 Banshee Prime Chassis Blueprint, Vectis Prime Stock, Burston Prime Barrel",
+  "u": "relics.html#Neo B1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B2",
+  "d": "Neo relic \u2014 Banshee Prime Chassis Blueprint, Venka Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo B2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B3",
+  "d": "Neo relic \u2014 Boltor Prime Blueprint, Mag Prime Chassis Blueprint, Dakra Prime Blade",
+  "u": "relics.html#Neo B3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B4",
+  "d": "Neo relic \u2014 Banshee Prime Systems Blueprint, Kronen Prime Handle, Tigris Prime Barrel",
+  "u": "relics.html#Neo B4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B5",
+  "d": "Neo relic \u2014 Banshee Prime Systems Blueprint, Destreza Prime Blueprint, Oberon Prime Blueprint",
+  "u": "relics.html#Neo B5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B6",
+  "d": "Neo relic \u2014 Banshee Prime Chassis Blueprint, Kogake Prime Blueprint, Akbolto Prime Link",
+  "u": "relics.html#Neo B6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B7",
+  "d": "Neo relic \u2014 Baza Prime Stock, Tekko Prime Blueprint, Dethcube Prime Carapace",
+  "u": "relics.html#Neo B7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B8",
+  "d": "Neo relic \u2014 Boar Prime Stock, Dakra Prime Blueprint, Latron Prime Receiver",
+  "u": "relics.html#Neo B8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo B9",
+  "d": "Neo relic \u2014 Baruuk Prime Neuroptics Blueprint, Burston Prime Barrel, Gunsen Prime Handle",
+  "u": "relics.html#Neo B9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C1",
+  "d": "Neo relic \u2014 Chroma Prime Systems Blueprint, Redeemer Prime Blueprint, Pyrana Prime Receiver",
+  "u": "relics.html#Neo C1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C10",
+  "d": "Neo relic \u2014 Corufell Prime Receiver, Styanax Prime Systems Blueprint, Afentis Prime Barrel",
+  "u": "relics.html#Neo C10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C11",
+  "d": "Neo relic \u2014 Caliban Prime Systems Blueprint, Cedo Prime Barrel, Vadarya Prime Receiver",
+  "u": "relics.html#Neo C11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C2",
+  "d": "Neo relic \u2014 Corvas Prime Barrel, Orthos Prime Blueprint, Magnus Prime Receiver",
+  "u": "relics.html#Neo C2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C3",
+  "d": "Neo relic \u2014 Cobra & Crane Prime Guard, Paris Prime Grip, Magnus Prime Receiver",
+  "u": "relics.html#Neo C3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C4",
+  "d": "Neo relic \u2014 Corvas Prime Barrel, Paris Prime Upper Limb, Hildryn Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo C4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C5",
+  "d": "Neo relic \u2014 Corvas Prime Barrel, Hystrix Prime Blueprint, Khora Prime Blueprint",
+  "u": "relics.html#Neo C5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C6",
+  "d": "Neo relic \u2014 Cedo Prime Blueprint, Velox Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo C6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C7",
+  "d": "Neo relic \u2014 Caliban Prime Neuroptics Blueprint, Daikyu Prime Upper Limb, Vadarya Prime Receiver",
+  "u": "relics.html#Neo C7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C8",
+  "d": "Neo relic \u2014 Caliban Prime Systems Blueprint, Afentis Prime Barrel, Venato Prime Blueprint",
+  "u": "relics.html#Neo C8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo C9",
+  "d": "Neo relic \u2014 Cedo Prime Blueprint, Xaku Prime Chassis Blueprint, Akbronco Prime Link",
+  "u": "relics.html#Neo C9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D1",
+  "d": "Neo relic \u2014 Dakra Prime Blade, Mag Prime Systems Blueprint, Trinity Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo D1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D10",
+  "d": "Neo relic \u2014 Daikyu Prime Grip, Velox Prime Blueprint, Gauss Prime Blueprint",
+  "u": "relics.html#Neo D10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D2",
+  "d": "Neo relic \u2014 Dethcube Prime Cerebrum, Titania Prime Blueprint, Equinox Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo D2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D3",
+  "d": "Neo relic \u2014 Dethcube Prime Blueprint, 2X Forma Blueprint, Zakti Prime Barrel",
+  "u": "relics.html#Neo D3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D4",
+  "d": "Neo relic \u2014 Destreza Prime Blade, Dual Kamas Prime Handle, Limbo Prime Blueprint",
+  "u": "relics.html#Neo D4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D5",
+  "d": "Neo relic \u2014 Dual Keres Prime Blueprint, Braton Prime Stock, Corvas Prime Blueprint",
+  "u": "relics.html#Neo D5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D6",
+  "d": "Neo relic \u2014 Dethcube Prime Blueprint, Akstiletto Prime Link, Fragor Prime Handle",
+  "u": "relics.html#Neo D6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D7",
+  "d": "Neo relic \u2014 Dual Keres Prime Blueprint, Knell Prime Receiver, Khora Prime Chassis Blueprint",
+  "u": "relics.html#Neo D7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D8",
+  "d": "Neo relic \u2014 Dual Keres Prime Blueprint, 2X Forma Blueprint, Larkspur Prime Receiver",
+  "u": "relics.html#Neo D8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo D9",
+  "d": "Neo relic \u2014 Dual Zoren Prime Blade, Orthos Prime Blueprint, Protea Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo D9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo E1",
+  "d": "Neo relic \u2014 Ember Prime Blueprint, Reaper Prime Blade, 2X Forma Blueprint",
+  "u": "relics.html#Neo E1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo E2",
+  "d": "Neo relic \u2014 Equinox Prime Systems Blueprint, Zakti Prime Barrel, Atlas Prime Chassis Blueprint",
+  "u": "relics.html#Neo E2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo E3",
+  "d": "Neo relic \u2014 Equinox Prime Systems Blueprint, Stradavar Prime Barrel, Lex Prime Blueprint",
+  "u": "relics.html#Neo E3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo E4",
+  "d": "Neo relic \u2014 Epitaph Prime Receiver, Gauss Prime Neuroptics Blueprint, Fang Prime Handle",
+  "u": "relics.html#Neo E4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo F1",
+  "d": "Neo relic \u2014 Frost Prime Blueprint, Bo Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo F1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo F2",
+  "d": "Neo relic \u2014 Fulmin Prime Receiver, Cobra & Crane Prime Blade, Nagantaka Prime Receiver",
+  "u": "relics.html#Neo F2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo F3",
+  "d": "Neo relic \u2014 Fulmin Prime Receiver, Acceltra Prime Receiver, Larkspur Prime Receiver",
+  "u": "relics.html#Neo F3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G1",
+  "d": "Neo relic \u2014 Gram Prime Handle, Paris Prime Grip, Hydroid Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo G1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G10",
+  "d": "Neo relic \u2014 Grendel Prime Blueprint, Gauss Prime Blueprint, Akarius Prime Receiver",
+  "u": "relics.html#Neo G10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G2",
+  "d": "Neo relic \u2014 Gram Prime Handle, Pyrana Prime Receiver, Zhuge Prime Blueprint",
+  "u": "relics.html#Neo G2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G3",
+  "d": "Neo relic \u2014 Galatine Prime Blueprint, Sybaris Prime Receiver, Silva & Aegis Prime Blueprint",
+  "u": "relics.html#Neo G3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G4",
+  "d": "Neo relic \u2014 Gara Prime Blueprint, Paris Prime Grip, Magnus Prime Receiver",
+  "u": "relics.html#Neo G4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G5",
+  "d": "Neo relic \u2014 Galatine Prime Blueprint, Harrow Prime Blueprint, Fang Prime Blueprint",
+  "u": "relics.html#Neo G5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G6",
+  "d": "Neo relic \u2014 Glaive Prime Blueprint, Boltor Prime Receiver, Ankyros Prime Blade",
+  "u": "relics.html#Neo G6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G7",
+  "d": "Neo relic \u2014 Grendel Prime Blueprint, Cobra & Crane Prime Blade, Hildryn Prime Chassis Blueprint",
+  "u": "relics.html#Neo G7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G8",
+  "d": "Neo relic \u2014 Gauss Prime Systems Blueprint, Xaku Prime Chassis Blueprint, Okina Prime Handle",
+  "u": "relics.html#Neo G8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo G9",
+  "d": "Neo relic \u2014 Gauss Prime Systems Blueprint, Bronco Prime Barrel, Masseter Prime Blueprint",
+  "u": "relics.html#Neo G9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo H1",
+  "d": "Neo relic \u2014 Hydroid Prime Systems Blueprint, Banshee Prime Blueprint, Tigris Prime Barrel",
+  "u": "relics.html#Neo H1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo H2",
+  "d": "Neo relic \u2014 Hydroid Prime Systems Blueprint, Rubico Prime Barrel, Ballistica Prime Receiver",
+  "u": "relics.html#Neo H2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo H3",
+  "d": "Neo relic \u2014 Hydroid Prime Systems Blueprint, Mesa Prime Systems Blueprint, Nami Skyla Prime Handle",
+  "u": "relics.html#Neo H3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo H4",
+  "d": "Neo relic \u2014 Hildryn Prime Blueprint, Fulmin Prime Blueprint, Wisp Prime Chassis Blueprint",
+  "u": "relics.html#Neo H4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo H5",
+  "d": "Neo relic \u2014 Hydroid Prime Systems Blueprint, Ballistica Prime String, Ballistica Prime Upper Limb",
+  "u": "relics.html#Neo H5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo I1",
+  "d": "Neo relic \u2014 Ivara Prime Chassis Blueprint, Akjagara Prime Receiver, Limbo Prime Blueprint",
+  "u": "relics.html#Neo I1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo I2",
+  "d": "Neo relic \u2014 Ivara Prime Chassis Blueprint, Stradavar Prime Barrel, Wukong Prime Systems Blueprint",
+  "u": "relics.html#Neo I2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo I3",
+  "d": "Neo relic \u2014 Ivara Prime Chassis Blueprint, Sybaris Prime Receiver, Baza Prime Barrel",
+  "u": "relics.html#Neo I3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K1",
+  "d": "Neo relic \u2014 Kogake Prime Gauntlet, Zephyr Prime Chassis Blueprint, Helios Prime Blueprint",
+  "u": "relics.html#Neo K1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K10",
+  "d": "Neo relic \u2014 Kompressa Prime Barrel, Venato Prime Blueprint, Daikyu Prime Lower Limb",
+  "u": "relics.html#Neo K10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K2",
+  "d": "Neo relic \u2014 Kogake Prime Gauntlet, Mirage Prime Systems Blueprint, Akbolto Prime Link",
+  "u": "relics.html#Neo K2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K3",
+  "d": "Neo relic \u2014 Kronen Prime Blade, Tiberon Prime Barrel, Braton Prime Receiver",
+  "u": "relics.html#Neo K3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K4",
+  "d": "Neo relic \u2014 Knell Prime Barrel, Paris Prime Grip, Braton Prime Stock",
+  "u": "relics.html#Neo K4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K5",
+  "d": "Neo relic \u2014 Khora Prime Neuroptics Blueprint, Scourge Prime Handle, Afuris Prime Link",
+  "u": "relics.html#Neo K5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K6",
+  "d": "Neo relic \u2014 Khora Prime Blueprint, Wisp Prime Neuroptics Blueprint, Hystrix Prime Blueprint",
+  "u": "relics.html#Neo K6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K7",
+  "d": "Neo relic \u2014 Khora Prime Neuroptics Blueprint, Gunsen Prime Handle, Baruuk Prime Chassis Blueprint",
+  "u": "relics.html#Neo K7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K8",
+  "d": "Neo relic \u2014 Khora Prime Neuroptics Blueprint, Garuda Prime Systems Blueprint, Burston Prime Barrel",
+  "u": "relics.html#Neo K8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo K9",
+  "d": "Neo relic \u2014 Kestrel Prime Grip, Xaku Prime Chassis Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo K9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo L1",
+  "d": "Neo relic \u2014 Limbo Prime Chassis Blueprint, Silva & Aegis Prime Blade, Ballistica Prime Receiver",
+  "u": "relics.html#Neo L1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo L2",
+  "d": "Neo relic \u2014 Larkspur Prime Barrel, Akbronco Prime Link, Corvas Prime Blueprint",
+  "u": "relics.html#Neo L2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo L3",
+  "d": "Neo relic \u2014 Larkspur Prime Barrel, Orthos Prime Blueprint, Harrow Prime Blueprint",
+  "u": "relics.html#Neo L3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo L4",
+  "d": "Neo relic \u2014 Larkspur Prime Barrel, Fang Prime Handle, Acceltra Prime Receiver",
+  "u": "relics.html#Neo L4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M1",
+  "d": "Neo relic \u2014 Mirage Prime Blueprint, Helios Prime Blueprint, Euphona Prime Barrel",
+  "u": "relics.html#Neo M1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M2",
+  "d": "Neo relic \u2014 Mesa Prime Systems Blueprint, Limbo Prime Blueprint, Bronco Prime Barrel",
+  "u": "relics.html#Neo M2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M3",
+  "d": "Neo relic \u2014 Mesa Prime Systems Blueprint, Atlas Prime Chassis Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo M3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M4",
+  "d": "Neo relic \u2014 Magnus Prime Barrel, Nagantaka Prime Receiver, 2X Forma Blueprint",
+  "u": "relics.html#Neo M4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M5",
+  "d": "Neo relic \u2014 Masseter Prime Blade, 2X Forma Blueprint, Gauss Prime Blueprint",
+  "u": "relics.html#Neo M5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo M6",
+  "d": "Neo relic \u2014 Masseter Prime Blade, Acceltra Prime Receiver, Grendel Prime Systems Blueprint",
+  "u": "relics.html#Neo M6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N1",
+  "d": "Neo relic \u2014 Nyx Prime Chassis Blueprint, Soma Prime Receiver, Kavasa Prime Kubrow Collar Blueprint",
+  "u": "relics.html#Neo N1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N10",
+  "d": "Neo relic \u2014 Nami Skyla Prime Blade, Ballistica Prime Upper Limb, Tipedo Prime Ornament",
+  "u": "relics.html#Neo N10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N11",
+  "d": "Neo relic \u2014 Nekros Prime Systems Blueprint, Oberon Prime Systems Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo N11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N12",
+  "d": "Neo relic \u2014 Nova Prime Chassis Blueprint, Dual Kamas Prime Handle, Kavasa Prime Band",
+  "u": "relics.html#Neo N12"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N13",
+  "d": "Neo relic \u2014 Nezha Prime Chassis Blueprint, 2X Forma Blueprint, Wukong Prime Chassis Blueprint",
+  "u": "relics.html#Neo N13"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N14",
+  "d": "Neo relic \u2014 Ninkondi Prime Handle, Braton Prime Receiver, Zhuge Prime Receiver",
+  "u": "relics.html#Neo N14"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N15",
+  "d": "Neo relic \u2014 Nezha Prime Neuroptics Blueprint, Atlas Prime Systems Blueprint, Baza Prime Barrel",
+  "u": "relics.html#Neo N15"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N16",
+  "d": "Neo relic \u2014 Nidus Prime Neuroptics Blueprint, Orthos Prime Blade, Pandero Prime Barrel",
+  "u": "relics.html#Neo N16"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N17",
+  "d": "Neo relic \u2014 Nezha Prime Chassis Blueprint, Strun Prime Stock, 2X Forma Blueprint",
+  "u": "relics.html#Neo N17"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N18",
+  "d": "Neo relic \u2014 Nidus Prime Chassis Blueprint, 2X Forma Blueprint, Gara Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo N18"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N19",
+  "d": "Neo relic \u2014 Nikana Prime Hilt, Magnus Prime Receiver, Paris Prime Upper Limb",
+  "u": "relics.html#Neo N19"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N2",
+  "d": "Neo relic \u2014 Lex Prime Blueprint, Vauban Prime Systems Blueprint, Fang Prime Blueprint",
+  "u": "relics.html#Neo N2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N20",
+  "d": "Neo relic \u2014 Nezha Prime Neuroptics Blueprint, Pandero Prime Barrel, Karyst Prime Handle",
+  "u": "relics.html#Neo N20"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N21",
+  "d": "Neo relic \u2014 Nagantaka Prime Blueprint, Khora Prime Chassis Blueprint, Harrow Prime Blueprint",
+  "u": "relics.html#Neo N21"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N22",
+  "d": "Neo relic \u2014 Nagantaka Prime Blueprint, Garuda Prime Chassis Blueprint, Magnus Prime Receiver",
+  "u": "relics.html#Neo N22"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N23",
+  "d": "Neo relic \u2014 Nagantaka Prime Blueprint, Paris Prime Grip, Baruuk Prime Chassis Blueprint",
+  "u": "relics.html#Neo N23"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N24",
+  "d": "Neo relic \u2014 Nautilus Prime Blueprint, Kestrel Prime Blueprint, Lavos Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo N24"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N25",
+  "d": "Neo relic \u2014 Nautilus Prime Blueprint, Hydroid Prime Neuroptics Blueprint, Ballistica Prime Receiver",
+  "u": "relics.html#Neo N25"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N3",
+  "d": "Neo relic \u2014 Nekros Prime Systems Blueprint, Fang Prime Handle, Ash Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo N3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N4",
+  "d": "Neo relic \u2014 Nikana Prime Blade, 2X Forma Blueprint, Venka Prime Blueprint",
+  "u": "relics.html#Neo N4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N5",
+  "d": "Neo relic \u2014 Nikana Prime Blueprint, Ash Prime Systems Blueprint, Akstiletto Prime Link",
+  "u": "relics.html#Neo N5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N6",
+  "d": "Neo relic \u2014 Nikana Prime Hilt, Sybaris Prime Receiver, Trinity Prime Blueprint",
+  "u": "relics.html#Neo N6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N7",
+  "d": "Neo relic \u2014 Nekros Prime Systems Blueprint, Banshee Prime Blueprint, Valkyr Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo N7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N8",
+  "d": "Neo relic \u2014 Nami Skyla Prime Blade, Akbolto Prime Link, 2X Forma Blueprint",
+  "u": "relics.html#Neo N8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo N9",
+  "d": "Neo relic \u2014 Nova Prime Chassis Blueprint, Soma Prime Receiver, 2X Forma Blueprint",
+  "u": "relics.html#Neo N9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo O1",
+  "d": "Neo relic \u2014 Odonata Prime Wings Blueprint, Aklex Prime Blueprint, Volt Prime Systems Blueprint",
+  "u": "relics.html#Neo O1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo O2",
+  "d": "Neo relic \u2014 Okina Prime Blueprint, Fulmin Prime Blueprint, Acceltra Prime Receiver",
+  "u": "relics.html#Neo O2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo O3",
+  "d": "Neo relic \u2014 Okina Prime Blueprint, Akbronco Prime Link, Xaku Prime Systems Blueprint",
+  "u": "relics.html#Neo O3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo O4",
+  "d": "Neo relic \u2014 Okina Prime Blueprint, Baza Prime Barrel, Braton Prime Blueprint",
+  "u": "relics.html#Neo O4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P1",
+  "d": "Neo relic \u2014 Pangolin Prime Blueprint, Akjagara Prime Receiver, Rubico Prime Stock",
+  "u": "relics.html#Neo P1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P10",
+  "d": "Neo relic \u2014 Perigale Prime Barrel, Trumna Prime Stock, Cedo Prime Receiver",
+  "u": "relics.html#Neo P10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P11",
+  "d": "Neo relic \u2014 Protea Prime Chassis Blueprint, Aksomati Prime Barrel, Braton Prime Receiver",
+  "u": "relics.html#Neo P11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P2",
+  "d": "Neo relic \u2014 Pandero Prime Receiver, 2X Forma Blueprint, Titania Prime Blueprint",
+  "u": "relics.html#Neo P2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P3",
+  "d": "Neo relic \u2014 Pangolin Prime Blueprint, Astilla Prime Stock, Inaros Prime Chassis Blueprint",
+  "u": "relics.html#Neo P3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P4",
+  "d": "Neo relic \u2014 Pandero Prime Receiver, 2X Forma Blueprint, Braton Prime Receiver",
+  "u": "relics.html#Neo P4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P5",
+  "d": "Neo relic \u2014 Pangolin Prime Blueprint, Gara Prime Chassis Blueprint, Burston Prime Barrel",
+  "u": "relics.html#Neo P5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P6",
+  "d": "Neo relic \u2014 Phantasma Prime Stock, Protea Prime Neuroptics Blueprint, Masseter Prime Blueprint",
+  "u": "relics.html#Neo P6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P7",
+  "d": "Neo relic \u2014 Protea Prime Chassis Blueprint, Larkspur Prime Stock, Hildryn Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo P7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P8",
+  "d": "Neo relic \u2014 Phantasma Prime Barrel, Revenant Prime Systems Blueprint, Afuris Prime Link",
+  "u": "relics.html#Neo P8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo P9",
+  "d": "Neo relic \u2014 Protea Prime Systems Blueprint, Orthos Prime Blade, Epitaph Prime Barrel",
+  "u": "relics.html#Neo P9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Q1",
+  "d": "Neo relic \u2014 Quassus Prime Blade, Hildryn Prime Chassis Blueprint, Orthos Prime Blueprint",
+  "u": "relics.html#Neo Q1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo R1",
+  "d": "Neo relic \u2014 Rhino Prime Blueprint, Boltor Prime Receiver, Nyx Prime Chassis Blueprint",
+  "u": "relics.html#Neo R1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo R2",
+  "d": "Neo relic \u2014 Rubico Prime Blueprint, Paris Prime Grip, Tiberon Prime Blueprint",
+  "u": "relics.html#Neo R2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo R3",
+  "d": "Neo relic \u2014 Redeemer Prime Handle, Paris Prime Grip, Ninkondi Prime Chain",
+  "u": "relics.html#Neo R3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo R4",
+  "d": "Neo relic \u2014 Redeemer Prime Handle, Corinth Prime Receiver, Ninkondi Prime Chain",
+  "u": "relics.html#Neo R4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo R5",
+  "d": "Neo relic \u2014 Redeemer Prime Handle, Akjagara Prime Link, Fang Prime Handle",
+  "u": "relics.html#Neo R5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S1",
+  "d": "Neo relic \u2014 Saryn Prime Blueprint, Trinity Prime Chassis Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo S1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S10",
+  "d": "Neo relic \u2014 Saryn Prime Chassis Blueprint, Nikana Prime Blade, Spira Prime Blade",
+  "u": "relics.html#Neo S10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S11",
+  "d": "Neo relic \u2014 Stradavar Prime Blueprint, Kronen Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo S11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S12",
+  "d": "Neo relic \u2014 Stradavar Prime Blueprint, Wukong Prime Chassis Blueprint, Mirage Prime Systems Blueprint",
+  "u": "relics.html#Neo S12"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S13",
+  "d": "Neo relic \u2014 Saryn Prime Chassis Blueprint, Cernos Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo S13"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S14",
+  "d": "Neo relic \u2014 Stradavar Prime Blueprint, Fang Prime Handle, Pangolin Prime Blade",
+  "u": "relics.html#Neo S14"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S15",
+  "d": "Neo relic \u2014 Scourge Prime Barrel, Garuda Prime Chassis Blueprint, Bronco Prime Barrel",
+  "u": "relics.html#Neo S15"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S16",
+  "d": "Neo relic \u2014 Silva & Aegis Prime Guard, Oberon Prime Blueprint, Aksomati Prime Barrel",
+  "u": "relics.html#Neo S16"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S17",
+  "d": "Neo relic \u2014 Strun Prime Blueprint, Hildryn Prime Neuroptics Blueprint, Baruuk Prime Chassis Blueprint",
+  "u": "relics.html#Neo S17"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S18",
+  "d": "Neo relic \u2014 Shade Prime Carapace, Grendel Prime Chassis Blueprint, Cobra & Crane Prime Blueprint",
+  "u": "relics.html#Neo S18"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S19",
+  "d": "Neo relic \u2014 Strun Prime Blueprint, Saryn Prime Neuroptics Blueprint, Nidus Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo S19"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S2",
+  "d": "Neo relic \u2014 Nyx Prime Systems Blueprint, Saryn Prime Chassis Blueprint, Burston Prime Stock",
+  "u": "relics.html#Neo S2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S20",
+  "d": "Neo relic \u2014 Sevagoth Prime Chassis Blueprint, 2X Forma Blueprint, Vadarya Prime Receiver",
+  "u": "relics.html#Neo S20"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S3",
+  "d": "Neo relic \u2014 Soma Prime Barrel, 2X Forma Blueprint, Vasto Prime Blueprint",
+  "u": "relics.html#Neo S3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S5",
+  "d": "Neo relic \u2014 Sicarus Prime Receiver, Glaive Prime Disc, Frost Prime Systems Blueprint",
+  "u": "relics.html#Neo S5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S6",
+  "d": "Neo relic \u2014 Silva & Aegis Prime Guard, Tigris Prime Receiver, Kavasa Prime Buckle",
+  "u": "relics.html#Neo S6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S7",
+  "d": "Neo relic \u2014 Silva & Aegis Prime Guard, Sybaris Prime Receiver, Ballistica Prime Receiver",
+  "u": "relics.html#Neo S7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S8",
+  "d": "Neo relic \u2014 Spira Prime Pouch, Nikana Prime Blueprint, Fragor Prime Blueprint",
+  "u": "relics.html#Neo S8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo S9",
+  "d": "Neo relic \u2014 Silva & Aegis Prime Guard, Destreza Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo S9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T1",
+  "d": "Neo relic \u2014 Tigris Prime Blueprint, Banshee Prime Blueprint, Fragor Prime Handle",
+  "u": "relics.html#Neo T1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T10",
+  "d": "Neo relic \u2014 Trumna Prime Receiver, Gyre Prime Blueprint, Nautilus Prime Systems",
+  "u": "relics.html#Neo T10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T11",
+  "d": "Neo relic \u2014 Trumna Prime Receiver, Kestrel Prime Blueprint, Yareli Prime Blueprint",
+  "u": "relics.html#Neo T11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T2",
+  "d": "Neo relic \u2014 Tekko Prime Blade, Dethcube Prime Carapace, 2X Forma Blueprint",
+  "u": "relics.html#Neo T2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T3",
+  "d": "Neo relic \u2014 Titania Prime Systems Blueprint, Inaros Prime Chassis Blueprint, Atlas Prime Chassis Blueprint",
+  "u": "relics.html#Neo T3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T4",
+  "d": "Neo relic \u2014 Tenora Prime Receiver, Astilla Prime Blueprint, Guandao Prime Blueprint",
+  "u": "relics.html#Neo T4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T5",
+  "d": "Neo relic \u2014 Tenora Prime Barrel, Magnus Prime Receiver, Corinth Prime Receiver",
+  "u": "relics.html#Neo T5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T6",
+  "d": "Neo relic \u2014 Tenora Prime Barrel, Scourge Prime Handle, Tatsu Prime Blade",
+  "u": "relics.html#Neo T6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T7",
+  "d": "Neo relic \u2014 Tatsu Prime Handle, Gunsen Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo T7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T8",
+  "d": "Neo relic \u2014 Tenora Prime Receiver, Pandero Prime Barrel, Nezha Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo T8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo T9",
+  "d": "Neo relic \u2014 Trumna Prime Receiver, Gauss Prime Blueprint, Cedo Prime Barrel",
+  "u": "relics.html#Neo T9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V1",
+  "d": "Neo relic \u2014 Nyx Prime Blueprint, Forma Blueprint, Bronco Prime Barrel",
+  "u": "relics.html#Neo V1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V10",
+  "d": "Neo relic \u2014 Volnus Prime Handle, Akbronco Prime Link, Inaros Prime Chassis Blueprint",
+  "u": "relics.html#Neo V10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V11",
+  "d": "Neo relic \u2014 Voruna Prime Systems Blueprint, Epitaph Prime Barrel, Xaku Prime Chassis Blueprint",
+  "u": "relics.html#Neo V11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V12",
+  "d": "Neo relic \u2014 Voruna Prime Systems Blueprint, Xaku Prime Chassis Blueprint, Quassus Prime Blueprint",
+  "u": "relics.html#Neo V12"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V13",
+  "d": "Neo relic \u2014 Vadarya Prime Blueprint, Lavos Prime Neuroptics Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo V13"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V2",
+  "d": "Neo relic \u2014 Vauban Prime Blueprint, Galatine Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo V2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V3",
+  "d": "Neo relic \u2014 Vauban Prime Neuroptics Blueprint, Tigris Prime Receiver, 2X Forma Blueprint",
+  "u": "relics.html#Neo V3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V4",
+  "d": "Neo relic \u2014 Venka Prime Gauntlet, Saryn Prime Neuroptics Blueprint, Ash Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo V4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V5",
+  "d": "Neo relic \u2014 Vauban Prime Neuroptics Blueprint, 2X Forma Blueprint, Burston Prime Barrel",
+  "u": "relics.html#Neo V5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V6",
+  "d": "Neo relic \u2014 Vauban Prime Chassis Blueprint, Mirage Prime Systems Blueprint, Fragor Prime Handle",
+  "u": "relics.html#Neo V6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V7",
+  "d": "Neo relic \u2014 Valkyr Prime Chassis Blueprint, Banshee Prime Blueprint, Cernos Prime Blueprint",
+  "u": "relics.html#Neo V7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V8",
+  "d": "Neo relic \u2014 Volt Prime Neuroptics Blueprint, Bo Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo V8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo V9",
+  "d": "Neo relic \u2014 Valkyr Prime Chassis Blueprint, Cernos Prime Blueprint, Lex Prime Blueprint",
+  "u": "relics.html#Neo V9"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo W1",
+  "d": "Neo relic \u2014 Wisp Prime Chassis Blueprint, 2X Forma Blueprint, Dual Keres Prime Handle",
+  "u": "relics.html#Neo W1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo W2",
+  "d": "Neo relic \u2014 Wisp Prime Blueprint, Burston Prime Barrel, 2X Forma Blueprint",
+  "u": "relics.html#Neo W2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo X1",
+  "d": "Neo relic \u2014 Xaku Prime Blueprint, Braton Prime Receiver, Quassus Prime Blueprint",
+  "u": "relics.html#Neo X1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Y1",
+  "d": "Neo relic \u2014 Yareli Prime Systems Blueprint, Styanax Prime Systems Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo Y1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Y2",
+  "d": "Neo relic \u2014 Yareli Prime Systems Blueprint, Steflos Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo Y2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z1",
+  "d": "Neo relic \u2014 Zephyr Prime Blueprint, Galatine Prime Handle, 2X Forma Blueprint",
+  "u": "relics.html#Neo Z1"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z10",
+  "d": "Neo relic \u2014 Zylok Prime Blueprint, Revenant Prime Neuroptics Blueprint, Phantasma Prime Blueprint",
+  "u": "relics.html#Neo Z10"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z11",
+  "d": "Neo relic \u2014 Zylok Prime Blueprint, Okina Prime Handle, Shade Prime Blueprint",
+  "u": "relics.html#Neo Z11"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z2",
+  "d": "Neo relic \u2014 Zephyr Prime Blueprint, Mesa Prime Blueprint, Pyrana Prime Receiver",
+  "u": "relics.html#Neo Z2"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z3",
+  "d": "Neo relic \u2014 Zhuge Prime Barrel, Mesa Prime Blueprint, Akjagara Prime Receiver",
+  "u": "relics.html#Neo Z3"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z4",
+  "d": "Neo relic \u2014 Zephyr Prime Blueprint, 2X Forma Blueprint, Redeemer Prime Blueprint",
+  "u": "relics.html#Neo Z4"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z5",
+  "d": "Neo relic \u2014 Zhuge Prime Barrel, Aksomati Prime Barrel, 2X Forma Blueprint",
+  "u": "relics.html#Neo Z5"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z6",
+  "d": "Neo relic \u2014 Zhuge Prime Barrel, Tipedo Prime Ornament, Titania Prime Neuroptics Blueprint",
+  "u": "relics.html#Neo Z6"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z7",
+  "d": "Neo relic \u2014 Zhuge Prime Barrel, Octavia Prime Chassis Blueprint, Akbronco Prime Link",
+  "u": "relics.html#Neo Z7"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z8",
+  "d": "Neo relic \u2014 Zephyr Prime Systems Blueprint, Gram Prime Blueprint, 2X Forma Blueprint",
+  "u": "relics.html#Neo Z8"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Z9",
+  "d": "Neo relic \u2014 Zhuge Prime Barrel, Wukong Prime Systems Blueprint, Ninkondi Prime Chain",
+  "u": "relics.html#Neo Z9"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem Eterna Relic",
+  "d": "Requiem relic \u2014 Lohk, Xata, Jahu",
+  "u": "relics.html#Requiem Eterna Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem I",
+  "d": "Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Lohk, Xata",
+  "u": "relics.html#Requiem I"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem II",
+  "d": "Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Jahu, Vome",
+  "u": "relics.html#Requiem II"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem III",
+  "d": "Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Ris, Fass",
+  "u": "relics.html#Requiem III"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem IV",
+  "d": "Requiem relic \u2014 Exilus Weapon Adapter Blueprint, Netra, Khra",
+  "u": "relics.html#Requiem IV"
+ },
+ {
+  "t": "Relic",
+  "n": "Vanguard C1",
+  "d": "Unknown relic \u2014 Caliban Prime Systems Blueprint, Mesa Prime Systems Blueprint, Ash Prime Systems Blueprint",
+  "u": "relics.html#Vanguard C1"
+ },
+ {
+  "t": "Relic",
+  "n": "Vanguard E1",
+  "d": "Unknown relic \u2014 Ember Prime Blueprint, Caliban Prime Neuroptics Blueprint, Ash Prime Blueprint",
+  "u": "relics.html#Vanguard E1"
+ },
+ {
+  "t": "Relic",
+  "n": "Vanguard M1",
+  "d": "Unknown relic \u2014 Mesa Prime Neuroptics Blueprint, Volt Prime Systems Blueprint, Protea Prime Chassis Blueprint",
+  "u": "relics.html#Vanguard M1"
+ },
+ {
+  "t": "Relic",
+  "n": "Vanguard P1",
+  "d": "Unknown relic \u2014 Protea Prime Systems Blueprint, Volt Prime Neuroptics Blueprint, Ember Prime Systems Blueprint",
+  "u": "relics.html#Vanguard P1"
+ },
+ {
+  "t": "Relic",
+  "n": "Axi Relic",
+  "d": "Axi relic \u2014 ",
+  "u": "relics.html#Axi Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Lith Relic",
+  "d": "Lith relic \u2014 ",
+  "u": "relics.html#Lith Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Meso Relic",
+  "d": "Meso relic \u2014 ",
+  "u": "relics.html#Meso Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Neo Relic",
+  "d": "Neo relic \u2014 ",
+  "u": "relics.html#Neo Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Requiem Relic",
+  "d": "Requiem relic \u2014 ",
+  "u": "relics.html#Requiem Relic"
+ },
+ {
+  "t": "Relic",
+  "n": "Void Relic",
+  "d": " relic \u2014 ",
+  "u": "relics.html#Void Relic"
+ },
+ {
+  "t": "Build",
+  "n": "Kuva Zarr \u2014 One-Shot Steel Path",
+  "d": "The classic room-deleter. Cannon mode wipes packs, alt-fire Barrage melts single targets. Hunter Munitions slash procs on crits ignore armor",
+  "u": "builds.html#kuva-zarr-oneshot"
+ },
+ {
+  "t": "Build",
+  "n": "Kuva Bramma \u2014 One-Shot Steel Path",
+  "d": "Cluster bombs that carpet an area. Still one of the most reliable Steel Path clearers \u2014 shoot above a pack and let the bomblets finish the j",
+  "u": "builds.html#kuva-bramma-oneshot"
+ },
+ {
+  "t": "Build",
+  "n": "Phenmor \u2014 One-Shot Steel Path (Incarnon)",
+  "d": "Charge the Incarnon form and it becomes a hitscan delete beam. One of the hardest-hitting primaries in the game once transformed.",
+  "u": "builds.html#phenmor-oneshot"
+ },
+ {
+  "t": "Build",
+  "n": "Tenet Arca Plasmor \u2014 Strong All-Rounder",
+  "d": "A wall of plasma per shot. Huge damage per trigger pull with innate punch-through \u2014 point it at a hallway and everything dies.",
+  "u": "builds.html#tenet-arca-plasmor"
+ },
+ {
+  "t": "Build",
+  "n": "Laetum \u2014 One-Shot Steel Path (Incarnon Pistol)",
+  "d": "Builds charges on kill, then the Incarnon form fires devastating void beams. Arguably the best secondary in the game for Steel Path.",
+  "u": "builds.html#laetum-oneshot"
+ },
+ {
+  "t": "Build",
+  "n": "Kuva Nukor \u2014 Status Primer / Strong Secondary",
+  "d": "Chains microwave beams across enemies stacking tons of statuses. The best primer in the game \u2014 paint a pack with statuses, then one-tap them",
+  "u": "builds.html#kuva-nukor-primer"
+ },
+ {
+  "t": "Build",
+  "n": "Glaive Prime \u2014 One-Shot Heavy Attack",
+  "d": "Throw it, detonate mid-air, watch the map explode. Heavy-attack thrown detonations scale insanely and one-shot Steel Path packs.",
+  "u": "builds.html#glaive-prime-oneshot"
+ },
+ {
+  "t": "Build",
+  "n": "Revenant \u2014 Unkillable Steel Path Frame",
+  "d": "Mesmer Skin makes you literally unkillable while charges last. The easiest frame to take into hard Steel Path content \u2014 press 2 and walk for",
+  "u": "builds.html#revenant-tank"
+ },
+ {
+  "t": "Build",
+  "n": "Saryn \u2014 Room Nuke (Steel Path Farm Queen)",
+  "d": "Spores + Toxic Lash spread viral/toxin across the whole map. The fastest Steel Path clearer for exterminate and survival farms.",
+  "u": "builds.html#saryn-nuke"
+ },
+ {
+  "t": "Build",
+  "n": "Wukong \u2014 Lazy Immortal (Strong General)",
+  "d": "Defy gives you 3 free deaths per cast and your Celestial Twin doubles your damage. The comfiest frame for almost any content.",
+  "u": "builds.html#wukong-tank"
+ },
+ {
+  "t": "Build",
+  "n": "Rhino \u2014 Best Starter Tank (Strong General)",
+  "d": "Iron Skin makes you immune to damage and knockdown. The classic recommendation for new players pushing through the star chart into Steel Pat",
+  "u": "builds.html#rhino-starter"
+ },
+ {
+  "t": "Build",
+  "n": "Nautilus Prime \u2014 Best Sentinel for AoE Builds",
+  "d": "Cordon yanks every enemy within 30m into one tight ball every 15s \u2014 shoot the ball once with your Zarr/Bramma and the whole pack dies.",
+  "u": "builds.html#nautilus-prime-setup"
+ },
+ {
+  "t": "Amp part",
+  "n": "Raplak",
+  "d": "Semi-auto, long-range, accurate hitscan \u2014 best single-target prism",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Shwaak",
+  "d": "Semi-auto, medium-range shots with punch-through",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Granmu",
+  "d": "Burst-fire prism",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Rahn",
+  "d": "Full-auto, long-range shots",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Cantic",
+  "d": "Fast, economical fire \u2014 easy on the energy bar",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Lega",
+  "d": "Releases an attack that damages over time",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Klamora",
+  "d": "Short-range, wide-angle energy release \u2014 great for crowds",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Propa",
+  "d": "Throws a large proximity mine \u2014 huge burst damage, the meta scaffold",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Phahd",
+  "d": "Powerful bouncing projectiles that clear rooms",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Pencha",
+  "d": "Charged beam, hits like a truck",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Dissic",
+  "d": "Lobs a powerful explosive charge",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Exard",
+  "d": "Explosive grenade launcher alt-fire",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Shraksun",
+  "d": "Small area burst",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Klebrik",
+  "d": "Fragmenting burst scaffold",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Certus",
+  "d": "+20% critical chance \u2014 the go-to brace for damage builds",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Lohrin",
+  "d": "+12% critical and status chance",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Juttni",
+  "d": "-1s amp recharge delay",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Anspatha",
+  "d": "+20 energy pool, +15/s energy recharge",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Suo",
+  "d": "+100 energy pool, -2s recharge delay",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Plaga",
+  "d": "-20 energy pool, -1.5s recharge delay",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp part",
+  "n": "Clapkra",
+  "d": "Balanced starter brace",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp combo",
+  "n": "177 Raplak / Propa / Certus",
+  "d": "The classic Eidolon DPS amp. Accurate Raplak primary for limbs, Propa mines for burst, Certus crit \u2014 still the community standard for hunts.",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp combo",
+  "n": "777 Klamora / Propa / Certus",
+  "d": "Wide-angle Klamora clears groups, Propa handles burst. A strong all-rounder that works everywhere including Steel Path content.",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp combo",
+  "n": "577 Cantic / Propa / Certus",
+  "d": "Fast, ammo-efficient Cantic primary with the Propa/Certus punch. Great if you hate managing the amp energy bar.",
+  "u": "amps.html"
+ },
+ {
+  "t": "Amp combo",
+  "n": "747 Klamora / Phahd / Certus",
+  "d": "Bouncing Phahd projectiles clear rooms of weaker enemies. Fun and effective for open-world bounties.",
+  "u": "amps.html"
+ },
+ {
+  "t": "Focus school",
+  "n": "Madurai",
+  "d": "The damage school. For Tenno who solve problems with overwhelming force.",
+  "u": "operators.html"
+ },
+ {
+  "t": "Focus school",
+  "n": "Vazarin",
+  "d": "The support school. Shields, healing, and keeping your squad standing.",
+  "u": "operators.html"
+ },
+ {
+  "t": "Focus school",
+  "n": "Naramon",
+  "d": "The melee/mobility school. Speed and combo for aggressive Tenno.",
+  "u": "operators.html"
+ },
+ {
+  "t": "Focus school",
+  "n": "Unairu",
+  "d": "The tank school. Strip armor and shrug off damage.",
+  "u": "operators.html"
+ },
+ {
+  "t": "Focus school",
+  "n": "Zenurik",
+  "d": "The energy school. The most popular first school for a reason.",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Lockdown",
+  "d": "Tether mines that lock enemies in place \u2014 the best crowd-control arcane in the game",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Elevate",
+  "d": "Heal your Warframe when transferring to Operator",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Repair",
+  "d": "Regenerate health over time",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Husk",
+  "d": "Bonus health for your Operator",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Vigor",
+  "d": "Bonus shields for your Operator",
+  "u": "operators.html"
+ },
+ {
+  "t": "Operator arcane",
+  "n": "Magus Melt",
+  "d": "Chance for your amp shots to explode",
+  "u": "operators.html"
+ },
+ {
+  "t": "Resource",
+  "n": "Orokin Cells",
+  "d": "Gabii \u2014 Ceres (Survival, Dark Sector)",
+  "u": "resources.html#Orokin%20Cell"
+ },
+ {
+  "t": "Resource",
+  "n": "Plastids / Polymer",
+  "d": "Piscinas \u2014 Saturn (Survival)",
+  "u": "resources.html#Plastids"
+ },
+ {
+  "t": "Resource",
+  "n": "Affinity + Orokin Cells",
+  "d": "Helene \u2014 Saturn (defense, dark sector)",
+  "u": "farming.html"
+ },
+ {
+  "t": "Resource",
+  "n": "Affinity leveling",
+  "d": "Hydron \u2014 Sedna (defense)",
+  "u": "farming.html"
+ },
+ {
+  "t": "Resource",
+  "n": "Argon Crystals",
+  "d": "Taranis (Defense) or Mot (Survival) \u2014 Void",
+  "u": "resources.html#Argon%20Crystal"
+ },
+ {
+  "t": "Resource",
+  "n": "Neural Sensors",
+  "d": "Cameria (Survival) or kill Alad V on Themisto \u2014 Drops from Jupiter enemies and Alad V.",
+  "u": "resources.html#Neural%20Sensors"
+ },
+ {
+  "t": "Resource",
+  "n": "Rubedo",
+  "d": "Excavation and Survival on Earth and Lua \u2014 Also found in Void containers.",
+  "u": "resources.html#Rubedo"
+ },
+ {
+  "t": "Resource",
+  "n": "Ferrite",
+  "d": "Survival and Defense on Mercury and Earth",
+  "u": "resources.html#Ferrite"
+ },
+ {
+  "t": "Resource",
+  "n": "Nano Spores",
+  "d": "Survival and Defense on Deimos and Saturn \u2014 Orokin Derelict vault runs drop these too.",
+  "u": "resources.html#Nano%20Spores"
+ },
+ {
+  "t": "Resource",
+  "n": "Salvage",
+  "d": "Dark Sector Survival on Mars and Jupiter",
+  "u": "resources.html#Salvage"
+ },
+ {
+  "t": "Resource",
+  "n": "Alloy Plate",
+  "d": "Dark Sector Survival or Excavation on Venus",
+  "u": "resources.html#Alloy%20Plate"
+ },
+ {
+  "t": "Resource",
+  "n": "Circuits",
+  "d": "Defense and Survival on Venus \u2014 Also drops on Ceres.",
+  "u": "resources.html#Circuits"
+ },
+ {
+  "t": "Resource",
+  "n": "Control Modules",
+  "d": "Survival missions on Phobos or the Void",
+  "u": "resources.html#Control%20Module"
+ },
+ {
+  "t": "Resource",
+  "n": "Gallium",
+  "d": "Survival or Defense on Mars and Uranus",
+  "u": "resources.html#Gallium"
+ },
+ {
+  "t": "Resource",
+  "n": "Morphics",
+  "d": "Survival on Mercury, Mars, or Europa \u2014 Captain Vor on Mercury also drops Morphics.",
+  "u": "resources.html#Morphics"
+ },
+ {
+  "t": "Resource",
+  "n": "Neurodes",
+  "d": "Everest \u2014 Earth (Excavation) \u2014 Also drops from Sentients on Lua.",
+  "u": "resources.html#Neurodes"
+ },
+ {
+  "t": "Resource",
+  "n": "Nitain Extract",
+  "d": "Buy from Nora's Nightwave shop with creds \u2014 No longer drops from alerts \u2014 Nightwave is the only source.",
+  "u": "resources.html#Nitain%20Extract"
+ },
+ {
+  "t": "Resource",
+  "n": "Cryotic",
+  "d": "Hieracon \u2014 Pluto (Excavation) \u2014 The classic Cryotic farm. Bring a Frost or Limbo to protect extractors.",
+  "u": "resources.html#Cryotic"
+ },
+ {
+  "t": "Resource",
+  "n": "Oxium",
+  "d": "Io \u2014 Jupiter (Defense), kill Oxium Ospreys \u2014 Only drops from Oxium Ospreys \u2014 prioritize killing them. Also on Neptune.",
+  "u": "resources.html#Oxium"
+ },
+ {
+  "t": "Resource",
+  "n": "Tellurium",
+  "d": "Ophelia \u2014 Uranus (Submersible Survival) \u2014 Also drops in Kuva Fortress missions and from Archwing enemies.",
+  "u": "resources.html#Tellurium"
+ },
+ {
+  "t": "Resource",
+  "n": "35mm Film",
+  "d": "Missions in 1999 (H\u00f6llvania) \u2014 Check the in-game Codex for specific drop locations.",
+  "u": "resources.html#35mm%20Film"
+ },
+ {
+  "t": "Resource",
+  "n": "Adramal Alloy",
+  "d": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos) \u2014 Made from Adramalium.",
+  "u": "resources.html#Adramal%20Alloy"
+ },
+ {
+  "t": "Resource",
+  "n": "Adramalium",
+  "d": "Yellow Mining Veins on Cambion Drift (Deimos) \u2014 Refine into Adramal Alloy (blueprint from Otak in the Necralisk).",
+  "u": "resources.html#Adramalium"
+ },
+ {
+  "t": "Resource",
+  "n": "Advances Debt-Bond",
+  "d": "Fortuna bounties \u2014 Orb Vallis (Venus) \u2014 Trade to Ticker in Fortuna for standing.",
+  "u": "resources.html#Advances%20Debt-Bond"
+ },
+ {
+  "t": "Resource",
+  "n": "Aggristone",
+  "d": "Drops from Orowyrm formations in Duviri",
+  "u": "resources.html#Aggristone"
+ },
+ {
+  "t": "Resource",
+  "n": "Agnovidisc",
+  "d": "Old War identification marks \u2014 check the in-game Codex",
+  "u": "resources.html#Agnovidisc"
+ },
+ {
+  "t": "Resource",
+  "n": "Amarast",
+  "d": "Violet gem \u2014 Orb Vallis (Venus). Check the in-game Codex for vein type.",
+  "u": "resources.html#Amarast"
+ },
+ {
+  "t": "Resource",
+  "n": "Animo Nav Beacon",
+  "d": "Kill Ambulas units \u2014 needed to fight Ambulas on Pluto",
+  "u": "resources.html#Animo%20Nav%20Beacon"
+ },
+ {
+  "t": "Resource",
+  "n": "Argon Burger Meal",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#Argon%20Burger%20Meal"
+ },
+ {
+  "t": "Resource",
+  "n": "Ascaris Prime",
+  "d": "Quest-related item \u2014 check the in-game Codex",
+  "u": "resources.html#Ascaris%20Prime"
+ },
+ {
+  "t": "Resource",
+  "n": "Asterite",
+  "d": "Mining space rock in Railjack missions",
+  "u": "resources.html#Asterite"
+ },
+ {
+  "t": "Resource",
+  "n": "Atmo Systems",
+  "d": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "u": "resources.html#Atmo%20Systems"
+ },
+ {
+  "t": "Resource",
+  "n": "Atramentum",
+  "d": "Atramentum Balloons in 1999 (H\u00f6llvania)",
+  "u": "resources.html#Atramentum"
+ },
+ {
+  "t": "Resource",
+  "n": "Aucrux Capacitors",
+  "d": "Corpus Obelisk components \u2014 check the in-game Codex",
+  "u": "resources.html#Aucrux%20Capacitors"
+ },
+ {
+  "t": "Resource",
+  "n": "Auron",
+  "d": "Red Mining Veins on the Plains of Eidolon (Earth) \u2014 Cut Auron crafts into Auron-based alloys at the Foundry.",
+  "u": "resources.html#Auron"
+ },
+ {
+  "t": "Resource",
+  "n": "Axidite",
+  "d": "Mining on Orb Vallis (Venus) \u2014 Refine into Axidrol Alloy (blueprint from Smokefinger in Fortuna).",
+  "u": "resources.html#Axidite"
+ },
+ {
+  "t": "Resource",
+  "n": "Axidrol Alloy",
+  "d": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus) \u2014 Made from Axidite.",
+  "u": "resources.html#Axidrol%20Alloy"
+ },
+ {
+  "t": "Resource",
+  "n": "Azurite",
+  "d": "Blue Mining Veins on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Azurite"
+ },
+ {
+  "t": "Resource",
+  "n": "Bapholite",
+  "d": "Yellow Mining Veins on Cambion Drift (Deimos) \u2014 Refine into Tempered Bapholite (blueprint from Otak in the Necralisk).",
+  "u": "resources.html#Bapholite"
+ },
+ {
+  "t": "Resource",
+  "n": "Beating Heartstrings",
+  "d": "1999 (H\u00f6llvania) \u2014 Techrot growths",
+  "u": "resources.html#Beating%20Heartstrings"
+ },
+ {
+  "t": "Resource",
+  "n": "Bellow Voca",
+  "d": "Voidtongue inscriptions in Zariman missions",
+  "u": "resources.html#Bellow%20Voca"
+ },
+ {
+  "t": "Resource",
+  "n": "Big Bytes Pizza",
+  "d": "Trade Hex Treasures with Lettie \u2014 1999 (H\u00f6llvania)",
+  "u": "resources.html#Big%20Bytes%20Pizza"
+ },
+ {
+  "t": "Resource",
+  "n": "Bioplasma",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Bioplasma"
+ },
+ {
+  "t": "Resource",
+  "n": "Bonewidow Capsule",
+  "d": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "u": "resources.html#Bonewidow%20Capsule"
+ },
+ {
+  "t": "Resource",
+  "n": "Bonewidow Casing",
+  "d": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "u": "resources.html#Bonewidow%20Casing"
+ },
+ {
+  "t": "Resource",
+  "n": "Bonewidow Engine",
+  "d": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "u": "resources.html#Bonewidow%20Engine"
+ },
+ {
+  "t": "Resource",
+  "n": "Bonewidow Weapon Pod",
+  "d": "Buy blueprint from the Necralisk (Deimos) \u2014 craft with mined materials",
+  "u": "resources.html#Bonewidow%20Weapon%20Pod"
+ },
+ {
+  "t": "Resource",
+  "n": "Bracoid",
+  "d": "Drops on Infested ships",
+  "u": "resources.html#Bracoid"
+ },
+ {
+  "t": "Resource",
+  "n": "Calda Toroid",
+  "d": "Bounties or killing enemies at the Enrichment Labs \u2014 Orb Vallis (Venus) \u2014 Trade to Vox Solaris for standing.",
+  "u": "resources.html#Calda%20Toroid"
+ },
+ {
+  "t": "Resource",
+  "n": "Carbides",
+  "d": "Railjack missions in Earth and Saturn Proxima",
+  "u": "resources.html#Carbides"
+ },
+ {
+  "t": "Resource",
+  "n": "Cephalite Resonance",
+  "d": "Used to enter the Glassmaker's Weave (Nightwave)",
+  "u": "resources.html#Cephalite%20Resonance"
+ },
+ {
+  "t": "Resource",
+  "n": "Cerulean Fungus Extract",
+  "d": "Extracted from Cerulean Fungus colonies on Deimos",
+  "u": "resources.html#Cerulean%20Fungus%20Extract"
+ },
+ {
+  "t": "Resource",
+  "n": "Cetus Wisp",
+  "d": "Shorelines at night on the Plains of Eidolon (Earth) \u2014 Most common at night near water. Needed for amps and Quills standing.",
+  "u": "resources.html#Cetus%20Wisp"
+ },
+ {
+  "t": "Resource",
+  "n": "Cheddar Crowns Cereal",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#Cheddar%20Crowns%20Cereal"
+ },
+ {
+  "t": "Resource",
+  "n": "Chuggin' Along Sixpack",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#Chuggin%27%20Along%20Sixpack"
+ },
+ {
+  "t": "Resource",
+  "n": "Condroc Wing",
+  "d": "Kill Condrocs (birds) on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Condroc%20Wing"
+ },
+ {
+  "t": "Resource",
+  "n": "Connla Sprout",
+  "d": "Gather in Duviri",
+  "u": "resources.html#Connla%20Sprout"
+ },
+ {
+  "t": "Resource",
+  "n": "Copernics",
+  "d": "Lua missions",
+  "u": "resources.html#Copernics"
+ },
+ {
+  "t": "Resource",
+  "n": "Coprun",
+  "d": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Coprun"
+ },
+ {
+  "t": "Resource",
+  "n": "Corpus Cipher",
+  "d": "Legacy crafting component \u2014 check the in-game Codex",
+  "u": "resources.html#Corpus%20Cipher"
+ },
+ {
+  "t": "Resource",
+  "n": "Corpus Datamass",
+  "d": "Legacy crafting component \u2014 check the in-game Codex",
+  "u": "resources.html#Corpus%20Datamass"
+ },
+ {
+  "t": "Resource",
+  "n": "Cortege Barrel",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Cortege%20Barrel"
+ },
+ {
+  "t": "Resource",
+  "n": "Cortege Receiver",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Cortege%20Receiver"
+ },
+ {
+  "t": "Resource",
+  "n": "Cortege Stock",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Cortege%20Stock"
+ },
+ {
+  "t": "Resource",
+  "n": "Cortichrome",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Cortichrome"
+ },
+ {
+  "t": "Resource",
+  "n": "Crimson Talent",
+  "d": "Support Vena against Ryoku (Scoria's Angel) \u2014 1999",
+  "u": "resources.html#Crimson%20Talent"
+ },
+ {
+  "t": "Resource",
+  "n": "Crimzian",
+  "d": "Blue Mining Veins on the Plains of Eidolon (Earth) \u2014 Also drops from Thumpers.",
+  "u": "resources.html#Crimzian"
+ },
+ {
+  "t": "Resource",
+  "n": "Crisma Toroid",
+  "d": "Profit Taker Heist (Fortuna) \u2014 Orb Vallis (Venus) \u2014 Trade to Vox Solaris for standing.",
+  "u": "resources.html#Crisma%20Toroid"
+ },
+ {
+  "t": "Resource",
+  "n": "Cryptographic Alu",
+  "d": "Drops during the Razorback Armada event",
+  "u": "resources.html#Cryptographic%20Alu"
+ },
+ {
+  "t": "Resource",
+  "n": "Cubic Diodes",
+  "d": "Drops from Eximus units in Corpus Railjack missions",
+  "u": "resources.html#Cubic%20Diodes"
+ },
+ {
+  "t": "Resource",
+  "n": "Curse Of Hearing",
+  "d": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "u": "resources.html#Curse%20Of%20Hearing"
+ },
+ {
+  "t": "Resource",
+  "n": "Curse Of Knowing",
+  "d": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "u": "resources.html#Curse%20Of%20Knowing"
+ },
+ {
+  "t": "Resource",
+  "n": "Curse Of Seeing",
+  "d": "Help Fibonacci \u2014 Sanctum Anatomica (Deimos)",
+  "u": "resources.html#Curse%20Of%20Seeing"
+ },
+ {
+  "t": "Resource",
+  "n": "Dagonic",
+  "d": "Mining on Cambion Drift (Deimos)",
+  "u": "resources.html#Dagonic"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Casing",
+  "d": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Casing"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Engine",
+  "d": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Engine"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Pod",
+  "d": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Pod"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Weapon Barrel",
+  "d": "Isolation Vault and Arcana Isolation Vault bounties (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Weapon%20Barrel"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Weapon Pod",
+  "d": "Kill enemy Necramechs in Isolation Vaults (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Weapon%20Pod"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Weapon Receiver",
+  "d": "Isolation Vault bounties (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Weapon%20Receiver"
+ },
+ {
+  "t": "Resource",
+  "n": "Damaged Necramech Weapon Stock",
+  "d": "Isolation Vault and Arcana Isolation Vault bounties (Deimos)",
+  "u": "resources.html#Damaged%20Necramech%20Weapon%20Stock"
+ },
+ {
+  "t": "Resource",
+  "n": "Daughter Token",
+  "d": "Trade with Daughter in the Necralisk (Deimos)",
+  "u": "resources.html#Daughter%20Token"
+ },
+ {
+  "t": "Resource",
+  "n": "Detonite Ampule",
+  "d": "Drops from Grineer enemies on Venus, Earth, and Mercury \u2014 Refine into Detonite Injector via Clan Research.",
+  "u": "resources.html#Detonite%20Ampule"
+ },
+ {
+  "t": "Resource",
+  "n": "Detonite Injector",
+  "d": "Craft in Clan Dojo Chemical Lab \u2014 Invasion rewards also give Detonite Injectors.",
+  "u": "resources.html#Detonite%20Injector"
+ },
+ {
+  "t": "Resource",
+  "n": "Devar",
+  "d": "Blue Mining Veins on the Plains of Eidolon (Earth) \u2014 Also drops from Thumpers.",
+  "u": "resources.html#Devar"
+ },
+ {
+  "t": "Resource",
+  "n": "Devolved Namalon",
+  "d": "Craft in Foundry \u2014 blueprint from Otak in the Necralisk (Deimos) \u2014 Made from Namalon.",
+  "u": "resources.html#Devolved%20Namalon"
+ },
+ {
+  "t": "Resource",
+  "n": "Dominus Aureus",
+  "d": "Return stolen seals in Duviri",
+  "u": "resources.html#Dominus%20Aureus"
+ },
+ {
+  "t": "Resource",
+  "n": "Dracroot",
+  "d": "Gather in Duviri",
+  "u": "resources.html#Dracroot"
+ },
+ {
+  "t": "Resource",
+  "n": "Dusklight Sarracenia",
+  "d": "Gather on Earth missions",
+  "u": "resources.html#Dusklight%20Sarracenia"
+ },
+ {
+  "t": "Resource",
+  "n": "Echo Voca",
+  "d": "The quietest Voidtongue \u2014 Zariman missions",
+  "u": "resources.html#Echo%20Voca"
+ },
+ {
+  "t": "Resource",
+  "n": "Eevani",
+  "d": "Gather in Duviri",
+  "u": "resources.html#Eevani"
+ },
+ {
+  "t": "Resource",
+  "n": "Efervon Sample",
+  "d": "1999 (H\u00f6llvania) missions \u2014 from Scaldra enemies",
+  "u": "resources.html#Efervon%20Sample"
+ },
+ {
+  "t": "Resource",
+  "n": "Embolos",
+  "d": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "u": "resources.html#Embolos"
+ },
+ {
+  "t": "Resource",
+  "n": "Emerald Talent",
+  "d": "Support Ryoku against Vena (The Kuva Wytch) \u2014 1999",
+  "u": "resources.html#Emerald%20Talent"
+ },
+ {
+  "t": "Resource",
+  "n": "Enigma Gyrum",
+  "d": "Complete Enigmas (puzzles) in Duviri",
+  "u": "resources.html#Enigma%20Gyrum"
+ },
+ {
+  "t": "Resource",
+  "n": "Entrati Lanthorn",
+  "d": "Zariman missions, especially Albrecht's Laboratories (Deimos) \u2014 Key crafting material for Incarnon adapters and Zariman gear.",
+  "u": "resources.html#Entrati%20Lanthorn"
+ },
+ {
+  "t": "Resource",
+  "n": "Entrati Obols",
+  "d": "Entrati family marks \u2014 Deimos missions",
+  "u": "resources.html#Entrati%20Obols"
+ },
+ {
+  "t": "Resource",
+  "n": "Entratifragmentbase",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Entratifragmentbase"
+ },
+ {
+  "t": "Resource",
+  "n": "Entratilabdogtag",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Entratilabdogtag"
+ },
+ {
+  "t": "Resource",
+  "n": "Entropic Kuva",
+  "d": "Kill Entropic Eximus in Zariman missions",
+  "u": "resources.html#Entropic%20Kuva"
+ },
+ {
+  "t": "Resource",
+  "n": "Esher Devar",
+  "d": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth) \u2014 Cut from Devar.",
+  "u": "resources.html#Esher%20Devar"
+ },
+ {
+  "t": "Resource",
+  "n": "Exceptional Sentient Core",
+  "d": "Kill Sentients on Lua \u2014 rarer drop",
+  "u": "resources.html#Exceptional%20Sentient%20Core"
+ },
+ {
+  "t": "Resource",
+  "n": "Exemplar Granum Crown",
+  "d": "Higher-tier Granum Void runs",
+  "u": "resources.html#Exemplar%20Granum%20Crown"
+ },
+ {
+  "t": "Resource",
+  "n": "Experimental Arc-Relay",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#Experimental%20Arc-Relay"
+ },
+ {
+  "t": "Resource",
+  "n": "Familial Debt-Bond",
+  "d": "Higher-tier Fortuna bounties \u2014 Orb Vallis (Venus) \u2014 Trade to Ticker in Fortuna for standing.",
+  "u": "resources.html#Familial%20Debt-Bond"
+ },
+ {
+  "t": "Resource",
+  "n": "Father Token",
+  "d": "Trade with Father in the Necralisk (Deimos)",
+  "u": "resources.html#Father%20Token"
+ },
+ {
+  "t": "Resource",
+  "n": "Ferros",
+  "d": "Red Mining Veins on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Ferros"
+ },
+ {
+  "t": "Resource",
+  "n": "Fieldron",
+  "d": "Craft in Clan Dojo Energy Lab \u2014 Invasion rewards also give Fieldron.",
+  "u": "resources.html#Fieldron"
+ },
+ {
+  "t": "Resource",
+  "n": "Fieldron Sample",
+  "d": "Drops from Corpus enemies on Venus and Jupiter \u2014 Refine into Fieldron via Clan Research.",
+  "u": "resources.html#Fieldron%20Sample"
+ },
+ {
+  "t": "Resource",
+  "n": "Flawless Sentient Core",
+  "d": "Rare drop from Sentients on Lua",
+  "u": "resources.html#Flawless%20Sentient%20Core"
+ },
+ {
+  "t": "Resource",
+  "n": "Fresnels",
+  "d": "Orokin Void-travel material \u2014 check the in-game Codex",
+  "u": "resources.html#Fresnels"
+ },
+ {
+  "t": "Resource",
+  "n": "Frostcap",
+  "d": "Gather on Venus missions",
+  "u": "resources.html#Frostcap"
+ },
+ {
+  "t": "Resource",
+  "n": "Frostleaf",
+  "d": "Gather in frigid areas \u2014 Venus missions",
+  "u": "resources.html#Frostleaf"
+ },
+ {
+  "t": "Resource",
+  "n": "Gallos Rods",
+  "d": "Railjack missions in Earth and Saturn Proxima",
+  "u": "resources.html#Gallos%20Rods"
+ },
+ {
+  "t": "Resource",
+  "n": "Ganglion",
+  "d": "Gather on Cambion Drift (Deimos)",
+  "u": "resources.html#Ganglion"
+ },
+ {
+  "t": "Resource",
+  "n": "Genericdojocolorpigment",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Genericdojocolorpigment"
+ },
+ {
+  "t": "Resource",
+  "n": "Ghost Brush Extract",
+  "d": "Extracted from Ghost Brush on Deimos",
+  "u": "resources.html#Ghost%20Brush%20Extract"
+ },
+ {
+  "t": "Resource",
+  "n": "Goblite",
+  "d": "Blue Mining Veins on Orb Vallis (Venus)",
+  "u": "resources.html#Goblite"
+ },
+ {
+  "t": "Resource",
+  "n": "Gorgaricus Spore",
+  "d": "Gather from giant fungi on Orb Vallis (Venus)",
+  "u": "resources.html#Gorgaricus%20Spore"
+ },
+ {
+  "t": "Resource",
+  "n": "Grandmother Token",
+  "d": "Trade with Grandmother in the Necralisk (Deimos)",
+  "u": "resources.html#Grandmother%20Token"
+ },
+ {
+  "t": "Resource",
+  "n": "Granum Crown",
+  "d": "Granum Void (Corpus Ship missions via Granum Terminals)",
+  "u": "resources.html#Granum%20Crown"
+ },
+ {
+  "t": "Resource",
+  "n": "Grokdrul",
+  "d": "Fortuna bounties \u2014 Orb Vallis (Venus) \u2014 Standard chemical used in Grineer manufacturing. Bounty reward.",
+  "u": "resources.html#Grokdrul"
+ },
+ {
+  "t": "Resource",
+  "n": "Grotesque Splinter",
+  "d": "Effervo (Deimos) during Operation Gargoyle's Cry",
+  "u": "resources.html#Grotesque%20Splinter"
+ },
+ {
+  "t": "Resource",
+  "n": "Gyromag Systems",
+  "d": "Fortuna bounties \u2014 Orb Vallis (Venus)",
+  "u": "resources.html#Gyromag%20Systems"
+ },
+ {
+  "t": "Resource",
+  "n": "Heart Nyth",
+  "d": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth) \u2014 Cut from Nyth.",
+  "u": "resources.html#Heart%20Nyth"
+ },
+ {
+  "t": "Resource",
+  "n": "Heciphron",
+  "d": "Blue Mining Veins on Cambion Drift (Deimos)",
+  "u": "resources.html#Heciphron"
+ },
+ {
+  "t": "Resource",
+  "n": "Hespazym Alloy",
+  "d": "Craft in Foundry \u2014 blueprint from Smokefinger in Fortuna (Venus) \u2014 Made from Hesperon.",
+  "u": "resources.html#Hespazym%20Alloy"
+ },
+ {
+  "t": "Resource",
+  "n": "Hesperon",
+  "d": "Mining on Orb Vallis (Venus) \u2014 Refine into Hespazym Alloy (blueprint from Smokefinger in Fortuna).",
+  "u": "resources.html#Hesperon"
+ },
+ {
+  "t": "Resource",
+  "n": "Hexsyndicatedogtag",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Hexsyndicatedogtag"
+ },
+ {
+  "t": "Resource",
+  "n": "H\u00f6llvanian Pitchweave Fragment",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#H%C3%B6llvanian%20Pitchweave%20Fragment"
+ },
+ {
+  "t": "Resource",
+  "n": "Hunhow's Trinket",
+  "d": "Quest-related decoration blueprint",
+  "u": "resources.html#Hunhow%27s%20Trinket"
+ },
+ {
+  "t": "Resource",
+  "n": "Ignia",
+  "d": "Check the in-game Codex for drop locations",
+  "u": "resources.html#Ignia"
+ },
+ {
+  "t": "Resource",
+  "n": "Intact Sentient Core",
+  "d": "Kill Sentients on Lua \u2014 Also drops from Eidolons on the Plains of Eidolon.",
+  "u": "resources.html#Intact%20Sentient%20Core"
+ },
+ {
+  "t": "Resource",
+  "n": "Iradite",
+  "d": "Mining on the Plains or Cetus bounties (Earth)",
+  "u": "resources.html#Iradite"
+ },
+ {
+  "t": "Resource",
+  "n": "Isos",
+  "d": "Railjack missions",
+  "u": "resources.html#Isos"
+ },
+ {
+  "t": "Resource",
+  "n": "Javlok Capacitor",
+  "d": "Used to craft Javloks \u2014 check the in-game Codex",
+  "u": "resources.html#Javlok%20Capacitor"
+ },
+ {
+  "t": "Resource",
+  "n": "Kesslers",
+  "d": "Orokin solar-wind devices \u2014 check the in-game Codex",
+  "u": "resources.html#Kesslers"
+ },
+ {
+  "t": "Resource",
+  "n": "Komms",
+  "d": "Railjack missions in Earth and Saturn Proxima",
+  "u": "resources.html#Komms"
+ },
+ {
+  "t": "Resource",
+  "n": "Kovnik",
+  "d": "Gather in Duviri",
+  "u": "resources.html#Kovnik"
+ },
+ {
+  "t": "Resource",
+  "n": "Kuaka Spinal Claw",
+  "d": "Hunt Kuakas on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Kuaka%20Spinal%20Claw"
+ },
+ {
+  "t": "Resource",
+  "n": "Kullervo's Bane",
+  "d": "Trade with Acrithis in the Sanctum Anatomica (Deimos)",
+  "u": "resources.html#Kullervo%27s%20Bane"
+ },
+ {
+  "t": "Resource",
+  "n": "Lamentus",
+  "d": "Found in Duviri",
+  "u": "resources.html#Lamentus"
+ },
+ {
+  "t": "Resource",
+  "n": "Laudavi",
+  "d": "Awarded for Old War distinction \u2014 from crates in 1999 missions",
+  "u": "resources.html#Laudavi"
+ },
+ {
+  "t": "Resource",
+  "n": "Lazulite Toroid",
+  "d": "Exploiter Orb fight \u2014 Orb Vallis (Venus) \u2014 Trade to Vox Solaris for standing.",
+  "u": "resources.html#Lazulite%20Toroid"
+ },
+ {
+  "t": "Resource",
+  "n": "Lich Token",
+  "d": "Convert a Kuva Lich \u2014 trade the token to other players",
+  "u": "resources.html#Lich%20Token"
+ },
+ {
+  "t": "Resource",
+  "n": "Lua Thrax Plasm",
+  "d": "Yuvarium or Circulus \u2014 Lua (Conjunction Survival) \u2014 Only during Void Conjunctions on Lua.",
+  "u": "resources.html#Lua%20Thrax%20Plasm"
+ },
+ {
+  "t": "Resource",
+  "n": "Lucent Teroglobe",
+  "d": "Lua missions",
+  "u": "resources.html#Lucent%20Teroglobe"
+ },
+ {
+  "t": "Resource",
+  "n": "Lunar Pitcher",
+  "d": "Gather in the wilderness on Lua",
+  "u": "resources.html#Lunar%20Pitcher"
+ },
+ {
+  "t": "Resource",
+  "n": "Lyroic Bridge",
+  "d": "Sentient pilot interface \u2014 check the in-game Codex",
+  "u": "resources.html#Lyroic%20Bridge"
+ },
+ {
+  "t": "Resource",
+  "n": "Maphica",
+  "d": "From crates and bosses \u2014 check the in-game Codex for specifics",
+  "u": "resources.html#Maphica"
+ },
+ {
+  "t": "Resource",
+  "n": "Maprico",
+  "d": "Gather from bushes on the Plains of Eidolon (Earth)",
+  "u": "resources.html#Maprico"
+ },
+ {
+  "t": "Resource",
+  "n": "Marks Of Valiance",
+  "d": "Awarded by Grand Carnus Roathe \u2014 Duviri Steel Path circuit rewards",
+  "u": "resources.html#Marks%20Of%20Valiance"
+ },
+ {
+  "t": "Resource",
+  "n": "Marquise Veridos",
+  "d": "Craft in Foundry \u2014 blueprint from Old Man Suumbaat in Cetus (Earth) \u2014 Cut from Veridos.",
+  "u": "resources.html#Marquise%20Veridos"
+ },
+ {
+  "t": "Resource",
+  "n": "Medical Debt-Bond",
+  "d": "Fortuna bounties \u2014 Orb Vallis (Venus) \u2014 Trade to Ticker in Fortuna for standing.",
+  "u": "resources.html#Medical%20Debt-Bond"
+ },
+ {
+  "t": "Resource",
+  "n": "Mood Crystal",
+  "d": "1999 (H\u00f6llvania) missions",
+  "u": "resources.html#Mood%20Crystal"
+ },
+ {
+  "t": "Resource",
+  "n": "Moonlight Dragonlily",
+  "d": "Gather at night on Earth missions",
+  "u": "resources.html#Moonlight%20Dragonlily"
+ },
+ {
+  "t": "Resource",
+  "n": "Moonlight Jadeleaf",
+  "d": "Rare \u2014 gather at night on Earth missions",
+  "u": "resources.html#Moonlight%20Jadeleaf"
+ },
+ {
+  "t": "Resource",
+  "n": "Moonlight Threshcone",
+  "d": "Gather at night on Earth missions",
+  "u": "resources.html#Moonlight%20Threshcone"
+ },
+ {
+  "t": "Resource",
+  "n": "Morgha Barrel",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Morgha%20Barrel"
+ },
+ {
+  "t": "Resource",
+  "n": "Morgha Receiver",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Morgha%20Receiver"
+ },
+ {
+  "t": "Resource",
+  "n": "Morgha Stock",
+  "d": "Necramech weapon part \u2014 blueprint from the Necralisk (Deimos)",
+  "u": "resources.html#Morgha%20Stock"
+ },
+ {
+  "t": "Resource",
+  "n": "Mother Token",
+  "d": "Cambion Drift bounties (Deimos)",
+  "u": "resources.html#Mother%20Token"
+ }
+]
