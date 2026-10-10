@@ -258,7 +258,7 @@
     return 'Here\'s what I can do for you, Tenno:' +
       '<ul><li>🛠 <b>Build anything</b> — <i>"make me a Nova Prime Steel Path build"</i></li>' +
       '<li>💥 <b>One-shot formula</b> — <i>"one-shot formula"</i> for the Steel Path delete-everything theory</li>' +
-      '<li>🎯 <b>Meta weapon templates</b> — <i>"kuva zarr"</i>, <i>"phenmor"</i>, <i>"laetum"</i>, <i>"tenet arca plasmor"</i>, <i>"nataruk"</i>, <i>"felarx"</i> — curated 8-mod builds with WHY for each mod</li>' +
+      '<li>🎯 <b>One-shot build library</b> — <i>"tenet envoy"</i>, <i>"kronen prime"</i>, <i>"nova prime"</i>, <i>"stropha"</i>, <i>"knell prime"</i>… 30+ curated Steel Path one-shot builds, every mod explained</li>' +
       '<li>🧪 <b>Primers</b> — <i>"primer"</i> for Kuva Nukor / Epitaph / Verglas Prime setups</li>' +
       '<li>💎 <b>Archon shards</b> — <i>"archon shards"</i> for one-shot builds</li>' +
       '<li>🦾 <b>Damage frames</b> — <i>"best frame for damage"</i> for one-shot enablers</li>' +
@@ -712,6 +712,35 @@ function oneShotTemplateAnswer(key) {
     '<p>Want the theory behind it? Ask <i>"one-shot formula"</i>. Need a primer? Ask <i>"primer"</i>.</p>';
 }
 
+/* Curated one-shot builds live in builds.json too (tags include 'one-shot').
+   If the query names an item that has one there, render it like a template —
+   this keeps the AI in sync with the full build library automatically. */
+function oneShotBuildAnswer(t) {
+  if (!D || !D.builds) return null;
+  var best = null, bestLen = 0;
+  for (var i = 0; i < D.builds.length; i++) {
+    var b = D.builds[i];
+    if (!b || (b.tags || []).indexOf('one-shot') === -1) continue;
+    var iname = norm(b.item);
+    if (iname && iname.length >= 4 && t.indexOf(iname) !== -1 && iname.length > bestLen) {
+      best = b; bestLen = iname.length;
+    }
+  }
+  if (!best) return null;
+  var rows = best.mods.map(function (m, i) {
+    var fm = findModExact(m.name);
+    var farm = fm ? modFarmLine(fm) : '';
+    return '<div class="mod-row"><div><b>' + (i + 1) + '. ' + esc(m.name) + '</b>' +
+      (m.note ? '<div class="muted small">' + esc(m.note) + '</div>' : '') + farm + '</div></div>';
+  }).join('');
+  return '<b>' + esc(best.name) + '</b><p class="muted small">' + esc(best.description) +
+    ' Riven-less — every mod has a WHY.</p>' + rows +
+    (best.arcane ? '<p class="muted small"><b>Arcane:</b> ' + esc(best.arcane) + '</p>' : '') +
+    '<p class="muted small">' + esc(best.playstyle) + '</p>' +
+    '<p>Full build also on the <a href="builds.html#build-' + esc(best.id) + '">builds page</a>. ' +
+    'Want the theory? Ask <i>"one-shot formula"</i>.</p>';
+}
+
 /* ---------- intent routing ---------- */
   function stripQ(q) { return norm(q).replace(/\?+$/, '').trim(); }
 
@@ -744,6 +773,10 @@ function oneShotTemplateAnswer(key) {
         return oneShotTemplateAnswer(templateKeys[ti]);
       }
     }
+    /* one-shot builds from the build library (builds.json) — covers every
+       curated one-shot build automatically, including new additions */
+    var libHit = oneShotBuildAnswer(t);
+    if (libHit) return libHit;
     /* BUILD INTENT — catch this FIRST, before anything else. If the player wants
        a build for a specific item, generate it. Handles: "make me a nova prime
        steelpath build", "wisp prime one shot", "rhino build", etc. */
