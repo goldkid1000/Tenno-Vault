@@ -15,14 +15,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Tenno Vault">
 <style>
-.hero{padding:30px 4px 8px;text-align:center}
-.hero h1{font-size:2rem;margin:0 0 .35em;line-height:1.2}
-.hero .hero-sub{color:var(--muted);font-size:1.02rem;max-width:620px;margin:0 auto 18px}
 .btn.big{font-size:1.08rem;padding:13px 30px}
 .group-head{margin:28px 0 2px;font-size:1.2rem}
 .group-sub{color:var(--muted);font-size:.92rem;margin:0 0 12px}
 .card h3 .badge{vertical-align:middle;margin-left:6px}
-@media(max-width:560px){.hero h1{font-size:1.6rem}}
 </style>
 </head>
 <body data-page="home" data-crumb="Home">
@@ -32,11 +28,18 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 
-<header class="hero">
+<header class="hero tv-hero">
+  <div class="tv-hero-bg" aria-hidden="true"></div>
+  <div id="tv-install-slot"></div>
   <h1>Tenno Vault — your Warframe companion</h1>
   <p class="hero-sub">Every Warframe, weapon, mod, and build — with farm locations and setups that actually work.</p>
-  <p><button class="btn primary big pwa-install-btn" onclick="triggerPwaInstall()">📲 Install App</button></p>
-  <p class="muted small">Or search for anything using the search box up top.</p>
+  <div class="tv-stats" role="list" aria-label="Vault contents">
+    <div class="tv-stat" role="listitem"><b data-count="123">0</b><span>Warframes</span></div>
+    <div class="tv-stat" role="listitem"><b data-count="625">0</b><span>Weapons</span></div>
+    <div class="tv-stat" role="listitem"><b data-count="1757">0</b><span>Mods</span></div>
+    <div class="tv-stat" role="listitem"><b data-count="73">0</b><span>Builds</span></div>
+  </div>
+  <p class="muted small">Search for anything using the search box up top.</p>
 </header>
 
 <h2>🚀 Start here</h2>
@@ -235,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
 <script src="js/update-notify.js"></script>
 </body>
 </html>
