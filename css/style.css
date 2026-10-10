@@ -516,3 +516,244 @@ table.data tbody tr:hover{background:rgba(0,210,255,.05)}
   pointer-events: none; white-space: nowrap;
 }
 #tv-update-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ============================================================
+   UI REMAKE V3 — design system · install UX · motion · responsive
+   Pure CSS. transform/opacity animations only (iPhone-safe).
+   Respects prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- 1. design tokens ---------- */
+:root{
+  /* spacing scale */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px;
+  --sp-5:24px; --sp-6:32px; --sp-8:48px; --sp-10:64px;
+  /* radii */
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:22px; --r-full:999px;
+  /* surfaces (card depth levels) */
+  --surface-1:#131a24; --surface-2:#17202c; --surface-3:#1d2836;
+  /* text hierarchy */
+  --text-1:#eef4fa; --text-2:#a7b4c6; --text-3:#6b7a8d;
+  /* shadows */
+  --sh-1:0 2px 8px rgba(0,0,0,.35);
+  --sh-2:0 6px 22px rgba(0,0,0,.45);
+  --sh-glow:0 0 18px rgba(0,210,255,.28);
+  --sh-glow-gold:0 0 18px rgba(201,162,39,.3);
+  /* motion */
+  --t-fast:.12s; --t-med:.2s; --t-slow:.35s;
+  --ease:cubic-bezier(.2,.7,.3,1);
+  /* touch */
+  --touch:44px;
+}
+
+/* ---------- 2. base refinements ---------- */
+::selection{background:rgba(0,210,255,.3);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+body{-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto}
+/* comfortable reading measure */
+.detail-box p,.notice p,.card p,.hero-sub{max-width:70ch}
+button{font-family:inherit}
+
+/* ---------- 3. page enter transition ---------- */
+@keyframes tv-page-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes tv-fade{from{opacity:0}to{opacity:1}}
+main{animation:tv-page-in .32s var(--ease) both}
+
+/* ---------- 4. component: section ---------- */
+.tv-section{margin:var(--sp-6) 0}
+.tv-section > h2:first-child{margin-top:0}
+
+/* ---------- 5. component: hero (parallax void layers) ---------- */
+.tv-hero{position:relative;overflow:hidden;border-radius:var(--r-xl);
+  padding:var(--sp-8) var(--sp-4) var(--sp-6);margin-bottom:var(--sp-5);
+  border:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(19,26,36,.6),rgba(10,14,19,.2))}
+.tv-hero-bg{position:absolute;inset:-25%;pointer-events:none;
+  background:
+    radial-gradient(420px 300px at 22% 18%, rgba(0,210,255,.13), transparent 70%),
+    radial-gradient(380px 280px at 80% 72%, rgba(201,162,39,.1), transparent 70%),
+    radial-gradient(300px 220px at 62% 8%, rgba(120,60,220,.09), transparent 70%);
+  animation:tv-drift 26s ease-in-out infinite alternate}
+.tv-hero > *:not(.tv-hero-bg){position:relative}
+.tv-hero h1{margin-top:.4em}
+
+/* ---------- 6. component: animated stats ---------- */
+.tv-stats{display:flex;gap:var(--sp-2);justify-content:center;flex-wrap:wrap;
+  margin:var(--sp-5) auto;max-width:680px}
+.tv-stat{flex:1 1 120px;min-width:104px;background:rgba(19,26,36,.72);
+  border:1px solid var(--border);border-radius:var(--r-md);
+  padding:var(--sp-3) var(--sp-2);text-align:center;backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px)}
+.tv-stat b{display:block;font-size:1.55rem;color:var(--accent);
+  font-variant-numeric:tabular-nums;line-height:1.2}
+.tv-stat span{font-size:.72rem;color:var(--text-2);text-transform:uppercase;letter-spacing:.6px}
+
+/* ---------- 7. install UX: banner, header button, modal ---------- */
+.tv-install-banner{
+  display:flex;align-items:center;gap:14px;text-align:left;
+  background:linear-gradient(135deg,rgba(0,144,184,.18),rgba(0,210,255,.06));
+  border:1px solid rgba(0,210,255,.42);border-radius:var(--r-lg);
+  padding:14px 16px;margin:0 auto 22px;max-width:580px;
+  box-shadow:var(--sh-glow);position:relative;overflow:hidden;
+  animation:tv-rise .5s var(--ease) both}
+.tv-install-banner::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(201,162,39,.85),transparent)}
+.tv-install-icon{font-size:2rem;flex-shrink:0;line-height:1}
+.tv-install-text{flex:1;min-width:0}
+.tv-install-text b{display:block;font-size:1rem;color:var(--text-1)}
+.tv-install-text span{font-size:.85rem;color:var(--text-2)}
+.tv-install-banner .btn{min-height:var(--touch);white-space:nowrap}
+.tv-install-x{background:none;border:none;color:var(--text-3);font-size:1rem;cursor:pointer;
+  min-width:var(--touch);min-height:var(--touch);border-radius:var(--r-sm);flex-shrink:0}
+.tv-install-x:hover{color:var(--text-1);background:rgba(255,255,255,.06)}
+/* header install button (all pages, subtle) */
+.tv-hinstall{display:none;align-items:center;justify-content:center;
+  width:var(--touch);height:var(--touch);border-radius:var(--r-md);flex-shrink:0;
+  border:1px solid rgba(0,210,255,.42);background:rgba(0,210,255,.09);
+  font-size:1.25rem;cursor:pointer;transition:box-shadow var(--t-med) ease,transform var(--t-fast) ease}
+.tv-hinstall.show{display:inline-flex}
+.tv-hinstall:hover{box-shadow:var(--sh-glow)}
+.tv-hinstall:active{transform:scale(.94)}
+/* install instructions modal */
+.tv-modal{position:fixed;inset:0;z-index:200;background:rgba(4,7,10,.78);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  animation:tv-fade var(--t-med) ease both}
+.tv-modal[hidden]{display:none}
+.tv-modal-card{background:var(--surface-1);border:1px solid var(--border);
+  border-radius:var(--r-xl);padding:24px;max-width:400px;width:100%;
+  box-shadow:var(--sh-2);animation:tv-rise .3s var(--ease) both}
+.tv-modal-card h3{margin-top:0}
+.tv-modal-card ol{padding-left:1.35em;color:var(--text-2);margin:12px 0 18px}
+.tv-modal-card ol li{margin:.65em 0;line-height:1.5}
+.tv-share-ico{display:inline-block;border:1px solid var(--border);border-radius:6px;
+  padding:0 7px;background:var(--surface-2)}
+
+/* ---------- 8. skeleton loading shimmer ---------- */
+@keyframes tv-shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.tv-skeleton{position:relative;overflow:hidden;background:var(--surface-1);
+  border-radius:var(--r-sm);min-height:1em;color:transparent !important;user-select:none}
+.tv-skeleton::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.07) 50%,transparent 80%);
+  animation:tv-shimmer 1.4s linear infinite}
+.tv-skeleton-card{background:var(--surface-1);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px;display:grid;gap:10px}
+
+/* ---------- 9. search results stagger ---------- */
+.search-hit{animation:tv-rise .3s var(--ease) both}
+.search-hit:nth-child(2){animation-delay:.03s}
+.search-hit:nth-child(3){animation-delay:.06s}
+.search-hit:nth-child(4){animation-delay:.09s}
+.search-hit:nth-child(5){animation-delay:.12s}
+.search-hit:nth-child(6){animation-delay:.15s}
+.search-hit:nth-child(7){animation-delay:.18s}
+.search-hit:nth-child(8){animation-delay:.21s}
+.search-hit:nth-child(9){animation-delay:.24s}
+.search-hit:nth-child(10){animation-delay:.27s}
+
+/* ---------- 10. tap ripple ---------- */
+@keyframes tv-ripple{to{transform:scale(4);opacity:0}}
+.btn,.chip{position:relative;overflow:hidden}
+.tv-ripple{position:absolute;border-radius:50%;transform:scale(0);
+  background:rgba(0,210,255,.32);animation:tv-ripple .5s ease-out forwards;
+  pointer-events:none;z-index:0}
+.btn > *,.chip > *{position:relative;z-index:1}
+
+/* ---------- 11. tabbar active indicator ---------- */
+#tabbar a{position:relative;min-height:58px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center}
+#tabbar a::after{
+  content:"";position:absolute;top:2px;left:28%;right:28%;height:3px;border-radius:2px;
+  background:var(--accent);box-shadow:0 0 10px rgba(0,210,255,.85);
+  transform:scaleX(0);transition:transform var(--t-med) var(--ease)}
+#tabbar a.active::after{transform:scaleX(1)}
+
+/* ---------- 12. pull-to-refresh indicator ---------- */
+#tv-ptr{position:fixed;top:0;left:50%;transform:translate(-50%,-80px);z-index:9998;
+  width:46px;height:46px;border-radius:50%;background:var(--surface-1);
+  border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity var(--t-med) ease;pointer-events:none;box-shadow:var(--sh-2)}
+#tv-ptr.show{opacity:1}
+.tv-ptr-spin{width:22px;height:22px;border-radius:50%;
+  border:2px solid rgba(0,210,255,.2);border-top-color:var(--accent)}
+#tv-ptr.show .tv-ptr-spin{animation:tv-spin 1s linear infinite}
+#tv-ptr.ready{background:linear-gradient(135deg,#0090b8,#00d2ff);border-color:transparent}
+#tv-ptr.ready .tv-ptr-spin{border-color:rgba(255,255,255,.35);border-top-color:#fff}
+#tv-ptr.loading .tv-ptr-spin{animation-duration:.45s}
+
+/* ---------- 13. touch targets (44px minimum) ---------- */
+.btn{min-height:var(--touch);display:inline-flex;align-items:center;justify-content:center}
+.chip{min-height:var(--touch);display:inline-flex;align-items:center}
+#sidebar nav a{min-height:var(--touch);display:flex;align-items:center}
+.search-hit{min-height:var(--touch)}
+
+/* ---------- 14. responsive: refined breakpoints ---------- */
+/* 640px — large phones: roomier grids */
+@media (min-width:640px){
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+  .tv-stats{gap:var(--sp-3)}
+  .tv-install-banner{padding:16px 20px}
+}
+/* 768px — tablets: two-column layouts, more breathing room */
+@media (min-width:768px){
+  main{padding:24px 28px 90px}
+  .video-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .detail-box{padding:26px}
+  .tv-hero{padding:var(--sp-10) var(--sp-6) var(--sp-8)}
+  .item-list{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+}
+/* 1024px — desktop: sidebar nav, tabbar hidden */
+@media (min-width:1024px){
+  #sidebar{display:block !important}
+  #tabbar{display:none !important}
+  .layout{gap:8px}
+  main{padding:28px 32px 80px}
+  footer{padding-bottom:40px}
+  #vault-ai-btn{bottom:24px}
+}
+/* below 1024px — mobile/tablet portrait: tabbar nav */
+@media (max-width:1023.5px){
+  #sidebar{display:none !important}
+  #tabbar{display:flex}
+  .header-inner{flex-wrap:wrap}
+  .search-wrap{order:3;flex-basis:100%;max-width:none}
+}
+/* 1440px — wide screens: wider canvas, slightly larger type */
+@media (min-width:1440px){
+  :root{--max:1320px}
+  body{font-size:17px}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+}
+/* 320px — small phones: compact, no overflow */
+@media (max-width:380px){
+  .header-inner{padding:8px 10px;gap:8px}
+  .logo{font-size:1.05rem}
+  .tv-stats{gap:var(--sp-1)}
+  .tv-stat{min-width:calc(50% - 4px);flex-basis:calc(50% - 4px)}
+  .tv-install-banner{flex-wrap:wrap}
+  .tv-install-banner .btn{flex:1;min-width:120px}
+  main{padding:12px 10px 110px}
+  .detail-box{padding:16px 12px}
+}
+
+
+/* hero title sizing (moved from index.html inline styles) */
+.tv-hero h1{font-size:2rem;margin:0 0 .35em;line-height:1.2}
+.tv-hero .hero-sub{font-size:1.02rem;max-width:620px;margin:0 auto 18px}
+@media(max-width:560px){.tv-hero h1{font-size:1.6rem}}
+/* AI chat button clears the tabbar on tablet-portrait widths */
+@media (max-width:1023.5px){
+  #vault-ai-btn{bottom:86px;right:12px}
+  #vault-ai-panel{bottom:152px}
+}
+
+/* ---------- 15. reduced motion: calm everything ---------- */
+@media (prefers-reduced-motion: reduce){
+  .tv-hero-bg{animation:none}
+  .tv-skeleton::after{animation:none}
+  .tv-install-banner{animation:none}
+  .search-hit{animation:none}
+  main{animation:none}
+  #tabbar a::after{transition:none}
+}
