@@ -88,7 +88,7 @@
       '<span class="stat">Mastery <b>' + w.masteryReq + '</b></span>' +
       (w.trigger ? '<span class="stat">Trigger <b>' + esc(w.trigger) + '</b></span>' : '') + '</div>' +
       '<div class="farm-box"><h4>📍 Where to farm</h4><p>' +
-      esc(w.farm || 'Check the in-game Codex or Market for the latest source.') + '</p></div></div>';
+      esc(w.farm || 'Check the in-game Codex or Market for the latest source.') + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(w.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Builds for ' + w.type + ' weapons', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
@@ -132,6 +132,7 @@
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
 <script src="js/update-notify.js"></script>
 </body>
 </html>

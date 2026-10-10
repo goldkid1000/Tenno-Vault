@@ -73,7 +73,7 @@
         return '<div class="mod-row"><div><b>' + esc(a.name) + '</b><div class="muted small">' + esc(a.description) + '</div></div></div>';
       }).join('') +
       '<div class="farm-box"><h4>📍 Where to farm</h4><p>' +
-      esc(w.farm || 'Check the in-game Codex for the latest source.') + '</p></div></div>';
+      esc(w.farm || 'Check the in-game Codex for the latest source.') + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(w.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Best builds for ' + w.name, sub: 'Steel Path & one-shot setups', url: 'builds.html' },
@@ -101,6 +101,7 @@
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
 <script src="js/update-notify.js"></script>
 </body>
 </html>
