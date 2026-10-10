@@ -31,7 +31,7 @@
     var TV = window.TV;
     loadingPromise = Promise.all([
       TV.getJSONParts('data/site/search-index', 7),
-      TV.getJSON('data/site/builds.json'),
+      TV.getJSONParts('data/site/builds', 9),
       TV.getJSONParts('data/site/warframes', 2),
       TV.getJSONParts('data/site/weapons', 3),
       TV.getJSONParts('data/site/mods', 9),
