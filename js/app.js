@@ -30,6 +30,7 @@
     { id: 'quests', label: 'Quests', sub: 'Story missions — what order & what you get', icon: '📜', file: 'quests.html', group: 'World' },
     { id: 'liches', label: 'Liches', sub: 'Hunt your nemesis for powerful weapons', icon: '👹', file: 'liches.html', group: 'World' },
     { id: 'railjack', label: 'Railjack', sub: 'Space ships, space combat & mechs', icon: '🚀', file: 'railjack.html', group: 'World' },
+    { id: 'archwing', label: 'Archwing', sub: 'Space wings, archguns & the ground deployer', icon: '🪽', file: 'archwing.html', group: 'World' },
     { id: 'damage', label: 'Damage', sub: 'What kills what — damage types made simple', icon: '💥', file: 'damage.html', group: 'World' },
     { id: 'syndicates', label: 'Syndicates', sub: 'Earn standing, unlock rewards from every faction', icon: '🤝', file: 'syndicates.html', group: 'World' },
 
