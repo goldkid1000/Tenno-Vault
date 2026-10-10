@@ -40,9 +40,38 @@
 .sc-legend .badge { cursor: pointer; }
 #sc-camera { transition: transform 1.1s cubic-bezier(.22,.8,.3,1); transform-origin: 0 0; }
 .sc-controls { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+/* ---- detail overlay: bottom sheet on mobile, side panel on desktop ---- */
+#sc-overlay { position: absolute; inset: 0; z-index: 10; pointer-events: none; opacity: 0; transition: opacity .3s ease; }
+#sc-overlay.show { opacity: 1; pointer-events: auto; }
+.sc-overlay-backdrop { position: absolute; inset: 0; background: rgba(2,4,10,.55); }
+.sc-overlay-card {
+  position: absolute; left: 12px; right: 12px; bottom: 12px; max-height: 55%;
+  overflow-y: auto; background: linear-gradient(135deg, #0d1b2a 0%, #16283f 100%);
+  border: 1px solid rgba(0,229,255,.35); border-radius: 16px; padding: 18px;
+  box-shadow: 0 8px 40px rgba(0,229,255,.25);
+  transform: translateY(24px); transition: transform .35s cubic-bezier(.22,.8,.3,1);
+}
+#sc-overlay.show .sc-overlay-card { transform: translateY(0); }
+@media (min-width: 1024px) {
+  .sc-overlay-card { left: auto; right: 16px; top: 16px; bottom: 16px; width: 340px; max-height: none; }
+}
+.sc-detail-card h2 { margin: 0 0 4px; font-size: 1.4rem; }
+.sc-detail-card h3 { margin: 14px 0 8px; font-size: 1rem; color: #00e5ff; }
+.sc-detail-close {
+  position: absolute; top: 10px; right: 12px; background: none; border: none;
+  color: #8a9bb5; font-size: 18px; cursor: pointer; padding: 6px; min-width: 44px; min-height: 44px;
+}
+.sc-farm-list { display: flex; flex-direction: column; gap: 6px; }
+.sc-farm-row {
+  background: rgba(0,229,255,.06); border: 1px solid rgba(0,229,255,.12);
+  border-radius: 8px; padding: 8px 12px; display: flex; flex-direction: column; gap: 2px;
+}
+.sc-farm-row b { color: #fff; font-size: 14px; }
+.sc-farm-row span { color: #8a9bb5; font-size: 12px; }
 @media (prefers-reduced-motion: reduce) {
   .sc-drift, .sc-body.target .sc-halo { animation: none; }
   #sc-camera { transition: none; }
+  #sc-overlay, .sc-overlay-card { transition: none; }
 }
 </style>
 </head>
@@ -181,26 +210,56 @@
     if (!b) return;
     hideTip();
     var items = zoneItems[id] || [];
-    var html = '<div class="detail-box"><div class="detail-head"><div>' +
+    /* group items by note for cleaner display */
+    var html = '<div class="sc-detail-card">' +
+      '<button class="sc-detail-close" id="sc-detail-close" aria-label="Close">✕</button>' +
       '<h2 style="color:' + esc(b.color) + '">' + esc(b.name) + '</h2>' +
-      '<p>' + esc(b.description) + '</p></div></div>';
+      '<p class="muted">' + esc(b.description) + '</p>';
     if (items.length) {
-      html += '<h3>Farms here (' + items.length + ')</h3><div class="item-list">' +
-        items.slice(0, 24).map(function (it) {
-          return '<div class="mod-row"><div><b>' + esc(it.name) + '</b>' +
-            (it.note ? '<div class="muted small">' + esc(it.note) + '</div>' : '') + '</div></div>';
+      html += '<h3>🎯 What farms here</h3><div class="sc-farm-list">' +
+        items.slice(0, 30).map(function (it) {
+          return '<div class="sc-farm-row"><b>' + esc(it.name) + '</b>' +
+            (it.note ? '<span>' + esc(it.note) + '</span>' : '') + '</div>';
         }).join('') + '</div>' +
-        (items.length > 24 ? '<p class="muted small">+' + (items.length - 24) + ' more — search them by name in the Vault.</p>' : '');
+        (items.length > 30 ? '<p class="muted small">+' + (items.length - 30) + ' more — search them by name in the Vault.</p>' : '');
     } else {
       html += '<p class="muted">No mapped farm data for this location yet.</p>';
     }
     html += '</div>';
-    panel.innerHTML = html;
-    panel.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'nearest' });
+    showDetailOverlay(html);
     document.querySelectorAll('.sc-body').forEach(function (g) { g.classList.remove('active'); });
     var g = bodiesG.querySelector('[data-id="' + id + '"]');
     if (g) g.classList.add('active');
-    if (fly) flyTo([id], false);
+    if (fly) flyToPlanet(b);
+  }
+
+  /* cinematic zoom: center on the planet and zoom deep */
+  function flyToPlanet(b) {
+    var vw = 1200, vh = 800;
+    var scale = 3.2; /* deep zoom on single planet */
+    var tx = vw / 2 - b.x * scale, ty = vh / 2 - b.y * scale;
+    camera.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(' + scale.toFixed(3) + ')';
+    document.getElementById('sc-hint').textContent = 'Tap ✕ or Reset to zoom back out';
+  }
+
+  /* floating detail overlay: bottom sheet on mobile, side panel on desktop */
+  function showDetailOverlay(html) {
+    var ov = document.getElementById('sc-overlay');
+    if (!ov) {
+      ov = document.createElement('div');
+      ov.id = 'sc-overlay';
+      ov.innerHTML = '<div class="sc-overlay-backdrop" id="sc-backdrop"></div><div class="sc-overlay-card" id="sc-overlay-card"></div>';
+      document.querySelector('.sc-wrap').appendChild(ov);
+      document.getElementById('sc-backdrop').addEventListener('click', hideDetailOverlay);
+    }
+    document.getElementById('sc-overlay-card').innerHTML = html;
+    ov.classList.add('show');
+    var close = document.getElementById('sc-detail-close');
+    if (close) close.addEventListener('click', hideDetailOverlay);
+  }
+  function hideDetailOverlay() {
+    var ov = document.getElementById('sc-overlay');
+    if (ov) ov.classList.remove('show');
   }
 
   /* fly-to: pan + zoom the camera to frame the given zone ids */
@@ -223,6 +282,7 @@
 
   function resetView() {
     camera.style.transform = '';
+    hideDetailOverlay();
     document.querySelectorAll('.sc-body').forEach(function (g) { g.classList.remove('target', 'active'); });
     document.getElementById('sc-hint').textContent = 'Tap a planet or zone for details';
     panel.innerHTML = '<p class="muted">Select a planet or zone to see what farms there.</p>';
