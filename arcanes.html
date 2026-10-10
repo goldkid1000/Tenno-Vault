@@ -74,7 +74,7 @@
       { label: 'Farming hub', sub: 'Arcane farms', url: 'farming.html' }
     ]);
   }
-  window.TV.getJSON('data/site/arcanes.json').then(function (d) {
+  window.TV.getJSONParts('data/site/arcanes', 2).then(function (d) {
     all = d;
     document.getElementById('a-count').textContent = d.length + ' Arcanes';
     var list = document.getElementById('a-list');
