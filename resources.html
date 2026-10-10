@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resource Finder — Tenno Vault</title>
+<meta name="description" content="Find where every Warframe resource drops — what mission, what planet, best farm spot.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="resources" data-crumb="Home,Resource Finder">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>⛏️ Resource Finder</h1>
+<div class="notice"><b>What is this?</b> Every crafting material in Warframe and exactly where to get it — the planet, the mission, and the single best farm spot. Type what you need below.</div>
+<p class="muted small" id="r-count"></p>
+
+<div class="field"><input id="r-q" type="search" placeholder="What do you need? (e.g. Orokin Cell, Argon Crystal…)"></div>
+<div class="field" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+  <select id="r-planet" class="btn small" aria-label="Filter by planet">
+    <option value="">🌍 All planets</option>
+  </select>
+  <select id="r-type" class="btn small" aria-label="Filter by type">
+    <option value="">📦 All types</option>
+  </select>
+</div>
+<div id="r-detail"></div>
+<div id="r-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai-fallback.js?v=20261010"></script>
+<script src="js/ai.js?v=20261010"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  function card(r) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(r.name);
+    a.innerHTML = '<div><h3>' + esc(r.name) +
+      ' <span class="badge type">' + esc(r.type) + '</span></h3>' +
+      '<p class="muted small">📍 <b>' + esc(r.bestFarm) + '</b></p>' +
+      (r.notes ? '<p class="muted small">' + esc(r.notes.slice(0, 120)) + '</p>' : '') + '</div>';
+    return a;
+  }
+  function showDetail(name) {
+    var box = document.getElementById('r-detail');
+    var r = all.find(function (x) { return x.name === name; });
+    if (!r) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(r.name) + '</h2>' +
+      '<p><span class="badge type">' + esc(r.type) + '</span> ' +
+      (r.planet && r.planet !== '—' ? '<span class="badge type">🌍 ' + esc(r.planet) + '</span>' : '') + '</p>' +
+      '<div class="farm-box"><h4>⭐ Best farm</h4><p>' + esc(r.bestFarm) + '</p></div>' +
+      '<p><b>Mission:</b> ' + esc(r.mission) +
+      (r.node && r.node !== '—' ? ' &nbsp;·&nbsp; <b>Node:</b> ' + esc(r.node) : '') + '</p>' +
+      (r.notes ? '<p class="muted">' + esc(r.notes) + '</p>' : '') + '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Farming hub', sub: 'Relics, mods, arcanes & more', url: 'farming.html' },
+      { label: 'Builds', sub: 'What to spend your resources on', url: 'builds.html' }
+    ]);
+  }
+  function applyFilters() {
+    var q = document.getElementById('r-q').value.toLowerCase();
+    var pl = document.getElementById('r-planet').value;
+    var ty = document.getElementById('r-type').value;
+    ctl.reset(all.filter(function (r) {
+      if (q && r.name.toLowerCase().indexOf(q) < 0 &&
+          (r.notes || '').toLowerCase().indexOf(q) < 0 &&
+          (r.bestFarm || '').toLowerCase().indexOf(q) < 0) return false;
+      if (pl && r.planet !== pl) return false;
+      if (ty && r.type !== ty) return false;
+      return true;
+    }));
+    var n = document.querySelectorAll('#r-list .list-item').length;
+    document.getElementById('r-count').textContent = n + ' of ' + all.length + ' resources';
+  }
+  window.TV.getJSON('data/site/resources.json').then(function (d) {
+    all = d;
+    document.getElementById('r-count').textContent = d.length + ' Resources';
+    var planets = {}, types = {};
+    d.forEach(function (r) {
+      if (r.planet && r.planet !== '—') planets[r.planet] = 1;
+      if (r.type) types[r.type] = 1;
+    });
+    var psel = document.getElementById('r-planet');
+    Object.keys(planets).sort().forEach(function (p) {
+      var o = document.createElement('option'); o.value = p; o.textContent = p; psel.appendChild(o);
+    });
+    var tsel = document.getElementById('r-type');
+    Object.keys(types).sort().forEach(function (t) {
+      var o = document.createElement('option'); o.value = t; o.textContent = t; tsel.appendChild(o);
+    });
+    var list = document.getElementById('r-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    document.getElementById('r-q').addEventListener('input', applyFilters);
+    psel.addEventListener('change', applyFilters);
+    tsel.addEventListener('change', applyFilters);
+    function route() {
+      var h = decodeURIComponent(location.hash.slice(1));
+      showDetail(h);
+    }
+    window.addEventListener('hashchange', route);
+    route();
+  }).catch(function () {
+    document.getElementById('r-list').innerHTML = '<div class="notice">Could not load resource data.</div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

@@ -3,32 +3,45 @@
   'use strict';
 
   var NAV = [
+    /* Home stays separate at the top — no group */
     { id: 'home', label: 'Home', sub: 'Start here', icon: '🏠', file: 'index.html' },
-    { id: 'warframes', label: 'Warframes', sub: 'Pick your character', icon: '🥷', file: 'warframes.html' },
-    { id: 'weapons', label: 'Weapons', sub: 'Guns & blades', icon: '🔫', file: 'weapons.html' },
-    { id: 'mods', label: 'Mods', sub: 'Upgrade everything', icon: '🧩', file: 'mods.html' },
-    { id: 'arcanes', label: 'Arcanes', sub: 'Bonus powers', icon: '✨', file: 'arcanes.html' },
-    { id: 'relics', label: 'Relics', sub: 'Crack for prime parts', icon: '📦', file: 'relics.html' },
-    { id: 'amps', label: 'Amps', sub: 'Operator weapons', icon: '🔷', file: 'amps.html' },
-    { id: 'operators', label: 'Operators', sub: 'Focus schools', icon: '👁', file: 'operators.html' },
-    { id: 'builds', label: 'Builds', sub: 'Steel Path setups', icon: '⚔️', file: 'builds.html' },
-    { id: 'farming', label: 'Farming Hub', sub: 'Where to farm it', icon: '🌾', file: 'farming.html' },
-    { id: 'trading', label: 'Trading', sub: 'Sell for platinum', icon: '💰', file: 'trading.html' },
-    { id: 'marketplace', label: 'Market Board', sub: 'Player listings', icon: '🏪', file: 'marketplace.html' },
-    { id: 'live', label: 'Live', sub: 'Right-now game info', icon: '📡', file: 'live.html' },
-    { id: 'videos', label: 'Videos', sub: 'Watch & learn', icon: '🎬', file: 'videos.html' },
-    { id: 'guides', label: 'Guides', sub: 'Bosses, Liches, Rivens & more', icon: '📖', file: 'guides.html' },
-    { id: 'companions', label: 'Companions', sub: 'Sentinels, pets & MOAs', icon: '🐾', file: 'companions.html' },
-    { id: 'focus', label: 'Focus Schools', sub: 'All 5 schools', icon: '🌀', file: 'focus.html' },
-    { id: 'helminth', label: 'Helminth', sub: 'Subsume abilities', icon: '🧬', file: 'helminth.html' },
-    { id: 'damage', label: 'Damage Bible', sub: 'Types, procs & formulas', icon: '💥', file: 'damage.html' },
-    { id: 'syndicates', label: 'Syndicates', sub: 'Standing & rewards', icon: '🏛', file: 'syndicates.html' },
-    { id: 'incarnon', label: 'Incarnons', sub: 'Adapters & perks', icon: '🔥', file: 'incarnon.html' },
-    { id: 'liches', label: 'Liches & Sisters', sub: 'Kuva & Tenet hunting', icon: '😈', file: 'liches.html' },
-    { id: 'quests', label: 'Quest Guide', sub: 'Story in order', icon: '📜', file: 'quests.html' },
-    { id: 'shards', label: 'Archon Shards', sub: 'Colors & setups', icon: '💎', file: 'shards.html' },
-    { id: 'railjack', label: 'Railjack', sub: 'Ships & Necramechs', icon: '🚀', file: 'railjack.html' },
+
+    /* ---- Gear ---- */
+    { id: 'warframes', label: 'Warframes', sub: 'Every character — abilities, stats, where to farm them', icon: '🥷', file: 'warframes.html', group: 'Gear' },
+    { id: 'weapons', label: 'Weapons', sub: 'Every gun, blade & bow — stats and where to get them', icon: '🔫', file: 'weapons.html', group: 'Gear' },
+    { id: 'companions', label: 'Companions', sub: 'Pets & robots that fight beside you', icon: '🐾', file: 'companions.html', group: 'Gear' },
+    { id: 'amps', label: 'Amps', sub: "Your operator's weapon — built from parts", icon: '🔷', file: 'amps.html', group: 'Gear' },
+    { id: 'operators', label: 'Operators', sub: 'Your second character — focus schools & abilities', icon: '👁', file: 'operators.html', group: 'Gear' },
+
+    /* ---- Upgrades ---- */
+    { id: 'mods', label: 'Mods', sub: 'Upgrade cards that make everything stronger', icon: '🧩', file: 'mods.html', group: 'Upgrades' },
+    { id: 'arcanes', label: 'Arcanes', sub: 'Bonus powers for warframes & weapons', icon: '✨', file: 'arcanes.html', group: 'Upgrades' },
+    { id: 'shards', label: 'Shards', sub: 'Stat boosts you slot into your warframe', icon: '💠', file: 'shards.html', group: 'Upgrades' },
+    { id: 'builds', label: 'Builds', sub: 'Ready-made setups — copy & play', icon: '⚔️', file: 'builds.html', group: 'Upgrades' },
+    { id: 'helminth', label: 'Helminth', sub: 'Swap abilities between warframes', icon: '🧬', file: 'helminth.html', group: 'Upgrades' },
+    { id: 'focus', label: 'Focus', sub: 'Power up your operator — 5 schools explained', icon: '🔮', file: 'focus.html', group: 'Upgrades' },
+    { id: 'incarnon', label: 'Incarnon Guide', sub: 'Weapons that transform mid-mission', icon: '🔥', file: 'incarnon.html', group: 'Upgrades' },
+
+    /* ---- World ---- */
+    { id: 'relics', label: 'Relics', sub: 'Crack these open for prime parts', icon: '📦', file: 'relics.html', group: 'World' },
+    { id: 'farming', label: 'Farming', sub: 'Where to farm anything in the game', icon: '🌾', file: 'farming.html', group: 'World' },
+    { id: 'resources', label: 'Resource Finder', sub: 'What mission, what planet — find any material', icon: '⛏️', file: 'resources.html', group: 'World' },
+    { id: 'live', label: 'Live', sub: "What's happening in-game right now", icon: '📡', file: 'live.html', group: 'World' },
+    { id: 'quests', label: 'Quests', sub: 'Story missions — what order & what you get', icon: '📜', file: 'quests.html', group: 'World' },
+    { id: 'liches', label: 'Liches', sub: 'Hunt your nemesis for powerful weapons', icon: '👹', file: 'liches.html', group: 'World' },
+    { id: 'railjack', label: 'Railjack', sub: 'Space ships, space combat & mechs', icon: '🚀', file: 'railjack.html', group: 'World' },
+    { id: 'damage', label: 'Damage', sub: 'What kills what — damage types made simple', icon: '💥', file: 'damage.html', group: 'World' },
+    { id: 'syndicates', label: 'Syndicates', sub: 'Earn standing, unlock rewards from every faction', icon: '🤝', file: 'syndicates.html', group: 'World' },
+
+    /* ---- Community ---- */
+    { id: 'trading', label: 'Trading', sub: 'Sell your stuff for platinum', icon: '💰', file: 'trading.html', group: 'Community' },
+    { id: 'marketplace', label: 'Marketplace', sub: 'Listings from other players', icon: '🏪', file: 'marketplace.html', group: 'Community' },
+    { id: 'videos', label: 'Videos', sub: 'Watch & learn from the community', icon: '🎬', file: 'videos.html', group: 'Community' },
+    { id: 'guides', label: 'Guides', sub: 'Bosses, tips & how-tos', icon: '📖', file: 'guides.html', group: 'Community' },
   ];
+
+  /* Group order for the grouped sidebar nav + homepage section cards */
+  var NAV_GROUPS = ['Gear', 'Upgrades', 'World', 'Community'];
 
   var page = document.body.getAttribute('data-page') || 'home';
 
@@ -59,10 +72,17 @@
   function buildSidebar() {
     var host = document.getElementById('sidebar');
     if (!host) return;
-    var html = '<nav>';
-    NAV.forEach(function (n) {
-      html += '<a href="' + n.file + '" class="' + (n.id === page ? 'active' : '') + '">' +
+    function link(n) {
+      return '<a href="' + n.file + '" class="' + (n.id === page ? 'active' : '') + '">' +
         n.icon + ' ' + esc(n.label) + '</a>';
+    }
+    var html = '<nav>';
+    /* home first, ungrouped */
+    NAV.forEach(function (n) { if (!n.group) html += link(n); });
+    /* then each group with its heading */
+    NAV_GROUPS.forEach(function (g) {
+      html += '<div class="nav-label">' + esc(g) + '</div>';
+      NAV.forEach(function (n) { if (n.group === g) html += link(n); });
     });
     html += '</nav>';
     host.innerHTML = html;
@@ -75,14 +95,28 @@
     var tabs = [
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
       { id: 'builds', label: 'Builds', icon: '⚔️', file: 'builds.html' },
+      { id: 'ai', label: 'AI Chat', icon: '💬', action: 'ai' },
       { id: 'live', label: 'Live', icon: '📡', file: 'live.html' },
-      { id: 'marketplace', label: 'Market', icon: '🏪', file: 'marketplace.html' },
-      { id: 'index-more', label: 'More', icon: '☰', file: 'index.html#sections' },
+      { id: 'more', label: 'More', icon: '☰', file: 'index.html#sections' },
     ];
     host.innerHTML = tabs.map(function (t) {
-      return '<a href="' + t.file + '" class="' + (t.id === page ? 'active' : '') + '">' +
+      var cls = t.id === page ? 'active' : '';
+      if (t.action === 'ai') {
+        return '<a href="#" id="tabbar-ai" class="' + cls + '">' +
+          '<span class="ti">' + t.icon + '</span>' + t.label + '</a>';
+      }
+      return '<a href="' + t.file + '" class="' + cls + '">' +
         '<span class="ti">' + t.icon + '</span>' + t.label + '</a>';
     }).join('');
+    /* AI Chat tab opens the Vault Guide chat instead of navigating */
+    var aiTab = document.getElementById('tabbar-ai');
+    if (aiTab) {
+      aiTab.addEventListener('click', function (e) {
+        e.preventDefault();
+        var btn = document.getElementById('vault-ai-btn');
+        if (btn) btn.click();
+      });
+    }
   }
 
   /* ---------- breadcrumbs ---------- */
@@ -293,7 +327,7 @@
   });
 
   window.TV = {
-    NAV: NAV, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
+    NAV: NAV, NAV_GROUPS: NAV_GROUPS, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
     infiniteScroll: infiniteScroll, badge: badge, hardReload: hardReload,
     liveNote: liveNote, relatedLinks: relatedLinks,
     openSearch: openSearch
