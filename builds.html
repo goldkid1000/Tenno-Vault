@@ -7,7 +7,7 @@
 <meta name="description" content="Steel Path builds, one-shot builds and strong general builds with full mod loadouts and farm locations.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon-32.png" type="image/png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-v2.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0a0e1a">
 <meta name="mobile-web-app-capable" content="yes">
@@ -22,17 +22,27 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 <h1>Builds</h1>
+<div class="notice"><b>What is this?</b> Ready-made mod setups for Warframes and weapons. <b>One-shot</b> builds kill Steel Path (hard mode) enemies in one hit. Click any build to see every mod and where to farm it.</div>
 <p class="muted small" id="b-count"></p>
-<p class="muted">Copy these setups to dominate. <b>One-shot</b> = kills Steel Path enemies in one hit. Every mod shows where to farm it.</p>
-<div class="chip-row" id="b-filters">
-  <button class="chip active" data-f="all">All</button>
-  <button class="chip" data-f="beginner">🌱 Beginner</button>
-  <button class="chip" data-f="one-shot">💥 One-shot Steel Path</button>
-  <button class="chip" data-f="steel-path">Steel Path</button>
-  <button class="chip" data-f="boss">🎯 Boss Hunting</button>
-  <button class="chip" data-f="farm">📦 Farming</button>
-  <button class="chip" data-f="leveling">📈 Leveling</button>
-  <button class="chip" data-f="strong">Strong</button>
+<div id="b-filters">
+  <div class="filter-group">
+    <span class="filter-label">By difficulty</span>
+    <div class="chip-row">
+      <button class="chip" data-f="beginner">🌱 Beginner</button>
+      <button class="chip" data-f="one-shot">💥 One-shot Steel Path</button>
+      <button class="chip" data-f="steel-path">🛡 Steel Path</button>
+      <button class="chip" data-f="strong">💪 Strong</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <span class="filter-label">By purpose</span>
+    <div class="chip-row">
+      <button class="chip" data-f="boss">🎯 Boss Hunting</button>
+      <button class="chip" data-f="farm">📦 Farming</button>
+      <button class="chip" data-f="leveling">📈 Leveling</button>
+      <button class="chip active" data-f="all">All</button>
+    </div>
+  </div>
 </div>
 <div class="field"><input id="b-q" type="search" placeholder="Search builds by frame or weapon name…"></div>
 <div id="b-detail"></div>
@@ -67,7 +77,10 @@
     a.className = 'card'; a.href = '#build-' + b.id;
     a.innerHTML = (b.recommendedOneShot ? '<span class="badge recommended">Recommended one-shot</span>' : '') +
       window.TV.badge(b.tags) +
-      '<h3>' + esc(b.name) + '</h3><p>' + esc(b.description.slice(0, 120)) + '…</p>';
+      '<h3>' + esc(b.name) + '</h3>' +
+      '<p class="card-item">' + esc(b.item) + '</p>' +
+      '<p>' + esc(b.description.slice(0, 100)) + '…</p>' +
+      '<span class="view-hint">👁 View build</span>';
     return a;
   }
   function farmFor(modName) {
@@ -86,13 +99,31 @@
       '<h2>' + esc(b.name) + '</h2><p>' + esc(b.description) + '</p>' +
       (b.progenitor ? '<p><b>Progenitor:</b> ' + esc(b.progenitor) + '</p>' : '') +
       (b.weaponNote ? '<p class="muted">' + esc(b.weaponNote) + '</p>' : '') +
-      '<h3>Mods</h3>' + b.mods.map(function (m) {
+      '<h3 class="mods-head">Mods <button type="button" class="btn small ghost" id="b-copymods">📋 Copy mod list</button></h3>' + b.mods.map(function (m) {
         return '<div class="mod-row"><div><b><a href="mods.html#' + encodeURIComponent(m.name) + '">' + esc(m.name) + '</a></b>' +
           (m.note ? ' <span class="muted small">— ' + esc(m.note) + '</span>' : '') +
           '<div class="farm">📍 ' + farmFor(m.name) + '</div></div></div>';
       }).join('') +
       (b.arcane ? '<h3>Arcane</h3><p><a href="arcanes.html#' + encodeURIComponent(b.arcane) + '">' + esc(b.arcane) + '</a></p>' : '') +
       '<h3>How to play it</h3><p>' + esc(b.playstyle) + '</p></div>';
+    var copyBtn = document.getElementById('b-copymods');
+    if (copyBtn) copyBtn.addEventListener('click', function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var text = b.mods.map(function (m) { return m.name; }).join('\n');
+      var ok = function () {
+        copyBtn.textContent = '✅ Copied';
+        setTimeout(function () { copyBtn.textContent = '📋 Copy mod list'; }, 1800);
+      };
+      var fallback = function () {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); ok();
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback);
+      else fallback();
+    });
     box.scrollIntoView();
     var rel = [];
     (b.related || []).forEach(function (rid) {
