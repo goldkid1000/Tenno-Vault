@@ -30,6 +30,12 @@
 
 <h2>All mods</h2>
 <div class="field"><input id="m-q" type="search" placeholder="Filter 1,800+ mods…"></div>
+<div class="field" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+  <button class="btn small" id="f-all">All</button>
+  <button class="btn small" id="f-aura">🌀 Auras only</button>
+  <button class="btn small" id="f-primed">✨ Primed</button>
+  <button class="btn small" id="f-galv">⚡ Galvanized</button>
+</div>
 <div id="m-detail"></div>
 <div id="m-list" class="item-list"></div>
 <div id="related"></div>
@@ -49,7 +55,8 @@
     'Condition Overload', 'Weeping Wounds', 'Primed Continuity', 'Primed Flow',
     'Streamline', 'Blind Rage', 'Overextended', 'Adaptation', 'Rolling Guard',
     'Primed Firestorm', 'Vigilante Supplies', 'Bladed Rounds', 'Critical Delay',
-    'Semi-Shotgun Cannonade', 'Primary Merciless', 'Secondary Merciless', 'Melee Crescendo'];
+    'Semi-Shotgun Cannonade', 'Primary Merciless', 'Secondary Merciless', 'Melee Crescendo',
+    'Corrosive Projection', 'Growing Power', 'Energy Siphon', 'Brief Respite', 'Empowered Blades'];
   function farmHTML(m) {
     if (!m.drops || !m.drops.length) return '<span class="muted">Source unknown — check the in-game Codex.</span>';
     return m.drops.map(function (d) {
@@ -68,7 +75,8 @@
     a.innerHTML = '<div style="display:flex;gap:12px;align-items:center;">' + thumb(m, 64) +
       '<div><h3>' + esc(m.name) +
       (m.rarity ? ' <span class="badge type">' + esc(m.rarity) + '</span>' : '') +
-      (m.compat ? ' <span class="badge type">' + esc(m.compat) + '</span>' : '') + '</h3>' +
+      (m.aura ? ' <span class="badge type" style="background:#7c3aed;">AURA</span>' : '') +
+      (m.compat && m.compat !== 'AURA' ? ' <span class="badge type">' + esc(m.compat) + '</span>' : '') + '</h3>' +
       '<p class="muted small">' + esc((m.effect || '').slice(0, 130)) + '</p></div></div>';
     return a;
   }
@@ -104,11 +112,22 @@
     }).join('');
     var list = document.getElementById('m-list');
     ctl = window.TV.infiniteScroll(list, all, card, 40);
-    document.getElementById('m-q').addEventListener('input', function (e) {
-      var q = e.target.value.toLowerCase();
+    var activeFilter = 'all';
+    function applyFilters() {
+      var q = document.getElementById('m-q').value.toLowerCase();
       ctl.reset(all.filter(function (m) {
+        if (activeFilter === 'aura' && !m.aura) return false;
+        if (activeFilter === 'primed' && m.name.toLowerCase().indexOf('primed') !== 0) return false;
+        if (activeFilter === 'galv' && m.name.toLowerCase().indexOf('galvanized') !== 0) return false;
         return m.name.toLowerCase().indexOf(q) !== -1 || (m.effect || '').toLowerCase().indexOf(q) !== -1;
       }));
+    }
+    document.getElementById('m-q').addEventListener('input', applyFilters);
+    [['f-all','all'],['f-aura','aura'],['f-primed','primed'],['f-galv','galv']].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener('click', function () {
+        activeFilter = pair[1];
+        applyFilters();
+      });
     });
     if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
     window.addEventListener('hashchange', function () {

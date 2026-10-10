@@ -257,9 +257,13 @@
   function helpAnswer() {
     return 'Here\'s what I can do for you, Tenno:' +
       '<ul><li>🛠 <b>Build anything</b> — <i>"make me a Nova Prime Steel Path build"</i></li>' +
+      '<li>💥 <b>One-shot formula</b> — <i>"one-shot formula"</i> for the Steel Path delete-everything theory</li>' +
+      '<li>🎯 <b>Meta weapon templates</b> — <i>"kuva zarr"</i>, <i>"phenmor"</i>, <i>"laetum"</i>, <i>"tenet arca plasmor"</i>, <i>"nataruk"</i>, <i>"felarx"</i> — curated 8-mod builds with WHY for each mod</li>' +
+      '<li>🧪 <b>Primers</b> — <i>"primer"</i> for Kuva Nukor / Epitaph / Verglas Prime setups</li>' +
+      '<li>💎 <b>Archon shards</b> — <i>"archon shards"</i> for one-shot builds</li>' +
+      '<li>🦾 <b>Damage frames</b> — <i>"best frame for damage"</i> for one-shot enablers</li>' +
       '<li>📍 <b>Find anything</b> — <i>"where do I farm Argon Crystals"</i></li>' +
       '<li>❓ <b>Explain mods & arcanes</b> — <i>"what does Hunter Munitions do"</i></li>' +
-      '<li>💥 <b>Steel Path picks</b> — <i>"best Steel Path builds"</i></li>' +
       '<li>💰 <b>Platinum trading</b> — <i>"how do I sell for platinum"</i></li>' +
       '<li>🌱 <b>New player help</b> — <i>"I\'m new, what should I do first"</i></li></ul>' +
       '<p class="muted small">I\'m the Vault\'s built-in guide — I answer from the Vault\'s own data, not a live AI. ' +
@@ -540,7 +544,175 @@ function generateBuild(t) {
   return genWeaponBuild(found.e, parsed.purpose);
 }
 
-  /* ---------- intent routing ---------- */
+  /* ===== STEEL PATH ONE-SHOT KNOWLEDGE BASE =====
+   Deep build knowledge: the one-shot formula, curated 8-mod templates for
+   meta weapons, primer setups, archon shards, and frame enablers. */
+
+var ONE_SHOT_FORMULA =
+  '<b>The Steel Path one-shot formula</b> — this is how meta builds delete level 200+ enemies:' +
+  '<p><b>1. Hunter Munitions is the engine.</b> It gives your crits a 30% chance to inflict a ' +
+  'Slash proc worth 35% of the hit. Slash <i>bleed</i> procs ignore armor entirely and scale with ' +
+  'how hard you hit — so big crit + slash = enemy melts regardless of armor.</p>' +
+  '<p><b>2. Viral multiplies it.</b> 10 stacks of Viral = 3.5x damage to enemy health. That\'s why ' +
+  'every one-shot build runs Toxin + Cold 60/60 mods (Viral). The slash procs hit the ' +
+  'viral-weakened health pool.</p>' +
+  '<p><b>3. Strip armor anyway.</b> Even with slash, less armor = faster kills. Corrosive Projection ' +
+  'aura (-18% armor, stacks with your squad), Unairu\'s Caustic Strike, Terrify (up to 80% armor strip), ' +
+  'or Pillage.</p>' +
+  '<p><b>4. Stack crit.</b> Point Strike / Critical Delay + Vital Sense (or Primed versions). ' +
+  'Critical Delay\'s fire-rate penalty barely matters on slow heavy-hitters like the Kuva Zarr.</p>' +
+  '<p><b>5. Faction damage last.</b> Primed Bane mods (+55% damage vs a faction) are the biggest ' +
+  'single-slot multiplier in Steel Path. Swap per mission: Grineer / Corpus / Infested / Murmur.</p>' +
+  '<p><b>6. Galvanized on kill.</b> Galvanized Chamber / Shot / Hell stack damage as you kill — ' +
+  'in Steel Path you\'re always killing, so they\'re always stacked.</p>' +
+  '<p class="muted small">Formula: big crit → Hunter Munitions slash → viral-weakened health → dead enemy. ' +
+  'Everything below follows this.</p>';
+
+/* Curated riven-less 8-mod templates. Each pick has a WHY. */
+var ONE_SHOT_TEMPLATES = {
+  'kuva zarr': {
+    title: 'Kuva Zarr — Steel Path one-shot (Cannon mode)',
+    picks: [
+      ['Serration', 'WHY: Base damage. Every gun build starts here — it multiplies everything else.'],
+      ['Galvanized Chamber', 'WHY: Multishot that stacks MORE multishot on kill. In Steel Path you\'re always killing, so it\'s always stacked.'],
+      ['Critical Delay', 'WHY: Huge crit chance for cheap. The fire-rate penalty barely matters on the Zarr\'s slow cannon shots.'],
+      ['Vital Sense', 'WHY: Crit damage multiplier — cashes in on all that crit chance from Critical Delay.'],
+      ['Hunter Munitions', 'WHY: THE one-shot engine. Your crits inflict armor-ignoring Slash bleeds that scale with the hit.'],
+      ['Infected Clip', 'WHY: Toxin damage — half of the Viral combo.'],
+      ['Cryo Rounds', 'WHY: Cold damage — Toxin + Cold = Viral, which multiplies damage to enemy health up to 3.5x at 10 stacks.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage — the biggest single-slot Steel Path multiplier. Swap per mission (Corpus/Infested/Murmur).']
+    ],
+    notes: 'Run Corrosive Projection in your aura slot for -18% enemy armor. Cannon mode one-shots crowds; Barrage mode for single targets.'
+  },
+  'phenmor': {
+    title: 'Phenmor — Steel Path one-shot (Incarnon)',
+    picks: [
+      ['Serration', 'WHY: Base damage foundation — multiplies the Incarnon form\'s already huge damage.'],
+      ['Galvanized Chamber', 'WHY: Multishot stacking on kill. Charge the Incarnon with headshots, then delete rooms.'],
+      ['Critical Delay', 'WHY: Massive crit chance. The fire-rate hit doesn\'t matter when every shot one-taps.'],
+      ['Vital Sense', 'WHY: Crit damage to convert those crits into room-clearing hits.'],
+      ['Hunter Munitions', 'WHY: Slash procs from crits bypass armor — the core one-shot mechanic.'],
+      ['Malignant Force', 'WHY: Toxin 60/60 — Viral combo piece that also adds status chance.'],
+      ['Rime Rounds', 'WHY: Cold 60/60 — completes Viral with Malignant Force.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage. Swap per faction for maximum overkill.']
+    ],
+    notes: 'Phenmor\'s Incarnon mode has innate punch-through — line up headshots to charge it, then sweep crowds. Devouring Attrition (Incarnon perk) adds even more damage.'
+  },
+  'laetum': {
+    title: 'Laetum — Steel Path one-shot (Incarnon pistol)',
+    picks: [
+      ['Hornet Strike', 'WHY: Base damage — the pistol equivalent of Serration.'],
+      ['Galvanized Shot', 'WHY: On-kill stacking damage AND status chance. Laetum kills constantly, so it stays maxed.'],
+      ['Primed Pistol Gambit', 'WHY: Crit chance — feeds the Incarnon form\'s devastating headshots.'],
+      ['Primed Target Cracker', 'WHY: Crit damage multiplier for those Incarnon headshots.'],
+      ['Pistol Pestilence', 'WHY: Toxin 60/60 — Viral combo starter.'],
+      ['Frostbite', 'WHY: Cold 60/60 — completes Viral.'],
+      ['Lethal Torrent', 'WHY: Fire rate + multishot — charges Incarnon faster and sprays more death.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage. Swap per mission.']
+    ],
+    notes: 'Laetum\'s Incarnon form fires a devastating void beam on headshot kills — aim for heads to keep it rolling. One of the strongest secondaries in the game.'
+  },
+  'tenet arca plasmor': {
+    title: 'Tenet Arca Plasmor — Steel Path one-shot',
+    picks: [
+      ['Primed Point Blank', 'WHY: Shotgun base damage — the foundation.'],
+      ['Galvanized Hell', 'WHY: Multishot that stacks on kill. The Plasmor\'s wide projectile loves multishot.'],
+      ['Primed Ravage', 'WHY: Shotgun crit damage — the Plasmor has solid crit stats to exploit.'],
+      ['Blunderbuss', 'WHY: Crit chance — pairs with Primed Ravage.'],
+      ['Chilling Reload', 'WHY: Cold 60/60 — Viral combo piece with a reload bonus.'],
+      ['Toxic Barrage', 'WHY: Toxin 60/60 — completes Viral with Chilling Reload.'],
+      ['Hunter Munitions', 'WHY: Slash procs from the Plasmor\'s crits melt armored targets.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage. Swap per mission.']
+    ],
+    notes: 'Get the 60% Magnetic progenitor bonus when you valence-fuse it — Magnetic + Viral covers almost everything. The radial projectile clears crowds in one trigger pull.'
+  },
+  'nataruk': {
+    title: 'Nataruk — Steel Path one-shot (bow)',
+    picks: [
+      ['Serration', 'WHY: Base damage — multiplies the Nataruk\'s perfect shots.'],
+      ['Galvanized Chamber', 'WHY: Multishot stacking on kill — more arrows per shot.'],
+      ['Point Strike', 'WHY: Crit chance — the Nataruk\'s charged shots crit hard.'],
+      ['Vital Sense', 'WHY: Crit damage to maximize those charged headshots.'],
+      ['Hunter Munitions', 'WHY: Slash procs on crit — charged shots inflict brutal bleeds.'],
+      ['Infected Clip', 'WHY: Toxin — Viral combo half.'],
+      ['Cryo Rounds', 'WHY: Cold — completes Viral for 3.5x health damage at 10 stacks.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage. Swap per mission.']
+    ],
+    notes: 'The Nataruk\'s perfect-release mechanic (release at the chime) gives bonus crit — learn the timing and everything dies. Silent, so great for stealth Steel Path.'
+  },
+  'felarx': {
+    title: 'Felarx — Steel Path one-shot (Incarnon shotgun)',
+    picks: [
+      ['Primed Point Blank', 'WHY: Shotgun base damage foundation.'],
+      ['Galvanized Hell', 'WHY: Multishot stacking on kill — the Felarx devours crowds.'],
+      ['Primed Ravage', 'WHY: Crit damage — the Incarnon form crits relentlessly.'],
+      ['Blunderbuss', 'WHY: Crit chance to feed Primed Ravage.'],
+      ['Chilling Reload', 'WHY: Cold 60/60 — Viral combo piece.'],
+      ['Toxic Barrage', 'WHY: Toxin 60/60 — completes Viral.'],
+      ['Hunter Munitions', 'WHY: Slash procs from crits — armor becomes irrelevant.'],
+      ['Primed Bane Of Grineer', 'WHY: +55% faction damage. Swap per mission.']
+    ],
+    notes: 'Felarx\'s Incarnon form fires homing projectiles that devastate crowds. One of the highest-DPS shotguns in the game when built for crit + viral + slash.'
+  }
+};
+
+var PRIMER_KNOWLEDGE =
+  '<b>Primers — the secret to faster one-shots</b>' +
+  '<p>A primer is a weapon (or companion) whose only job is to stack status effects on enemies ' +
+  'so your main weapon\'s Condition Overload / slash procs hit harder. You spray the primer, swap to your killer.</p>' +
+  '<p><b>Kuva Nukor (the classic primer):</b> Microwave beam with insane status chance that chains between enemies. ' +
+  'Build: Lethal Torrent + Barrel Diffusion (multishot/status), Pistol Pestilence + Frostbite (Viral), Jolt + Scorch (more status). ' +
+  'Get a Magnetic or Heat progenitor. Spray a crowd → swap to your main gun → everything dies faster.</p>' +
+  '<p><b>Epitaph (AoE primer):</b> Charged shots explode in a status-spreading blast. Build for Viral + Heat with high status chance. ' +
+  'One charged shot primes a whole room.</p>' +
+  '<p><b>Verglas Prime + Manifold Bond (companion primer):</b> Give Nautilus the Verglas Prime (cold beam sentinel weapon) ' +
+  'and the Manifold Bond mod — every status your sentinel inflicts boosts YOUR weapon\'s status application. ' +
+  'It primes enemies with Cold while you focus on killing. Nautilus\'s Cordon ability also groups enemies for your AoE.</p>' +
+  '<p class="muted small">Primer + Condition Overload melee is one of the strongest Steel Path combos in the game.</p>';
+
+var SHARD_KNOWLEDGE =
+  '<b>Archon Shards for one-shot builds</b>' +
+  '<p><b>Crimson shards:</b> +Ability Strength — for frames whose abilities do the killing (Saryn, Volt, Rhino Roar). ' +
+  'Or +Melee Crit Chance if you\'re on a melee one-shot build.</p>' +
+  '<p><b>Amber shards:</b> +Casting Speed — faster Roar/Eclipse/Terrify casts keep your damage buffs rolling. ' +
+  '+Max Energy on spawn is the lazy alternative.</p>' +
+  '<p><b>Azure shards:</b> +Armor or +Health — survivability so you live long enough to one-shot. ' +
+  '+Max Energy if your build is energy-hungry.</p>' +
+  '<p><b>Violet shards:</b> +Crit Damage after a crit — pure damage for crit-based one-shot weapons.</p>' +
+  '<p><b>Emerald shards:</b> +Toxin damage when you inflict status — feeds the Viral + Hunter Munitions loop.</p>' +
+  '<p class="muted small">Tauforged (from Archon Hunts) give 1.5x the bonus — always use Tauforged when you have them.</p>';
+
+var ENABLER_KNOWLEDGE =
+  '<b>Warframes that enable one-shots</b>' +
+  '<p><b>Rhino — Roar:</b> +damage buff (multiplicative, works like faction damage). Subsumed onto any frame via the Helminth. ' +
+  'The universal damage button.</p>' +
+  '<p><b>Mirage — Eclipse:</b> Up to +200% damage in light. Pair with a bright energy color and stand in the light — ' +
+  'your weapons hit like trucks.</p>' +
+  '<p><b>Chroma — Vex Armor:</b> Take damage → +damage and +armor. Fury (damage) scales the more you get hit. ' +
+  'Classic Eidolon hunter frame.</p>' +
+  '<p><b>Volt — Shock Trooper:</b> Adds Electric damage to weapons (Eidolon meta) and Speed for fire rate. ' +
+  'His shields also add Crit Damage to shots fired through them.</p>' +
+  '<p><b>Saryn — Toxic Lash:</b> Adds Toxin damage to every weapon hit — feeds Viral combos and pops spores that spread.</p>' +
+  '<p><b>Octavia — Amp:</b> Standing in her Amp zone multiplies weapon damage. Drop it, stand in it, delete.</p>' +
+  '<p><b>Xaku — Deny:</b> Armor strip + the Vast Untime that freezes enemies. Armor-stripped + frozen = free one-shots.</p>' +
+  '<p class="muted small">Pro move: subsume Roar (Rhino) or Eclipse (Mirage) onto your main frame via the Helminth for damage on any kit.</p>';
+
+function oneShotTemplateAnswer(key) {
+  var t = ONE_SHOT_TEMPLATES[key];
+  if (!t) return null;
+  var rows = t.picks.map(function (p, i) {
+    var m = findModExact(p[0]);
+    var farm = m ? modFarmLine(m) : '';
+    return '<div class="mod-row"><div><b>' + (i + 1) + '. ' + esc(p[0]) + '</b>' +
+      '<div class="muted small">' + esc(p[1]) + '</div>' + farm + '</div></div>';
+  }).join('');
+  return '<b>' + esc(t.title) + '</b><p class="muted small">Riven-less. Every mod below has a WHY — ' +
+    'this is the reasoning, not just a list.</p>' + rows +
+    '<p class="muted small">' + esc(t.notes) + '</p>' +
+    '<p>Want the theory behind it? Ask <i>"one-shot formula"</i>. Need a primer? Ask <i>"primer"</i>.</p>';
+}
+
+/* ---------- intent routing ---------- */
   function stripQ(q) { return norm(q).replace(/\?+$/, '').trim(); }
 
   function answer(q) {
@@ -551,6 +723,27 @@ function generateBuild(t) {
       return 'Hey, Tenno. ' + helpAnswer();
     }
     if (t.indexOf('help') !== -1 || t.indexOf('what can you') !== -1) return helpAnswer();
+    /* ONE-SHOT KNOWLEDGE — deep build theory, curated templates, primers, shards, enablers.
+       Check these before the generic build intent so specific questions get the deep answers. */
+    if (/one[\s-]?shot (formula|guide|how|theory)/.test(t) || /how (do|to).{0,20}one[\s-]?shot/.test(t)) {
+      return ONE_SHOT_FORMULA;
+    }
+    if (/\bprimer\b/.test(t)) {
+      return PRIMER_KNOWLEDGE;
+    }
+    if (/archon shard/.test(t)) {
+      return SHARD_KNOWLEDGE;
+    }
+    if (/\benabler\b/.test(t) || /best frame for (damage|one[\s-]?shot|dps)/.test(t)) {
+      return ENABLER_KNOWLEDGE;
+    }
+    /* curated 8-mod templates for meta one-shot weapons (with WHY for each mod) */
+    var templateKeys = Object.keys(ONE_SHOT_TEMPLATES);
+    for (var ti = 0; ti < templateKeys.length; ti++) {
+      if (t.indexOf(templateKeys[ti]) !== -1) {
+        return oneShotTemplateAnswer(templateKeys[ti]);
+      }
+    }
     /* BUILD INTENT — catch this FIRST, before anything else. If the player wants
        a build for a specific item, generate it. Handles: "make me a nova prime
        steelpath build", "wisp prime one shot", "rhino build", etc. */
@@ -696,7 +889,8 @@ function generateBuild(t) {
   }
 
   var CHIPS = [
-    'Best Steel Path builds?',
+    'One-shot formula?',
+    'Kuva Zarr build',
     'Where do I farm Argon Crystals?',
     'How do I sell for platinum?'
   ];
