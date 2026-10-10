@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goldkid1000.github.io/Tenno-Vault/sitemap.xml
