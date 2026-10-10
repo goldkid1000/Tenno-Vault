@@ -36,7 +36,7 @@
       TV.getJSONParts('data/site/weapons', 3),
       TV.getJSONParts('data/site/mods', 9),
       TV.getJSONParts('data/site/relics', 6),
-      TV.getJSON('data/site/arcanes.json'),
+      TV.getJSONParts('data/site/arcanes', 2),
       TV.getJSON('data/site/farming.json')
     ]).then(function (r) {
       D = {
