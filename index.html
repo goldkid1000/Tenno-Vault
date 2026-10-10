@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tenno Vault — Warframe builds, farms & prices</title>
-<meta name="description" content="Tenno Vault: every Warframe, weapon, mod, relic and arcane with Steel Path builds, farm locations, live prices and real-time game info.">
+<title>Tenno Vault — your Warframe companion</title>
+<meta name="description" content="Tenno Vault: every Warframe, weapon, mod, and build — with farm locations and setups that actually work.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -14,6 +14,16 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Tenno Vault">
+<style>
+.hero{padding:30px 4px 8px;text-align:center}
+.hero h1{font-size:2rem;margin:0 0 .35em;line-height:1.2}
+.hero .hero-sub{color:var(--muted);font-size:1.02rem;max-width:620px;margin:0 auto 18px}
+.btn.big{font-size:1.08rem;padding:13px 30px}
+.group-head{margin:28px 0 2px;font-size:1.2rem}
+.group-sub{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+.card h3 .badge{vertical-align:middle;margin-left:6px}
+@media(max-width:560px){.hero h1{font-size:1.6rem}}
+</style>
 </head>
 <body data-page="home" data-crumb="Home">
 <div id="site-header"></div>
@@ -22,23 +32,26 @@
 <main id="main">
 <div id="breadcrumbs"></div>
 
-<h1>Welcome to Tenno Vault ◈</h1>
-<p class="muted">Everything about Warframe in one place — what to use, how to build it, where to farm it, and what it's worth. Pick a path below, or search for anything up top.</p>
-<p><button class="btn primary pwa-install-btn" onclick="triggerPwaInstall()">📲 Install App</button></p>
+<header class="hero">
+  <h1>Tenno Vault — your Warframe companion</h1>
+  <p class="hero-sub">Every Warframe, weapon, mod, and build — with farm locations and setups that actually work.</p>
+  <p><button class="btn primary big pwa-install-btn" onclick="triggerPwaInstall()">📲 Install App</button></p>
+  <p class="muted small">Or search for anything using the search box up top.</p>
+</header>
 
 <h2>🚀 Start here</h2>
 <div class="card-grid">
   <a class="card path-card" href="#beginner-guide">
-    <div class="icon">🌱</div><h3>New Player Path</h3>
-    <p>Just started? Your first warframe, first quests, how mods work, and beginner builds.</p>
+    <div class="icon">🌱</div><h3>New to Warframe?</h3>
+    <p>Pick your first character, learn the basics, and get your first builds.</p>
   </a>
   <a class="card path-card" href="builds.html#one-shot">
-    <div class="icon">💥</div><h3>Steel Path Path</h3>
-    <p>Ready for hard mode? These one-shot builds delete Steel Path enemies.</p>
+    <div class="icon">💥</div><h3>Ready for Steel Path?</h3>
+    <p>Hard mode is here. These one-shot builds will carry you through.</p>
   </a>
   <a class="card path-card" href="trading.html">
-    <div class="icon">💰</div><h3>Platinum Path</h3>
-    <p>Learn to sell prime parts and mods for platinum — free premium currency.</p>
+    <div class="icon">💰</div><h3>Want free platinum?</h3>
+    <p>Sell your prime parts and mods. Here's how trading works.</p>
   </a>
 </div>
 
@@ -66,7 +79,7 @@
 </div>
 
 <h2 id="sections">📚 Everything in the Vault</h2>
-<div class="card-grid" id="section-grid"></div>
+<div id="grouped-sections"></div>
 
 <h2>⚡ Happening right now</h2>
 <div class="card-grid">
@@ -160,7 +173,7 @@
 <div class="notice">
   <b>New to Warframe?</b> A Warframe is your character, mods are how you make them strong,
   relics give you prime parts, and platinum is the trading currency. Start with the
-  <a href="builds.html#rhino-starter">New Player Path</a> above.
+  <a href="#beginner-guide">New Player Guide</a> above.
 </div>
 
 </main>
@@ -173,12 +186,50 @@
 <script src="js/ai.js?v=20261010"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var grid = document.getElementById('section-grid');
-  grid.innerHTML = window.TV.NAV.filter(function (n) {
-    return ['warframes','weapons','mods','arcanes','relics','amps','operators','builds','farming'].indexOf(n.id) !== -1;
-  }).map(function (n) {
-    return '<a class="card" href="' + n.file + '"><div class="icon">' + n.icon + '</div>' +
-      '<h3>' + n.label + '</h3><p>' + n.sub + '</p></a>';
+  /* Use the sibling worker's grouped NAV if available; otherwise fall back to a local copy. */
+  var FALLBACK_NAV = [
+    { id: 'warframes', label: 'Warframes', sub: 'Choose your hero — every playable character, their powers, and how to get them', icon: '🥷', file: 'warframes.html', group: 'Gear' },
+    { id: 'weapons', label: 'Weapons', sub: 'Every gun and blade — stats, builds, and where to farm them', icon: '🔫', file: 'weapons.html', group: 'Gear' },
+    { id: 'builds', label: 'Builds', sub: 'Ready-made setups that actually work — including Steel Path one-shot builds', icon: '⚔️', file: 'builds.html', group: 'Gear' },
+    { id: 'amps', label: 'Amps', sub: 'Weapons for your Operator — the second form you unlock later in the story', icon: '🔷', file: 'amps.html', group: 'Gear' },
+    { id: 'operators', label: 'Operators', sub: 'Your Operator form — focus schools and abilities, explained simply', icon: '👁', file: 'operators.html', group: 'Gear' },
+    { id: 'mods', label: 'Mods', sub: 'Upgrade cards you slot into your gear — what each one does and where to farm it', icon: '🧩', file: 'mods.html', group: 'Upgrades' },
+    { id: 'arcanes', label: 'Arcanes', sub: 'Bonus powers you equip — where they come from and which ones to chase', icon: '✨', file: 'arcanes.html', group: 'Upgrades' },
+    { id: 'relics', label: 'Relics', sub: 'Crack these open to win rare prime parts — for crafting or trading', icon: '📦', file: 'relics.html', group: 'Upgrades' },
+    { id: 'farming', label: 'Farming Hub', sub: 'Where to find everything — the fastest ways to get what you need', icon: '🌾', file: 'farming.html', group: 'Upgrades' },
+    { id: 'live', label: 'Live', sub: 'Right-now game info — day/night cycles, active fissures, sorties, news', icon: '📡', file: 'live.html', group: 'World' },
+    { id: 'videos', label: 'Videos', sub: 'Watch and learn — guides and walkthroughs from the community', icon: '🎬', file: 'videos.html', group: 'World' },
+    { id: 'guides', label: 'Guides', sub: 'Boss fights, Liches, Rivens, quests, and more — step by step', icon: '📖', file: 'guides.html', group: 'World' },
+    { id: 'trading', label: 'Trading', sub: 'Sell your prime parts and mods for platinum — free premium currency', icon: '💰', file: 'trading.html', group: 'Community' },
+    { id: 'marketplace', label: 'Market Board', sub: 'Buy and sell with other players — listings from the community', icon: '🏪', file: 'marketplace.html', group: 'Community' }
+  ];
+  var GROUP_SUBS = {
+    'Gear': 'The things you fight with — characters, weapons, and ready-made builds.',
+    'Upgrades': 'Make your gear stronger — mods, arcanes, relics, and where to farm them.',
+    'World': "What's happening in the game right now — live info, guides, and videos.",
+    'Community': 'Other players — trading, the market board, and where to report bugs.'
+  };
+  var POPULAR = ['builds', 'warframes', 'weapons', 'mods'];
+  var nav = (window.TV && window.TV.NAV && window.TV.NAV.length && window.TV.NAV[0].group)
+    ? window.TV.NAV.filter(function (n) { return n.id !== 'home'; })
+    : FALLBACK_NAV;
+  var groups = (window.TV && window.TV.NAV_GROUPS) || ['Gear', 'Upgrades', 'World', 'Community'];
+  var esc = (window.TV && window.TV.esc) || function (s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  };
+  var host = document.getElementById('grouped-sections');
+  host.innerHTML = groups.map(function (g) {
+    var cards = nav.filter(function (n) { return n.group === g; });
+    if (!cards.length) return '';
+    return '<h3 class="group-head">' + esc(g) + '</h3>' +
+      '<p class="group-sub">' + esc(GROUP_SUBS[g] || '') + '</p>' +
+      '<div class="card-grid">' + cards.map(function (n) {
+        var badge = POPULAR.indexOf(n.id) !== -1
+          ? ' <span class="badge recommended">⭐ Popular</span>' : '';
+        return '<a class="card" href="' + esc(n.file) + '"><div class="icon">' + n.icon + '</div>' +
+          '<h3>' + esc(n.label) + badge + '</h3><p>' + esc(n.sub) + '</p></a>';
+      }).join('') + '</div>';
   }).join('');
 });
 </script>

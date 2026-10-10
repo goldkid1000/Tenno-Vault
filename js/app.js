@@ -18,6 +18,16 @@
     { id: 'live', label: 'Live', sub: 'Right-now game info', icon: '📡', file: 'live.html' },
     { id: 'videos', label: 'Videos', sub: 'Watch & learn', icon: '🎬', file: 'videos.html' },
     { id: 'guides', label: 'Guides', sub: 'Bosses, Liches, Rivens & more', icon: '📖', file: 'guides.html' },
+    { id: 'companions', label: 'Companions', sub: 'Sentinels, pets & MOAs', icon: '🐾', file: 'companions.html' },
+    { id: 'focus', label: 'Focus Schools', sub: 'All 5 schools', icon: '🌀', file: 'focus.html' },
+    { id: 'helminth', label: 'Helminth', sub: 'Subsume abilities', icon: '🧬', file: 'helminth.html' },
+    { id: 'damage', label: 'Damage Bible', sub: 'Types, procs & formulas', icon: '💥', file: 'damage.html' },
+    { id: 'syndicates', label: 'Syndicates', sub: 'Standing & rewards', icon: '🏛', file: 'syndicates.html' },
+    { id: 'incarnon', label: 'Incarnons', sub: 'Adapters & perks', icon: '🔥', file: 'incarnon.html' },
+    { id: 'liches', label: 'Liches & Sisters', sub: 'Kuva & Tenet hunting', icon: '😈', file: 'liches.html' },
+    { id: 'quests', label: 'Quest Guide', sub: 'Story in order', icon: '📜', file: 'quests.html' },
+    { id: 'shards', label: 'Archon Shards', sub: 'Colors & setups', icon: '💎', file: 'shards.html' },
+    { id: 'railjack', label: 'Railjack', sub: 'Ships & Necramechs', icon: '🚀', file: 'railjack.html' },
   ];
 
   var page = document.body.getAttribute('data-page') || 'home';
