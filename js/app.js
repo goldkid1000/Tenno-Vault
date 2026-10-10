@@ -150,7 +150,7 @@
       '<a class="btn small" href="index.html#feedback">🐛 Report a bug / suggest something</a>' +
       '<span>Unofficial fan site. Not affiliated with Digital Extremes.</span>' +
       '<span>Game data: warframe-items (WFCD) · Price guide: community averages · Live: warframestat.us</span>' +
-      '<span class="muted small" id="tv-version"></span>' +
+      '<span class="muted small" id="tv-version" style="display:inline-block;padding:3px 10px;border:1px solid rgba(0,229,255,.35);border-radius:20px;color:#00e5ff;font-size:11px;font-weight:600;"></span>' +
       '</div>';
     /* version stamp — loaded async so footer renders instantly */
     try {
