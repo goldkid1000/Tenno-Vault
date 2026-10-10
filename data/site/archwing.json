@@ -1,0 +1,277 @@
+[
+ {
+  "name": "Odonata",
+  "type": "Archwing",
+  "badge": "STARTER",
+  "effect": "The first Archwing \u2014 balanced all-rounder. Energy Shell blocks frontal damage, Seeking Fire homes in on enemies.",
+  "effects": [
+   "1 \u2014 Energy Shell: frontal energy shield that absorbs damage",
+   "2 \u2014 Seeking Fire: homing missile barrage",
+   "3 \u2014 Disarray: confuses enemies in range",
+   "4 \u2014 Repel: radial blast that knocks back everything"
+  ],
+  "farm": "Archwing quest reward \u2014 everyone gets this first.",
+  "tips": [
+   "Great starter, but outclassed by Amesha for defense and Itzal for speed."
+  ],
+  "tags": "archwing odonata starter space"
+ },
+ {
+  "name": "Odonata Prime",
+  "type": "Archwing",
+  "badge": "PRIME",
+  "effect": "Primed Odonata \u2014 better stats across the board. Same abilities, tankier and faster.",
+  "effects": [
+   "Same 4 abilities as Odonata",
+   "Higher shields, health, and speed"
+  ],
+  "farm": "Vaulted Prime \u2014 relic farm or Prime Resurgence when available.",
+  "tips": [
+   "Worth it if you love Odonata's kit but want more survivability."
+  ],
+  "tags": "archwing odonata prime space"
+ },
+ {
+  "name": "Elytron",
+  "type": "Archwing",
+  "badge": "BOMBER",
+  "effect": "The bomber Archwing \u2014 built for AoE destruction. Thumper drops mines, Warhead fires a massive nuke.",
+  "effects": [
+   "1 \u2014 Thumper: drops proximity mines",
+   "2 \u2014 Core Vent: radial heat burst around you",
+   "3 \u2014 Warhead: fires a huge homing nuke",
+   "4 \u2014 Bloomer: chaff that redirects enemy fire"
+  ],
+  "farm": "Clan dojo (Tenno lab research).",
+  "tips": [
+   "Best Archwing for clearing Archwing defense/mobile defense missions fast."
+  ],
+  "tags": "archwing elytron bomber aoe space"
+ },
+ {
+  "name": "Amesha",
+  "type": "Archwing",
+  "badge": "SUPPORT",
+  "effect": "The support/tank Archwing \u2014 the best defensive option. Warding Grace slows all nearby enemies by 75%.",
+  "effects": [
+   "1 \u2014 Warding Grace: slows ALL nearby enemies, massive team survivability",
+   "2 \u2014 Benevolent Decoy: draws enemy fire",
+   "3 \u2014 Vengeful Rush: speed boost that converts damage taken into energy",
+   "4 \u2014 Surge Protocol: team buff"
+  ],
+  "farm": "Clan dojo (Tenno lab research).",
+  "tips": [
+   "THE pick for hard Archwing content (Jordas Golem, Razorback). Warding Grace trivializes defense objectives.",
+   "Also great for Archwing rush missions \u2014 pop Vengeful Rush and fly."
+  ],
+  "tags": "archwing amesha support tank defense space"
+ },
+ {
+  "name": "Itzal",
+  "type": "Archwing",
+  "badge": "SPEED",
+  "effect": "The speed Archwing \u2014 fastest in the game. Blink teleports you forward, Penumbra turns you invisible.",
+  "effects": [
+   "1 \u2014 Blink: instant teleport dash (the fastest movement in Archwing)",
+   "2 \u2014 Penumbra: invisibility",
+   "3 \u2014 Cosmic Crush: pulls enemies in and crushes them",
+   "4 \u2014 Suppression: disables enemy abilities"
+  ],
+  "farm": "Clan dojo (Tenno lab research).",
+  "tips": [
+   "Fastest way to clear Archwing capture/sabotage/exterminate \u2014 Blink past everything.",
+   "Penumbra + Cosmic Crush is a great combo for defense."
+  ],
+  "tags": "archwing itzal speed stealth space"
+ },
+ {
+  "name": "Archgun Deployer",
+  "type": "Gear",
+  "badge": "GUIDE",
+  "effect": "Lets you call down your Archgun as a heavy weapon in normal ground missions. A game-changer for open worlds and Steel Path.",
+  "effects": [
+   "HOW TO UNLOCK: Complete the Profit-Taker Orb heist (Fortuna). The Archgun Deployer is the rank 5 Solaris United reward \u2014 buy it from Little Duck for 120,000 standing.",
+   "HOW IT WORKS: Equip it in your Gear wheel. Deploying calls your Archgun down in a pod. 10-minute cooldown between uses (starts when you pick it up).",
+   "GRAVIMAG: Each Archgun needs a Gravimag installed (1 per gun) to be deployable on the ground. Gravimags come from the Profit-Taker Orb fight (Phase 2+ drops).",
+   "AMMO: Deployed archguns use Archgun ammo pickups (dropped by enemies) \u2014 NOT your normal ammo. Bring Ammo Case or a sentinel with Ammo Drum if running long missions.",
+   "BEST PICK: Mausolon is the meta \u2014 charge shot AoE melts everything. Larkspur and Fluctus are strong backups."
+  ],
+  "farm": "Profit-Taker Orb (Fortuna) \u2014 rank 5 Solaris United, buy from Little Duck.",
+  "tips": [
+   "Install a Gravimag on your Mausolon FIRST \u2014 it's the one you'll use 90% of the time.",
+   "The deployer trivializes open-world bounties and Eidolon-adjacent content."
+  ],
+  "tags": "archgun deployer profit-taker gravimag ground heavy weapon guide"
+ },
+ {
+  "name": "Mausolon (Deployer)",
+  "type": "Archgun Build",
+  "badge": "META",
+  "effect": "THE meta Archgun Deployer pick. Charge shot fires a massive AoE blast. Melts Steel Path crowds.",
+  "effects": [
+   "Mods: Rubedo-Lined Barrel, Sabot Rounds, Parallax Scope, Critical Focus, Hollowed Bullets, Combustion Rounds, Venomous Clip, Magma Chamber",
+   "Alternate: swap Combustion Rounds for radiation/viral depending on faction",
+   "Comes free with the Voidrig Necramech"
+  ],
+  "farm": "Necraloid (Father) \u2014 Isolation Vault bounties. Or free with Voidrig.",
+  "tips": [
+   "Charge shots are the main damage \u2014 tap-fire for crowds, charge for heavies.",
+   "Needs a Gravimag to deploy on ground."
+  ],
+  "tags": "archgun mausolon deployer best meta build"
+ },
+ {
+  "name": "Larkspur (Deployer)",
+  "type": "Archgun Build",
+  "badge": "STRONG",
+  "effect": "Chargeable AoE archgun \u2014 great Deployer backup if you don't have Mausolon yet.",
+  "effects": [
+   "Mods: Rubedo-Lined Barrel, Sabot Rounds, Parallax Scope, Critical Focus, Hollowed Bullets, Venomous Clip, Magma Chamber, Polar Magazine",
+   "Tap-fire for rapid shots, full charge for the big blast"
+  ],
+  "farm": "Clan dojo (Tenno lab research).",
+  "tips": [
+   "Solid all-rounder. Easier to get than Mausolon if you haven't done Deimos yet."
+  ],
+  "tags": "archgun larkspur deployer build"
+ },
+ {
+  "name": "Fluctus (Deployer)",
+  "type": "Archgun Build",
+  "badge": "STRONG",
+  "effect": "Infinite punch-through waves \u2014 hits everything in a line. Great for corridors and defense.",
+  "effects": [
+   "Mods: Rubedo-Lined Barrel, Sabot Rounds, Parallax Scope, Automatic Trigger, Hollowed Bullets, Venomous Clip, Magma Chamber, Zodiac Shred"
+  ],
+  "farm": "Clan dojo (Tenno lab research).",
+  "tips": [
+   "The waves go through walls \u2014 amazing for Mobile Defense and Excavation."
+  ],
+  "tags": "archgun fluctus deployer build"
+ },
+ {
+  "name": "Rubedo-Lined Barrel",
+  "type": "Archgun Mod",
+  "effect": "+110% damage for Archguns. The Serration of archguns \u2014 goes on every build.",
+  "farm": "Archwing missions (drop from enemies) or Market.",
+  "tags": "archgun mod damage staple"
+ },
+ {
+  "name": "Sabot Rounds",
+  "type": "Archgun Mod",
+  "effect": "+90% multishot for Archguns. The Split Chamber of archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod multishot staple"
+ },
+ {
+  "name": "Parallax Scope",
+  "type": "Archgun Mod",
+  "effect": "+120% critical chance for Archguns. The Point Strike of archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod crit staple"
+ },
+ {
+  "name": "Critical Focus",
+  "type": "Archgun Mod",
+  "effect": "+80% critical damage for Archguns. The Vital Sense of archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod crit staple"
+ },
+ {
+  "name": "Hollowed Bullets",
+  "type": "Archgun Mod",
+  "effect": "+60% status chance for Archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod status"
+ },
+ {
+  "name": "Automatic Trigger",
+  "type": "Archgun Mod",
+  "effect": "+60% fire rate for Archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod firerate"
+ },
+ {
+  "name": "Polar Magazine",
+  "type": "Archgun Mod",
+  "effect": "+60% magazine capacity for Archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod magazine"
+ },
+ {
+  "name": "Zodiac Shred",
+  "type": "Archgun Mod",
+  "effect": "+60% punch through for Archguns.",
+  "farm": "Archwing missions.",
+  "tags": "archgun mod punchthrough"
+ },
+ {
+  "name": "Energy Inversion",
+  "type": "Archwing Mod",
+  "effect": "+150% shields for Archwings. The Redirection of archwings.",
+  "farm": "Archwing missions.",
+  "tags": "archwing mod shields staple"
+ },
+ {
+  "name": "Enhanced Durability",
+  "type": "Archwing Mod",
+  "effect": "+150% health for Archwings. The Vitality of archwings.",
+  "farm": "Archwing missions.",
+  "tags": "archwing mod health staple"
+ },
+ {
+  "name": "Hyperion Thrusters",
+  "type": "Archwing Mod",
+  "effect": "+30% flight speed for Archwings.",
+  "farm": "Archwing missions.",
+  "tags": "archwing mod speed"
+ },
+ {
+  "name": "System Reroute",
+  "type": "Archwing Mod",
+  "effect": "+60% ability efficiency for Archwings. The Streamline of archwings.",
+  "farm": "Archwing missions.",
+  "tags": "archwing mod efficiency"
+ },
+ {
+  "name": "Extend",
+  "type": "Archwing Mod",
+  "effect": "+45% ability range for Archwings. The Stretch of archwings.",
+  "farm": "Archwing missions.",
+  "tags": "archwing mod range"
+ },
+ {
+  "name": "Cutting Edge",
+  "type": "Archmelee Mod",
+  "effect": "+110% damage for Archmelee. The Pressure Point of archmelee.",
+  "farm": "Archwing missions.",
+  "tags": "archmelee mod damage staple"
+ },
+ {
+  "name": "Furor",
+  "type": "Archmelee Mod",
+  "effect": "+40% attack speed for Archmelee. The Fury of archmelee.",
+  "farm": "Archwing missions.",
+  "tags": "archmelee mod speed"
+ },
+ {
+  "name": "Archwing Missions Guide",
+  "type": "Guide",
+  "badge": "GUIDE",
+  "effect": "Where to play Archwing and what each mission type is for.",
+  "effects": [
+   "UNLOCK: Complete 'The Archwing' quest (Junction: Mars \u2192 Phobos).",
+   "BEST NODES: Kepler (Phobos) \u2014 Rush, great for leveling. Erpo (Earth) \u2014 Mobile Defense. Salacia (Neptune) \u2014 Mobile Defense, popular farm.",
+   "FARMING: Archwing mods drop from all Archwing enemies. Salacia (Neptune) MD is the go-to farm.",
+   "JORDAS GOLEM: Archwing boss on Eris \u2014 drops Atlas parts. Bring Amesha (defense) or Elytron (damage).",
+   "RAZORBACK: Archwing boss event \u2014 drops Gorgon Wraith parts. Comes around periodically.",
+   "TIP: You barely need Archwing after the star chart \u2014 but you NEED it leveled for Jordas and Razorback."
+  ],
+  "farm": "Unlock via 'The Archwing' quest.",
+  "tips": [
+   "Level on Kepler (Phobos) Rush \u2014 fastest Archwing XP.",
+   "Amesha makes every Archwing mission trivial with Warding Grace."
+  ],
+  "tags": "archwing missions guide farm jordas razorback"
+ }
+]
