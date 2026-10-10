@@ -240,7 +240,18 @@
 
   function toggle(open) {
     var show = typeof open === 'boolean' ? open : els.panel.style.display !== 'flex';
-    els.panel.style.display = show ? 'flex' : 'none';
+    if (show) {
+      els.panel.style.display = 'flex';
+      /* next frame so the transition animates */
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { els.panel.classList.add('open'); });
+      });
+    } else {
+      els.panel.classList.remove('open');
+      setTimeout(function () {
+        if (!els.panel.classList.contains('open')) els.panel.style.display = 'none';
+      }, 280);
+    }
     els.btn.classList.toggle('open', show);
     if (show && !opened) {
       opened = true;

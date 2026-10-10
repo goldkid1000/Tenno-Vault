@@ -75,10 +75,20 @@
     });
     return m;
   }
-  function showModal() { ensureModal().removeAttribute('hidden'); }
+  function showModal() {
+    var m = ensureModal();
+    m.removeAttribute('hidden');
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { m.classList.add('open'); });
+    });
+  }
   function hideModal() {
     var m = document.getElementById('tv-install-modal');
-    if (m) m.setAttribute('hidden', '');
+    if (!m) return;
+    m.classList.remove('open');
+    setTimeout(function () {
+      if (!m.classList.contains('open')) m.setAttribute('hidden', '');
+    }, 260);
   }
 
   /* ---------- install action ---------- */

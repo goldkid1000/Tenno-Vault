@@ -196,7 +196,9 @@
     if (!searchIndex) {
       box.innerHTML = '<div class="tv-loader" role="status" aria-label="Loading search"></div>';
     }
+    var myQ = q; /* token: ignore stale responses from earlier keystrokes */
     loadIndex().then(function (idx) {
+      if (document.getElementById('search-input').value.trim() !== myQ) return;
       q = q.toLowerCase();
       var hits = idx.filter(function (e) {
         return e.n.toLowerCase().indexOf(q) !== -1 || e.d.toLowerCase().indexOf(q) !== -1;
@@ -243,7 +245,10 @@
       var frag = document.createDocumentFragment();
       var next = Math.min(shown + pageSize, items.length);
       for (var i = shown; i < next; i++) {
-        frag.appendChild(renderItem(items[i], i));
+        var el = renderItem(items[i], i);
+        /* staggered entrance: subtle cascade, capped so long lists stay snappy */
+        el.style.animationDelay = Math.min((i - shown) * 25, 300) + 'ms';
+        frag.appendChild(el);
       }
       container.insertBefore(frag, sentinel);
       shown = next;
@@ -270,7 +275,17 @@
     };
   }
 
-  /* ---------- data helpers ---------- */
+  /* ---------- skeleton loading placeholders ---------- */
+  function skeletonCards(container, n) {
+    n = n || 6;
+    var html = '';
+    for (var i = 0; i < n; i++) {
+      html += '<div class="tv-skeleton-card" aria-hidden="true">' +
+        '<div class="tv-skeleton" style="min-height:18px;width:60%"></div>' +
+        '<div class="tv-skeleton"></div><div class="tv-skeleton"></div></div>';
+    }
+    container.innerHTML = html;
+  }
   function getJSON(path, _retried) {
     return fetch(path, { cache: 'no-store' }).then(function (r) {
       if (!r.ok) throw new Error('load failed: ' + path);
@@ -342,7 +357,7 @@
 
   window.TV = {
     NAV: NAV, NAV_GROUPS: NAV_GROUPS, page: page, esc: esc, getJSON: getJSON, getJSONParts: getJSONParts,
-    infiniteScroll: infiniteScroll, badge: badge, hardReload: hardReload,
+    infiniteScroll: infiniteScroll, skeletonCards: skeletonCards, badge: badge, hardReload: hardReload,
     liveNote: liveNote, relatedLinks: relatedLinks,
     openSearch: openSearch
   };
