@@ -59,7 +59,7 @@
     if (!host) return;
     host.innerHTML =
       '<div class="header-inner">' +
-      '<a class="logo" href="index.html"><span class="lotus">◈</span> Tenno Vault</a>' +
+      '<a class="logo" href="index.html"><span class="logo-mark">◈</span><span class="logo-text">TENNO<em>VAULT</em></span></a>' +
       '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
       '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
