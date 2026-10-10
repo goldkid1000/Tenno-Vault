@@ -93,7 +93,7 @@
       (m.polarity ? '<span class="badge type">' + esc(m.polarity) + ' polarity</span> ' : '') +
       (m.compat ? '<span class="badge type">for ' + esc(m.compat) + '</span>' : '') + '</div></div>' +
       '<p><b>What it does (max rank):</b><br>' + esc(m.effect || 'No description available.') + '</p>' +
-      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + farmHTML(m) + '</p></div></div>';
+      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + farmHTML(m) + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(m.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Builds using this mod', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
@@ -142,6 +142,7 @@
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
 <script src="js/update-notify.js"></script>
 </body>
 </html>

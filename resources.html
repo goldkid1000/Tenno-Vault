@@ -64,7 +64,7 @@
     box.innerHTML = '<div class="detail-box"><h2>' + esc(r.name) + '</h2>' +
       '<p><span class="badge type">' + esc(r.type) + '</span> ' +
       (r.planet && r.planet !== '—' ? '<span class="badge type">🌍 ' + esc(r.planet) + '</span>' : '') + '</p>' +
-      '<div class="farm-box"><h4>⭐ Best farm</h4><p>' + esc(r.bestFarm) + '</p></div>' +
+      '<div class="farm-box"><h4>⭐ Best farm</h4><p>' + esc(r.bestFarm) + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(r.name) + '">🗺️ Star Chart</a></p></div>' +
       '<p><b>Mission:</b> ' + esc(r.mission) +
       (r.node && r.node !== '—' ? ' &nbsp;·&nbsp; <b>Node:</b> ' + esc(r.node) : '') + '</p>' +
       (r.notes ? '<p class="muted">' + esc(r.notes) + '</p>' : '') + '</div>';
@@ -123,6 +123,7 @@
 </script>
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
 <script src="js/update-notify.js"></script>
 </body>
 </html>
