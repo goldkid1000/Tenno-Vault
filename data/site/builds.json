@@ -2,13 +2,13 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "The classic room-deleter. Cannon mode wipes packs, alt-fire Barrage melts single targets. Hunter Munitions slash procs on crits ignore armor — that's the one-shot engine.",
+  "description": "The classic room-deleter. Cannon mode wipes packs, alt-fire Barrage melts single targets. Hunter Munitions slash procs on crits ignore armor \u2014 that's the one-shot engine.",
   "id": "kuva-zarr-oneshot",
   "item": "Kuva Zarr",
   "mods": [
    {
     "name": "Galvanized Chamber",
-    "note": "Multishot — more pellets per shot"
+    "note": "Multishot \u2014 more pellets per shot"
    },
    {
     "name": "Semi-Shotgun Cannonade",
@@ -28,7 +28,7 @@
    },
    {
     "name": "Hunter Munitions",
-    "note": "Slash procs on crits — the one-shot engine"
+    "note": "Slash procs on crits \u2014 the one-shot engine"
    },
    {
     "name": "Primed Bane Of Grineer",
@@ -40,11 +40,11 @@
    },
    {
     "name": "Vigilante Supplies",
-    "note": "Exilus — ammo economy, the Zarr's weak point"
+    "note": "Exilus \u2014 ammo economy, the Zarr's weak point"
    }
   ],
-  "name": "Kuva Zarr — One-Shot Steel Path",
-  "playstyle": "Cannon mode for crowds (shoot the ground), alt-fire Barrage for single targets. Tap reload while bullet-jumping to stay at 5/5 mag — ammo starvation is the only thing that stops this build.",
+  "name": "Kuva Zarr \u2014 One-Shot Steel Path",
+  "playstyle": "Cannon mode for crowds (shoot the ground), alt-fire Barrage for single targets. Tap reload while bullet-jumping to stay at 5/5 mag \u2014 ammo starvation is the only thing that stops this build.",
   "progenitor": "Toxin (combines with cold mods for Viral)",
   "recommendedOneShot": true,
   "related": [
@@ -61,7 +61,7 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "Cluster bombs that carpet an area. Still one of the most reliable Steel Path clearers — shoot above a pack and let the bomblets finish the job.",
+  "description": "Cluster bombs that carpet an area. Still one of the most reliable Steel Path clearers \u2014 shoot above a pack and let the bomblets finish the job.",
   "id": "kuva-bramma-oneshot",
   "item": "Kuva Bramma",
   "mods": [
@@ -99,11 +99,11 @@
    },
    {
     "name": "Vigilante Supplies",
-    "note": "Exilus — ammo help"
+    "note": "Exilus \u2014 ammo help"
    }
   ],
-  "name": "Kuva Bramma — One-Shot Steel Path",
-  "playstyle": "Aim above packs, not at them — bomblets rain down. Slower than the Zarr per shot but each shot covers a huge area.",
+  "name": "Kuva Bramma \u2014 One-Shot Steel Path",
+  "playstyle": "Aim above packs, not at them \u2014 bomblets rain down. Slower than the Zarr per shot but each shot covers a huge area.",
   "progenitor": "Toxin or Heat",
   "recommendedOneShot": true,
   "related": [
@@ -156,7 +156,7 @@
     "note": "Swap per faction"
    }
   ],
-  "name": "Phenmor — One-Shot Steel Path (Incarnon)",
+  "name": "Phenmor \u2014 One-Shot Steel Path (Incarnon)",
   "playstyle": "Get headshot kills in normal form to charge Incarnon, then transform and hold the beam on priority targets. Melts Acolytes and Archons.",
   "recommendedOneShot": true,
   "related": [
@@ -172,7 +172,7 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "A wall of plasma per shot. Huge damage per trigger pull with innate punch-through — point it at a hallway and everything dies.",
+  "description": "A wall of plasma per shot. Huge damage per trigger pull with innate punch-through \u2014 point it at a hallway and everything dies.",
   "id": "tenet-arca-plasmor",
   "item": "Tenet Arca Plasmor",
   "mods": [
@@ -209,8 +209,8 @@
     "note": "Multishot set bonus"
    }
   ],
-  "name": "Tenet Arca Plasmor — Strong All-Rounder",
-  "playstyle": "One wide plasma wave per shot — aim center-mass down corridors. Radiation or Viral depending on progenitor and faction.",
+  "name": "Tenet Arca Plasmor \u2014 Strong All-Rounder",
+  "playstyle": "One wide plasma wave per shot \u2014 aim center-mass down corridors. Radiation or Viral depending on progenitor and faction.",
   "progenitor": "Toxin or Magnetic",
   "recommendedOneShot": false,
   "related": [
@@ -255,14 +255,14 @@
    },
    {
     "name": "Frostbite",
-    "note": "Cold + crit damage — Viral combo"
+    "note": "Cold + crit damage \u2014 Viral combo"
    },
    {
     "name": "Galvanized Shot",
     "note": "Damage per status on target"
    }
   ],
-  "name": "Laetum — One-Shot Steel Path (Incarnon Pistol)",
+  "name": "Laetum \u2014 One-Shot Steel Path (Incarnon Pistol)",
   "playstyle": "Farm a few kills to charge Incarnon, transform, and beam down everything. The alt-fire radial blast handles crowds.",
   "recommendedOneShot": true,
   "related": [
@@ -278,7 +278,7 @@
  {
   "arcane": "Secondary Encumber",
   "category": "Secondary",
-  "description": "Chains microwave beams across enemies stacking tons of statuses. The best primer in the game — paint a pack with statuses, then one-tap them with your primary or melee.",
+  "description": "Chains microwave beams across enemies stacking tons of statuses. The best primer in the game \u2014 paint a pack with statuses, then one-tap them with your primary or melee.",
   "id": "kuva-nukor-primer",
   "item": "Kuva Nukor",
   "mods": [
@@ -300,7 +300,7 @@
    },
    {
     "name": "Frostbite",
-    "note": "Cold — Viral combo"
+    "note": "Cold \u2014 Viral combo"
    },
    {
     "name": "Scorch",
@@ -308,14 +308,14 @@
    },
    {
     "name": "Jolt",
-    "note": "Electricity — Corrosive combo option"
+    "note": "Electricity \u2014 Corrosive combo option"
    },
    {
     "name": "Galvanized Shot",
     "note": "Damage per status type"
    }
   ],
-  "name": "Kuva Nukor — Status Primer / Strong Secondary",
+  "name": "Kuva Nukor \u2014 Status Primer / Strong Secondary",
   "playstyle": "Sweep the beam across a pack for 1-2 seconds, then swap to your main weapon. With 4+ status types stacked, Galvanized mods and Condition Overload go crazy.",
   "progenitor": "Magnetic or Heat",
   "recommendedOneShot": false,
@@ -361,7 +361,7 @@
    },
    {
     "name": "Volatile Quick Return",
-    "note": "Throw explodes — the whole point"
+    "note": "Throw explodes \u2014 the whole point"
    },
    {
     "name": "Power Throw",
@@ -372,7 +372,7 @@
     "note": "Crit damage set bonus"
    }
   ],
-  "name": "Glaive Prime — One-Shot Heavy Attack",
+  "name": "Glaive Prime \u2014 One-Shot Heavy Attack",
   "playstyle": "Heavy-attack throw into packs and manually detonate. Build combo counter first on stragglers for maximum Blood Rush scaling.",
   "recommendedOneShot": true,
   "related": [
@@ -388,7 +388,7 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Mesmer Skin makes you literally unkillable while charges last. The easiest frame to take into hard Steel Path content — press 2 and walk forward.",
+  "description": "Mesmer Skin makes you literally unkillable while charges last. The easiest frame to take into hard Steel Path content \u2014 press 2 and walk forward.",
   "id": "revenant-tank",
   "item": "Revenant",
   "mods": [
@@ -425,8 +425,8 @@
     "note": "Backup damage reduction"
    }
   ],
-  "name": "Revenant — Unkillable Steel Path Frame",
-  "playstyle": "Keep Mesmer Skin (2) up at all times — recast when charges run low. Enthrall (1) + Reave (3) deletes thralls for energy and health.",
+  "name": "Revenant \u2014 Unkillable Steel Path Frame",
+  "playstyle": "Keep Mesmer Skin (2) up at all times \u2014 recast when charges run low. Enthrall (1) + Reave (3) deletes thralls for energy and health.",
   "recommendedOneShot": false,
   "related": [
    "wukong-tank",
@@ -454,7 +454,7 @@
    },
    {
     "name": "Overextended",
-    "note": "Range — spores must reach everything"
+    "note": "Range \u2014 spores must reach everything"
    },
    {
     "name": "Stretch",
@@ -470,14 +470,14 @@
    },
    {
     "name": "Regenerative Molt",
-    "note": "Augment — heal on Molt"
+    "note": "Augment \u2014 heal on Molt"
    },
    {
     "name": "Adaptation",
     "note": "Survivability"
    }
   ],
-  "name": "Saryn — Room Nuke (Steel Path Farm Queen)",
+  "name": "Saryn \u2014 Room Nuke (Steel Path Farm Queen)",
   "playstyle": "Cast Spores (1) on an enemy, pop it with Toxic Lash (3)-buffed weapon, watch spores spread. Keep Miasma (4) for burst. Recast spores before they fall off.",
   "recommendedOneShot": false,
   "related": [
@@ -529,8 +529,8 @@
     "note": "Energy from damage taken"
    }
   ],
-  "name": "Wukong — Lazy Immortal (Strong General)",
-  "playstyle": "Keep the Twin (1) summoned, Defy (3) ready for its free revives, Cloud Walker (2) to skip anything annoying. The Twin uses your primary — give it your best weapon.",
+  "name": "Wukong \u2014 Lazy Immortal (Strong General)",
+  "playstyle": "Keep the Twin (1) summoned, Defy (3) ready for its free revives, Cloud Walker (2) to skip anything annoying. The Twin uses your primary \u2014 give it your best weapon.",
   "recommendedOneShot": false,
   "related": [
    "revenant-tank",
@@ -549,7 +549,7 @@
   "mods": [
    {
     "name": "Ironclad Charge",
-    "note": "Augment — Iron Skin scales with enemies hit"
+    "note": "Augment \u2014 Iron Skin scales with enemies hit"
    },
    {
     "name": "Blind Rage",
@@ -580,8 +580,8 @@
     "note": "Extra safety net"
    }
   ],
-  "name": "Rhino — Best Starter Tank (Strong General)",
-  "playstyle": "Charge (1) through a pack, cast Iron Skin (2) — now you're immune. Roar (3) buffs your whole squad's damage. Stomp (4) for crowd control.",
+  "name": "Rhino \u2014 Best Starter Tank (Strong General)",
+  "playstyle": "Charge (1) through a pack, cast Iron Skin (2) \u2014 now you're immune. Roar (3) buffs your whole squad's damage. Stomp (4) for crowd control.",
   "recommendedOneShot": false,
   "related": [
    "wukong-tank",
@@ -595,13 +595,13 @@
  {
   "arcane": null,
   "category": "Companion",
-  "description": "Cordon yanks every enemy within 30m into one tight ball every 15s — shoot the ball once with your Zarr/Bramma and the whole pack dies.",
+  "description": "Cordon yanks every enemy within 30m into one tight ball every 15s \u2014 shoot the ball once with your Zarr/Bramma and the whole pack dies.",
   "id": "nautilus-prime-setup",
   "item": "Nautilus Prime",
   "mods": [
    {
     "name": "Cordon",
-    "note": "Signature precept — the group-up"
+    "note": "Signature precept \u2014 the group-up"
    },
    {
     "name": "Assault Mode",
@@ -617,7 +617,7 @@
    },
    {
     "name": "Calculated Redirection",
-    "note": "Shields — keeps Reinforced Bond active"
+    "note": "Shields \u2014 keeps Reinforced Bond active"
    },
    {
     "name": "Reinforced Bond",
@@ -632,7 +632,7 @@
     "note": "Status kills cut Cordon cooldown"
    }
   ],
-  "name": "Nautilus Prime — Best Sentinel for AoE Builds",
+  "name": "Nautilus Prime \u2014 Best Sentinel for AoE Builds",
   "playstyle": "Let Cordon group packs, then delete them with AoE. The bond mods buff your fire rate and crit damage passively.",
   "recommendedOneShot": false,
   "related": [
@@ -643,18 +643,18 @@
    "steel-path",
    "strong"
   ],
-  "weaponNote": "Equip Verglas Prime with a status build — its statuses feed Manifold Bond."
+  "weaponNote": "Equip Verglas Prime with a status build \u2014 its statuses feed Manifold Bond."
  },
  {
   "id": "rhino-starter-tank",
-  "name": "Rhino — Unkillable Starter Tank",
+  "name": "Rhino \u2014 Unkillable Starter Tank",
   "item": "Rhino",
   "category": "Warframe",
   "tags": [
    "beginner"
   ],
   "description": "Press 2 (Iron Skin) and walk through the star chart like nothing can touch you. The single best frame for learning the game.",
-  "playstyle": "Cast Iron Skin (2) whenever it breaks, charge (1) through crowds for fun, stomp (4) when surrounded. You are the wall — your team will love you.",
+  "playstyle": "Cast Iron Skin (2) whenever it breaks, charge (1) through crowds for fun, stomp (4) when surrounded. You are the wall \u2014 your team will love you.",
   "mods": [
    {
     "name": "Vitality",
@@ -692,7 +692,7 @@
  },
  {
   "id": "excalibur-starter",
-  "name": "Excalibur — Exalted Blade Starter",
+  "name": "Excalibur \u2014 Exalted Blade Starter",
   "item": "Excalibur",
   "category": "Warframe",
   "tags": [
@@ -737,7 +737,7 @@
  },
  {
   "id": "volt-starter",
-  "name": "Volt — Speed Demon Starter",
+  "name": "Volt \u2014 Speed Demon Starter",
   "item": "Volt",
   "category": "Warframe",
   "tags": [
@@ -782,7 +782,7 @@
  },
  {
   "id": "mag-starter",
-  "name": "Mag — Magnetize Starter",
+  "name": "Mag \u2014 Magnetize Starter",
   "item": "Mag",
   "category": "Warframe",
   "tags": [
@@ -813,7 +813,7 @@
    },
    {
     "name": "Vitality",
-    "note": "Mag is squishy — fix that"
+    "note": "Mag is squishy \u2014 fix that"
    },
    {
     "name": "Redirection",
@@ -827,7 +827,7 @@
  },
  {
   "id": "oberon-starter",
-  "name": "Oberon — Starter Healer",
+  "name": "Oberon \u2014 Starter Healer",
   "item": "Oberon",
   "category": "Warframe",
   "tags": [
@@ -866,13 +866,13 @@
    },
    {
     "name": "Phoenix Renewal",
-    "note": "Cheat death once per while — Oberon augment"
+    "note": "Cheat death once per while \u2014 Oberon augment"
    }
   ]
  },
  {
   "id": "frost-starter",
-  "name": "Frost — Defense Wall Starter",
+  "name": "Frost \u2014 Defense Wall Starter",
   "item": "Frost",
   "category": "Warframe",
   "tags": [
@@ -917,7 +917,7 @@
  },
  {
   "id": "ember-starter",
-  "name": "Ember — Fire Starter",
+  "name": "Ember \u2014 Fire Starter",
   "item": "Ember",
   "category": "Warframe",
   "tags": [
@@ -962,7 +962,7 @@
  },
  {
   "id": "trinity-starter",
-  "name": "Trinity — Energy Battery Starter",
+  "name": "Trinity \u2014 Energy Battery Starter",
   "item": "Trinity",
   "category": "Warframe",
   "tags": [
@@ -1007,7 +1007,7 @@
  },
  {
   "id": "loki-starter",
-  "name": "Loki — Stealth Starter",
+  "name": "Loki \u2014 Stealth Starter",
   "item": "Loki",
   "category": "Warframe",
   "tags": [
@@ -1018,7 +1018,7 @@
   "mods": [
    {
     "name": "Continuity",
-    "note": "Longer invisibility — the whole build"
+    "note": "Longer invisibility \u2014 the whole build"
    },
    {
     "name": "Streamline",
@@ -1052,7 +1052,7 @@
  },
  {
   "id": "boltor-starter",
-  "name": "Boltor — Starter Rifle",
+  "name": "Boltor \u2014 Starter Rifle",
   "item": "Boltor",
   "category": "Primary",
   "tags": [
@@ -1063,7 +1063,7 @@
   "mods": [
    {
     "name": "Serration",
-    "note": "Base damage — always first"
+    "note": "Base damage \u2014 always first"
    },
    {
     "name": "Split Chamber",
@@ -1083,21 +1083,21 @@
    },
    {
     "name": "Stormbringer",
-    "note": "Electricity — pair for Corrosive"
+    "note": "Electricity \u2014 pair for Corrosive"
    },
    {
     "name": "Cryo Rounds",
-    "note": "Cold — pair for Viral"
+    "note": "Cold \u2014 pair for Viral"
    },
    {
     "name": "Infected Clip",
-    "note": "Toxin — the other half of Viral/Corrosive"
+    "note": "Toxin \u2014 the other half of Viral/Corrosive"
    }
   ]
  },
  {
   "id": "hek-starter",
-  "name": "Hek — Shotgun Room Clearer",
+  "name": "Hek \u2014 Shotgun Room Clearer",
   "item": "Hek",
   "category": "Primary",
   "tags": [
@@ -1116,7 +1116,7 @@
    },
    {
     "name": "Scattered Justice",
-    "note": "Hek augment — multishot + justice burst"
+    "note": "Hek augment \u2014 multishot + justice burst"
    },
    {
     "name": "Blunderbuss",
@@ -1132,7 +1132,7 @@
    },
    {
     "name": "Frigid Blast",
-    "note": "Cold — the other half of Viral"
+    "note": "Cold \u2014 the other half of Viral"
    },
    {
     "name": "Chilling Grasp",
@@ -1142,7 +1142,7 @@
  },
  {
   "id": "karak-starter",
-  "name": "Karak — Reliable Auto Rifle",
+  "name": "Karak \u2014 Reliable Auto Rifle",
   "item": "Karak",
   "category": "Primary",
   "tags": [
@@ -1173,7 +1173,7 @@
    },
    {
     "name": "High Voltage",
-    "note": "Electricity + status — Corrosive combo"
+    "note": "Electricity + status \u2014 Corrosive combo"
    },
    {
     "name": "Thermite Rounds",
@@ -1181,13 +1181,13 @@
    },
    {
     "name": "Rime Rounds",
-    "note": "Cold + status — Viral combo"
+    "note": "Cold + status \u2014 Viral combo"
    }
   ]
  },
  {
   "id": "atomos-starter",
-  "name": "Atomos — Chain Beam Starter",
+  "name": "Atomos \u2014 Chain Beam Starter",
   "item": "Atomos",
   "category": "Secondary",
   "tags": [
@@ -1232,7 +1232,7 @@
  },
  {
   "id": "lex-starter",
-  "name": "Lex — Pocket Sniper Starter",
+  "name": "Lex \u2014 Pocket Sniper Starter",
   "item": "Lex",
   "category": "Secondary",
   "tags": [
@@ -1277,7 +1277,7 @@
  },
  {
   "id": "skana-starter",
-  "name": "Skana — First Sword Starter",
+  "name": "Skana \u2014 First Sword Starter",
   "item": "Skana",
   "category": "Melee",
   "tags": [
@@ -1322,14 +1322,14 @@
  },
  {
   "id": "bo-starter",
-  "name": "Bo — Long Staff Starter",
+  "name": "Bo \u2014 Long Staff Starter",
   "item": "Bo",
   "category": "Melee",
   "tags": [
    "beginner"
   ],
   "description": "Huge range for a starter weapon. You hit enemies before they can touch you.",
-  "playstyle": "Keep distance, sweep wide arcs. The range is the whole point — abuse it.",
+  "playstyle": "Keep distance, sweep wide arcs. The range is the whole point \u2014 abuse it.",
   "mods": [
    {
     "name": "Pressure Point",
@@ -1367,7 +1367,7 @@
  },
  {
   "id": "revenant-sp-tank",
-  "name": "Revenant — Mesmer Skin God Mode",
+  "name": "Revenant \u2014 Mesmer Skin God Mode",
   "item": "Revenant",
   "category": "Warframe",
   "tags": [
@@ -1375,7 +1375,7 @@
    "strong"
   ],
   "description": "The closest thing to immortality in Warframe. Mesmer Skin shrugs off hits that would one-shot anything else. Your frame, your rules.",
-  "playstyle": "Keep Mesmer Skin (2) up — recast when charges run low. Enthrall (1) spreads, Reave (3) deletes thralls for massive damage. Danse Macabre (4) for crowds.",
+  "playstyle": "Keep Mesmer Skin (2) up \u2014 recast when charges run low. Enthrall (1) spreads, Reave (3) deletes thralls for massive damage. Danse Macabre (4) for crowds.",
   "mods": [
    {
     "name": "Intensify",
@@ -1414,7 +1414,7 @@
  },
  {
   "id": "saryn-spore-nuke",
-  "name": "Saryn — Spore Nuke Steel Path",
+  "name": "Saryn \u2014 Spore Nuke Steel Path",
   "item": "Saryn",
   "category": "Warframe",
   "tags": [
@@ -1455,14 +1455,14 @@
    },
    {
     "name": "Regenerative Molt",
-    "note": "Heal on Molt cast — Saryn augment"
+    "note": "Heal on Molt cast \u2014 Saryn augment"
    }
   ],
   "arcane": "Molt Augmented"
  },
  {
   "id": "wukong-sp-twin",
-  "name": "Wukong — Celestial Twin Steel Path",
+  "name": "Wukong \u2014 Celestial Twin Steel Path",
   "item": "Wukong",
   "category": "Warframe",
   "tags": [
@@ -1509,7 +1509,7 @@
  },
  {
   "id": "mesa-peacemaker-sp",
-  "name": "Mesa — Peacemaker Steel Path",
+  "name": "Mesa \u2014 Peacemaker Steel Path",
   "item": "Mesa",
   "category": "Warframe",
   "tags": [
@@ -1543,7 +1543,7 @@
    },
    {
     "name": "Mesa's Waltz",
-    "note": "Move while in Peacemaker — Mesa augment"
+    "note": "Move while in Peacemaker \u2014 Mesa augment"
    },
    {
     "name": "Adaptation",
@@ -1561,7 +1561,7 @@
  },
  {
   "id": "nekros-loot-farmer",
-  "name": "Nekros — Desecrate Loot Farmer",
+  "name": "Nekros \u2014 Desecrate Loot Farmer",
   "item": "Nekros",
   "category": "Warframe",
   "tags": [
@@ -1569,11 +1569,11 @@
    "strong"
   ],
   "description": "Double the loot from every corpse. The frame you bring when you want twice the resources, mods, and parts.",
-  "playstyle": "Keep Desecrate (3) always on — it re-rolls every corpse for extra drops. Terrify (2) for crowd control, Shadows (4) for meat shields.",
+  "playstyle": "Keep Desecrate (3) always on \u2014 it re-rolls every corpse for extra drops. Terrify (2) for crowd control, Shadows (4) for meat shields.",
   "mods": [
    {
     "name": "Despoil",
-    "note": "Desecrate costs health instead of energy — Nekros augment, the whole build"
+    "note": "Desecrate costs health instead of energy \u2014 Nekros augment, the whole build"
    },
    {
     "name": "Stretch",
@@ -1597,7 +1597,7 @@
    },
    {
     "name": "Shield Of Shadows",
-    "note": "Damage reduction per shadow — Nekros augment"
+    "note": "Damage reduction per shadow \u2014 Nekros augment"
    },
    {
     "name": "Adaptation",
@@ -1611,7 +1611,7 @@
  },
  {
   "id": "khora-pilfer-farm",
-  "name": "Khora — Pilfering Strangledome Farmer",
+  "name": "Khora \u2014 Pilfering Strangledome Farmer",
   "item": "Khora",
   "category": "Warframe",
   "tags": [
@@ -1624,11 +1624,11 @@
   "mods": [
    {
     "name": "Pilfering Strangledome",
-    "note": "Enemies in the dome drop extra loot — Khora augment"
+    "note": "Enemies in the dome drop extra loot \u2014 Khora augment"
    },
    {
     "name": "Accumulating Whipclaw",
-    "note": "Whipclaw damage stacks — Khora augment"
+    "note": "Whipclaw damage stacks \u2014 Khora augment"
    },
    {
     "name": "Intensify",
@@ -1662,14 +1662,14 @@
  },
  {
   "id": "volt-eidolon-hunter",
-  "name": "Volt — Eidolon Hunter",
+  "name": "Volt \u2014 Eidolon Hunter",
   "item": "Volt",
   "category": "Warframe",
   "tags": [
    "boss",
    "strong"
   ],
-  "description": "The Eidolon meta pick. Electric Shield doubles amp crit damage — that's how you one-shot the Teralyst's shields.",
+  "description": "The Eidolon meta pick. Electric Shield doubles amp crit damage \u2014 that's how you one-shot the Teralyst's shields.",
   "playstyle": "Drop shields (3) for your amp DPS, Speed (2) to reposition, Shock (1) to break limbs. Coordinate with your squad's DPS.",
   "mods": [
    {
@@ -1698,11 +1698,11 @@
    },
    {
     "name": "Shock Trooper",
-    "note": "Electric damage buff — Volt augment"
+    "note": "Electric damage buff \u2014 Volt augment"
    },
    {
     "name": "Capacitance",
-    "note": "Shields for the squad on Discharge — Volt augment"
+    "note": "Shields for the squad on Discharge \u2014 Volt augment"
    }
   ],
   "arcane": "Nullifier",
@@ -1712,7 +1712,7 @@
  },
  {
   "id": "chroma-eidolon-dps",
-  "name": "Chroma — Eidolon DPS",
+  "name": "Chroma \u2014 Eidolon DPS",
   "item": "Chroma",
   "category": "Warframe",
   "tags": [
@@ -1764,7 +1764,7 @@
  },
  {
   "id": "saryn-so-leveler",
-  "name": "Saryn — Sanctuary Onslaught Leveler",
+  "name": "Saryn \u2014 Sanctuary Onslaught Leveler",
   "item": "Saryn",
   "category": "Warframe",
   "tags": [
@@ -1773,7 +1773,7 @@
    "strong"
   ],
   "description": "The fastest affinity farm in the game. Spores + a good weapon = max rank in minutes.",
-  "playstyle": "Spores (1) on everything, keep the kill chain going. The zone moves fast — keep up and keep spores spreading.",
+  "playstyle": "Spores (1) on everything, keep the kill chain going. The zone moves fast \u2014 keep up and keep spores spreading.",
   "mods": [
    {
     "name": "Overextended",
@@ -1805,7 +1805,7 @@
    },
    {
     "name": "Regenerative Molt",
-    "note": "Heal on the move — Saryn augment"
+    "note": "Heal on the move \u2014 Saryn augment"
    }
   ],
   "arcane": "Molt Efficiency",
@@ -1815,7 +1815,7 @@
  },
  {
   "id": "mirage-so-nuker",
-  "name": "Mirage — Sanctuary Onslaught Nuker",
+  "name": "Mirage \u2014 Sanctuary Onslaught Nuker",
   "item": "Mirage",
   "category": "Warframe",
   "tags": [
@@ -1823,7 +1823,7 @@
    "strong"
   ],
   "description": "Prism + Hall of Mirrors turns every room into a laser light show. Elite Onslaught speed-clearer.",
-  "playstyle": "Hall of Mirrors (1), Eclipse (3) for damage, Prism (4) to nuke. Keep moving — the zone timer is always ticking.",
+  "playstyle": "Hall of Mirrors (1), Eclipse (3) for damage, Prism (4) to nuke. Keep moving \u2014 the zone timer is always ticking.",
   "mods": [
    {
     "name": "Intensify",
@@ -1855,7 +1855,7 @@
    },
    {
     "name": "Total Eclipse",
-    "note": "Share Eclipse with squad — Mirage augment"
+    "note": "Share Eclipse with squad \u2014 Mirage augment"
    }
   ],
   "arcane": "Energize",
@@ -1865,7 +1865,7 @@
  },
  {
   "id": "titania-archon-hunter",
-  "name": "Titania — Archon Hunt Shredder",
+  "name": "Titania \u2014 Archon Hunt Shredder",
   "item": "Titania",
   "category": "Warframe",
   "tags": [
@@ -1906,7 +1906,7 @@
    },
    {
     "name": "Aviator",
-    "note": "Damage reduction while airborne — made for Titania"
+    "note": "Damage reduction while airborne \u2014 made for Titania"
    }
   ],
   "arcane": "Pistoleer",
@@ -1916,7 +1916,7 @@
  },
  {
   "id": "tenet-arca-plasmor-oneshot",
-  "name": "Tenet Arca Plasmor — One-Shot Steel Path",
+  "name": "Tenet Arca Plasmor \u2014 One-Shot Steel Path",
   "item": "Tenet Arca Plasmor",
   "category": "Primary",
   "tags": [
@@ -1959,11 +1959,11 @@
    },
    {
     "name": "Frigid Blast",
-    "note": "Cold — the other half of Viral"
+    "note": "Cold \u2014 the other half of Viral"
    },
    {
     "name": "Vigilante Supplies",
-    "note": "Exilus — ammo economy"
+    "note": "Exilus \u2014 ammo economy"
    }
   ],
   "arcane": "Primary Merciless",
@@ -1987,7 +1987,7 @@
   "mods": [
    {
     "name": "Serration",
-    "note": "Base damage — multiplies everything"
+    "note": "Base damage \u2014 multiplies everything"
    },
    {
     "name": "Galvanized Chamber",
@@ -2003,15 +2003,15 @@
    },
    {
     "name": "Hunter Munitions",
-    "note": "Slash procs on crits — the one-shot engine"
+    "note": "Slash procs on crits \u2014 the one-shot engine"
    },
    {
     "name": "Infected Clip",
-    "note": "Toxin — half of Viral"
+    "note": "Toxin \u2014 half of Viral"
    },
    {
     "name": "Cryo Rounds",
-    "note": "Cold — completes Viral (3.5x health damage)"
+    "note": "Cold \u2014 completes Viral (3.5x health damage)"
    },
    {
     "name": "Primed Bane Of Grineer",
@@ -2030,7 +2030,7 @@
    "strong"
   ],
   "arcane": "Primary Merciless",
-  "description": "Incarnon shotgun with homing projectiles that devastate crowds. The Incarnon form fires seeking shots — build crit + viral + slash and watch rooms evaporate.",
+  "description": "Incarnon shotgun with homing projectiles that devastate crowds. The Incarnon form fires seeking shots \u2014 build crit + viral + slash and watch rooms evaporate.",
   "mods": [
    {
     "name": "Primed Point Blank",
@@ -2050,15 +2050,15 @@
    },
    {
     "name": "Chilling Reload",
-    "note": "Cold 60/60 — Viral piece + reload speed"
+    "note": "Cold 60/60 \u2014 Viral piece + reload speed"
    },
    {
     "name": "Toxic Barrage",
-    "note": "Toxin 60/60 — completes Viral"
+    "note": "Toxin 60/60 \u2014 completes Viral"
    },
    {
     "name": "Hunter Munitions",
-    "note": "Slash procs on crits — armor irrelevant"
+    "note": "Slash procs on crits \u2014 armor irrelevant"
    },
    {
     "name": "Primed Bane Of Grineer",
@@ -2069,45 +2069,45 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "A guided rocket launcher that one-shots whole rooms — cold progenitor plus toxin mods makes viral, and the big radial explosion stacks it fast.",
+  "description": "A guided rocket launcher that one-shots whole rooms \u2014 cold progenitor plus toxin mods makes viral, and the big radial explosion stacks it fast.",
   "id": "tenet-envoy-oneshot",
   "item": "Tenet Envoy",
   "mods": [
    {
     "name": "Serration",
-    "note": "WHY: Base damage — every one-shot starts with raw damage, and the Envoy's radial hit needs it."
+    "note": "WHY: Base damage \u2014 every one-shot starts with raw damage, and the Envoy's radial hit needs it."
    },
    {
     "name": "Galvanized Chamber",
-    "note": "WHY: Multishot — more rockets per trigger pull means more rockets' worth of viral stacks and slash procs."
+    "note": "WHY: Multishot \u2014 more rockets per trigger pull means more rockets' worth of viral stacks and slash procs."
    },
    {
     "name": "Critical Delay",
-    "note": "WHY: Huge crit chance for almost no downside — the guided fire rate doesn't care about the small speed penalty."
+    "note": "WHY: Huge crit chance for almost no downside \u2014 the guided fire rate doesn't care about the small speed penalty."
    },
    {
     "name": "Vital Sense",
-    "note": "WHY: Crit damage multiplier — turns those Critical Delay crits into actual one-shot numbers on Steel Path armor."
+    "note": "WHY: Crit damage multiplier \u2014 turns those Critical Delay crits into actual one-shot numbers on Steel Path armor."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — crits trigger slash procs that bleed through Steel Path armor regardless of health pool."
+    "note": "WHY: The one-shot engine \u2014 crits trigger slash procs that bleed through Steel Path armor regardless of health pool."
    },
    {
     "name": "Infected Clip",
-    "note": "WHY: Toxin damage — combines with the cold progenitor to form viral, which doubles everything that follows."
+    "note": "WHY: Toxin damage \u2014 combines with the cold progenitor to form viral, which doubles everything that follows."
    },
    {
     "name": "Cryo Rounds",
-    "note": "WHY: Cold damage — pairs with Infected Clip for viral and slows heavies so the next volley lands clean."
+    "note": "WHY: Cold damage \u2014 pairs with Infected Clip for viral and slows heavies so the next volley lands clean."
    },
    {
     "name": "Primed Firestorm",
-    "note": "WHY: Blast radius — a bigger explosion hits more targets per rocket, and viral stacks multiply across the whole pack."
+    "note": "WHY: Blast radius \u2014 a bigger explosion hits more targets per rocket, and viral stacks multiply across the whole pack."
    }
   ],
-  "name": "Tenet Envoy — One-Shot Steel Path",
-  "playstyle": "Lock on with alt-fire to steer rockets around corners and through doorways — you never have to be in the line of fire. Shoot into crowds and let the radial blast plus Hunter Munitions slash procs clear the whole Steel Path pack in one volley; viral stacks from the cold progenitor do the rest.",
+  "name": "Tenet Envoy \u2014 One-Shot Steel Path",
+  "playstyle": "Lock on with alt-fire to steer rockets around corners and through doorways \u2014 you never have to be in the line of fire. Shoot into crowds and let the radial blast plus Hunter Munitions slash procs clear the whole Steel Path pack in one volley; viral stacks from the cold progenitor do the rest.",
   "progenitor": "Cold (combines with toxin mods for Viral)",
   "recommendedOneShot": true,
   "related": [
@@ -2124,45 +2124,45 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "A charge rifle with a radial alt-fire nuke — tap-fire melts single targets, full-charge alt-fire deletes Steel Path packs.",
+  "description": "A charge rifle with a radial alt-fire nuke \u2014 tap-fire melts single targets, full-charge alt-fire deletes Steel Path packs.",
   "id": "stahlta-oneshot",
   "item": "Stahlta",
   "mods": [
    {
     "name": "Serration",
-    "note": "WHY: Base damage — both the primary bolts and the alt-fire explosion scale off raw damage."
+    "note": "WHY: Base damage \u2014 both the primary bolts and the alt-fire explosion scale off raw damage."
    },
    {
     "name": "Galvanized Chamber",
-    "note": "WHY: Multishot — more bolts on tap-fire, more explosive instances on the alt-fire nuke."
+    "note": "WHY: Multishot \u2014 more bolts on tap-fire, more explosive instances on the alt-fire nuke."
    },
    {
     "name": "Critical Delay",
-    "note": "WHY: Massive crit chance — a charged weapon doesn't feel the fire-rate penalty, and crits feed everything else."
+    "note": "WHY: Massive crit chance \u2014 a charged weapon doesn't feel the fire-rate penalty, and crits feed everything else."
    },
    {
     "name": "Vital Sense",
-    "note": "WHY: Crit damage — the multiplier that converts those guaranteed crits into Steel Path one-shot damage."
+    "note": "WHY: Crit damage \u2014 the multiplier that converts those guaranteed crits into Steel Path one-shot damage."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — every crit has a chance to spawn slash procs that ignore Steel Path armor entirely."
+    "note": "WHY: The one-shot engine \u2014 every crit has a chance to spawn slash procs that ignore Steel Path armor entirely."
    },
    {
     "name": "Malignant Force",
-    "note": "WHY: Toxin + status — viral's first ingredient plus the status chance to land viral stacks on every hit."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient plus the status chance to land viral stacks on every hit."
    },
    {
     "name": "Rime Rounds",
-    "note": "WHY: Cold + status — viral's second ingredient; together with Malignant Force it blankets packs in viral stacks."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; together with Malignant Force it blankets packs in viral stacks."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — a straight 55% multiplier that stacks on top of everything against the toughest Steel Path faction."
+    "note": "WHY: Faction damage \u2014 a straight 55% multiplier that stacks on top of everything against the toughest Steel Path faction."
    }
   ],
-  "name": "Stahlta — One-Shot Steel Path",
-  "playstyle": "Tap primary fire for single targets and stragglers — the bolts hit hard on their own. Against dense packs, full-charge the alt-fire and drop the explosion into the middle; the radial blast plus viral plus Hunter Munitions slash is a room delete. Keep Primary Merciless stacked by chaining kills with tap-fire between charges.",
+  "name": "Stahlta \u2014 One-Shot Steel Path",
+  "playstyle": "Tap primary fire for single targets and stragglers \u2014 the bolts hit hard on their own. Against dense packs, full-charge the alt-fire and drop the explosion into the middle; the radial blast plus viral plus Hunter Munitions slash is a room delete. Keep Primary Merciless stacked by chaining kills with tap-fire between charges.",
   "recommendedOneShot": true,
   "related": [
    "tenet-envoy-oneshot",
@@ -2178,45 +2178,45 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "A minigun rocket-hose with an extreme fire rate — Cautious Shot negates self-damage so you can hold the trigger in crowds.",
+  "description": "A minigun rocket-hose with an extreme fire rate \u2014 Cautious Shot negates self-damage so you can hold the trigger in crowds.",
   "id": "acceltra-prime-oneshot",
   "item": "Acceltra Prime",
   "mods": [
    {
     "name": "Serration",
-    "note": "WHY: Base damage — the rockets individually hit light, so raw damage is the floor everything scales from."
+    "note": "WHY: Base damage \u2014 the rockets individually hit light, so raw damage is the floor everything scales from."
    },
    {
     "name": "Galvanized Chamber",
-    "note": "WHY: Multishot — at this fire rate, extra projectiles per shot is a colossal DPS multiplier."
+    "note": "WHY: Multishot \u2014 at this fire rate, extra projectiles per shot is a colossal DPS multiplier."
    },
    {
     "name": "Critical Delay",
-    "note": "WHY: Crit chance — Hunter Munitions needs crits, and this delivers them by the bucketload."
+    "note": "WHY: Crit chance \u2014 Hunter Munitions needs crits, and this delivers them by the bucketload."
    },
    {
     "name": "Vital Sense",
-    "note": "WHY: Crit damage — every one of those hundreds of crits per second needs a real multiplier behind it."
+    "note": "WHY: Crit damage \u2014 every one of those hundreds of crits per second needs a real multiplier behind it."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — extreme fire rate plus extreme crit rate equals hundreds of armor-ignoring slash procs per second."
+    "note": "WHY: The one-shot engine \u2014 extreme fire rate plus extreme crit rate equals hundreds of armor-ignoring slash procs per second."
    },
    {
     "name": "Malignant Force",
-    "note": "WHY: Toxin + status — viral's first ingredient, stacked rapidly by the fire hose."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, stacked rapidly by the fire hose."
    },
    {
     "name": "Rime Rounds",
-    "note": "WHY: Cold + status — viral's second ingredient; the hose applies full viral stacks in a fraction of a second."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; the hose applies full viral stacks in a fraction of a second."
    },
    {
     "name": "Cautious Shot",
-    "note": "WHY: Self-damage negation — lets you fire rockets point-blank into Steel Path packs without deleting yourself too."
+    "note": "WHY: Self-damage negation \u2014 lets you fire rockets point-blank into Steel Path packs without deleting yourself too."
    }
   ],
-  "name": "Acceltra Prime — One-Shot Steel Path",
-  "playstyle": "Hold the trigger and sweep across packs — hundreds of slash procs per second melt Steel Path enemies before they can react. Stay at mid range so the rockets arm properly, and don't fear close quarters: Cautious Shot handles the self-damage. Keep Primary Merciless stacked by never letting the hose go silent.",
+  "name": "Acceltra Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Hold the trigger and sweep across packs \u2014 hundreds of slash procs per second melt Steel Path enemies before they can react. Stay at mid range so the rockets arm properly, and don't fear close quarters: Cautious Shot handles the self-damage. Keep Primary Merciless stacked by never letting the hose go silent.",
   "recommendedOneShot": true,
   "related": [
    "kuva-zarr-oneshot",
@@ -2232,45 +2232,45 @@
  {
   "arcane": "Primary Merciless",
   "category": "Primary",
-  "description": "An assault rifle with a grenade alt-fire charged by kills — the primary feeds the grenade, and the grenade one-shots the next room.",
+  "description": "An assault rifle with a grenade alt-fire charged by kills \u2014 the primary feeds the grenade, and the grenade one-shots the next room.",
   "id": "trumna-prime-oneshot",
   "item": "Trumna Prime",
   "mods": [
    {
     "name": "Serration",
-    "note": "WHY: Base damage — the primary needs it to rack up the kills that charge the alt-fire grenade."
+    "note": "WHY: Base damage \u2014 the primary needs it to rack up the kills that charge the alt-fire grenade."
    },
    {
     "name": "Galvanized Chamber",
-    "note": "WHY: Multishot — more rounds per pull kills faster, so the grenade charges faster."
+    "note": "WHY: Multishot \u2014 more rounds per pull kills faster, so the grenade charges faster."
    },
    {
     "name": "Critical Delay",
-    "note": "WHY: Crit chance — feeds Hunter Munitions on both the primary and the grenade blast."
+    "note": "WHY: Crit chance \u2014 feeds Hunter Munitions on both the primary and the grenade blast."
    },
    {
     "name": "Vital Sense",
-    "note": "WHY: Crit damage — converts crits into real Steel Path damage on both fire modes."
+    "note": "WHY: Crit damage \u2014 converts crits into real Steel Path damage on both fire modes."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — slash procs bypass Steel Path armor on both the primary and the grenade."
+    "note": "WHY: The one-shot engine \u2014 slash procs bypass Steel Path armor on both the primary and the grenade."
    },
    {
     "name": "Malignant Force",
-    "note": "WHY: Toxin + status — viral's first ingredient, applied fast by the assault rifle fire rate."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, applied fast by the assault rifle fire rate."
    },
    {
     "name": "Rime Rounds",
-    "note": "WHY: Cold + status — viral's second ingredient; full viral stacks make the grenade hit double."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; full viral stacks make the grenade hit double."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — a clean 55% multiplier on everything against Steel Path Grineer heavies."
+    "note": "WHY: Faction damage \u2014 a clean 55% multiplier on everything against Steel Path Grineer heavies."
    }
   ],
-  "name": "Trumna Prime — One-Shot Steel Path",
-  "playstyle": "Rack up kills with the primary to charge the alt-fire grenade — the assault rifle alone shreds packs with viral and slash. Once charged, lob the grenade into the next pack instead of fighting it; the explosion with full Hunter Munitions and viral support one-shots the room. Repeat the loop: primary charges, grenade deletes.",
+  "name": "Trumna Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Rack up kills with the primary to charge the alt-fire grenade \u2014 the assault rifle alone shreds packs with viral and slash. Once charged, lob the grenade into the next pack instead of fighting it; the explosion with full Hunter Munitions and viral support one-shots the room. Repeat the loop: primary charges, grenade deletes.",
   "recommendedOneShot": true,
   "related": [
    "acceltra-prime-oneshot",
@@ -2286,45 +2286,45 @@
  {
   "arcane": "Primary Merciless",
   "category": "Shotgun",
-  "description": "A beam-shotgun with high status and short range — viral plus slash melts Steel Path enemies up close.",
+  "description": "A beam-shotgun with high status and short range \u2014 viral plus slash melts Steel Path enemies up close.",
   "id": "phantasma-prime-oneshot",
   "item": "Phantasma Prime",
   "mods": [
    {
     "name": "Primed Point Blank",
-    "note": "WHY: Base damage — shotgun base damage is the foundation the beam's continuous ticks scale from."
+    "note": "WHY: Base damage \u2014 shotgun base damage is the foundation the beam's continuous ticks scale from."
    },
    {
     "name": "Galvanized Hell",
-    "note": "WHY: Multishot — more beam instances per tick means more viral stacks and slash procs applied per second."
+    "note": "WHY: Multishot \u2014 more beam instances per tick means more viral stacks and slash procs applied per second."
    },
    {
     "name": "Primed Ravage",
-    "note": "WHY: Crit chance — Hunter Munitions needs crits, and the beam ticks fast enough to roll them constantly."
+    "note": "WHY: Crit chance \u2014 Hunter Munitions needs crits, and the beam ticks fast enough to roll them constantly."
    },
    {
     "name": "Blunderbuss",
-    "note": "WHY: Crit chance — stacks with Primed Ravage to push crit rate into reliable Hunter Munitions territory."
+    "note": "WHY: Crit chance \u2014 stacks with Primed Ravage to push crit rate into reliable Hunter Munitions territory."
    },
    {
     "name": "Frigid Blast",
-    "note": "WHY: Cold + status — viral's first ingredient plus the status chance the beam needs."
+    "note": "WHY: Cold + status \u2014 viral's first ingredient plus the status chance the beam needs."
    },
    {
     "name": "Toxic Barrage",
-    "note": "WHY: Toxin + status — viral's second ingredient; with Frigid Blast the beam applies viral in under a second."
+    "note": "WHY: Toxin + status \u2014 viral's second ingredient; with Frigid Blast the beam applies viral in under a second."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — beam crits trigger slash procs that shred Steel Path health through armor."
+    "note": "WHY: The one-shot engine \u2014 beam crits trigger slash procs that shred Steel Path health through armor."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — 55% straight multiplier against the heaviest Steel Path targets."
+    "note": "WHY: Faction damage \u2014 55% straight multiplier against the heaviest Steel Path targets."
    }
   ],
-  "name": "Phantasma Prime — One-Shot Steel Path",
-  "playstyle": "Hold the beam on targets and play close and aggressive — the beam's tick rate applies viral and slash almost instantly at short range. Switch to alt-fire's wide cone when crowds surround you; the spread blankets everything in viral for the beam or your melee to finish. Never try to use it at distance — get in their face.",
+  "name": "Phantasma Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Hold the beam on targets and play close and aggressive \u2014 the beam's tick rate applies viral and slash almost instantly at short range. Switch to alt-fire's wide cone when crowds surround you; the spread blankets everything in viral for the beam or your melee to finish. Never try to use it at distance \u2014 get in their face.",
   "recommendedOneShot": true,
   "related": [
    "tenet-arca-plasmor",
@@ -2340,45 +2340,45 @@
  {
   "arcane": "Secondary Merciless",
   "category": "Secondary",
-  "description": "A microwave status hose — stacks viral plus heat in a cone, melts armor and health; pairs perfectly with Condition Overload melee.",
+  "description": "A microwave status hose \u2014 stacks viral plus heat in a cone, melts armor and health; pairs perfectly with Condition Overload melee.",
   "id": "kuva-nukor-damage",
   "item": "Kuva Nukor",
   "mods": [
    {
     "name": "Hornet Strike",
-    "note": "WHY: Base damage — the beam needs raw damage behind its ticks to actually kill, not just prime."
+    "note": "WHY: Base damage \u2014 the beam needs raw damage behind its ticks to actually kill, not just prime."
    },
    {
     "name": "Galvanized Shot",
-    "note": "WHY: Status per stack — more status chance per beam tick means viral and heat stack to full in one sweep."
+    "note": "WHY: Status per stack \u2014 more status chance per beam tick means viral and heat stack to full in one sweep."
    },
    {
     "name": "Lethal Torrent",
-    "note": "WHY: Fire rate + multishot — more beam ticks per second equals more status applications per second."
+    "note": "WHY: Fire rate + multishot \u2014 more beam ticks per second equals more status applications per second."
    },
    {
     "name": "Barrel Diffusion",
-    "note": "WHY: Multishot — doubles the beam's status output; this is what makes it a true status hose."
+    "note": "WHY: Multishot \u2014 doubles the beam's status output; this is what makes it a true status hose."
    },
    {
     "name": "Pistol Pestilence",
-    "note": "WHY: Toxin + status — viral's first ingredient, stacked by the dozen."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, stacked by the dozen."
    },
    {
     "name": "Frostbite",
-    "note": "WHY: Cold + status — viral's second ingredient; with Pistol Pestilence it forces viral onto everything."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; with Pistol Pestilence it forces viral onto everything."
    },
    {
     "name": "Jolt",
-    "note": "WHY: Electric + status — feeds extra status variety for Condition Overload scaling and microwave chaos."
+    "note": "WHY: Electric + status \u2014 feeds extra status variety for Condition Overload scaling and microwave chaos."
    },
    {
     "name": "Primed Heated Charge",
-    "note": "WHY: Heat damage — combines with the heat progenitor to stack heat procs that strip armor and burn through health."
+    "note": "WHY: Heat damage \u2014 combines with the heat progenitor to stack heat procs that strip armor and burn through health."
    }
   ],
-  "name": "Kuva Nukor — One-Shot Steel Path",
-  "playstyle": "Sweep the beam across packs to stack viral and heat — one pass strips armor and halves effective health. Everything dies to the heat plus slash ticks, or becomes a one-tap for your Condition Overload melee, which loves the pile of status types you just applied. The cone hits multiple targets at once, so never single-target when you can sweep.",
+  "name": "Kuva Nukor \u2014 One-Shot Steel Path",
+  "playstyle": "Sweep the beam across packs to stack viral and heat \u2014 one pass strips armor and halves effective health. Everything dies to the heat plus slash ticks, or becomes a one-tap for your Condition Overload melee, which loves the pile of status types you just applied. The cone hits multiple targets at once, so never single-target when you can sweep.",
   "progenitor": "Heat (adds to the viral/heat combo)",
   "recommendedOneShot": true,
   "related": [
@@ -2395,45 +2395,45 @@
  {
   "arcane": "Secondary Encumber",
   "category": "Secondary",
-  "description": "The premier primer — uncharged shots spray viral across packs, charged shots detonate AoE; your Condition Overload melee then one-taps everything.",
+  "description": "The premier primer \u2014 uncharged shots spray viral across packs, charged shots detonate AoE; your Condition Overload melee then one-taps everything.",
   "id": "epitaph-primer-build",
   "item": "Epitaph",
   "mods": [
    {
     "name": "Hornet Strike",
-    "note": "WHY: Base damage — the charged detonation needs raw damage to actually kill primed targets."
+    "note": "WHY: Base damage \u2014 the charged detonation needs raw damage to actually kill primed targets."
    },
    {
     "name": "Lethal Torrent",
-    "note": "WHY: Fire rate + multishot — faster uncharged spam means faster viral coverage across the pack."
+    "note": "WHY: Fire rate + multishot \u2014 faster uncharged spam means faster viral coverage across the pack."
    },
    {
     "name": "Barrel Diffusion",
-    "note": "WHY: Multishot — more viral applications per trigger pull on uncharged shots."
+    "note": "WHY: Multishot \u2014 more viral applications per trigger pull on uncharged shots."
    },
    {
     "name": "Pistol Pestilence",
-    "note": "WHY: Toxin + status — viral's first ingredient, sprayed generously by the uncharged shots."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, sprayed generously by the uncharged shots."
    },
    {
     "name": "Frostbite",
-    "note": "WHY: Cold + status — viral's second ingredient; guarantees viral on every uncharged hit."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; guarantees viral on every uncharged hit."
    },
    {
     "name": "Jolt",
-    "note": "WHY: Electric + status — extra status type for Condition Overload scaling on your melee follow-up."
+    "note": "WHY: Electric + status \u2014 extra status type for Condition Overload scaling on your melee follow-up."
    },
    {
     "name": "Ice Storm",
-    "note": "WHY: Cold + mag size — more cold for viral and a bigger mag so you can prime longer without reloading."
+    "note": "WHY: Cold + mag size \u2014 more cold for viral and a bigger mag so you can prime longer without reloading."
    },
    {
     "name": "Seeker",
-    "note": "WHY: Punch through — uncharged shots hit enemies behind enemies, priming whole lines with one pull."
+    "note": "WHY: Punch through \u2014 uncharged shots hit enemies behind enemies, priming whole lines with one pull."
    }
   ],
-  "name": "Epitaph — One-Shot Steel Path",
-  "playstyle": "Tap-fire uncharged shots to blanket packs in viral — the spray covers crowds in seconds. Fire a charged shot into the densest cluster for the AoE detonation, then switch to your Condition Overload melee: every status you primed is bonus melee damage, and viral halves their health. Prime first, melee second, everything dies.",
+  "name": "Epitaph \u2014 One-Shot Steel Path",
+  "playstyle": "Tap-fire uncharged shots to blanket packs in viral \u2014 the spray covers crowds in seconds. Fire a charged shot into the densest cluster for the AoE detonation, then switch to your Condition Overload melee: every status you primed is bonus melee damage, and viral halves their health. Prime first, melee second, everything dies.",
   "recommendedOneShot": true,
   "related": [
    "kuva-nukor-primer",
@@ -2449,45 +2449,45 @@
  {
   "arcane": "Secondary Merciless",
   "category": "Secondary",
-  "description": "An infinite-ammo beam pistol that equips rifle mods — zero downtime Steel Path shredding with viral and Hunter Munitions.",
+  "description": "An infinite-ammo beam pistol that equips rifle mods \u2014 zero downtime Steel Path shredding with viral and Hunter Munitions.",
   "id": "tenet-cycron-oneshot",
   "item": "Tenet Cycron",
   "mods": [
    {
     "name": "Serration",
-    "note": "WHY: Base damage — rifle mods on a pistol means Serration's raw damage multiplies the beam's ticks."
+    "note": "WHY: Base damage \u2014 rifle mods on a pistol means Serration's raw damage multiplies the beam's ticks."
    },
    {
     "name": "Galvanized Chamber",
-    "note": "WHY: Multishot — more beam instances per tick, and it stacks up as you kill."
+    "note": "WHY: Multishot \u2014 more beam instances per tick, and it stacks up as you kill."
    },
    {
     "name": "Critical Delay",
-    "note": "WHY: Crit chance — the beam never stops firing, so it rolls crits constantly for Hunter Munitions."
+    "note": "WHY: Crit chance \u2014 the beam never stops firing, so it rolls crits constantly for Hunter Munitions."
    },
    {
     "name": "Vital Sense",
-    "note": "WHY: Crit damage — turns the beam's endless crits into genuine Steel Path one-shot ticks."
+    "note": "WHY: Crit damage \u2014 turns the beam's endless crits into genuine Steel Path one-shot ticks."
    },
    {
     "name": "Hunter Munitions",
-    "note": "WHY: The one-shot engine — constant crits become constant armor-ignoring slash procs."
+    "note": "WHY: The one-shot engine \u2014 constant crits become constant armor-ignoring slash procs."
    },
    {
     "name": "Malignant Force",
-    "note": "WHY: Toxin + status — viral's first ingredient, applied continuously by the beam."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, applied continuously by the beam."
    },
    {
     "name": "Rime Rounds",
-    "note": "WHY: Cold + status — viral's second ingredient; the beam holds full viral stacks effortlessly."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; the beam holds full viral stacks effortlessly."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — 55% multiplier on every tick against Steel Path Grineer."
+    "note": "WHY: Faction damage \u2014 55% multiplier on every tick against Steel Path Grineer."
    }
   ],
-  "name": "Tenet Cycron — One-Shot Steel Path",
-  "playstyle": "It never reloads — hold the beam and sweep crowds without ever stopping to manage ammo. Viral plus Hunter Munitions does the work: the beam applies viral stacks and slash procs simultaneously, and Steel Path health bars just dissolve. Keep moving while beaming; the only thing that kills your damage is breaking the beam.",
+  "name": "Tenet Cycron \u2014 One-Shot Steel Path",
+  "playstyle": "It never reloads \u2014 hold the beam and sweep crowds without ever stopping to manage ammo. Viral plus Hunter Munitions does the work: the beam applies viral stacks and slash procs simultaneously, and Steel Path health bars just dissolve. Keep moving while beaming; the only thing that kills your damage is breaking the beam.",
   "progenitor": "Heat",
   "recommendedOneShot": true,
   "related": [
@@ -2504,45 +2504,45 @@
  {
   "arcane": "Secondary Merciless",
   "category": "Secondary",
-  "description": "A shotgun-pistol — three rapid kills summon a ghost Pyrana that doubles your firepower and keeps the crit-viral engine roaring.",
+  "description": "A shotgun-pistol \u2014 three rapid kills summon a ghost Pyrana that doubles your firepower and keeps the crit-viral engine roaring.",
   "id": "pyrana-prime-oneshot",
   "item": "Pyrana Prime",
   "mods": [
    {
     "name": "Hornet Strike",
-    "note": "WHY: Base damage — the pellets need raw damage to secure those three fast kills."
+    "note": "WHY: Base damage \u2014 the pellets need raw damage to secure those three fast kills."
    },
    {
     "name": "Lethal Torrent",
-    "note": "WHY: Fire rate + multishot — faster kills means faster ghost activation, and more pellets per shot."
+    "note": "WHY: Fire rate + multishot \u2014 faster kills means faster ghost activation, and more pellets per shot."
    },
    {
     "name": "Barrel Diffusion",
-    "note": "WHY: Multishot — more pellets per trigger pull, more viral applications, faster ghost."
+    "note": "WHY: Multishot \u2014 more pellets per trigger pull, more viral applications, faster ghost."
    },
    {
     "name": "Galvanized Shot",
-    "note": "WHY: Status per stack — stacks up as you kill, pushing viral application into overdrive."
+    "note": "WHY: Status per stack \u2014 stacks up as you kill, pushing viral application into overdrive."
    },
    {
     "name": "Primed Pistol Gambit",
-    "note": "WHY: Crit chance — the big crit mod that feeds both the damage and the slash procs."
+    "note": "WHY: Crit chance \u2014 the big crit mod that feeds both the damage and the slash procs."
    },
    {
     "name": "Primed Target Cracker",
-    "note": "WHY: Crit damage — the multiplier that makes each pellet crit hit like a Steel Path one-shot."
+    "note": "WHY: Crit damage \u2014 the multiplier that makes each pellet crit hit like a Steel Path one-shot."
    },
    {
     "name": "Pistol Pestilence",
-    "note": "WHY: Toxin + status — viral's first ingredient, spread by every pellet."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, spread by every pellet."
    },
    {
     "name": "Frostbite",
-    "note": "WHY: Cold + status — viral's second ingredient; full viral in a single close-range blast."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; full viral in a single close-range blast."
    }
   ],
-  "name": "Pyrana Prime — One-Shot Steel Path",
-  "playstyle": "Get three quick kills to trigger the spectral Pyrana — the ghost doubles your firepower, so the first three kills are the investment and everything after is profit. Stay aggressive to keep the ghost active; build crit plus viral and fight at close range where every pellet lands. The ghost plus Secondary Merciless plus viral is a Steel Path blender.",
+  "name": "Pyrana Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Get three quick kills to trigger the spectral Pyrana \u2014 the ghost doubles your firepower, so the first three kills are the investment and everything after is profit. Stay aggressive to keep the ghost active; build crit plus viral and fight at close range where every pellet lands. The ghost plus Secondary Merciless plus viral is a Steel Path blender.",
   "recommendedOneShot": true,
   "related": [
    "knell-prime-oneshot",
@@ -2558,45 +2558,45 @@
  {
   "arcane": "Secondary Merciless",
   "category": "Secondary",
-  "description": "A headshot cannon — a headshot kill grants a bottomless mag and huge crit chance briefly, chaining into the next one-shot.",
+  "description": "A headshot cannon \u2014 a headshot kill grants a bottomless mag and huge crit chance briefly, chaining into the next one-shot.",
   "id": "knell-prime-oneshot",
   "item": "Knell Prime",
   "mods": [
    {
     "name": "Hornet Strike",
-    "note": "WHY: Base damage — the single bullet needs maximum raw damage to one-tap the first headshot."
+    "note": "WHY: Base damage \u2014 the single bullet needs maximum raw damage to one-tap the first headshot."
    },
    {
     "name": "Primed Pistol Gambit",
-    "note": "WHY: Crit chance — stacks with the passive's crit bonus for near-guaranteed devastating crits."
+    "note": "WHY: Crit chance \u2014 stacks with the passive's crit bonus for near-guaranteed devastating crits."
    },
    {
     "name": "Primed Target Cracker",
-    "note": "WHY: Crit damage — headshot crits with this multiplier are what actually one-shot Steel Path heavies."
+    "note": "WHY: Crit damage \u2014 headshot crits with this multiplier are what actually one-shot Steel Path heavies."
    },
    {
     "name": "Lethal Torrent",
-    "note": "WHY: Fire rate + multishot — faster follow-up shots during the bottomless-mag window."
+    "note": "WHY: Fire rate + multishot \u2014 faster follow-up shots during the bottomless-mag window."
    },
    {
     "name": "Barrel Diffusion",
-    "note": "WHY: Multishot — extra projectiles per shot give you more chances to land the headshot."
+    "note": "WHY: Multishot \u2014 extra projectiles per shot give you more chances to land the headshot."
    },
    {
     "name": "Pistol Pestilence",
-    "note": "WHY: Toxin + status — viral's first ingredient, making each headshot hit double."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient, making each headshot hit double."
    },
    {
     "name": "Frostbite",
-    "note": "WHY: Cold + status — viral's second ingredient; a primed target's head is a one-tap."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; a primed target's head is a one-tap."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — 55% multiplier that makes the headshot breakpoint against Steel Path Grineer."
+    "note": "WHY: Faction damage \u2014 55% multiplier that makes the headshot breakpoint against Steel Path Grineer."
    }
   ],
-  "name": "Knell Prime — One-Shot Steel Path",
-  "playstyle": "Land headshot kills to trigger the passive — bottomless mag plus huge crit chance for a short window. Chain headshots during that window; every kill refreshes the fantasy. Pair with a primer like the Epitaph or Kuva Nukor for easy setups: viral-primed heads fall to a single tap, and the passive keeps you firing without ever reloading.",
+  "name": "Knell Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Land headshot kills to trigger the passive \u2014 bottomless mag plus huge crit chance for a short window. Chain headshots during that window; every kill refreshes the fantasy. Pair with a primer like the Epitaph or Kuva Nukor for easy setups: viral-primed heads fall to a single tap, and the passive keeps you firing without ever reloading.",
   "recommendedOneShot": true,
   "related": [
    "epitaph-primer-build",
@@ -2612,45 +2612,45 @@
  {
   "arcane": "Secondary Merciless",
   "category": "Secondary",
-  "description": "A kitgun grenade launcher — bouncing viral grenades clear rooms, and Pax Seeker turns headshot kills into AoE chains.",
+  "description": "A kitgun grenade launcher \u2014 bouncing viral grenades clear rooms, and Pax Seeker turns headshot kills into AoE chains.",
   "id": "sporelacer-oneshot",
   "item": "Sporelacer",
   "mods": [
    {
     "name": "Hornet Strike",
-    "note": "WHY: Base damage — grenade explosions scale off raw damage before anything else."
+    "note": "WHY: Base damage \u2014 grenade explosions scale off raw damage before anything else."
    },
    {
     "name": "Galvanized Shot",
-    "note": "WHY: Status per stack — stacks with kills so every bounce applies viral faster."
+    "note": "WHY: Status per stack \u2014 stacks with kills so every bounce applies viral faster."
    },
    {
     "name": "Lethal Torrent",
-    "note": "WHY: Fire rate + multishot — more grenades in the air means more bouncing coverage."
+    "note": "WHY: Fire rate + multishot \u2014 more grenades in the air means more bouncing coverage."
    },
    {
     "name": "Barrel Diffusion",
-    "note": "WHY: Multishot — extra grenades per shot, extra explosions, extra viral."
+    "note": "WHY: Multishot \u2014 extra grenades per shot, extra explosions, extra viral."
    },
    {
     "name": "Pistol Pestilence",
-    "note": "WHY: Toxin + status — viral's first ingredient on every bounce."
+    "note": "WHY: Toxin + status \u2014 viral's first ingredient on every bounce."
    },
    {
     "name": "Frostbite",
-    "note": "WHY: Cold + status — viral's second ingredient; bouncing grenades blanket rooms in viral."
+    "note": "WHY: Cold + status \u2014 viral's second ingredient; bouncing grenades blanket rooms in viral."
    },
    {
     "name": "Primed Heated Charge",
-    "note": "WHY: Heat damage — heat procs strip armor and add a second damage-over-time to the viral setup."
+    "note": "WHY: Heat damage \u2014 heat procs strip armor and add a second damage-over-time to the viral setup."
    },
    {
     "name": "Primed Bane Of Grineer",
-    "note": "WHY: Faction damage — 55% multiplier on every explosion against Steel Path Grineer."
+    "note": "WHY: Faction damage \u2014 55% multiplier on every explosion against Steel Path Grineer."
    }
   ],
-  "name": "Sporelacer — One-Shot Steel Path",
-  "playstyle": "Bounce grenades around corners into packs — the Sporelacer's grenades don't need line of sight, just geometry. Aim for heads to trigger Pax Seeker chains: each headshot kill fires seeking projectiles into nearby enemies, and the viral plus heat explosions clean up whatever the seekers don't. Lob, bounce, chain.",
+  "name": "Sporelacer \u2014 One-Shot Steel Path",
+  "playstyle": "Bounce grenades around corners into packs \u2014 the Sporelacer's grenades don't need line of sight, just geometry. Aim for heads to trigger Pax Seeker chains: each headshot kill fires seeking projectiles into nearby enemies, and the viral plus heat explosions clean up whatever the seekers don't. Lob, bounce, chain.",
   "recommendedOneShot": true,
   "related": [
    "kuva-nukor-damage",
@@ -2662,7 +2662,7 @@
    "one-shot",
    "strong"
   ],
-  "weaponNote": "Kitgun — pair with the Pax Seeker arcane for headshot-kill AoE chains."
+  "weaponNote": "Kitgun \u2014 pair with the Pax Seeker arcane for headshot-kill AoE chains."
  },
  {
   "arcane": "Melee Crescendo",
@@ -2673,19 +2673,19 @@
   "mods": [
    {
     "name": "Corrupt Charge",
-    "note": "WHY: +30 initial combo — every heavy attack starts at max combo, so full damage is online from the first swing."
+    "note": "WHY: +30 initial combo \u2014 every heavy attack starts at max combo, so full damage is online from the first swing."
    },
    {
     "name": "Killing Blow",
-    "note": "WHY: +120% heavy attack damage — the heavy-damage multiplier that makes shockwaves one-shot."
+    "note": "WHY: +120% heavy attack damage \u2014 the heavy-damage multiplier that makes shockwaves one-shot."
    },
    {
     "name": "Amalgam Organ Shatter",
-    "note": "WHY: +90% crit damage and faster heavy wind-up — crit-heavy slams land quicker."
+    "note": "WHY: +90% crit damage and faster heavy wind-up \u2014 crit-heavy slams land quicker."
    },
    {
     "name": "Primed Pressure Point",
-    "note": "WHY: +165% base damage — the flat foundation everything else multiplies."
+    "note": "WHY: +165% base damage \u2014 the flat foundation everything else multiplies."
    },
    {
     "name": "Sacrificial Steel",
@@ -2693,19 +2693,19 @@
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — shockwaves and slams hit entire Steel Path packs at once."
+    "note": "WHY: +3.1m range \u2014 shockwaves and slams hit entire Steel Path packs at once."
    },
    {
     "name": "Primed Fury",
-    "note": "WHY: +55% attack speed — faster wind-ups keep heavies flowing without downtime."
+    "note": "WHY: +55% attack speed \u2014 faster wind-ups keep heavies flowing without downtime."
    },
    {
     "name": "Reflex Coil",
-    "note": "WHY: +60% combo efficiency — heavies consume less combo, so full-combo damage lasts all mission."
+    "note": "WHY: +60% combo efficiency \u2014 heavies consume less combo, so full-combo damage lasts all mission."
    }
   ],
-  "name": "Tenet Grigori — One-Shot Steel Path",
-  "playstyle": "Heavy attack into packs — shockwave + slash one-shots Steel Path heavies; every heavy is at full combo thanks to Corrupt Charge.",
+  "name": "Tenet Grigori \u2014 One-Shot Steel Path",
+  "playstyle": "Heavy attack into packs \u2014 shockwave + slash one-shots Steel Path heavies; every heavy is at full combo thanks to Corrupt Charge.",
   "recommendedOneShot": true,
   "related": [
    "kuva-nukor-primer",
@@ -2717,49 +2717,49 @@
    "one-shot",
    "strong"
   ],
-  "weaponNote": "Tenet melee — valence-fuse for up to 60% bonus damage (Heat recommended)."
+  "weaponNote": "Tenet melee \u2014 valence-fuse for up to 60% bonus damage (Heat recommended)."
  },
  {
   "arcane": "Melee Animosity",
   "category": "Melee",
-  "description": "The classic spin-to-win tonfa — viral + slash + combo scaling is the melee one-shot formula.",
+  "description": "The classic spin-to-win tonfa \u2014 viral + slash + combo scaling is the melee one-shot formula.",
   "id": "kronen-prime-oneshot",
   "item": "Kronen Prime",
   "mods": [
    {
     "name": "Blood Rush",
-    "note": "WHY: Crit chance scales with combo — at 12x combo crits become guaranteed, the engine of Steel Path one-shots."
+    "note": "WHY: Crit chance scales with combo \u2014 at 12x combo crits become guaranteed, the engine of Steel Path one-shots."
    },
    {
     "name": "Weeping Wounds",
-    "note": "WHY: Status chance per combo tier — viral and slash procs stack onto everything you touch."
+    "note": "WHY: Status chance per combo tier \u2014 viral and slash procs stack onto everything you touch."
    },
    {
     "name": "Condition Overload",
-    "note": "WHY: +120% damage per unique status type — viral + slash procs make it multiply brutally."
+    "note": "WHY: +120% damage per unique status type \u2014 viral + slash procs make it multiply brutally."
    },
    {
     "name": "Organ Shatter",
-    "note": "WHY: +90% crit damage — turns Blood Rush crits into red-crit one-shots."
+    "note": "WHY: +90% crit damage \u2014 turns Blood Rush crits into red-crit one-shots."
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — the tonfa spin hits whole rooms in one swipe."
+    "note": "WHY: +3.1m range \u2014 the tonfa spin hits whole rooms in one swipe."
    },
    {
     "name": "Berserker Fury",
-    "note": "WHY: Attack speed on crit kills — faster spins, faster combo, faster killing."
+    "note": "WHY: Attack speed on crit kills \u2014 faster spins, faster combo, faster killing."
    },
    {
     "name": "Virulent Scourge",
-    "note": "WHY: 60/60 toxin — half of the viral recipe plus bonus status chance."
+    "note": "WHY: 60/60 toxin \u2014 half of the viral recipe plus bonus status chance."
    },
    {
     "name": "Vicious Frost",
-    "note": "WHY: 60/60 cold — completes viral with Virulent Scourge; viral halves enemy health for the slash ticks to finish."
+    "note": "WHY: 60/60 cold \u2014 completes viral with Virulent Scourge; viral halves enemy health for the slash ticks to finish."
    }
   ],
-  "name": "Kronen Prime — One-Shot Steel Path",
+  "name": "Kronen Prime \u2014 One-Shot Steel Path",
   "playstyle": "Build combo to 12x, then spin through packs; Blood Rush crits at 12x combo one-shot everything.",
   "recommendedOneShot": true,
   "related": [
@@ -2782,38 +2782,38 @@
   "mods": [
    {
     "name": "Blood Rush",
-    "note": "WHY: The combo-scaling crit engine — at 12x combo the katana red-crits everything."
+    "note": "WHY: The combo-scaling crit engine \u2014 at 12x combo the katana red-crits everything."
    },
    {
     "name": "Weeping Wounds",
-    "note": "WHY: Status per combo tier — viral + forced slash procs melt armor-scaled health bars."
+    "note": "WHY: Status per combo tier \u2014 viral + forced slash procs melt armor-scaled health bars."
    },
    {
     "name": "Primed Pressure Point",
-    "note": "WHY: +165% base damage — multiplies with every crit and status tick."
+    "note": "WHY: +165% base damage \u2014 multiplies with every crit and status tick."
    },
    {
     "name": "Organ Shatter",
-    "note": "WHY: +90% crit damage — the red-crit finisher for level-200+ heavies."
+    "note": "WHY: +90% crit damage \u2014 the red-crit finisher for level-200+ heavies."
    },
    {
     "name": "Berserker Fury",
-    "note": "WHY: Crit-kill attack speed — keeps the stance combos flowing at full tempo."
+    "note": "WHY: Crit-kill attack speed \u2014 keeps the stance combos flowing at full tempo."
    },
    {
     "name": "Drifting Contact",
-    "note": "WHY: +10s combo duration plus status chance — keeps 12x combo alive between Steel Path packs."
+    "note": "WHY: +10s combo duration plus status chance \u2014 keeps 12x combo alive between Steel Path packs."
    },
    {
     "name": "Virulent Scourge",
-    "note": "WHY: 60/60 toxin — half the viral recipe with bonus status."
+    "note": "WHY: 60/60 toxin \u2014 half the viral recipe with bonus status."
    },
    {
     "name": "Vicious Frost",
-    "note": "WHY: 60/60 cold — completes viral so slash procs chew through halved health."
+    "note": "WHY: 60/60 cold \u2014 completes viral so slash procs chew through halved health."
    }
   ],
-  "name": "Nikana Prime — One-Shot Steel Path",
+  "name": "Nikana Prime \u2014 One-Shot Steel Path",
   "playstyle": "Stack combo to 12x (Drifting Contact keeps it alive), carve through Steel Path with forced-slash stance combos.",
   "recommendedOneShot": true,
   "related": [
@@ -2830,21 +2830,21 @@
  {
   "arcane": "Melee Crescendo",
   "category": "Melee",
-  "description": "Gunblade whose heavy attack fires a hitscan slug — the heavy-attack one-shot king.",
+  "description": "Gunblade whose heavy attack fires a hitscan slug \u2014 the heavy-attack one-shot king.",
   "id": "stropha-oneshot",
   "item": "Stropha",
   "mods": [
    {
     "name": "Corrupt Charge",
-    "note": "WHY: +30 initial combo — every slug fires at full combo damage."
+    "note": "WHY: +30 initial combo \u2014 every slug fires at full combo damage."
    },
    {
     "name": "Killing Blow",
-    "note": "WHY: +120% heavy attack damage — the core multiplier for the hitscan slug."
+    "note": "WHY: +120% heavy attack damage \u2014 the core multiplier for the hitscan slug."
    },
    {
     "name": "Amalgam Organ Shatter",
-    "note": "WHY: +90% crit damage and faster heavy wind-up — crit slugs one-shot demolysts."
+    "note": "WHY: +90% crit damage and faster heavy wind-up \u2014 crit slugs one-shot demolysts."
    },
    {
     "name": "Primed Pressure Point",
@@ -2856,18 +2856,18 @@
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — extends the slug's reach so packs get hit at distance."
+    "note": "WHY: +3.1m range \u2014 extends the slug's reach so packs get hit at distance."
    },
    {
     "name": "Reflex Coil",
-    "note": "WHY: +60% combo efficiency — spam heavies all mission without losing your combo tier."
+    "note": "WHY: +60% combo efficiency \u2014 spam heavies all mission without losing your combo tier."
    },
    {
     "name": "Primed Fury",
-    "note": "WHY: +55% attack speed — faster wind-ups mean faster slug fire."
+    "note": "WHY: +55% attack speed \u2014 faster wind-ups mean faster slug fire."
    }
   ],
-  "name": "Stropha — One-Shot Steel Path",
+  "name": "Stropha \u2014 One-Shot Steel Path",
   "playstyle": "Heavy attack everything; the slug + slash procs one-shot Steel Path heavies and demolysts.",
   "recommendedOneShot": true,
   "related": [
@@ -2890,38 +2890,38 @@
   "mods": [
    {
     "name": "Corrupt Charge",
-    "note": "WHY: +30 initial combo — piercing slugs hit at full combo from the first shot."
+    "note": "WHY: +30 initial combo \u2014 piercing slugs hit at full combo from the first shot."
    },
    {
     "name": "Killing Blow",
-    "note": "WHY: +120% heavy attack damage — the slug one-shot multiplier."
+    "note": "WHY: +120% heavy attack damage \u2014 the slug one-shot multiplier."
    },
    {
     "name": "Amalgam Organ Shatter",
-    "note": "WHY: +90% crit damage and faster wind-up — crit slugs punch through entire lines of enemies."
+    "note": "WHY: +90% crit damage and faster wind-up \u2014 crit slugs punch through entire lines of enemies."
    },
    {
     "name": "Primed Pressure Point",
-    "note": "WHY: +165% base damage — flat power behind every piercing slug."
+    "note": "WHY: +165% base damage \u2014 flat power behind every piercing slug."
    },
    {
     "name": "Sacrificial Steel",
-    "note": "WHY: Crit chance — feeds the crit-damage stacking on piercing heavies."
+    "note": "WHY: Crit chance \u2014 feeds the crit-damage stacking on piercing heavies."
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — slugs travel further through enemy lines."
+    "note": "WHY: +3.1m range \u2014 slugs travel further through enemy lines."
    },
    {
     "name": "Primed Fury",
-    "note": "WHY: +55% attack speed — faster slugs, faster lines deleted."
+    "note": "WHY: +55% attack speed \u2014 faster slugs, faster lines deleted."
    },
    {
     "name": "Gladiator Might",
-    "note": "WHY: +crit damage plus Gladiator set bonus — stack set mods on your Warframe for up to +60% crit chance."
+    "note": "WHY: +crit damage plus Gladiator set bonus \u2014 stack set mods on your Warframe for up to +60% crit chance."
    }
   ],
-  "name": "Vastilok — One-Shot Steel Path",
+  "name": "Vastilok \u2014 One-Shot Steel Path",
   "playstyle": "Heavy attacks fire piercing slugs through lines of enemies; pair with Gladiator mods on your Warframe for more crit.",
   "recommendedOneShot": true,
   "related": [
@@ -2938,17 +2938,17 @@
  {
   "arcane": "Melee Animosity",
   "category": "Melee",
-  "description": "Incarnon scythe — incarnon form throws projectiles that shred crowds.",
+  "description": "Incarnon scythe \u2014 incarnon form throws projectiles that shred crowds.",
   "id": "hate-incarnon-oneshot",
   "item": "Hate",
   "mods": [
    {
     "name": "Blood Rush",
-    "note": "WHY: Combo-scaling crit — incarnon projectiles red-crit at 12x combo."
+    "note": "WHY: Combo-scaling crit \u2014 incarnon projectiles red-crit at 12x combo."
    },
    {
     "name": "Weeping Wounds",
-    "note": "WHY: Status per combo tier — viral + slash on every energy scythe."
+    "note": "WHY: Status per combo tier \u2014 viral + slash on every energy scythe."
    },
    {
     "name": "Primed Pressure Point",
@@ -2956,26 +2956,26 @@
    },
    {
     "name": "Organ Shatter",
-    "note": "WHY: +90% crit damage — the red-crit finisher at high combo."
+    "note": "WHY: +90% crit damage \u2014 the red-crit finisher at high combo."
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — bigger scythe, wider crowd coverage."
+    "note": "WHY: +3.1m range \u2014 bigger scythe, wider crowd coverage."
    },
    {
     "name": "Berserker Fury",
-    "note": "WHY: Attack speed on crit kills — faster throws, faster incarnon charging."
+    "note": "WHY: Attack speed on crit kills \u2014 faster throws, faster incarnon charging."
    },
    {
     "name": "Virulent Scourge",
-    "note": "WHY: 60/60 toxin — half the viral recipe with bonus status."
+    "note": "WHY: 60/60 toxin \u2014 half the viral recipe with bonus status."
    },
    {
     "name": "Vicious Frost",
-    "note": "WHY: 60/60 cold — completes viral for health-halving slash ticks."
+    "note": "WHY: 60/60 cold \u2014 completes viral for health-halving slash ticks."
    }
   ],
-  "name": "Hate — One-Shot Steel Path",
+  "name": "Hate \u2014 One-Shot Steel Path",
   "playstyle": "Build incarnon charge with kills, transform, throw energy scythes with viral + slash.",
   "recommendedOneShot": true,
   "related": [
@@ -2993,44 +2993,44 @@
  {
   "arcane": "Melee Animosity",
   "category": "Melee",
-  "description": "Toxin dual swords with innate toxin — viral is one cold mod away.",
+  "description": "Toxin dual swords with innate toxin \u2014 viral is one cold mod away.",
   "id": "dual-ichor-oneshot",
   "item": "Dual Ichor",
   "mods": [
    {
     "name": "Blood Rush",
-    "note": "WHY: Combo crit engine — innate toxin frees a slot so more damage mods fit."
+    "note": "WHY: Combo crit engine \u2014 innate toxin frees a slot so more damage mods fit."
    },
    {
     "name": "Weeping Wounds",
-    "note": "WHY: Status per combo tier — viral and slash procs stack fast on dual swords."
+    "note": "WHY: Status per combo tier \u2014 viral and slash procs stack fast on dual swords."
    },
    {
     "name": "Primed Pressure Point",
-    "note": "WHY: +165% base damage — multiplies with every crit and proc."
+    "note": "WHY: +165% base damage \u2014 multiplies with every crit and proc."
    },
    {
     "name": "Organ Shatter",
-    "note": "WHY: +90% crit damage — turns Blood Rush crits into one-shots."
+    "note": "WHY: +90% crit damage \u2014 turns Blood Rush crits into one-shots."
    },
    {
     "name": "Berserker Fury",
-    "note": "WHY: Crit-kill attack speed — the blender spins faster the more it kills."
+    "note": "WHY: Crit-kill attack speed \u2014 the blender spins faster the more it kills."
    },
    {
     "name": "Virulent Scourge",
-    "note": "WHY: 60/60 toxin — extra toxin weight and status on an already-toxin weapon."
+    "note": "WHY: 60/60 toxin \u2014 extra toxin weight and status on an already-toxin weapon."
    },
    {
     "name": "Vicious Frost",
-    "note": "WHY: 60/60 cold — innate toxin + this mod = instant viral with zero setup."
+    "note": "WHY: 60/60 cold \u2014 innate toxin + this mod = instant viral with zero setup."
    },
    {
     "name": "Primed Reach",
-    "note": "WHY: +3.1m range — the blender reaches the whole pack."
+    "note": "WHY: +3.1m range \u2014 the blender reaches the whole pack."
    }
   ],
-  "name": "Dual Ichor — One-Shot Steel Path",
+  "name": "Dual Ichor \u2014 One-Shot Steel Path",
   "playstyle": "Innate toxin + Vicious Frost = instant viral; fast attack speed + Blood Rush = blender.",
   "recommendedOneShot": true,
   "related": [
@@ -3047,45 +3047,45 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Antimatter Drop nuke — charge the orb with weapon fire, detonate into a Molecular-Primed crowd for millions.",
+  "description": "Antimatter Drop nuke \u2014 charge the orb with weapon fire, detonate into a Molecular-Primed crowd for millions.",
   "id": "nova-prime-oneshot",
   "item": "Nova Prime",
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — nuke power scales the Antimatter Drop detonation directly."
+    "note": "WHY: +99% strength \u2014 nuke power scales the Antimatter Drop detonation directly."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength at a duration cost — Molecular Prime gets re-cast anyway, the orb needs strength."
+    "note": "WHY: +55% strength at a duration cost \u2014 Molecular Prime gets re-cast anyway, the orb needs strength."
    },
    {
     "name": "Umbral Intensify",
-    "note": "WHY: +44% strength (+55% with the full Umbral set) — more strength, bigger detonation."
+    "note": "WHY: +44% strength (+55% with the full Umbral set) \u2014 more strength, bigger detonation."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Molecular Prime's slow and damage vulnerability last across the whole room."
+    "note": "WHY: +55% duration \u2014 Molecular Prime's slow and damage vulnerability last across the whole room."
    },
    {
     "name": "Stretch",
-    "note": "WHY: +45% range — priming and detonation cover entire Steel Path packs."
+    "note": "WHY: +45% range \u2014 priming and detonation cover entire Steel Path packs."
    },
    {
     "name": "Augur Reach",
-    "note": "WHY: +30% range plus Augur set energy on shield gate — wider priming, free energy returns."
+    "note": "WHY: +30% range plus Augur set energy on shield gate \u2014 wider priming, free energy returns."
    },
    {
     "name": "Antimatter Absorb",
-    "note": "WHY: Antimatter Drop absorbs ALL damage types while traveling — you charge the orb with any weapon, not just particles."
+    "note": "WHY: Antimatter Drop absorbs ALL damage types while traveling \u2014 you charge the orb with any weapon, not just particles."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability + status cleanse on dodge — cast and charge the orb safely in the middle of fire."
+    "note": "WHY: 3s invulnerability + status cleanse on dodge \u2014 cast and charge the orb safely in the middle of fire."
    }
   ],
-  "name": "Nova Prime — One-Shot Steel Path",
-  "playstyle": "Cast Molecular Prime to slow/prime, drop Antimatter Drop, shoot it to charge, guide into the pack — detonation one-shots Steel Path rooms. Run Corrosive Projection aura.",
+  "name": "Nova Prime \u2014 One-Shot Steel Path",
+  "playstyle": "Cast Molecular Prime to slow/prime, drop Antimatter Drop, shoot it to charge, guide into the pack \u2014 detonation one-shots Steel Path rooms. Run Corrosive Projection aura.",
   "recommendedOneShot": true,
   "related": [
    "rhino-prime-roar-platform",
@@ -3101,44 +3101,44 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Roar weapons platform — huge faction-agnostic damage buff for the whole squad; Iron Skin for survival.",
+  "description": "Roar weapons platform \u2014 huge faction-agnostic damage buff for the whole squad; Iron Skin for survival.",
   "id": "rhino-prime-roar-platform",
   "item": "Rhino Prime",
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Roar's damage multiplier scales straight with strength."
+    "note": "WHY: +99% strength \u2014 Roar's damage multiplier scales straight with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — even more Roar multiplier for the squad's weapons."
+    "note": "WHY: +55% strength \u2014 even more Roar multiplier for the squad's weapons."
    },
    {
     "name": "Umbral Intensify",
-    "note": "WHY: +44% strength — stacks with the other two for maximum Roar."
+    "note": "WHY: +44% strength \u2014 stacks with the other two for maximum Roar."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Roar stays up longer between casts."
+    "note": "WHY: +55% duration \u2014 Roar stays up longer between casts."
    },
    {
     "name": "Constitution",
-    "note": "WHY: +28% duration and faster knockdown recovery — longer buffs, and you never stay on the ground."
+    "note": "WHY: +28% duration and faster knockdown recovery \u2014 longer buffs, and you never stay on the ground."
    },
    {
     "name": "Iron Shrapnel",
-    "note": "WHY: Recasting Iron Skin detonates the old one — refresh your armor on demand with a free AoE blast."
+    "note": "WHY: Recasting Iron Skin detonates the old one \u2014 refresh your armor on demand with a free AoE blast."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — safe recast window for Iron Skin and Roar under fire."
+    "note": "WHY: 3s invulnerability on dodge \u2014 safe recast window for Iron Skin and Roar under fire."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR stacking against incoming damage types — survives Steel Path chip while buffing the squad."
+    "note": "WHY: Up to 90% DR stacking against incoming damage types \u2014 survives Steel Path chip while buffing the squad."
    }
   ],
-  "name": "Rhino Prime — One-Shot Steel Path",
+  "name": "Rhino Prime \u2014 One-Shot Steel Path",
   "playstyle": "Keep Roar up 100% of the time, refresh Iron Skin via Iron Shrapnel recast; your squad's weapons one-shot. Run Corrosive Projection.",
   "recommendedOneShot": true,
   "related": [
@@ -3161,38 +3161,38 @@
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Eclipse's damage bonus scales with strength."
+    "note": "WHY: +99% strength \u2014 Eclipse's damage bonus scales with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — pushes Eclipse toward its +200% damage cap."
+    "note": "WHY: +55% strength \u2014 pushes Eclipse toward its +200% damage cap."
    },
    {
     "name": "Umbral Intensify",
-    "note": "WHY: +44% strength — more strength, bigger Eclipse buff."
+    "note": "WHY: +44% strength \u2014 more strength, bigger Eclipse buff."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Eclipse and Hall of Mirrors stay up longer."
+    "note": "WHY: +55% duration \u2014 Eclipse and Hall of Mirrors stay up longer."
    },
    {
     "name": "Constitution",
-    "note": "WHY: +28% duration and knockdown recovery — longer buffs, less time on the floor."
+    "note": "WHY: +28% duration and knockdown recovery \u2014 longer buffs, less time on the floor."
    },
    {
     "name": "Total Eclipse",
-    "note": "WHY: Eclipse radiates to allies — the whole squad's weapons get the +200% damage in light too."
+    "note": "WHY: Eclipse radiates to allies \u2014 the whole squad's weapons get the +200% damage in light too."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — reposition into light safely under Steel Path fire."
+    "note": "WHY: 3s invulnerability on dodge \u2014 reposition into light safely under Steel Path fire."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR — survives standing in the open where the light buff is."
+    "note": "WHY: Up to 90% DR \u2014 survives standing in the open where the light buff is."
    }
   ],
-  "name": "Mirage Prime — One-Shot Steel Path",
+  "name": "Mirage Prime \u2014 One-Shot Steel Path",
   "playstyle": "Stand in light for the damage buff, Hall of Mirrors multiplies weapon DPS; Total Eclipse makes the whole team delete.",
   "recommendedOneShot": true,
   "related": [
@@ -3209,44 +3209,44 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Vex Armor — up to +275% damage and armor as you take hits; the selfish one-shot enabler.",
+  "description": "Vex Armor \u2014 up to +275% damage and armor as you take hits; the selfish one-shot enabler.",
   "id": "chroma-prime-vex",
   "item": "Chroma Prime",
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Vex Armor's Fury and Scorn scale with strength."
+    "note": "WHY: +99% strength \u2014 Vex Armor's Fury and Scorn scale with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — pushes Vex toward its +275% damage cap."
+    "note": "WHY: +55% strength \u2014 pushes Vex toward its +275% damage cap."
    },
    {
     "name": "Umbral Intensify",
-    "note": "WHY: +44% strength (+55% with the full Umbral set) — maximum Vex stacking."
+    "note": "WHY: +44% strength (+55% with the full Umbral set) \u2014 maximum Vex stacking."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Vex Armor buffs linger after you stop taking hits."
+    "note": "WHY: +55% duration \u2014 Vex Armor buffs linger after you stop taking hits."
    },
    {
     "name": "Narrow Minded",
-    "note": "WHY: +99% duration, -66% range — Vex is self-buffed, so dumped range costs nothing."
+    "note": "WHY: +99% duration, -66% range \u2014 Vex is self-buffed, so dumped range costs nothing."
    },
    {
     "name": "Umbral Vitality",
-    "note": "WHY: +770% health with the Umbral set — raw HP pool to survive building Vex stacks."
+    "note": "WHY: +770% health with the Umbral set \u2014 raw HP pool to survive building Vex stacks."
    },
    {
     "name": "Everlasting Ward",
-    "note": "WHY: Extends Elemental Ward to nearby allies — shares the tanking and damage buff with the squad."
+    "note": "WHY: Extends Elemental Ward to nearby allies \u2014 shares the tanking and damage buff with the squad."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR — layers with Scorn armor so you can take the hits that build Vex."
+    "note": "WHY: Up to 90% DR \u2014 layers with Scorn armor so you can take the hits that build Vex."
    }
   ],
-  "name": "Chroma Prime — One-Shot Steel Path",
+  "name": "Chroma Prime \u2014 One-Shot Steel Path",
   "playstyle": "Take damage to stack Vex Armor (Scorn + Fury), then weapons hit like trucks; Everlasting Ward shares the buff.",
   "recommendedOneShot": true,
   "related": [
@@ -3264,44 +3264,44 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Toxic Lash weapons platform — flat toxin damage on every weapon hit plus guaranteed toxin procs; Spores spread.",
+  "description": "Toxic Lash weapons platform \u2014 flat toxin damage on every weapon hit plus guaranteed toxin procs; Spores spread.",
   "id": "saryn-prime-toxic-lash",
   "item": "Saryn Prime",
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Toxic Lash's flat toxin damage scales with strength."
+    "note": "WHY: +99% strength \u2014 Toxic Lash's flat toxin damage scales with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — more flat toxin on every weapon hit."
+    "note": "WHY: +55% strength \u2014 more flat toxin on every weapon hit."
    },
    {
     "name": "Overextended",
-    "note": "WHY: +90% range, -60% strength — Spores cover whole rooms; Toxic Lash damage is flat so it doesn't care about the strength loss."
+    "note": "WHY: +90% range, -60% strength \u2014 Spores cover whole rooms; Toxic Lash damage is flat so it doesn't care about the strength loss."
    },
    {
     "name": "Stretch",
-    "note": "WHY: +45% range — Spore spread and Molt coverage across the pack."
+    "note": "WHY: +45% range \u2014 Spore spread and Molt coverage across the pack."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Toxic Lash and Spores stay active longer."
+    "note": "WHY: +55% duration \u2014 Toxic Lash and Spores stay active longer."
    },
    {
     "name": "Umbral Intensify",
-    "note": "WHY: +44% strength — recovers strength lost to Overextended for Lash and Miasma."
+    "note": "WHY: +44% strength \u2014 recovers strength lost to Overextended for Lash and Miasma."
    },
    {
     "name": "Venom Dose",
-    "note": "WHY: Spores make allies' weapons deal +100% corrosive damage — the squad's armor-melting primer."
+    "note": "WHY: Spores make allies' weapons deal +100% corrosive damage \u2014 the squad's armor-melting primer."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — safe re-cast window for Spores and Lash in melee range."
+    "note": "WHY: 3s invulnerability on dodge \u2014 safe re-cast window for Spores and Lash in melee range."
    }
   ],
-  "name": "Saryn Prime — One-Shot Steel Path",
+  "name": "Saryn Prime \u2014 One-Shot Steel Path",
   "playstyle": "Keep Toxic Lash active, spread Spores with weapon fire; Toxic Lash + viral mods = massive multiplier. Corrosive Projection aura.",
   "recommendedOneShot": true,
   "related": [
@@ -3324,38 +3324,38 @@
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Amp's damage buff and Mallet's damage multiplier scale with strength."
+    "note": "WHY: +99% strength \u2014 Amp's damage buff and Mallet's damage multiplier scale with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — bigger Amp buff for everyone's weapons."
+    "note": "WHY: +55% strength \u2014 bigger Amp buff for everyone's weapons."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — Mallet, Resonator, and the beat buffs last longer."
+    "note": "WHY: +55% duration \u2014 Mallet, Resonator, and the beat buffs last longer."
    },
    {
     "name": "Constitution",
-    "note": "WHY: +28% duration and knockdown recovery — more uptime on every song."
+    "note": "WHY: +28% duration and knockdown recovery \u2014 more uptime on every song."
    },
    {
     "name": "Stretch",
-    "note": "WHY: +45% range — Mallet and buff auras cover the whole arena."
+    "note": "WHY: +45% range \u2014 Mallet and buff auras cover the whole arena."
    },
    {
     "name": "Augur Message",
-    "note": "WHY: +24% duration plus Augur set energy on shield gate — buffs stay rolling, free energy returns."
+    "note": "WHY: +24% duration plus Augur set energy on shield gate \u2014 buffs stay rolling, free energy returns."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — safe song refreshes in Steel Path crowds."
+    "note": "WHY: 3s invulnerability on dodge \u2014 safe song refreshes in Steel Path crowds."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR — survives while invisible... invisibility plus DR makes you untouchable."
+    "note": "WHY: Up to 90% DR \u2014 survives while invisible... invisibility plus DR makes you untouchable."
    }
   ],
-  "name": "Octavia Prime — One-Shot Steel Path",
+  "name": "Octavia Prime \u2014 One-Shot Steel Path",
   "playstyle": "Drop Mallet + Resonator, keep the beat for buffs; Amp buffs everyone's damage; in long Steel Path Mallet reflects scaled enemy damage.",
   "recommendedOneShot": true,
   "related": [
@@ -3378,38 +3378,38 @@
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Electric Shield's crit damage bonus scales with strength."
+    "note": "WHY: +99% strength \u2014 Electric Shield's crit damage bonus scales with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — bigger crit damage through the shield."
+    "note": "WHY: +55% strength \u2014 bigger crit damage through the shield."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — shields and Speed stay up across the fight."
+    "note": "WHY: +55% duration \u2014 shields and Speed stay up across the fight."
    },
    {
     "name": "Constitution",
-    "note": "WHY: +28% duration and knockdown recovery — longer buffs, less downtime."
+    "note": "WHY: +28% duration and knockdown recovery \u2014 longer buffs, less downtime."
    },
    {
     "name": "Capacitance",
-    "note": "WHY: Discharge restores ally shields and converts damage to overshields — the squad never goes squishy."
+    "note": "WHY: Discharge restores ally shields and converts damage to overshields \u2014 the squad never goes squishy."
    },
    {
     "name": "Shock Trooper",
-    "note": "WHY: Ally weapons gain +electric — pairs with toxin mods for instant corrosive armor-melting."
+    "note": "WHY: Ally weapons gain +electric \u2014 pairs with toxin mods for instant corrosive armor-melting."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — safe shield deployment and repositioning under fire."
+    "note": "WHY: 3s invulnerability on dodge \u2014 safe shield deployment and repositioning under fire."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR — survives standing behind the shield line in Steel Path."
+    "note": "WHY: Up to 90% DR \u2014 survives standing behind the shield line in Steel Path."
    }
   ],
-  "name": "Volt Prime — One-Shot Steel Path",
+  "name": "Volt Prime \u2014 One-Shot Steel Path",
   "playstyle": "Deploy Electric Shield and shoot through it for massive crit damage; Shock Trooper + toxin mods = corrosive for armor.",
   "recommendedOneShot": true,
   "related": [
@@ -3426,44 +3426,44 @@
  {
   "arcane": "Molt Augmented",
   "category": "Warframe",
-  "description": "Deny strips up to 100% armor in a cone; The Vast Untime freezes enemies — stripped + frozen = free one-shots.",
+  "description": "Deny strips up to 100% armor in a cone; The Vast Untime freezes enemies \u2014 stripped + frozen = free one-shots.",
   "id": "xaku-prime-oneshot",
   "item": "Xaku Prime",
   "mods": [
    {
     "name": "Blind Rage",
-    "note": "WHY: +99% strength — Deny reaches its 100% armor-strip cap with strength."
+    "note": "WHY: +99% strength \u2014 Deny reaches its 100% armor-strip cap with strength."
    },
    {
     "name": "Transient Fortitude",
-    "note": "WHY: +55% strength — guarantees the full armor strip on Steel Path heavies."
+    "note": "WHY: +55% strength \u2014 guarantees the full armor strip on Steel Path heavies."
    },
    {
     "name": "Stretch",
-    "note": "WHY: +45% range — Deny's strip cone and Vast Untime's freeze cover whole packs."
+    "note": "WHY: +45% range \u2014 Deny's strip cone and Vast Untime's freeze cover whole packs."
    },
    {
     "name": "Overextended",
-    "note": "WHY: +90% range, -60% strength — cone and freeze hit entire rooms; armor strip is binary so strength loss is tolerable."
+    "note": "WHY: +90% range, -60% strength \u2014 cone and freeze hit entire rooms; armor strip is binary so strength loss is tolerable."
    },
    {
     "name": "Fleeting Expertise",
-    "note": "WHY: +60% efficiency, -60% duration — spam Deny strips cheaply; Vast Untime gets re-cast anyway."
+    "note": "WHY: +60% efficiency, -60% duration \u2014 spam Deny strips cheaply; Vast Untime gets re-cast anyway."
    },
    {
     "name": "Primed Continuity",
-    "note": "WHY: +55% duration — recovers the duration Fleeting Expertise takes away."
+    "note": "WHY: +55% duration \u2014 recovers the duration Fleeting Expertise takes away."
    },
    {
     "name": "Rolling Guard",
-    "note": "WHY: 3s invulnerability on dodge — safe cast window for Deny and Vast Untime in the thick of it."
+    "note": "WHY: 3s invulnerability on dodge \u2014 safe cast window for Deny and Vast Untime in the thick of it."
    },
    {
     "name": "Adaptation",
-    "note": "WHY: Up to 90% DR — survives standing in the cone to strip whole Steel Path rooms."
+    "note": "WHY: Up to 90% DR \u2014 survives standing in the cone to strip whole Steel Path rooms."
    }
   ],
-  "name": "Xaku Prime — One-Shot Steel Path",
+  "name": "Xaku Prime \u2014 One-Shot Steel Path",
   "playstyle": "Deny to strip armor, freeze with Vast Untime, one-shot with any viral/slash weapon; the premier armor-strip frame.",
   "recommendedOneShot": true,
   "related": [
@@ -3476,5 +3476,53 @@
    "one-shot",
    "strong"
   ]
+ },
+ {
+  "id": "steflos-one-shot-sp",
+  "name": "Steflos Steel Path One-Shot",
+  "item": "Steflos",
+  "category": "Primary",
+  "tags": [
+   "steel-path",
+   "one-shot",
+   "strong"
+  ],
+  "description": "Corpus bouncing-projectile rifle turned Steel Path deleter. High crit + Hunter Munitions slash procs + viral = armor-ignoring one-shots around corners.",
+  "mods": [
+   {
+    "name": "Serration",
+    "why": "Base damage multiplier \u2014 foundation of every rifle build."
+   },
+   {
+    "name": "Split Chamber",
+    "why": "Multishot doubles projectiles, more chances for crits and slash procs."
+   },
+   {
+    "name": "Galvanized Chamber",
+    "why": "On-kill stacking multishot and damage \u2014 snowballs through crowds."
+   },
+   {
+    "name": "Critical Delay",
+    "why": "Huge crit chance boost (200%). Slight fire rate penalty is worth it for one-shot consistency."
+   },
+   {
+    "name": "Vital Sense",
+    "why": "Crit damage multiplier \u2014 turns those crits into massive numbers."
+   },
+   {
+    "name": "Hunter Munitions",
+    "why": "THE one-shot engine. Crits trigger slash procs that bypass armor and scale with viral."
+   },
+   {
+    "name": "Malignant Force",
+    "why": "Viral 60/60 \u2014 viral multiplies health damage, making slash ticks hit harder."
+   },
+   {
+    "name": "High Voltage",
+    "why": "Completes viral combo. Viral + slash is the Steel Path kill formula."
+   }
+  ],
+  "arcane": "Primary Deadhead (headshot kills stack damage) or Primary Merciless",
+  "playstyle": "Bounce shots around corners to hit enemies in cover. Viral primes from the 60/60s, crits trigger Hunter Munitions slash procs that melt through armor. Aim for headshots to stack Deadhead."
  }
 ]
