@@ -834,8 +834,88 @@ function oneShotBuildAnswer(t) {
       }
       var f = findFarm(m[1]);
       if (f) return farmAnswer(f);
+      /* didn't find a specific item — try category-level knowledge before giving up */
+      var catAnswer = categoryFarmAnswer(m[1].toLowerCase());
+      if (catAnswer) return catAnswer;
       return 'Hmm, I couldn\'t find a farm spot for "' + esc(m[1]) + '" in the Vault. ' +
         'Try the full item name — or check the <a href="resources.html">Resource Finder</a> to search everything.';
+    }
+
+    /* Category-level farm knowledge: when someone asks about a TYPE of thing,
+       not a specific item. This is what makes it feel like a real AI. */
+    function categoryFarmAnswer(q) {
+      if (/operator arcane|magus arcane|magus/.test(q)) {
+        return 'Operator arcanes (Magus arcanes) come from three places:<br><br>' +
+          '<b>Quills (Cetus)</b> — Magus Husk, Magus Vigor, Magus Replenish, Magus Cloud, Magus Melt. Trade in Eidolon Shards and Sentient cores.<br><br>' +
+          '<b>Vox Solaris (Fortuna)</b> — Magus Lockdown, Magus Anomaly, Magus Drive, Magus Repair. Need max rank with Vox Solaris via Little Duck.<br><br>' +
+          '<b>Cavia (Zariman)</b> — newer Magus arcanes. Trade in Zariman resources.<br><br>' +
+          'If you tell me <i>which</i> Magus arcane you want, I\'ll give you the exact vendor and cost.';
+      }
+      if (/amp arcane|eternal|virtuos/.test(q)) {
+        return 'Amp arcanes come from two vendors:<br><br>' +
+          '<b>Quills (Cetus)</b> — Virtuos Strike, Virtuos Shadow, Virtuos Tempo, etc. (the Virtuos set).<br><br>' +
+          '<b>Cavia (Zariman)</b> — Eternal Eradicate, Eternal Onslaught, etc. (the Eternal set).<br><br>' +
+          'For your 777: <b>Virtuos Strike</b> from Quills + <b>Eternal Eradicate</b> from Cavia is the meta combo.';
+      }
+      if (/warframe arcane|molt|guardian|energize/.test(q)) {
+        return 'Warframe arcanes mostly come from <b>Eidolon hunts</b> (Teralyst, Gantulyst, Hydrolyst on Plains of Eidolon at night). ' +
+          'Arcane Energize, Guardian, Grace, etc. all drop there.<br><br>' +
+          'The newer <b>Molt</b> arcanes (Molt Augmented, Molt Efficiency) come from <b>Thrax enemies in Zariman missions</b> — which is why Void Cascade is so good for farming them.<br><br>' +
+          'Tell me which specific arcane and I\'ll narrow it down.';
+      }
+      if (/primary arcane|secondary arcane|melee arcane|merciless|deadhead|encumber/.test(q)) {
+        return 'Weapon arcanes:<br><br>' +
+          '<b>Primary/Secondary Merciless, Deadhead, Dexterity</b> — drop from <b>Acolytes in Steel Path</b> missions.<br><br>' +
+          '<b>Secondary Encumber</b> — also from Acolytes.<br><br>' +
+          '<b>Melee arcanes</b> (Fury, Strike, etc.) — mostly from Eidolons and Orphix.<br><br>' +
+          'Run Steel Path missions and hunt the Acolyte when it spawns — that\'s your farm.';
+      }
+      if (/corrupted mod|blind rage|narrow minded|transient/.test(q)) {
+        return 'Corrupted mods <b>only</b> drop from <b>Orokin Vaults on Deimos</b>. ' +
+          'Grab a Dragon Key from your Dojo, run Horend or Phlegyas (capture missions), find the vault door, open it. ' +
+          'Each run gives you one random Corrupted mod — Blind Rage, Narrow Minded, Transient Fortitude, Fleeting Expertise, etc.';
+      }
+      if (/60\/60|dual stat/.test(q)) {
+        return '60/60 dual-stat mods:<br><br>' +
+          '<b>Spy missions</b> — each faction\'s Spy drops their 60/60s (Corpus Spy for electric/cold, Grineer Spy for heat/toxin).<br><br>' +
+          '<b>Nightmare missions</b> — some 60/60s are Nightmare-exclusive.<br><br>' +
+          'Run the Spy vaults perfectly (all 3) for the best drop chance.';
+      }
+      if (/galvanized/.test(q)) {
+        return 'Galvanized mods come from <b>Steel Path</b> — they drop from <b>Acolytes</b> that spawn in Steel Path missions. ' +
+          'Each Acolyte drops one random Galvanized mod. Run any Steel Path mission and wait for the "The Stalker" style spawn message.';
+      }
+      if (/prime part|prime blueprint|relic/.test(q)) {
+        return 'Prime parts come from <b>Void Relics</b> — run Fissure missions to crack them open.<br><br>' +
+          'Check the <a href="relics.html">Relics page</a> to see which relic drops the specific part you need, and where to farm that relic.';
+      }
+      if (/kuva weapon|kuva lich/.test(q)) {
+        return 'Kuva weapons come from <b>Kuva Liches</b>:<br><br>' +
+          '1. Find a Kuva Larvling on a Grineer mission (level 20+), kill it with a finisher<br>' +
+          '2. Your Lich spawns — hunt it across the star chart<br>' +
+          '3. Figure out the Requiem mod order, kill your Lich<br>' +
+          '4. Claim the Kuva weapon<br><br>' +
+          'The progenitor Warframe determines the bonus element. Check the <a href="liches.html">Liches guide</a> for the full walkthrough.';
+      }
+      if (/tenet|sister/.test(q)) {
+        return 'Tenet weapons come from <b>Sisters of Parvos</b> (Corpus Liches):<br><br>' +
+          '1. Run a Corpus Granum Void mission, get 25 kills to spawn a Candidate<br>' +
+          '2. Down the Candidate with a finisher to make her your Sister<br>' +
+          '3. Hunt her across the star chart like a Lich<br><br>' +
+          'Full guide on the <a href="liches.html">Liches page</a>.';
+      }
+      if (/archon shard|tauforged/.test(q)) {
+        return 'Archon Shards:<br><br>' +
+          '<b>Normal shards</b> — drop from <b>Archon Hunts</b> (weekly mission).<br><br>' +
+          '<b>Tauforged shards</b> (stronger version) — rare drop from <b>Archon Hunts</b> and <b>Netracells</b>.<br><br>' +
+          'Check the <a href="shards.html">Archon Shards page</a> for every color and what they do.';
+      }
+      if (/eidolon|teralyst|hydrolyst|gantulyst/.test(q)) {
+        return 'Eidolon hunts happen on the <b>Plains of Eidolon at night</b> (Cetus).<br><br>' +
+          'You need: a good amp (your 777 works), Madurai focus school, and ideally Chroma/Rhino/Volt for the team.<br><br>' +
+          'Teralyst → Gantulyst → Hydrolyst in order. They drop Arcanes, Eidolon Shards (for Quills standing), and Sentient cores.';
+      }
+      return null;
     }
 
     m = t.match(/^is (.+?) good(?: for (.+?))?$/) || t.match(/^how (?:is|good is) (.+?)(?: for (.+?))?$/);
