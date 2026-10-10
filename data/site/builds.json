@@ -3487,42 +3487,42 @@
    "one-shot",
    "strong"
   ],
-  "description": "Corpus bouncing-projectile rifle turned Steel Path deleter. High crit + Hunter Munitions slash procs + viral = armor-ignoring one-shots around corners.",
+  "description": "Corpus bouncing-projectile SHOTGUN turned Steel Path deleter. Shotgun crit + Hunter Munitions slash procs + viral = armor-ignoring one-shots around corners.",
   "mods": [
    {
-    "name": "Serration",
-    "why": "Base damage multiplier \u2014 foundation of every rifle build."
+    "name": "Primed Point Blank",
+    "why": "Base damage multiplier \u2014 the shotgun version of Serration."
    },
    {
-    "name": "Split Chamber",
-    "why": "Multishot doubles projectiles, more chances for crits and slash procs."
+    "name": "Hell's Chamber",
+    "why": "Multishot for shotguns \u2014 more pellets, more crit and slash proc chances."
    },
    {
-    "name": "Galvanized Chamber",
+    "name": "Galvanized Hell",
     "why": "On-kill stacking multishot and damage \u2014 snowballs through crowds."
    },
    {
-    "name": "Critical Delay",
-    "why": "Huge crit chance boost (200%). Slight fire rate penalty is worth it for one-shot consistency."
+    "name": "Primed Ravage",
+    "why": "Crit chance for shotguns \u2014 feeds Hunter Munitions procs."
    },
    {
-    "name": "Vital Sense",
-    "why": "Crit damage multiplier \u2014 turns those crits into massive numbers."
+    "name": "Vigilante Armaments",
+    "why": "Crit damage for shotguns \u2014 turns crits into massive numbers."
    },
    {
     "name": "Hunter Munitions",
     "why": "THE one-shot engine. Crits trigger slash procs that bypass armor and scale with viral."
    },
    {
-    "name": "Malignant Force",
-    "why": "Viral 60/60 \u2014 viral multiplies health damage, making slash ticks hit harder."
+    "name": "Contagious Spread",
+    "why": "Viral 60/60 for shotguns \u2014 viral multiplies health damage, making slash ticks hit harder."
    },
    {
-    "name": "High Voltage",
-    "why": "Completes viral combo. Viral + slash is the Steel Path kill formula."
+    "name": "Shell Shock",
+    "why": "Completes the viral combo. Viral + slash is the Steel Path kill formula."
    }
   ],
   "arcane": "Primary Deadhead (headshot kills stack damage) or Primary Merciless",
-  "playstyle": "Bounce shots around corners to hit enemies in cover. Viral primes from the 60/60s, crits trigger Hunter Munitions slash procs that melt through armor. Aim for headshots to stack Deadhead."
+  "playstyle": "Bounce shots around corners to hit enemies in cover. Viral primes from the 60/60s, crits trigger Hunter Munitions slash procs that melt through armor. Shotgun pellets each roll crit separately \u2014 more chances for slash."
  }
 ]
