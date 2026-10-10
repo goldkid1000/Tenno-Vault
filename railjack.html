@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Railjack &amp; Necramech — Tenno Vault</title>
+<meta name="description" content="Railjack meta weapons, avionics, crew and intrinsics — plus the Voidrig vs Bonewidow Necramech guide, mods and builds.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="railjack" data-crumb="Home,Railjack &amp; Necramech">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Railjack &amp; Necramech</h1>
+<p class="muted small" id="r-count"></p>
+<p class="muted">Your warship and your war mech — the meta loadouts, how Intrinsics work, where to farm, and the full Voidrig vs Bonewidow breakdown.</p>
+<div class="field"><input id="r-q" type="search" placeholder="Filter…"></div>
+<div id="r-detail"></div>
+<div id="r-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  function badges(a) {
+    var h = '';
+    if (a.badge) h += '<span class="badge type">' + esc(a.badge) + '</span>';
+    if (a.type) h += ' <span class="badge type">' + esc(a.type) + '</span>';
+    return h;
+  }
+  function card(a) {
+    var d = document.createElement('a');
+    d.className = 'list-item'; d.href = '#' + encodeURIComponent(a.name);
+    d.innerHTML = '<div><h3>' + esc(a.name) + '</h3><p>' + badges(a) + '</p>' +
+      '<p class="muted small">' + esc((a.effect || '').slice(0, 130)) + '</p></div>';
+    return d;
+  }
+  function listHtml(arr) {
+    return '<ul>' + arr.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+  }
+  function showDetail(name) {
+    var box = document.getElementById('r-detail');
+    var a = all.find(function (x) { return x.name === name; });
+    if (!a) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><div class="detail-head"><div><h2>' +
+      esc(a.name) + '</h2><p>' + badges(a) + '</p></div></div>' +
+      '<p>' + esc(a.effect || '') + '</p>' +
+      (a.effects && a.effects.length ? '<h4>Details</h4>' + listHtml(a.effects) : '') +
+      (a.farm ? '<div class="farm-box"><h4>📍 How to get</h4><p>' + esc(a.farm) + '</p></div>' : '') +
+      (a.tips && a.tips.length ? '<div class="farm-box"><h4>💡 Recommendations</h4>' + listHtml(a.tips) + '</div>' : '') +
+      '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Archon Shards', sub: 'Buff your frames for Railjack', url: 'shards.html' },
+      { label: 'Mods', sub: 'Necramech mod details', url: 'mods.html' },
+      { label: 'Farming hub', sub: 'Railjack & Deimos farms', url: 'farming.html' }
+    ]);
+  }
+  function matches(a, q) {
+    return (a.name + ' ' + (a.tags || '') + ' ' + (a.type || '') + ' ' + (a.badge || '')).toLowerCase().indexOf(q) !== -1;
+  }
+  window.TV.getJSON('data/site/railjack.json').then(function (d) {
+    all = d;
+    document.getElementById('r-count').textContent = d.length + ' Entries';
+    var list = document.getElementById('r-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    document.getElementById('r-q').addEventListener('input', function (e) {
+      var q = e.target.value.toLowerCase();
+      ctl.reset(all.filter(function (a) { return matches(a, q); }));
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('r-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

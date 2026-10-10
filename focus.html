@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focus Schools — Tenno Vault</title>
+<meta name="description" content="All five Focus schools in Warframe: Madurai, Vazarin, Naramon, Unairu, Zenurik — every way-bound, key nodes, the amp one-shot setup, and the best school per activity.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="focus" data-crumb="Home,Focus Schools">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Focus Schools</h1>
+<p class="muted small">5 schools · every way-bound · amp one-shot included</p>
+<p class="muted">Focus schools are your Operator's skill trees. Pick one to specialize, then unlock the rest over time — <b>way-bounds</b> are shared passives that work on every school once maxed and unbound. Tap a school for its full node list.</p>
+<div id="f-detail"></div>
+<div id="f-schools" class="card-grid"></div>
+<h2>Best school per activity</h2>
+<div id="f-table"></div>
+<h2>Farming focus</h2>
+<div class="notice small" id="f-farm"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc;
+  function nodeList(nodes) {
+    return (nodes || []).map(function (n) {
+      return '<p class="small"><b>' + esc(n.name) + '</b> — <span class="muted">' + esc(n.effect) + '</span>' +
+        (n.augment ? '<br><span class="small" style="color:var(--gold)">⬆ ' + esc(n.augment) + '</span>' : '') +
+        (n.why ? ' <span class="badge recommended">' + esc(n.why) + '</span>' : '') + '</p>';
+    }).join('');
+  }
+  function showDetail(schools, name) {
+    var box = document.getElementById('f-detail');
+    var s = schools.find(function (x) { return x.name === name; });
+    if (!s) { box.innerHTML = ''; return; }
+    var html = '<div class="detail-box"><h2>' + esc(s.name) + ' <span class="badge type">' + esc(s.tagline) + '</span></h2>' +
+      '<p>' + esc(s.description) + '</p>' +
+      '<p class="small"><b>Best for:</b> ' + esc(s.bestFor) + '</p>' +
+      '<h3>Abilities</h3>' + nodeList(s.abilities) +
+      '<h3>Passives</h3>' + nodeList(s.passives);
+    if (s.movement && s.movement.length) html += '<h3>Void Sling</h3>' + nodeList(s.movement);
+    if (s.voidmode && s.voidmode.length) html += '<h3>Void Mode</h3>' + nodeList(s.voidmode);
+    html += '<h3>Way-bounds (shared once unbound)</h3>' + nodeList(s.waybounds);
+    if (s.ampOneShot) {
+      var a = s.ampOneShot;
+      html += '<h3>⚡ The amp one-shot setup (777)</h3><div class="farm-box"><h4>Eidolon shield one-shot</h4><p>' +
+        '<b>Prism:</b> ' + esc(a.prism) + '<br><b>Scaffold:</b> ' + esc(a.scaffold) +
+        '<br><b>Brace:</b> ' + esc(a.brace) + '<br><b>Arcane:</b> ' + esc(a.arcane) +
+        '<br><b>Combo:</b> ' + esc(a.combo) + '</p></div>' +
+        '<p class="small muted">' + esc(a.note) + '</p>';
+    }
+    html += '</div>';
+    box.innerHTML = html;
+    box.scrollIntoView();
+  }
+  window.TV.getJSON('data/site/focus.json').then(function (d) {
+    var schools = d.schools;
+    document.getElementById('f-schools').innerHTML = schools.map(function (s) {
+      return '<a class="card" href="#' + encodeURIComponent(s.name) + '"><h3>' + esc(s.name) + '</h3>' +
+        '<p><span class="badge type">' + esc(s.tagline) + '</span></p>' +
+        '<p>' + esc(s.description) + '</p>' +
+        '<p class="small muted">Best for: ' + esc(s.bestFor) + '</p></a>';
+    }).join('');
+    document.getElementById('f-table').innerHTML =
+      '<div class="item-list">' + d.bestPerActivity.map(function (r) {
+        return '<div class="list-item"><h3>' + esc(r.activity) + ' <span class="badge steelpath">' + esc(r.school) + '</span></h3>' +
+          '<p class="muted small">' + esc(r.why) + '</p></div>';
+      }).join('') + '</div>';
+    document.getElementById('f-farm').innerHTML =
+      '<b>Unlock:</b> ' + esc(d.unlock) + '<br><br><b>Farm:</b> ' + esc(d.focusFarm) +
+      '<br><br><b>Way-bound priority:</b> ' + esc(d.note);
+    if (location.hash.length > 1) showDetail(schools, decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(schools, decodeURIComponent(location.hash.slice(1)));
+    });
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Amps', sub: 'Your Operator\'s weapon + recommended combos', url: 'amps.html' },
+      { label: 'Operators', sub: 'Schools overview + operator arcanes', url: 'operators.html' },
+      { label: 'Eidolon & boss builds', sub: 'One-shot setups', url: 'builds.html' }
+    ]);
+  }).catch(function () {
+    document.getElementById('f-schools').innerHTML = '<div class="notice">Couldn\'t load focus data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

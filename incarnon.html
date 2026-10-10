@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incarnon Guide — Tenno Vault</title>
+<meta name="description" content="Every Incarnon Genesis adapter: how Incarnons work, evolution perks and recommended picks, the meta tier list, and where to get adapters.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="incarnon" data-crumb="Home,Incarnon Guide">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Incarnon Guide</h1>
+<p class="muted small" id="i-count"></p>
+<p class="muted">Incarnons turn forgotten old weapons into endgame monsters. Install the adapter, charge the gauge with hits, Alt-Fire to transmute — then evolve through challenges to unlock the real power.</p>
+
+<h2>❓ How Incarnons work</h2>
+<div id="i-how"></div>
+
+<h2>🏆 Meta tier list — worth the grind?</h2>
+<div id="i-tiers"></div>
+
+<h2>📍 Where to get adapters</h2>
+<div id="i-sources"></div>
+
+<h2>All 45 Incarnon Genesis weapons</h2>
+<div class="field"><input id="i-q" type="search" placeholder="Filter weapons…"></div>
+<div class="field" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+  <button class="btn small" id="f-all">All</button>
+  <button class="btn small" id="f-s">S-tier</button>
+  <button class="btn small" id="f-a">A-tier</button>
+  <button class="btn small" id="f-b">B-tier</button>
+  <button class="btn small" id="f-pri">Primary</button>
+  <button class="btn small" id="f-sec">Secondary</button>
+  <button class="btn small" id="f-mel">Melee</button>
+</div>
+<div id="i-detail"></div>
+<div id="i-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null, filter = 'all', DATA = null;
+  function tierBadge(t) {
+    var colors = { S: '#f59e0b', A: '#22d3ee', B: '#94a3b8' };
+    return ' <span class="badge type" style="background:' + colors[t] + ';color:#0a0e1a;font-weight:bold;">' + esc(t) + '-TIER</span>';
+  }
+  function card(w) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(w.name);
+    a.innerHTML = '<div><h3>' + esc(w.name) + tierBadge(w.tier) +
+      ' <span class="badge type">' + esc(w.slot) + '</span>' +
+      ' <span class="badge type">Week ' + w.week + '</span></h3>' +
+      '<p class="muted small">' + esc((w.form || '').slice(0, 140)) + '</p>' +
+      '<p class="muted small">✅ ' + esc(w.accepts) + '</p></div>';
+    return a;
+  }
+  function showDetail(name) {
+    var box = document.getElementById('i-detail');
+    var w = all.find(function (x) { return x.name === name; });
+    if (!w) { box.innerHTML = ''; return; }
+    var evoHTML = (w.evolutions || []).map(function (e) {
+      var opts = (e.options || []).map(function (o) { return '<li>' + esc(o) + '</li>'; }).join('');
+      return '<div class="farm-box"><h4>Evolution ' + esc(e.level) + '</h4>' +
+        (e.desc ? '<p>' + esc(e.desc) + '</p>' : '') +
+        (e.challenge ? '<p class="muted small">🎯 Challenge: ' + esc(e.challenge) + '</p>' : '') +
+        (opts ? '<ul>' + opts + '</ul>' : '') +
+        (e.pick ? '<p>⭐ <b>Recommended pick:</b> ' + esc(e.pick) + '</p>' : '') + '</div>';
+    }).join('');
+    box.innerHTML = '<div class="detail-box"><div class="detail-head"><div><h2>' + esc(w.name) + ' Incarnon</h2>' +
+      tierBadge(w.tier) + ' <span class="badge type">' + esc(w.slot) + '</span>' +
+      ' <span class="badge type">Week ' + w.week + ' rotation</span></div></div>' +
+      '<p><b>Incarnon Form:</b> ' + esc(w.form) + '</p>' +
+      '<p><b>Why:</b> ' + esc(w.why) + '</p>' +
+      '<p class="muted small">✅ Install on: ' + esc(w.accepts) + '</p>' +
+      (w.install ? '<p class="muted small">🔧 Install cost: ' + esc(w.install) + '</p>' : '') +
+      '<h4 style="margin-top:12px;">🧬 Evolutions &amp; recommended picks</h4>' + evoHTML + '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Syndicates', sub: 'Holdfasts & Cavia for Incarnon weapons', url: 'syndicates.html' },
+      { label: 'Builds', sub: 'Steel Path & one-shot setups', url: 'builds.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/incarnon.json').then(function (d) {
+    DATA = d; all = d.weapons;
+    document.getElementById('i-count').textContent = all.length + ' Incarnon Genesis adapters + Zariman & Albrecht Incarnons';
+    document.getElementById('i-how').innerHTML =
+      '<div class="detail-box">' +
+      d.guide.what_are_incarnons.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') +
+      '<h4>🧬 Evolution stages</h4><ul>' +
+      d.guide.evolution_stages.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' +
+      '<p class="muted small">🔧 Install cost: ' + esc(d.guide.install_cost) + '</p></div>';
+    var tierNotes = d.tiers.tier_notes;
+    document.getElementById('i-tiers').innerHTML = ['S', 'A', 'B'].map(function (t) {
+      return '<div class="farm-box"><h4>' + t + '-tier — ' + esc(tierNotes[t].split('.')[0]) + '.</h4><p>' +
+        d.tiers[t].join(', ') + '</p><p class="muted small">' + esc(tierNotes[t]) + '</p></div>';
+    }).join('');
+    document.getElementById('i-sources').innerHTML = d.sources.map(function (s) {
+      return '<div class="farm-box"><h4>📍 ' + esc(s.name) + '</h4><p>' + esc(s.how) + '</p>' +
+        '<p class="muted small">' + esc(s.note) + '</p></div>';
+    }).join('');
+    var list = document.getElementById('i-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    function applyFilters() {
+      var q = document.getElementById('i-q').value.toLowerCase();
+      ctl.reset(all.filter(function (w) {
+        if (filter === 's' && w.tier !== 'S') return false;
+        if (filter === 'a' && w.tier !== 'A') return false;
+        if (filter === 'b' && w.tier !== 'B') return false;
+        if (filter === 'pri' && w.slot !== 'Primary') return false;
+        if (filter === 'sec' && w.slot !== 'Secondary') return false;
+        if (filter === 'mel' && w.slot !== 'Melee') return false;
+        return w.name.toLowerCase().indexOf(q) !== -1 ||
+          (w.form || '').toLowerCase().indexOf(q) !== -1;
+      }));
+    }
+    document.getElementById('i-q').addEventListener('input', applyFilters);
+    [['f-all','all'],['f-s','s'],['f-a','a'],['f-b','b'],['f-pri','pri'],['f-sec','sec'],['f-mel','mel']].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener('click', function () {
+        filter = pair[1];
+        applyFilters();
+      });
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('i-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

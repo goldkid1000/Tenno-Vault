@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companions — Tenno Vault</title>
+<meta name="description" content="Every companion in Warframe: sentinels, Kubrows, Kavats, MOAs, Hounds, Predasites and Vulpaphylas — farm info, key precepts, and recommended mod builds.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="companions" data-crumb="Home,Companions">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Companions</h1>
+<p class="muted small" id="c-count"></p>
+<p class="muted">Your extra pair of hands — and guns. Sentinels float, Kubrows/Kavats fight beside you, MOAs are built in Fortuna, Hounds come from Sisters of Parvos, and Deimos pets cheat death. Tap any entry for its farm, key precepts, and a full 8-mod build with the why.</p>
+<div class="field"><input id="c-q" type="search" placeholder="Filter companions… (e.g. primer, loot, sentinel)"></div>
+<div id="c-detail"></div>
+<div id="c-list" class="item-list"></div>
+<div class="notice small"><b>Meta picks:</b> <span class="badge recommended">META</span> Nautilus Prime + Verglas Prime + Manifold Bond is the primer setup — it paints enemies with statuses so your weapons hit harder. <span class="badge recommended">META</span> Smeeta Kavat's Charm doubles your loot. <span class="badge recommended">META</span> Sly Vulpaphyla literally cannot stay dead. Farm a Hound once for Manifold Bond + Null Audit even if you never use it.</div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [];
+  function badgeFor(c) {
+    var b = '<span class="badge type">' + esc(c.type) + '</span>';
+    if (c.meta) b += ' <span class="badge recommended">META</span>';
+    return b;
+  }
+  function card(c) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(c.name);
+    a.innerHTML = '<h3>' + esc(c.name) + ' ' + badgeFor(c) + '</h3>' +
+      '<p class="muted small">' + esc((c.description || '').slice(0, 140)) + '</p>';
+    return a;
+  }
+  function modChips(build) {
+    return (build || []).map(function (m) {
+      return '<div style="margin-bottom:8px"><span class="badge steelpath">' + esc(m.mod) + '</span> ' +
+        '<span class="small muted">' + esc(m.why) + '</span></div>';
+    }).join('');
+  }
+  function showDetail(name) {
+    var box = document.getElementById('c-detail');
+    var c = all.find(function (x) { return x.name === name; });
+    if (!c) { box.innerHTML = ''; return; }
+    var html = '<div class="detail-box"><div class="detail-head"><div><h2>' + esc(c.name) + '</h2>' +
+      badgeFor(c) + (c.weapon ? ' <span class="badge type">uses ' + esc(c.weapon) + '</span>' : '') +
+      (c.usedBy ? ' <span class="badge type">used by ' + esc(c.usedBy) + '</span>' : '') + '</div></div>' +
+      '<p>' + esc(c.description) + '</p>' +
+      '<div class="farm-box"><h4>📍 How to get it</h4><p>' + esc(c.farm) + '</p></div>';
+    if (c.precepts && c.precepts.length) {
+      html += '<h3>Key precepts</h3>' + c.precepts.map(function (p) {
+        return '<p class="small"><b>' + esc(p.name) + '</b> — <span class="muted">' + esc(p.why) + '</span></p>';
+      }).join('');
+    }
+    if (c.build && c.build.length) {
+      html += '<h3>Recommended build (8 mods)</h3>' + modChips(c.build);
+    }
+    if (c.notes) html += '<p class="small muted">💡 ' + esc(c.notes) + '</p>';
+    html += '</div>';
+    box.innerHTML = html;
+    box.scrollIntoView();
+  }
+  window.TV.getJSON('data/site/companions.json').then(function (data) {
+    all = data;
+    document.getElementById('c-count').textContent = all.length + ' companions & weapons';
+    var list = document.getElementById('c-list');
+    function renderList(q) {
+      q = (q || '').toLowerCase();
+      var f = all.filter(function (c) {
+        if (!q) return true;
+        return c.name.toLowerCase().indexOf(q) !== -1 ||
+          (c.description || '').toLowerCase().indexOf(q) !== -1 ||
+          c.type.toLowerCase().indexOf(q) !== -1 ||
+          (c.precepts || []).some(function (p) { return p.name.toLowerCase().indexOf(q) !== -1; }) ||
+          (c.build || []).some(function (m) { return m.mod.toLowerCase().indexOf(q) !== -1; });
+      });
+      list.innerHTML = '';
+      if (!f.length) { list.innerHTML = '<div class="notice">No companions match that filter.</div>'; return; }
+      f.forEach(function (c) { list.appendChild(card(c)); });
+      document.getElementById('c-count').textContent = f.length + ' of ' + all.length + ' shown';
+    }
+    renderList('');
+    document.getElementById('c-q').addEventListener('input', function () { renderList(this.value); });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Mods', sub: 'Every mod and where to farm it', url: 'mods.html' },
+      { label: 'Farming hub', sub: 'Best farms for resources and mods', url: 'farming.html' },
+      { label: 'Builds', sub: 'Steel Path & one-shot setups', url: 'builds.html' }
+    ]);
+  }).catch(function () {
+    document.getElementById('c-list').innerHTML = '<div class="notice">Couldn\'t load companion data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

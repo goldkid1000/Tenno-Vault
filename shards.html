@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archon Shards — Tenno Vault</title>
+<meta name="description" content="Every Archon Shard: all effects (normal + Tauforged), where to farm them, fusion recipes, and the best shard setups per frame archetype.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="shards" data-crumb="Home,Archon Shards">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Archon Shards</h1>
+<p class="muted small" id="s-count"></p>
+<p class="muted">Permanent Helminth upgrades slotted onto your Warframes — 5 slots per frame, bonuses stack. Tauforged variants give 1.5x the effect.</p>
+<div class="field"><input id="s-q" type="search" placeholder="Filter shards…"></div>
+<div id="s-detail"></div>
+<div id="s-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null;
+  function thumb(item, size) {
+    if (!item.img) return '';
+    return '<img src="' + item.img + '" alt="" loading="lazy" width="' + size + '" height="' + size + '"' +
+      ' style="width:' + size + 'px;height:' + size + 'px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.04);"' +
+      ' onerror="this.style.display=\'none\'">';
+  }
+  function badges(a) {
+    var h = '';
+    if (a.badge) h += '<span class="badge type">' + esc(a.badge) + '</span>';
+    if (a.type) h += ' <span class="badge type">' + esc(a.type) + '</span>';
+    return h;
+  }
+  function card(a) {
+    var d = document.createElement('a');
+    d.className = 'list-item'; d.href = '#' + encodeURIComponent(a.name);
+    d.innerHTML = '<div style="display:flex;gap:12px;align-items:center;">' + thumb(a, 64) +
+      '<div><h3>' + esc(a.name) + '</h3><p>' + badges(a) + '</p>' +
+      '<p class="muted small">' + esc((a.effect || '').slice(0, 130)) + '</p></div></div>';
+    return d;
+  }
+  function listHtml(arr) {
+    return '<ul>' + arr.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+  }
+  function showDetail(name) {
+    var box = document.getElementById('s-detail');
+    var a = all.find(function (x) { return x.name === name; });
+    if (!a) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><div class="detail-head">' +
+      (a.img ? '<img src="' + a.img + '" alt="' + esc(a.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
+      '<div><h2>' + esc(a.name) + '</h2><p>' + badges(a) + '</p></div></div>' +
+      '<p>' + esc(a.effect || '') + '</p>' +
+      (a.effects && a.effects.length ? '<h4>Effects <span class="muted small">(normal / Tauforged)</span></h4>' + listHtml(a.effects) : '') +
+      (a.farm ? '<div class="farm-box"><h4>📍 How to get</h4><p>' + esc(a.farm) + '</p></div>' : '') +
+      (a.tips && a.tips.length ? '<div class="farm-box"><h4>💡 Recommendations</h4>' + listHtml(a.tips) + '</div>' : '') +
+      '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Warframes', sub: 'Match shards to your frames', url: 'warframes.html' },
+      { label: 'Steel Path & one-shot builds', sub: 'Where shards matter most', url: 'builds.html' },
+      { label: 'Farming hub', sub: 'Shard farms', url: 'farming.html' }
+    ]);
+  }
+  function matches(a, q) {
+    return (a.name + ' ' + (a.tags || '') + ' ' + (a.type || '') + ' ' + (a.badge || '')).toLowerCase().indexOf(q) !== -1;
+  }
+  window.TV.getJSON('data/site/shards.json').then(function (d) {
+    all = d;
+    document.getElementById('s-count').textContent = d.length + ' Entries';
+    var list = document.getElementById('s-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    document.getElementById('s-q').addEventListener('input', function (e) {
+      var q = e.target.value.toLowerCase();
+      ctl.reset(all.filter(function (a) { return matches(a, q); }));
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('s-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

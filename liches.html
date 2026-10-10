@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liches &amp; Sisters — Tenno Vault</title>
+<meta name="description" content="The complete Kuva Lich and Sisters of Parvos guide: how to spawn them, Requiem mods, the murmur logic, progenitor elements, and tier lists for every Kuva and Tenet weapon.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="liches" data-crumb="Home,Liches &amp; Sisters">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>🔪 Kuva Liches &amp; Sisters of Parvos</h1>
+<p class="muted small" id="l-count"></p>
+<p class="muted">Your personal nemesis system: spawn a Grineer Lich or a Corpus Sister, solve the Requiem puzzle, and walk away with some of the strongest weapons in the game. Everything below is searchable — pick a category to start.</p>
+<div class="chip-row" id="l-cats"></div>
+<div class="field"><input id="l-q" type="search" placeholder="Filter…"></div>
+<div id="l-detail"></div>
+<div id="l-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null, activeCat = 'All';
+  var CATS = ['All', 'System', 'Requiem Mod', 'Progenitor Element', 'Kuva Weapon', 'Tenet Weapon'];
+  function tierBadge(t) {
+    if (!t) return '';
+    var cls = t === 'S' ? 'oneshot' : (t === 'A' ? 'steelpath' : 'type');
+    return '<span class="badge ' + cls + '">Tier ' + esc(t) + '</span>';
+  }
+  function card(x) {
+    var d = document.createElement('a');
+    d.className = 'list-item'; d.href = '#' + encodeURIComponent(x.name);
+    d.innerHTML = '<div><h3>' + esc(x.name) + ' <span class="badge type">' + esc(x.cat) + '</span>' +
+      tierBadge(x.tier) +
+      (x.relic ? ' <span class="badge type">' + esc(x.relic) + '</span>' : '') + '</h3>' +
+      '<p class="muted small">' + esc(x.short || '') + '</p></div>';
+    return d;
+  }
+  function para(t) {
+    return (t || '').split('\n\n').map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
+  }
+  function showDetail(name) {
+    var box = document.getElementById('l-detail');
+    var x = all.find(function (y) { return y.name === name; });
+    if (!x) { box.innerHTML = ''; return; }
+    var stats = [];
+    if (x.kind) stats.push('<span class="stat">' + esc(x.kind) + '</span>');
+    if (x.bestElement) stats.push('<span class="stat">Best progenitor: <b>' + esc(x.bestElement) + '</b></span>');
+    if (x.relic) stats.push('<span class="stat">Source: <b>' + esc(x.relic) + '</b></span>');
+    var frames = x.frames ? '<div class="farm-box"><h4>🧬 Progenitor Warframes</h4><p>' + esc(x.frames) + '</p></div>' : '';
+    box.innerHTML = '<div class="detail-box"><h2>' + esc(x.name) + '</h2>' +
+      '<div style="margin-bottom:10px"><span class="badge type">' + esc(x.cat) + '</span> ' + tierBadge(x.tier) + '</div>' +
+      (stats.length ? '<div class="stat-row">' + stats.join('') + '</div>' : '') +
+      para(x.desc) + frames +
+      (x.farm ? '<div class="farm-box"><h4>📍 How to get it</h4><p>' + esc(x.farm) + '</p></div>' : '') + '</div>';
+    box.scrollIntoView();
+  }
+  function filtered() {
+    var q = document.getElementById('l-q').value.toLowerCase();
+    return all.filter(function (x) {
+      if (activeCat !== 'All' && x.cat !== activeCat) return false;
+      if (!q) return true;
+      return (x.name + ' ' + (x.short || '') + ' ' + (x.kind || '') + ' ' + (x.frames || '') + ' ' + (x.bestElement || '')).toLowerCase().indexOf(q) !== -1;
+    });
+  }
+  function renderCats() {
+    document.getElementById('l-cats').innerHTML = CATS.map(function (c) {
+      return '<button class="chip' + (c === activeCat ? ' active' : '') + '" data-cat="' + esc(c) + '">' + esc(c) + '</button>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('#l-cats .chip'), function (b) {
+      b.addEventListener('click', function () {
+        activeCat = b.getAttribute('data-cat');
+        renderCats();
+        ctl.reset(filtered());
+      });
+    });
+  }
+  window.TV.getJSON('data/site/liches.json').then(function (d) {
+    all = d;
+    document.getElementById('l-count').textContent = d.length + ' entries — systems, Requiem mods, progenitors, and every Kuva & Tenet weapon worth chasing';
+    renderCats();
+    var list = document.getElementById('l-list');
+    ctl = window.TV.infiniteScroll(list, filtered(), card, 40);
+    document.getElementById('l-q').addEventListener('input', function () { ctl.reset(filtered()); });
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Kuva weapon builds', sub: 'Zarr, Bramma, Nukor setups', url: 'builds.html' },
+      { label: 'Requiem relic farms', sub: 'Where the mods come from', url: 'farming.html' },
+      { label: 'Quest guide', sub: 'Unlock the system first', url: 'quests.html' }
+    ]);
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('l-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>

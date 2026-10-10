@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syndicates — Tenno Vault</title>
+<meta name="description" content="Every Warframe syndicate: how to earn standing fast, allies and enemies, medallions, and the best rewards from each.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="syndicates" data-crumb="Home,Syndicates">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>Syndicates</h1>
+<p class="muted small" id="s-count"></p>
+<p class="muted">Standing is the real endgame currency. Wear the sigil, run the dailies, grab every medallion — medallion turn-ins <b>ignore the daily standing cap</b>, which is how veterans max a syndicate in ~2 weeks.</p>
+<div class="field"><input id="s-q" type="search" placeholder="Filter syndicates…"></div>
+<div class="field" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+  <button class="btn small" id="f-all">All</button>
+  <button class="btn small" id="f-main">⚔️ Main 6</button>
+  <button class="btn small" id="f-open">🌍 Open World</button>
+</div>
+<div id="s-detail"></div>
+<div id="s-list" class="item-list"></div>
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai.js?v=20261009"></script>
+<script>
+(function () {
+  var esc = window.TV.esc, all = [], ctl = null, activeFilter = 'all';
+  function typeBadge(t) {
+    var label = t === 'Main Syndicate' ? '⚔️ MAIN' : '🌍 ' + t.split(' — ')[0].toUpperCase();
+    return ' <span class="badge type">' + esc(label) + '</span>';
+  }
+  function card(s) {
+    var a = document.createElement('a');
+    a.className = 'list-item'; a.href = '#' + encodeURIComponent(s.name);
+    var rewards = (s.rewards || []).slice(0, 3).map(function (r) { return esc(r.name); }).join(', ');
+    a.innerHTML = '<div><h3>' + esc(s.name) + typeBadge(s.type) + '</h3>' +
+      '<p class="muted small">' + esc(s.location) + '</p>' +
+      '<p class="muted small">🏆 ' + rewards + '</p></div>';
+    return a;
+  }
+  function relList(title, arr) {
+    if (!arr || !arr.length) return '';
+    return '<p><b>' + title + ':</b> ' + arr.map(esc).join(', ') + '</p>';
+  }
+  function showDetail(name) {
+    var box = document.getElementById('s-detail');
+    var s = all.find(function (x) { return x.name === name; });
+    if (!s) { box.innerHTML = ''; return; }
+    box.innerHTML = '<div class="detail-box"><div class="detail-head"><div><h2>' + esc(s.name) + '</h2>' +
+      '<span class="badge type">' + esc(s.type) + '</span> ' +
+      '<span class="badge type">📍 ' + esc(s.location) + '</span>' +
+      (s.rep ? ' <span class="badge type">🗣️ ' + esc(s.rep) + '</span>' : '') + '</div></div>' +
+      '<p>' + esc(s.description) + '</p>' +
+      relList('🤝 Allies', s.allies) + relList('⚔️ Enemies', s.enemies) + relList('😐 Neutral', s.neutral) +
+      '<div class="farm-box"><h4>⚡ Fastest standing farm</h4><p>' + esc(s.fastest) + '</p></div>' +
+      '<div class="farm-box"><h4>📍 How to earn standing</h4><p>' +
+      (s.standing_how || []).map(esc).join('<br>') + '</p></div>' +
+      (s.cap_note ? '<p class="muted small">🧢 ' + esc(s.cap_note) + '</p>' : '') +
+      '<h4 style="margin-top:12px;">🏆 Top rewards — and why</h4>' +
+      (s.rewards || []).map(function (r) {
+        return '<p><b>' + esc(r.name) + '</b> — ' + esc(r.why) + '</p>';
+      }).join('') + '</div>';
+    box.scrollIntoView();
+    document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+      { label: 'Incarnon Guide', sub: 'Which weapons are worth the Circuit grind', url: 'incarnon.html' },
+      { label: 'Farming hub', sub: 'Best farms for everything', url: 'farming.html' },
+      { label: 'Best Mods', sub: 'Mods worth your Endo', url: 'mods.html' }
+    ]);
+  }
+  window.TV.getJSON('data/site/syndicates.json').then(function (d) {
+    all = d;
+    document.getElementById('s-count').textContent = d.length + ' Syndicates';
+    var list = document.getElementById('s-list');
+    ctl = window.TV.infiniteScroll(list, all, card, 40);
+    function applyFilters() {
+      var q = document.getElementById('s-q').value.toLowerCase();
+      ctl.reset(all.filter(function (s) {
+        if (activeFilter === 'main' && s.type !== 'Main Syndicate') return false;
+        if (activeFilter === 'open' && s.type === 'Main Syndicate') return false;
+        return s.name.toLowerCase().indexOf(q) !== -1 ||
+          (s.description || '').toLowerCase().indexOf(q) !== -1 ||
+          (s.rewards || []).some(function (r) { return r.name.toLowerCase().indexOf(q) !== -1; });
+      }));
+    }
+    document.getElementById('s-q').addEventListener('input', applyFilters);
+    [['f-all','all'],['f-main','main'],['f-open','open']].forEach(function (pair) {
+      document.getElementById(pair[0]).addEventListener('click', function () {
+        activeFilter = pair[1];
+        applyFilters();
+      });
+    });
+    if (location.hash.length > 1) showDetail(decodeURIComponent(location.hash.slice(1)));
+    window.addEventListener('hashchange', function () {
+      showDetail(decodeURIComponent(location.hash.slice(1)));
+    });
+  }).catch(function () {
+    document.getElementById('s-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
+  });
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+</body>
+</html>
