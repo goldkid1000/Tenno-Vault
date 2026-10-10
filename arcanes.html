@@ -67,7 +67,7 @@
       '<p><b>Max rank effect:</b><br>' + esc(a.effect || 'No description available.') + '</p>' +
       '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + ((a.drops && a.drops.length)
         ? a.drops.map(function (d) { return esc(d.location) + (d.chance ? ' <span class="muted">(' + d.chance + '%)</span>' : ''); }).join('<br>')
-        : 'Check the in-game Codex for the latest source.') + '</p></div></div>';
+        : 'Check the in-game Codex for the latest source.') + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(a.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Builds using arcanes', sub: 'Steel Path & one-shot setups', url: 'builds.html' },

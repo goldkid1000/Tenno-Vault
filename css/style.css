@@ -381,7 +381,7 @@ a.card:hover, a.video-card:hover{
   background:linear-gradient(90deg,transparent,rgba(201,162,39,.65) 25%,rgba(0,210,255,.65) 75%,transparent);
 }
 .logo .lotus{text-shadow:0 0 12px rgba(0,210,255,.85)}
-.logo{animation:tv-flicker 9s linear infinite}
+.logo{animation:tv-ai-pulse 6s ease-in-out infinite}
 
 /* ---------- nav: sliding energy edge ---------- */
 #sidebar nav a{position:relative;overflow:hidden;transition:background .15s ease,color .15s ease}
@@ -396,11 +396,11 @@ a.card:hover, a.video-card:hover{
 #tabbar a{transition:color .15s ease, text-shadow .2s ease}
 #tabbar a.active{text-shadow:0 0 12px rgba(0,210,255,.8)}
 
-/* ---------- page titles: animated void sheen ---------- */
+/* ---------- page titles: Warframe void-gradient (static for comfortable reading) ---------- */
 main > h1{
-  background:linear-gradient(100deg,#f2fbff 15%,#00d2ff 38%,#f2fbff 55%,#9fdcff 75%,#f2fbff 95%);
-  background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:tv-sheen 8s linear infinite;letter-spacing:.5px;
+  background:linear-gradient(100deg,#f2fbff 20%,#7fd8f5 50%,#f2fbff 80%);
+  background-size:100% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:.5px;
 }
 h2{letter-spacing:.4px}
 
