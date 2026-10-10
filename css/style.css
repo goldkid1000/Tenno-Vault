@@ -797,3 +797,15 @@ main{animation:tv-page-in .32s var(--ease) both}
   .brand-hero { font-size: 1.7rem; letter-spacing: 2px; }
   .brand-hero .logo-mark { font-size: 1.4rem; }
 }
+
+/* ---------- Back button ---------- */
+.back-btn {
+  background: rgba(0,229,255,.08); border: 1px solid rgba(0,229,255,.25);
+  color: #00e5ff; border-radius: 10px; min-width: 44px; min-height: 44px;
+  font-size: 20px; cursor: pointer; display: inline-flex;
+  align-items: center; justify-content: center; padding: 0 10px;
+  transition: background .2s ease, transform .15s ease;
+  flex-shrink: 0;
+}
+.back-btn:hover { background: rgba(0,229,255,.15); }
+.back-btn:active { transform: scale(.93); }
