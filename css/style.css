@@ -192,7 +192,8 @@ code{background:var(--bg2);padding:2px 6px;border-radius:4px;font-size:.88em}
     background:rgba(13,18,25,.98);border-top:1px solid var(--border);
     padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
   #tabbar a{flex:1;text-align:center;color:var(--muted);font-size:.68rem;font-weight:600;
-    padding:6px 2px;border-radius:8px}
+    padding:8px 2px;border-radius:8px;min-height:48px;display:flex;flex-direction:column;
+    align-items:center;justify-content:center}
   #tabbar a .ti{display:block;font-size:1.3rem}
   #tabbar a.active{color:var(--accent)}
   .header-inner{flex-wrap:wrap}
@@ -809,3 +810,107 @@ main{animation:tv-page-in .32s var(--ease) both}
 }
 .back-btn:hover { background: rgba(0,229,255,.15); }
 .back-btn:active { transform: scale(.93); }
+
+/* ============================================================
+   POLISH PASS — smooth animations, skeletons, micro-interactions
+   All transform/opacity only. Respects prefers-reduced-motion.
+   ============================================================ */
+
+/* ---------- skeleton loading shimmer ---------- */
+.tv-skeleton {
+  border-radius: var(--r-md, 10px);
+  background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.09) 50%, rgba(255,255,255,.04) 75%);
+  background-size: 200% 100%;
+  animation: tv-skeleton-shimmer 1.4s ease-in-out infinite;
+  min-height: 20px;
+}
+@keyframes tv-skeleton-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+.tv-skeleton-card {
+  border: 1px solid var(--border, rgba(255,255,255,.08));
+  border-radius: var(--r-lg, 14px);
+  padding: 16px; display: flex; flex-direction: column; gap: 10px;
+  background: var(--card, rgba(19,26,36,.72));
+}
+.tv-skeleton-card .tv-skeleton:last-child { min-height: 14px; width: 70%; }
+
+/* ---------- button press feedback ---------- */
+.btn:active { transform: scale(.96); }
+.chip:active { transform: scale(.94); }
+#tabbar a:active { transform: scale(.92); }
+a.card:active { transform: scale(.98); }
+
+/* ---------- search overlay: fade + scale in ---------- */
+#search-overlay { opacity: 0; transition: opacity .25s ease; }
+#search-overlay.open { opacity: 1; }
+#search-overlay .search-panel {
+  transform: scale(.96) translateY(-8px); opacity: 0;
+  transition: transform .28s cubic-bezier(.2,.7,.3,1), opacity .25s ease;
+}
+#search-overlay.open .search-panel { transform: scale(1) translateY(0); opacity: 1; }
+.search-hit { animation: tv-rise .3s ease both; }
+.search-hit:nth-child(2) { animation-delay: .03s; }
+.search-hit:nth-child(3) { animation-delay: .06s; }
+.search-hit:nth-child(4) { animation-delay: .09s; }
+.search-hit:nth-child(5) { animation-delay: .12s; }
+.search-hit:nth-child(n+6) { animation-delay: .15s; }
+
+/* ---------- AI chat panel: slide + fade ---------- */
+#vault-ai-panel {
+  transform: translateY(16px) scale(.98); opacity: 0;
+  transition: transform .3s cubic-bezier(.2,.7,.3,1), opacity .25s ease;
+  pointer-events: none;
+}
+#vault-ai-panel.open { transform: translateY(0) scale(1); opacity: 1; pointer-events: auto; }
+.vai-msg { animation: tv-rise .3s ease both; }
+
+/* ---------- install modal ---------- */
+.tv-modal { opacity: 0; transition: opacity .25s ease; }
+.tv-modal.open { opacity: 1; }
+.tv-modal-card {
+  transform: scale(.94) translateY(10px);
+  transition: transform .3s cubic-bezier(.2,.7,.3,1);
+}
+.tv-modal.open .tv-modal-card { transform: scale(1) translateY(0); }
+
+/* ---------- dynamic list entrance (JS-rendered cards) ---------- */
+.tv-enter { animation: tv-rise .45s cubic-bezier(.2,.7,.3,1) both; }
+
+/* ---------- detail view: already has tv-rise; add scroll margin ---------- */
+.detail-box { scroll-margin-top: 80px; }
+
+/* ---------- filter chips: smooth active transition ---------- */
+.chip { transition: border-color .2s ease, box-shadow .2s ease, color .2s ease,
+  background .2s ease, transform .15s ease; }
+
+/* ---------- empty states: consistent, friendly ---------- */
+.empty-state {
+  text-align: center; padding: 40px 20px; color: var(--text-2, #8a9bb5);
+  border: 1px dashed var(--border, rgba(255,255,255,.12));
+  border-radius: var(--r-lg, 14px); margin: 16px 0;
+}
+.empty-state .empty-icon { font-size: 2.4rem; display: block; margin-bottom: 10px; opacity: .7; }
+.empty-state p { margin: 4px 0; font-size: .92rem; }
+
+/* ---------- loading indicator text ---------- */
+.loading { animation: tv-fade .3s ease both; }
+
+/* ---------- header: prevent crowding on tiny screens ---------- */
+@media (max-width: 380px) {
+  .back-btn { min-width: 40px; min-height: 40px; font-size: 18px; }
+  .logo-text { font-size: 16px; letter-spacing: 1px; }
+  .header-inner { gap: 8px; }
+}
+
+/* ---------- reduced motion: kill the new animations too ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .tv-skeleton { animation: none; background: rgba(255,255,255,.05); }
+  #search-overlay, #search-overlay .search-panel,
+  #vault-ai-panel, .tv-modal, .tv-modal-card { transition: none; }
+  #search-overlay.open .search-panel,
+  #vault-ai-panel.open, .tv-modal.open .tv-modal-card { transform: none; }
+  .btn:active, .chip:active, #tabbar a:active, a.card:active { transform: none; }
+  .tv-enter, .search-hit, .vai-msg { animation: none; }
+}
