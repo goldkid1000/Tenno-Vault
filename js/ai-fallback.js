@@ -823,10 +823,19 @@ function oneShotBuildAnswer(t) {
 
     m = t.match(/^(?:where (?:do|can) i (?:farm|get|find)|where to (?:farm|get|find)|how do i (?:get|farm|obtain|find)|how to (?:get|farm|obtain|find)|farm|get|find) (.+)$/);
     if (m) {
+      var q = m[1].toLowerCase();
+      /* general "best farm" questions — conversational answer, not a lookup */
+      if (/best (?:place|spot|mission|way)|most (?:efficient|resources)|one mission/.test(q)) {
+        return 'Good question — depends what you need most, but here are the best all-around spots:<br><br>' +
+          '<b>Gabii, Ceres</b> (Dark Sector Survival) — the classic. Orokin Cells drop here plus tons of common resources. Bring a Nekros or Khora for extra loot.<br><br>' +
+          '<b>Helene, Saturn</b> — another Orokin Cell spot, great for leveling weapons while you farm.<br><br>' +
+          '<b>Void Cascade (Zariman)</b> — you\'re already going there. Thrax drop arcanes, plus Zariman resources like Voidplumes.<br><br>' +
+          'If you tell me <i>which</i> resource you\'re after, I can point you to the single best node for it.';
+      }
       var f = findFarm(m[1]);
       if (f) return farmAnswer(f);
       return 'Hmm, I couldn\'t find a farm spot for "' + esc(m[1]) + '" in the Vault. ' +
-        'Try the full item name — or check the <a href="farming.html">Farming Hub</a> for resource spots.';
+        'Try the full item name — or check the <a href="resources.html">Resource Finder</a> to search everything.';
     }
 
     m = t.match(/^is (.+?) good(?: for (.+?))?$/) || t.match(/^how (?:is|good is) (.+?)(?: for (.+?))?$/);
