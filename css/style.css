@@ -914,3 +914,26 @@ a.card:active { transform: scale(.98); }
   .btn:active, .chip:active, #tabbar a:active, a.card:active { transform: none; }
   .tv-enter, .search-hit, .vai-msg { animation: none; }
 }
+
+/* ---------- Walking Warframe loader ---------- */
+.tv-loader { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 20px; }
+.tv-walker { position: relative; width: 60px; height: 90px; animation: tv-walk-bob .6s ease-in-out infinite; }
+.tv-walker .head { position: absolute; top: 0; left: 18px; width: 24px; height: 22px; background: linear-gradient(135deg,#00e5ff,#0088aa); border-radius: 12px 12px 8px 8px; }
+.tv-walker .head::after { content:''; position: absolute; top: 8px; left: 5px; width: 14px; height: 4px; background: #003844; border-radius: 2px; }
+.tv-walker .crest { position: absolute; top: -6px; left: 26px; width: 8px; height: 12px; background: #ffd54a; border-radius: 4px 4px 0 0; }
+.tv-walker .torso { position: absolute; top: 24px; left: 20px; width: 20px; height: 28px; background: linear-gradient(180deg,#2a2a35,#1a1a22); border-radius: 6px; border: 1px solid rgba(0,229,255,.3); }
+.tv-walker .arm-l, .tv-walker .arm-r { position: absolute; top: 26px; width: 8px; height: 24px; background: #2a2a35; border-radius: 4px; transform-origin: top center; }
+.tv-walker .arm-l { left: 10px; animation: tv-swing .6s ease-in-out infinite; }
+.tv-walker .arm-r { right: 10px; animation: tv-swing .6s ease-in-out infinite reverse; }
+.tv-walker .leg-l, .tv-walker .leg-r { position: absolute; top: 52px; width: 9px; height: 30px; background: #1a1a22; border-radius: 4px; transform-origin: top center; border: 1px solid rgba(0,229,255,.2); }
+.tv-walker .leg-l { left: 20px; animation: tv-stride .6s ease-in-out infinite; }
+.tv-walker .leg-r { left: 31px; animation: tv-stride .6s ease-in-out infinite reverse; }
+.tv-walker .ground { position: absolute; bottom: -4px; left: 5px; width: 50px; height: 4px; background: rgba(0,229,255,.15); border-radius: 2px; animation: tv-ground .6s ease-in-out infinite; }
+@keyframes tv-stride { 0%,100% { transform: rotate(25deg); } 50% { transform: rotate(-25deg); } }
+@keyframes tv-swing { 0%,100% { transform: rotate(-20deg); } 50% { transform: rotate(20deg); } }
+@keyframes tv-walk-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes tv-ground { 0%,100% { transform: scaleX(1); opacity: .5; } 50% { transform: scaleX(.7); opacity: .8; } }
+.tv-loader p { color: #888; font-size: 14px; margin: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .tv-walker, .tv-walker .arm-l, .tv-walker .arm-r, .tv-walker .leg-l, .tv-walker .leg-r, .tv-walker .ground { animation: none; }
+}
