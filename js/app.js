@@ -26,6 +26,7 @@
     { id: 'relics', label: 'Relics', sub: 'Crack these open for prime parts', icon: '📦', file: 'relics.html', group: 'World' },
     { id: 'farming', label: 'Farming', sub: 'Where to farm anything in the game', icon: '🌾', file: 'farming.html', group: 'World' },
     { id: 'resources', label: 'Resource Finder', sub: 'What mission, what planet — find any material', icon: '⛏️', file: 'resources.html', group: 'World' },
+    { id: 'starchart', label: 'Star Chart', sub: 'Interactive map — fly to where anything farms', icon: '🗺️', file: 'starchart.html', group: 'World' },
     { id: 'live', label: 'Live', sub: "What's happening in-game right now", icon: '📡', file: 'live.html', group: 'World' },
     { id: 'quests', label: 'Quests', sub: 'Story missions — what order & what you get', icon: '📜', file: 'quests.html', group: 'World' },
     { id: 'liches', label: 'Liches', sub: 'Hunt your nemesis for powerful weapons', icon: '👹', file: 'liches.html', group: 'World' },
