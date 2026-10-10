@@ -267,3 +267,238 @@ code{background:var(--bg2);padding:2px 6px;border-radius:4px;font-size:.88em}
   #vault-ai-btn{right:12px;bottom:86px;padding:11px 16px}
   #vault-ai-panel{right:12px;left:12px;width:auto;bottom:152px;height:min(520px,64vh)}
 }
+
+/* ============================================================
+   WARFRAME VISUAL OVERHAUL — Orokin styling + motion
+   Pure CSS. Respects prefers-reduced-motion. iPhone-safe
+   (transform/opacity animations only, no heavy blur).
+   ============================================================ */
+:root{
+  --void:#05080d;
+  --void-glow:rgba(0,210,255,.07);
+  --gold-dim:rgba(201,162,39,.55);
+  --rar-common:#c98f4e; --rar-uncommon:#c9d4e0; --rar-rare:#ffd54a; --rar-legend:#eaf6ff;
+  --fac-grineer:#b0563a; --fac-corpus:#3f8cff; --fac-infested:#58c96b;
+  --fac-sentient:#bcd9f5; --fac-orokin:#c9a227;
+}
+
+/* ---------- keyframes ---------- */
+@keyframes tv-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes tv-drift{from{transform:translate3d(-2.5%,-1.5%,0)}to{transform:translate3d(2.5%,2%,0)}}
+@keyframes tv-spin{to{transform:rotate(360deg)}}
+@keyframes tv-sheen{to{background-position:200% center}}
+@keyframes tv-ai-pulse{0%,100%{box-shadow:0 4px 18px rgba(0,210,255,.35)}50%{box-shadow:0 4px 30px rgba(0,210,255,.65)}}
+@keyframes tv-flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.6}94%{opacity:1}97%{opacity:.75}98%{opacity:1}}
+
+/* ---------- animated void background ---------- */
+body::before{
+  content:"";position:fixed;inset:-12%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(460px 460px at 18% 16%, rgba(0,210,255,.075), transparent 70%),
+    radial-gradient(560px 560px at 82% 78%, rgba(0,140,255,.06), transparent 70%),
+    radial-gradient(340px 340px at 62% 8%, rgba(201,162,39,.05), transparent 70%),
+    radial-gradient(500px 500px at 8% 88%, rgba(120,60,220,.05), transparent 70%);
+  animation:tv-drift 28s ease-in-out infinite alternate;
+}
+/* faint scanlines over the void */
+body::after{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.55;
+  background:repeating-linear-gradient(0deg, rgba(255,255,255,.016) 0 1px, transparent 1px 4px);
+}
+main{position:relative;z-index:2}
+footer{position:relative;z-index:2}
+
+/* ---------- page-load stagger ---------- */
+.card-grid .card, .video-grid .video-card{animation:tv-rise .55s cubic-bezier(.2,.7,.3,1) both}
+.card-grid .card:nth-child(2),.video-grid .video-card:nth-child(2){animation-delay:.05s}
+.card-grid .card:nth-child(3),.video-grid .video-card:nth-child(3){animation-delay:.1s}
+.card-grid .card:nth-child(4),.video-grid .video-card:nth-child(4){animation-delay:.15s}
+.card-grid .card:nth-child(5),.video-grid .video-card:nth-child(5){animation-delay:.2s}
+.card-grid .card:nth-child(6),.video-grid .video-card:nth-child(6){animation-delay:.25s}
+.card-grid .card:nth-child(7),.video-grid .video-card:nth-child(7){animation-delay:.3s}
+.card-grid .card:nth-child(8),.video-grid .video-card:nth-child(8){animation-delay:.35s}
+.card-grid .card:nth-child(9),.video-grid .video-card:nth-child(9){animation-delay:.4s}
+.card-grid .card:nth-child(10),.video-grid .video-card:nth-child(10){animation-delay:.45s}
+.card-grid .card:nth-child(11),.video-grid .video-card:nth-child(11){animation-delay:.5s}
+.card-grid .card:nth-child(12),.video-grid .video-card:nth-child(12){animation-delay:.55s}
+.item-list .list-item{animation:tv-rise .45s ease both}
+.item-list .list-item:nth-child(2){animation-delay:.05s}
+.item-list .list-item:nth-child(3){animation-delay:.1s}
+.item-list .list-item:nth-child(4){animation-delay:.15s}
+.item-list .list-item:nth-child(5){animation-delay:.2s}
+.item-list .list-item:nth-child(6){animation-delay:.25s}
+.item-list .list-item:nth-child(7){animation-delay:.3s}
+.item-list .list-item:nth-child(8){animation-delay:.35s}
+
+/* ---------- angular Orokin panel cuts ---------- */
+.card, .list-item, .video-card{
+  clip-path:polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  border-radius:0;
+  transition:transform .18s ease, border-color .18s ease, filter .18s ease;
+}
+a.card:hover, a.video-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
+  filter:drop-shadow(0 8px 18px rgba(0,210,255,.22));
+  text-decoration:none;
+}
+.list-item:hover{
+  border-color:var(--accent);
+  filter:drop-shadow(0 4px 12px rgba(0,210,255,.15));
+}
+/* detail boxes reveal */
+.detail-box{animation:tv-rise .45s cubic-bezier(.2,.7,.3,1) both}
+.detail-box .mod-row{animation:tv-rise .4s ease both}
+.detail-box .mod-row:nth-of-type(2){animation-delay:.04s}
+.detail-box .mod-row:nth-of-type(3){animation-delay:.08s}
+.detail-box .mod-row:nth-of-type(4){animation-delay:.12s}
+.detail-box .mod-row:nth-of-type(5){animation-delay:.16s}
+.detail-box .mod-row:nth-of-type(6){animation-delay:.2s}
+.detail-box .mod-row:nth-of-type(7){animation-delay:.24s}
+.detail-box .mod-row:nth-of-type(8){animation-delay:.28s}
+.detail-box .mod-row:nth-of-type(9){animation-delay:.32s}
+.detail-box .mod-row:nth-of-type(10){animation-delay:.36s}
+
+/* ---------- buttons: energy pulse ---------- */
+.btn{transition:border-color .15s ease, filter .15s ease, box-shadow .2s ease, transform .15s ease}
+.btn:hover{border-color:var(--accent);box-shadow:0 0 14px rgba(0,210,255,.35);text-decoration:none}
+.btn:active{transform:scale(.97)}
+.btn.primary{position:relative;overflow:hidden;box-shadow:0 2px 14px rgba(0,210,255,.25)}
+.btn.primary::after{
+  content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-20deg);transition:left .55s ease;pointer-events:none;
+}
+.btn.primary:hover{box-shadow:0 0 22px rgba(0,210,255,.55);filter:brightness(1.08)}
+.btn.primary:hover::after{left:130%}
+.chip{transition:border-color .15s ease, box-shadow .2s ease, color .15s ease, transform .15s ease}
+.chip:hover{border-color:var(--accent);color:var(--text);box-shadow:0 0 12px rgba(0,210,255,.28);transform:translateY(-1px)}
+.chip.active{box-shadow:0 0 14px rgba(0,210,255,.4)}
+
+/* ---------- header: gold energy trim + glowing logo ---------- */
+#site-header::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(201,162,39,.65) 25%,rgba(0,210,255,.65) 75%,transparent);
+}
+.logo .lotus{text-shadow:0 0 12px rgba(0,210,255,.85)}
+.logo{animation:tv-flicker 9s linear infinite}
+
+/* ---------- nav: sliding energy edge ---------- */
+#sidebar nav a{position:relative;overflow:hidden;transition:background .15s ease,color .15s ease}
+#sidebar nav a::before{
+  content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:2px;
+  background:var(--accent);box-shadow:0 0 10px rgba(0,210,255,.8);
+  transform:scaleY(0);transform-origin:center;transition:transform .18s ease;
+}
+#sidebar nav a:hover::before,#sidebar nav a.active::before{transform:scaleY(1)}
+#sidebar nav a.active{border-left-color:transparent}
+#sidebar nav a.active{color:var(--accent);text-shadow:0 0 12px rgba(0,210,255,.5)}
+#tabbar a{transition:color .15s ease, text-shadow .2s ease}
+#tabbar a.active{text-shadow:0 0 12px rgba(0,210,255,.8)}
+
+/* ---------- page titles: animated void sheen ---------- */
+main > h1{
+  background:linear-gradient(100deg,#f2fbff 15%,#00d2ff 38%,#f2fbff 55%,#9fdcff 75%,#f2fbff 95%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:tv-sheen 8s linear infinite;letter-spacing:.5px;
+}
+h2{letter-spacing:.4px}
+
+/* ---------- Orokin divider ---------- */
+.orokin-divider{display:flex;align-items:center;gap:14px;margin:30px 0}
+.orokin-divider::before,.orokin-divider::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,162,39,.7),transparent);
+}
+.orokin-divider > span{
+  width:9px;height:9px;flex-shrink:0;background:var(--gold);transform:rotate(45deg);
+  box-shadow:0 0 10px rgba(201,162,39,.85);
+}
+/* related-links section gets the Orokin treatment automatically */
+.related{border-top:none;position:relative;padding-top:24px}
+.related::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,162,39,.55),transparent);
+}
+
+/* ---------- search: targeting glow ---------- */
+#global-search{transition:border-color .15s ease, box-shadow .2s ease}
+#global-search:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(0,210,255,.25), 0 0 22px rgba(0,210,255,.35);
+}
+#search-input:focus{box-shadow:inset 0 0 26px rgba(0,210,255,.09)}
+.search-hit{transition:background .12s ease, transform .12s ease}
+.search-hit:hover{transform:translateX(3px)}
+
+/* ---------- rarity colors (true Warframe rarity) ---------- */
+.rarity-common{color:var(--rar-common)}
+.rarity-uncommon{color:var(--rar-uncommon)}
+.rarity-rare{color:var(--rar-rare);font-weight:700}
+.rarity-legendary{color:var(--rar-legend);font-weight:700;text-shadow:0 0 10px rgba(0,210,255,.65)}
+.badge.rarity-common{background:#241a10;color:var(--rar-common);border:1px solid var(--rar-common)}
+.badge.rarity-uncommon{background:#1a2027;color:var(--rar-uncommon);border:1px solid var(--rar-uncommon)}
+.badge.rarity-rare{background:#241d10;color:var(--rar-rare);border:1px solid var(--rar-rare)}
+.badge.rarity-legendary{background:#0f1c26;color:var(--rar-legend);border:1px solid var(--rar-legend);
+  box-shadow:0 0 10px rgba(0,210,255,.3)}
+
+/* ---------- faction accents ---------- */
+.fac-grineer{box-shadow:inset 3px 0 0 var(--fac-grineer)}
+.fac-corpus{box-shadow:inset 3px 0 0 var(--fac-corpus)}
+.fac-infested{box-shadow:inset 3px 0 0 var(--fac-infested)}
+.fac-sentient{box-shadow:inset 3px 0 0 var(--fac-sentient)}
+.fac-orokin{box-shadow:inset 3px 0 0 var(--fac-orokin)}
+
+/* ---------- holographic panel ---------- */
+.holo{
+  position:relative;overflow:hidden;
+  border:1px solid rgba(0,210,255,.28);
+  background:linear-gradient(160deg,rgba(0,210,255,.07),rgba(0,210,255,.015) 45%,rgba(201,162,39,.05));
+}
+.holo::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.022) 0 1px,transparent 1px 3px);
+}
+
+/* ---------- Warframe diamond loader ---------- */
+.tv-loader{width:46px;height:46px;margin:28px auto;animation:tv-spin 1.15s linear infinite}
+.tv-loader::before{
+  content:"";display:block;width:100%;height:100%;transform:rotate(45deg);
+  border:2px solid rgba(0,210,255,.18);border-top-color:var(--accent);
+  box-shadow:0 0 16px rgba(0,210,255,.3);
+}
+.tv-loader.gold::before{border-color:rgba(201,162,39,.2);border-top-color:var(--gold);
+  box-shadow:0 0 16px rgba(201,162,39,.3)}
+
+/* ---------- tables, forms, misc polish ---------- */
+table.data tbody tr{transition:background .12s ease}
+table.data tbody tr:hover{background:rgba(0,210,255,.05)}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--accent);box-shadow:0 0 12px rgba(0,210,255,.25);
+}
+.badge.recommended{box-shadow:0 0 10px rgba(201,162,39,.35)}
+#vault-ai-btn{animation:tv-ai-pulse 3.2s ease-in-out infinite}
+#vault-ai-btn:hover{animation-play-state:paused;filter:brightness(1.12)}
+.vai-chip{transition:border-color .15s ease, box-shadow .2s ease}
+.vai-chip:hover{box-shadow:0 0 10px rgba(0,210,255,.3)}
+.notice{position:relative;overflow:hidden}
+.notice::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--accent),transparent);
+}
+.notice.warn::before{background:linear-gradient(180deg,var(--gold),transparent)}
+.notice.danger::before{background:linear-gradient(180deg,var(--red),transparent)}
+
+/* ---------- reduced motion: everything still, everything readable ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  body::before{animation:none}
+  main > h1{animation:none;background:none;color:#fff;-webkit-text-fill-color:#fff}
+  .logo{animation:none}
+  #vault-ai-btn{animation:none}
+}

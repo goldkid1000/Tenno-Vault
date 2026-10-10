@@ -191,6 +191,9 @@
       box.innerHTML = '<div class="loading">Type at least 2 letters…</div>';
       return;
     }
+    if (!searchIndex) {
+      box.innerHTML = '<div class="tv-loader" role="status" aria-label="Loading search"></div>';
+    }
     loadIndex().then(function (idx) {
       q = q.toLowerCase();
       var hits = idx.filter(function (e) {
