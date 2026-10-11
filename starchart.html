@@ -40,6 +40,24 @@
 .sc-legend .badge { cursor: pointer; }
 #sc-camera { transition: transform 1.1s cubic-bezier(.22,.8,.3,1); transform-origin: 0 0; }
 .sc-controls { display: flex; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
+/* ---- item farm search ---- */
+.sc-item-search { position: relative; margin: 10px 0; }
+#sc-item-input {
+  width: 100%; padding: 12px 16px; font-size: 16px; border-radius: 12px;
+  background: rgba(10,18,32,.8); border: 1px solid rgba(0,229,255,.3); color: #fff;
+}
+#sc-item-input:focus { outline: none; border-color: #00e5ff; box-shadow: 0 0 0 2px rgba(0,229,255,.2); }
+#sc-item-input::placeholder { color: #5a6a85; }
+.sc-item-results {
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 20; max-height: 280px; overflow-y: auto;
+  background: rgba(13,27,42,.98); border: 1px solid rgba(0,229,255,.35); border-radius: 12px; margin-top: 4px;
+}
+.sc-item-result { padding: 10px 14px; cursor: pointer; border-bottom: 1px solid rgba(0,229,255,.08); }
+.sc-item-result:last-child { border-bottom: none; }
+.sc-item-result:hover, .sc-item-result:active { background: rgba(0,229,255,.1); }
+.sc-item-result b { color: #fff; display: block; }
+.sc-item-result span { color: #8a9bb5; font-size: 13px; }
+.sc-item-result .sc-zones { color: #00e5ff; font-size: 12px; margin-top: 2px; display: block; }
 /* ---- detail overlay: bottom sheet on mobile, side panel on desktop ---- */
 #sc-overlay { position: absolute; inset: 0; z-index: 10; pointer-events: none; opacity: 0; transition: opacity .3s ease; }
 #sc-overlay.show { opacity: 1; pointer-events: auto; }
@@ -86,6 +104,10 @@
 <div class="sc-controls">
   <button class="btn small" id="sc-reset">⟲ Reset view</button>
   <span class="muted small" id="sc-hint">Tap a planet or zone for details</span>
+</div>
+<div class="sc-item-search">
+  <input type="search" id="sc-item-input" placeholder="🔍 Search a mod, warframe, weapon… where does it farm?" autocomplete="off" aria-label="Search for an item to find where it farms">
+  <div id="sc-item-results" class="sc-item-results" hidden></div>
 </div>
 <div class="sc-wrap">
   <svg class="sc-map" id="sc-svg" viewBox="0 0 1200 800" role="img" aria-label="Interactive Warframe star chart">
@@ -293,6 +315,69 @@
   }
   document.getElementById('sc-reset').addEventListener('click', resetView);
 
+  /* item farm search: type a mod/warframe/weapon, see where it drops */
+  function setupItemSearch() {
+    var input = document.getElementById('sc-item-input');
+    var results = document.getElementById('sc-item-results');
+    if (!input || !results || !itemPlanets) return;
+    var names = Object.keys(itemPlanets);
+    function zoneNames(zones) {
+      return zones.map(function (z) {
+        var b = bodyById(z);
+        return b ? b.name : z;
+      }).join(', ');
+    }
+    function doSearch() {
+      var q = input.value.trim().toLowerCase();
+      if (q.length < 2) { results.hidden = true; results.innerHTML = ''; return; }
+      var matches = names.filter(function (n) {
+        return n.toLowerCase().indexOf(q) !== -1;
+      }).slice(0, 12);
+      if (!matches.length) {
+        results.innerHTML = '<div class="sc-item-result"><span>No matches — try a different name.</span></div>';
+        results.hidden = false;
+        return;
+      }
+      results.innerHTML = matches.map(function (name) {
+        var e = itemPlanets[name];
+        return '<div class="sc-item-result" data-name="' + esc(name) + '">' +
+          '<b>' + esc(name) + '</b>' +
+          '<span>' + esc(e.note || 'Farm location') + '</span>' +
+          '<span class="sc-zones">📍 ' + esc(zoneNames(e.zones)) + '</span>' +
+          '</div>';
+      }).join('');
+      results.hidden = false;
+    }
+    var debounce;
+    input.addEventListener('input', function () {
+      clearTimeout(debounce);
+      debounce = setTimeout(doSearch, 200);
+    });
+    /* tap a result: highlight planets on the map and fly to them */
+    results.addEventListener('click', function (e) {
+      var row = e.target.closest('.sc-item-result');
+      if (!row || !row.dataset.name) return;
+      var name = row.dataset.name;
+      var entry = itemPlanets[name];
+      if (!entry) return;
+      results.hidden = true;
+      input.value = name;
+      document.querySelectorAll('.sc-body').forEach(function (g) { g.classList.remove('target'); });
+      entry.zones.forEach(function (z) {
+        var g = bodiesG.querySelector('[data-id="' + z + '"]');
+        if (g) g.classList.add('target');
+      });
+      document.getElementById('sc-hint').textContent = name + ' farms at: ' + entry.zones.map(function (z) {
+        var b = bodyById(z); return b ? b.name : z;
+      }).join(', ');
+      flyTo(entry.zones, true);
+    });
+    /* hide results when tapping elsewhere */
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.sc-item-search')) results.hidden = true;
+    });
+  }
+
   /* load data */
   Promise.all([
     window.TV.getJSON('data/site/starchart.json'),
@@ -310,6 +395,8 @@
       });
     });
     buildChart();
+    /* item farm search */
+    setupItemSearch();
     /* item deep-link: ?item=Ash+Prime */
     var q = params();
     if (q.item && itemPlanets[q.item]) {
