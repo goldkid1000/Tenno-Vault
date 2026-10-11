@@ -48,12 +48,14 @@
       /* soft ground shadow */
       '<ellipse cx="32" cy="71.5" rx="20" ry="3.4" fill="#000000" opacity="0.28"/>' +
       /* folded legs — sitting cross-legged */
+      '<g id="tm-legs">' +
       '<ellipse cx="20" cy="65" rx="11.5" ry="6.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1.2"/>' +
       '<ellipse cx="44" cy="65" rx="11.5" ry="6.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1.2"/>' +
       '<path d="M11 63 C16 60.5, 25 60.5, 30 63" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>' +
       '<path d="M34 63 C39 60.5, 48 60.5, 53 63" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>' +
       '<path d="M13 66.5 C19 65, 27 65, 31 67" stroke="url(#tmgd)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>' +
       '<path d="M33 67 C37 65, 45 65, 51 66.5" stroke="url(#tmgd)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>' +
+      '</g>' +
       /* feet */
       '<ellipse cx="10" cy="68.5" rx="5.2" ry="3.8" fill="#33333c" stroke="#1c1c22" stroke-width="0.8"/>' +
       '<ellipse cx="54" cy="68.5" rx="5.2" ry="3.8" fill="#33333c" stroke="#1c1c22" stroke-width="0.8"/>' +
@@ -70,14 +72,17 @@
       /* gold belt trim */
       '<path d="M23.5 58.5 Q32 61.5 40.5 58.5" stroke="url(#tmgd)" stroke-width="2" fill="none" stroke-linecap="round"/>' +
       /* left arm resting on knee */
+      '<g id="tm-arm-l">' +
       '<path d="M22 46 C17 50, 15 55, 16 60" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
       '<path d="M22 46 C17 50, 15 55, 16 60" stroke="url(#tmbg)" stroke-width="5.5" stroke-linecap="round"/>' +
       '<path d="M20.5 49 C18.5 52, 17.5 55, 17.6 57.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>' +
       '<path d="M18.5 52 L16 57" stroke="url(#tmgd)" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>' +
       '<circle cx="16" cy="62" r="4.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1"/>' +
       '<circle cx="16" cy="62" r="1.6" fill="#ffffff" opacity="0.7"/>' +
+      '</g>' +
       armR +
       /* big rounded helmet — the focal point */
+      '<g id="tm-head">' +
       '<ellipse cx="32" cy="25" rx="17.5" ry="18.5" fill="url(#tmhg)" stroke="#8a8f98" stroke-width="1.5"/>' +
       /* dome highlight + soft side shading */
       '<path d="M19.5 17 C22.5 10.5, 29 7.5, 35.5 8" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.95" stroke-linecap="round"/>' +
@@ -103,6 +108,7 @@
       /* soft rounded gold chin guard */
       '<ellipse cx="32" cy="44.5" rx="5.4" ry="3.2" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.8"/>' +
       '<ellipse cx="32" cy="43.8" rx="3.6" ry="1.9" fill="#fff3c4" opacity="0.55"/>' +
+      '</g>' +
       /* big cute glowing eyes with sparkles */
       '<g id="tm-eyes">' +
       '<ellipse cx="27.6" cy="28" rx="5.2" ry="6" fill="#00e5ff" opacity="0.22"/>' +
@@ -608,14 +614,14 @@
       if (!shimeji.dragging) return;
       shimeji.dragging = false;
       els.wrap.classList.remove('dragging');
-      /* drop with a little toss velocity */
+      /* stays where you put him — no falling */
+      shimeji.state = 'idle';
       shimeji.vy = 0;
-      shimeji.state = 'falling';
-      if (els.char) els.char.classList.add('falling');
-      /* if dropped near top, he climbs down the wall */
-      if (shimeji.y > window.innerHeight * 0.6) {
-        shimeji.state = 'climbing';
-        if (els.char) { els.char.classList.remove('falling'); els.char.classList.add('climbing'); }
+      if (els.char) els.char.classList.remove('falling', 'climbing');
+      /* happy little bounce on landing */
+      if (els.char && !reducedMotion) {
+        els.char.classList.add('excited');
+        setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 600);
       }
       e.stopPropagation();
     }
@@ -650,6 +656,14 @@
     els.wrap.style.right = 'auto';
     els.wrap.style.top = 'auto';
     els.wrap.style.bottom = shimeji.y + 'px';
+    /* playful but polite: fade slightly when over the bottom tab bar */
+    var tabbar = document.getElementById('tabbar');
+    if (tabbar) {
+      var tb = tabbar.getBoundingClientRect();
+      var mr = els.wrap.getBoundingClientRect();
+      var overlap = !(mr.bottom < tb.top || mr.top > tb.bottom || mr.right < tb.left || mr.left > tb.right);
+      els.wrap.style.opacity = overlap ? '0.35' : '';
+    }
   }
 
   function flipShimeji() {

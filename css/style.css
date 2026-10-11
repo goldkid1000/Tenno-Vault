@@ -1559,3 +1559,30 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
   #tv-mentor.shimeji { transition: opacity .3s ease !important; }
   .tv-mentor-char.falling, .tv-mentor-char.climbing, .tv-mentor-char.sleeping { animation: none !important; }
 }
+
+/* Vaulty moving body parts — arms and legs animate */
+#tm-arm-r { transform-box: fill-box; transform-origin: 20% 10%; animation: tv-arm-sway 3s ease-in-out infinite; }
+@keyframes tv-arm-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}
+#tm-arm-l { transform-box: fill-box; transform-origin: 80% 10%; animation: tv-arm-sway-l 3.4s ease-in-out infinite; }
+@keyframes tv-arm-sway-l {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(8deg); }
+}
+#tm-legs { transform-box: fill-box; transform-origin: center top; animation: tv-legs-bounce 2s ease-in-out infinite; }
+@keyframes tv-legs-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+/* head tilt */
+#tm-head { transform-box: fill-box; transform-origin: center bottom; animation: tv-head-tilt 5s ease-in-out infinite; }
+@keyframes tv-head-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { animation: none !important; }
+}
