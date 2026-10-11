@@ -283,10 +283,10 @@
   }
 
   function canPopup() {
-    if (session.popups >= 3) return false;
+    if (session.popups >= 8) return false;
     var now = Date.now();
-    if (now - session.lastDismiss < 10 * 60 * 1000) return false;
-    if (now - session.lastTip < 5 * 60 * 1000) return false;
+    if (now - session.lastDismiss < 5 * 60 * 1000) return false;
+    if (now - session.lastTip < 2 * 60 * 1000) return false;
     /* update banner visible? */
     var banner = document.getElementById('tv-update-banner');
     if (banner && banner.classList.contains('show')) return false;
@@ -324,8 +324,8 @@
   }
 
   function schedulePopup() {
-    /* 3–7 minutes, randomized */
-    var delay = (3 + Math.random() * 4) * 60 * 1000;
+    /* 90 seconds – 3 minutes, randomized */
+    var delay = (1.5 + Math.random() * 1.5) * 60 * 1000;
     setTimeout(randomPopup, delay);
   }
 
