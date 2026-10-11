@@ -111,6 +111,13 @@
   }
   window.TV.getJSONParts('data/site/mods', 9).then(function (d) {
     all = d;
+    /* merge mods-5 vendor data (separate file due to size) */
+    return window.TV.getJSON('data/site/mods-vendors-5.json').then(function (vm) {
+      all.forEach(function (m) { if (vm[m.name]) m.vendors = vm[m.name]; });
+      return all;
+    }).catch(function () { return all; });
+  }).then(function (d) {
+    all = d;
     document.getElementById('m-count').textContent = d.length + ' Mods';
     var byName = {};
     all.forEach(function (m) { byName[m.name] = m; });
