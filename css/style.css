@@ -1387,3 +1387,30 @@ body[data-holiday="halloween"] ::selection { background: rgba(255,123,28,.4); }
 body[data-holiday="halloween"] .tv-holiday-badge { border-color: #ff7b1c; color: #ff9a3c; }
 /* spooky glow on tab bar */
 body[data-holiday="halloween"] .tabbar { box-shadow: 0 -4px 24px rgba(168,85,247,.15); }
+
+/* ===== ALL-HOLIDAY UI EXTRAS ===== */
+/* Christmas */
+body[data-holiday="christmas"] .card { border-color: rgba(255,68,68,.25); box-shadow: 0 0 20px rgba(26,122,58,.1); }
+body[data-holiday="christmas"] .tv-stat b { color: #ff6b6b; }
+body[data-holiday="christmas"] .btn.primary { box-shadow: 0 4px 16px rgba(196,30,30,.3); }
+body[data-holiday="christmas"] .tv-holiday-badge { border-color: #ff4444; color: #ff8888; }
+/* New Year */
+body[data-holiday="newyear"] .card { border-color: rgba(255,213,74,.3); box-shadow: 0 0 24px rgba(255,213,74,.12); }
+body[data-holiday="newyear"] .tv-stat b { color: #ffd54a; }
+body[data-holiday="newyear"] .tabbar { box-shadow: 0 -4px 24px rgba(255,213,74,.2); }
+/* Valentine's */
+body[data-holiday="valentine"] .card { border-color: rgba(255,107,157,.25); box-shadow: 0 0 20px rgba(255,107,157,.1); }
+body[data-holiday="valentine"] .tv-stat b { color: #ff8fb5; }
+body[data-holiday="valentine"] .btn.primary { background: linear-gradient(135deg, #ff6b9d, #c41e5a); }
+/* St. Patrick's */
+body[data-holiday="stpatrick"] .card { border-color: rgba(0,204,102,.25); box-shadow: 0 0 20px rgba(0,204,102,.08); }
+body[data-holiday="stpatrick"] .tv-stat b { color: #2bff88; }
+body[data-holiday="stpatrick"] .btn.primary { background: linear-gradient(135deg, #00a854, #005c2e); }
+/* 4th of July */
+body[data-holiday="july4"] .card { border-color: rgba(255,68,68,.2); }
+body[data-holiday="july4"] .tv-stat b { color: #6ba8ff; }
+body[data-holiday="july4"] .tabbar { box-shadow: 0 -4px 24px rgba(255,68,68,.15); }
+/* Thanksgiving */
+body[data-holiday="thanksgiving"] .card { border-color: rgba(212,136,6,.25); box-shadow: 0 0 20px rgba(212,136,6,.08); }
+body[data-holiday="thanksgiving"] .tv-stat b { color: #e8a838; }
+body[data-holiday="thanksgiving"] .btn.primary { background: linear-gradient(135deg, #d48806, #8a5a00); }
