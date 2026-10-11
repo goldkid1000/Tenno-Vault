@@ -568,11 +568,11 @@
 
   /* ===== SHIMEJI ENGINE — Vaulty is a living screen pet ===== */
   var shimeji = {
-    x: 14, y: 0,           // position (y from bottom)
-    vx: 0, vy: 0,          // velocity
-    dir: 1,                // facing: 1 right, -1 left
-    state: 'idle',         // idle, walking, falling, dragging, climbing, sleeping
-    groundY: 14,           // bottom resting position
+    x: 0, y: 0,               // position (y from bottom) — set on init
+    vx: 0, vy: 0,            // velocity
+    dir: -1,                 // facing: 1 right, -1 left (start facing left/inward)
+    state: 'idle',           // idle, walking, falling, dragging, climbing, sleeping
+    groundY: 90,             // bottom resting position — above the tab bar
     dragging: false,
     lastAction: 0
   };
@@ -580,8 +580,9 @@
   function shimejiInit() {
     if (reducedMotion || !els.wrap) return;
     els.wrap.classList.add('shimeji');
+    /* home spot: right side, above the tab bar */
     shimeji.y = shimeji.groundY;
-    shimeji.x = 14;
+    shimeji.x = Math.max(14, window.innerWidth - 110);
     positionShimeji();
     /* drag interactions */
     var char = els.char;
