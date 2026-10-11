@@ -172,7 +172,7 @@
     drawList();
   }
   Promise.all([
-    window.TV.getJSONParts('data/site/builds', 9),
+    window.TV.getJSONParts('data/site/builds', 10),
     window.TV.getJSONParts('data/site/mods', 9)
   ]).then(function (res) {
     builds = res[0];
