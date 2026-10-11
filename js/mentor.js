@@ -337,24 +337,25 @@
     var key = pageKey();
     return SECTION_THEMES[key] || null;
   }
-  /* build the theme SVG: held item + optional buddy */
+  /* build the theme SVG: held item + optional buddy — BIG and obvious */
   function themeAccessory() {
     var theme = sectionTheme();
     if (!theme) return tabAccessory();
     var svg = '';
     if (theme.morph) {
-      /* Vaulty BECOMES the thing — show morph emoji big */
-      svg = '<text x="32" y="34" font-size="28" text-anchor="middle">' + theme.morph + '</text>';
+      /* Vaulty BECOMES the thing — big morph emoji above him */
+      svg = '<text x="32" y="18" font-size="32" text-anchor="middle">' + theme.morph + '</text>';
     } else if (theme.pose === 'planet') {
-      /* holding a planet above his head */
-      svg = '<text x="32" y="6" font-size="16" text-anchor="middle">' + theme.held + '</text>';
+      /* planet floating above his head */
+      svg = '<text x="32" y="14" font-size="22" text-anchor="middle">' + theme.held + '</text>';
     } else if (theme.pose === 'buddy') {
-      /* buddy next to him + hearts */
-      svg = '<text x="52" y="52" font-size="20" text-anchor="middle">🤖</text>' +
-            '<text x="42" y="20" font-size="10" text-anchor="middle">' + theme.held + '</text>';
+      /* buddy right next to him + love */
+      svg = '<text x="56" y="54" font-size="26" text-anchor="middle">🤖</text>' +
+            '<text x="44" y="16" font-size="14" text-anchor="middle">' + theme.held + '</text>' +
+            '<text x="20" y="16" font-size="12" text-anchor="middle">💕</text>';
     } else {
-      /* holding item in hand */
-      svg = '<text x="48" y="40" font-size="16" text-anchor="middle">' + theme.held + '</text>';
+      /* weapon/upgrade held high in hand */
+      svg = '<text x="50" y="30" font-size="22" text-anchor="middle">' + theme.held + '</text>';
     }
     return svg;
   }
@@ -491,12 +492,12 @@
       if (n > 1) msg = n + ' Tenno browsing the Vault right now! 🎉';
     }
     var roll = Math.random();
-    if (roll < 0.2) {
-      /* 1 in 5: walk across the screen saying the message */
+    if (roll < 0.35) {
+      /* 35%: run across the screen saying the message */
       walkAcross(msg);
     } else {
-      /* 1 in 4 of the rest: dance instead of wave */
-      var doDance = Math.random() < 0.25;
+      /* rest: wave or dance */
+      var doDance = Math.random() < 0.3;
       say(msg, { duration: 8000 });
       setTimeout(function () { doDance ? dance() : wave(); }, 400);
     }
@@ -504,8 +505,8 @@
   }
 
   function schedulePopup() {
-    /* 90 seconds – 3 minutes, randomized */
-    var delay = (1.5 + Math.random() * 1.5) * 60 * 1000;
+    /* 60 seconds – 2 minutes, randomized (more active!) */
+    var delay = (1 + Math.random() * 1) * 60 * 1000;
     setTimeout(randomPopup, delay);
   }
 
