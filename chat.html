@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Chat — Tenno Vault</title>
+<meta name="description" content="Talk Warframe with other Tenno — ask for help, share builds, find squadmates. No account needed.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="chat" data-crumb="Home,Community Chat">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>💬 Community Chat</h1>
+<p class="muted">Talk Warframe with other Tenno — ask for help, share builds, find squadmates.</p>
+
+<div class="notice" style="margin-bottom:14px">
+  <b>📜 Community guidelines</b><br>
+  • Be kind — help each other out<br>
+  • No spam, no scams, no account sharing<br>
+  • No hate speech or harassment<br>
+  • Keep it Warframe-friendly
+</div>
+
+<div id="tv-chat" data-full="1"><div class="loading">Loading chat…</div></div>
+
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai-fallback.js?v=20261010"></script>
+<script src="js/ai.js?v=20261010"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/chat.js?v=20261011"></script>
+<script>
+(function () {
+  document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+    { label: 'Trading', sub: 'Sell your stuff for platinum', url: 'trading.html' },
+    { label: 'Marketplace', sub: 'Listings from other players', url: 'marketplace.html' },
+    { label: 'Guides', sub: 'Bosses, tips & how-tos', url: 'guides.html' }
+  ]);
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
+<script src="js/mentor.js?v=20261011"></script>
+<script src="js/holidays.js?v=20261011"></script>
+<script src="js/update-notify.js"></script>
+</body>
+</html>

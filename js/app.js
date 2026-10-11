@@ -37,6 +37,7 @@
     { id: 'syndicates', label: 'Syndicates', sub: 'Earn standing, unlock rewards from every faction', icon: '🤝', file: 'syndicates.html', group: 'World' },
 
     /* ---- Community ---- */
+    { id: 'chat', label: 'Community Chat', sub: 'Talk Warframe with other Tenno', icon: '💬', file: 'chat.html', group: 'Community' },
     { id: 'trading', label: 'Trading', sub: 'Sell your stuff for platinum', icon: '💰', file: 'trading.html', group: 'Community' },
     { id: 'marketplace', label: 'Marketplace', sub: 'Listings from other players', icon: '🏪', file: 'marketplace.html', group: 'Community' },
     { id: 'videos', label: 'Videos', sub: 'Watch & learn from the community', icon: '🎬', file: 'videos.html', group: 'Community' },
@@ -100,6 +101,7 @@
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
       { id: 'builds', label: 'Builds', icon: '⚔️', file: 'builds.html' },
       { id: 'ai', label: 'AI Chat', icon: '💬', action: 'ai' },
+      { id: 'chat', label: 'Chat', icon: '🗨️', file: 'chat.html' },
       { id: 'news', label: 'News', icon: '📰', file: 'news.html' },
       { id: 'live', label: 'Live', icon: '📡', file: 'live.html' },
       { id: 'more', label: 'More', icon: '☰', file: 'index.html#sections' },

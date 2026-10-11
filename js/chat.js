@@ -31,21 +31,49 @@
 
   function renderChat(db) {
     var box = document.getElementById('tv-chat');
+    var full = box.getAttribute('data-full') === '1';
+    var limit = full ? 30 : 10;
+    var msgsStyle = full
+      ? 'height:calc(100dvh - 380px);min-height:300px;overflow-y:auto;border:1px solid var(--border);' +
+        'border-radius:var(--radius);padding:12px;margin-bottom:10px;background:var(--card)'
+      : 'max-height:320px;overflow-y:auto;border:1px solid var(--border);' +
+        'border-radius:var(--radius);padding:12px;margin-bottom:10px;background:var(--card)';
     box.innerHTML =
-      '<div id="chat-msgs" style="max-height:320px;overflow-y:auto;border:1px solid var(--border);' +
-      'border-radius:var(--radius);padding:12px;margin-bottom:10px;background:var(--card)"></div>' +
+      (full ? '<div id="chat-online" class="muted small" style="margin-bottom:8px"></div>' : '') +
+      '<div id="chat-msgs" style="' + msgsStyle + '"></div>' +
       '<form id="chat-form" style="display:flex;gap:8px">' +
       '<input id="chat-name" placeholder="Tenno name" maxlength="24" style="max-width:140px" aria-label="Your name">' +
       '<input id="chat-text" placeholder="Say something kind…" maxlength="300" style="flex:1" aria-label="Message">' +
       '<button class="btn primary" type="submit">Send</button></form>' +
-      '<p class="muted small" style="margin-top:6px">10 latest messages · no account needed · keep it friendly</p>';
+      '<p class="muted small" style="margin-top:6px">' + limit + ' latest messages · no account needed · keep it friendly</p>';
 
     var msgs = box.querySelector('#chat-msgs');
     function fmtTime(ts) {
       try { return new Date(ts.toDate ? ts.toDate() : ts).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}); }
       catch (e) { return ''; }
     }
-    db.collection('chat').orderBy('ts', 'desc').limit(10)
+    /* live online count in full mode */
+    if (full) {
+      var onlineEl = box.querySelector('#chat-online');
+      (function updateOnline() {
+        try {
+          var n = (window.TV && typeof window.TV.getOnlineCount === 'function')
+            ? window.TV.getOnlineCount() : 0;
+          onlineEl.innerHTML = n > 0
+            ? '🟢 <b>' + n + '</b> ' + (n === 1 ? 'Tenno online' : 'Tenno online')
+            : '🟢 <b>…</b> Tenno online';
+        } catch (e) {}
+      })();
+      setInterval(function () {
+        if (!document.body.contains(onlineEl)) return;
+        try {
+          var n2 = (window.TV && typeof window.TV.getOnlineCount === 'function')
+            ? window.TV.getOnlineCount() : 0;
+          if (n2 > 0) onlineEl.innerHTML = '🟢 <b>' + n2 + '</b> ' + (n2 === 1 ? 'Tenno online' : 'Tenno online');
+        } catch (e2) {}
+      }, 30000);
+    }
+    db.collection('chat').orderBy('ts', 'desc').limit(limit)
       .onSnapshot(function (snap) {
         var rows = [];
         snap.forEach(function (doc) {
