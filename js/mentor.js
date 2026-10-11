@@ -362,7 +362,7 @@
   /* build the theme SVG: held item + optional buddy — BIG and obvious */
   function themeAccessory() {
     var theme = sectionTheme();
-    if (!theme) return tabAccessory();
+    if (!theme) return '';
     var svg = '';
     if (theme.morph) {
       /* Vaulty BECOMES the thing — big morph emoji above him */
