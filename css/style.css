@@ -1583,3 +1583,9 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 }
 #tv-totop.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 #tv-totop:active { transform: scale(.92); }
+
+/* Vendor / buy-from box */
+.vendor-box { margin-top: 12px; padding: 12px; background: rgba(0,229,255,.06);
+  border: 1px solid rgba(0,229,255,.2); border-radius: 10px; }
+.vendor-box h4 { margin: 0 0 8px 0; color: #00e5ff; font-size: 14px; }
+.vendor-box p { margin: 6px 0; }
