@@ -649,6 +649,44 @@
     setInterval(shimejiPhysics, 50);
     /* behavior loop */
     setTimeout(shimejiBehave, 4000);
+    /* JS body animation — guaranteed to work on all devices */
+    startBodyAnimation();
+  }
+
+  /* Animate Vaulty's body parts with JavaScript — arms wave, legs kick, head bobs */
+  var bodyAnimT = 0;
+  function startBodyAnimation() {
+    var armR, armL, legs, head, svg;
+    function findParts() {
+      if (!els.wrap) return false;
+      armR = els.wrap.querySelector('#tm-arm-r');
+      armL = els.wrap.querySelector('#tm-arm-l');
+      legs = els.wrap.querySelector('#tm-legs');
+      head = els.wrap.querySelector('#tm-head');
+      svg = els.wrap.querySelector('.tv-mentor-char > svg');
+      return !!(armR || armL);
+    }
+    function tick() {
+      bodyAnimT += 0.06;
+      var t = bodyAnimT;
+      /* skip if reduced motion or dragging */
+      if (!reducedMotion && !shimeji.dragging && els.wrap && els.wrap.classList.contains('visible')) {
+        if (!armR && !findParts()) { requestAnimationFrame(tick); return; }
+        var waving = els.char && els.char.classList.contains('wave');
+        /* arms: big opposite swings (pause right arm when waving) */
+        if (armR && !waving) armR.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2) * 22) + ' 42 46)');
+        if (armL) armL.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2 + Math.PI) * 22) + ' 22 46)');
+        /* legs: bounce */
+        if (legs) legs.setAttribute('transform', 'translate(0 ' + (Math.sin(t * 3.5) * -3) + ')');
+        /* head: look side to side + bob */
+        if (head) head.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.1) * 7) + ' 32 40) translate(0 ' + (Math.sin(t * 2.8) * 1.5) + ')');
+        /* whole body: gentle groove */
+        if (svg) svg.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.6) * 2.5) + ' 32 70)');
+      }
+      requestAnimationFrame(tick);
+    }
+    /* wait for build, then start */
+    setTimeout(function () { findParts(); requestAnimationFrame(tick); }, 1500);
   }
 
   function positionShimeji() {

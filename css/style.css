@@ -1560,37 +1560,11 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
   .tv-mentor-char.falling, .tv-mentor-char.climbing, .tv-mentor-char.sleeping { animation: none !important; }
 }
 
-/* Vaulty moving body parts — BIG visible animations */
-#tm-arm-r { transform-box: fill-box; transform-origin: 20% 10%; animation: tv-arm-sway 2s ease-in-out infinite; }
-@keyframes tv-arm-sway {
-  0%, 100% { transform: rotate(-10deg); }
-  50% { transform: rotate(25deg); }
-}
-#tm-arm-l { transform-box: fill-box; transform-origin: 80% 10%; animation: tv-arm-sway-l 2.3s ease-in-out infinite; }
-@keyframes tv-arm-sway-l {
-  0%, 100% { transform: rotate(25deg); }
-  50% { transform: rotate(-10deg); }
-}
-#tm-legs { transform-box: fill-box; transform-origin: center top; animation: tv-legs-bounce 1.2s ease-in-out infinite; }
-@keyframes tv-legs-bounce {
-  0%, 100% { transform: translateY(0) scaleY(1); }
-  30% { transform: translateY(-4px) scaleY(1.05); }
-  60% { transform: translateY(1px) scaleY(0.95); }
-}
-/* head bobs and looks around */
-#tm-head { transform-box: fill-box; transform-origin: center bottom; animation: tv-head-tilt 3s ease-in-out infinite; }
-@keyframes tv-head-tilt {
-  0%, 100% { transform: rotate(-6deg) translateY(0); }
-  25% { transform: rotate(0deg) translateY(-3px); }
-  50% { transform: rotate(6deg) translateY(0); }
-  75% { transform: rotate(0deg) translateY(-2px); }
-}
-/* whole body groove */
-#tv-mentor .tv-mentor-char > svg { animation: tv-body-groove 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center bottom; }
-@keyframes tv-body-groove {
-  0%, 100% { transform: rotate(-2deg) translateX(-2px); }
-  50% { transform: rotate(2deg) translateX(2px); }
-}
+/* Vaulty body animations are JS-driven (see mentor.js startBodyAnimation).
+   CSS keyframes below are fallback only. */
+#tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { transform-box: fill-box; }
+/* smaller, out-of-the-way default size */
+#tv-mentor .tv-mentor-char > svg { width: 52px; height: 62px; }
 @media (prefers-reduced-motion: reduce) {
-  #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head, #tv-mentor .tv-mentor-char > svg { animation: none !important; }
+  #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { animation: none !important; }
 }
