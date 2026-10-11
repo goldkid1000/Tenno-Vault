@@ -1564,7 +1564,9 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
    CSS keyframes below are fallback only. */
 #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { transform-box: fill-box; }
 /* smaller, out-of-the-way default size */
-#tv-mentor .tv-mentor-char > svg { width: 52px; height: 62px; }
+#tv-mentor .tv-mentor-char > svg { width: 64px; height: 76px; }
+/* always fully visible — no fading */
+#tv-mentor { opacity: 1 !important; }
 @media (prefers-reduced-motion: reduce) {
   #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { animation: none !important; }
 }
