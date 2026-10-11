@@ -72,8 +72,24 @@
     var input = document.getElementById('global-search');
     input.addEventListener('focus', openSearch);
     input.addEventListener('click', openSearch);
-    /* fullscreen toggle */
-    var fsBtn = document.getElementById('tv-fullscreen');
+    /* auto-fullscreen on first tap (mobile/iPad) */
+    var fsAttempted = false;
+    function tryAutoFullscreen() {
+      if (fsAttempted) return;
+      fsAttempted = true;
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
+        (window.innerWidth <= 1024 && 'ontouchstart' in window);
+      if (isMobile && !document.fullscreenElement && document.documentElement.requestFullscreen) {
+        try {
+          var p = document.documentElement.requestFullscreen();
+          if (p && p.catch) p.catch(function () {});
+        } catch (e) {}
+      }
+      document.removeEventListener('touchend', tryAutoFullscreen);
+      document.removeEventListener('click', tryAutoFullscreen);
+    }
+    document.addEventListener('touchend', tryAutoFullscreen, { passive: true });
+    document.addEventListener('click', tryAutoFullscreen);
     if (fsBtn) {
       fsBtn.addEventListener('click', function () {
         if (document.fullscreenElement) {
