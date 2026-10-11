@@ -37,6 +37,18 @@
   <p class="muted">Point your phone camera at the code to open PayPal and donate any amount.</p>
   <!-- DONATE: Embedded PayPal button (no redirect) — replace YOUR_PAYPAL_CLIENT_ID below -->
   <div id="pp-donate-wrap" style="max-width:320px;margin:16px auto;">
+    <label for="pp-amount" style="display:block;margin-bottom:8px;font-weight:600;">Amount (USD)</label>
+    <div style="display:flex;gap:8px;margin-bottom:12px;">
+      <span style="font-size:1.4rem;align-self:center;">$</span>
+      <input id="pp-amount" type="number" min="1" step="0.01" value="5" inputmode="decimal"
+        style="flex:1;padding:12px;font-size:1.2rem;border:2px solid rgba(0,229,255,.3);border-radius:10px;background:#111;color:#fff;min-height:48px;" />
+    </div>
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+      <button type="button" class="chip pp-preset" data-amt="1">$1</button>
+      <button type="button" class="chip pp-preset" data-amt="5">$5</button>
+      <button type="button" class="chip pp-preset" data-amt="10">$10</button>
+      <button type="button" class="chip pp-preset" data-amt="25">$25</button>
+    </div>
     <div id="pp-donate-btn"></div>
     <p class="muted small" id="pp-donate-note" style="display:none">Donations are processed securely by PayPal — you never leave this page.</p>
   </div>
@@ -49,10 +61,28 @@
     }
     if (typeof paypal === 'undefined') { fallback(); return; }
     try {
+      /* preset amount chips */
+      var amtInput = document.getElementById('pp-amount');
+      var presets = document.querySelectorAll('.pp-preset');
+      for (var i = 0; i < presets.length; i++) {
+        presets[i].addEventListener('click', function () {
+          amtInput.value = this.getAttribute('data-amt');
+        });
+      }
+      function getAmount() {
+        var v = parseFloat(amtInput.value);
+        if (isNaN(v) || v < 1) { amtInput.value = '5'; return '5.00'; }
+        return v.toFixed(2);
+      }
       paypal.Buttons({
-        style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'donate' },
+        style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'paypal' },
         createOrder: function (data, actions) {
-          return actions.order.create({ purchase_units: [{ description: 'Tenno Vault donation' }] });
+          return actions.order.create({
+            purchase_units: [{
+              description: 'Tenno Vault donation',
+              amount: { value: getAmount(), currency_code: 'USD' }
+            }]
+          });
         },
         onApprove: function (data, actions) {
           return actions.order.capture().then(function () {
