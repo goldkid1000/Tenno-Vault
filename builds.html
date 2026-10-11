@@ -112,6 +112,7 @@
       (b.weaponNote ? '<p class="muted">' + esc(b.weaponNote) + '</p>' : '') +
       '<h3 class="mods-head">Mods <button type="button" class="btn small ghost" id="b-copymods">📋 Copy mod list</button></h3>' + b.mods.map(function (m) {
         return '<div class="mod-row"><div><b><a href="mods.html#' + encodeURIComponent(m.name) + '">' + esc(m.name) + '</a></b>' +
+          ' <a class="btn small ghost" href="starchart.html?item=' + encodeURIComponent(m.name) + '" title="See where to farm this mod">🗺️</a>' +
           (m.note ? ' <span class="muted small">— ' + esc(m.note) + '</span>' : '') +
           '<div class="farm">📍 ' + farmFor(m.name) + '</div></div></div>';
       }).join('') +
@@ -200,7 +201,7 @@
     drawList();
   }
   Promise.all([
-    window.TV.getJSONParts('data/site/builds', 10),
+    window.TV.getJSONParts('data/site/builds', 11),
     window.TV.getJSONParts('data/site/mods', 9)
   ]).then(function (res) {
     builds = res[0];
