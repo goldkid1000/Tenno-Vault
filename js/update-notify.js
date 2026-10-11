@@ -1,6 +1,6 @@
 /* Tenno Vault — auto-updater. Checks version.json for new releases.
-   When an update is found, shows a brief "Updating..." toast, then
-   automatically clears caches and reloads. No taps needed.
+   When an update is found, shows a prominent top banner notification,
+   then automatically refreshes to the latest version. No taps needed.
    Works on mobile PWA, PC installed app, and regular browser tabs. */
 (function () {
   'use strict';
@@ -29,8 +29,8 @@
   function autoUpdate(data) {
     if (updating) return;
     updating = true;
-    showToast('⬆️ Updating Tenno Vault to v' + data.version + '...');
-    /* give it a moment so the user sees what's happening, then reload fresh */
+    showBanner(data);
+    /* let them read it, then refresh to the latest version */
     setTimeout(function () {
       if ('caches' in window) {
         caches.keys().then(function (names) {
@@ -39,15 +39,32 @@
       } else {
         hardReload();
       }
-    }, 2500);
+    }, 6000);
   }
 
-  function showToast(msg) {
-    var t = document.createElement('div');
-    t.id = 'tv-update-toast';
-    t.textContent = msg;
-    document.body.appendChild(t);
-    requestAnimationFrame(function () { t.classList.add('show'); });
+  function showBanner(data) {
+    /* remove any existing banner */
+    var old = document.getElementById('tv-update-banner');
+    if (old) old.remove();
+    var b = document.createElement('div');
+    b.id = 'tv-update-banner';
+    b.setAttribute('role', 'alert');
+    b.innerHTML =
+      '<span class="tv-update-icon">⬆️</span>' +
+      '<div class="tv-update-text"><b>Update available — v' + escapeHtml(data.version) + '</b>' +
+      (data.notes ? '<span>' + escapeHtml(data.notes) + '</span>' : '') +
+      '<span class="tv-update-sub">Refreshing to the latest version…</span></div>';
+    document.body.appendChild(b);
+    /* slide down */
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { b.classList.add('show'); });
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
   }
 
   function hardReload() {

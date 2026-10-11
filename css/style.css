@@ -937,3 +937,24 @@ a.card:active { transform: scale(.98); }
 @media (prefers-reduced-motion: reduce) {
   .tv-walker, .tv-walker .arm-l, .tv-walker .arm-r, .tv-walker .leg-l, .tv-walker .leg-r, .tv-walker .ground { animation: none; }
 }
+
+/* ---------- Update banner ---------- */
+#tv-update-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 18px; padding-top: max(14px, env(safe-area-inset-top));
+  background: linear-gradient(135deg, #0a2a3a, #0d3a2a);
+  border-bottom: 2px solid #00e5ff;
+  box-shadow: 0 4px 20px rgba(0,229,255,.3);
+  transform: translateY(-110%); transition: transform .4s cubic-bezier(.2,.9,.3,1.2);
+}
+#tv-update-banner.show { transform: translateY(0); }
+.tv-update-icon { font-size: 28px; flex-shrink: 0; animation: tv-bounce 1s ease-in-out infinite; }
+@keyframes tv-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.tv-update-text { display: flex; flex-direction: column; gap: 2px; color: #fff; font-size: 15px; }
+.tv-update-text b { color: #00e5ff; font-size: 16px; }
+.tv-update-sub { color: #888; font-size: 13px; }
+@media (prefers-reduced-motion: reduce) {
+  #tv-update-banner { transition: none; }
+  .tv-update-icon { animation: none; }
+}
