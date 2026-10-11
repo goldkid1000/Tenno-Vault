@@ -103,7 +103,7 @@
     if (d.fissures && d.fissures.length) {
       html += '<h2>Active Void Fissures</h2><div class="item-list">';
       d.fissures.slice(0, 24).forEach(function (f) {
-        html += '<div class="list-item"><h3>' + esc(f.tier + ' — ' + f.missionType + ' <span class="muted">(' + f.node + ')</span>') + '</h3>' +
+        html += '<div class="list-item"><h3>' + esc(f.tier + ' — ' + f.missionType) + ' <span class="muted">(' + esc(f.node) + ')</span></h3>' +
           '<p class="muted small">vs ' + esc(f.enemy) + ' · ⏱ ' + liveCd(f.expiry) +
           (f.isStorm ? ' · <b>Railjack</b>' : '') + (f.isHard ? ' · <b>Steel Path</b>' : '') + '</p></div>';
       });
