@@ -968,15 +968,98 @@ a.card:active { transform: scale(.98); }
 }
 #tv-mentor.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 #tv-mentor.pointing { transition: left .4s ease, top .4s ease, opacity .35s ease; }
+/* exit: shrink + fade */
+#tv-mentor.exiting { opacity: 0 !important; transform: translateY(8px) scale(.7) !important; }
+/* entrance: little bounce */
+#tv-mentor.entering { animation: tv-mentor-enter .7s cubic-bezier(.2,1.4,.4,1); }
+@keyframes tv-mentor-enter {
+  0% { transform: translateY(60px) scale(.6); opacity: 0; }
+  60% { transform: translateY(-8px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
 .tv-mentor-char {
   cursor: pointer; line-height: 0;
   filter: drop-shadow(0 3px 10px rgba(0,229,255,.35));
   animation: tv-mentor-bob 3.2s ease-in-out infinite;
 }
 .tv-mentor-char:hover { filter: drop-shadow(0 3px 14px rgba(0,229,255,.6)); }
+/* idle: gentle float + breathing */
 @keyframes tv-mentor-bob {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.015); }
+}
+/* blink: visor eyes scale vertically */
+#tm-eyes { transform-box: fill-box; transform-origin: center; animation: tv-mentor-blink 5.5s infinite; }
+@keyframes tv-mentor-blink {
+  0%, 93%, 100% { transform: scaleY(1); }
+  95%, 97% { transform: scaleY(.08); }
+}
+/* attention: little hop (plays once) */
+.tv-mentor-char.attn { animation: tv-mentor-hop .7s ease; }
+@keyframes tv-mentor-hop {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  30% { transform: translateY(-14px); }
+  55% { transform: translateY(0); }
+  75% { transform: translateY(-6px); }
+}
+/* wave: right arm raises and waves */
+#tm-arm-r { transform-box: fill-box; transform-origin: 20% 10%; }
+.tv-mentor-char.wave { animation: tv-mentor-bob 3.2s ease-in-out infinite, tv-mentor-wave-bounce 1.4s ease; }
+.tv-mentor-char.wave #tm-arm-r { animation: tv-mentor-wave 1.4s ease; }
+@keyframes tv-mentor-wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-70deg); }
+  40% { transform: rotate(-30deg); }
+  60% { transform: rotate(-70deg); }
+  80% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes tv-mentor-wave-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+/* dance: shuffle + spin + jump (~2s) */
+.tv-mentor-char.dance { animation: tv-mentor-dance 2s ease; }
+@keyframes tv-mentor-dance {
+  0% { transform: translateX(0) rotate(0) translateY(0); }
+  15% { transform: translateX(-10px) rotate(-8deg) translateY(0); }
+  30% { transform: translateX(10px) rotate(8deg) translateY(0); }
+  45% { transform: translateX(-6px) rotate(-5deg) translateY(-12px); }
+  60% { transform: translateX(6px) rotate(360deg) translateY(0); }
+  80% { transform: translateX(0) rotate(360deg) translateY(-10px); }
+  100% { transform: translateX(0) rotate(360deg) translateY(0); }
+}
+/* click: squash and stretch */
+.tv-mentor-char.squash { animation: tv-mentor-squash .4s ease; }
+@keyframes tv-mentor-squash {
+  0% { transform: scale(1, 1); }
+  35% { transform: scale(1.25, .7); }
+  65% { transform: scale(.85, 1.15); }
+  100% { transform: scale(1, 1); }
+}
+/* pointing: arm extends smoothly */
+.tv-mentor-char.point-anim #tm-arm-r { animation: tv-mentor-point .5s ease; }
+@keyframes tv-mentor-point {
+  0% { transform: rotate(40deg); opacity: .4; }
+  100% { transform: rotate(0deg); opacity: 1; }
+}
+/* online badge: little sign the character "holds" */
+.tv-mentor-badge {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(13,25,38,.92); border: 1px solid #00e5ff; border-radius: 999px;
+  padding: 4px 10px; margin-bottom: 6px; margin-left: 4px;
+  font-size: 11px; font-weight: 600; color: #b8f5ff; white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,.4);
+  animation: tv-mentor-bob 3.2s ease-in-out infinite;
+}
+.tv-mentor-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: #4ade80;
+  box-shadow: 0 0 6px #4ade80; flex-shrink: 0;
+  animation: tv-mentor-pulse 2s ease-in-out infinite;
+}
+@keyframes tv-mentor-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
 }
 .tv-mentor-bubble {
   position: relative; max-width: 250px; margin-bottom: 10px;
@@ -1002,31 +1085,12 @@ a.card:active { transform: scale(.98); }
 @media (max-width: 640px) {
   #tv-mentor { left: 10px; bottom: 10px; }
   .tv-mentor-bubble { max-width: 210px; font-size: 13px; }
+  .tv-mentor-badge { font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tv-mentor-char { animation: none; }
+  .tv-mentor-char, .tv-mentor-badge, #tm-eyes,
+  .tv-mentor-char.attn, .tv-mentor-char.wave, .tv-mentor-char.dance,
+  .tv-mentor-char.squash, .tv-mentor-char.point-anim #tm-arm-r,
+  #tv-mentor.entering, .tv-mentor-dot { animation: none !important; }
   #tv-mentor, .tv-mentor-bubble, #tv-mentor.pointing { transition: none; }
 }
-
-/* ---------- News cards ---------- */
-.news-card { overflow: hidden; padding: 0; }
-.news-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
-.news-body { padding: 16px; }
-.news-body h3 { margin: 8px 0; font-size: 1.05rem; line-height: 1.35; }
-.tag { display: inline-block; font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
-.tag.hotfix { background: rgba(255,213,74,.15); color: #ffd54a; border: 1px solid rgba(255,213,74,.4); }
-.tag.news { background: rgba(0,229,255,.12); color: #00e5ff; border: 1px solid rgba(0,229,255,.35); }
-.filter-chip { cursor: pointer; }
-.filter-chip.active { background: var(--accent); color: #0a0e1a; border-color: var(--accent); }
-
-/* ---------- Online pill ---------- */
-.tv-online-pill {
-  display: inline-block; padding: 8px 18px; border-radius: 999px;
-  background: rgba(0,229,255,.1); border: 1px solid rgba(0,229,255,.4);
-  color: #00e5ff; font-weight: 600; font-size: 15px;
-}
-.tv-online-pill::before {
-  content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-  background: #00ff88; margin-right: 8px; animation: tv-pulse 2s ease-in-out infinite;
-}
-@keyframes tv-pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
