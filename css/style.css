@@ -1414,3 +1414,50 @@ body[data-holiday="july4"] .tabbar { box-shadow: 0 -4px 24px rgba(255,68,68,.15)
 body[data-holiday="thanksgiving"] .card { border-color: rgba(212,136,6,.25); box-shadow: 0 0 20px rgba(212,136,6,.08); }
 body[data-holiday="thanksgiving"] .tv-stat b { color: #e8a838; }
 body[data-holiday="thanksgiving"] .btn.primary { background: linear-gradient(135deg, #d48806, #8a5a00); }
+
+/* ===== HOLIDAY BACKGROUNDS ===== */
+body[data-holiday="halloween"] {
+  background: radial-gradient(ellipse at 50% 0%, #1a0f2e 0%, #0a0e1a 60%);
+}
+body[data-holiday="halloween"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(255,123,28,.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 10%, rgba(168,85,247,.1) 0%, transparent 50%);
+}
+body[data-holiday="christmas"] {
+  background: radial-gradient(ellipse at 50% 0%, #0f2a1a 0%, #0a0e1a 60%);
+}
+body[data-holiday="christmas"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(255,68,68,.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 10%, rgba(26,122,58,.12) 0%, transparent 50%);
+}
+body[data-holiday="newyear"] {
+  background: radial-gradient(ellipse at 50% 0%, #2a220f 0%, #0a0e1a 60%);
+}
+body[data-holiday="newyear"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(255,213,74,.1) 0%, transparent 60%);
+}
+body[data-holiday="valentine"] {
+  background: radial-gradient(ellipse at 50% 0%, #2e0f1e 0%, #0a0e1a 60%);
+}
+body[data-holiday="valentine"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(255,107,157,.1) 0%, transparent 60%);
+}
+body[data-holiday="stpatrick"] {
+  background: radial-gradient(ellipse at 50% 0%, #0f2a1a 0%, #0a0e1a 60%);
+}
+body[data-holiday="stpatrick"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(0,204,102,.1) 0%, transparent 60%);
+}
+body[data-holiday="july4"] {
+  background: radial-gradient(ellipse at 50% 0%, #1a1030 0%, #0a0e1a 60%);
+}
+body[data-holiday="july4"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,68,68,.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 20%, rgba(107,168,255,.08) 0%, transparent 50%);
+}
+body[data-holiday="thanksgiving"] {
+  background: radial-gradient(ellipse at 50% 0%, #2e1f0f 0%, #0a0e1a 60%);
+}
+body[data-holiday="thanksgiving"] .tv-hero-bg {
+  background: radial-gradient(ellipse at 50% 30%, rgba(212,136,6,.1) 0%, transparent 60%);
+}
