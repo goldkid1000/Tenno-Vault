@@ -582,9 +582,9 @@
   function shimejiInit() {
     if (reducedMotion || !els.wrap) return;
     els.wrap.classList.add('shimeji');
-    /* home spot: left side, near the top below the header */
-    shimeji.x = 14;
-    shimeji.y = 110;
+    /* home spot: left edge, vertically centered — comfortable, out of the way */
+    shimeji.x = 8;
+    shimeji.y = Math.max(200, window.innerHeight * 0.45);
     shimeji.homeX = shimeji.x;
     shimeji.homeY = shimeji.y;
     positionShimeji();
@@ -793,6 +793,22 @@
         }, 2000);
       }, 2000 + Math.random() * 1000);
     } else if (roll < 0.35) {
+      /* peek-a-boo: hide behind left edge, then pop out */
+      if (els.wrap) {
+        els.wrap.style.transition = 'left .4s ease';
+        els.wrap.style.left = '-30px';
+        setTimeout(function () {
+          if (!els.wrap) return;
+          els.wrap.style.left = shimeji.homeX + 'px';
+          /* pop! */
+          if (els.char && !reducedMotion) {
+            els.char.classList.add('excited');
+            setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 800);
+          }
+          setTimeout(function () { if (els.wrap) els.wrap.style.transition = ''; }, 500);
+        }, 1200);
+      }
+    } else if (roll < 0.45) {
       /* take a nap */
       shimeji.state = 'sleeping';
       if (els.char) els.char.classList.add('sleeping');
