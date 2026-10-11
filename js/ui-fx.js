@@ -7,8 +7,11 @@
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- animated counters: <b data-count="123"> ---------- */
+  /* data-count="builds" loads the live build count dynamically */
   function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
+    var raw = el.getAttribute('data-count');
+    if (raw === 'builds') { loadLiveBuildCount(el); return; }
+    var target = parseInt(raw, 10);
     if (isNaN(target)) return;
     function fmt(n) { return n.toLocaleString('en-US'); }
     if (reducedMotion) { el.textContent = fmt(target); return; }
@@ -22,6 +25,25 @@
       else el.textContent = fmt(target);
     }
     requestAnimationFrame(step);
+  }
+
+  function loadLiveBuildCount(el) {
+    function fmt(n) { return n.toLocaleString('en-US'); }
+    /* count builds across all part files (builds-0.json through builds-9.json) */
+    var base = 'data/site/builds-';
+    var idx = 0, total = 0;
+    function next() {
+      fetch(base + idx + '.json', { cache: 'no-store' }).then(function (r) {
+        if (!r.ok) throw new Error('done');
+        return r.json();
+      }).then(function (d) {
+        total += d.length; idx++; next();
+      }).catch(function () {
+        el.setAttribute('data-count', total);
+        animateCount(el);
+      });
+    }
+    next();
   }
 
   function initCounters() {
