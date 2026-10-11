@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News & Hotfixes — Tenno Vault</title>
+<meta name="description" content="Latest Warframe news, hotfixes, and update patch notes — what's new in the Origin System.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="news" data-crumb="Home,News & Hotfixes">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>📰 News & Hotfixes</h1>
+<div class="notice"><b>What is this?</b> The latest Warframe news, hotfixes, and patch notes — straight from the official sources, so you always know what's new.</div>
+
+<div class="field" style="display:flex;gap:8px;margin:16px 0;flex-wrap:wrap">
+  <button class="chip filter-chip active" data-filter="all">All</button>
+  <button class="chip filter-chip" data-filter="hotfix">🔧 Hotfixes & Updates</button>
+  <button class="chip filter-chip" data-filter="news">📢 News & Events</button>
+</div>
+
+<div id="news-list"><div class="loading">Pulling the latest from the Origin System…</div></div>
+
+<div class="card" style="margin-top:24px">
+  <h3>📝 Full patch notes</h3>
+  <p class="muted">Want every line of every change? The official forums have the complete update notes.</p>
+  <p><a class="btn" href="https://forums.warframe.com/forum/3-pc-update-build-notes/" target="_blank" rel="noopener">PC Update Notes →</a>
+  <a class="btn" href="https://www.warframe.com/news" target="_blank" rel="noopener" style="margin-left:8px">All Warframe News →</a></p>
+</div>
+
+<div id="related"></div>
+</main>
+</div>
+<nav id="tabbar"></nav>
+<footer id="site-footer"></footer>
+<script src="js/app.js?v=20261009c"></script>
+<script src="js/presence.js?v=20261009"></script>
+<script src="js/ai-fallback.js?v=20261010"></script>
+<script src="js/ai.js?v=20261010"></script>
+<script src="js/news.js?v=20261011"></script>
+<script>
+(function () {
+  document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
+    { label: 'Live world state', sub: 'Cycles, fissures & sorties', url: 'live.html' },
+    { label: 'Builds', sub: 'Setups for the new meta', url: 'builds.html' },
+    { label: 'Farming', sub: 'Where to farm new items', url: 'farming.html' }
+  ]);
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
+<script src="js/mentor.js?v=20261011"></script>
+<script src="js/update-notify.js"></script>
+</body>
+</html>

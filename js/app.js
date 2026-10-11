@@ -28,6 +28,7 @@
     { id: 'resources', label: 'Resource Finder', sub: 'What mission, what planet — find any material', icon: '⛏️', file: 'resources.html', group: 'World' },
     { id: 'starchart', label: 'Star Chart', sub: 'Interactive map — fly to where anything farms', icon: '🗺️', file: 'starchart.html', group: 'World' },
     { id: 'live', label: 'Live', sub: "What's happening in-game right now", icon: '📡', file: 'live.html', group: 'World' },
+    { id: 'news', label: 'News & Hotfixes', sub: 'Latest updates, patch notes & events', icon: '📰', file: 'news.html', group: 'World' },
     { id: 'quests', label: 'Quests', sub: 'Story missions — what order & what you get', icon: '📜', file: 'quests.html', group: 'World' },
     { id: 'liches', label: 'Liches', sub: 'Hunt your nemesis for powerful weapons', icon: '👹', file: 'liches.html', group: 'World' },
     { id: 'railjack', label: 'Railjack', sub: 'Space ships, space combat & mechs', icon: '🚀', file: 'railjack.html', group: 'World' },
@@ -99,6 +100,7 @@
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
       { id: 'builds', label: 'Builds', icon: '⚔️', file: 'builds.html' },
       { id: 'ai', label: 'AI Chat', icon: '💬', action: 'ai' },
+      { id: 'news', label: 'News', icon: '📰', file: 'news.html' },
       { id: 'live', label: 'Live', icon: '📡', file: 'live.html' },
       { id: 'more', label: 'More', icon: '☰', file: 'index.html#sections' },
     ];
