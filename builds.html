@@ -108,7 +108,8 @@
           '<div class="farm">📍 ' + farmFor(m.name) + '</div></div></div>';
       }).join('') +
       (b.arcane ? '<h3>Arcane</h3><p><a href="arcanes.html#' + encodeURIComponent(b.arcane) + '">' + esc(b.arcane) + '</a></p>' : '') +
-      '<h3>How to play it</h3><p>' + esc(b.playstyle) + '</p></div>';
+      '<h3>How to play it</h3><p>' + esc(b.playstyle) + '</p>' +
+      '<div id="b-video"></div></div>';
     var copyBtn = document.getElementById('b-copymods');
     if (copyBtn) copyBtn.addEventListener('click', function (ev) {
       ev.preventDefault(); ev.stopPropagation();
@@ -127,6 +128,25 @@
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback);
       else fallback();
     });
+    /* best video guide for this build's item */
+    (function () {
+      var vbox = document.getElementById('b-video');
+      if (!vbox) return;
+      var itemName = (b.item || b.name || '').toLowerCase();
+      window.TV.getJSON('data/site/videos.json').then(function (vs) {
+        var match = null;
+        for (var i = 0; i < vs.length; i++) {
+          var vn = (vs[i].item || '').toLowerCase();
+          if (vn && itemName.indexOf(vn) !== -1) { match = vs[i]; break; }
+        }
+        if (match) {
+          vbox.innerHTML = '<h3>📺 Best video guide</h3>' +
+            '<a class="card video-link" href="https://www.youtube.com/watch?v=' + esc(match.id) + '" target="_blank" rel="noopener">' +
+            '<b>' + esc(match.title) + '</b><p class="muted small">' + esc(match.channel) + ' — ' + esc(match.description).slice(0, 100) + '…</p>' +
+            '<span class="btn small">▶ Watch on YouTube</span></a>';
+        }
+      }).catch(function () {});
+    })();
     box.scrollIntoView();
     var rel = [];
     (b.related || []).forEach(function (rid) {
