@@ -19,74 +19,107 @@
     } catch (e) { costume = ''; }
     var armR = (mode === 'point')
       ? '<g id="tm-arm-r">' +
-        '<path d="M42 46 L59 33" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
-        '<path d="M42 46 L59 33" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
-        '<circle cx="60" cy="32" r="4" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/>' +
-        '<circle cx="60" cy="32" r="2.4" fill="#ffd54a"/>' +
-        '<circle cx="60" cy="32" r="5" fill="#ffd54a" opacity="0.25"/></g>'
+        '<path d="M42 46 L59 32" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
+        '<path d="M42 46 L59 32" stroke="url(#tmbg)" stroke-width="5.5" stroke-linecap="round"/>' +
+        '<path d="M50 39 L59 32" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>' +
+        '<circle cx="60.5" cy="31" r="4.4" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.8"/>' +
+        '<circle cx="60.5" cy="31" r="2.4" fill="#fff3c4"/>' +
+        '<circle cx="60.5" cy="31" r="7" fill="#ffd54a" opacity="0.22"/></g>'
       : '<g id="tm-arm-r">' +
         '<path d="M42 46 C47 50, 49 55, 48 60" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
-        '<path d="M42 46 C47 50, 49 55, 48 60" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
-        '<path d="M45.5 52 L48 57" stroke="#d4a017" stroke-width="2" opacity="0.9"/>' +
-        '<circle cx="48" cy="62" r="4.2" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/></g>';
+        '<path d="M42 46 C47 50, 49 55, 48 60" stroke="url(#tmbg)" stroke-width="5.5" stroke-linecap="round"/>' +
+        '<path d="M44.5 50 C47 53, 48.5 56, 48 59" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>' +
+        '<path d="M45.5 52 L48 57" stroke="url(#tmgd)" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>' +
+        '<circle cx="48" cy="62" r="4.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1"/>' +
+        '<circle cx="48" cy="62" r="1.6" fill="#ffffff" opacity="0.7"/></g>';
     return '<svg viewBox="0 0 64 76" width="64" height="76" aria-hidden="true">' +
+      '<defs>' +
+      '<radialGradient id="tmhg" cx="38%" cy="30%" r="75%">' +
+      '<stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#eef0f3"/>' +
+      '<stop offset="100%" stop-color="#c9cdd4"/></radialGradient>' +
+      '<linearGradient id="tmbg" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0%" stop-color="#f7f8fa"/><stop offset="100%" stop-color="#d3d7dd"/></linearGradient>' +
+      '<linearGradient id="tmgd" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0%" stop-color="#ffe9a3"/><stop offset="55%" stop-color="#ffd54a"/>' +
+      '<stop offset="100%" stop-color="#d4a017"/></linearGradient>' +
+      '<radialGradient id="tmfg" cx="50%" cy="35%" r="70%">' +
+      '<stop offset="0%" stop-color="#2e2e38"/><stop offset="100%" stop-color="#101014"/></radialGradient>' +
+      '</defs>' +
+      /* soft ground shadow */
+      '<ellipse cx="32" cy="71.5" rx="20" ry="3.4" fill="#000000" opacity="0.28"/>' +
       /* folded legs — sitting cross-legged */
-      '<ellipse cx="21" cy="66" rx="11" ry="6" fill="#8a8f98"/>' +
-      '<ellipse cx="43" cy="66" rx="11" ry="6" fill="#8a8f98"/>' +
-      '<ellipse cx="21" cy="66" rx="11" ry="6" fill="none" stroke="#6e737b" stroke-width="1"/>' +
-      '<ellipse cx="43" cy="66" rx="11" ry="6" fill="none" stroke="#6e737b" stroke-width="1"/>' +
-      '<path d="M13 64 C17 62, 25 62, 29 64" stroke="#a9adb4" stroke-width="1.4" fill="none"/>' +
-      '<path d="M35 64 C39 62, 47 62, 51 64" stroke="#a9adb4" stroke-width="1.4" fill="none"/>' +
+      '<ellipse cx="20" cy="65" rx="11.5" ry="6.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1.2"/>' +
+      '<ellipse cx="44" cy="65" rx="11.5" ry="6.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1.2"/>' +
+      '<path d="M11 63 C16 60.5, 25 60.5, 30 63" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>' +
+      '<path d="M34 63 C39 60.5, 48 60.5, 53 63" stroke="#ffffff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>' +
+      '<path d="M13 66.5 C19 65, 27 65, 31 67" stroke="url(#tmgd)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>' +
+      '<path d="M33 67 C37 65, 45 65, 51 66.5" stroke="url(#tmgd)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>' +
       /* feet */
-      '<ellipse cx="11" cy="69" rx="5" ry="3.6" fill="#2a2a2a"/>' +
-      '<ellipse cx="53" cy="69" rx="5" ry="3.6" fill="#2a2a2a"/>' +
-      /* stubby torso */
-      '<path d="M32 42 L24 46 L23 60 L41 60 L40 46 Z" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1.2"/>' +
-      '<path d="M26 48 L25 58 M38 48 L39 58" stroke="#c6c9cf" stroke-width="1.4"/>' +
-      /* gold chest plates */
-      '<path d="M28 50 L32 54 L28 58 L24 54 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
-      '<path d="M36 50 L40 54 L36 58 L32 54 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
+      '<ellipse cx="10" cy="68.5" rx="5.2" ry="3.8" fill="#33333c" stroke="#1c1c22" stroke-width="0.8"/>' +
+      '<ellipse cx="54" cy="68.5" rx="5.2" ry="3.8" fill="#33333c" stroke="#1c1c22" stroke-width="0.8"/>' +
+      '<ellipse cx="8.8" cy="67.4" rx="1.8" ry="1.1" fill="#5a5a66" opacity="0.7"/>' +
+      '<ellipse cx="52.8" cy="67.4" rx="1.8" ry="1.1" fill="#5a5a66" opacity="0.7"/>' +
+      /* stubby torso with armor panel lines */
+      '<path d="M32 41 L23.5 45.5 L22.5 60 Q32 63.5 41.5 60 L40.5 45.5 Z" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1.2"/>' +
+      '<path d="M26.5 47.5 L25.8 57.5 M37.5 47.5 L38.2 57.5" stroke="#b7bcc4" stroke-width="1.2" stroke-linecap="round"/>' +
+      '<path d="M24 52 Q32 54.5 40 52" stroke="#c6c9cf" stroke-width="1" fill="none" opacity="0.8"/>' +
+      /* gold chest emblem with glow */
+      '<circle cx="32" cy="53" r="5.4" fill="#ffd54a" opacity="0.18"/>' +
+      '<path d="M32 48.5 L35.5 53 L32 57.5 L28.5 53 Z" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.9"/>' +
+      '<circle cx="32" cy="53" r="1.3" fill="#fff3c4"/>' +
+      /* gold belt trim */
+      '<path d="M23.5 58.5 Q32 61.5 40.5 58.5" stroke="url(#tmgd)" stroke-width="2" fill="none" stroke-linecap="round"/>' +
       /* left arm resting on knee */
       '<path d="M22 46 C17 50, 15 55, 16 60" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
-      '<path d="M22 46 C17 50, 15 55, 16 60" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
-      '<path d="M18.5 52 L16 57" stroke="#d4a017" stroke-width="2" opacity="0.9"/>' +
-      '<circle cx="16" cy="62" r="4.2" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/>' +
+      '<path d="M22 46 C17 50, 15 55, 16 60" stroke="url(#tmbg)" stroke-width="5.5" stroke-linecap="round"/>' +
+      '<path d="M20.5 49 C18.5 52, 17.5 55, 17.6 57.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>' +
+      '<path d="M18.5 52 L16 57" stroke="url(#tmgd)" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>' +
+      '<circle cx="16" cy="62" r="4.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1"/>' +
+      '<circle cx="16" cy="62" r="1.6" fill="#ffffff" opacity="0.7"/>' +
       armR +
-      /* big rounded helmet */
-      '<ellipse cx="32" cy="26" rx="17" ry="18" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1.5"/>' +
-      /* dome highlight + side shading */
-      '<path d="M20 18 C23 12, 29 9, 35 9" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.9" stroke-linecap="round"/>' +
-      '<path d="M46 22 C48 28, 47 35, 43 40" stroke="#b9bdc4" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>' +
-      '<path d="M18 22 C16 28, 17 35, 21 40" stroke="#b9bdc4" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>' +
-      /* gold crest on top — soft rounded fin */
-      '<path d="M32 0 Q27 5, 27.5 10 L36.5 10 Q37 5, 32 0 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="1"/>' +
-      '<circle cx="32" cy="4" r="2" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
-      '<path d="M21 11 C26 7, 38 7, 43 11" stroke="#d4a017" stroke-width="2" fill="none"/>' +
+      /* big rounded helmet — the focal point */
+      '<ellipse cx="32" cy="25" rx="17.5" ry="18.5" fill="url(#tmhg)" stroke="#8a8f98" stroke-width="1.5"/>' +
+      /* dome highlight + soft side shading */
+      '<path d="M19.5 17 C22.5 10.5, 29 7.5, 35.5 8" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.95" stroke-linecap="round"/>' +
+      '<path d="M46.5 21 C48.5 27.5, 47.5 35, 43 40.5" stroke="#aeb4bd" stroke-width="2.4" fill="none" opacity="0.7" stroke-linecap="round"/>' +
+      '<path d="M17.5 21 C15.5 27.5, 16.5 35, 21 40.5" stroke="#aeb4bd" stroke-width="2.4" fill="none" opacity="0.7" stroke-linecap="round"/>' +
+      /* gold helmet band */
+      '<path d="M16.5 32 C22 36.5, 42 36.5, 47.5 32" stroke="url(#tmgd)" stroke-width="2.2" fill="none" stroke-linecap="round"/>' +
+      /* gold crest — soft rounded fin */
+      '<path d="M32 -1 Q26.5 4.5, 27 10.5 L37 10.5 Q37.5 4.5, 32 -1 Z" fill="url(#tmgd)" stroke="#d4a017" stroke-width="1"/>' +
+      '<circle cx="32" cy="3.2" r="2.2" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.8"/>' +
+      '<circle cx="32" cy="3.2" r="0.9" fill="#fff3c4"/>' +
+      '<path d="M20.5 10.5 C26 6.5, 38 6.5, 43.5 10.5" stroke="#d4a017" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.9"/>' +
       /* dark face opening */
-      '<ellipse cx="32" cy="29" rx="9.5" ry="11" fill="#1a1a1a"/>' +
+      '<ellipse cx="32" cy="28.5" rx="10" ry="11.5" fill="url(#tmfg)"/>' +
       /* ornate gold ring around the face */
-      '<ellipse cx="32" cy="29" rx="11" ry="12.5" fill="none" stroke="#d4a017" stroke-width="2.5"/>' +
-      '<circle cx="32" cy="15.5" r="1.5" fill="#ffd54a"/>' +
-      '<circle cx="22.5" cy="21" r="1.5" fill="#ffd54a"/>' +
-      '<circle cx="41.5" cy="21" r="1.5" fill="#ffd54a"/>' +
-      '<circle cx="21" cy="32" r="1.5" fill="#ffd54a"/>' +
-      '<circle cx="43" cy="32" r="1.5" fill="#ffd54a"/>' +
+      '<ellipse cx="32" cy="28.5" rx="11.6" ry="13.1" fill="none" stroke="url(#tmgd)" stroke-width="3"/>' +
+      '<ellipse cx="32" cy="28.5" rx="11.6" ry="13.1" fill="none" stroke="#8a5a00" stroke-width="0.7" opacity="0.6"/>' +
+      '<circle cx="32" cy="14.6" r="1.7" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.6"/>' +
+      '<circle cx="21.8" cy="20.5" r="1.7" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.6"/>' +
+      '<circle cx="42.2" cy="20.5" r="1.7" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.6"/>' +
+      '<circle cx="20.2" cy="32" r="1.7" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.6"/>' +
+      '<circle cx="43.8" cy="32" r="1.7" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.6"/>' +
       /* soft rounded gold chin guard */
-      '<ellipse cx="32" cy="44" rx="5" ry="3" fill="#d4a017"/>' +
-      '<ellipse cx="32" cy="43.4" rx="3.4" ry="1.8" fill="#ffd54a" opacity="0.7"/>' +
-      /* big friendly glowing eyes with sparkles */
+      '<ellipse cx="32" cy="44.5" rx="5.4" ry="3.2" fill="url(#tmgd)" stroke="#d4a017" stroke-width="0.8"/>' +
+      '<ellipse cx="32" cy="43.8" rx="3.6" ry="1.9" fill="#fff3c4" opacity="0.55"/>' +
+      /* big cute glowing eyes with sparkles */
       '<g id="tm-eyes">' +
-      '<ellipse cx="28" cy="28.5" rx="3.6" ry="4.4" fill="#00e5ff"/>' +
-      '<ellipse cx="36" cy="28.5" rx="3.6" ry="4.4" fill="#00e5ff"/>' +
-      '<ellipse cx="28" cy="28.5" rx="5" ry="5.8" fill="#00e5ff" opacity="0.22"/>' +
-      '<ellipse cx="36" cy="28.5" rx="5" ry="5.8" fill="#00e5ff" opacity="0.22"/>' +
-      '<circle cx="29.2" cy="26.8" r="1.2" fill="#ffffff" opacity="0.9"/>' +
-      '<circle cx="37.2" cy="26.8" r="1.2" fill="#ffffff" opacity="0.9"/>' +
+      '<ellipse cx="27.6" cy="28" rx="5.2" ry="6" fill="#00e5ff" opacity="0.22"/>' +
+      '<ellipse cx="36.4" cy="28" rx="5.2" ry="6" fill="#00e5ff" opacity="0.22"/>' +
+      '<ellipse cx="27.6" cy="28" rx="4" ry="5" fill="#00e5ff"/>' +
+      '<ellipse cx="36.4" cy="28" rx="4" ry="5" fill="#00e5ff"/>' +
+      '<ellipse cx="27.6" cy="28" rx="4" ry="5" fill="none" stroke="#7df3ff" stroke-width="0.8" opacity="0.8"/>' +
+      '<ellipse cx="36.4" cy="28" rx="4" ry="5" fill="none" stroke="#7df3ff" stroke-width="0.8" opacity="0.8"/>' +
+      '<circle cx="29" cy="25.8" r="1.5" fill="#ffffff" opacity="0.95"/>' +
+      '<circle cx="37.8" cy="25.8" r="1.5" fill="#ffffff" opacity="0.95"/>' +
+      '<circle cx="26.6" cy="30.5" r="0.7" fill="#ffffff" opacity="0.7"/>' +
+      '<circle cx="35.4" cy="30.5" r="0.7" fill="#ffffff" opacity="0.7"/>' +
       '</g>' +
-      /* blush marks + tiny smile = huggable */
-      '<ellipse cx="24.5" cy="34" rx="2.2" ry="1.4" fill="#ff9db0" opacity="0.55"/>' +
-      '<ellipse cx="39.5" cy="34" rx="2.2" ry="1.4" fill="#ff9db0" opacity="0.55"/>' +
-      '<path d="M29 37 Q32 39 35 37" stroke="#ffd54a" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.9"/>' +
+      /* bigger soft blush + tiny smile = huggable */
+      '<ellipse cx="23.6" cy="34.5" rx="2.8" ry="1.8" fill="#ff9db0" opacity="0.6"/>' +
+      '<ellipse cx="40.4" cy="34.5" rx="2.8" ry="1.8" fill="#ff9db0" opacity="0.6"/>' +
+      '<path d="M29 37.5 Q32 39.8 35 37.5" stroke="#ffd54a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.95"/>' +
       /* holiday costume sits on top of the helmet */
       '<g id="tm-costume">' + costume + '</g>' +
       '</svg>';
