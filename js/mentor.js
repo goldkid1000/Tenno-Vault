@@ -6,8 +6,10 @@
 (function () {
   'use strict';
 
-  /* ---------- SVG character: sleek Warframe ninja, ~60px ----------
-     Arms/eyes are groups with ids so CSS can animate them. */
+  /* ---------- SVG character: chibi Warframe, sitting pose ----------
+     Big rounded helmet with ornate gold Orokin faceplate, stubby white body,
+     folded legs, hands resting on knees. #tm-eyes (blink), #tm-arm-r (wave/point),
+     #tm-costume (holiday hats, drawn on top) are kept for the animation system. */
   function charSVG(mode) {
     var costume = '';
     try {
@@ -17,53 +19,76 @@
     } catch (e) { costume = ''; }
     var armR = (mode === 'point')
       ? '<g id="tm-arm-r">' +
-        '<path d="M36 38 L60 28" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
-        '<path d="M36 38 L60 28" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
-        '<path d="M44 34 L60 28" stroke="#00e5ff" stroke-width="1.2" opacity="0.8"/>' +
-        '<circle cx="62" cy="27" r="3.2" fill="#ffd54a"/><circle cx="62" cy="27" r="6" fill="#ffd54a" opacity="0.25"/></g>'
+        '<path d="M42 46 L59 33" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
+        '<path d="M42 46 L59 33" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
+        '<circle cx="60" cy="32" r="4" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/>' +
+        '<circle cx="60" cy="32" r="2.4" fill="#ffd54a"/>' +
+        '<circle cx="60" cy="32" r="5" fill="#ffd54a" opacity="0.25"/></g>'
       : '<g id="tm-arm-r">' +
-        '<path d="M37 36 L43 50" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
-        '<path d="M37 36 L43 50" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
-        '<path d="M39 40 L43 50" stroke="#00e5ff" stroke-width="1" opacity="0.6"/></g>';
+        '<path d="M42 46 C47 50, 49 55, 48 60" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
+        '<path d="M42 46 C47 50, 49 55, 48 60" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
+        '<path d="M45.5 52 L48 57" stroke="#d4a017" stroke-width="2" opacity="0.9"/>' +
+        '<circle cx="48" cy="62" r="4.2" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/></g>';
     return '<svg viewBox="0 0 64 76" width="64" height="76" aria-hidden="true">' +
-      '<g id="tm-costume">' + costume + '</g>' +
-      /* syandana (cape) flowing behind — Warframe signature */
-      '<path d="M30 36 C16 40 10 54 12 72 C22 62 28 48 32 42 Z" fill="#0a1626" stroke="#00e5ff" stroke-width="1" opacity="0.9"/>' +
-      '<path d="M32 40 C24 46 20 56 20 68" stroke="#00e5ff" stroke-width="0.8" opacity="0.4" fill="none"/>' +
-      /* legs — armored greaves */
-      '<path d="M25 58 L24 70 M35 58 L36 70" stroke="#141c2a" stroke-width="5" stroke-linecap="round"/>' +
-      '<path d="M25 62 L24 66 M35 62 L36 66" stroke="#ffd54a" stroke-width="1.2" opacity="0.7"/>' +
-      /* torso — angular Warframe chest */
-      '<path d="M30 30 L22 36 L24 56 L30 60 L36 56 L38 36 Z" fill="#1a2433" stroke="#2a3a52" stroke-width="1"/>' +
-      /* chest plate with Orokin gold trim */
-      '<path d="M26 36 L34 36 L32 48 L28 48 Z" fill="#243447" stroke="#ffd54a" stroke-width="1.2"/>' +
-      '<circle cx="30" cy="42" r="2" fill="#00e5ff"/>' +
-      '<circle cx="30" cy="42" r="3.5" fill="#00e5ff" opacity="0.2"/>' +
-      /* shoulder plates */
-      '<ellipse cx="21" cy="35" rx="4" ry="3" fill="#243447" stroke="#ffd54a" stroke-width="0.8"/>' +
-      '<ellipse cx="39" cy="35" rx="4" ry="3" fill="#243447" stroke="#ffd54a" stroke-width="0.8"/>' +
-      /* left arm */
-      '<path d="M22 36 L16 50" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
-      '<path d="M22 36 L16 50" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
-      '<path d="M20 40 L16 50" stroke="#00e5ff" stroke-width="1" opacity="0.6"/>' +
+      /* folded legs — sitting cross-legged */
+      '<ellipse cx="21" cy="66" rx="11" ry="6" fill="#8a8f98"/>' +
+      '<ellipse cx="43" cy="66" rx="11" ry="6" fill="#8a8f98"/>' +
+      '<ellipse cx="21" cy="66" rx="11" ry="6" fill="none" stroke="#6e737b" stroke-width="1"/>' +
+      '<ellipse cx="43" cy="66" rx="11" ry="6" fill="none" stroke="#6e737b" stroke-width="1"/>' +
+      '<path d="M13 64 C17 62, 25 62, 29 64" stroke="#a9adb4" stroke-width="1.4" fill="none"/>' +
+      '<path d="M35 64 C39 62, 47 62, 51 64" stroke="#a9adb4" stroke-width="1.4" fill="none"/>' +
+      /* feet */
+      '<ellipse cx="11" cy="69" rx="5" ry="3.6" fill="#2a2a2a"/>' +
+      '<ellipse cx="53" cy="69" rx="5" ry="3.6" fill="#2a2a2a"/>' +
+      /* stubby torso */
+      '<path d="M32 42 L24 46 L23 60 L41 60 L40 46 Z" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1.2"/>' +
+      '<path d="M26 48 L25 58 M38 48 L39 58" stroke="#c6c9cf" stroke-width="1.4"/>' +
+      /* gold chest plates */
+      '<path d="M28 50 L32 54 L28 58 L24 54 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
+      '<path d="M36 50 L40 54 L36 58 L32 54 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
+      /* left arm resting on knee */
+      '<path d="M22 46 C17 50, 15 55, 16 60" stroke="#8a8f98" stroke-width="8" stroke-linecap="round"/>' +
+      '<path d="M22 46 C17 50, 15 55, 16 60" stroke="#e8e8e8" stroke-width="5.5" stroke-linecap="round"/>' +
+      '<path d="M18.5 52 L16 57" stroke="#d4a017" stroke-width="2" opacity="0.9"/>' +
+      '<circle cx="16" cy="62" r="4.2" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1"/>' +
       armR +
-      /* Warframe helmet — angular with Excalibur-style crest */
-      '<path d="M30 6 L20 12 L19 24 L24 32 L36 32 L41 24 L40 12 Z" fill="#1a2433" stroke="#00e5ff" stroke-width="1.5"/>' +
-      /* crest fin (Excalibur-style) */
-      '<path d="M30 6 L27 -2 L33 -2 Z" fill="#ffd54a"/>' +
-      '<path d="M30 6 L28.5 0 L31.5 0 Z" fill="#ffedaa"/>' +
-      /* cheek guards */
-      '<path d="M19 24 L22 30 L22 26 Z" fill="#2a3a52"/>' +
-      '<path d="M41 24 L38 30 L38 26 Z" fill="#2a3a52"/>' +
-      /* glowing visor — single Warframe-style slit */
+      /* big rounded helmet */
+      '<ellipse cx="32" cy="26" rx="17" ry="18" fill="#e8e8e8" stroke="#8a8f98" stroke-width="1.5"/>' +
+      /* dome highlight + side shading */
+      '<path d="M20 18 C23 12, 29 9, 35 9" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.9" stroke-linecap="round"/>' +
+      '<path d="M46 22 C48 28, 47 35, 43 40" stroke="#b9bdc4" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>' +
+      '<path d="M18 22 C16 28, 17 35, 21 40" stroke="#b9bdc4" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>' +
+      /* gold crest on top — soft rounded fin */
+      '<path d="M32 0 Q27 5, 27.5 10 L36.5 10 Q37 5, 32 0 Z" fill="#ffd54a" stroke="#d4a017" stroke-width="1"/>' +
+      '<circle cx="32" cy="4" r="2" fill="#ffd54a" stroke="#d4a017" stroke-width="0.8"/>' +
+      '<path d="M21 11 C26 7, 38 7, 43 11" stroke="#d4a017" stroke-width="2" fill="none"/>' +
+      /* dark face opening */
+      '<ellipse cx="32" cy="29" rx="9.5" ry="11" fill="#1a1a1a"/>' +
+      /* ornate gold ring around the face */
+      '<ellipse cx="32" cy="29" rx="11" ry="12.5" fill="none" stroke="#d4a017" stroke-width="2.5"/>' +
+      '<circle cx="32" cy="15.5" r="1.5" fill="#ffd54a"/>' +
+      '<circle cx="22.5" cy="21" r="1.5" fill="#ffd54a"/>' +
+      '<circle cx="41.5" cy="21" r="1.5" fill="#ffd54a"/>' +
+      '<circle cx="21" cy="32" r="1.5" fill="#ffd54a"/>' +
+      '<circle cx="43" cy="32" r="1.5" fill="#ffd54a"/>' +
+      /* soft rounded gold chin guard */
+      '<ellipse cx="32" cy="44" rx="5" ry="3" fill="#d4a017"/>' +
+      '<ellipse cx="32" cy="43.4" rx="3.4" ry="1.8" fill="#ffd54a" opacity="0.7"/>' +
+      /* big friendly glowing eyes with sparkles */
       '<g id="tm-eyes">' +
-      '<path d="M22 20 L38 20 L36 24 L24 24 Z" fill="#00e5ff"/>' +
-      '<path d="M22 20 L38 20 L36 24 L24 24 Z" fill="#b3f5ff" opacity="0.5"/>' +
-      '<ellipse cx="30" cy="22" rx="10" ry="4" fill="#00e5ff" opacity="0.15"/>' +
+      '<ellipse cx="28" cy="28.5" rx="3.6" ry="4.4" fill="#00e5ff"/>' +
+      '<ellipse cx="36" cy="28.5" rx="3.6" ry="4.4" fill="#00e5ff"/>' +
+      '<ellipse cx="28" cy="28.5" rx="5" ry="5.8" fill="#00e5ff" opacity="0.22"/>' +
+      '<ellipse cx="36" cy="28.5" rx="5" ry="5.8" fill="#00e5ff" opacity="0.22"/>' +
+      '<circle cx="29.2" cy="26.8" r="1.2" fill="#ffffff" opacity="0.9"/>' +
+      '<circle cx="37.2" cy="26.8" r="1.2" fill="#ffffff" opacity="0.9"/>' +
       '</g>' +
-      /* gold accents on helmet */
-      '<path d="M24 14 L28 14" stroke="#ffd54a" stroke-width="1" opacity="0.8"/>' +
-      '<path d="M32 14 L36 14" stroke="#ffd54a" stroke-width="1" opacity="0.8"/>' +
+      /* blush marks + tiny smile = huggable */
+      '<ellipse cx="24.5" cy="34" rx="2.2" ry="1.4" fill="#ff9db0" opacity="0.55"/>' +
+      '<ellipse cx="39.5" cy="34" rx="2.2" ry="1.4" fill="#ff9db0" opacity="0.55"/>' +
+      '<path d="M29 37 Q32 39 35 37" stroke="#ffd54a" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.9"/>' +
+      /* holiday costume sits on top of the helmet */
+      '<g id="tm-costume">' + costume + '</g>' +
       '</svg>';
   }
 

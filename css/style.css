@@ -1094,3 +1094,244 @@ a.card:active { transform: scale(.98); }
   #tv-mentor.entering, .tv-mentor-dot { animation: none !important; }
   #tv-mentor, .tv-mentor-bubble, #tv-mentor.pointing { transition: none; }
 }
+
+/* ---------- Slide-in chat panel ---------- */
+#tv-chat-fab {
+  position: fixed; right: 18px; bottom: 84px; z-index: 80;
+  width: 52px; height: 52px; border-radius: 50%; border: none; cursor: pointer;
+  background: linear-gradient(135deg, #7b2ff7, #00e5ff);
+  box-shadow: 0 4px 18px rgba(123,47,247,.4);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s ease, filter .2s ease;
+}
+#tv-chat-fab:hover { transform: scale(1.08); filter: brightness(1.1); }
+.tv-chat-fab-icon { font-size: 24px; line-height: 1; }
+.tv-chat-badge {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 22px; height: 22px; padding: 0 5px;
+  background: #ff3b5c; color: #fff; font-size: 12px; font-weight: 800;
+  border-radius: 999px; display: flex; align-items: center; justify-content: center;
+  border: 2px solid #0a0e1a; box-shadow: 0 2px 8px rgba(0,0,0,.5);
+  animation: tv-chat-badge-pop .3s cubic-bezier(.2,1.4,.4,1);
+}
+@keyframes tv-chat-badge-pop {
+  0% { transform: scale(0); } 100% { transform: scale(1); }
+}
+#tv-chat-backdrop {
+  position: fixed; inset: 0; z-index: 94; background: rgba(0,0,0,.5);
+  opacity: 0; transition: opacity .3s ease;
+}
+#tv-chat-backdrop.show { opacity: 1; }
+#tv-chat-panel {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 95;
+  width: min(380px, 100vw); display: flex; flex-direction: column;
+  background: var(--card, #0d1622); border-left: 1px solid var(--border, #1e2a3a);
+  box-shadow: -8px 0 30px rgba(0,0,0,.5);
+  transform: translateX(105%); transition: transform .32s cubic-bezier(.2,.9,.3,1);
+  padding-top: env(safe-area-inset-top);
+}
+#tv-chat-panel.open { transform: translateX(0); }
+.tv-chat-panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; border-bottom: 1px solid var(--border, #1e2a3a);
+}
+.tv-chat-panel-head h2 { margin: 0; font-size: 1.1rem; }
+#tv-chat-close {
+  background: none; border: none; color: inherit; font-size: 28px; line-height: 1;
+  cursor: pointer; padding: 4px 8px; border-radius: 8px; min-width: 44px; min-height: 44px;
+}
+#tv-chat-close:hover { background: rgba(255,255,255,.08); }
+.tv-chat-panel-body {
+  flex: 1; display: flex; flex-direction: column; padding: 12px; min-height: 0;
+}
+body.tv-chat-lock { overflow: hidden; }
+@media (max-width: 768px) {
+  #tv-chat-fab { right: 12px; bottom: 152px; }
+}
+@media (min-width: 769px) {
+  #tv-chat-backdrop { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tv-chat-panel, #tv-chat-backdrop, #tv-chat-fab { transition: none; }
+  .tv-chat-badge { animation: none; }
+}
+
+/* ============================================================
+   ===== MOBILE REDESIGN =====
+   Phones only: (max-width: 767px).
+   Tablets (768px+) and desktop keep the current design — this
+   section must not alter anything at 768px and up.
+   CSS-only: no HTML/JS changes, all selectors preserved.
+   ============================================================ */
+@media (max-width: 767px){
+
+  /* ---------- 1. native app feel ---------- */
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",
+      "Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+    font-size:16px; line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1{font-size:1.65rem;line-height:1.25}
+  h2{font-size:1.35rem;line-height:1.3}
+  h3{font-size:1.15rem;line-height:1.35}
+  p{line-height:1.6}
+
+  /* ---------- 2. sticky app header: compact, glassy ---------- */
+  #site-header{
+    background:rgba(10,14,19,.88);
+    -webkit-backdrop-filter:blur(16px) saturate(1.3);
+    backdrop-filter:blur(16px) saturate(1.3);
+    border-bottom:1px solid rgba(0,210,255,.14);
+  }
+  .header-inner{padding:10px 14px;gap:10px}
+  .logo{font-size:1.08rem;letter-spacing:.3px}
+  /* search: prominent, full-width, thumb-friendly, no iOS zoom */
+  .search-wrap{order:3;flex-basis:100%;max-width:none}
+  #global-search{
+    font-size:16px;               /* 16px stops iOS auto-zoom on focus */
+    min-height:52px;
+    padding:14px 20px;
+    border-radius:16px;
+    border:1px solid rgba(0,210,255,.25);
+    background:rgba(13,18,25,.9);
+    box-shadow:inset 0 2px 8px rgba(0,0,0,.35);
+  }
+  #global-search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,210,255,.18)}
+
+  /* ---------- 3. floating glassmorphic bottom tab bar ---------- */
+  #tabbar{
+    left:12px; right:12px; top:auto;
+    bottom:calc(10px + env(safe-area-inset-bottom));
+    border-radius:26px;
+    background:rgba(13,18,25,.72);
+    -webkit-backdrop-filter:blur(22px) saturate(1.5);
+    backdrop-filter:blur(22px) saturate(1.5);
+    border:1px solid rgba(0,210,255,.18);
+    box-shadow:0 12px 36px rgba(0,0,0,.55), 0 0 24px rgba(0,210,255,.08);
+    padding:8px 6px;
+  }
+  #tabbar a{
+    min-height:60px;              /* 56px+ touch targets */
+    border-radius:18px;
+    font-size:.66rem; font-weight:700; letter-spacing:.2px;
+    padding:8px 2px 6px;
+    transition:background .18s ease, box-shadow .18s ease, color .18s ease;
+  }
+  #tabbar a .ti{font-size:1.55rem;margin-bottom:2px}
+  #tabbar a.active{
+    color:#fff;
+    background:linear-gradient(135deg,rgba(0,144,184,.55),rgba(0,210,255,.35));
+    box-shadow:0 0 18px rgba(0,210,255,.45),
+      inset 0 0 0 1px rgba(0,210,255,.55),
+      inset 0 1px 0 rgba(255,255,255,.18);
+    text-shadow:0 0 12px rgba(0,210,255,.9);
+  }
+  #tabbar a.active::after{display:none}  /* pill replaces the old top bar */
+  #tabbar a:active{transform:scale(.94)}
+
+  /* ---------- 4. compact mobile hero + horizontal stat scroll ---------- */
+  .tv-hero{
+    padding:26px 20px 22px;
+    border-radius:20px;
+    margin-bottom:20px;
+  }
+  .tv-hero h1{font-size:1.5rem;margin-bottom:.3em}
+  .tv-hero .hero-sub{font-size:1rem;margin-bottom:14px}
+  .tv-stats{
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:10px;
+    max-width:none;
+    margin:14px -20px 0;
+    padding:4px 20px 10px;
+    scroll-snap-type:x proximity;
+  }
+  .tv-stats::-webkit-scrollbar{display:none}
+  .tv-stat{
+    flex:0 0 auto;
+    min-width:128px;
+    scroll-snap-align:start;
+    padding:14px 12px;
+    border-radius:16px;
+    border:1px solid rgba(0,210,255,.16);
+    background:rgba(19,26,36,.85);
+  }
+  .tv-stat b{font-size:1.75rem}
+  .tv-stat span{font-size:.68rem}
+
+  /* ---------- 5. cards become full-width mobile sheets ---------- */
+  main{padding:16px 14px 140px}   /* clearance for the floating tabbar */
+  .card{
+    border-radius:20px;
+    padding:22px 20px;
+    border:1px solid rgba(34,48,70,.9);
+    box-shadow:0 6px 24px rgba(0,0,0,.28);
+  }
+  .card h3{font-size:1.2rem;margin:.25em 0 .45em}
+  .card p{font-size:1rem;line-height:1.6;color:var(--muted)}
+  .card .icon{font-size:2rem}
+  .card-grid{gap:14px}
+  .item-list{gap:12px}
+  .list-item{
+    border-radius:18px;
+    padding:18px 16px;
+    box-shadow:0 4px 18px rgba(0,0,0,.25);
+  }
+  .list-item h3{font-size:1.15rem}
+  .list-item p{font-size:.98rem;line-height:1.55}
+  .detail-box{border-radius:20px;padding:22px 18px}
+  .video-card{border-radius:20px}
+
+  /* ---------- 6. buttons: full-width primaries, 52px touch ---------- */
+  .btn{min-height:52px;font-size:1rem;border-radius:14px;padding:13px 20px}
+  .btn.small{min-height:48px;font-size:.92rem}
+  main .btn.primary{width:100%;font-size:1.05rem;font-weight:700}
+  /* keep chat send buttons inline */
+  .tv-chat-form .btn.primary{width:auto;min-height:52px}
+  .chip{min-height:48px;font-size:.95rem;padding:10px 18px;border-radius:999px}
+  .vai-chip{min-height:44px;font-size:.85rem;padding:8px 16px}
+
+  /* ---------- 7. chat drawer: full-screen on phones ---------- */
+  #tv-chat-panel{
+    width:100vw; max-width:100vw;
+    border-left:none;
+    padding-top:env(safe-area-inset-top);
+  }
+  .tv-chat-panel-head{padding:16px}
+  .tv-chat-panel-head h2{font-size:1.25rem}
+  #tv-chat-close{min-width:52px;min-height:52px;font-size:32px}
+
+  /* ---------- 8. floating buttons clear the new tabbar ---------- */
+  #tv-chat-fab{right:14px;bottom:170px;width:56px;height:56px}
+  #vault-ai-btn{right:14px;bottom:102px;padding:13px 20px}
+  #vault-ai-panel{right:12px;left:12px;width:auto;bottom:172px;height:min(560px,62vh)}
+  #tv-mentor{left:10px;bottom:104px}
+  .tv-online-pill{font-size:16px;padding:10px 20px}
+
+  /* ---------- 9. forms & inputs: thumb-friendly ---------- */
+  input[type="text"],input[type="number"],input[type="search"],textarea,select{
+    font-size:16px;               /* stops iOS zoom */
+    min-height:52px;
+    border-radius:14px;
+  }
+  #pp-amount{min-height:56px;font-size:1.3rem}
+  #vai-input{min-height:52px;font-size:16px}
+  #vai-form button[type=submit]{width:52px;height:52px;font-size:1.15rem}
+
+  /* ---------- 10. tables & detail rows stack cleanly ---------- */
+  .mod-row{flex-direction:column;gap:6px;align-items:stretch}
+  .stat-row{gap:10px}
+  .detail-head img{width:96px;height:96px;border-radius:18px}
+
+  /* ---------- 11. update banner: full-bleed app feel ---------- */
+  #tv-update-banner{padding:14px 16px;padding-top:max(14px, env(safe-area-inset-top))}
+  .tv-update-text{font-size:16px}
+
+  /* ---------- 12. mentor bubble: roomier ---------- */
+  .tv-mentor-bubble{max-width:230px;font-size:14px;line-height:1.5;border-radius:16px}
+}
