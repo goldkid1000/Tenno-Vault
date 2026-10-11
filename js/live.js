@@ -19,13 +19,21 @@
 
   /* one shared 1s ticker: recomputes every [data-countdown] from Date.now(),
      so timers stay accurate even after the tab was backgrounded */
+  var lastCycleRefresh = 0;
   function tickCountdowns() {
     var els = document.querySelectorAll('[data-countdown]');
     var now = Date.now();
+    var expired = false;
     for (var i = 0; i < els.length; i++) {
       var iso = els[i].getAttribute('data-countdown');
       var ms = new Date(iso).getTime() - now;
+      if (ms <= 0) expired = true;
       els[i].textContent = fmtHMS(ms);
+    }
+    /* a cycle just flipped — refresh immediately for the new state (max once per 10s) */
+    if (expired && typeof loadWorld === 'function' && now - lastCycleRefresh > 10000) {
+      lastCycleRefresh = now;
+      try { loadWorld(); } catch (e) {}
     }
   }
 
