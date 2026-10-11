@@ -574,7 +574,8 @@
     state: 'idle',           // idle, walking, falling, dragging, climbing, sleeping
     groundY: 90,             // bottom resting position — above the tab bar
     dragging: false,
-    lastAction: 0
+    lastAction: 0,
+    homeX: 0                // his home spot — returns here
   };
 
   function shimejiInit() {
@@ -583,6 +584,7 @@
     /* home spot: right side, above the tab bar */
     shimeji.y = shimeji.groundY;
     shimeji.x = Math.max(14, window.innerWidth - 110);
+    shimeji.homeX = shimeji.x;
     positionShimeji();
     /* drag interactions */
     var char = els.char;
@@ -687,8 +689,7 @@
           if (legs) legs.setAttribute('transform', 'translate(0 ' + (Math.sin(t * 3.5) * -3).toFixed(1) + ')');
           /* head: look side to side + bob */
           if (head) head.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.1) * 7).toFixed(1) + ' 32 40) translate(0 ' + (Math.sin(t * 2.8) * 1.5).toFixed(1) + ')');
-          /* whole body: gentle groove */
-          if (svg) svg.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.6) * 2.5).toFixed(1) + ' 32 70)');
+          /* NO whole-svg transform — it clips and distorts */
         }
       } catch (e) {}
       requestAnimationFrame(tick);
@@ -772,16 +773,24 @@
       return;
     }
     var roll = Math.random();
-    if (roll < 0.3) {
-      /* go for a walk */
+    if (roll < 0.25) {
+      /* short walk, then return home */
       shimeji.state = 'walking';
+      shimeji.dir = -1; /* walk left, away from edge */
+      flipShimeji();
       if (els.char) els.char.classList.add('walk-anim');
-      /* walk for 3-6 seconds */
+      /* walk for 2-3 seconds, then walk back home */
       setTimeout(function () {
-        shimeji.state = 'idle';
-        if (els.char) els.char.classList.remove('walk-anim');
-      }, 3000 + Math.random() * 3000);
-    } else if (roll < 0.4) {
+        shimeji.dir = 1; /* head back right */
+        flipShimeji();
+        setTimeout(function () {
+          shimeji.state = 'idle';
+          shimeji.x = shimeji.homeX;
+          positionShimeji();
+          if (els.char) els.char.classList.remove('walk-anim');
+        }, 2000);
+      }, 2000 + Math.random() * 1000);
+    } else if (roll < 0.35) {
       /* take a nap */
       shimeji.state = 'sleeping';
       if (els.char) els.char.classList.add('sleeping');
