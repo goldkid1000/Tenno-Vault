@@ -1461,3 +1461,11 @@ body[data-holiday="thanksgiving"] {
 body[data-holiday="thanksgiving"] .tv-hero-bg {
   background: radial-gradient(ellipse at 50% 30%, rgba(212,136,6,.1) 0%, transparent 60%);
 }
+
+/* Vaulty's hot takes */
+.vaulty-take {
+  background: rgba(0,229,255,.06); border-left: 3px solid #00e5ff;
+  padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 12px 0;
+  font-style: italic;
+}
+.vaulty-take b { font-style: normal; color: #00e5ff; }

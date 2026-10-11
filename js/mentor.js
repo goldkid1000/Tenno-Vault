@@ -125,15 +125,42 @@
       '</svg>';
   }
 
+  var VAULTY = 'Vaulty';
   var TIPS = {
-    'index': "Welcome to Tenno Vault, Tenno! I'm your guide. Tap me anytime to ask the AI anything about Warframe.",
-    'builds': "These are community builds. Tap the ⭐ filter to see only one-shot Steel Path builds.",
-    'starchart': "Tap any planet to see what drops there — resources, bosses, and frames.",
-    'donate': "Donations keep the lights on — no pressure though! Every bit helps.",
-    'live': "Check here for day/night cycles, fissures, and alerts — all live.",
-    'farming': "These are the best verified farms. Tap a currency for the fastest grind.",
-    'marketplace': "Post what you're selling or buying — trades happen in-game, no accounts needed."
+    'index': "Hiya, I'm Vaulty! 👋 Your tiny Vault keeper. Tap me anytime — I give great advice and terrible jokes.",
+    'builds': "Ooh, builds! My favorite. Tap the ⭐ filter for the spicy one-shot Steel Path stuff.",
+    'starchart': "Pick a planet, any planet! I'll tell you what's worth farming there.",
+    'donate': "Donations keep my little legs running! No pressure though — your company is enough. 🥺",
+    'live': "Live stuff! Cycles, fissures, alerts — fresher than a Forma'd Braton.",
+    'farming': "Grind time! These are the best farms. Trust me, I've run Ophelia like 400 times.",
+    'marketplace': "Buy low, sell high, Tenno! Just don't get scammed — I can't bail you out of that.",
+    'news': "Fresh off the press! I read patch notes so you don't have to. You're welcome.",
+    'chat': "The community hub! Be nice — I read everything. EVERYTHING. 👀",
+    'videos': "Grab popcorn! These are the best guides on YouTube right now."
   };
+
+  /* Vaulty's honest (and silly) takes on popular gear */
+  var TAKES = {
+    'kuva zarr': ["The Kuva Zarr? Absolute menace. Barrage mode goes BRRR. 10/10 would explode myself with it again.",
+                 "Kuva Zarr is what happens when a cannon and a shotgun have a beautiful baby."],
+    'torid': ["Torid with Incarnon? Disgusting. In the best way. It melts Steel Path like butter."],
+    'rubico prime': ["Rubico Prime. The sniper that made Eidolons cry. Still a headshot machine."],
+    'nova prime': ["Nova Prime is THAT frame. Speedva, Slowva, she does it all. My queen. 👑"],
+    'saryn': ["Saryn says 'what if the whole map just... died?' And honestly? Iconic behavior."],
+    'wukong': ["Wukong players are either chill or terrifying. No in-between. The clone does half your work though, respect."],
+    'octavia': ["Octavia is just Warframe's way of letting you win while teabagging. Musical teabagging."],
+    'revenant': ["Revenant Prime goes brrr and everything dies. Mesmer Skin is basically plot armor."],
+    'ignis wraith': ["The Ignis Wraith: for when aiming is too much effort. We've all been there."],
+    'xaku': ["Xaku is what happens when you put a Warframe in a blender and it comes out BETTER."],
+    'kullervo': ["Kullervo. Melee go brrr. One button, whole room deleted. Simple. Elegant. Violent."]
+  };
+  function vaultyTake(itemName) {
+    if (!itemName) return null;
+    var key = String(itemName).toLowerCase().trim();
+    var takes = TAKES[key];
+    if (!takes) return null;
+    return takes[Math.floor(Math.random() * takes.length)];
+  }
 
   var GREETINGS = [
     "Hello, Tenno! 👋",
@@ -421,7 +448,7 @@
   }
 
   window.TV = window.TV || {};
-  window.TV.mentor = { say: say, pointAt: pointAt, hide: hide, init: init };
+  window.TV.mentor = { say: say, pointAt: pointAt, hide: hide, init: init, take: vaultyTake, name: VAULTY };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);

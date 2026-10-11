@@ -96,10 +96,18 @@
     var b = null;
     for (var i = 0; i < builds.length; i++) if (builds[i].id === id) b = builds[i];
     if (!b) { box.innerHTML = ''; return; }
+    /* Vaulty's hot take on this item */
+    var takeHTML = '';
+    try {
+      if (window.TV && window.TV.mentor && typeof window.TV.mentor.take === 'function') {
+        var take = window.TV.mentor.take(b.item || b.name);
+        if (take) takeHTML = '<div class="vaulty-take"><b>🗨️ Vaulty says:</b> ' + esc(take) + '</div>';
+      }
+    } catch (e) {}
     box.innerHTML = '<div class="detail-box">' +
       (b.recommendedOneShot ? '<span class="badge recommended">⭐ Recommended one-shot</span>' : '') +
       window.TV.badge(b.tags) +
-      '<h2>' + esc(b.name) + '</h2><p>' + esc(b.description) + '</p>' +
+      '<h2>' + esc(b.name) + '</h2>' + takeHTML + '<p>' + esc(b.description) + '</p>' +
       (b.progenitor ? '<p><b>Progenitor:</b> ' + esc(b.progenitor) + '</p>' : '') +
       (b.weaponNote ? '<p class="muted">' + esc(b.weaponNote) + '</p>' : '') +
       '<h3 class="mods-head">Mods <button type="button" class="btn small ghost" id="b-copymods">📋 Copy mod list</button></h3>' + b.mods.map(function (m) {
