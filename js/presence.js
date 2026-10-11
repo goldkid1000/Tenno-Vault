@@ -124,36 +124,15 @@
           });
           el.textContent = '🟢 ' + n + (n === 1 ? ' Tenno online' : ' Tenno online');
           el.style.display = '';
+          window.TV = window.TV || {};
+          window.TV._onlineCount = n;
         }, function () { el.style.display = 'none'; });
       } catch (e) { el.style.display = 'none'; }
     }
 
-    /* most-visited on the homepage */
-    var mv = document.getElementById('tv-most-visited');
-    if (mv) {
-      try {
-        db.collection('pageViews').orderBy('count', 'desc').limit(5)
-          .onSnapshot(function (snap) {
-            if (snap.empty) {
-              mv.innerHTML = '<p class="muted">No visits tracked yet — be the first, Tenno!</p>';
-              return;
-            }
-            var rows = [];
-            snap.forEach(function (doc) {
-              var d = doc.data();
-              var p = doc.id;
-              rows.push('<a class="list-item" href="' + p + '"><h3>🔥 ' +
-                escHtml(friendlyName(p)) + '</h3><p class="muted small">' +
-                Number(d.count || 0).toLocaleString() + ' visits</p></a>');
-            });
-            mv.innerHTML = rows.join('');
-          }, function () {
-            mv.innerHTML = '<p class="muted">Visit stats unavailable right now.</p>';
-          });
-      } catch (e) {
-        mv.innerHTML = '<p class="muted">Visit stats unavailable right now.</p>';
-      }
-    }
+    /* expose live count for the mentor character */
+    window.TV = window.TV || {};
+    window.TV.getOnlineCount = function () { return window.TV._onlineCount || 0; };
   }
 
   function escHtml(s) {
