@@ -682,9 +682,9 @@
           if (!armR && !findParts()) { requestAnimationFrame(tick); return; }
           var char = wrap.querySelector('.tv-mentor-char');
           var waving = char && char.classList.contains('wave');
-          /* arms: big opposite swings (pause right arm when waving) */
-          if (armR && !waving) armR.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2) * 22).toFixed(1) + ' 42 46)');
-          if (armL) armL.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2 + Math.PI) * 22).toFixed(1) + ' 22 46)');
+          /* arms: gentle natural sway (not flailing) */
+          if (armR && !waving) armR.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.8) * 6).toFixed(1) + ' 42 46)');
+          if (armL) armL.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.8 + Math.PI) * 6).toFixed(1) + ' 22 46)');
           /* legs: bounce */
           if (legs) legs.setAttribute('transform', 'translate(0 ' + (Math.sin(t * 3.5) * -3).toFixed(1) + ')');
           /* head: look side to side + bob */
