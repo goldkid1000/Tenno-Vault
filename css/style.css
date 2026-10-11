@@ -1568,3 +1568,16 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 @media (prefers-reduced-motion: reduce) {
   #tm-arm-r, #tm-arm-l, #tm-legs, #tm-head { animation: none !important; }
 }
+
+/* Back to top button */
+#tv-totop {
+  position: fixed; right: 16px; bottom: 90px; z-index: 65;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(0,229,255,.15); border: 1px solid rgba(0,229,255,.4);
+  color: #00e5ff; font-size: 20px; cursor: pointer;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+#tv-totop.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+#tv-totop:active { transform: scale(.92); }

@@ -345,6 +345,23 @@
       }).join('') + '</div></div>';
   }
 
+  /* ---------- back to top ---------- */
+  function buildToTop() {
+    var btn = document.createElement('button');
+    btn.id = 'tv-totop';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.textContent = '↑';
+    document.body.appendChild(btn);
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    var onScroll = function () {
+      btn.classList.toggle('show', window.scrollY > 600);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   /* ---------- init ---------- */
   document.addEventListener('DOMContentLoaded', function () {
     buildHeader();
@@ -353,6 +370,7 @@
     buildCrumbs();
     buildFooter();
     buildSearchOverlay();
+    buildToTop();
     /* back button: history.back() with homepage fallback */
     var backBtn = document.getElementById('tv-back');
     if (backBtn) {
