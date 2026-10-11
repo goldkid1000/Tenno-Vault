@@ -135,8 +135,8 @@
       engineLoading = false;
       engineFailed = true;
       hideProgress();
-      setStatus('Classic mode — quick answers', 'fallback');
-      addMsg('Couldn\'t start the AI engine on this device (needs WebGPU) — using the classic Vault Guide instead. Everything still works.', 'bot');
+      setStatus('Vault Guide — quick answers', 'fallback');
+      addMsg('Hey Tenno! ◈ Running in quick-answer mode on this device. Ask me about builds, farming, mods — anything Warframe.', 'bot');
     });
   }
 
@@ -259,8 +259,7 @@
         "Try a suggestion below or just ask.", 'bot');
       if (!hasWebGPU()) {
         engineFailed = true;
-        setStatus('Classic mode — quick answers', 'fallback');
-        addMsg('This device doesn\'t support WebGPU, so I\'m running the classic keyword guide. Everything still works — just less chatty.', 'bot');
+        setStatus('Vault Guide — quick answers', 'fallback');
       } else {
         loadEngine();
       }

@@ -16,35 +16,54 @@
       }
     } catch (e) { costume = ''; }
     var armR = (mode === 'point')
-      ? '<g id="tm-arm-r"><path d="M34 36 L58 26" stroke="#1a2433" stroke-width="5" stroke-linecap="round"/>' +
-        '<path d="M34 36 L58 26" stroke="#00e5ff" stroke-width="1" stroke-linecap="round" opacity="0.6"/>' +
-        '<circle cx="60" cy="25" r="3" fill="#ffd54a"/><circle cx="60" cy="25" r="5.5" fill="#ffd54a" opacity="0.25"/></g>'
-      : '<g id="tm-arm-r"><path d="M36 34 L42 48" stroke="#1a2433" stroke-width="5" stroke-linecap="round"/>' +
-        '<path d="M36 34 L42 48" stroke="#00e5ff" stroke-width="1" stroke-linecap="round" opacity="0.6"/></g>';
-    return '<svg viewBox="0 0 60 72" width="60" height="72" aria-hidden="true">' +
+      ? '<g id="tm-arm-r">' +
+        '<path d="M36 38 L60 28" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
+        '<path d="M36 38 L60 28" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
+        '<path d="M44 34 L60 28" stroke="#00e5ff" stroke-width="1.2" opacity="0.8"/>' +
+        '<circle cx="62" cy="27" r="3.2" fill="#ffd54a"/><circle cx="62" cy="27" r="6" fill="#ffd54a" opacity="0.25"/></g>'
+      : '<g id="tm-arm-r">' +
+        '<path d="M37 36 L43 50" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
+        '<path d="M37 36 L43 50" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
+        '<path d="M39 40 L43 50" stroke="#00e5ff" stroke-width="1" opacity="0.6"/></g>';
+    return '<svg viewBox="0 0 64 76" width="64" height="76" aria-hidden="true">' +
       '<g id="tm-costume">' + costume + '</g>' +
-      /* scarf/cape flowing behind */
-      '<path d="M30 34 C18 38 12 50 14 66 C22 58 26 46 30 40 Z" fill="#0d2233" stroke="#00e5ff" stroke-width="1" opacity="0.85"/>' +
-      /* body */
-      '<path d="M30 30 L24 58 L28 58 L30 46 L32 58 L36 58 Z" fill="#1a2433" stroke="#00e5ff" stroke-width="1.2"/>' +
-      /* chest plate */
-      '<path d="M25 32 L35 32 L33 44 L27 44 Z" fill="#243447" stroke="#ffd54a" stroke-width="1"/>' +
-      /* left arm (resting) */
-      '<path d="M24 34 L18 48" stroke="#1a2433" stroke-width="5" stroke-linecap="round"/>' +
-      '<path d="M24 34 L18 48" stroke="#00e5ff" stroke-width="1" stroke-linecap="round" opacity="0.6"/>' +
+      /* syandana (cape) flowing behind — Warframe signature */
+      '<path d="M30 36 C16 40 10 54 12 72 C22 62 28 48 32 42 Z" fill="#0a1626" stroke="#00e5ff" stroke-width="1" opacity="0.9"/>' +
+      '<path d="M32 40 C24 46 20 56 20 68" stroke="#00e5ff" stroke-width="0.8" opacity="0.4" fill="none"/>' +
+      /* legs — armored greaves */
+      '<path d="M25 58 L24 70 M35 58 L36 70" stroke="#141c2a" stroke-width="5" stroke-linecap="round"/>' +
+      '<path d="M25 62 L24 66 M35 62 L36 66" stroke="#ffd54a" stroke-width="1.2" opacity="0.7"/>' +
+      /* torso — angular Warframe chest */
+      '<path d="M30 30 L22 36 L24 56 L30 60 L36 56 L38 36 Z" fill="#1a2433" stroke="#2a3a52" stroke-width="1"/>' +
+      /* chest plate with Orokin gold trim */
+      '<path d="M26 36 L34 36 L32 48 L28 48 Z" fill="#243447" stroke="#ffd54a" stroke-width="1.2"/>' +
+      '<circle cx="30" cy="42" r="2" fill="#00e5ff"/>' +
+      '<circle cx="30" cy="42" r="3.5" fill="#00e5ff" opacity="0.2"/>' +
+      /* shoulder plates */
+      '<ellipse cx="21" cy="35" rx="4" ry="3" fill="#243447" stroke="#ffd54a" stroke-width="0.8"/>' +
+      '<ellipse cx="39" cy="35" rx="4" ry="3" fill="#243447" stroke="#ffd54a" stroke-width="0.8"/>' +
+      /* left arm */
+      '<path d="M22 36 L16 50" stroke="#141c2a" stroke-width="6" stroke-linecap="round"/>' +
+      '<path d="M22 36 L16 50" stroke="#2a3a52" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M20 40 L16 50" stroke="#00e5ff" stroke-width="1" opacity="0.6"/>' +
       armR +
-      /* helmet head with fin */
-      '<ellipse cx="30" cy="20" rx="11" ry="12" fill="#1a2433" stroke="#00e5ff" stroke-width="1.5"/>' +
-      '<path d="M30 8 L26 0 L34 0 Z" fill="#ffd54a"/>' +
-      /* glowing cyan visor eyes (blinkable) */
+      /* Warframe helmet — angular with Excalibur-style crest */
+      '<path d="M30 6 L20 12 L19 24 L24 32 L36 32 L41 24 L40 12 Z" fill="#1a2433" stroke="#00e5ff" stroke-width="1.5"/>' +
+      /* crest fin (Excalibur-style) */
+      '<path d="M30 6 L27 -2 L33 -2 Z" fill="#ffd54a"/>' +
+      '<path d="M30 6 L28.5 0 L31.5 0 Z" fill="#ffedaa"/>' +
+      /* cheek guards */
+      '<path d="M19 24 L22 30 L22 26 Z" fill="#2a3a52"/>' +
+      '<path d="M41 24 L38 30 L38 26 Z" fill="#2a3a52"/>' +
+      /* glowing visor — single Warframe-style slit */
       '<g id="tm-eyes">' +
-      '<ellipse cx="25" cy="20" rx="3.4" ry="2" fill="#00e5ff"/>' +
-      '<ellipse cx="35" cy="20" rx="3.4" ry="2" fill="#00e5ff"/>' +
-      '<ellipse cx="25" cy="20" rx="4.6" ry="3" fill="#00e5ff" opacity="0.25"/>' +
-      '<ellipse cx="35" cy="20" rx="4.6" ry="3" fill="#00e5ff" opacity="0.25"/>' +
+      '<path d="M22 20 L38 20 L36 24 L24 24 Z" fill="#00e5ff"/>' +
+      '<path d="M22 20 L38 20 L36 24 L24 24 Z" fill="#b3f5ff" opacity="0.5"/>' +
+      '<ellipse cx="30" cy="22" rx="10" ry="4" fill="#00e5ff" opacity="0.15"/>' +
       '</g>' +
-      /* legs */
-      '<path d="M26 58 L25 68 M34 58 L35 68" stroke="#1a2433" stroke-width="4" stroke-linecap="round"/>' +
+      /* gold accents on helmet */
+      '<path d="M24 14 L28 14" stroke="#ffd54a" stroke-width="1" opacity="0.8"/>' +
+      '<path d="M32 14 L36 14" stroke="#ffd54a" stroke-width="1" opacity="0.8"/>' +
       '</svg>';
   }
 
