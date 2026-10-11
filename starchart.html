@@ -399,17 +399,26 @@
     setupItemSearch();
     /* item deep-link: ?item=Ash+Prime */
     var q = params();
-    if (q.item && itemPlanets[q.item]) {
-      var entry = itemPlanets[q.item];
-      entry.zones.forEach(function (z) {
-        var g = bodiesG.querySelector('[data-id="' + z + '"]');
-        if (g) g.classList.add('target');
-      });
-      document.title = q.item + ' — Star Chart — Tenno Vault';
-      /* let the map render, then fly */
-      setTimeout(function () { flyTo(entry.zones, true); }, reduced ? 0 : 350);
-      /* auto-open the first zone's panel */
-      setTimeout(function () { selectBody(entry.zones[0], false); }, reduced ? 60 : 1500);
+    if (q.item) {
+      if (itemPlanets[q.item]) {
+        var entry = itemPlanets[q.item];
+        entry.zones.forEach(function (z) {
+          var g = bodiesG.querySelector('[data-id="' + z + '"]');
+          if (g) g.classList.add('target');
+        });
+        document.title = q.item + ' — Star Chart — Tenno Vault';
+        /* let the map render, then fly */
+        setTimeout(function () { flyTo(entry.zones, true); }, reduced ? 0 : 350);
+        /* auto-open the first zone's panel */
+        setTimeout(function () { selectBody(entry.zones[0], false); }, reduced ? 60 : 1500);
+      } else {
+        /* item not in farm data — tell the user instead of silently doing nothing */
+        document.getElementById('sc-hint').textContent = 'No farm data for "' + q.item + '" yet — try the search below';
+        var si = document.getElementById('sc-item-input');
+        if (si) { si.value = q.item; si.focus(); }
+        panel.innerHTML = '<div class="notice">We don\'t have farm locations for <b>' + esc(q.item) + '</b> yet. ' +
+          'Try searching for it below, or check the <a href="mods.html">Mods page</a> for its farm source.</div>';
+      }
     }
   }).catch(function () {
     panel.innerHTML = '<div class="notice">Couldn\'t load the star chart data — this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
