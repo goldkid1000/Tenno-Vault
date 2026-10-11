@@ -551,7 +551,64 @@
       }
     });
     schedulePopup();
+    startWandering();
     window.addEventListener('resize', resetPosition);
+  }
+
+  /* Vaulty wanders around on his own — a real living character */
+  var wanderTimer = null;
+  function startWandering() {
+    if (reducedMotion) return;
+    /* every 8-20 seconds, do something alive */
+    function wander() {
+      if (!els.wrap || !els.wrap.classList.contains('visible')) {
+        wanderTimer = setTimeout(wander, 5000);
+        return;
+      }
+      /* don't interrupt if he's talking or walking across */
+      if (els.wrap.classList.contains('walking') || document.querySelector('.tv-mentor-bubble')) {
+        wanderTimer = setTimeout(wander, 8000);
+        return;
+      }
+      var action = Math.random();
+      if (action < 0.3) {
+        /* hop to a new spot nearby */
+        hopToSpot();
+      } else if (action < 0.5) {
+        /* little jump for joy */
+        if (els.char) {
+          els.char.classList.add('excited');
+          setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 1000);
+        }
+      } else if (action < 0.65) {
+        /* spin */
+        if (els.char) {
+          els.char.classList.add('spin');
+          setTimeout(function () { if (els.char) els.char.classList.remove('spin'); }, 1000);
+        }
+      } else if (action < 0.8) {
+        /* wave at the user */
+        wave();
+      }
+      /* else: just keep bobbing, he's chilling */
+      wanderTimer = setTimeout(wander, 8000 + Math.random() * 12000);
+    }
+    wanderTimer = setTimeout(wander, 6000);
+  }
+
+  /* hop to a random nearby spot */
+  function hopToSpot() {
+    if (!els.wrap) return;
+    var maxX = Math.max(0, window.innerWidth - 120);
+    var newLeft = 14 + Math.random() * Math.min(maxX - 14, 300);
+    /* hop animation */
+    if (els.char) els.char.classList.add('excited');
+    els.wrap.style.transition = 'left .6s cubic-bezier(.3,1.4,.4,1)';
+    els.wrap.style.left = newLeft + 'px';
+    setTimeout(function () {
+      if (els.char) els.char.classList.remove('excited');
+      if (els.wrap) els.wrap.style.transition = '';
+    }, 700);
   }
 
   window.TV = window.TV || {};
