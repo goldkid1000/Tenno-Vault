@@ -5,7 +5,7 @@
 
   /* HH:MM:SS formatter for live ticking countdowns */
   function fmtHMS(ms) {
-    if (!(ms > 0)) return '🔄 refreshing...';
+    if (!(ms > 0)) return 'updating…';
     var s = Math.floor(ms / 1000);
     var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
     function p(n) { return (n < 10 ? '0' : '') + n; }
