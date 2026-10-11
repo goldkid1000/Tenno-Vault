@@ -568,23 +568,25 @@
 
   /* ===== SHIMEJI ENGINE — Vaulty is a living screen pet ===== */
   var shimeji = {
-    x: 0, y: 0,               // position (y from bottom) — set on init
+    x: 0, y: 0,               // position — set on init
     vx: 0, vy: 0,            // velocity
-    dir: -1,                 // facing: 1 right, -1 left (start facing left/inward)
+    dir: 1,                  // facing: 1 right, -1 left (start facing right/inward)
     state: 'idle',           // idle, walking, falling, dragging, climbing, sleeping
-    groundY: 90,             // bottom resting position — above the tab bar
+    groundY: 0,              // y position from top — set on init
     dragging: false,
     lastAction: 0,
-    homeX: 0                // his home spot — returns here
+    homeX: 0,                // his home spot — returns here
+    homeY: 0
   };
 
   function shimejiInit() {
     if (reducedMotion || !els.wrap) return;
     els.wrap.classList.add('shimeji');
-    /* home spot: right side, above the tab bar */
-    shimeji.y = shimeji.groundY;
-    shimeji.x = Math.max(14, window.innerWidth - 110);
+    /* home spot: left side, near the top below the header */
+    shimeji.x = 14;
+    shimeji.y = 110;
     shimeji.homeX = shimeji.x;
+    shimeji.homeY = shimeji.y;
     positionShimeji();
     /* drag interactions */
     var char = els.char;
@@ -607,10 +609,9 @@
     char.addEventListener('pointermove', function (e) {
       if (!shimeji.dragging) return;
       shimeji.x = origX + (e.clientX - startX);
-      /* y is from bottom, so invert */
-      shimeji.y = origY - (e.clientY - startY);
+      shimeji.y = origY + (e.clientY - startY);
       shimeji.x = Math.max(0, Math.min(window.innerWidth - 80, shimeji.x));
-      shimeji.y = Math.max(shimeji.groundY, Math.min(window.innerHeight - 80, shimeji.y));
+      shimeji.y = Math.max(60, Math.min(window.innerHeight - 80, shimeji.y));
       positionShimeji();
     });
     function drop(e) {
@@ -708,8 +709,8 @@
     if (!els.wrap) return;
     els.wrap.style.left = shimeji.x + 'px';
     els.wrap.style.right = 'auto';
-    els.wrap.style.top = 'auto';
-    els.wrap.style.bottom = shimeji.y + 'px';
+    els.wrap.style.top = shimeji.y + 'px';
+    els.wrap.style.bottom = 'auto';
     /* playful but polite: fade slightly when over the bottom tab bar */
     var tabbar = document.getElementById('tabbar');
     if (tabbar) {
@@ -776,16 +777,17 @@
     if (roll < 0.25) {
       /* short walk, then return home */
       shimeji.state = 'walking';
-      shimeji.dir = -1; /* walk left, away from edge */
+      shimeji.dir = 1; /* walk right, away from left edge */
       flipShimeji();
       if (els.char) els.char.classList.add('walk-anim');
       /* walk for 2-3 seconds, then walk back home */
       setTimeout(function () {
-        shimeji.dir = 1; /* head back right */
+        shimeji.dir = -1; /* head back left */
         flipShimeji();
         setTimeout(function () {
           shimeji.state = 'idle';
           shimeji.x = shimeji.homeX;
+          shimeji.y = shimeji.homeY;
           positionShimeji();
           if (els.char) els.char.classList.remove('walk-anim');
         }, 2000);
