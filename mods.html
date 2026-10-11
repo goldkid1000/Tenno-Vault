@@ -84,6 +84,13 @@
       '<p class="muted small">' + esc((m.effect || '').slice(0, 130)) + '</p></div></div>';
     return a;
   }
+  function vendorHTML(m) {
+    if (!m.vendors || !m.vendors.length) return '';
+    return '<div class="vendor-box"><h4>🛒 Buy from</h4>' + m.vendors.map(function (v) {
+      return '<p><b>' + esc(v.vendor) + '</b><br><span class="muted small">📍 ' + esc(v.location) +
+        '<br>💰 ' + esc(v.currency) + '</span></p>';
+    }).join('') + '</div>';
+  }
   function showDetail(name) {
     var box = document.getElementById('m-detail');
     var m = all.find(function (x) { return x.name === name; });
@@ -95,7 +102,7 @@
       (m.polarity ? '<span class="badge type">' + esc(m.polarity) + ' polarity</span> ' : '') +
       (m.compat ? '<span class="badge type">for ' + esc(m.compat) + '</span>' : '') + '</div></div>' +
       '<p><b>What it does (max rank):</b><br>' + esc(m.effect || 'No description available.') + '</p>' +
-      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + farmHTML(m) + '</p><p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(m.name) + '">🗺️ Star Chart</a></p></div></div>';
+      '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + farmHTML(m) + '</p>' + vendorHTML(m) + '<p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(m.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
       { label: 'Builds using this mod', sub: 'Steel Path & one-shot setups', url: 'builds.html' },
