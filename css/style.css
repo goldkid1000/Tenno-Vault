@@ -1469,3 +1469,7 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
   font-style: italic;
 }
 .vaulty-take b { font-style: normal; color: #00e5ff; }
+
+/* What's New list */
+.tv-whatsnew-list { margin: 6px 0; padding-left: 18px; font-size: 14px; }
+.tv-whatsnew-list li { margin: 3px 0; }

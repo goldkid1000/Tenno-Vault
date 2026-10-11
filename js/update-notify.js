@@ -49,10 +49,22 @@
     var b = document.createElement('div');
     b.id = 'tv-update-banner';
     b.setAttribute('role', 'alert');
+    /* parse notes into bullet list if comma-separated */
+    var notesHTML = '';
+    if (data.notes) {
+      var items = String(data.notes).split(/,\s*/);
+      if (items.length > 1) {
+        notesHTML = '<ul class="tv-whatsnew-list">' +
+          items.map(function (n) { return '<li>' + escapeHtml(n.trim()) + '</li>'; }).join('') +
+          '</ul>';
+      } else {
+        notesHTML = '<span>' + escapeHtml(data.notes) + '</span>';
+      }
+    }
     b.innerHTML =
-      '<span class="tv-update-icon">⬆️</span>' +
-      '<div class="tv-update-text"><b>Update available — v' + escapeHtml(data.version) + '</b>' +
-      (data.notes ? '<span>' + escapeHtml(data.notes) + '</span>' : '') +
+      '<span class="tv-update-icon">✨</span>' +
+      '<div class="tv-update-text"><b>What\'s new in v' + escapeHtml(data.version) + '</b>' +
+      notesHTML +
       '<span class="tv-update-sub">Refreshing to the latest version…</span></div>';
     document.body.appendChild(b);
     /* slide down */
