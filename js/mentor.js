@@ -122,6 +122,7 @@
       '<path d="M29 37.5 Q32 39.8 35 37.5" stroke="#ffd54a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.95"/>' +
       /* holiday costume sits on top of the helmet */
       '<g id="tm-costume">' + costume + '</g>' +
+      '<g id="tm-tab-accessory">' + tabAccessory() + '</g>' +
       '</svg>';
   }
 
@@ -270,6 +271,52 @@
   function dance() { playAnim('dance', 2000); }
   function squash() { playAnim('squash', 400); }
 
+  /* walk across the screen, then say something */
+  function walkAcross(msg) {
+    if (reducedMotion || !els.wrap) return;
+    build();
+    els.wrap.classList.add('visible');
+    /* start from left edge */
+    els.wrap.style.left = '-80px';
+    els.wrap.style.right = 'auto';
+    els.wrap.style.bottom = '14px';
+    els.wrap.style.top = 'auto';
+    els.wrap.classList.add('walking');
+    if (els.char) els.char.classList.add('walk-anim');
+    /* walk to right edge */
+    requestAnimationFrame(function () {
+      els.wrap.style.left = (window.innerWidth + 20) + 'px';
+    });
+    /* when he reaches the middle, say the message */
+    setTimeout(function () {
+      if (msg) say(msg, { duration: 6000 });
+      wave();
+    }, 4000);
+    /* clean up after crossing */
+    setTimeout(function () {
+      if (els.wrap) {
+        els.wrap.classList.remove('walking', 'visible');
+        els.wrap.style.left = '';
+        if (els.char) els.char.classList.remove('walk-anim');
+      }
+    }, 8500);
+  }
+
+  /* tab-specific accessories for Vaulty */
+  var TAB_ACCESSORIES = {
+    'builds': '<text x="32" y="8" font-size="14" text-anchor="middle">⚔️</text>',
+    'live': '<text x="32" y="8" font-size="14" text-anchor="middle">📡</text>',
+    'news': '<text x="32" y="8" font-size="14" text-anchor="middle">📰</text>',
+    'chat': '<text x="32" y="8" font-size="14" text-anchor="middle">💬</text>',
+    'videos': '<text x="32" y="8" font-size="14" text-anchor="middle">📺</text>',
+    'farming': '<text x="32" y="8" font-size="14" text-anchor="middle">⛏️</text>',
+    'donate': '<text x="32" y="8" font-size="14" text-anchor="middle">💝</text>'
+  };
+  function tabAccessory() {
+    var key = pageKey();
+    return TAB_ACCESSORIES[key] || '';
+  }
+
   function setChar(mode) {
     if (!els.char) return;
     els.char.innerHTML = charSVG(mode);
@@ -401,10 +448,16 @@
       try { if (window.TV && typeof window.TV.getOnlineCount === 'function') n = window.TV.getOnlineCount(); } catch (e) {}
       if (n > 1) msg = n + ' Tenno browsing the Vault right now! 🎉';
     }
-    /* 1 in 4: dance instead of wave */
-    var doDance = Math.random() < 0.25;
-    say(msg, { duration: 8000 });
-    setTimeout(function () { doDance ? dance() : wave(); }, 400);
+    var roll = Math.random();
+    if (roll < 0.2) {
+      /* 1 in 5: walk across the screen saying the message */
+      walkAcross(msg);
+    } else {
+      /* 1 in 4 of the rest: dance instead of wave */
+      var doDance = Math.random() < 0.25;
+      say(msg, { duration: 8000 });
+      setTimeout(function () { doDance ? dance() : wave(); }, 400);
+    }
     schedulePopup();
   }
 

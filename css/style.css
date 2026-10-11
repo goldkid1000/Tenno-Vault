@@ -1473,3 +1473,15 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 /* What's New list */
 .tv-whatsnew-list { margin: 6px 0; padding-left: 18px; font-size: 14px; }
 .tv-whatsnew-list li { margin: 3px 0; }
+
+/* Vaulty walking across the screen */
+#tv-mentor.walking { transition: left 8s linear !important; }
+.tv-mentor-char.walk-anim { animation: tv-mentor-walk .6s ease-in-out infinite !important; }
+@keyframes tv-mentor-walk {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tv-mentor.walking { transition: none !important; }
+  .tv-mentor-char.walk-anim { animation: none !important; }
+}
