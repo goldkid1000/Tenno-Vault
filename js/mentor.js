@@ -122,7 +122,7 @@
       '<path d="M29 37.5 Q32 39.8 35 37.5" stroke="#ffd54a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.95"/>' +
       /* holiday costume sits on top of the helmet */
       '<g id="tm-costume">' + costume + '</g>' +
-      '<g id="tm-tab-accessory">' + tabAccessory() + '</g>' +
+      '<g id="tm-tab-accessory">' + themeAccessory() + '</g>' +
       '</svg>';
   }
 
@@ -302,19 +302,61 @@
     }, 8500);
   }
 
-  /* tab-specific accessories for Vaulty */
-  var TAB_ACCESSORIES = {
-    'builds': '<text x="32" y="8" font-size="14" text-anchor="middle">⚔️</text>',
-    'live': '<text x="32" y="8" font-size="14" text-anchor="middle">📡</text>',
-    'news': '<text x="32" y="8" font-size="14" text-anchor="middle">📰</text>',
-    'chat': '<text x="32" y="8" font-size="14" text-anchor="middle">💬</text>',
-    'videos': '<text x="32" y="8" font-size="14" text-anchor="middle">📺</text>',
-    'farming': '<text x="32" y="8" font-size="14" text-anchor="middle">⛏️</text>',
-    'donate': '<text x="32" y="8" font-size="14" text-anchor="middle">💝</text>'
+  /* Vaulty transforms per section! */
+  var SECTION_THEMES = {
+    /* GEAR */
+    'warframes':  { held: '🛡️', pose: 'hero' },
+    'weapons':    { held: '🔫', pose: 'stand' },
+    'companions': { morph: '🐾', pose: 'morph' },
+    'amps':       { held: '⚡', pose: 'stand' },
+    'operators':  { held: '👁️', pose: 'hero' },
+    'archwing':   { held: '🚀', pose: 'hero' },
+    /* UPGRADES */
+    'mods':       { held: '🃏', pose: 'hold' },
+    'arcanes':    { held: '💎', pose: 'hold' },
+    'shards':     { held: '🔷', pose: 'hold' },
+    'builds':     { held: '⚔️', pose: 'stand' },
+    'helminth':   { held: '🧬', pose: 'hold' },
+    'focus':      { held: '🔮', pose: 'hold' },
+    'incarnon':   { held: '🔥', pose: 'stand' },
+    /* WORLD */
+    'relics':     { held: '🪐', pose: 'planet' },
+    'starchart':  { held: '🌍', pose: 'planet' },
+    'farming':    { held: '⛏️', pose: 'planet' },
+    'resources':  { held: '🌎', pose: 'planet' },
+    'live':       { held: '📡', pose: 'planet' },
+    'duviri':     { held: '🌀', pose: 'planet' },
+    /* COMMUNITY */
+    'chat':       { held: '💕', pose: 'buddy', buddy: true },
+    'marketplace':{ held: '🤝', pose: 'buddy', buddy: true },
+    'videos':     { held: '📺', pose: 'buddy', buddy: true },
+    'news':       { held: '📰', pose: 'buddy', buddy: true },
+    'donate':     { held: '💝', pose: 'buddy', buddy: true }
   };
-  function tabAccessory() {
+  function sectionTheme() {
     var key = pageKey();
-    return TAB_ACCESSORIES[key] || '';
+    return SECTION_THEMES[key] || null;
+  }
+  /* build the theme SVG: held item + optional buddy */
+  function themeAccessory() {
+    var theme = sectionTheme();
+    if (!theme) return tabAccessory();
+    var svg = '';
+    if (theme.morph) {
+      /* Vaulty BECOMES the thing — show morph emoji big */
+      svg = '<text x="32" y="34" font-size="28" text-anchor="middle">' + theme.morph + '</text>';
+    } else if (theme.pose === 'planet') {
+      /* holding a planet above his head */
+      svg = '<text x="32" y="6" font-size="16" text-anchor="middle">' + theme.held + '</text>';
+    } else if (theme.pose === 'buddy') {
+      /* buddy next to him + hearts */
+      svg = '<text x="52" y="52" font-size="20" text-anchor="middle">🤖</text>' +
+            '<text x="42" y="20" font-size="10" text-anchor="middle">' + theme.held + '</text>';
+    } else {
+      /* holding item in hand */
+      svg = '<text x="48" y="40" font-size="16" text-anchor="middle">' + theme.held + '</text>';
+    }
+    return svg;
   }
 
   function setChar(mode) {
