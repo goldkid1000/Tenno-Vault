@@ -717,7 +717,11 @@
       var tb = tabbar.getBoundingClientRect();
       var mr = els.wrap.getBoundingClientRect();
       var overlap = !(mr.bottom < tb.top || mr.top > tb.bottom || mr.right < tb.left || mr.left > tb.right);
-      els.wrap.style.opacity = overlap ? '0.35' : '';
+      /* keep him visible — just nudge, don't fade */
+      if (overlap && !shimeji.dragging) {
+        shimeji.y = Math.max(60, tb.top - 90 - window.scrollY);
+        els.wrap.style.top = shimeji.y + 'px';
+      }
     }
   }
 
@@ -793,10 +797,10 @@
         }, 2000);
       }, 2000 + Math.random() * 1000);
     } else if (roll < 0.35) {
-      /* peek-a-boo: hide behind left edge, then pop out */
+      /* peek-a-boo: briefly duck behind left edge, then pop out */
       if (els.wrap) {
-        els.wrap.style.transition = 'left .4s ease';
-        els.wrap.style.left = '-30px';
+        els.wrap.style.transition = 'left .3s ease';
+        els.wrap.style.left = '-15px';
         setTimeout(function () {
           if (!els.wrap) return;
           els.wrap.style.left = shimeji.homeX + 'px';
