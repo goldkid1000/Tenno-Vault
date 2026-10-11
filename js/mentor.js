@@ -246,7 +246,18 @@
         if (btn) btn.click();
       }, reducedMotion ? 0 : 180);
     }
-    els.char.addEventListener('click', openAI);
+    /* tap Vaulty: random fun animation before opening AI */
+    els.char.addEventListener('click', function () {
+      if (els.char && !reducedMotion) {
+        var anims = ['excited', 'spin', 'dance'];
+        var anim = anims[Math.floor(Math.random() * anims.length)];
+        els.char.classList.add(anim);
+        setTimeout(function () {
+          if (els.char) els.char.classList.remove(anim);
+        }, 1100);
+      }
+      setTimeout(openAI, 350);
+    });
     wrap.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openAI(); }
     });

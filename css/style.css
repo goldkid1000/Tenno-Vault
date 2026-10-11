@@ -982,10 +982,20 @@ a.card:active { transform: scale(.98); }
 .tv-mentor-char {
   cursor: pointer; line-height: 0;
   filter: drop-shadow(0 3px 10px rgba(0,229,255,.35));
-  animation: tv-mentor-bob 3.2s ease-in-out infinite;
+  animation: tv-mentor-lively 4s ease-in-out infinite;
 }
 .tv-mentor-char:hover { filter: drop-shadow(0 3px 14px rgba(0,229,255,.6)); }
-/* idle: gentle float + breathing */
+/* lively: bob + sway + little hops — Vaulty never sits still */
+@keyframes tv-mentor-lively {
+  0%, 100% { transform: translateY(0) translateX(0) rotate(0deg) scale(1); }
+  15% { transform: translateY(-4px) translateX(2px) rotate(1.5deg) scale(1.01); }
+  30% { transform: translateY(0) translateX(-2px) rotate(-1.5deg) scale(1); }
+  45% { transform: translateY(-7px) translateX(1px) rotate(0deg) scale(1.015); }
+  60% { transform: translateY(0) translateX(3px) rotate(2deg) scale(1); }
+  75% { transform: translateY(-3px) translateX(-3px) rotate(-2deg) scale(1.01); }
+  90% { transform: translateY(-5px) translateX(0) rotate(0deg) scale(1.005); }
+}
+/* keep old bob for wave combo */
 @keyframes tv-mentor-bob {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-5px) scale(1.015); }
@@ -1486,4 +1496,23 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 @media (prefers-reduced-motion: reduce) {
   #tv-mentor.walking { transition: none !important; }
   .tv-mentor-char.walk-anim { animation: none !important; }
+}
+
+/* Vaulty excited: big jumps when tapped */
+.tv-mentor-char.excited { animation: tv-mentor-excited 1s ease !important; }
+@keyframes tv-mentor-excited {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0); }
+  25% { transform: translateY(-20px) scale(1.1) rotate(-5deg); }
+  50% { transform: translateY(0) scale(0.95) rotate(5deg); }
+  75% { transform: translateY(-12px) scale(1.05) rotate(-3deg); }
+}
+/* Vaulty spin */
+.tv-mentor-char.spin { animation: tv-mentor-spin 1s ease !important; }
+@keyframes tv-mentor-spin {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tv-mentor-char { animation: none !important; }
 }
