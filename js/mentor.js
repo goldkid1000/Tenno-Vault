@@ -350,6 +350,14 @@
     maybeFirstVisit();
     updateBadge();
     setInterval(updateBadge, 30000);
+    /* real-time: update instantly when the count changes */
+    document.addEventListener('tv-online-count', function (e) {
+      if (e && e.detail && typeof e.detail.count === 'number') {
+        window.TV = window.TV || {};
+        window.TV._onlineCount = e.detail.count;
+        updateBadge();
+      }
+    });
     schedulePopup();
     window.addEventListener('resize', resetPosition);
   }

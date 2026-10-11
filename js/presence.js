@@ -126,6 +126,11 @@
           el.style.display = '';
           window.TV = window.TV || {};
           window.TV._onlineCount = n;
+          /* notify live listeners (mentor badge, chat header) instantly */
+          try {
+            var evt = new CustomEvent('tv-online-count', { detail: { count: n } });
+            document.dispatchEvent(evt);
+          } catch (e2) {}
         }, function () { el.style.display = 'none'; });
       } catch (e) { el.style.display = 'none'; }
     }
