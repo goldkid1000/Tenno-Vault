@@ -65,43 +65,12 @@
       '<a class="logo" href="index.html"><span class="logo-mark">◈</span><span class="logo-text">TENNO<em>VAULT</em></span></a>' +
       '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
-      '<button class="btn ghost icon-btn" id="tv-fullscreen" aria-label="Toggle fullscreen" title="Fullscreen">⛶</button>' +
       '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate</a>' +
       '</div>';
     var input = document.getElementById('global-search');
     input.addEventListener('focus', openSearch);
     input.addEventListener('click', openSearch);
-    /* auto-fullscreen on first tap (mobile/iPad) */
-    var fsAttempted = false;
-    function tryAutoFullscreen() {
-      if (fsAttempted) return;
-      fsAttempted = true;
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
-        (window.innerWidth <= 1024 && 'ontouchstart' in window);
-      if (isMobile && !document.fullscreenElement && document.documentElement.requestFullscreen) {
-        try {
-          var p = document.documentElement.requestFullscreen();
-          if (p && p.catch) p.catch(function () {});
-        } catch (e) {}
-      }
-      document.removeEventListener('touchend', tryAutoFullscreen);
-      document.removeEventListener('click', tryAutoFullscreen);
-    }
-    document.addEventListener('touchend', tryAutoFullscreen, { passive: true });
-    document.addEventListener('click', tryAutoFullscreen);
-    if (fsBtn) {
-      fsBtn.addEventListener('click', function () {
-        if (document.fullscreenElement) {
-          document.exitFullscreen();
-        } else if (document.documentElement.requestFullscreen) {
-          document.documentElement.requestFullscreen();
-        }
-      });
-      document.addEventListener('fullscreenchange', function () {
-        fsBtn.textContent = document.fullscreenElement ? '⛷' : '⛶';
-      });
-    }
   }
 
   /* ---------- sidebar (desktop) ---------- */
