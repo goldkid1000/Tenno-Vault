@@ -1114,6 +1114,7 @@ a.card:active { transform: scale(.98); }
   border: 2px solid #0a0e1a; box-shadow: 0 2px 8px rgba(0,0,0,.5);
   animation: tv-chat-badge-pop .3s cubic-bezier(.2,1.4,.4,1);
 }
+.tv-chat-badge[hidden] { display: none !important; }
 @keyframes tv-chat-badge-pop {
   0% { transform: scale(0); } 100% { transform: scale(1); }
 }
@@ -1376,3 +1377,13 @@ body[data-holiday="thanksgiving"] .brand-hero::after { content: ' 🦃'; }
   backdrop-filter: blur(8px); animation: tv-badge-in .5s ease-out;
 }
 @keyframes tv-badge-in { from { transform: translateY(-20px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ===== HALLOWEEN EXTRAS ===== */
+body[data-holiday="halloween"] .card { border-color: rgba(255,123,28,.25); box-shadow: 0 0 20px rgba(255,123,28,.08); }
+body[data-holiday="halloween"] .tv-stat b { color: #ff9a3c; }
+body[data-holiday="halloween"] h1 .logo-mark,
+body[data-holiday="halloween"] h2::before { filter: drop-shadow(0 0 6px rgba(255,123,28,.5)); }
+body[data-holiday="halloween"] ::selection { background: rgba(255,123,28,.4); }
+body[data-holiday="halloween"] .tv-holiday-badge { border-color: #ff7b1c; color: #ff9a3c; }
+/* spooky glow on tab bar */
+body[data-holiday="halloween"] .tabbar { box-shadow: 0 -4px 24px rgba(168,85,247,.15); }
