@@ -246,8 +246,13 @@
         if (btn) btn.click();
       }, reducedMotion ? 0 : 180);
     }
-    /* tap Vaulty: random fun animation before opening AI */
-    els.char.addEventListener('click', function () {
+    /* tap Vaulty: random fun animation before opening AI (not when dragging) */
+    var tapMoved = false;
+    els.char.addEventListener('pointerdown', function () { tapMoved = false; });
+    els.char.addEventListener('pointermove', function () { tapMoved = true; });
+    els.char.addEventListener('click', function (e) {
+      /* was it a drag? then don't open AI */
+      if (tapMoved || (shimeji.dragging)) return;
       if (els.char && !reducedMotion) {
         var anims = ['excited', 'spin', 'dance'];
         var anim = anims[Math.floor(Math.random() * anims.length)];
@@ -551,64 +556,197 @@
       }
     });
     schedulePopup();
-    startWandering();
+    shimejiInit();
     window.addEventListener('resize', resetPosition);
   }
 
-  /* Vaulty wanders around on his own — a real living character */
-  var wanderTimer = null;
-  function startWandering() {
-    if (reducedMotion) return;
-    /* every 8-20 seconds, do something alive */
-    function wander() {
-      if (!els.wrap || !els.wrap.classList.contains('visible')) {
-        wanderTimer = setTimeout(wander, 5000);
-        return;
+  /* ===== SHIMEJI ENGINE — Vaulty is a living screen pet ===== */
+  var shimeji = {
+    x: 14, y: 0,           // position (y from bottom)
+    vx: 0, vy: 0,          // velocity
+    dir: 1,                // facing: 1 right, -1 left
+    state: 'idle',         // idle, walking, falling, dragging, climbing, sleeping
+    groundY: 14,           // bottom resting position
+    dragging: false,
+    lastAction: 0
+  };
+
+  function shimejiInit() {
+    if (reducedMotion || !els.wrap) return;
+    els.wrap.classList.add('shimeji');
+    shimeji.y = shimeji.groundY;
+    shimeji.x = 14;
+    positionShimeji();
+    /* drag interactions */
+    var char = els.char;
+    if (!char) return;
+    var startX, startY, origX, origY;
+
+    char.addEventListener('pointerdown', function (e) {
+      shimeji.dragging = true;
+      shimeji.state = 'dragging';
+      els.wrap.classList.add('dragging');
+      if (els.char) els.char.classList.remove('falling', 'sleeping', 'climbing');
+      var zzz = els.wrap.querySelector('.tv-mentor-zzz');
+      if (zzz) zzz.remove();
+      startX = e.clientX; startY = e.clientY;
+      origX = shimeji.x; origY = shimeji.y;
+      try { char.setPointerCapture(e.pointerId); } catch (err) {}
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    char.addEventListener('pointermove', function (e) {
+      if (!shimeji.dragging) return;
+      shimeji.x = origX + (e.clientX - startX);
+      /* y is from bottom, so invert */
+      shimeji.y = origY - (e.clientY - startY);
+      shimeji.x = Math.max(0, Math.min(window.innerWidth - 80, shimeji.x));
+      shimeji.y = Math.max(shimeji.groundY, Math.min(window.innerHeight - 80, shimeji.y));
+      positionShimeji();
+    });
+    function drop(e) {
+      if (!shimeji.dragging) return;
+      shimeji.dragging = false;
+      els.wrap.classList.remove('dragging');
+      /* drop with a little toss velocity */
+      shimeji.vy = 0;
+      shimeji.state = 'falling';
+      if (els.char) els.char.classList.add('falling');
+      /* if dropped near top, he climbs down the wall */
+      if (shimeji.y > window.innerHeight * 0.6) {
+        shimeji.state = 'climbing';
+        if (els.char) { els.char.classList.remove('falling'); els.char.classList.add('climbing'); }
       }
-      /* don't interrupt if he's talking or walking across */
-      if (els.wrap.classList.contains('walking') || document.querySelector('.tv-mentor-bubble')) {
-        wanderTimer = setTimeout(wander, 8000);
-        return;
-      }
-      var action = Math.random();
-      if (action < 0.3) {
-        /* hop to a new spot nearby */
-        hopToSpot();
-      } else if (action < 0.5) {
-        /* little jump for joy */
-        if (els.char) {
-          els.char.classList.add('excited');
-          setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 1000);
-        }
-      } else if (action < 0.65) {
-        /* spin */
-        if (els.char) {
-          els.char.classList.add('spin');
-          setTimeout(function () { if (els.char) els.char.classList.remove('spin'); }, 1000);
-        }
-      } else if (action < 0.8) {
-        /* wave at the user */
-        wave();
-      }
-      /* else: just keep bobbing, he's chilling */
-      wanderTimer = setTimeout(wander, 8000 + Math.random() * 12000);
+      e.stopPropagation();
     }
-    wanderTimer = setTimeout(wander, 6000);
+    char.addEventListener('pointerup', drop);
+    char.addEventListener('pointercancel', drop);
+
+    /* cursor proximity: he looks at your cursor */
+    var lookTimer = null;
+    document.addEventListener('pointermove', function (e) {
+      if (shimeji.dragging || shimeji.state === 'sleeping') return;
+      if (!els.wrap || !els.wrap.classList.contains('visible')) return;
+      var rect = els.wrap.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var dx = e.clientX - cx;
+      /* face the cursor */
+      var newDir = dx > 0 ? 1 : -1;
+      if (newDir !== shimeji.dir && Math.abs(dx) > 60) {
+        shimeji.dir = newDir;
+        flipShimeji();
+      }
+    }, { passive: true });
+
+    /* physics loop */
+    setInterval(shimejiPhysics, 50);
+    /* behavior loop */
+    setTimeout(shimejiBehave, 4000);
   }
 
-  /* hop to a random nearby spot */
-  function hopToSpot() {
+  function positionShimeji() {
     if (!els.wrap) return;
-    var maxX = Math.max(0, window.innerWidth - 120);
-    var newLeft = 14 + Math.random() * Math.min(maxX - 14, 300);
-    /* hop animation */
-    if (els.char) els.char.classList.add('excited');
-    els.wrap.style.transition = 'left .6s cubic-bezier(.3,1.4,.4,1)';
-    els.wrap.style.left = newLeft + 'px';
-    setTimeout(function () {
-      if (els.char) els.char.classList.remove('excited');
-      if (els.wrap) els.wrap.style.transition = '';
-    }, 700);
+    els.wrap.style.left = shimeji.x + 'px';
+    els.wrap.style.right = 'auto';
+    els.wrap.style.top = 'auto';
+    els.wrap.style.bottom = shimeji.y + 'px';
+  }
+
+  function flipShimeji() {
+    if (!els.char) return;
+    els.char.style.transform = shimeji.dir === 1 ? '' : 'scaleX(-1)';
+  }
+
+  function shimejiPhysics() {
+    if (!els.wrap || shimeji.dragging || reducedMotion) return;
+    if (shimeji.state === 'falling') {
+      /* gravity */
+      shimeji.vy -= 1.2;
+      shimeji.y += shimeji.vy;
+      if (shimeji.y <= shimeji.groundY) {
+        shimeji.y = shimeji.groundY;
+        shimeji.vy = 0;
+        shimeji.state = 'idle';
+        if (els.char) els.char.classList.remove('falling');
+        /* little bounce landing */
+        if (els.char && !reducedMotion) {
+          els.char.classList.add('excited');
+          setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 600);
+        }
+      }
+      positionShimeji();
+    } else if (shimeji.state === 'climbing') {
+      /* climb down the wall */
+      shimeji.y -= 3;
+      if (shimeji.y <= shimeji.groundY) {
+        shimeji.y = shimeji.groundY;
+        shimeji.state = 'idle';
+        if (els.char) els.char.classList.remove('climbing');
+      }
+      positionShimeji();
+    } else if (shimeji.state === 'walking') {
+      /* walk in facing direction */
+      shimeji.x += 2 * shimeji.dir;
+      if (shimeji.x <= 0) { shimeji.x = 0; shimeji.dir = 1; flipShimeji(); }
+      if (shimeji.x >= window.innerWidth - 80) { shimeji.x = window.innerWidth - 80; shimeji.dir = -1; flipShimeji(); }
+      positionShimeji();
+    }
+  }
+
+  function shimejiBehave() {
+    if (!els.wrap || !els.wrap.classList.contains('visible') || reducedMotion) {
+      setTimeout(shimejiBehave, 5000);
+      return;
+    }
+    /* don't interrupt important states */
+    if (shimeji.dragging || shimeji.state === 'falling' || shimeji.state === 'climbing' ||
+        els.wrap.classList.contains('walking') || document.querySelector('.tv-mentor-bubble')) {
+      setTimeout(shimejiBehave, 6000);
+      return;
+    }
+    var roll = Math.random();
+    if (roll < 0.3) {
+      /* go for a walk */
+      shimeji.state = 'walking';
+      if (els.char) els.char.classList.add('walk-anim');
+      /* walk for 3-6 seconds */
+      setTimeout(function () {
+        shimeji.state = 'idle';
+        if (els.char) els.char.classList.remove('walk-anim');
+      }, 3000 + Math.random() * 3000);
+    } else if (roll < 0.4) {
+      /* take a nap */
+      shimeji.state = 'sleeping';
+      if (els.char) els.char.classList.add('sleeping');
+      var zzz = document.createElement('span');
+      zzz.className = 'tv-mentor-zzz';
+      zzz.textContent = '💤';
+      els.wrap.appendChild(zzz);
+      /* nap for 8-15 seconds */
+      setTimeout(function () {
+        shimeji.state = 'idle';
+        if (els.char) els.char.classList.remove('sleeping');
+        var z = els.wrap.querySelector('.tv-mentor-zzz');
+        if (z) z.remove();
+      }, 8000 + Math.random() * 7000);
+    } else if (roll < 0.55) {
+      /* jump */
+      if (els.char) {
+        els.char.classList.add('excited');
+        setTimeout(function () { if (els.char) els.char.classList.remove('excited'); }, 1000);
+      }
+    } else if (roll < 0.65) {
+      /* spin */
+      if (els.char) {
+        els.char.classList.add('spin');
+        setTimeout(function () { if (els.char) els.char.classList.remove('spin'); }, 1000);
+      }
+    } else if (roll < 0.75) {
+      /* wave */
+      wave();
+    }
+    /* else: chill */
+    setTimeout(shimejiBehave, 5000 + Math.random() * 8000);
   }
 
   window.TV = window.TV || {};

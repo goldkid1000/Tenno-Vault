@@ -1516,3 +1516,46 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 @media (prefers-reduced-motion: reduce) {
   .tv-mentor-char { animation: none !important; }
 }
+
+/* ===== VAULTY SHIMEJI — interactive screen pet ===== */
+#tv-mentor.shimeji {
+  transition: none !important;
+  will-change: left, top;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#tv-mentor.shimeji .tv-mentor-char { cursor: grab; }
+#tv-mentor.shimeji.dragging .tv-mentor-char { cursor: grabbing; }
+#tv-mentor.shimeji.dragging { z-index: 9999; }
+/* falling */
+.tv-mentor-char.falling { animation: tv-mentor-fall .5s ease-in infinite !important; }
+@keyframes tv-mentor-fall {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(4px) rotate(8deg); }
+}
+/* climbing */
+.tv-mentor-char.climbing { animation: tv-mentor-climb .4s ease-in-out infinite !important; }
+@keyframes tv-mentor-climb {
+  0%, 100% { transform: translateY(0) translateX(-2px); }
+  50% { transform: translateY(-6px) translateX(2px); }
+}
+/* sleeping */
+.tv-mentor-char.sleeping { animation: tv-mentor-sleep 3s ease-in-out infinite !important; filter: grayscale(.3) brightness(.85); }
+@keyframes tv-mentor-sleep {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(2px) scale(1.02, .98); }
+}
+.tv-mentor-zzz {
+  position: absolute; top: -8px; right: -4px; font-size: 14px;
+  animation: tv-mentor-zzz 2s ease-out infinite; pointer-events: none;
+}
+@keyframes tv-mentor-zzz {
+  0% { opacity: 0; transform: translateY(0) scale(.6); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-18px) scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #tv-mentor.shimeji { transition: opacity .3s ease !important; }
+  .tv-mentor-char.falling, .tv-mentor-char.climbing, .tv-mentor-char.sleeping { animation: none !important; }
+}
