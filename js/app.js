@@ -100,30 +100,15 @@
     var tabs = [
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
       { id: 'builds', label: 'Builds', icon: '⚔️', file: 'builds.html' },
-      { id: 'ai', label: 'AI Chat', icon: '💬', action: 'ai' },
-      { id: 'chat', label: 'Chat', icon: '🗨️', file: 'chat.html' },
       { id: 'news', label: 'News', icon: '📰', file: 'news.html' },
       { id: 'live', label: 'Live', icon: '📡', file: 'live.html' },
       { id: 'more', label: 'More', icon: '☰', file: 'index.html#sections' },
     ];
     host.innerHTML = tabs.map(function (t) {
       var cls = t.id === page ? 'active' : '';
-      if (t.action === 'ai') {
-        return '<a href="#" id="tabbar-ai" class="' + cls + '">' +
-          '<span class="ti">' + t.icon + '</span>' + t.label + '</a>';
-      }
       return '<a href="' + t.file + '" class="' + cls + '">' +
         '<span class="ti">' + t.icon + '</span>' + t.label + '</a>';
     }).join('');
-    /* AI Chat tab opens the Vault Guide chat instead of navigating */
-    var aiTab = document.getElementById('tabbar-ai');
-    if (aiTab) {
-      aiTab.addEventListener('click', function (e) {
-        e.preventDefault();
-        var btn = document.getElementById('vault-ai-btn');
-        if (btn) btn.click();
-      });
-    }
   }
 
   /* ---------- breadcrumbs ---------- */
