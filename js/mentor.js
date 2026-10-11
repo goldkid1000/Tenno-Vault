@@ -655,38 +655,52 @@
 
   /* Animate Vaulty's body parts with JavaScript — arms wave, legs kick, head bobs */
   var bodyAnimT = 0;
+  var bodyAnimStarted = false;
   function startBodyAnimation() {
+    if (bodyAnimStarted) return;
+    bodyAnimStarted = true;
     var armR, armL, legs, head, svg;
     function findParts() {
-      if (!els.wrap) return false;
-      armR = els.wrap.querySelector('#tm-arm-r');
-      armL = els.wrap.querySelector('#tm-arm-l');
-      legs = els.wrap.querySelector('#tm-legs');
-      head = els.wrap.querySelector('#tm-head');
-      svg = els.wrap.querySelector('.tv-mentor-char > svg');
-      return !!(armR || armL);
+      var wrap = document.getElementById('tv-mentor');
+      if (!wrap) return false;
+      armR = wrap.querySelector('#tm-arm-r');
+      armL = wrap.querySelector('#tm-arm-l');
+      legs = wrap.querySelector('#tm-legs');
+      head = wrap.querySelector('#tm-head');
+      svg = wrap.querySelector('.tv-mentor-char > svg') || wrap.querySelector('svg');
+      return !!(armR || armL || head);
     }
     function tick() {
-      bodyAnimT += 0.06;
-      var t = bodyAnimT;
-      /* skip if reduced motion or dragging */
-      if (!reducedMotion && !shimeji.dragging && els.wrap && els.wrap.classList.contains('visible')) {
-        if (!armR && !findParts()) { requestAnimationFrame(tick); return; }
-        var waving = els.char && els.char.classList.contains('wave');
-        /* arms: big opposite swings (pause right arm when waving) */
-        if (armR && !waving) armR.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2) * 22) + ' 42 46)');
-        if (armL) armL.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2 + Math.PI) * 22) + ' 22 46)');
-        /* legs: bounce */
-        if (legs) legs.setAttribute('transform', 'translate(0 ' + (Math.sin(t * 3.5) * -3) + ')');
-        /* head: look side to side + bob */
-        if (head) head.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.1) * 7) + ' 32 40) translate(0 ' + (Math.sin(t * 2.8) * 1.5) + ')');
-        /* whole body: gentle groove */
-        if (svg) svg.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.6) * 2.5) + ' 32 70)');
-      }
+      try {
+        bodyAnimT += 0.06;
+        var t = bodyAnimT;
+        var wrap = document.getElementById('tv-mentor');
+        var vis = wrap && getComputedStyle(wrap).opacity !== '0';
+        if (!reducedMotion && vis) {
+          if (!armR && !findParts()) { requestAnimationFrame(tick); return; }
+          var char = wrap.querySelector('.tv-mentor-char');
+          var waving = char && char.classList.contains('wave');
+          /* arms: big opposite swings (pause right arm when waving) */
+          if (armR && !waving) armR.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2) * 22).toFixed(1) + ' 42 46)');
+          if (armL) armL.setAttribute('transform', 'rotate(' + (Math.sin(t * 2.2 + Math.PI) * 22).toFixed(1) + ' 22 46)');
+          /* legs: bounce */
+          if (legs) legs.setAttribute('transform', 'translate(0 ' + (Math.sin(t * 3.5) * -3).toFixed(1) + ')');
+          /* head: look side to side + bob */
+          if (head) head.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.1) * 7).toFixed(1) + ' 32 40) translate(0 ' + (Math.sin(t * 2.8) * 1.5).toFixed(1) + ')');
+          /* whole body: gentle groove */
+          if (svg) svg.setAttribute('transform', 'rotate(' + (Math.sin(t * 1.6) * 2.5).toFixed(1) + ' 32 70)');
+        }
+      } catch (e) {}
       requestAnimationFrame(tick);
     }
-    /* wait for build, then start */
-    setTimeout(function () { findParts(); requestAnimationFrame(tick); }, 1500);
+    /* start immediately, retry until parts found */
+    requestAnimationFrame(tick);
+  }
+  /* start body animation independently — don't depend on shimeji init */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(startBodyAnimation, 2000); });
+  } else {
+    setTimeout(startBodyAnimation, 2000);
   }
 
   function positionShimeji() {
