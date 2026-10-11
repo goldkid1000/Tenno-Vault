@@ -35,10 +35,13 @@
   }
 
   /* ---------------- worldstate ---------------- */
-  function cycleCard(title, state, expiryIso, icon) {
+  function cycleCard(title, state, expiryIso, icon, nextState) {
+    var expiry = new Date(expiryIso);
+    var timeStr = expiry.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
     return '<div class="card"><div class="icon">' + icon + '</div><h3>' + esc(title) + '</h3>' +
       '<p style="font-size:1.15rem;font-weight:700">' + esc(state) + '</p>' +
-      '<p class="muted small">⏱ ' + liveCd(expiryIso) + ' left</p></div>';
+      '<p class="muted small">⏱ ' + liveCd(expiryIso) + ' left</p>' +
+      '<p style="font-size:1.05rem;margin-top:6px">→ <b>' + esc(nextState) + '</b> at ' + esc(timeStr) + '</p></div>';
   }
 
   var lastUpdate = 0;
@@ -78,11 +81,14 @@
     lastUpdate = Date.now();
     var html = '<p class="muted small" id="live-updated">Updated ' + timeAgo() + ' · auto-refreshes every minute</p>';
     html += '<h2>Right now in the Origin System</h2><div class="card-grid">';
-    if (d.earthCycle) html += cycleCard('Earth', d.earthCycle.isDay ? '☀️ Day' : '🌙 Night', d.earthCycle.expiry, '🌍');
-    if (d.cetusCycle) html += cycleCard('Cetus / Plains', d.cetusCycle.isDay ? '☀️ Day' : '🌙 Night', d.cetusCycle.expiry, '🌅');
-    if (d.vallisCycle) html += cycleCard('Orb Vallis', d.vallisCycle.isWarm ? '🔥 Warm' : '❄️ Cold', d.vallisCycle.expiry, '🏔');
-    if (d.cambionCycle) html += cycleCard('Deimos / Cambion Drift',
-      d.cambionCycle.active === 'fass' ? '🟠 Fass' : '🔵 Vome', d.cambionCycle.expiry, '🦠');
+    if (d.earthCycle) html += cycleCard('Earth', d.earthCycle.isDay ? '☀️ Daytime now' : '🌙 Nighttime now', d.earthCycle.expiry, '🌍',
+      d.earthCycle.isDay ? '🌙 Night starts' : '☀️ Day starts');
+    if (d.cetusCycle) html += cycleCard('Plains of Eidolon', d.cetusCycle.isDay ? '☀️ Daytime now' : '🌙 Nighttime now', d.cetusCycle.expiry, '🌅',
+      d.cetusCycle.isDay ? '🌙 Night starts (Eidolons!)' : '☀️ Day starts');
+    if (d.vallisCycle) html += cycleCard('Orb Vallis', d.vallisCycle.isWarm ? '🔥 Warm now' : '❄️ Cold now', d.vallisCycle.expiry, '🏔',
+      d.vallisCycle.isWarm ? '❄️ Cold starts' : '🔥 Warm starts');
+    if (d.cambionCycle) html += cycleCard('Cambion Drift', d.cambionCycle.active === 'fass' ? '🟠 Fass now' : '🔵 Vome now', d.cambionCycle.expiry, '🦠',
+      d.cambionCycle.active === 'fass' ? '🔵 Vome starts' : '🟠 Fass starts');
     html += '</div>';
 
     // fissures
