@@ -1721,3 +1721,27 @@ html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *:
 
 /* v2.12.15: floating Ask the Vault button removed — Vaulty is the entry point */
 #vault-ai-btn{display:none !important}
+
+/* ---------- Home button in header (v2.12.16) ---------- */
+.home-btn{padding:10px 12px;font-size:1.1rem;line-height:1}
+/* ---------- Personal notes (v2.12.16) ---------- */
+.tv-notes{max-width:720px}
+.tv-notes-input{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.tv-notes-input input,.tv-notes-input textarea{
+  padding:12px 14px;border-radius:10px;border:1px solid var(--border);
+  background:var(--bg2);color:var(--text);font-size:.95rem;font-family:inherit}
+.tv-notes-input input:focus,.tv-notes-input textarea:focus{
+  outline:none;border-color:var(--accent)}
+.tv-notes-input textarea{resize:vertical;min-height:70px}
+.tv-notes-input .btn{align-self:flex-start}
+.tv-notes-list{display:flex;flex-direction:column;gap:12px}
+.tv-notes-empty{padding:16px;border:1px dashed var(--border);border-radius:10px;text-align:center}
+.tv-note-card{background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:14px 16px;animation:tv-menu-item-in .3s ease}
+.tv-note-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.tv-note-head b{flex:1;font-size:1rem}
+.tv-note-date{font-size:.75rem;color:var(--faint);white-space:nowrap}
+.tv-note-del{background:none;border:none;cursor:pointer;font-size:1rem;
+  opacity:.5;transition:opacity .15s,transform .15s;padding:4px}
+.tv-note-del:hover{opacity:1;transform:scale(1.15)}
+.tv-note-body{margin:0;font-size:.92rem;line-height:1.55;white-space:pre-wrap;word-break:break-word}
