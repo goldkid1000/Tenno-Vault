@@ -32,7 +32,7 @@
         '<path d="M45.5 52 L48 57" stroke="url(#tmgd)" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>' +
         '<circle cx="48" cy="62" r="4.4" fill="url(#tmbg)" stroke="#8a8f98" stroke-width="1"/>' +
         '<circle cx="48" cy="62" r="1.6" fill="#ffffff" opacity="0.7"/></g>';
-    return '<svg viewBox="0 0 64 76" width="64" height="76" aria-hidden="true">' +
+    return '<svg viewBox="0 0 64 76" width="84" height="100" aria-hidden="true">' +
       '<defs>' +
       '<radialGradient id="tmhg" cx="38%" cy="30%" r="75%">' +
       '<stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#eef0f3"/>' +
