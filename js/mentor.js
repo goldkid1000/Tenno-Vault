@@ -280,12 +280,13 @@
       /* was it a drag? then don't open AI */
       if (tapMoved || (shimeji.dragging)) return;
       if (els.char && !reducedMotion) {
-        var anims = ['excited', 'spin', 'dance'];
+        /* v2.12.31: all animations in the random tap rotation */
+        var anims = ['excited', 'spin', 'dance', 'jump', 'flip', 'happy', 'wave'];
         var anim = anims[Math.floor(Math.random() * anims.length)];
         els.char.classList.add(anim);
         setTimeout(function () {
           if (els.char) els.char.classList.remove(anim);
-        }, 1100);
+        }, 1500);
       }
       setTimeout(openAI, 350);
     });
@@ -312,6 +313,12 @@
   function wave() { playAnim('wave', 1400); }
   function dance() { playAnim('dance', 2000); }
   function squash() { playAnim('squash', 400); }
+  /* v2.12.31: new animation helpers */
+  function jump() { playAnim('jump', 700); }
+  function flip() { playAnim('flip', 800); }
+  function happy() { playAnim('happy', 1200); }
+  function sad() { playAnim('sad', 1500); }
+  function think() { playAnim('think', 2000); }
 
   /* walk across the screen, then say something */
   function walkAcross(msg) {
@@ -578,16 +585,15 @@
     /* listen for toggle changes (same-tab custom event + cross-tab storage) */
     var onAnimToggle = function (on) {
       reducedMotion = !on;
+      /* v2.12.31: don't hide Vaulty — just freeze animations, keep him tappable */
       if (!on) {
-        /* stop everything: hide Vaulty, stop behaviors */
-        if (els.wrap) hide();
         shimeji.state = 'idle';
+        if (els.bubble) els.bubble.classList.remove('show');
       } else {
-        /* re-enable: rebuild and show */
-        if (els.wrap) {
+        if (els.wrap && !els.wrap.classList.contains('visible')) {
           els.wrap.classList.add('visible');
-          setTimeout(shimejiBehave, 2000);
         }
+        setTimeout(shimejiBehave, 2000);
       }
     };
     try {
