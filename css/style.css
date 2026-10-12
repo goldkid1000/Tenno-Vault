@@ -1637,7 +1637,9 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 #tv-menu-backdrop.show{opacity:1;pointer-events:auto}
 /* desktop: sidebar becomes a slide-in drawer (v2.12.14 fix: use 1024px breakpoint
    to match existing layout, override display:none !important) */
-@media(min-width:1024px){
+/* v2.12.22: also show on narrow PC windows via hover/pointer detection —
+   any device with a mouse gets the hamburger, regardless of window width */
+@media(min-width:1024px),(hover:hover) and (pointer:fine){
   #tv-menu-btn{display:flex}
   #sidebar{display:block !important;position:fixed;left:0;top:0;bottom:0;width:280px;max-width:85vw;z-index:99;
     background:var(--bg);border-right:1px solid var(--border);
