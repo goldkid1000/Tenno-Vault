@@ -252,7 +252,7 @@
         if (!els.panel.classList.contains('open')) els.panel.style.display = 'none';
       }, 280);
     }
-    els.btn.classList.toggle('open', show);
+    if (els.btn) els.btn.classList.toggle('open', show);
     if (show && !opened) {
       opened = true;
       addMsg("Hey Tenno! ◈ I can help with builds, farming, mods — anything Warframe. " +
@@ -310,7 +310,7 @@
     document.body.appendChild(panel);
 
     els = {
-      btn: btn, panel: panel,
+      btn: null, panel: panel,
       msgs: panel.querySelector('#vai-msgs'),
       input: panel.querySelector('#vai-input'),
       form: panel.querySelector('#vai-form')
