@@ -1718,3 +1718,6 @@ body.tv-no-anim #tv-mentor{display:none !important}
 html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *::after{
   animation-duration:.001s !important;animation-iteration-count:1 !important;
   transition-duration:.001s !important}
+
+/* v2.12.15: floating Ask the Vault button removed — Vaulty is the entry point */
+#vault-ai-btn{display:none !important}
