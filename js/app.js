@@ -81,6 +81,7 @@
       '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
       '<div class="search-wrap"><input id="global-search" type="search" placeholder="Search warframes, weapons, mods, builds…" autocomplete="off" aria-label="Search"></div>' +
       '<!-- DONATE: buttons link to donate.html; swap the embedded QR data URI and the PayPal.me href inside donate.html as needed -->' +
+      '<a class="btn home-btn" href="index.html" aria-label="Home">🏠</a>' +
       '<a class="btn donate-btn" href="donate.html">♥ Donate</a>' +
       '</div>';
     var input = document.getElementById('global-search');
