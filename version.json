@@ -1,1 +1,1 @@
-{"version": "2.12.26", "updated": "2026-10-12T19:20:00Z", "notes": "Vaulty robustness: retry init on failure, exposed reset function", "notify": true}
+{"version": "2.12.27", "updated": "2026-10-12T19:30:00Z", "notes": "Fixed Vaulty tap: hovering no longer blocks AI chat from opening", "notify": true}
