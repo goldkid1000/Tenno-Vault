@@ -1,1 +1,1 @@
-{"version": "2.12.15", "updated": "2026-10-12T18:25:00Z", "notes": "Removed floating Ask the Vault button \u2014 tap Vaulty to open the AI chat", "notify": true}
+{"version": "2.12.17", "updated": "2026-10-12T18:35:00Z", "notes": "Fixed 12/31/1969 date bug on Live page, compact mobile header buttons", "notify": false}
