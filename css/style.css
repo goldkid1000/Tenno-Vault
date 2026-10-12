@@ -1751,3 +1751,8 @@ html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *:
   .home-btn{padding:8px 10px}
   .donate-btn{padding:8px 12px;font-size:.85rem}
 }
+
+/* v2.12.21: ensure hidden bubble takes no layout space (fixes badge gap) */
+.tv-mentor-bubble[hidden]{display:none !important}
+/* keep mentor children tightly packed */
+#tv-mentor .tv-mentor-badge{order:-1;margin-bottom:4px}
