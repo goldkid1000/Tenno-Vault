@@ -1044,7 +1044,6 @@ function oneShotBuildAnswer(t) {
       'placeholder="Ask about builds, farms, mods…" aria-label="Ask the Vault">' +
       '<button type="submit" aria-label="Send">➤</button></form>';
 
-    document.body.appendChild(btn);
     document.body.appendChild(panel);
 
     els = {
