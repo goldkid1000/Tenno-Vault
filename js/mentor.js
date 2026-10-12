@@ -924,11 +924,31 @@
   }
 
   window.TV = window.TV || {};
-  window.TV.mentor = { say: say, pointAt: pointAt, hide: hide, init: init, take: vaultyTake, name: VAULTY };
+  /* v2.12.26: expose reset for debugging — rebuilds Vaulty from scratch */
+  window.TV.mentor = {
+    say: say, pointAt: pointAt, hide: hide, init: init, take: vaultyTake, name: VAULTY,
+    reset: function () {
+      try {
+        var old = document.getElementById('tv-mentor');
+        if (old && old.parentNode) old.parentNode.removeChild(old);
+      } catch (e) {}
+      els.wrap = null; els.char = null; els.bubble = null;
+      els.text = null; els.badge = null; els.count = null;
+      bodyAnimStarted = false;
+      try { init(); } catch (e) {}
+    }
+  };
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      try { init(); } catch (e) {
+        /* retry once after a delay — DOM might not be ready */
+        setTimeout(function () { try { init(); } catch (e2) {} }, 2000);
+      }
+    });
   } else {
-    init();
+    try { init(); } catch (e) {
+      setTimeout(function () { try { init(); } catch (e2) {} }, 2000);
+    }
   }
 })();
