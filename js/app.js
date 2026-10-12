@@ -61,6 +61,7 @@
     if (!host) return;
     host.innerHTML =
       '<div class="header-inner">' +
+      '<button id="tv-menu-btn" aria-label="Open menu" aria-expanded="false"><span class="bars"><span></span><span></span><span></span></span></button>' +
       (page !== 'home' ? '<button class="back-btn" id="tv-back" aria-label="Go back">←</button>' : '') +
       '<a class="logo" href="index.html"><span class="logo-mark">◈</span><span class="logo-text">TENNO<em>VAULT</em></span></a>' +
       '<span id="tv-online" class="muted small" style="display:none;white-space:nowrap"></span>' +
@@ -71,6 +72,40 @@
     var input = document.getElementById('global-search');
     input.addEventListener('focus', openSearch);
     input.addEventListener('click', openSearch);
+    /* animated PC menu: hamburger toggles slide-in sidebar drawer */
+    var menuBtn = document.getElementById('tv-menu-btn');
+    var sidebar = document.getElementById('sidebar');
+    var backdrop = document.getElementById('tv-menu-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.id = 'tv-menu-backdrop';
+      document.body.appendChild(backdrop);
+    }
+    function setMenu(open) {
+      if (!sidebar || !menuBtn) return;
+      sidebar.classList.toggle('open', open);
+      menuBtn.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if (backdrop) backdrop.classList.toggle('show', open);
+      try { document.body.style.overflow = open ? 'hidden' : ''; } catch (e) {}
+    }
+    if (menuBtn) {
+      menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setMenu(!sidebar.classList.contains('open'));
+      });
+    }
+    if (backdrop) backdrop.addEventListener('click', function () { setMenu(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) setMenu(false);
+    });
+    /* close menu when a nav link is tapped */
+    if (sidebar) sidebar.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
+    window.TV = window.TV || {};
+    window.TV.toggleMenu = setMenu;
   }
 
   /* ---------- sidebar (desktop) ---------- */
