@@ -1621,7 +1621,7 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 }
 
 /* ---------- PC app animated slide-in menu (v2.12.11 hotfix) ---------- */
-#tv-menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;
+#tv-menu-btn{display:flex;align-items:center;justify-content:center;width:42px;height:42px;
   border-radius:10px;border:1px solid var(--border);background:var(--card2);cursor:pointer;
   flex-shrink:0;transition:transform .2s ease,border-color .2s ease}
 #tv-menu-btn:hover{border-color:var(--accent)}
@@ -1635,32 +1635,25 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 #tv-menu-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:98;opacity:0;
   pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(2px)}
 #tv-menu-backdrop.show{opacity:1;pointer-events:auto}
-/* desktop: sidebar becomes a slide-in drawer (v2.12.14 fix: use 1024px breakpoint
-   to match existing layout, override display:none !important) */
-/* v2.12.22: also show on narrow PC windows via hover/pointer detection —
-   any device with a mouse gets the hamburger, regardless of window width */
-@media(min-width:1024px),(hover:hover) and (pointer:fine){
-  #tv-menu-btn{display:flex}
-  #sidebar{display:block !important;position:fixed;left:0;top:0;bottom:0;width:280px;max-width:85vw;z-index:99;
-    background:var(--bg);border-right:1px solid var(--border);
-    transform:translateX(-105%);transition:transform .35s cubic-bezier(.2,1.1,.35,1);
-    padding-top:70px;height:100vh;overflow-y:auto;box-shadow:8px 0 32px rgba(0,0,0,.4);
-    -webkit-overflow-scrolling:touch}
-  #sidebar.open{transform:translateX(0)}
-  /* every nav link pops in with a stagger when the drawer opens */
-  #sidebar.open nav a{animation:tv-menu-item-in .3s ease backwards}
+/* drawer menu: sidebar becomes a slide-in drawer at ALL sizes (v2.12.23) */
+#sidebar{display:block !important;position:fixed;left:0;top:0;bottom:0;width:280px;max-width:85vw;z-index:99;
+  background:var(--bg);border-right:1px solid var(--border);
+  transform:translateX(-105%);transition:transform .35s cubic-bezier(.2,1.1,.35,1);
+  padding-top:70px;height:100vh;overflow-y:auto;box-shadow:8px 0 32px rgba(0,0,0,.4);
+  -webkit-overflow-scrolling:touch}
+#sidebar.open{transform:translateX(0)}
+/* every nav link pops in with a stagger when the drawer opens */
+#sidebar.open nav a{animation:tv-menu-item-in .3s ease backwards}
+/* desktop wide: keep the old breakpoint rules for layout (tab bar hidden, etc.) */
+@media(min-width:1024px){
+  /* drawer already styled above; nothing extra needed */
 }
 @keyframes tv-menu-item-in{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
   #sidebar{transition:none}
   #sidebar.open nav a{animation:none}
 }
-/* PWA standalone: always show the menu button */
-/* PC installed app (wide viewport): same drawer menu as desktop.
-   Mobile keeps the bottom tab bar — no hamburger there. */
-@media(display-mode:standalone) and (min-width:1024px){
-  #tv-menu-btn{display:flex}
-}
+/* (standalone PWA rule removed in v2.12.23 — hamburger now shows at all sizes) */
 
 /* ---------- Update popup (v2.12.11) ---------- */
 #tv-update-popup{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;
