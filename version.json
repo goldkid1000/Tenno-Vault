@@ -1,1 +1,1 @@
-{"version": "2.12.29", "updated": "2026-10-12T19:40:00Z", "notes": "Vaulty AI open hardening + chat auto-resets every 24h", "notify": true}
+{"version": "2.12.30", "updated": "2026-10-12T19:45:00Z", "notes": "Fixed AI chat: removed orphaned button reference crashing init. Vaulty stays where placed on resize.", "notify": true}
