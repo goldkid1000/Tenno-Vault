@@ -1,1 +1,1 @@
-{"version": "2.12.11", "updated": "2026-10-12T18:05:00Z", "notes": "Hotfix: animated PC slide-in menu, Vaulty fixes, update popup with loading bar", "notify": true}
+{"version": "2.12.12", "updated": "2026-10-12T18:10:00Z", "notes": "PC menu fix: all nav items pop in with stagger animation", "notify": true}
