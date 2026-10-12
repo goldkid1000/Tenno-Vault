@@ -996,7 +996,7 @@ function oneShotBuildAnswer(t) {
   function toggle(open) {
     var show = typeof open === 'boolean' ? open : els.panel.style.display !== 'flex';
     els.panel.style.display = show ? 'flex' : 'none';
-    els.btn.classList.toggle('open', show);
+    if (els.btn) els.btn.classList.toggle('open', show);
     if (show && !opened) {
       opened = true;
       addMsg('Hey Tenno! ◈ Welcome to the Vault — I\'m your built-in guide. ' +
@@ -1039,7 +1039,7 @@ function oneShotBuildAnswer(t) {
     document.body.appendChild(panel);
 
     els = {
-      btn: btn, panel: panel,
+      btn: null, panel: panel,
       msgs: panel.querySelector('#vai-msgs'),
       input: panel.querySelector('#vai-input'),
       form: panel.querySelector('#vai-form')
