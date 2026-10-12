@@ -248,8 +248,12 @@
       squash();
       setTimeout(function () {
         hide();
-        var btn = document.getElementById('vault-ai-btn');
-        if (btn) btn.click();
+        /* v2.12.15: floating button removed — open panel directly via Vaulty */
+        try {
+          if (window.TVAI && typeof window.TVAI.toggle === 'function') {
+            window.TVAI.toggle(true);
+          }
+        } catch (e) {}
       }, reducedMotion ? 0 : 180);
     }
     /* tap Vaulty: random fun animation before opening AI (not when dragging) */
