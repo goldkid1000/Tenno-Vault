@@ -282,13 +282,9 @@
   }
 
   function init() {
-    if (document.getElementById('vault-ai-btn') || !window.TV) return;
-
-    var btn = document.createElement('button');
-    btn.id = 'vault-ai-btn';
-    btn.type = 'button';
-    btn.innerHTML = '◈ Ask the Vault';
-    btn.setAttribute('aria-label', 'Ask the Vault guide');
+    if (document.getElementById('vault-ai-panel') || !window.TV) return;
+    /* v2.12.15: floating "Ask the Vault" button removed — Vaulty is the entry point now.
+       Panel is still created; open via window.TVAI.toggle(true) */
 
     var panel = document.createElement('div');
     panel.id = 'vault-ai-panel';
@@ -320,7 +316,6 @@
       form: panel.querySelector('#vai-form')
     };
 
-    btn.addEventListener('click', function () { toggle(); });
     panel.querySelector('#vai-close').addEventListener('click', function () { toggle(false); });
     els.form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -334,5 +329,5 @@
     });
   }
 
-  window.TVAI = { init: init };
+  window.TVAI = { init: init, toggle: toggle };
 })();
