@@ -744,9 +744,74 @@ function oneShotBuildAnswer(t) {
 /* ---------- intent routing ---------- */
   function stripQ(q) { return norm(q).replace(/\?+$/, '').trim(); }
 
+  /* v2.12.31: conversational layer — answer like a peer, not a wiki.
+     Handles opinions, comparisons, "what should I do", and casual chat. */
+  function conversationalAnswer(t, origQ) {
+    /* greetings with personality */
+    if (/^(hi|hey|hello|yo|sup|howdy|whats up|what's up)\b/.test(t)) {
+      var greetings = [
+        'Hey, Tenno. What are we working on — builds, farming, or just figuring out what to do next?',
+        'Yo. Ask me about builds, where to farm something, or what\'s worth your time.',
+        'Hey. I can help with builds, mods, farming spots — or tell you straight up if something\'s worth it.'
+      ];
+      return greetings[Math.floor(Math.random() * greetings.length)];
+    }
+    /* "is X good/worth it?" — opinions */
+    var isGoodMatch = t.match(/is ([a-z0-9 '\-]+?) (good|worth it|worth|any good|good\?)/);
+    if (isGoodMatch) {
+      var item = isGoodMatch[1].trim();
+      return opinionAnswer(item, t);
+    }
+    /* "should I ..." — advice */
+    if (/^should i\b/.test(t)) {
+      return 'Depends on where you\'re at. ' + helpAnswer() + ' Give me more context — what MR are you, what are you trying to do?';
+    }
+    /* "what should I do/farm/next" — guidance */
+    if (/what should i (do|farm|focus|work on)/.test(t) || /what('s| is) next/.test(t)) {
+      return 'Here\'s the priority: <b>1)</b> Clear the star chart if you haven\'t — unlocks everything. ' +
+        '<b>2)</b> Farm the mods you\'re missing (check the mods page for sources). ' +
+        '<b>3)</b> Crack relics for prime parts — that\'s your platinum income. ' +
+        'Tell me your MR and I\'ll get specific.';
+    }
+    /* "X vs Y" or "X or Y" — comparisons */
+    var vsMatch = t.match(/([a-z0-9 '\-]+?) (vs|versus|or) ([a-z0-9 '\-]+?)$/);
+    if (vsMatch && t.indexOf('build') === -1) {
+      return 'Comparing <b>' + esc(vsMatch[1].trim()) + '</b> vs <b>' + esc(vsMatch[3].trim()) + '</b> — ' +
+        'I\'d need to know what you\'re using them for. In general: check both on the builds page and look at ' +
+        'the use case. Want me to pull up builds for either?';
+    }
+    /* thanks */
+    if (/^(thanks|thank you|thx|ty)\b/.test(t)) {
+      return 'Anytime, Tenno. Go get that loot. ◈';
+    }
+    /* bye */
+    if (/^(bye|goodbye|see you|later)\b/.test(t)) {
+      return 'Later, Tenno. Vault\'s always open. ◈';
+    }
+    /* "who are you" */
+    if (/who are you|your name/.test(t)) {
+      return 'I\'m the Vault Guide — your Warframe companion built into Tenno Vault. Ask me about builds, farming, mods, anything.';
+    }
+    return null; /* not handled — fall through to keyword matching */
+  }
+
+  /* opinions on gear — direct, peer-level */
+  function opinionAnswer(item, t) {
+    /* check if it's in our data first */
+    var itemLower = item.toLowerCase();
+    /* generic but honest framework */
+    return 'Honest take on <b>' + esc(item) + '</b>: ' +
+      'check if it has a build in the library — if it\'s got a Steel Path tag, it\'s solid. ' +
+      'If you tell me what you want to use it for (Steel Path? Sorties? just fun?), I\'ll give you a real answer.';
+  }
+
   function answer(q) {
     var t = stripQ(q);
     if (!t) return 'Ask me something — a build, a farm spot, a mod, or "help".';
+
+    /* v2.12.31: conversational layer first — personality, opinions, casual chat */
+    var convo = conversationalAnswer(t, q);
+    if (convo) return convo;
 
     if (/^(hi|hey|hello|yo|sup|howdy)\b/.test(t)) {
       return 'Hey, Tenno. ' + helpAnswer();
