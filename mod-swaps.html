@@ -56,12 +56,15 @@
       cat.swaps.forEach(function (s) {
         html += '<div class="card"><h3>⭐ ' + s.best + '</h3>';
         html += '<p class="muted small">' + s.bestNote + '</p>';
+        if (s.bestFarm) html += '<p class="small" style="color:#7ec8ff">📍 ' + s.bestFarm + '</p>';
         html += '<h4 style="margin:.8em 0 .4em">Instead, use:</h4>';
         s.alternatives.forEach(function (a) {
           html += '<div style="margin:.5em 0;padding:.6em;background:#0f1526;border-radius:8px">';
           html += '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">';
           html += '<b>' + a.mod + '</b>' + effBadge(a.effectiveness);
-          html += '</div><p class="muted small" style="margin:.3em 0 0">' + a.note + '</p></div>';
+          html += '</div><p class="muted small" style="margin:.3em 0 0">' + a.note + '</p>';
+          if (a.farm) html += '<p class="small" style="color:#7ec8ff;margin:.3em 0 0">📍 ' + a.farm + '</p>';
+          html += '</div>';
         });
         html += '</div>';
       });
