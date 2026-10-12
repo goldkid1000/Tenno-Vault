@@ -1,1 +1,1 @@
-{"version": "2.12.21", "updated": "2026-10-12T18:55:00Z", "notes": "Vaulty fixes: badge no longer floats disconnected, bigger character, resize repositioning", "notify": true}
+{"version": "2.12.22", "updated": "2026-10-12T19:00:00Z", "notes": "Hamburger menu now shows on any PC window size (narrow or fullscreen)", "notify": true}
