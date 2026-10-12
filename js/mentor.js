@@ -551,6 +551,33 @@
     try {
       reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     } catch (e) { reducedMotion = false; }
+    /* v2.12.14: respect user's animation toggle */
+    try {
+      if (localStorage.getItem('tv-animations') === 'off') reducedMotion = true;
+    } catch (e) {}
+    /* listen for toggle changes (same-tab custom event + cross-tab storage) */
+    var onAnimToggle = function (on) {
+      reducedMotion = !on;
+      if (!on) {
+        /* stop everything: hide Vaulty, stop behaviors */
+        if (els.wrap) hide();
+        shimeji.state = 'idle';
+      } else {
+        /* re-enable: rebuild and show */
+        if (els.wrap) {
+          els.wrap.classList.add('visible');
+          setTimeout(shimejiBehave, 2000);
+        }
+      }
+    };
+    try {
+      document.addEventListener('tv-anim-toggle', function (e) {
+        if (e && e.detail && typeof e.detail.on === 'boolean') onAnimToggle(e.detail.on);
+      });
+      window.addEventListener('storage', function (e) {
+        if (e.key === 'tv-animations') onAnimToggle(e.newValue !== 'off');
+      });
+    } catch (e) {}
     build();
     /* entrance: slide/fade in with a little bounce */
     setTimeout(function () {
