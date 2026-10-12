@@ -1,1 +1,1 @@
-{"version": "2.12.16", "updated": "2026-10-12T18:30:00Z", "notes": "Home button in header, personal notes on homepage (save favorite builds)", "notify": true}
+{"version": "2.12.17", "updated": "2026-10-12T18:35:00Z", "notes": "Fixed 12/31/1969 date bug on Live page, compact mobile header buttons", "notify": false}
