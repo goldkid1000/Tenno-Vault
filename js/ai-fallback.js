@@ -1018,13 +1018,8 @@ function oneShotBuildAnswer(t) {
   ];
 
   function init() {
-    if (document.getElementById('vault-ai-btn') || !window.TV) return;
-
-    var btn = document.createElement('button');
-    btn.id = 'vault-ai-btn';
-    btn.type = 'button';
-    btn.innerHTML = '◈ Ask the Vault';
-    btn.setAttribute('aria-label', 'Ask the Vault guide');
+    if (document.getElementById('vault-ai-panel') || !window.TV) return;
+    /* v2.12.15: floating "Ask the Vault" button removed — Vaulty is the entry point now. */
 
     var panel = document.createElement('div');
     panel.id = 'vault-ai-panel';
@@ -1050,7 +1045,6 @@ function oneShotBuildAnswer(t) {
       form: panel.querySelector('#vai-form')
     };
 
-    btn.addEventListener('click', function () { toggle(); });
     panel.querySelector('#vai-close').addEventListener('click', function () { toggle(false); });
     els.form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -1064,5 +1058,5 @@ function oneShotBuildAnswer(t) {
     });
   }
 
-  window.TVAI = { init: init, _answer: answer, _load: loadData };
+  window.TVAI = { init: init, toggle: toggle, _answer: answer, _load: loadData };
 })();
