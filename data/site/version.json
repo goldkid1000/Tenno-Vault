@@ -1,1 +1,1 @@
-{"version": "2.12.20", "updated": "2026-10-12T18:50:00Z", "notes": "Vaulty repositions correctly when window is resized (stays above tab bar)", "notify": true}
+{"version": "2.12.21", "updated": "2026-10-12T18:55:00Z", "notes": "Vaulty fixes: badge no longer floats disconnected, bigger character, resize repositioning", "notify": true}
