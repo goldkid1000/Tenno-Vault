@@ -601,7 +601,19 @@
     });
     schedulePopup();
     shimejiInit();
-    window.addEventListener('resize', resetPosition);
+    /* v2.12.20: on resize, recalc home position and keep Vaulty above tab bar */
+    window.addEventListener('resize', function () {
+      resetPosition();
+      /* recalc home for new viewport size */
+      shimeji.homeX = 8;
+      shimeji.homeY = Math.max(200, window.innerHeight * 0.45);
+      /* if not dragged, snap back to home; positionShimeji handles tab bar */
+      if (!shimeji.dragging && shimeji.state !== 'walking') {
+        shimeji.x = shimeji.homeX;
+        shimeji.y = shimeji.homeY;
+      }
+      positionShimeji();
+    });
   }
 
   /* ===== SHIMEJI ENGINE — Vaulty is a living screen pet ===== */
