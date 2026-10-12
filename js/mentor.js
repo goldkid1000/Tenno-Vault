@@ -788,8 +788,14 @@
       return;
     }
     /* don't interrupt important states */
+    /* v2.12.12 FIX: was checking bubble EXISTENCE (always true — it's in DOM but hidden),
+       so Vaulty never did autonomous behaviors. Now checks actual visibility. */
+    var bubbleVisible = (function () {
+      var b = document.querySelector('.tv-mentor-bubble');
+      return !!(b && !b.hidden && b.classList.contains('show'));
+    })();
     if (shimeji.dragging || shimeji.state === 'falling' || shimeji.state === 'climbing' ||
-        els.wrap.classList.contains('walking') || document.querySelector('.tv-mentor-bubble')) {
+        els.wrap.classList.contains('walking') || bubbleVisible) {
       setTimeout(shimejiBehave, 6000);
       return;
     }
@@ -814,10 +820,11 @@
       }, 2000 + Math.random() * 1000);
     } else if (roll < 0.35) {
       /* peek-a-boo: briefly duck behind left edge, then pop out */
+      /* v2.12.12 FIX: clear transition immediately on drag so it never lags */
       if (els.wrap) {
         els.wrap.style.transition = 'left .3s ease';
         els.wrap.style.left = '-15px';
-        setTimeout(function () {
+        var peekTimer = setTimeout(function () {
           if (!els.wrap) return;
           els.wrap.style.left = shimeji.homeX + 'px';
           /* pop! */
@@ -827,6 +834,16 @@
           }
           setTimeout(function () { if (els.wrap) els.wrap.style.transition = ''; }, 500);
         }, 1200);
+        /* if user grabs him mid-peek, cancel the peek instantly */
+        var cancelPeek = function () {
+          clearTimeout(peekTimer);
+          if (els.wrap) {
+            els.wrap.style.transition = '';
+            /* drag handler will set position */
+          }
+          els.char.removeEventListener('pointerdown', cancelPeek);
+        };
+        els.char.addEventListener('pointerdown', cancelPeek);
       }
     } else if (roll < 0.45) {
       /* take a nap */
