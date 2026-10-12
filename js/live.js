@@ -131,9 +131,15 @@
     if (d.news && d.news.length) {
       html += '<h2>Official Warframe News</h2><div class="item-list">';
       d.news.slice(0, 8).forEach(function (n) {
+        /* v2.12.17 fix: invalid dates showed 12/31/1969 — hide date if unparseable */
+        var dateStr = '';
+        try {
+          var dt = new Date(n.date);
+          if (!isNaN(dt.getTime()) && dt.getTime() > 0) dateStr = dt.toLocaleDateString() + ' · ';
+        } catch (e) {}
         html += '<a class="list-item" href="' + esc(n.link) + '" target="_blank" rel="noopener">' +
           '<h3>' + esc(n.message) + '</h3>' +
-          '<p class="muted small">' + esc(new Date(n.date).toLocaleDateString()) + ' · warframe.com ↗</p></a>';
+          '<p class="muted small">' + dateStr + 'warframe.com ↗</p></a>';
       });
       html += '</div>';
     }
