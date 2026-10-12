@@ -182,6 +182,16 @@
   function buildTabbar() {
     var host = document.getElementById('tabbar');
     if (!host) return;
+    /* v2.12.25: hide tab bar on PC (mouse devices) — hamburger covers nav.
+       JS fallback in case CSS is cached. */
+    try {
+      var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+      var hasMouse = window.matchMedia('(hover:hover)').matches;
+      if (!isTouch || hasMouse) {
+        host.style.display = 'none';
+        return;
+      }
+    } catch (e) {}
     var tabs = [
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
       { id: 'builds', label: 'Builds', icon: '⚔️', file: 'builds.html' },
