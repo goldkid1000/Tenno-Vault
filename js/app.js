@@ -2,6 +2,20 @@
 (function () {
   'use strict';
 
+  /* v2.12.14: apply saved animation preference ASAP (before first paint) */
+  try {
+    if (localStorage.getItem('tv-animations') === 'off') {
+      document.documentElement.classList.add('tv-no-anim-early');
+    }
+  } catch (e) {}
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (localStorage.getItem('tv-animations') === 'off') {
+        document.body.classList.add('tv-no-anim');
+      }
+    } catch (e) {}
+  });
+
   var NAV = [
     /* Home stays separate at the top — no group */
     { id: 'home', label: 'Home', sub: 'Start here', icon: '🏠', file: 'index.html' },
@@ -132,7 +146,35 @@
       NAV.forEach(function (n) { if (n.group === g) html += link(n); });
     });
     html += '</nav>';
+    /* v2.12.14: Settings — animations toggle (saves CPU/battery) */
+    var animOff = false;
+    try { animOff = localStorage.getItem('tv-animations') === 'off'; } catch (e) {}
+    html += '<div class="tv-settings"><h4>⚙️ Settings</h4>' +
+      '<div class="tv-setting-row"><div>' +
+        '<div class="tv-setting-label">Animations</div>' +
+        '<div class="tv-setting-desc">Turn off to save CPU & battery</div>' +
+      '</div>' +
+      '<label class="tv-toggle"><input type="checkbox" id="tv-anim-toggle"' +
+        (animOff ? '' : ' checked') + ' aria-label="Toggle animations">' +
+        '<span class="tv-toggle-track"><span class="tv-toggle-thumb"></span></span></label>' +
+      '</div></div>';
     host.innerHTML = html;
+    /* wire up the toggle */
+    var toggle = host.querySelector('#tv-anim-toggle');
+    if (toggle) {
+      /* apply saved state on load */
+      if (animOff) document.body.classList.add('tv-no-anim');
+      toggle.addEventListener('change', function () {
+        var on = toggle.checked;
+        try { localStorage.setItem('tv-animations', on ? 'on' : 'off'); } catch (e) {}
+        document.body.classList.toggle('tv-no-anim', !on);
+        document.documentElement.classList.toggle('tv-no-anim-early', !on);
+        /* notify Vaulty via custom event (same-tab) */
+        try {
+          document.dispatchEvent(new CustomEvent('tv-anim-toggle', { detail: { on: on } }));
+        } catch (e) {}
+      });
+    }
   }
 
   /* ---------- tab bar (mobile) ---------- */
