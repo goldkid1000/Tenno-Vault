@@ -248,10 +248,16 @@
       squash();
       setTimeout(function () {
         hide();
-        /* v2.12.15: floating button removed — open panel directly via Vaulty */
+        /* v2.12.29: ensure TVAI is initialized before toggling */
         try {
-          if (window.TVAI && typeof window.TVAI.toggle === 'function') {
-            window.TVAI.toggle(true);
+          if (window.TVAI) {
+            /* if panel doesn't exist, try to init first */
+            if (!document.getElementById('vault-ai-panel') && typeof window.TVAI.init === 'function') {
+              window.TVAI.init();
+            }
+            if (typeof window.TVAI.toggle === 'function') {
+              window.TVAI.toggle(true);
+            }
           }
         } catch (e) {}
       }, reducedMotion ? 0 : 180);
