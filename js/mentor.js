@@ -618,13 +618,18 @@
     schedulePopup();
     shimejiInit();
     /* v2.12.20: on resize, recalc home position and keep Vaulty above tab bar */
+    /* v2.12.30: if user placed him, keep his spot (clamped to new viewport) */
     window.addEventListener('resize', function () {
       resetPosition();
       /* recalc home for new viewport size */
       shimeji.homeX = 8;
       shimeji.homeY = Math.max(200, window.innerHeight * 0.45);
-      /* if not dragged, snap back to home; positionShimeji handles tab bar */
-      if (!shimeji.dragging && shimeji.state !== 'walking') {
+      if (shimeji.userPlaced && !shimeji.dragging) {
+        /* keep his spot, just clamp inside the new viewport */
+        shimeji.x = Math.max(0, Math.min(window.innerWidth - 80, shimeji.x));
+        shimeji.y = Math.max(60, Math.min(window.innerHeight - 80, shimeji.y));
+      } else if (!shimeji.dragging && shimeji.state !== 'walking') {
+        /* not placed by user — snap back to home; positionShimeji handles tab bar */
         shimeji.x = shimeji.homeX;
         shimeji.y = shimeji.homeY;
       }
@@ -642,7 +647,8 @@
     dragging: false,
     lastAction: 0,
     homeX: 0,                // his home spot — returns here
-    homeY: 0
+    homeY: 0,
+    userPlaced: false        // v2.12.30: true after user drags him — resize keeps his spot
   };
 
   function shimejiInit() {
@@ -687,6 +693,7 @@
       /* stays where you put him — no falling */
       shimeji.state = 'idle';
       shimeji.vy = 0;
+      shimeji.userPlaced = true; /* v2.12.30: remember — resize won't move him */
       if (els.char) els.char.classList.remove('falling', 'climbing');
       /* happy little bounce on landing */
       if (els.char && !reducedMotion) {
