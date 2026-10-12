@@ -1020,6 +1020,15 @@ function oneShotBuildAnswer(t) {
   function init() {
     if (document.getElementById('vault-ai-panel') || !window.TV) return;
     /* v2.12.15: floating "Ask the Vault" button removed — Vaulty is the entry point now. */
+    /* v2.12.29: reset chat history every 24h to prevent memory bloat/crashes */
+    try {
+      var lastReset = parseInt(localStorage.getItem('tv-chat-reset') || '0', 10);
+      var now = Date.now();
+      if (now - lastReset > 24 * 60 * 60 * 1000) {
+        try { localStorage.removeItem('tv-chat-history'); } catch (e) {}
+        localStorage.setItem('tv-chat-reset', String(now));
+      }
+    } catch (e) {}
 
     var panel = document.createElement('div');
     panel.id = 'vault-ai-panel';
