@@ -1655,3 +1655,34 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 @media(display-mode:standalone){
   #tv-menu-btn{display:flex}
 }
+
+/* ---------- Update popup (v2.12.11) ---------- */
+#tv-update-popup{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;
+  justify-content:center;padding:20px;background:rgba(0,0,0,.6);opacity:0;
+  pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(3px)}
+#tv-update-popup.show{opacity:1;pointer-events:auto}
+.tv-upd-card{background:var(--card);border:1px solid var(--accent);border-radius:16px;
+  padding:22px;max-width:420px;width:100%;box-shadow:0 12px 48px rgba(0,210,255,.25);
+  transform:scale(.92) translateY(12px);transition:transform .35s cubic-bezier(.2,1.3,.4,1)}
+#tv-update-popup.show .tv-upd-card{transform:none}
+.tv-upd-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.tv-upd-icon{font-size:32px;animation:tv-bounce 1.2s ease-in-out infinite}
+.tv-upd-head b{font-size:1.15rem;display:block}
+.tv-upd-ver{color:var(--accent);font-size:.9rem;font-weight:700}
+.tv-upd-dismiss{margin-left:auto;background:none;border:none;color:var(--muted);
+  font-size:1.6rem;cursor:pointer;line-height:1;padding:4px}
+.tv-upd-dismiss:hover{color:var(--text)}
+.tv-upd-list{margin:8px 0 14px;padding-left:20px;font-size:.92rem;color:var(--text)}
+.tv-upd-list li{margin:4px 0}
+.tv-upd-notes{font-size:.92rem;color:var(--muted);margin:8px 0 14px}
+.tv-upd-actions{display:flex;gap:10px}
+.tv-upd-actions .btn{flex:1;text-align:center}
+.tv-upd-progress{margin-top:6px}
+.tv-upd-bar{height:10px;border-radius:6px;background:var(--bg2);overflow:hidden;margin-bottom:8px}
+.tv-upd-fill{height:100%;width:0;border-radius:6px;
+  background:linear-gradient(90deg,#0090b8,#00e5ff);transition:width .5s ease}
+.tv-upd-status{font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){
+  #tv-update-popup,.tv-upd-card{transition:none}
+  .tv-upd-icon{animation:none}
+}
