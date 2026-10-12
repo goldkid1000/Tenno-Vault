@@ -314,12 +314,17 @@
       if (msg) say(msg, { duration: 6000 });
       wave();
     }, 4000);
-    /* clean up after crossing */
+    /* clean up after crossing — v2.12.11: restore shimeji home so he doesn't teleport */
     setTimeout(function () {
       if (els.wrap) {
         els.wrap.classList.remove('walking', 'visible');
         els.wrap.style.left = '';
         if (els.char) els.char.classList.remove('walk-anim');
+        /* resync shimeji to his home spot */
+        shimeji.x = shimeji.homeX;
+        shimeji.y = shimeji.homeY;
+        shimeji.state = 'idle';
+        positionShimeji();
       }
     }, 8500);
   }
@@ -385,6 +390,8 @@
   function setChar(mode) {
     if (!els.char) return;
     els.char.innerHTML = charSVG(mode);
+    /* v2.12.11: SVG was rebuilt — force body-anim to re-query parts */
+    try { if (window.TV && window.TV._vaultyResync) window.TV._vaultyResync(); } catch (e) {}
   }
 
   function say(text, opts) {
@@ -656,7 +663,9 @@
     startBodyAnimation();
   }
 
-  /* Animate Vaulty's body parts with JavaScript — arms wave, legs kick, head bobs */
+  /* Animate Vaulty's body parts with JavaScript — arms wave, legs kick, head bobs.
+     v2.12.11 hotfix: pause when hidden/background tab (perf), and resync after
+     setChar() rebuilds the SVG so parts are never stale. */
   var bodyAnimT = 0;
   var bodyAnimStarted = false;
   function startBodyAnimation() {
@@ -666,6 +675,7 @@
     function findParts() {
       var wrap = document.getElementById('tv-mentor');
       if (!wrap) return false;
+      /* re-query every time — setChar() rebuilds innerHTML */
       armR = wrap.querySelector('#tm-arm-r');
       armL = wrap.querySelector('#tm-arm-l');
       legs = wrap.querySelector('#tm-legs');
@@ -673,12 +683,18 @@
       svg = wrap.querySelector('.tv-mentor-char > svg') || wrap.querySelector('svg');
       return !!(armR || armL || head);
     }
+    /* expose a resync hook so setChar() never leaves stale refs */
+    window.TV = window.TV || {};
+    window.TV._vaultyResync = function () { armR = armL = legs = head = null; };
     function tick() {
       try {
+        /* skip work when tab hidden or Vaulty not visible — saves battery */
+        if (document.hidden) { requestAnimationFrame(tick); return; }
         bodyAnimT += 0.06;
         var t = bodyAnimT;
         var wrap = document.getElementById('tv-mentor');
-        var vis = wrap && getComputedStyle(wrap).opacity !== '0';
+        var vis = wrap && wrap.classList.contains('visible') &&
+                  getComputedStyle(wrap).opacity !== '0';
         if (!reducedMotion && vis) {
           if (!armR && !findParts()) { requestAnimationFrame(tick); return; }
           var char = wrap.querySelector('.tv-mentor-char');
