@@ -1,1 +1,1 @@
-{"version": "2.12.25", "updated": "2026-10-12T19:15:00Z", "notes": "Tab bar hidden on PC via JS too (backup for cached CSS)", "notify": false}
+{"version": "2.12.26", "updated": "2026-10-12T19:20:00Z", "notes": "Vaulty robustness: retry init on failure, exposed reset function", "notify": true}
