@@ -1515,6 +1515,39 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
   50% { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
 }
+/* v2.12.31: new animations */
+.tv-mentor-char.jump { animation: tv-mentor-jump .7s ease !important; }
+@keyframes tv-mentor-jump {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  30% { transform: translateY(-28px) scale(.95, 1.05); }
+  50% { transform: translateY(-36px) scale(1, 1); }
+  70% { transform: translateY(-14px) scale(1.05, .95); }
+}
+.tv-mentor-char.flip { animation: tv-mentor-flip .8s ease !important; }
+@keyframes tv-mentor-flip {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(-1) translateY(-10px); }
+  100% { transform: scaleX(1); }
+}
+.tv-mentor-char.happy { animation: tv-mentor-happy 1.2s ease !important; }
+@keyframes tv-mentor-happy {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  20% { transform: translateY(-8px) rotate(-4deg); }
+  40% { transform: translateY(0) rotate(4deg); }
+  60% { transform: translateY(-8px) rotate(-4deg); }
+  80% { transform: translateY(0) rotate(4deg); }
+}
+.tv-mentor-char.sad { animation: tv-mentor-sad 1.5s ease !important; }
+@keyframes tv-mentor-sad {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(6px) scale(.96, .94); }
+}
+.tv-mentor-char.think { animation: tv-mentor-think 2s ease !important; }
+@keyframes tv-mentor-think {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-6deg) translateX(-3px); }
+  75% { transform: rotate(6deg) translateX(3px); }
+}
 @media (prefers-reduced-motion: reduce) {
   .tv-mentor-char { animation: none !important; }
 }
@@ -1710,7 +1743,9 @@ body[data-holiday="thanksgiving"] .tv-hero-bg {
 body.tv-no-anim *,body.tv-no-anim *::before,body.tv-no-anim *::after{
   animation-duration:.001s !important;animation-iteration-count:1 !important;
   transition-duration:.001s !important}
-body.tv-no-anim #tv-mentor{display:none !important}
+/* v2.12.31: don't hide Vaulty when animations off — just freeze him, keep tappable */
+body.tv-no-anim #tv-mentor .tv-mentor-char > svg *{
+  animation:none !important}
 /* early animation kill (applied before body exists) */
 html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *::after{
   animation-duration:.001s !important;animation-iteration-count:1 !important;
