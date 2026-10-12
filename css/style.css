@@ -187,7 +187,9 @@ footer .frow{max-width:var(--max);margin:0 auto;display:flex;gap:14px;justify-co
 code{background:var(--bg2);padding:2px 6px;border-radius:4px;font-size:.88em}
 
 /* ---------- responsive ---------- */
-@media (max-width:900px){
+/* v2.12.24: tab bar only on touch devices (phones/tablets).
+   PC narrow windows use the hamburger menu instead — no bottom bar. */
+@media (max-width:900px) and (hover:none){
   #sidebar{display:none}
   main{padding:14px 14px 110px}
   #tabbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:50;
