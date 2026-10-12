@@ -1,1 +1,1 @@
-{"version": "2.12.23", "updated": "2026-10-12T19:05:00Z", "notes": "Hamburger menu now shows at all window sizes on all devices", "notify": true}
+{"version": "2.12.24", "updated": "2026-10-12T19:10:00Z", "notes": "Bottom tab bar now phones-only; PC uses hamburger menu at all sizes", "notify": true}
