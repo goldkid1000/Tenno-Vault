@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mod Swaps — Tenno Vault</title>
+<meta name="description" content="Don't have the best mod? Here's what to use instead — for damage, one-shots, and Steel Path.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-v2.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tenno Vault">
+</head>
+<body data-page="mod-swaps" data-crumb="Home,Mod Swaps">
+<div id="site-header"></div>
+<div class="layout">
+<aside id="sidebar"></aside>
+<main id="main">
+<div id="breadcrumbs"></div>
+<h1>🔄 Mod Swaps</h1>
+<div class="notice"><b>Don't have the best mod?</b> Here's what to use instead. Each card shows the best-in-slot mod and ranked alternatives with how effective they are — for damage, one-shots, and Steel Path.</div>
+
+<div id="swap-cats" style="margin:1em 0;display:flex;gap:8px;flex-wrap:wrap"></div>
+<div id="swap-list"></div>
+
+</main>
+</div>
+<div id="tabbar"></div>
+<script src="js/app.js?v=20261012"></script>
+<script src="data/site/mod-swaps.js?v=20261012"></script>
+<script>
+(function () {
+  var cats = document.getElementById('swap-cats');
+  var list = document.getElementById('swap-list');
+  var active = 'all';
+
+  function effBadge(eff) {
+    if (eff >= 130) return '<span class="pill" style="background:#1a4d2e;color:#7CFC00">⬆ ' + eff + '% — better</span>';
+    if (eff >= 90) return '<span class="pill" style="background:#1a3a4d;color:#7ec8ff">~' + eff + '% — close</span>';
+    if (eff >= 50) return '<span class="pill" style="background:#4d3a1a;color:#ffcc7e">~' + eff + '% — weaker</span>';
+    if (eff > 0) return '<span class="pill" style="background:#4d1a1a;color:#ff7e7e">~' + eff + '% — much weaker</span>';
+    return '<span class="pill" style="background:#333;color:#aaa">no substitute</span>';
+  }
+
+  function render() {
+    var html = '';
+    MOD_SWAPS.forEach(function (cat) {
+      if (active !== 'all' && cat.category !== active) return;
+      html += '<h2>' + cat.icon + ' ' + cat.category + '</h2>';
+      html += '<p class="muted">' + cat.desc + '</p>';
+      html += '<div class="card-grid">';
+      cat.swaps.forEach(function (s) {
+        html += '<div class="card"><h3>⭐ ' + s.best + '</h3>';
+        html += '<p class="muted small">' + s.bestNote + '</p>';
+        html += '<h4 style="margin:.8em 0 .4em">Instead, use:</h4>';
+        s.alternatives.forEach(function (a) {
+          html += '<div style="margin:.5em 0;padding:.6em;background:#0f1526;border-radius:8px">';
+          html += '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">';
+          html += '<b>' + a.mod + '</b>' + effBadge(a.effectiveness);
+          html += '</div><p class="muted small" style="margin:.3em 0 0">' + a.note + '</p></div>';
+        });
+        html += '</div>';
+      });
+      html += '</div>';
+    });
+    list.innerHTML = html || '<p class="muted">Nothing here.</p>';
+  }
+
+  function renderCats() {
+    var html = '<button class="btn small' + (active === 'all' ? ' primary' : '') + '" data-cat="all">All</button>';
+    MOD_SWAPS.forEach(function (c) {
+      html += '<button class="btn small' + (active === c.category ? ' primary' : '') + '" data-cat="' + c.category + '">' + c.icon + ' ' + c.category + '</button>';
+    });
+    cats.innerHTML = html;
+    cats.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        active = b.getAttribute('data-cat');
+        renderCats(); render();
+      });
+    });
+  }
+
+  renderCats(); render();
+})();
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
+<script src="js/pwa-install.js"></script>
+<script src="js/ui-fx.js"></script>
+<script src="js/mentor.js?v=20261012"></script>
+<script src="js/holidays.js?v=20261012"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/chat.js?v=20261012"></script>
+<script src="js/chat-panel.js?v=20261012"></script>
+<script src="js/update-notify.js"></script>
+<script src="js/whats-new.js"></script>
+</body>
+</html>
