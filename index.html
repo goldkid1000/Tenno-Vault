@@ -59,6 +59,17 @@
   </a>
 </div>
 
+<h2>📝 My Notes</h2>
+<p class="muted">Jot down your favorite builds, farm reminders, anything — saved on this device, no account needed.</p>
+<div class="tv-notes" id="tv-notes">
+  <div class="tv-notes-input">
+    <input type="text" id="tv-note-title" placeholder="Title (e.g. My Nova build)" aria-label="Note title" maxlength="80">
+    <textarea id="tv-note-text" placeholder="Write your note here… mods, combos, reminders, whatever you need." aria-label="Note text" rows="3"></textarea>
+    <button class="btn primary" id="tv-note-save">💾 Save note</button>
+  </div>
+  <div class="tv-notes-list" id="tv-notes-list"></div>
+</div>
+
 <h2 id="beginner-guide">🌱 New Player Guide</h2>
 <div class="detail-box">
   <h3>Your first Warframe</h3>
@@ -185,10 +196,10 @@
 </div>
 <nav id="tabbar"></nav>
 <footer id="site-footer"></footer>
-<script src="js/app.js?v=20261009c"></script>
-<script src="js/presence.js?v=20261009"></script>
-<script src="js/ai-fallback.js?v=20261010"></script>
-<script src="js/ai.js?v=20261010"></script>
+<script src="js/app.js?v=20261012"></script>
+<script src="js/presence.js?v=20261012"></script>
+<script src="js/ai-fallback.js?v=20261012"></script>
+<script src="js/ai.js?v=20261012"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   /* Use the sibling worker's grouped NAV if available; otherwise fall back to a local copy. */
@@ -241,11 +252,13 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}</script>
 <script src="js/pwa-install.js"></script>
 <script src="js/ui-fx.js"></script>
-<script src="js/mentor.js?v=20261011"></script>
-<script src="js/holidays.js?v=20261011"></script>
+<script src="js/mentor.js?v=20261012"></script>
+<script src="js/holidays.js?v=20261012"></script>
 <script src="js/firebase-config.js"></script>
-<script src="js/chat.js?v=20261011"></script>
-<script src="js/chat-panel.js?v=20261011"></script>
+<script src="js/chat.js?v=20261012"></script>
+<script src="js/chat-panel.js?v=20261012"></script>
 <script src="js/update-notify.js"></script>
+<script src="js/whats-new.js"></script>
+<script src="js/notes.js"></script>
 </body>
 </html>
