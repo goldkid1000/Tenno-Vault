@@ -1,1 +1,1 @@
-{"version": "2.12.12", "updated": "2026-10-12T18:10:00Z", "notes": "PC menu fix: all nav items pop in with stagger animation", "notify": true}
+{"version": "2.12.13", "updated": "2026-10-12T18:15:00Z", "notes": "Vaulty bugfix: autonomous behaviors (walk, peek-a-boo, sleep) now actually trigger", "notify": true}
