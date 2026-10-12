@@ -89,6 +89,13 @@
       menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       if (backdrop) backdrop.classList.toggle('show', open);
       try { document.body.style.overflow = open ? 'hidden' : ''; } catch (e) {}
+      /* stagger every nav link + label so they all pop in one by one */
+      if (open) {
+        var items = sidebar.querySelectorAll('nav a, nav .nav-label');
+        for (var i = 0; i < items.length; i++) {
+          items[i].style.animationDelay = Math.min(i * 0.025, 0.6) + 's';
+        }
+      }
     }
     if (menuBtn) {
       menuBtn.addEventListener('click', function (e) {
