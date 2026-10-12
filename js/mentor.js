@@ -257,9 +257,19 @@
       }, reducedMotion ? 0 : 180);
     }
     /* tap Vaulty: random fun animation before opening AI (not when dragging) */
+    /* v2.12.27 fix: track actual drag distance, not any pointer movement —
+       hovering to click was setting tapMoved=true and blocking the AI chat */
     var tapMoved = false;
-    els.char.addEventListener('pointerdown', function () { tapMoved = false; });
-    els.char.addEventListener('pointermove', function () { tapMoved = true; });
+    var downX = 0, downY = 0;
+    els.char.addEventListener('pointerdown', function (e) {
+      tapMoved = false;
+      downX = e.clientX; downY = e.clientY;
+    });
+    els.char.addEventListener('pointermove', function (e) {
+      if (e.buttons === 0) return; /* not dragging, just hovering */
+      var dx = e.clientX - downX, dy = e.clientY - downY;
+      if (dx * dx + dy * dy > 100) tapMoved = true; /* >10px = real drag */
+    });
     els.char.addEventListener('click', function (e) {
       /* was it a drag? then don't open AI */
       if (tapMoved || (shimeji.dragging)) return;
