@@ -1745,3 +1745,9 @@ html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *:
   opacity:.5;transition:opacity .15s,transform .15s;padding:4px}
 .tv-note-del:hover{opacity:1;transform:scale(1.15)}
 .tv-note-body{margin:0;font-size:.92rem;line-height:1.55;white-space:pre-wrap;word-break:break-word}
+
+/* v2.12.17: compact header buttons on small screens */
+@media (max-width:600px){
+  .home-btn{padding:8px 10px}
+  .donate-btn{padding:8px 12px;font-size:.85rem}
+}
