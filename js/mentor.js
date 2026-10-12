@@ -743,6 +743,10 @@
   function startBodyAnimation() {
     if (bodyAnimStarted) return;
     bodyAnimStarted = true;
+    /* v2.12.32: idle swaying disabled — Vaulty stays still by default.
+       Only specific actions (wave, dance, tap animations) move him now.
+       Keeping the function as a no-op so existing calls don't break. */
+    return;
     var armR, armL, legs, head, svg;
     function findParts() {
       var wrap = document.getElementById('tv-mentor');
