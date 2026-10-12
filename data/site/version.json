@@ -1,1 +1,1 @@
-{"version": "2.12.24", "updated": "2026-10-12T19:10:00Z", "notes": "Bottom tab bar now phones-only; PC uses hamburger menu at all sizes", "notify": true}
+{"version": "2.12.25", "updated": "2026-10-12T19:15:00Z", "notes": "Tab bar hidden on PC via JS too (backup for cached CSS)", "notify": false}
