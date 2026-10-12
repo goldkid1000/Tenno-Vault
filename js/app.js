@@ -29,6 +29,7 @@
 
     /* ---- Upgrades ---- */
     { id: 'mods', label: 'Mods', sub: 'Upgrade cards that make everything stronger', icon: '🧩', file: 'mods.html', group: 'Upgrades' },
+    { id: 'mod-swaps', label: 'Mod Swaps', sub: "Don't have it? Use this instead — damage & Steel Path", icon: '🔄', file: 'mod-swaps.html', group: 'Upgrades' },
     { id: 'arcanes', label: 'Arcanes', sub: 'Bonus powers for warframes & weapons', icon: '✨', file: 'arcanes.html', group: 'Upgrades' },
     { id: 'shards', label: 'Shards', sub: 'Stat boosts you slot into your warframe', icon: '💠', file: 'shards.html', group: 'Upgrades' },
     { id: 'builds', label: 'Builds', sub: 'Ready-made setups — copy & play', icon: '⚔️', file: 'builds.html', group: 'Upgrades' },
