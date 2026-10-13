@@ -1,1 +1,6 @@
-{"version": "2.12.34", "updated": "2026-10-12T20:25:00Z", "notes": "Mod Swaps now shows where to farm every mod", "notify": false}
+{
+ "version": "2.12.39",
+ "updated": "2026-10-13T15:15:00Z",
+ "notes": "4 new videos: weekly reset overview, Icebind gameplay, Citrine Prime build, Riven Splicing guide",
+ "notify": false
+}
