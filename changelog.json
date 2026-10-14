@@ -1,5 +1,14 @@
 [
  {
+  "version": "2.12.44",
+  "date": "2026-10-14",
+  "notes": [
+   "Added all 21 exalted weapons with verified stats (WARFRAME Wiki weapon data): Desert Wind + Prime, Diwata + Prime, Exalted Blade + Prime + Umbra, Iron Staff + Prime, Shadow Claws + Prime, Valkyr Talons + Prime, Balefire Charger + Prime, Dex Pixia + Prime, Regulators + Prime, Artemis Bow + Prime",
+   "Exalted weapons are now searchable and show stats + which warframe they come with",
+   "Weapons total: 624 \u2192 645"
+  ]
+ },
+ {
   "version": "2.12.43",
   "date": "2026-10-14",
   "notes": [
