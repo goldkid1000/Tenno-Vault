@@ -200,13 +200,34 @@
     resetShown();
     drawList();
   }
-  Promise.all([
-    window.TV.getJSONParts('data/site/builds', 11),
-    window.TV.getJSONParts('data/site/mods', 9)
-  ]).then(function (res) {
-    builds = res[0];
+  /* v2.12.43: progressive load — render builds as soon as their parts
+     arrive (with a progress count), then load mods in the background.
+     Mods are only needed for farm locations inside a build's detail view,
+     so the list no longer waits on all 20 files before showing anything. */
+  function loadPartsProgress(base, count, onProgress) {
+    var out = new Array(count), done = 0;
+    var jobs = [];
+    for (var i = 0; i < count; i++) {
+      (function (idx) {
+        jobs.push(window.TV.getJSON(base + '-' + idx + '.json').then(function (part) {
+          out[idx] = part;
+          done++;
+          if (onProgress) onProgress(done, count);
+          return part;
+        }));
+      })(i);
+    }
+    return Promise.all(jobs).then(function () { return [].concat.apply([], out); });
+  }
+  function setLoadText(t) {
+    var p = document.querySelector('#b-list .tv-loader p');
+    if (p) p.textContent = t;
+  }
+  loadPartsProgress('data/site/builds', 11, function (d, t) {
+    setLoadText('Loading builds… ' + d + '/' + t);
+  }).then(function (allBuilds) {
+    builds = allBuilds;
     document.getElementById('b-count').textContent = builds.length + ' Builds';
-    res[1].forEach(function (m) { modDrops[m.name] = m.drops; });
     document.getElementById('b-filters').addEventListener('click', function (e) {
       var c = e.target.closest ? e.target.closest('.chip') : null;
       if (!c) return;
@@ -229,6 +250,12 @@
       else if (hh === '#one-shot') setFilter('one-shot');
       else document.getElementById('b-detail').innerHTML = '';
     });
+    /* mods in the background — refresh an open detail once they land */
+    loadPartsProgress('data/site/mods', 9, null).then(function (mods) {
+      mods.forEach(function (m) { modDrops[m.name] = m.drops; });
+      var hh = location.hash;
+      if (hh.indexOf('#build-') === 0) showDetail(hh.slice(7));
+    }).catch(function () { /* farm locations fall back to "See mod page" */ });
   }).catch(function () {
     document.getElementById('b-list').innerHTML = '<div class="notice">Couldn\'t load the data &mdash; this is usually a stale cache. <button class="btn small" onclick="window.TV.hardReload()">Tap to retry</button></div>';
   });
