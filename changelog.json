@@ -1,5 +1,12 @@
 [
  {
+  "version": "2.12.47",
+  "date": "2026-10-14",
+  "notes": [
+   "Fixed: Vaulty AI now understands 'hunt for X' and 'grind for X' (e.g. 'where can I hunt for melee arcanes') instead of replying 'don't have anything called'"
+  ]
+ },
+ {
   "version": "2.12.46",
   "date": "2026-10-14",
   "notes": [
