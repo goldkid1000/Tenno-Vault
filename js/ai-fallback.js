@@ -886,8 +886,10 @@ function oneShotBuildAnswer(t) {
         'Check the spelling — or browse the <a href="mods.html">mods list</a> to find it.';
     }
 
-    m = t.match(/^(?:where (?:do|can) i (?:farm|get|find)|where to (?:farm|get|find)|how do i (?:get|farm|obtain|find)|how to (?:get|farm|obtain|find)|farm|get|find) (.+)$/);
+    m = t.match(/^(?:where (?:do|can) i (?:farm|get|find|hunt|grind)|where to (?:farm|get|find|hunt|grind)|how do i (?:get|farm|obtain|find|hunt|grind)|how to (?:get|farm|obtain|find|hunt|grind)|farm|get|find|hunt|grind) (.+)$/);
     if (m) {
+      /* v2.12.47: "hunt for X" / "grind for X" — strip the leading "for" so the lookup gets the item */
+      m[1] = m[1].replace(/^for\s+/i, '');
       var q = m[1].toLowerCase();
       /* general "best farm" questions — conversational answer, not a lookup */
       if (/best (?:place|spot|mission|way)|most (?:efficient|resources)|one mission/.test(q)) {
