@@ -1,5 +1,13 @@
 [
  {
+  "version": "2.12.45",
+  "date": "2026-10-14",
+  "notes": [
+   "Correction: 3 more exalted weapons found on re-check (Glory \u2014 Jade, Noctua \u2014 Dante, Neutralizer \u2014 Cyte-09). Exalted total is 24, not 21.",
+   "Weapons total: 645 \u2192 648"
+  ]
+ },
+ {
   "version": "2.12.44",
   "date": "2026-10-14",
   "notes": [
