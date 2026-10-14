@@ -1,362 +1,542 @@
 [
-  {
-    "id": "MfccfyAfVbA",
-    "title": "Warframe | Kuva Zarr - The Big Bad Bang",
-    "channel": "Community",
-    "category": "Builds",
-    "description": "Sckullie's Kuva Zarr build — the big bad bang explained.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "REFhvlBpFqY",
-    "title": "Cyte-09 with the Kuva Zarr is remarkable for nuking on level cap runs",
-    "channel": "Community",
-    "category": "Builds",
-    "description": "Cyte-09 nuking level-cap runs with the Kuva Zarr.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "ZF7uRZxjUrM",
-    "title": "The STRONGEST Cyte Builds After the Vallis Update (2025)",
-    "channel": "Community",
-    "category": "Builds",
-    "description": "TennoKyle's strongest Cyte builds including a Kuva Zarr speedrun setup.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "u9WzxrnmwGY",
-    "title": "THE ONLY PLATINUM GUIDE YOU WILL EVER NEED | WARFRAME",
-    "channel": "Community",
-    "category": "Trading",
-    "description": "The mindset and method behind consistent platinum income — no scams, no burnout.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "zP3MZylnMK4",
-    "title": "NUKE Steel Path! Nova Prime BUILD GUIDE (2025)",
-    "channel": "Tosi-Chan",
-    "category": "Builds",
-    "description": "Nova Prime nuke build with Arcane Hot Shot and Heat damage — full mod setup, arcanes, and archon shards.",
-    "item": "Nova Prime",
-    "type": "build"
-  },
-  {
-    "id": "25s9w7ktVHI",
-    "title": "How To Get Started In Warframe 2025 — Beginners Guide Ep 1",
-    "channel": "WarframeFlo",
-    "category": "Beginner",
-    "description": "Starter frames, tutorial, mastery rank, navigation, and the most important tips for new Tenno.",
-    "item": "",
-    "type": "beginner"
-  },
-  {
-    "id": "gmlZEJCeIFs",
-    "title": "The COMPLETE Beginners Guide to MODDING In Warframe",
-    "channel": "WarframeFlo",
-    "category": "Beginner",
-    "description": "Modding fundamentals: capacity, polarities, forma, Endo, and a modding framework for warframes and weapons.",
-    "item": "",
-    "type": "beginner"
-  },
-  {
-    "id": "CMlMGMq67vA",
-    "title": "How to Farm your FIRST Warframe — Beginners Guide Ep 2",
-    "channel": "WarframeFlo",
-    "category": "Beginner",
-    "description": "Movement, farming Rhino, crafting, joining a clan, and where to farm resources.",
-    "item": "Rhino",
-    "type": "beginner"
-  },
-  {
-    "id": "MqZMzwW23_Q",
-    "title": "The ULTIMATE Guide to Farming MILLIONS Of Credits In Warframe",
-    "channel": "WarframeFlo",
-    "category": "Farming",
-    "description": "Every credit farm ranked: Index, Profit Taker, Railjack, Disruption, and more.",
-    "item": "Credits",
-    "type": "farm"
-  },
-  {
-    "id": "dGd1_SOwTzs",
-    "title": "9 Easy Steel Path Builds for New Players",
-    "channel": "iFlynn",
-    "category": "Builds",
-    "description": "Beginner-friendly Steel Path builds using cheap, easy-to-get warframes and weapons — mod by mod.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "liX-TScusr8",
-    "title": "This BROKEN Saryn Build Destroys Steel Path With 1 Forma! (2026)",
-    "channel": "FluffieMichi",
-    "category": "Builds",
-    "description": "Saryn/Saryn Prime build guide — abilities explained, 1-forma build, archon shards, how to play.",
-    "item": "Saryn Prime",
-    "type": "build"
-  },
-  {
-    "id": "3keePsIa2HY",
-    "title": "Torid Incarnon — One of the BEST Primary Beam Weapons | Build Guide",
-    "channel": "RunaBlueRuna",
-    "category": "Builds",
-    "description": "Torid Incarnon acquisition, evolutions, and multiple builds including level-cap setups.",
-    "item": "Torid",
-    "type": "build"
-  },
-  {
-    "id": "8QriEo6bmHc",
-    "title": "The Only Revenant Prime Build YOU NEED! LEVEL CAP VIABLE!",
-    "channel": "Psiion",
-    "category": "Builds",
-    "description": "Revenant Prime abilities, full build, companion and weapon pairings, level-cap gameplay.",
-    "item": "Revenant Prime",
-    "type": "build"
-  },
-  {
-    "id": "EY60cFHZl_s",
-    "title": "Mesa just became a BROKEN STRONG Warframe",
-    "channel": "FluffieMichi",
-    "category": "Builds",
-    "description": "Mesa Prime guide — abilities, starchart to endgame builds, Regulators setup, archon shards, arcanes.",
-    "item": "Mesa Prime",
-    "type": "build"
-  },
-  {
-    "id": "EaIu9fPkuyY",
-    "title": "Warframe Kuva Weapon Guide — Spawning a Kuva Larvling",
-    "channel": "Community",
-    "category": "Farming",
-    "description": "How to spawn Kuva Larvlings, pick your weapon, and understand the progenitor system.",
-    "item": "Kuva Weapons",
-    "type": "farm"
-  },
-  {
-    "id": "XJWcGTPGNXk",
-    "title": "Revenant STILL DOMINATES Warframe in 2026!",
-    "channel": "MHBlacky",
-    "category": "Builds",
-    "description": "Updated Revenant builds for 2026 — immortal gun builds, one-shot level 9999 setup, and AoE damage.",
-    "item": "Revenant Prime",
-    "type": "build"
-  },
-  {
-    "id": "OpNIrFSsSAE",
-    "title": "NUKE WITH NARIN | INSANE Buffs Make This Narin Build DESTROY Everything | Steel Path | Warframe 2026",
-    "channel": "GetBuck",
-    "category": "Builds",
-    "description": "Post-buff Narin ice-nuke setup for Steel Path, with weapon, companion, and shard loadouts plus a full ability rotation walkthrough.",
-    "item": "Narin",
-    "type": "build"
-  },
-  {
-    "id": "CDzaUNeQ60s",
-    "title": "Warframe | Narin DESTROYS Everything! | Guide & Builds",
-    "channel": "kyaii",
-    "category": "Builds",
-    "description": "Full Narin rundown: every ability explained, how to get her, and three ready-to-copy builds with fashion talk.",
-    "item": "Narin",
-    "type": "build"
-  },
-  {
-    "id": "c9iOg4WUaTA",
-    "title": "New Warframe NARIN deals ABSURD DAMAGE!",
-    "channel": "MHBlacky",
-    "category": "Farming",
-    "description": "Where Narin's parts drop on the Zariman and which builds make her hit hardest, from a 500% weapon buffer to a full nuke.",
-    "item": "Narin",
-    "type": "farm"
-  },
-  {
-    "id": "fCdfbshs0UY",
-    "title": "FREE LOOT FROM OPERATION TAUBOUND! One Time Warframe Event!",
-    "channel": "Pupsker",
-    "category": "Farming",
-    "description": "Every confirmed freebie from the one-time Epoch Operation: Taubound starting Oct 15 - syandana, armor set, amp skin, and a Legendary Core.",
-    "item": "",
-    "type": "farm"
-  },
-  {
-    "id": "XR0qgSb2PNY",
-    "title": "NEW Taubound Operation Event LOOT Revealed! Warframe Hotfix 44.1.1 Overview",
-    "channel": "gaz_ttv",
-    "category": "Farming",
-    "description": "Hotfix 44.1.1 patch rundown plus the Taubound operation loot table and how the event missions work.",
-    "item": "",
-    "type": "farm"
-  },
-  {
-    "id": "2q9d8Z-y0rw",
-    "title": "LATRON PRIME INCARNON Build Guide 2026 \\u2014 Total Devastation | Warframe",
-    "channel": "LeyzarGamingViews",
-    "category": "Builds",
-    "description": "Latron Prime Incarnon full build guide: best Incarnon evolutions, complete mod setup, and Steel Path gameplay.",
-    "item": "Latron Prime",
-    "type": "build"
-  },
-  {
-    "id": "-vAmTfPG8OI",
-    "title": "DAIKYU PRIME Build Guide 2026 \\u2014 Precision Strike | Warframe",
-    "channel": "LeyzarGamingViews",
-    "category": "Builds",
-    "description": "Daikyu Prime weak-point damage build: full mod setup, damage configuration, and 2026 gameplay.",
-    "item": "Daikyu Prime",
-    "type": "build"
-  },
-  {
-    "id": "UfQG_SD-FfU",
-    "title": "Warframe | Update 44.1.0: The Icebind Dev Workshop Video",
-    "channel": "PlayWarframe",
-    "category": "Farming",
-    "description": "Official Icebind dev workshop: the new 6-player endgame mode, Cryobells, binds, side objectives, and guaranteed Riven Splicer rewards.",
-    "item": "Icebind",
-    "type": "farm"
-  },
-  {
-    "id": "np7ISNXXmpE",
-    "title": "Fastest BOSS Credit Farm In Warframe! Profit Taker Guide!",
-    "channel": "Pupsker",
-    "category": "Farming",
-    "description": "Profit Taker credit farm guide: the fastest boss credit farm in the game, with mod builds for the fight.",
-    "item": "Credits",
-    "type": "farm"
-  },
-  {
-    "id": "dGk2Ezp8zno",
-    "title": "YOU CAN FARM NARIN AND EARN PLATINUM AT THE SAME TIME RIGHT NOW | WARFRAME ENTROPIC KUVA FARM 2026",
-    "channel": "Grind Hard Squad",
-    "category": "Farming",
-    "description": "Entropic Kuva farm guide: farm Narin while earning platinum from the same Zariman loop — Entropic Eximus kills, Cephalon Melica shop strategy, and drop tips.",
-    "item": "Entropic Kuva",
-    "type": "farm"
-  },
-  {
-    "id": "6XnH3iLCx4g",
-    "title": "How To Start (Or Return To) Warframe Before Iceblade of Narin",
-    "channel": "iFlynn",
-    "category": "Beginner",
-    "description": "New and returning player guide for Update 44: which frames and weapons to chase early, how mods really work, and the quest order to follow.",
-    "item": "",
-    "type": "beginner"
-  },
-  {
-    "id": "vI2YKbIWHc0",
-    "title": "The Icebind Explained – Warframe’s New 6-Player \"Endgame\" Game Mode",
-    "channel": "QuadLyStop",
-    "category": "Farming",
-    "description": "Complete explainer for the new 6-player Icebind endgame mode: unlocking it, weekly Cryobells and mission voting, Personal/Mission/Tactical binds, side objectives, and rewards including guaranteed Riven Splicers.",
-    "item": "Icebind",
-    "type": "farm"
-  },
-  {
-    "id": "KrLoiRrUEp4",
-    "title": "WARFRAME Iceblade of Narin! FARM ZARIMAN FOR NARIN! ❄️Narin",
-    "channel": "Beatrix Gaming",
-    "category": "Farming",
-    "description": "Step-by-step Narin farm guide on the Zariman: Entropic Eximus targets, collecting Entropic Kuva, trading with Cephalon Melica at Yuvan's Peak, and an overview of her abilities.",
-    "item": "Narin",
-    "type": "farm"
-  },
-  {
-    "id": "2nSw8FZ7QQk",
-    "title": "How To Solo Netracells Easy — No Squad Needed! Warframe Guide",
-    "channel": "UniWayz Gaming",
-    "category": "Farming",
-    "description": "Solo Netracells walkthrough covering the full vault procedure, keyglyphs, the kill-inside-the-circle rule, recommended Radiation/Electric loadouts, and tips for Archon Shard farming without a squad.",
-    "item": "Netracells",
-    "type": "farm"
-  },
-  {
-    "id": "5F3SRCAI0hI",
-    "title": "Warframe's NEW ICEBIND Game Mode Is Absolutely BRUTAL!",
-    "channel": "WarframeFlo",
-    "category": "Farming",
-    "description": "WarframeFlo's overview of the new Icebind mode: how to access it, mission modifiers, Cryobells and voting, core mission mechanics, and the reward structure.",
-    "item": "Icebind",
-    "type": "farm"
-  },
-  {
-    "id": "T64_RuwuLy8",
-    "title": "Warframe Citrine Prime Build Guide: She Nukes Every Room",
-    "channel": "iFlynn",
-    "category": "Builds",
-    "description": "Citrine Prime build guide with full mod setup, Recrystallize augment, Helminth options, archon shards, weapon pairings, plus how to farm her Prime relics.",
-    "item": "Citrine Prime",
-    "type": "build"
-  },
-  {
-    "id": "sdLmTAi4oAY",
-    "title": "Iceblade of Narin Review: Did DE Get It Right? (Warframe Update 44)",
-    "channel": "iFlynn",
-    "category": "Beginner",
-    "description": "iFlynn's full Iceblade of Narin review: Narin hotfix 44.0.3 buffs, the secret Iceblade sword pull, Citrine Prime, Banshee rework, new augments, riven trait locking + splicing, the Icebind, and EDA/ETA changes.",
-    "item": "Iceblade of Narin",
-    "type": "beginner"
-  },
-  {
-    "id": "mks1D3EU_wQ",
-    "title": "Warframe Icebind Gameplay Analysis: My Day 1 Strategy to Win",
-    "channel": "Gaz TTV",
-    "category": "Builds",
-    "description": "Gaz's Icebind day-1 game plan: a Well of Life Follie support build, Coda Bubonico synergy, Furis Incarnon build, which frames to bring, and which rivens to save for Riven Splicing.",
-    "item": "Icebind",
-    "type": "build"
-  },
-  {
-    "id": "EwuSdGq8xPw",
-    "title": "SIX VETERAN CONTENT CREATORS VS ENDGAME | Icebind, First Look, Builds & Thoughts",
-    "channel": "NoSympathyyCA",
-    "category": "Builds",
-    "description": "Six veteran creators (NoSympathyy, Frozenballz, TacticalPotato, xiFlynn, Brozime, Zenosfire) blind-run the Icebind — Frost, Kullervo and Vauban loadouts, builds, and endgame difficulty thoughts.",
-    "item": "Icebind",
-    "type": "build"
-  },
-  {
-    "id": "LPgjQT9SaVU",
-    "title": "Warframe The Icebind End Game Walkthrough Guide!",
-    "channel": "Pupsker",
-    "category": "Farming",
-    "description": "Pupsker's full Icebind walkthrough: Signal Chain, Entropy Orb and Cryothermia side objectives, plus the rewards — Forma, Archon Shards, rivens and more from the weekly runs.",
-    "item": "Icebind",
-    "type": "farm"
-  },
-  {
-    "id": "6OepKmPrN0c",
-    "title": "ICEBIND Review & Guide | NEW 6 Man Gamemode",
-    "channel": "KnightmareFrame",
-    "category": "Beginner",
-    "description": "KnightmareFrame's Icebind review and guide: how the mode works, gameplay, and team comps for the 6-player endgame missions.",
-    "item": "Icebind",
-    "type": "beginner"
-  },
-  {
-    "id": "iJyeBo97YlQ",
-    "title": "I Tried Splicing Rivens: The New God Roll Meta Is Here In Warframe",
-    "channel": "Gaz TTV",
-    "category": "Trading",
-    "description": "Gaz TTV tests Riven Splicing live — spliced god-roll stats on Gas Sobek and Akarius, showing how to chase the new ammo-efficiency meta with Riven Splicers from the Icebind.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "VwrR4KuUrao",
-    "title": "You Are Splicing Rivens Wrong In Warframe: Do This Instead",
-    "channel": "Gaz TTV",
-    "category": "Trading",
-    "description": "Gaz TTV's Riven Splicing strategy guide — why the minus stat is crucial, how splicing locks riven layout, ammo-efficiency breakpoints, and which spliced stats are worth chasing.",
-    "item": "",
-    "type": "build"
-  },
-  {
-    "id": "-3FjdSVmkfs",
-    "title": "Warframe The Icebind Workshop! Loot & Gameplay News!",
-    "channel": "Pupsker",
-    "category": "Farming",
-    "description": "Pupsker breaks down the Icebind dev workshop — Cryobell voting, binds, side objectives, and the loot (Omni Forma, forma bundles, archon shards, Riven Splicers) in the new level-999 6-player endgame mode.",
-    "item": "",
-    "type": "build"
-  }
+ {
+  "id": "MfccfyAfVbA",
+  "title": "Warframe | Kuva Zarr - The Big Bad Bang",
+  "channel": "Community",
+  "category": "Builds",
+  "description": "Sckullie's Kuva Zarr build — the big bad bang explained.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "REFhvlBpFqY",
+  "title": "Cyte-09 with the Kuva Zarr is remarkable for nuking on level cap runs",
+  "channel": "Community",
+  "category": "Builds",
+  "description": "Cyte-09 nuking level-cap runs with the Kuva Zarr.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "ZF7uRZxjUrM",
+  "title": "The STRONGEST Cyte Builds After the Vallis Update (2025)",
+  "channel": "Community",
+  "category": "Builds",
+  "description": "TennoKyle's strongest Cyte builds including a Kuva Zarr speedrun setup.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "u9WzxrnmwGY",
+  "title": "THE ONLY PLATINUM GUIDE YOU WILL EVER NEED | WARFRAME",
+  "channel": "Community",
+  "category": "Trading",
+  "description": "The mindset and method behind consistent platinum income — no scams, no burnout.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "zP3MZylnMK4",
+  "title": "NUKE Steel Path! Nova Prime BUILD GUIDE (2025)",
+  "channel": "Tosi-Chan",
+  "category": "Builds",
+  "description": "Nova Prime nuke build with Arcane Hot Shot and Heat damage — full mod setup, arcanes, and archon shards.",
+  "item": "Nova Prime",
+  "type": "build"
+ },
+ {
+  "id": "25s9w7ktVHI",
+  "title": "How To Get Started In Warframe 2025 — Beginners Guide Ep 1",
+  "channel": "WarframeFlo",
+  "category": "Beginner",
+  "description": "Starter frames, tutorial, mastery rank, navigation, and the most important tips for new Tenno.",
+  "item": "",
+  "type": "beginner"
+ },
+ {
+  "id": "gmlZEJCeIFs",
+  "title": "The COMPLETE Beginners Guide to MODDING In Warframe",
+  "channel": "WarframeFlo",
+  "category": "Beginner",
+  "description": "Modding fundamentals: capacity, polarities, forma, Endo, and a modding framework for warframes and weapons.",
+  "item": "",
+  "type": "beginner"
+ },
+ {
+  "id": "CMlMGMq67vA",
+  "title": "How to Farm your FIRST Warframe — Beginners Guide Ep 2",
+  "channel": "WarframeFlo",
+  "category": "Beginner",
+  "description": "Movement, farming Rhino, crafting, joining a clan, and where to farm resources.",
+  "item": "Rhino",
+  "type": "beginner"
+ },
+ {
+  "id": "MqZMzwW23_Q",
+  "title": "The ULTIMATE Guide to Farming MILLIONS Of Credits In Warframe",
+  "channel": "WarframeFlo",
+  "category": "Farming",
+  "description": "Every credit farm ranked: Index, Profit Taker, Railjack, Disruption, and more.",
+  "item": "Credits",
+  "type": "farm"
+ },
+ {
+  "id": "dGd1_SOwTzs",
+  "title": "9 Easy Steel Path Builds for New Players",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "Beginner-friendly Steel Path builds using cheap, easy-to-get warframes and weapons — mod by mod.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "liX-TScusr8",
+  "title": "This BROKEN Saryn Build Destroys Steel Path With 1 Forma! (2026)",
+  "channel": "FluffieMichi",
+  "category": "Builds",
+  "description": "Saryn/Saryn Prime build guide — abilities explained, 1-forma build, archon shards, how to play.",
+  "item": "Saryn Prime",
+  "type": "build"
+ },
+ {
+  "id": "3keePsIa2HY",
+  "title": "Torid Incarnon — One of the BEST Primary Beam Weapons | Build Guide",
+  "channel": "RunaBlueRuna",
+  "category": "Builds",
+  "description": "Torid Incarnon acquisition, evolutions, and multiple builds including level-cap setups.",
+  "item": "Torid",
+  "type": "build"
+ },
+ {
+  "id": "8QriEo6bmHc",
+  "title": "The Only Revenant Prime Build YOU NEED! LEVEL CAP VIABLE!",
+  "channel": "Psiion",
+  "category": "Builds",
+  "description": "Revenant Prime abilities, full build, companion and weapon pairings, level-cap gameplay.",
+  "item": "Revenant Prime",
+  "type": "build"
+ },
+ {
+  "id": "EY60cFHZl_s",
+  "title": "Mesa just became a BROKEN STRONG Warframe",
+  "channel": "FluffieMichi",
+  "category": "Builds",
+  "description": "Mesa Prime guide — abilities, starchart to endgame builds, Regulators setup, archon shards, arcanes.",
+  "item": "Mesa Prime",
+  "type": "build"
+ },
+ {
+  "id": "EaIu9fPkuyY",
+  "title": "Warframe Kuva Weapon Guide — Spawning a Kuva Larvling",
+  "channel": "Community",
+  "category": "Farming",
+  "description": "How to spawn Kuva Larvlings, pick your weapon, and understand the progenitor system.",
+  "item": "Kuva Weapons",
+  "type": "farm"
+ },
+ {
+  "id": "XJWcGTPGNXk",
+  "title": "Revenant STILL DOMINATES Warframe in 2026!",
+  "channel": "MHBlacky",
+  "category": "Builds",
+  "description": "Updated Revenant builds for 2026 — immortal gun builds, one-shot level 9999 setup, and AoE damage.",
+  "item": "Revenant Prime",
+  "type": "build"
+ },
+ {
+  "id": "OpNIrFSsSAE",
+  "title": "NUKE WITH NARIN | INSANE Buffs Make This Narin Build DESTROY Everything | Steel Path | Warframe 2026",
+  "channel": "GetBuck",
+  "category": "Builds",
+  "description": "Post-buff Narin ice-nuke setup for Steel Path, with weapon, companion, and shard loadouts plus a full ability rotation walkthrough.",
+  "item": "Narin",
+  "type": "build"
+ },
+ {
+  "id": "CDzaUNeQ60s",
+  "title": "Warframe | Narin DESTROYS Everything! | Guide & Builds",
+  "channel": "kyaii",
+  "category": "Builds",
+  "description": "Full Narin rundown: every ability explained, how to get her, and three ready-to-copy builds with fashion talk.",
+  "item": "Narin",
+  "type": "build"
+ },
+ {
+  "id": "c9iOg4WUaTA",
+  "title": "New Warframe NARIN deals ABSURD DAMAGE!",
+  "channel": "MHBlacky",
+  "category": "Farming",
+  "description": "Where Narin's parts drop on the Zariman and which builds make her hit hardest, from a 500% weapon buffer to a full nuke.",
+  "item": "Narin",
+  "type": "farm"
+ },
+ {
+  "id": "fCdfbshs0UY",
+  "title": "FREE LOOT FROM OPERATION TAUBOUND! One Time Warframe Event!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Every confirmed freebie from the one-time Epoch Operation: Taubound starting Oct 15 - syandana, armor set, amp skin, and a Legendary Core.",
+  "item": "",
+  "type": "farm"
+ },
+ {
+  "id": "XR0qgSb2PNY",
+  "title": "NEW Taubound Operation Event LOOT Revealed! Warframe Hotfix 44.1.1 Overview",
+  "channel": "gaz_ttv",
+  "category": "Farming",
+  "description": "Hotfix 44.1.1 patch rundown plus the Taubound operation loot table and how the event missions work.",
+  "item": "",
+  "type": "farm"
+ },
+ {
+  "id": "2q9d8Z-y0rw",
+  "title": "LATRON PRIME INCARNON Build Guide 2026 \\u2014 Total Devastation | Warframe",
+  "channel": "LeyzarGamingViews",
+  "category": "Builds",
+  "description": "Latron Prime Incarnon full build guide: best Incarnon evolutions, complete mod setup, and Steel Path gameplay.",
+  "item": "Latron Prime",
+  "type": "build"
+ },
+ {
+  "id": "-vAmTfPG8OI",
+  "title": "DAIKYU PRIME Build Guide 2026 \\u2014 Precision Strike | Warframe",
+  "channel": "LeyzarGamingViews",
+  "category": "Builds",
+  "description": "Daikyu Prime weak-point damage build: full mod setup, damage configuration, and 2026 gameplay.",
+  "item": "Daikyu Prime",
+  "type": "build"
+ },
+ {
+  "id": "UfQG_SD-FfU",
+  "title": "Warframe | Update 44.1.0: The Icebind Dev Workshop Video",
+  "channel": "PlayWarframe",
+  "category": "Farming",
+  "description": "Official Icebind dev workshop: the new 6-player endgame mode, Cryobells, binds, side objectives, and guaranteed Riven Splicer rewards.",
+  "item": "Icebind",
+  "type": "farm"
+ },
+ {
+  "id": "np7ISNXXmpE",
+  "title": "Fastest BOSS Credit Farm In Warframe! Profit Taker Guide!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Profit Taker credit farm guide: the fastest boss credit farm in the game, with mod builds for the fight.",
+  "item": "Credits",
+  "type": "farm"
+ },
+ {
+  "id": "dGk2Ezp8zno",
+  "title": "YOU CAN FARM NARIN AND EARN PLATINUM AT THE SAME TIME RIGHT NOW | WARFRAME ENTROPIC KUVA FARM 2026",
+  "channel": "Grind Hard Squad",
+  "category": "Farming",
+  "description": "Entropic Kuva farm guide: farm Narin while earning platinum from the same Zariman loop — Entropic Eximus kills, Cephalon Melica shop strategy, and drop tips.",
+  "item": "Entropic Kuva",
+  "type": "farm"
+ },
+ {
+  "id": "6XnH3iLCx4g",
+  "title": "How To Start (Or Return To) Warframe Before Iceblade of Narin",
+  "channel": "iFlynn",
+  "category": "Beginner",
+  "description": "New and returning player guide for Update 44: which frames and weapons to chase early, how mods really work, and the quest order to follow.",
+  "item": "",
+  "type": "beginner"
+ },
+ {
+  "id": "vI2YKbIWHc0",
+  "title": "The Icebind Explained – Warframe’s New 6-Player \"Endgame\" Game Mode",
+  "channel": "QuadLyStop",
+  "category": "Farming",
+  "description": "Complete explainer for the new 6-player Icebind endgame mode: unlocking it, weekly Cryobells and mission voting, Personal/Mission/Tactical binds, side objectives, and rewards including guaranteed Riven Splicers.",
+  "item": "Icebind",
+  "type": "farm"
+ },
+ {
+  "id": "KrLoiRrUEp4",
+  "title": "WARFRAME Iceblade of Narin! FARM ZARIMAN FOR NARIN! ❄️Narin",
+  "channel": "Beatrix Gaming",
+  "category": "Farming",
+  "description": "Step-by-step Narin farm guide on the Zariman: Entropic Eximus targets, collecting Entropic Kuva, trading with Cephalon Melica at Yuvan's Peak, and an overview of her abilities.",
+  "item": "Narin",
+  "type": "farm"
+ },
+ {
+  "id": "2nSw8FZ7QQk",
+  "title": "How To Solo Netracells Easy — No Squad Needed! Warframe Guide",
+  "channel": "UniWayz Gaming",
+  "category": "Farming",
+  "description": "Solo Netracells walkthrough covering the full vault procedure, keyglyphs, the kill-inside-the-circle rule, recommended Radiation/Electric loadouts, and tips for Archon Shard farming without a squad.",
+  "item": "Netracells",
+  "type": "farm"
+ },
+ {
+  "id": "5F3SRCAI0hI",
+  "title": "Warframe's NEW ICEBIND Game Mode Is Absolutely BRUTAL!",
+  "channel": "WarframeFlo",
+  "category": "Farming",
+  "description": "WarframeFlo's overview of the new Icebind mode: how to access it, mission modifiers, Cryobells and voting, core mission mechanics, and the reward structure.",
+  "item": "Icebind",
+  "type": "farm"
+ },
+ {
+  "id": "T64_RuwuLy8",
+  "title": "Warframe Citrine Prime Build Guide: She Nukes Every Room",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "Citrine Prime build guide with full mod setup, Recrystallize augment, Helminth options, archon shards, weapon pairings, plus how to farm her Prime relics.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "sdLmTAi4oAY",
+  "title": "Iceblade of Narin Review: Did DE Get It Right? (Warframe Update 44)",
+  "channel": "iFlynn",
+  "category": "Beginner",
+  "description": "iFlynn's full Iceblade of Narin review: Narin hotfix 44.0.3 buffs, the secret Iceblade sword pull, Citrine Prime, Banshee rework, new augments, riven trait locking + splicing, the Icebind, and EDA/ETA changes.",
+  "item": "Iceblade of Narin",
+  "type": "beginner"
+ },
+ {
+  "id": "mks1D3EU_wQ",
+  "title": "Warframe Icebind Gameplay Analysis: My Day 1 Strategy to Win",
+  "channel": "Gaz TTV",
+  "category": "Builds",
+  "description": "Gaz's Icebind day-1 game plan: a Well of Life Follie support build, Coda Bubonico synergy, Furis Incarnon build, which frames to bring, and which rivens to save for Riven Splicing.",
+  "item": "Icebind",
+  "type": "build"
+ },
+ {
+  "id": "EwuSdGq8xPw",
+  "title": "SIX VETERAN CONTENT CREATORS VS ENDGAME | Icebind, First Look, Builds & Thoughts",
+  "channel": "NoSympathyyCA",
+  "category": "Builds",
+  "description": "Six veteran creators (NoSympathyy, Frozenballz, TacticalPotato, xiFlynn, Brozime, Zenosfire) blind-run the Icebind — Frost, Kullervo and Vauban loadouts, builds, and endgame difficulty thoughts.",
+  "item": "Icebind",
+  "type": "build"
+ },
+ {
+  "id": "LPgjQT9SaVU",
+  "title": "Warframe The Icebind End Game Walkthrough Guide!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Pupsker's full Icebind walkthrough: Signal Chain, Entropy Orb and Cryothermia side objectives, plus the rewards — Forma, Archon Shards, rivens and more from the weekly runs.",
+  "item": "Icebind",
+  "type": "farm"
+ },
+ {
+  "id": "6OepKmPrN0c",
+  "title": "ICEBIND Review & Guide | NEW 6 Man Gamemode",
+  "channel": "KnightmareFrame",
+  "category": "Beginner",
+  "description": "KnightmareFrame's Icebind review and guide: how the mode works, gameplay, and team comps for the 6-player endgame missions.",
+  "item": "Icebind",
+  "type": "beginner"
+ },
+ {
+  "id": "iJyeBo97YlQ",
+  "title": "I Tried Splicing Rivens: The New God Roll Meta Is Here In Warframe",
+  "channel": "Gaz TTV",
+  "category": "Trading",
+  "description": "Gaz TTV tests Riven Splicing live — spliced god-roll stats on Gas Sobek and Akarius, showing how to chase the new ammo-efficiency meta with Riven Splicers from the Icebind.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "VwrR4KuUrao",
+  "title": "You Are Splicing Rivens Wrong In Warframe: Do This Instead",
+  "channel": "Gaz TTV",
+  "category": "Trading",
+  "description": "Gaz TTV's Riven Splicing strategy guide — why the minus stat is crucial, how splicing locks riven layout, ammo-efficiency breakpoints, and which spliced stats are worth chasing.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "-3FjdSVmkfs",
+  "title": "Warframe The Icebind Workshop! Loot & Gameplay News!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Pupsker breaks down the Icebind dev workshop — Cryobell voting, binds, side objectives, and the loot (Omni Forma, forma bundles, archon shards, Riven Splicers) in the new level-999 6-player endgame mode.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "0wXF3qeq-Jw",
+  "title": "Warframe gave Citrine a Prime... So I BROKE Her!",
+  "channel": "MHBlacky",
+  "category": "Builds",
+  "description": "MHBlacky breaks Citrine Prime with multiple builds: a budget starter, a big status gun-buffer build, a 2.1B damage beastmaster build, and a 1-click room nuke build, plus fashion.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "JHHN8fGvuDI",
+  "title": "WARFRAME | CITRINE PRIME GEMUSSY BUILD GUIDE! 2026 BUILD",
+  "channel": "Rainollon",
+  "category": "Builds",
+  "description": "Citrine Prime 2026 build guide covering mods and arcanes, archon shards, full loadout, and a Steel Path mission demo.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "a_dcK8WHFYE",
+  "title": "A Toxic Status Build Guide for Citrine Prime | Citrine | Warframe Build",
+  "channel": "Engineeeeer",
+  "category": "Builds",
+  "description": "Toxic status Citrine Prime build scaling Prismatic Gem status chance and duration, with starter and optimized variants, status weapon pairings, and Helminth options.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "psCh-WZZMP8",
+  "title": "Citrine Prime Melts Steel Path! - Warframe Prismatic Jade Citrine Steel Path Build Guide",
+  "channel": "Kivota",
+  "category": "Builds",
+  "description": "Prismatic Jade status Citrine Prime Steel Path build with mods, arcanes, archon shards, companion, weapons, and playstyle walkthrough.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "tO1ZHs70PAE",
+  "title": "NARIN IS A STRONG WARFRAME! New Warframe Review",
+  "channel": "Pupsker",
+  "category": "Builds",
+  "description": "Pupsker's full Narin review after the 4th-ability buffs: full ability showcase plus a Narin mod build.",
+  "item": "Narin",
+  "type": "build"
+ },
+ {
+  "id": "XYHS6DIkdHc",
+  "title": "Warframe: Excalibur & Umbra Build Guide Shield Gate vs Persistence",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "iFlynn's Excalibur build guide 2026: a Shield Gating build for regular Excalibur vs an Arcane Persistence build for Excalibur Umbra, with Exalted Blade setups, archon shards, weapons, and Steel Path gameplay.",
+  "item": "Excalibur",
+  "type": "build"
+ },
+ {
+  "id": "dNPA6OgxWAE",
+  "title": "HE'S SIMPLY GODLIKE | Hydroid Prime Steel Path Build 2026",
+  "channel": "NoSympathyy",
+  "category": "Builds",
+  "description": "NoSympathyy's 2026 Hydroid Prime Steel Path build: full ability breakdown with Plunder armor strip, Arcane Persistence/Blessing survivability, Torid + Ocucor loadout, archon shards, and level-cap gameplay.",
+  "item": "Hydroid Prime",
+  "type": "build"
+ },
+ {
+  "id": "CI1-RF29ClA",
+  "title": "Voruna NUKES Steel Path in Warframe... with NO FORMA!",
+  "channel": "Fluffie Michi",
+  "category": "Builds",
+  "description": "Fluffie Michi's 0-forma Voruna build for 2026 that nukes Steel Path: ability walkthrough, augment choices, and a no-forma mod setup that works for both Voruna and Voruna Prime.",
+  "item": "Voruna",
+  "type": "build"
+ },
+ {
+  "id": "MF7IAKFx2QA",
+  "title": "The Only TRULY Immortal Warframe? Nyx Steel Path Build 2026",
+  "channel": "Qwinnara",
+  "category": "Builds",
+  "description": "Qwinnara's 2026 Nyx Steel Path build using the Assimilate augment for near-immortality while moving and attacking, with 100% armor strip at 130% strength and a Breach Surge helminth subsume.",
+  "item": "Nyx",
+  "type": "build"
+ },
+ {
+  "id": "V8qHan2y0JA",
+  "title": "Narin is Here and She's Amazing! - Warframe Easy Narin Steel Path Build Guide",
+  "channel": "Kivota",
+  "category": "Builds",
+  "description": "Kivota's easy Narin Steel Path build guide — abilities and mods, arcanes, weapon picks, archon shards, playstyle tips, and where to farm her.",
+  "item": "Narin",
+  "type": "build"
+ },
+ {
+  "id": "EMXPf2ulfpQ",
+  "title": "The New BANSHEE Rework SURPRISED Me! | Build & Review | Iceblade of Narin | Warframe 2026",
+  "channel": "wellplayedninjas",
+  "category": "Builds",
+  "description": "wellplayedninjas reviews the Banshee rework — ability changes, new augments, and a full build walkthrough with companion setup and team-play gameplay.",
+  "item": "Banshee",
+  "type": "build"
+ },
+ {
+  "id": "T7MF_hhZdsc",
+  "title": "Banshee Invisibility Build 🔇🤫",
+  "channel": "RawFrame",
+  "category": "Builds",
+  "description": "RawFrame's Banshee perma-invisibility build — Vadarya Prime, Dual Coda Torxica, Destreza Prime, and Diriga with Verglas Prime.",
+  "item": "Banshee",
+  "type": "build"
+ },
+ {
+  "id": "Qj7WKlsq1VM",
+  "title": "This Week In Warframe - FULL Weekly Reset Overview Week Of 10/11/2026",
+  "channel": "Gaz TTV",
+  "category": "Farming",
+  "description": "Gaz TTV's weekly reset roundup for the week of Oct 11, 2026 — spooky Baro preview, Epoch Operation: Taubound launch, Icebind first impressions, EDA/ETA, Archon Hunt, Steel Path Circuit/Incarnon, Nightwave.",
+  "item": "Weekly Reset",
+  "type": "guide"
+ },
+ {
+  "id": "zT0vQA7Ar8E",
+  "title": "Warframe Icebind Full Gameplay With My Community! Is The New Mode Worth It?",
+  "channel": "PrincessJoyce704",
+  "category": "Farming",
+  "description": "Full hour of Icebind gameplay with a community squad — Cryobell attempts, side objectives, loot rewards, and first reactions to the 6-player endgame mode. Is it worth farming?",
+  "item": "The Icebind",
+  "type": "guide"
+ },
+ {
+  "id": "68ySypkLQA4",
+  "title": "Warframe Maximum Investment - Citrine Prime (200+ KPM) | Iceblade of Narin",
+  "channel": "NobuWasTaken",
+  "category": "Builds",
+  "description": "NobuWasTaken's max-investment Citrine Prime build pushing 200+ kills per minute — mods, arcanes, shards, and loadout for Iceblade of Narin Steel Path.",
+  "item": "Citrine Prime",
+  "type": "build"
+ },
+ {
+  "id": "s5y_OdICD6s",
+  "title": "How Riven Splicing Actually Works | Warframe Guide",
+  "channel": "Hunkpain Gaming",
+  "category": "Builds",
+  "description": "Step-by-step Riven Splicing guide — requirements, the splicing process, best stat targets, and common mistakes to avoid so you don't waste Riven Splicers.",
+  "item": "Riven Splicer",
+  "type": "guide"
+ },
+ {
+  "id": "u_O3ObkmXvs",
+  "title": "Warframe Equinox Build: She Nukes Through Walls",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "iFlynn's Equinox Prime Terrify-nuke build — Mend & Maim stacking for room-wipes through walls, Helminth Terrify for armor strip, full mods, arcanes, Archon shards, and weapons.",
+  "item": "Equinox Prime",
+  "type": "build"
+ },
+ {
+  "id": "hou9-DkmpA0",
+  "title": "I Made Ember Level Cap Viable (Ultimate Warframe Guide)",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "iFlynn's Ember level-cap build — Shock Trooper + Fireball Frenzy subsumes with Melee Influence heat spread; full mods, weapons, Archon shards and level cap Void Cascade gameplay.",
+  "item": "",
+  "type": "build"
+ },
+ {
+  "id": "51AHRUWS8U4",
+  "title": "Warframe Taubound: The Event That Never Comes Back",
+  "channel": "iFlynn",
+  "category": "Beginner",
+  "description": "iFlynn's full explainer for Epoch Operation: Taubound (Oct 15 – Nov 17, never rerun): how to join (Vor's Prize only), Moonflesh farming on Eris, Praghasa's daily rewards (Dhampyre Syandana, Contegorus Armor Set, Vacis Amp Skin, Legendary Core), and the Tau Prologue quest.",
+  "item": "Taubound",
+  "type": "event"
+ },
+ {
+  "id": "0qNBlyhmmBI",
+  "title": "Warframe | Epoch Operation: Taubound Official Gameplay Teaser - Coming October 15",
+  "channel": "PlayWarframe",
+  "category": "Beginner",
+  "description": "Official DE teaser for the one-time Epoch Operation: Taubound (Oct 15 – Nov 17): collect Moonflesh on Eris to feed the Sentient Mothership Praghasa and earn exclusive customizations ahead of Warframe: Tau.",
+  "item": "Taubound",
+  "type": "event"
+ }
 ]
