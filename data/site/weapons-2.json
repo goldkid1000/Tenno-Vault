@@ -3307,5 +3307,50 @@
   "multishot": 7,
   "farm": "Comes with Ivara Prime \u2014 no separate farm.",
   "goodAt": "multishot builds, AoE arrow setups"
+ },
+ {
+  "name": "Glory",
+  "type": "Secondary",
+  "description": "Jade's exalted weapon, summoned by Glory on High. Normal attack deals 150 Heat damage; alternate fire deals 1500 Heat damage.",
+  "totalDamage": 150,
+  "criticalChance": 15,
+  "criticalMultiplier": 2.0,
+  "statusChance": 20,
+  "fireRate": 1.67,
+  "masteryReq": 0,
+  "trigger": "Auto",
+  "multishot": 1,
+  "farm": "Comes with Jade \u2014 no separate farm.",
+  "goodAt": "AoE builds, Heat damage setups"
+ },
+ {
+  "name": "Noctua",
+  "type": "Secondary",
+  "description": "Dante's exalted tome. Normal attack deals 250 Slash damage; Active Attack deals 2750 damage (Impact + Radiation).",
+  "totalDamage": 250,
+  "criticalChance": 30,
+  "criticalMultiplier": 2.0,
+  "statusChance": 25,
+  "fireRate": 1.5,
+  "masteryReq": 0,
+  "trigger": "Auto",
+  "multishot": 1,
+  "farm": "Comes with Dante \u2014 no separate farm.",
+  "goodAt": "status builds, tome setups"
+ },
+ {
+  "name": "Neutralizer",
+  "type": "Primary",
+  "description": "Cyte-09's exalted sniper rifle, summoned by Neutralizer. Also fires a Cryo Grenade dealing 20 Cold damage.",
+  "totalDamage": 255,
+  "criticalChance": 45,
+  "criticalMultiplier": 3.0,
+  "statusChance": 10,
+  "fireRate": 1.0,
+  "masteryReq": 0,
+  "trigger": "Semi-Auto",
+  "multishot": 1,
+  "farm": "Comes with Cyte-09 \u2014 no separate farm.",
+  "goodAt": "crit builds, sniper setups"
  }
 ]
