@@ -192,6 +192,8 @@
         host.style.display = 'none';
         return;
       }
+      /* v2.12.43: clear any inline display:none so CSS can show tab bar on touch */
+      host.style.display = '';
     } catch (e) {}
     var tabs = [
       { id: 'home', label: 'Home', icon: '🏠', file: 'index.html' },
