@@ -1,6 +1,6 @@
 {
- "version": "2.12.42",
- "updated": "2026-10-14T15:10:00Z",
- "notes": "2 new videos: iFlynn's Taubound event explainer + official Taubound gameplay teaser",
- "notify": false
+ "version": "2.12.43",
+ "updated": "2026-10-14T16:00:00Z",
+ "notes": "Bug fixes: What's New + My Notes scripts restored, mobile tab bar fix, builds page loads faster with progress, 2 missing builds added (870 total)",
+ "notify": true
 }
