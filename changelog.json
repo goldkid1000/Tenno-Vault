@@ -1,5 +1,16 @@
 [
  {
+  "version": "2.12.43",
+  "date": "2026-10-14",
+  "notes": [
+   "Fixed: What's New bubble restored (whats-new.js was missing from the site)",
+   "Fixed: My Notes Save button restored (notes.js was missing from the site)",
+   "Fixed: mobile tab bar can now appear on touch devices",
+   "Fixed: builds page renders as soon as builds load, mods load in background, with a Loading X/11 progress count",
+   "Added 2 missing builds: Tenet Grigori Max Damage, Felarx Steel Path Destroyer (870 builds total)"
+  ]
+ },
+ {
   "version": "2.12.41",
   "date": "2026-10-14",
   "notes": [
