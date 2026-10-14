@@ -1,6 +1,6 @@
 {
- "version": "2.12.47",
- "updated": "2026-10-14T20:45:00Z",
- "notes": "Fixed Vaulty AI missing 'hunt/grind for X' questions (fell through to 'don't have anything called')",
- "notify": true
+ "version": "2.12.48",
+ "updated": "2026-10-14T21:15:00Z",
+ "notes": "Added 1 new video: WarframeFlo's '5 INSANE Builds You NEED to Try in Warframe 2026' (Melee Gauss, Stealth Bomber Jade, Turret Runner Protea, Xata Titania, BrightBonnet 360 Mesa)",
+ "notify": false
 }
