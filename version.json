@@ -1,1 +1,1 @@
-{"version": "2.12.45", "updated": "2026-10-14T20:15:00Z", "notes": "3 more exalted weapons added (Glory, Noctua, Neutralizer) \u2014 exalted total now 24, weapons total 648", "notify": false}
+{"version": "2.12.46", "updated": "2026-10-14T20:30:00Z", "notes": "Fixed Vaulty AI giving wrong answer for arcane adapters + wrong Secondary Encumber source", "notify": true}
