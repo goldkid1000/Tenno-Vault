@@ -3046,5 +3046,23 @@
   "n": "Artemis Bow Prime",
   "d": "Ivara Prime's exalted bow, summoned by Artemis Bow. Fires 7 arrows per shot.",
   "u": "weapons.html#Artemis Bow Prime"
+ },
+ {
+  "t": "Secondary weapon",
+  "n": "Glory",
+  "d": "Jade's exalted weapon, summoned by Glory on High. Normal attack deals 150 Heat damage; alternate fire deals 1500 Heat damage.",
+  "u": "weapons.html#Glory"
+ },
+ {
+  "t": "Secondary weapon",
+  "n": "Noctua",
+  "d": "Dante's exalted tome. Normal attack deals 250 Slash damage; Active Attack deals 2750 damage (Impact + Radiation).",
+  "u": "weapons.html#Noctua"
+ },
+ {
+  "t": "Primary weapon",
+  "n": "Neutralizer",
+  "d": "Cyte-09's exalted sniper rifle, summoned by Neutralizer. Also fires a Cryo Grenade dealing 20 Cold damage.",
+  "u": "weapons.html#Neutralizer"
  }
 ]
