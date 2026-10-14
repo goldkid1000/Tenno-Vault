@@ -928,12 +928,18 @@ function oneShotBuildAnswer(t) {
           'The newer <b>Molt</b> arcanes (Molt Augmented, Molt Efficiency) come from <b>Thrax enemies in Zariman missions</b> — which is why Void Cascade is so good for farming them.<br><br>' +
           'Tell me which specific arcane and I\'ll narrow it down.';
       }
+      if (/adapter/.test(q) && /arcane|melee|primary|secondary|weapon/.test(q)) {
+        return 'Arcane Adapters (unlock the arcane slot on a weapon — one per weapon):<br><br>' +
+          '<b>Melee Arcane Adapter</b> — Market for <b>20 Platinum</b>, OR <b>Bird 3 (Cavia)</b> for <b>50,000 Standing</b> (needs Rank 3 - Colleague), OR as a reward from <b>Netracells / Deep Archimedia</b>. Needs the <b>Whispers in the Walls</b> quest done + the Melee Upgrade Segment.<br><br>' +
+          '<b>Primary / Secondary Arcane Adapter</b> — <b>Teshin (Steel Path Honors)</b> for <b>15 Steel Essence</b> each, OR Market for 20 Platinum, OR Acrithis for 25 Pathos Clamp.<br><br>' +
+          'Note: adapters are NOT drops from Acolytes — Acolytes drop the arcanes themselves.';
+      }
       if (/primary arcane|secondary arcane|melee arcane|merciless|deadhead|encumber/.test(q)) {
         return 'Weapon arcanes:<br><br>' +
           '<b>Primary/Secondary Merciless, Deadhead, Dexterity</b> — drop from <b>Acolytes in Steel Path</b> missions.<br><br>' +
-          '<b>Secondary Encumber</b> — also from Acolytes.<br><br>' +
-          '<b>Melee arcanes</b> (Fury, Strike, etc.) — mostly from Eidolons and Orphix.<br><br>' +
-          'Run Steel Path missions and hunt the Acolyte when it spawns — that\'s your farm.';
+          '<b>Secondary Encumber</b> — <b>Mirror Defense</b> (Tyana Pass, Mars), NOT Acolytes.<br><br>' +
+          '<b>Melee arcanes</b> — depends on the arcane: Fury / Strike / Avenger from <b>Eidolon hunts</b>; others from Duviri, Zariman, 1999, and Sanctum content. Tell me which one and I\'ll narrow it down.<br><br>' +
+          'Run Steel Path missions and hunt the Acolyte when it spawns — that\'s your farm for Merciless / Deadhead / Dexterity.';
       }
       if (/corrupted mod|blind rage|narrow minded|transient/.test(q)) {
         return 'Corrupted mods <b>only</b> drop from <b>Orokin Vaults on Deimos</b>. ' +
