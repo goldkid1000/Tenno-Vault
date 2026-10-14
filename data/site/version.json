@@ -1,6 +1,6 @@
 {
- "version": "2.12.46",
- "updated": "2026-10-14T20:30:00Z",
- "notes": "Fixed Vaulty AI giving wrong answer for arcane adapters + wrong Secondary Encumber source",
+ "version": "2.12.47",
+ "updated": "2026-10-14T20:45:00Z",
+ "notes": "Fixed Vaulty AI missing 'hunt/grind for X' questions (fell through to 'don't have anything called')",
  "notify": true
 }
