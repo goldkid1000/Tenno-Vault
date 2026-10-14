@@ -29,21 +29,22 @@
 
   function loadLiveBuildCount(el) {
     function fmt(n) { return n.toLocaleString('en-US'); }
-    /* count builds across all part files (builds-0.json through builds-9.json) */
+    /* v2.12.38: fetch all part files in parallel (was sequential — too slow) */
     var base = 'data/site/builds-';
-    var idx = 0, total = 0;
-    function next() {
-      fetch(base + idx + '.json', { cache: 'no-store' }).then(function (r) {
-        if (!r.ok) throw new Error('done');
-        return r.json();
-      }).then(function (d) {
-        total += d.length; idx++; next();
-      }).catch(function () {
-        el.setAttribute('data-count', total);
-        animateCount(el);
-      });
+    var promises = [];
+    for (var i = 0; i <= 10; i++) {
+      promises.push(
+        fetch(base + i + '.json', { cache: 'no-store' }).then(function (r) {
+          return r.ok ? r.json() : [];
+        }).catch(function () { return []; })
+      );
     }
-    next();
+    Promise.all(promises).then(function (results) {
+      var total = 0;
+      results.forEach(function (d) { total += d.length; });
+      el.setAttribute('data-count', total);
+      animateCount(el);
+    });
   }
 
   function initCounters() {
