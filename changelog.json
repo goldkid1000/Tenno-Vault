@@ -1,5 +1,14 @@
 [
  {
+  "version": "2.12.46",
+  "date": "2026-10-14",
+  "notes": [
+   "Fixed: Vaulty AI now answers arcane adapter questions correctly (Melee Adapter: Market 20p / Bird 3 50k Standing / Netracells; Primary-Secondary Adapters: Teshin 15 Steel Essence)",
+   "Fixed: Secondary Encumber is from Mirror Defense, not Acolytes (AI previously said Acolytes)",
+   "Fixed: melee arcane sources no longer lumped as Eidolons/Orphix"
+  ]
+ },
+ {
   "version": "2.12.45",
   "date": "2026-10-14",
   "notes": [
