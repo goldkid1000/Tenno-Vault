@@ -1,5 +1,15 @@
 [
  {
+  "version": "2.12.56",
+  "date": "2026-10-15",
+  "notes": [
+   "New: Hotfix 44.1.2.1 follow-up (Oct 15) \u2014 fixed crashing / severe performance issues when entering The Dark Refractory as part of the Lua quest in the Prologue to Tau. Full notes: https://www.warframe.com/en/patch-notes/pc/44-1-2",
+   "New: Devstream #198 - Tau Part One announced (coming soon, date TBA) \u2014 no countdown added until DE confirms a date.",
+   "New: Epoch Operation: Taubound is now live (Oct 15 \u2013 Nov 17) \u2014 news feed updated; no new warframes/weapons/mods in this hotfix, Taubound rewards are cosmetics + returning items (Haalvu, Spectra Vandal, Basmu).",
+   "Added 4 new videos: Gaz TTV \u2014 'Stop Wasting Time: The Best Way to Farm Moonflesh In Warframe'; Hunkpain Gaming \u2014 'Warframe Taubound Event Guide: Fast Moonflesh Farm & Best Rewards!'; Pupsker \u2014 'Epoch Operation Taubound! New Loot Cosmetics Skins Everything Guide!'; PlayWarframe \u2014 'Devshorts 119: Epoch Operation: Taubound Launches Tomorrow!'"
+  ]
+ },
+ {
   "version": "2.12.55",
   "date": "2026-10-15",
   "notes": [
