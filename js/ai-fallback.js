@@ -379,8 +379,10 @@ function genWarframeBuild(frame, purpose) {
 /* ===== WEAPON BUILD GENERATOR ===== */
 function weaponClass(w) {
   var t = (w.type || '').toLowerCase();
+  var c = (w.category || '').toLowerCase();
   if (t.indexOf('melee') !== -1) return 'melee';
-  if (t.indexOf('secondary') !== -1 || t.indexOf('pistol') !== -1 || t.indexOf('shotgun') !== -1 && w.slot === 1) return 'secondary';
+  if (c.indexOf('shotgun') !== -1) return 'shotgun';
+  if (t.indexOf('secondary') !== -1 || t.indexOf('pistol') !== -1) return 'secondary';
   return 'primary';
 }
 
@@ -414,6 +416,36 @@ function genWeaponBuild(weapon, purpose) {
     add('Vicious Frost', 'Cold 60/60 — completes Corrosive, the Steel Path meta element.');
     add('Gladiator Might', 'Crit damage + combo duration backup.');
     add('Drifting Contact', 'Combo duration — keeps your counter alive between packs.');
+  } else if (cls === 'shotgun') {
+    /* v2.12.51: shotguns get shotgun mods — NOT rifle mods. Serration /
+       Split Chamber / Point Strike do not fit shotguns. */
+    add(purpose.steelPath ? 'Primed Point Blank' : 'Point Blank', 'Base damage — the shotgun foundation.');
+    add(purpose.steelPath ? 'Galvanized Hell' : "Hell's Chamber", purpose.steelPath
+      ? 'Galvanized multishot — stacks on kill, the Steel Path standard.'
+      : 'Multishot — more pellets per shot.');
+    if (isCrit) {
+      add('Blunderbuss', 'Crit chance — your ' + cc + '% crit chance wants this.');
+      add('Primed Ravage', 'Crit damage to cash in on those crits.');
+      if (purpose.steelPath || purpose.oneShot) {
+        var hm2 = pick('Hunter Munitions', 'Crits apply Slash procs that bypass armor — the one-shot engine.');
+        if (hm2) picks.push(hm2);
+      }
+    }
+    if (isStatus || !isCrit) {
+      add('Toxic Barrage', 'Toxin 60/60 — start of the Viral combo.');
+      add('Frigid Blast', 'Cold 60/60 — Viral (Toxin+Cold) is the meta element.');
+    } else {
+      add('Shell Shock', 'Electric 60/60 — toward Corrosive, or swap to Viral 60/60s vs flesh.');
+      add('Scattering Inferno', 'Heat 60/60 — more status and Heat procs.');
+    }
+    if (purpose.steelPath) {
+      var bane2 = pick('Primed Bane of Grineer', 'Faction damage — the biggest Steel Path multiplier, swap per faction.');
+      if (bane2) picks.push(bane2);
+      else add('Vigilante Armaments', 'More multishot — pick your feel.');
+    }
+    add('Vigilante Armaments', 'More multishot — pick your feel.');
+    add('Chilling Reload', 'Cold + faster reloads — smooths out shotgun downtime.');
+    add('Galvanized Savvy', 'Status damage that stacks on status — huge on pellet weapons.');
   } else {
     var dmgMod = cls === 'secondary' ? 'Hornet Strike' : 'Serration';
     var msMod = cls === 'secondary' ? 'Barrel Diffusion' : 'Split Chamber';
@@ -940,7 +972,7 @@ function oneShotBuildAnswer(t) {
         return 'Weapon arcanes:<br><br>' +
           '<b>Primary/Secondary Merciless, Deadhead, Dexterity</b> — drop from <b>Acolytes in Steel Path</b> missions.<br><br>' +
           '<b>Secondary Encumber</b> — <b>Mirror Defense</b> (Tyana Pass, Mars), NOT Acolytes.<br><br>' +
-          '<b>Melee arcanes</b> — depends on the arcane: Fury / Strike / Avenger from <b>Eidolon hunts</b>; others from Duviri, Zariman, 1999, and Sanctum content. Tell me which one and I\'ll narrow it down.<br><br>' +
+          '<b>Melee arcanes</b> (the ones that slot into a melee weapon — Crescendo, Influence, Duplicate, Animosity, Exposure, Retaliation, Fortification, Vortex) — <b>Bird 3 (Cavia)</b> vendor, <b>The Fragmented / Effervo</b>, <b>Netracells</b> and <b>Deep Archimedea</b>. The Legendary ones (Crescendo, Influence, Duplicate) come from Netracells / Deep Archimedea. <b>Melee Afflictions</b> — Ascension Sister of Parvos, or Ordis for Vestigial Motes. <b>Melee Doughty</b> — Höllvania / The Hex (1999). You need the Melee Upgrade Segment + a Melee Arcane Adapter to use them.<br><br>' +
           'Run Steel Path missions and hunt the Acolyte when it spawns — that\'s your farm for Merciless / Deadhead / Dexterity.';
       }
       if (/corrupted mod|blind rage|narrow minded|transient/.test(q)) {
