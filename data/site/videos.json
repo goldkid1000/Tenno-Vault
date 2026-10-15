@@ -583,5 +583,50 @@
   "description": "Rubico Prime field sniper build: mods and Arcane, plus an Eidolon build variant, with Steel Path and Acolyte demo.",
   "item": "Rubico Prime",
   "type": "build"
+ },
+ {
+  "id": "pz6KD7Y90Jg",
+  "title": "Dagath is Now S Tier In Warframe! (Godmode ON)",
+  "channel": "Fluffie Michi",
+  "category": "Builds",
+  "description": "0-Forma Dagath builds for beginners and Steel Path \u2014 caster build, immortal weapons build, plus Kuva Bramma + Carrier setup.",
+  "item": "Dagath",
+  "type": "build"
+ },
+ {
+  "id": "y3bwqlnayjw",
+  "title": "Fullstatus Alchemist - LAVOS PRIME | Build Guide Warframe 2026",
+  "channel": "tosi-chan",
+  "category": "Builds",
+  "description": "Lavos Prime full-status alchemist build guide \u2014 abilities, Helminth, Archon Shards, main build plus a beginner variant.",
+  "item": "Lavos Prime",
+  "type": "build"
+ },
+ {
+  "id": "ykPkQqJ-G5M",
+  "title": "Updated Warframe Farming Guide (Comprehensive)",
+  "channel": "Spopes",
+  "category": "Farming",
+  "description": "Comprehensive resource farming guide \u2014 best loot frames, farming companions, and routes for Tellurium, Argon Crystals, Orokin Cells, Endo, Credits and Relics.",
+  "item": "",
+  "type": "farm"
+ },
+ {
+  "id": "xLMWvDJEgKg",
+  "title": "WARFRAME \u2013 The Ultimate Endo Farming Guide (Fresh to Vet Account)",
+  "channel": "LYouRYo",
+  "category": "Farming",
+  "description": "Endo farms from fresh to veteran accounts \u2014 Ayatan treasure hunts, bounties, Sanctuary Onslaught, sorties and dissolving duplicate mods.",
+  "item": "",
+  "type": "farm"
+ },
+ {
+  "id": "VizA9HNUJMA",
+  "title": "Already Making Plat on Day 2 of the New Warframe Account?! (Casual Omni ep. 2)",
+  "channel": "OmniCross",
+  "category": "Trading",
+  "description": "Fresh-account plat farming on day 2 \u2014 mod upgrades, valuable mod farms, Endo efficiency, pricing checks and first trades on warframe.market.",
+  "item": "",
+  "type": "guide"
  }
 ]
