@@ -1,6 +1,6 @@
 {
- "version": "2.12.53",
- "updated": "2026-10-15T14:05:47Z",
- "notes": "Fixed: homepage countdown timer's accessible text now stays in sync with the visible numbers on every tick (screen readers no longer hear a stale countdown); timer is explicitly aria-live=off so it never announces every second.",
- "notify": true
+ "version": "2.12.54",
+ "updated": "2026-10-15T15:20:00Z",
+ "notes": "Hotfix 44.1.2 (Tau Prologue Quests, Epoch Operation: Taubound live) + 5 new videos (Dagath, Lavos Prime, Spopes farming, Endo farming, OmniCross plat).",
+ "notify": false
 }
