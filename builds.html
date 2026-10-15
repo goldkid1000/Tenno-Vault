@@ -38,6 +38,7 @@
     <span class="filter-label">By purpose</span>
     <div class="chip-row">
       <button class="chip" data-f="boss">🎯 Boss Hunting</button>
+      <button class="chip" data-f="boss-killer">☠️ Boss Killer</button>
       <button class="chip" data-f="farm">📦 Farming</button>
       <button class="chip" data-f="leveling">📈 Leveling</button>
       <button class="chip active" data-f="all">All</button>
@@ -243,11 +244,13 @@
     var h = location.hash;
     if (h.indexOf('#build-') === 0) showDetail(h.slice(7));
     else if (h === '#one-shot') setFilter('one-shot');
+    else if (h === '#boss-killer') setFilter('boss-killer');
     drawList();
     window.addEventListener('hashchange', function () {
       var hh = location.hash;
       if (hh.indexOf('#build-') === 0) showDetail(hh.slice(7));
       else if (hh === '#one-shot') setFilter('one-shot');
+      else if (hh === '#boss-killer') setFilter('boss-killer');
       else document.getElementById('b-detail').innerHTML = '';
     });
     /* mods in the background — refresh an open detail once they land */
