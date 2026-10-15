@@ -1780,3 +1780,18 @@ html.tv-no-anim-early *,html.tv-no-anim-early *::before,html.tv-no-anim-early *:
 .tv-mentor-bubble[hidden]{display:none !important}
 /* keep mentor children tightly packed */
 #tv-mentor .tv-mentor-badge{order:-1;margin-bottom:4px}
+
+/* ---------- update launch countdowns ---------- */
+.tv-cd-card{border-top:3px solid var(--accent)}
+.tv-cd-card h3{margin:.1em 0 .2em}
+.tv-cd-date{color:var(--muted);font-size:.85rem;margin:0 0 .6em}
+.tv-cd-units{display:flex;gap:8px;flex-wrap:wrap;margin:.2em 0 .7em}
+.tv-cd-unit{min-width:62px;flex:1;text-align:center;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:8px 4px}
+.tv-cd-num{display:block;font-size:1.5rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--text)}
+.tv-cd-unit i{display:block;font-style:normal;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tv-cd-status{font-size:1.4rem;font-weight:800;letter-spacing:.03em;margin:.2em 0 .6em}
+.tv-cd-live{border-top-color:var(--green)}
+.tv-cd-live .tv-cd-status{color:var(--green)}
+.tv-cd-ended{border-top-color:var(--faint);opacity:.85}
+@media(max-width:560px){.tv-cd-unit{min-width:56px}.tv-cd-num{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){.tv-cd-card{transition:none}}
