@@ -102,12 +102,13 @@
         panel.hidden = false;
         btn.setAttribute('aria-expanded', 'true');
         document.addEventListener('click', onDocClick, true);
-      } else {
-        close();
-        /* marking seen once they've opened it */
+        /* marking seen as soon as they've opened it (was: only on close,
+           so Escape / outside-click left the dot stuck on) */
         setSeen(latest);
         var dot = btn.querySelector('.tv-whatsnew-dot');
         if (dot) dot.hidden = true;
+      } else {
+        close();
       }
     }
     btn.addEventListener('click', function (e) {
