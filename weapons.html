@@ -84,6 +84,13 @@
       '<p>' + esc(w.description || 'No description available.') + '</p></div></div>' +
       '<div class="stat-row">' +
       '<span class="stat">Total damage <b>' + w.totalDamage + '</b></span>' +
+      /* v2.12.57: shotguns show per-shot damage across all pellets — the card
+         damage is per pellet, which understated shotguns (e.g. MK1-Strun:
+         18 per pellet × 10 pellets = 180 per shot). Scoped to Shotgun
+         category only: other multishot weapons (bows, Twin Grakatas) fire
+         arrows/bolts, not pellets, so the label would mislead there. */
+      (w.category === 'Shotgun' && w.multishot && w.multishot > 1 ? '<span class="stat">Pellets <b>' + w.multishot + '</b></span>' +
+      '<span class="stat">Damage per shot (all pellets) <b>' + (Math.round(w.totalDamage * w.multishot * 100) / 100) + '</b></span>' : '') +
       '<span class="stat">Crit chance <b>' + w.criticalChance + '%</b></span>' +
       '<span class="stat">Crit damage <b>' + w.criticalMultiplier + 'x</b></span>' +
       '<span class="stat">Status <b>' + w.statusChance + '%</b></span>' +
