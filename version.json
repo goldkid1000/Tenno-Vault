@@ -1,6 +1,6 @@
 {
- "version": "2.12.54",
- "updated": "2026-10-15T15:20:00Z",
- "notes": "Hotfix 44.1.2 (Tau Prologue Quests, Epoch Operation: Taubound live) + 5 new videos (Dagath, Lavos Prime, Spopes farming, Endo farming, OmniCross plat).",
+ "version": "2.12.55",
+ "updated": "2026-10-15T16:12:32Z",
+ "notes": "Added 8 Steel Path Boss Killer builds (Eidolon, Archon, Profit-Taker, Exploiter Orb, Ropalolyst, Liches/Sisters, Murmur/Fragmented, general boss-killer) with a new Boss Killer filter on the builds page. Every mod verified against WARFRAME Wiki mod data; element mods listed in equip order where combination matters.",
  "notify": false
 }
