@@ -1,6 +1,6 @@
 {
- "version": "2.12.52",
- "updated": "2026-10-15T14:00:00Z",
- "notes": "New: update launch countdowns on the homepage \u2014 live ticking countdowns (days/hrs/min/sec) for upcoming Warframe updates and events, driven by data/site/countdowns.json. Seeded with Epoch Operation: Taubound ending Nov 17, 2026; past events drop off automatically.",
+ "version": "2.12.53",
+ "updated": "2026-10-15T14:05:47Z",
+ "notes": "Fixed: homepage countdown timer's accessible text now stays in sync with the visible numbers on every tick (screen readers no longer hear a stale countdown); timer is explicitly aria-live=off so it never announces every second.",
  "notify": true
 }
