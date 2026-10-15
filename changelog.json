@@ -1,5 +1,15 @@
 [
  {
+  "version": "2.12.52",
+  "date": "2026-10-15",
+  "notes": [
+   "New: homepage 'Upcoming launches & events' countdown section \u2014 live ticking countdowns (days/hrs/min/sec) per entry, data-driven from data/site/countdowns.json",
+   "Seeded with Epoch Operation: Taubound ending Nov 17, 2026 (date verified on warframe.com; no exact end time published, so it counts to end of that day)",
+   "Past events drop off automatically 24h after their target; launches show LIVE NOW and ended events show Ended in the grace window",
+   "No other upcoming Warframe update/event has a confirmed launch date from an official source yet (Warframe: Tau is 'December' with no exact date) \u2014 the data file is ready for future dates"
+  ]
+ },
+ {
   "version": "2.12.51",
   "date": "2026-10-15",
   "notes": [
