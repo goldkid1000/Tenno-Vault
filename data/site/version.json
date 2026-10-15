@@ -1,6 +1,6 @@
 {
- "version": "2.12.55",
- "updated": "2026-10-15T16:12:32Z",
- "notes": "Added 8 Steel Path Boss Killer builds (Eidolon, Archon, Profit-Taker, Exploiter Orb, Ropalolyst, Liches/Sisters, Murmur/Fragmented, general boss-killer) with a new Boss Killer filter on the builds page. Every mod verified against WARFRAME Wiki mod data; element mods listed in equip order where combination matters.",
+ "version": "2.12.56",
+ "updated": "2026-10-15T21:20:00Z",
+ "notes": "Hotfix 44.1.2.1 crash fix, Devstream #198 announced, Taubound live + 4 new videos (Moonflesh farms, Taubound loot, Devshorts 119).",
  "notify": false
 }
