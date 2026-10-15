@@ -1,6 +1,6 @@
 {
- "version": "2.12.51",
- "updated": "2026-10-15T13:00:00Z",
- "notes": "Fixed: shotguns are now classified as shotguns \u2014 all 47 shotgun-class weapons (incl. Kuva Sobek) tagged, Weapons page gains a Shotgun filter, and Vaulty AI builds shotgun loadouts with shotgun mods (Primed Point Blank, Hell's Chamber, Blunderbuss) instead of rifle mods. Also includes the 2.12.50 video additions.",
+ "version": "2.12.52",
+ "updated": "2026-10-15T14:00:00Z",
+ "notes": "New: update launch countdowns on the homepage \u2014 live ticking countdowns (days/hrs/min/sec) for upcoming Warframe updates and events, driven by data/site/countdowns.json. Seeded with Epoch Operation: Taubound ending Nov 17, 2026; past events drop off automatically.",
  "notify": true
 }
