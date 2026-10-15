@@ -1,6 +1,6 @@
 {
- "version": "2.12.48",
- "updated": "2026-10-14T21:15:00Z",
- "notes": "Added 1 new video: WarframeFlo's '5 INSANE Builds You NEED to Try in Warframe 2026' (Melee Gauss, Stealth Bomber Jade, Turret Runner Protea, Xata Titania, BrightBonnet 360 Mesa)",
- "notify": false
+ "version": "2.12.51",
+ "updated": "2026-10-15T13:00:00Z",
+ "notes": "Fixed: shotguns are now classified as shotguns \u2014 all 47 shotgun-class weapons (incl. Kuva Sobek) tagged, Weapons page gains a Shotgun filter, and Vaulty AI builds shotgun loadouts with shotgun mods (Primed Point Blank, Hell's Chamber, Blunderbuss) instead of rifle mods. Also includes the 2.12.50 video additions.",
+ "notify": true
 }
