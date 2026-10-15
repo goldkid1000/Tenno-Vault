@@ -1,5 +1,15 @@
 [
  {
+  "version": "2.12.57",
+  "date": "2026-10-15",
+  "notes": [
+   "Fixed: Shotgun filter now shows all 53 shotguns (was 47) \u2014 MK1-Strun, Bubonico, Cedo Prime, Coda Bassocyst, Coda Bubonico and Steflos Prime were in the data but missing the Shotgun tag, so the filter hid them. MK1-Strun stats verified against WARFRAME Wiki (18 damage/pellet x 10 pellets = 180 per shot, 7.5% crit, 6% status, MR 0)",
+   "New: weapon detail view shows Pellets + Damage per shot (all pellets) for multi-pellet weapons, so shotgun damage is no longer understated as per-pellet damage",
+   "Fixed: What's New dot now clears as soon as the panel is opened (was: only on close, so Escape / outside-click left the dot stuck on)",
+   "Verified live via test-run: countdowns tick + a11y labels sync + Ended/drop-off, Boss Killer filter = 8 builds, homepage counts 123 / 648 / 1,757 / 878 / 26 / 74"
+  ]
+ },
+ {
   "version": "2.12.56",
   "date": "2026-10-15",
   "notes": [
@@ -52,7 +62,7 @@
    "Fixed: shotguns are now classified as shotguns \u2014 all 47 shotgun-class weapons (incl. Kuva Sobek) tagged with category 'Shotgun'",
    "Weapons page gains a Shotgun filter tab + Shotgun badge in weapon details",
    "Fixed: Vaulty AI now builds shotgun loadouts with shotgun mods (Primed Point Blank / Point Blank, Galvanized Hell / Hell's Chamber, Blunderbuss, Primed Ravage, shotgun 60/60s) instead of rifle mods (Serration, Split Chamber, Point Strike)",
-   "Known gap: MK1-Strun (starter shotgun) is still missing from the weapons list"
+   "Known gap: MK1-Strun (starter shotgun) is still missing from the weapons list (resolved in v2.12.57 \u2014 it was in the data, just missing the Shotgun tag)"
   ]
  },
  {
