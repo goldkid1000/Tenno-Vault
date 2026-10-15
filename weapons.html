@@ -28,6 +28,7 @@
 <div class="chip-row" id="w-tabs">
   <button class="chip active" data-t="Primary">Primary</button>
   <button class="chip" data-t="Secondary">Secondary</button>
+  <button class="chip" data-t="Shotgun">Shotgun</button>
   <button class="chip" data-t="Melee">Melee</button>
   <button class="chip" data-t="Archgun">Archgun</button>
   <button class="chip" data-t="Archmelee">Archmelee</button>
@@ -69,7 +70,8 @@
   function filtered() {
     var q = document.getElementById('w-q').value.toLowerCase();
     return all.filter(function (w) {
-      return w.type === type && w.name.toLowerCase().indexOf(q) !== -1;
+      var ok = type === 'Shotgun' ? w.category === 'Shotgun' : w.type === type;
+      return ok && w.name.toLowerCase().indexOf(q) !== -1;
     });
   }
   function showDetail(name) {
@@ -78,7 +80,7 @@
     if (!w) { box.innerHTML = ''; return; }
     box.innerHTML = '<div class="detail-box"><div class="detail-head">' +
       (w.img ? '<img src="' + w.img + '" alt="' + esc(w.name) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
-      '<div><h2>' + esc(w.name) + ' <span class="badge type">' + esc(w.type) + '</span></h2>' +
+      '<div><h2>' + esc(w.name) + ' <span class="badge type">' + esc(w.type) + '</span>' + (w.category ? ' <span class="badge type">' + esc(w.category) + '</span>' : '') + '</h2>' +
       '<p>' + esc(w.description || 'No description available.') + '</p></div></div>' +
       '<div class="stat-row">' +
       '<span class="stat">Total damage <b>' + w.totalDamage + '</b></span>' +
