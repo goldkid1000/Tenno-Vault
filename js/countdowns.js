@@ -64,7 +64,7 @@
       var cls = st === 'LIVE NOW' ? ' tv-cd-live' : (st === 'Ended' ? ' tv-cd-ended' : '');
       var body = (st === 'LIVE NOW' || st === 'Ended')
         ? '<div class="tv-cd-status">' + st + '</div>'
-        : '<div class="tv-cd-units" role="timer" aria-label="' + days + ' days, ' + hours + ' hours, ' + mins + ' minutes, ' + secs + ' seconds">' +
+        : '<div class="tv-cd-units" role="timer" aria-live="off" aria-label="' + days + ' days, ' + hours + ' hours, ' + mins + ' minutes, ' + secs + ' seconds">' +
           '<span class="tv-cd-unit"><b class="tv-cd-num" data-part="d">' + days + '</b><i>days</i></span>' +
           '<span class="tv-cd-unit"><b class="tv-cd-num" data-part="h">' + pad(hours) + '</b><i>hrs</i></span>' +
           '<span class="tv-cd-unit"><b class="tv-cd-num" data-part="m">' + pad(mins) + '</b><i>min</i></span>' +
@@ -105,6 +105,18 @@
         var el = card.querySelector('[data-part="' + k + '"]');
         if (el && el.textContent !== map[k]) el.textContent = map[k];
       });
+      /* Keep the accessible text in sync with the visible numbers.
+         role="timer" is implicitly aria-live="off", so this never
+         announces every second — a screen reader reads the current
+         value when the user focuses/polls the timer. */
+      var units = card.querySelector('.tv-cd-units');
+      if (units) {
+        var label = Math.floor(diff / 86400000) + ' days, ' +
+          Math.floor(diff % 86400000 / 3600000) + ' hours, ' +
+          Math.floor(diff % 3600000 / 60000) + ' minutes, ' +
+          Math.floor(diff % 60000 / 1000) + ' seconds';
+        if (units.getAttribute('aria-label') !== label) units.setAttribute('aria-label', label);
+      }
     });
   }
 
