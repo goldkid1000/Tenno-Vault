@@ -628,5 +628,41 @@
   "description": "Fresh-account plat farming on day 2 \u2014 mod upgrades, valuable mod farms, Endo efficiency, pricing checks and first trades on warframe.market.",
   "item": "",
   "type": "guide"
+ },
+ {
+  "id": "Ane_-XX8xr4",
+  "title": "Stop Wasting Time: The Best Way to Farm Moonflesh In Warframe",
+  "channel": "Gaz TTV",
+  "category": "Farming",
+  "description": "Fastest Moonflesh farm for Taubound: loot abilities and amount boosters don't work, Zabala Dark Sector is the best mission, plus Gas Sobek, Cyte-09, Wisp, Citrine and Nidus buffer builds.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "pca3i4tp_hI",
+  "title": "Warframe Taubound Event Guide: Fast Moonflesh Farm & Best Rewards!",
+  "channel": "Hunkpain Gaming",
+  "category": "Farming",
+  "description": "Taubound event guide: fastest Moonflesh farm, how to fuel Praghasa, and how to unlock every one-time reward (Contegorus Armor Set, Dhampyre Syandana, Legendary Core) before November 17.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "5aseK4QDUT4",
+  "title": "Epoch Operation Taubound! New Loot Cosmetics Skins Everything Guide!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Full look at all Taubound loot: Tauforged Archon Shards, Legendary Core, new cosmetics, Haalvu, the skin item shop, and Hive Moonflesh alerts.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "iR1LGdjog7g",
+  "title": "Warframe | Devshorts 119: Epoch Operation: Taubound Launches Tomorrow!",
+  "channel": "PlayWarframe",
+  "category": "Beginner",
+  "description": "Official Devshorts 119 with Rebecca Ford and Megan Everett on the Epoch Operation: Taubound launch and more coming in Warframe.",
+  "item": "Taubound",
+  "type": "event"
  }
 ]
