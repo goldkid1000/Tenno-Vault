@@ -1,5 +1,13 @@
 [
  {
+  "version": "2.12.53",
+  "date": "2026-10-15",
+  "notes": [
+   "Fixed: countdown timer's accessible text now updates on every tick to match the visible numbers (screen readers no longer hear a stale countdown)",
+   "Timer is explicitly aria-live=off, so the per-second update never spams screen reader announcements"
+  ]
+ },
+ {
   "version": "2.12.52",
   "date": "2026-10-15",
   "notes": [
