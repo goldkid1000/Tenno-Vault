@@ -1,1 +1,14 @@
-[{"date":"2026-11-17","description":"One-time community event: fuel Praghasa's journey to Tau. Collect Moonflesh on Eris and trade it for event rewards before the Operation closes. Source: warframe.com.","kind":"ends","name":"Epoch Operation: Taubound ends"}]
+[
+ {
+  "date": "2026-11-17",
+  "description": "One-time community event: fuel Praghasa's journey to Tau. Collect Moonflesh on Eris and trade it for event rewards before the Operation closes. Source: warframe.com.",
+  "kind": "ends",
+  "name": "Epoch Operation: Taubound ends"
+ },
+ {
+  "date": "2026-10-30T14:00:00-04:00",
+  "description": "First Tau showcase devstream, Fri Oct 30 at 2 PM ET on twitch.tv/warframe. Watch start to finish for a Tauforged Archon Shard Grab Bag Twitch drop. Source: warframe.com.",
+  "kind": "launch",
+  "name": "Devstream #198: Tau Part One"
+ }
+]
