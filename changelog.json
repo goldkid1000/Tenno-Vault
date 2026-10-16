@@ -1,5 +1,14 @@
 [
  {
+  "version": "2.12.58",
+  "date": "2026-10-15",
+  "notes": [
+   "New: Devstream #198 date confirmed \u2014 Fri Oct 30, 2 PM ET (first Tau showcase, Tauforged Archon Shard Grab Bag Twitch drop). Homepage countdown added. Source: warframe.com Devstream 197 overview + official Steam announcement.",
+   "Added 4 new videos: Rainollon \u2014 Scyotid build guide; iFlynn \u2014 Dagath build guide; Pupsker \u2014 Devstream #198 / Tauforged drop; iFlynn \u2014 Warframe news (Riven Splicer nerf, Icebind low-manning, Taubound). Video library now at 78 total.",
+   "No new hotfix since Hotfix 44.1.2.1; no new warframes/weapons/mods in this cycle."
+  ]
+ },
+ {
   "version": "2.12.57",
   "date": "2026-10-15",
   "notes": [
