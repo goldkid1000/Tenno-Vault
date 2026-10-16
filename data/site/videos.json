@@ -664,5 +664,41 @@
   "description": "Official Devshorts 119 with Rebecca Ford and Megan Everett on the Epoch Operation: Taubound launch and more coming in Warframe.",
   "item": "Taubound",
   "type": "event"
+ },
+ {
+  "id": "UsEKpYU-wm8",
+  "title": "WARFRAME | SCYOTID LINE 'EM UP BUILD GUIDE! 2026 BUILD",
+  "channel": "Rainollon",
+  "category": "Builds",
+  "description": "Rainollon's Scyotid build guide \u2014 mods, Arcane, how the build works, plus a Steel Path mission run.",
+  "item": "Scyotid",
+  "type": "build"
+ },
+ {
+  "id": "x_XqQwM0DR0",
+  "title": "This Warframe is BROKEN But Boring...?",
+  "channel": "iFlynn",
+  "category": "Builds",
+  "description": "iFlynn's Dagath build: full mod and Arcane setup, Archon Shards, Grave Spirit crit bonus, and how it holds up on Steel Path.",
+  "item": "Dagath",
+  "type": "build"
+ },
+ {
+  "id": "FSkz7tMHkUA",
+  "title": "Tau Part 1 Devstream 198 October 30! Tauforged Archon Shard Grab Bag!",
+  "channel": "Pupsker",
+  "category": "Beginner",
+  "description": "Pupsker on Devstream #198 (Oct 30, 2 PM ET): the first Tau showcase and the Tauforged Archon Shard Grab Bag Twitch drop.",
+  "item": "Devstream 198",
+  "type": "event"
+ },
+ {
+  "id": "BUd6M0cqS18",
+  "title": "Warframe News: Riven Splicer Nerf, Icebind Low-Manning & Taubound",
+  "channel": "iFlynn",
+  "category": "Beginner",
+  "description": "iFlynn's news roundup: the Riven Splicer ammo-efficiency nerf and Kuva compensation, Icebind low-manning, Taubound, and the Oct 30 devstream.",
+  "item": "Taubound",
+  "type": "event"
  }
 ]
