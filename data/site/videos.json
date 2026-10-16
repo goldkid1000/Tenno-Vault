@@ -700,5 +700,32 @@
   "description": "iFlynn's news roundup: the Riven Splicer ammo-efficiency nerf and Kuva compensation, Icebind low-manning, Taubound, and the Oct 30 devstream.",
   "item": "Taubound",
   "type": "event"
+ },
+ {
+  "id": "R2a_aMCL2Pc",
+  "title": "This Warframe Event will NEVER RETURN!... (FULL Operation: Taubound Guide)",
+  "channel": "MHBlacky",
+  "category": "Farming",
+  "description": "Full Operation: Taubound guide: best Moonflesh farming strategy, event overview, and which rewards to prioritize before the one-time event ends Nov 17.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "Gm4tTCNP7Nw",
+  "title": "Warframe Taubound: How to Get the Most Out of the Limited-Time Event - Complete Guide!",
+  "channel": "Tactical Potato",
+  "category": "Farming",
+  "description": "Taubound complete guide: Moonflesh farming routes, reward priorities (cosmetics, Arcanes, Tauforged Archon Shards, Legendary Core), daily dialogue, and the Tau Prologue.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "bEF6TfAsrdY",
+  "title": "Taubound Operation Is Live Now! Everything You Need To Know + Full Quest Gameplay",
+  "channel": "Gaz",
+  "category": "Farming",
+  "description": "Taubound live overview: event vendor loot, clan trophy requirements, alerts and Dark Sectors farming spots, plus full quest gameplay.",
+  "item": "Taubound",
+  "type": "farm"
  }
 ]
