@@ -1,6 +1,6 @@
 {
- "version": "2.12.57",
- "updated": "2026-10-15T22:30:00Z",
- "notes": "Fixed: Shotgun filter now shows all 53 shotguns (MK1-Strun, Bubonico, Cedo Prime, Coda Bassocyst, Coda Bubonico, Steflos Prime tagged); weapon details show pellets + per-shot damage; What's New dot clears on open.",
- "notify": true
+ "version": "2.12.58",
+ "updated": "2026-10-16T03:20:00Z",
+ "notes": "Devstream #198 countdown (Oct 30, 2 PM ET) + 4 new videos. No new hotfix.",
+ "notify": false
 }
