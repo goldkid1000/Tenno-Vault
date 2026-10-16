@@ -10,5 +10,11 @@
   "description": "First Tau showcase devstream, Fri Oct 30 at 2 PM ET on twitch.tv/warframe. Watch start to finish for a Tauforged Archon Shard Grab Bag Twitch drop. Source: warframe.com.",
   "kind": "launch",
   "name": "Devstream #198: Tau Part One"
+ },
+ {
+  "name": "Scare-o Ki'Teer Visit (Baro) ends",
+  "date": "2026-10-18T13:00:00.000Z",
+  "kind": "ends",
+  "description": "Baro Ki'Teer (Scare-o Ki'Teer) at Orcus Relay, Pluto. Ends Sun Oct 18, 9 AM ET. Source: warframestat.us voidTrader."
  }
 ]
