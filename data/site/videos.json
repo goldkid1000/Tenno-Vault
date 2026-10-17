@@ -727,5 +727,14 @@
   "description": "Taubound live overview: event vendor loot, clan trophy requirements, alerts and Dark Sectors farming spots, plus full quest gameplay.",
   "item": "Taubound",
   "type": "farm"
+ },
+ {
+  "id": "KHBx7Hw8K-w",
+  "title": "CODA BUBONICO Build Guide 2026 \u2014 The Gassy Experience | Warframe",
+  "channel": "LeyzarGamingViews",
+  "category": "Builds",
+  "description": "Coda Bubonico build guide: full setup and gameplay showing the Technocyte Coda shotgun in action.",
+  "item": "Coda Bubonico",
+  "type": "build"
  }
 ]
