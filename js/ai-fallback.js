@@ -944,17 +944,17 @@ function oneShotBuildAnswer(t) {
        not a specific item. This is what makes it feel like a real AI. */
     function categoryFarmAnswer(q) {
       if (/operator arcane|magus arcane|magus/.test(q)) {
-        return 'Operator arcanes (Magus arcanes) come from three places:<br><br>' +
-          '<b>Quills (Cetus)</b> — Magus Husk, Magus Vigor, Magus Replenish, Magus Cloud, Magus Melt. Trade in Eidolon Shards and Sentient cores.<br><br>' +
-          '<b>Vox Solaris (Fortuna)</b> — Magus Lockdown, Magus Anomaly, Magus Drive, Magus Repair. Need max rank with Vox Solaris via Little Duck.<br><br>' +
-          '<b>Cavia (Zariman)</b> — newer Magus arcanes. Trade in Zariman resources.<br><br>' +
+        return 'Operator arcanes (Magus arcanes) come from two vendors:<br><br>' +
+          '<b>Quills (Cetus, via Onkko)</b> — Magus Husk, Magus Vigor, Magus Cadence, Magus Cloud, Magus Replenish, Magus Elevate, Magus Nourish. Trade in Eidolon Shards and Sentient cores.<br><br>' +
+          '<b>Vox Solaris (Fortuna, via Little Duck)</b> — Magus Lockdown, Magus Anomaly, Magus Drive, Magus Repair, Magus Destruct, Magus Firewall, Magus Melt, Magus Overload, Magus Accelerant, Magus Glitch, Magus Revert. 10,000 Standing each; Lockdown needs rank Instrument, Repair needs rank Shadow.<br><br>' +
           'If you tell me <i>which</i> Magus arcane you want, I\'ll give you the exact vendor and cost.';
       }
       if (/amp arcane|eternal|virtuos/.test(q)) {
-        return 'Amp arcanes come from two vendors:<br><br>' +
-          '<b>Quills (Cetus)</b> — Virtuos Strike, Virtuos Shadow, Virtuos Tempo, etc. (the Virtuos set).<br><br>' +
-          '<b>Cavia (Zariman)</b> — Eternal Eradicate, Eternal Onslaught, etc. (the Eternal set).<br><br>' +
-          'For your 777: <b>Virtuos Strike</b> from Quills + <b>Eternal Eradicate</b> from Cavia is the meta combo.';
+        return 'Amp arcanes come from three places:<br><br>' +
+          '<b>Quills (Cetus)</b> — Virtuos Strike, Virtuos Shadow, Virtuos Tempo, Virtuos Null, Virtuos Fury, Virtuos Ghost.<br><br>' +
+          '<b>Vox Solaris (Fortuna, via Little Duck)</b> — Virtuos Forge, Virtuos Trojan, Virtuos Spike, Virtuos Surge.<br><br>' +
+          '<b>Zariman</b> — Eternal Eradicate, Eternal Onslaught, Eternal Logistics (drops from Void Angels and Thrax).<br><br>' +
+          'For your 777: <b>Virtuos Strike</b> from Quills + <b>Eternal Eradicate</b> from Zariman is the meta combo.';
       }
       if (/warframe arcane|molt|guardian|energize/.test(q)) {
         return 'Warframe arcanes mostly come from <b>Eidolon hunts</b> (Teralyst, Gantulyst, Hydrolyst on Plains of Eidolon at night). ' +
@@ -964,7 +964,7 @@ function oneShotBuildAnswer(t) {
       }
       if (/adapter/.test(q) && /arcane|melee|primary|secondary|weapon/.test(q)) {
         return 'Arcane Adapters (unlock the arcane slot on a weapon — one per weapon):<br><br>' +
-          '<b>Melee Arcane Adapter</b> — Market for <b>20 Platinum</b>, OR <b>Bird 3 (Cavia)</b> for <b>50,000 Standing</b> (needs Rank 3 - Colleague), OR as a reward from <b>Netracells / Deep Archimedia</b>. Needs the <b>Whispers in the Walls</b> quest done + the Melee Upgrade Segment.<br><br>' +
+          '<b>Melee Arcane Adapter</b> — Market for <b>20 Platinum</b>, OR <b>Bird 3 (Cavia)</b> for <b>50,000 Standing</b> (needs Rank 3 - Colleague), OR as a reward from <b>Netracells / Deep Archimedea</b>. Needs the <b>Whispers in the Walls</b> quest done + the Melee Upgrade Segment.<br><br>' +
           '<b>Primary / Secondary Arcane Adapter</b> — <b>Teshin (Steel Path Honors)</b> for <b>15 Steel Essence</b> each, OR Market for 20 Platinum, OR Acrithis for 25 Pathos Clamp.<br><br>' +
           'Note: adapters are NOT drops from Acolytes — Acolytes drop the arcanes themselves.';
       }
@@ -987,8 +987,8 @@ function oneShotBuildAnswer(t) {
           'Run the Spy vaults perfectly (all 3) for the best drop chance.';
       }
       if (/galvanized/.test(q)) {
-        return 'Galvanized mods come from <b>Steel Path</b> — they drop from <b>Acolytes</b> that spawn in Steel Path missions. ' +
-          'Each Acolyte drops one random Galvanized mod. Run any Steel Path mission and wait for the "The Stalker" style spawn message.';
+        return 'Galvanized mods come from <b>Arbitrations</b> — buy them from the Arbitration vendor in the Arbiters of Hexis room at any Relay for <b>20 Vitus Essence</b> each. ' +
+          'Acolytes in Steel Path drop Steel Path weapon arcanes and Steel Essence, not Galvanized mods.';
       }
       if (/prime part|prime blueprint|relic/.test(q)) {
         return 'Prime parts come from <b>Void Relics</b> — run Fissure missions to crack them open.<br><br>' +
