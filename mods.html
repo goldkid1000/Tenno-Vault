@@ -30,7 +30,7 @@
 <div id="best-mods" class="card-grid"></div>
 
 <h2>All mods</h2>
-<div class="field"><input id="m-q" type="search" placeholder="Filter 1,800+ mods…"></div>
+<div class="field"><input id="m-q" type="search" placeholder="Filter 1,700+ mods…"></div>
 <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
   <button class="btn small" id="f-all">All</button>
   <button class="btn small" id="f-aura">🌀 Auras only</button>
@@ -101,7 +101,7 @@
       (m.rarity ? '<span class="badge type">' + esc(m.rarity) + '</span> ' : '') +
       (m.polarity ? '<span class="badge type">' + esc(m.polarity) + ' polarity</span> ' : '') +
       (m.compat ? '<span class="badge type">for ' + esc(m.compat) + '</span>' : '') + '</div></div>' +
-      '<p><b>What it does (max rank):</b><br>' + esc(m.effect || 'No description available.') + '</p>' +
+      '<p><b>What it does:</b><br>' + esc(m.effect || 'No description available.') + '</p>' +
       '<div class="farm-box"><h4>📍 Where to farm</h4><p>' + farmHTML(m) + '</p>' + vendorHTML(m) + '<p style="margin-top:8px"><a class="btn small" href="starchart.html?item=' + encodeURIComponent(m.name) + '">🗺️ Star Chart</a></p></div></div>';
     box.scrollIntoView();
     document.getElementById('related').innerHTML = window.TV.relatedLinks('Keep going', [
