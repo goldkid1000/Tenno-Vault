@@ -717,8 +717,8 @@ main{animation:tv-page-in .32s var(--ease) both}
   footer{padding-bottom:40px}
   #vault-ai-btn{bottom:24px}
 }
-/* below 1024px — mobile/tablet portrait: tabbar nav */
-@media (max-width:1023.5px){
+/* below 1024px — touch-only tabbar nav (PC narrow windows use the hamburger, no bottom bar) */
+@media (max-width:1023.5px) and (hover:none){
   #sidebar{display:none !important}
   #tabbar{display:flex}
   .header-inner{flex-wrap:wrap}
