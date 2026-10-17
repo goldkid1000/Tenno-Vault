@@ -1,6 +1,6 @@
 {
- "version": "2.12.60",
- "updated": "2026-10-16T15:20:00Z",
- "notes": "Scare-o Ki'Teer (Baro) countdown. No new hotfix.",
- "notify": false
+ "version": "2.12.62",
+ "updated": "2026-10-17T20:34:48Z",
+ "notes": "Bug fixes: Magus/Virtuos arcane vendors, Secondary Encumber source, Mod Swaps Update 34 numbers, Vaulty arcane answers, Charged Chamber. Plus Nights of Naberus countdown.",
+ "notify": true
 }
