@@ -736,5 +736,14 @@
   "description": "Coda Bubonico build guide: full setup and gameplay showing the Technocyte Coda shotgun in action.",
   "item": "Coda Bubonico",
   "type": "build"
+ },
+ {
+  "id": "LIDNk0KzGfU",
+  "title": "Warframes One-Time Event You Can't Ignore! Tau Inbound!",
+  "channel": "Tactical Potato",
+  "category": "Beginner",
+  "description": "Tactical Potato explains Warframe's one-time Tau event \u2014 why it matters and what to do before it ends.",
+  "item": "Taubound",
+  "type": "event"
  }
 ]
