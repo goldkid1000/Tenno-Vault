@@ -1,5 +1,13 @@
 [
  {
+  "version": "2.12.61",
+  "date": "2026-10-16",
+  "notes": [
+   "Added 1 new video: LeyzarGamingViews \u2014 Coda Bubonico build guide (Technocyte Coda shotgun). Video library now at 82 total.",
+   "Checked: the 2 other videos flagged this run (Gaz Moonflesh farm, Hunkpain Taubound guide) were already in the library \u2014 no duplicates added. No new hotfix since Hotfix 44.1.2.1. Two new official news items (Devourer single, Golden Joysticks vote) appear via the live news feed."
+  ]
+ },
+ {
   "version": "2.12.60",
   "date": "2026-10-16",
   "notes": [
