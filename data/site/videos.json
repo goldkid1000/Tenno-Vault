@@ -745,5 +745,23 @@
   "description": "Tactical Potato explains Warframe's one-time Tau event \u2014 why it matters and what to do before it ends.",
   "item": "Taubound",
   "type": "event"
+ },
+ {
+  "id": "wJVuJNuYtR4",
+  "title": "Best Moonflesh Farming Cyte-09! Fast Legendary Core & Cosmetics!",
+  "channel": "Pupsker",
+  "category": "Farming",
+  "description": "Cyte-09 + Kuva Sobek Moonflesh farm for Taubound: build, full Steel Path survival run, and end-of-mission loot.",
+  "item": "Taubound",
+  "type": "farm"
+ },
+ {
+  "id": "V6nR1yXX3H4",
+  "title": "Eskhatos (Spooky Baro) Ki'Teer Has Arrived! Full Inventory Review 10/16/2026",
+  "channel": "Gaz TTV",
+  "category": "Trading",
+  "description": "Gaz reviews Eskhatos Ki'Teer's full inventory for the Oct 16 visit; Scare-o Ki'Teer returns every weekend through October.",
+  "item": "Baro Ki'Teer",
+  "type": "guide"
  }
 ]
