@@ -69,7 +69,7 @@ var MOD_SWAPS = [
         alternatives: [
           { mod: "Primed Point Strike", note: "Doesn't exist for rifles. Point Strike is it.", effectiveness: 100 },
           { mod: "Critical Delay",
-          farm: "Deimos / Heart of Deimos", note: "+200% crit chance, -20% fire rate. Better crit, slower. Great for one-shots.", effectiveness: 133 }
+          farm: "Orokin Vaults (Deimos) — Dragon Key", note: "+200% crit chance, -20% fire rate. Better crit, slower. Great for one-shots.", effectiveness: 133 }
         ]
       },
       {
@@ -89,7 +89,7 @@ var MOD_SWAPS = [
           { mod: "Primed Blunderbuss",
           farm: "Baro Ki'Teer (Ducats)", note: "+135% crit chance. Baro. Massive upgrade for crit shotguns.", effectiveness: 150 },
           { mod: "Critical Deceleration",
-          farm: "Deimos / Heart of Deimos", note: "+200% crit chance, -20% fire rate. Best for one-shot Felarx.", effectiveness: 222 }
+          farm: "Orokin Vaults (Deimos) — Dragon Key", note: "+200% crit chance, -20% fire rate. Best for one-shot Felarx.", effectiveness: 222 }
         ]
       },
       {
@@ -113,9 +113,9 @@ var MOD_SWAPS = [
         bestNote: "+120% melee damage.",
         alternatives: [
           { mod: "Primed Pressure Point",
-          farm: "Baro Ki'Teer / Daily login reward", note: "+165% damage. Baro/Login reward. Huge upgrade.", effectiveness: 138 },
+          farm: "Daily Tribute milestone (login reward)", note: "+165% damage. Baro/Login reward. Huge upgrade.", effectiveness: 138 },
           { mod: "Spoiled Strike",
-          farm: "Corrupted Vor (Orokin Derelict)", note: "+100% damage, -20% attack speed. NOT worth it for one-shots.", effectiveness: 83 }
+          farm: "Orokin Vaults (Deimos) — Dragon Key", note: "+100% damage, -20% attack speed. NOT worth it for one-shots.", effectiveness: 83 }
         ]
       },
       {
@@ -156,11 +156,11 @@ var MOD_SWAPS = [
         alternatives: [
           { mod: "Primed Intensify", note: "Doesn't exist. Use Umbral Intensify instead.", effectiveness: 100 },
           { mod: "Umbral Intensify",
-          farm: "The Sacrifice quest", note: "+44% strength (+55% with full Umbral set). The upgrade.", effectiveness: 147 },
+          farm: "The Sacrifice quest", note: "+44% strength (+77% with the full 3-mod Umbral set, +55% with 2). The upgrade.", effectiveness: 147 },
           { mod: "Transient Fortitude",
-          farm: "Corrupted Vor / Orokin Vaults", note: "+55% strength, -27.5% duration. Great for nuke frames.", effectiveness: 183 },
+          farm: "Orokin Vaults (Deimos) — Dragon Key", note: "+55% strength, -27.5% duration. Great for nuke frames.", effectiveness: 183 },
           { mod: "Blind Rage",
-          farm: "Corrupted Vor / Orokin Vaults", note: "+99% strength, -55% efficiency. For max-strength one-shot builds.", effectiveness: 330 }
+          farm: "Orokin Vaults (Deimos) — Dragon Key", note: "+99% strength, -55% efficiency. For max-strength one-shot builds.", effectiveness: 330 }
         ]
       },
       {
@@ -191,24 +191,24 @@ var MOD_SWAPS = [
       {
         best: "Vitality",
         bestFarm: "General drops",
-        bestNote: "+440% health.",
+        bestNote: "+100% health.",
         alternatives: [
           { mod: "Primed Vitality",
           farm: "Baro Ki'Teer (Ducats)", note: "+440% health (same, less drain). Baro.", effectiveness: 100 },
           { mod: "Umbral Vitality",
-          farm: "The Sacrifice quest", note: "+770% health with full Umbral set. The tank standard.", effectiveness: 175 },
+          farm: "The Sacrifice quest", note: "+180% health with the full 3-mod Umbral set (+130% with 2). The tank standard.", effectiveness: 180 },
           { mod: "Vigor",
-          farm: "Nightmare missions", note: "+220% health + shields. Weaker, but cheap.", effectiveness: 50 }
+          farm: "Nightmare missions", note: "+50% health +50% shields. Weaker, but cheap.", effectiveness: 50 }
         ]
       },
       {
         best: "Steel Fiber",
         bestFarm: "General warframe drops",
-        bestNote: "+110% armor.",
+        bestNote: "+100% armor.",
         alternatives: [
           { mod: "Primed Steel Fiber", note: "Doesn't exist. Regular is fine.", effectiveness: 100 },
           { mod: "Umbral Fiber",
-          farm: "The Sacrifice quest", note: "+160% armor with Umbral set. Better for Umbral builds.", effectiveness: 145 }
+          farm: "The Sacrifice quest", note: "+180% armor with the full 3-mod Umbral set (+130% with 2). Better for Umbral builds.", effectiveness: 180 }
         ]
       }
     ]
@@ -237,8 +237,8 @@ var MOD_SWAPS = [
       },
       {
         best: "Galvanized Aptitude",
-        bestFarm: "Arbitrations (Vitus Essence)",
-        bestNote: "+80% damage per status type. The Steel Path damage king.",
+        bestFarm: "Arbitrations — 20 Vitus Essence",
+        bestNote: "+80% status chance; on kill, +40% damage per unique status proc on the target (up to +80% per proc with 2 stacks). The Arbitration damage king.",
         alternatives: [
           { mod: "No alternative", note: "Arbitration reward. Nothing else scales like this.", effectiveness: 0 }
         ]
