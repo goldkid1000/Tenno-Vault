@@ -1,5 +1,21 @@
 [
  {
+  "version": "2.12.62",
+  "date": "2026-10-17",
+  "notes": [
+   "Fixed: 11 Magus arcanes (Lockdown, Anomaly, Drive, Repair, Destruct, Firewall, Melt, Overload, Accelerant, Glitch, Revert) now correctly list Vox Solaris / Little Duck (Fortuna) instead of Quills; Virtuos Forge/Trojan/Spike/Surge fixed the same way. Source: WARFRAME Wiki arcane-source table.",
+   "Fixed: Secondary Encumber now lists Mirror Defense Rotation C (5.7%) + Otak (60 Belric + 60 Rania Fragments) instead of 1999 Nokko bounties. Source: WARFRAME Wiki.",
+   "Fixed: Mod Swaps numbers updated to the Update 34.0 (Oct 2023) stat overhaul \u2014 Vitality +100% (was +440%), Steel Fiber +100% (was +110%), Vigor +50%/+50% (was +220%), Umbral set bonuses +130%/+180%, Umbral Intensify +77% with full 3-mod set; Corrupted mods (Blind Rage, Transient Fortitude, Critical Delay/Deceleration, Spoiled Strike) now list Orokin Vaults only; Galvanized Aptitude effect corrected; Primed Pressure Point is a Daily Tribute milestone, not Baro.",
+   "Fixed: Vaulty AI \u2014 Magus arcanes split correctly (Quills vs Vox Solaris), Amp arcanes (Eternal set is Zariman, not Cavia), Galvanized mods come from Arbitrations (20 Vitus Essence), not Steel Path Acolytes; fixed 'Deep Archimedia' typo.",
+   "Fixed: Charged Chamber corrected to +30% (rank 2; Wiki ranks are 10/20/30/40%, max +40%) \u2014 the +60% value did not exist; tip corrected.",
+   "Fixed: bottom tab bar now only shows on touch devices (CSS) \u2014 PC narrow windows no longer get it via the unconditioned rule; the JS fallback was already hiding it.",
+   "Fixed: Mods page \u2014 'Filter 1,800+ mods' -> '1,700+' (1,757 rows) and removed the '(max rank)' label from the detail view (first matching row isn't always the max-rank value).",
+   "New: Nights of Naberus countdown \u2014 ends Mon Nov 2, 11 AM ET (Daughter's shop + Hallowed Nightmares). Source: warframe.com.",
+   "Added 1 video: Tactical Potato \u2014 Warframes One-Time Event You Can't Ignore! Tau Inbound!",
+   "Checked: no new hotfix since 44.1.2.1; no new warframes/weapons/mods. Counts unchanged: 123 / 648 / 1,757 / 878 / 26 / 83 videos. Baro (Scare-o Ki'Teer) is live until Sun Oct 18, 9 AM ET \u2014 verified via warframestat.us; countdown drops off automatically."
+  ]
+ },
+ {
   "version": "2.12.61",
   "date": "2026-10-16",
   "notes": [
